@@ -7,18 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9016B0EC2BDC82F4006E3427 /* LabelWithCaptionLeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016B0EB2BDC82F4006E3427 /* LabelWithCaptionLeading.swift */; };
+		9016B0EE2BDC8A28006E3427 /* EditMealPersonModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016B0ED2BDC8A28006E3427 /* EditMealPersonModal.swift */; };
+		9016B0F02BDDB8CD006E3427 /* FlexGridUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016B0EF2BDDB8CD006E3427 /* FlexGridUI.swift */; };
+		908B3F3C2BDB03440069BC52 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F3B2BDB03440069BC52 /* Constants.swift */; };
+		908B3F3E2BDB099E0069BC52 /* MealItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F3D2BDB099E0069BC52 /* MealItemsView.swift */; };
+		908B3F402BDB09B70069BC52 /* MealItemsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F3F2BDB09B70069BC52 /* MealItemsRow.swift */; };
+		908B3F432BDB12CF0069BC52 /* MealPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F422BDB12CF0069BC52 /* MealPeopleView.swift */; };
+		908B3F452BDB4BF90069BC52 /* ItemsAndPeopleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F442BDB4BF90069BC52 /* ItemsAndPeopleUtils.swift */; };
+		908B3F492BDB5D130069BC52 /* EditMealItemModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F482BDB5D130069BC52 /* EditMealItemModal.swift */; };
 		90EE950B2BD997250063870D /* SplitMyMeal_Prod_AApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE950A2BD997250063870D /* SplitMyMeal_Prod_AApp.swift */; };
 		90EE950D2BD997250063870D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE950C2BD997250063870D /* ContentView.swift */; };
 		90EE950F2BD997260063870D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90EE950E2BD997260063870D /* Assets.xcassets */; };
 		90EE95122BD997260063870D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90EE95112BD997260063870D /* Preview Assets.xcassets */; };
+		90EE95242BD9979B0063870D /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95232BD9979B0063870D /* HomeScreen.swift */; };
+		90EE95262BD997A70063870D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95252BD997A70063870D /* Meal.swift */; };
+		90EE95282BD9987A0063870D /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95272BD9987A0063870D /* MealItem.swift */; };
+		90EE952A2BD998DC0063870D /* MealPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95292BD998DC0063870D /* MealPerson.swift */; };
+		90EE952E2BD99B550063870D /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE952D2BD99B550063870D /* MealsListView.swift */; };
+		90EE95302BD9C5610063870D /* MealScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE952F2BD9C5610063870D /* MealScreen.swift */; };
+		90EE95322BD9CA870063870D /* EditMealModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95312BD9CA870063870D /* EditMealModal.swift */; };
+		90EE95342BD9CD120063870D /* MealRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95332BD9CD120063870D /* MealRowView.swift */; };
+		90EE95372BD9CF780063870D /* MCEmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 90EE95362BD9CF780063870D /* MCEmojiPicker */; };
+		90EE95392BD9E81A0063870D /* TextInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95382BD9E81A0063870D /* TextInputField.swift */; };
+		90EE953B2BD9E9170063870D /* BlockInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE953A2BD9E9170063870D /* BlockInputField.swift */; };
+		90EE953D2BD9EE7D0063870D /* DividerElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE953C2BD9EE7D0063870D /* DividerElement.swift */; };
+		90EE95412BD9EF570063870D /* InfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95402BD9EF570063870D /* InfoSectionView.swift */; };
+		90EE95432BD9EFDB0063870D /* BlockInputFieldShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95422BD9EFDB0063870D /* BlockInputFieldShort.swift */; };
+		90EE95452BD9F1410063870D /* EmptyAreaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95442BD9F1410063870D /* EmptyAreaText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9016B0EB2BDC82F4006E3427 /* LabelWithCaptionLeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithCaptionLeading.swift; sourceTree = "<group>"; };
+		9016B0ED2BDC8A28006E3427 /* EditMealPersonModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMealPersonModal.swift; sourceTree = "<group>"; };
+		9016B0EF2BDDB8CD006E3427 /* FlexGridUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexGridUI.swift; sourceTree = "<group>"; };
+		908B3F3B2BDB03440069BC52 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		908B3F3D2BDB099E0069BC52 /* MealItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemsView.swift; sourceTree = "<group>"; };
+		908B3F3F2BDB09B70069BC52 /* MealItemsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemsRow.swift; sourceTree = "<group>"; };
+		908B3F422BDB12CF0069BC52 /* MealPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPeopleView.swift; sourceTree = "<group>"; };
+		908B3F442BDB4BF90069BC52 /* ItemsAndPeopleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsAndPeopleUtils.swift; sourceTree = "<group>"; };
+		908B3F482BDB5D130069BC52 /* EditMealItemModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMealItemModal.swift; sourceTree = "<group>"; };
 		90EE95072BD997250063870D /* SplitMyMeal-Prod-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SplitMyMeal-Prod-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90EE950A2BD997250063870D /* SplitMyMeal_Prod_AApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitMyMeal_Prod_AApp.swift; sourceTree = "<group>"; };
 		90EE950C2BD997250063870D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90EE950E2BD997260063870D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90EE95112BD997260063870D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90EE95232BD9979B0063870D /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		90EE95252BD997A70063870D /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		90EE95272BD9987A0063870D /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
+		90EE95292BD998DC0063870D /* MealPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPerson.swift; sourceTree = "<group>"; };
+		90EE952B2BD99A040063870D /* SplitMyMeal-Prod-A.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SplitMyMeal-Prod-A.entitlements"; sourceTree = "<group>"; };
+		90EE952D2BD99B550063870D /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
+		90EE952F2BD9C5610063870D /* MealScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealScreen.swift; sourceTree = "<group>"; };
+		90EE95312BD9CA870063870D /* EditMealModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMealModal.swift; sourceTree = "<group>"; };
+		90EE95332BD9CD120063870D /* MealRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRowView.swift; sourceTree = "<group>"; };
+		90EE95382BD9E81A0063870D /* TextInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputField.swift; sourceTree = "<group>"; };
+		90EE953A2BD9E9170063870D /* BlockInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInputField.swift; sourceTree = "<group>"; };
+		90EE953C2BD9EE7D0063870D /* DividerElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerElement.swift; sourceTree = "<group>"; };
+		90EE953E2BD9EEFA0063870D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		90EE95402BD9EF570063870D /* InfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSectionView.swift; sourceTree = "<group>"; };
+		90EE95422BD9EFDB0063870D /* BlockInputFieldShort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInputFieldShort.swift; sourceTree = "<group>"; };
+		90EE95442BD9F1410063870D /* EmptyAreaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAreaText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +75,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90EE95372BD9CF780063870D /* MCEmojiPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		908B3F412BDB0B370069BC52 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				908B3F442BDB4BF90069BC52 /* ItemsAndPeopleUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		90EE94FE2BD997250063870D = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +109,12 @@
 		90EE95092BD997250063870D /* SplitMyMeal-Prod-A */ = {
 			isa = PBXGroup;
 			children = (
+				90EE953E2BD9EEFA0063870D /* Info.plist */,
+				90EE952B2BD99A040063870D /* SplitMyMeal-Prod-A.entitlements */,
+				90EE951B2BD9974C0063870D /* Lib */,
+				90EE951A2BD997480063870D /* Models */,
+				90EE95192BD997380063870D /* CommonComponents */,
+				90EE95182BD997340063870D /* Screens */,
 				90EE950A2BD997250063870D /* SplitMyMeal_Prod_AApp.swift */,
 				90EE950C2BD997250063870D /* ContentView.swift */,
 				90EE950E2BD997260063870D /* Assets.xcassets */,
@@ -65,6 +129,121 @@
 				90EE95112BD997260063870D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		90EE95182BD997340063870D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				90EE95222BD997880063870D /* SplitsModal */,
+				90EE95202BD9977D0063870D /* EditMealItemModal */,
+				90EE951F2BD997780063870D /* EditMealPersonModal */,
+				90EE951E2BD997670063870D /* EditMealModal */,
+				90EE951D2BD997630063870D /* MealScreen */,
+				90EE951C2BD9975D0063870D /* HomeScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		90EE95192BD997380063870D /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				90EE95382BD9E81A0063870D /* TextInputField.swift */,
+				90EE953A2BD9E9170063870D /* BlockInputField.swift */,
+				90EE95422BD9EFDB0063870D /* BlockInputFieldShort.swift */,
+				90EE953C2BD9EE7D0063870D /* DividerElement.swift */,
+				90EE95442BD9F1410063870D /* EmptyAreaText.swift */,
+				9016B0EB2BDC82F4006E3427 /* LabelWithCaptionLeading.swift */,
+			);
+			path = CommonComponents;
+			sourceTree = "<group>";
+		};
+		90EE951A2BD997480063870D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90EE95252BD997A70063870D /* Meal.swift */,
+				90EE95272BD9987A0063870D /* MealItem.swift */,
+				90EE95292BD998DC0063870D /* MealPerson.swift */,
+				908B3F3B2BDB03440069BC52 /* Constants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		90EE951B2BD9974C0063870D /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				908B3F412BDB0B370069BC52 /* Utils */,
+				9016B0EF2BDDB8CD006E3427 /* FlexGridUI.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		90EE951C2BD9975D0063870D /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				90EE95232BD9979B0063870D /* HomeScreen.swift */,
+				90EE952C2BD99B460063870D /* Components */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		90EE951D2BD997630063870D /* MealScreen */ = {
+			isa = PBXGroup;
+			children = (
+				90EE952F2BD9C5610063870D /* MealScreen.swift */,
+				90EE953F2BD9EF450063870D /* Components */,
+			);
+			path = MealScreen;
+			sourceTree = "<group>";
+		};
+		90EE951E2BD997670063870D /* EditMealModal */ = {
+			isa = PBXGroup;
+			children = (
+				90EE95312BD9CA870063870D /* EditMealModal.swift */,
+			);
+			path = EditMealModal;
+			sourceTree = "<group>";
+		};
+		90EE951F2BD997780063870D /* EditMealPersonModal */ = {
+			isa = PBXGroup;
+			children = (
+				9016B0ED2BDC8A28006E3427 /* EditMealPersonModal.swift */,
+			);
+			path = EditMealPersonModal;
+			sourceTree = "<group>";
+		};
+		90EE95202BD9977D0063870D /* EditMealItemModal */ = {
+			isa = PBXGroup;
+			children = (
+				908B3F482BDB5D130069BC52 /* EditMealItemModal.swift */,
+			);
+			path = EditMealItemModal;
+			sourceTree = "<group>";
+		};
+		90EE95222BD997880063870D /* SplitsModal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplitsModal;
+			sourceTree = "<group>";
+		};
+		90EE952C2BD99B460063870D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				90EE952D2BD99B550063870D /* MealsListView.swift */,
+				90EE95332BD9CD120063870D /* MealRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		90EE953F2BD9EF450063870D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				90EE95402BD9EF570063870D /* InfoSectionView.swift */,
+				908B3F3D2BDB099E0069BC52 /* MealItemsView.swift */,
+				908B3F3F2BDB09B70069BC52 /* MealItemsRow.swift */,
+				908B3F422BDB12CF0069BC52 /* MealPeopleView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +262,9 @@
 			dependencies = (
 			);
 			name = "SplitMyMeal-Prod-A";
+			packageProductDependencies = (
+				90EE95362BD9CF780063870D /* MCEmojiPicker */,
+			);
 			productName = "SplitMyMeal-Prod-A";
 			productReference = 90EE95072BD997250063870D /* SplitMyMeal-Prod-A.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +293,9 @@
 				Base,
 			);
 			mainGroup = 90EE94FE2BD997250063870D;
+			packageReferences = (
+				90EE95352BD9CF780063870D /* XCRemoteSwiftPackageReference "MCEmojiPicker" */,
+			);
 			productRefGroup = 90EE95082BD997250063870D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +322,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9016B0EC2BDC82F4006E3427 /* LabelWithCaptionLeading.swift in Sources */,
+				90EE952E2BD99B550063870D /* MealsListView.swift in Sources */,
+				908B3F3C2BDB03440069BC52 /* Constants.swift in Sources */,
+				90EE95262BD997A70063870D /* Meal.swift in Sources */,
+				90EE95302BD9C5610063870D /* MealScreen.swift in Sources */,
 				90EE950D2BD997250063870D /* ContentView.swift in Sources */,
+				90EE95282BD9987A0063870D /* MealItem.swift in Sources */,
+				908B3F432BDB12CF0069BC52 /* MealPeopleView.swift in Sources */,
+				908B3F492BDB5D130069BC52 /* EditMealItemModal.swift in Sources */,
+				908B3F3E2BDB099E0069BC52 /* MealItemsView.swift in Sources */,
+				90EE95392BD9E81A0063870D /* TextInputField.swift in Sources */,
+				90EE952A2BD998DC0063870D /* MealPerson.swift in Sources */,
+				908B3F402BDB09B70069BC52 /* MealItemsRow.swift in Sources */,
+				9016B0F02BDDB8CD006E3427 /* FlexGridUI.swift in Sources */,
+				9016B0EE2BDC8A28006E3427 /* EditMealPersonModal.swift in Sources */,
+				90EE953D2BD9EE7D0063870D /* DividerElement.swift in Sources */,
 				90EE950B2BD997250063870D /* SplitMyMeal_Prod_AApp.swift in Sources */,
+				90EE95322BD9CA870063870D /* EditMealModal.swift in Sources */,
+				90EE95342BD9CD120063870D /* MealRowView.swift in Sources */,
+				90EE95452BD9F1410063870D /* EmptyAreaText.swift in Sources */,
+				90EE95432BD9EFDB0063870D /* BlockInputFieldShort.swift in Sources */,
+				90EE95242BD9979B0063870D /* HomeScreen.swift in Sources */,
+				908B3F452BDB4BF90069BC52 /* ItemsAndPeopleUtils.swift in Sources */,
+				90EE95412BD9EF570063870D /* InfoSectionView.swift in Sources */,
+				90EE953B2BD9E9170063870D /* BlockInputField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +477,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SplitMyMeal-Prod-A/Preview Content\"";
 				DEVELOPMENT_TEAM = 8WH4G9YJ2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SplitMyMeal-Prod-A/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,12 +508,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SplitMyMeal-Prod-A/Preview Content\"";
 				DEVELOPMENT_TEAM = 8WH4G9YJ2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SplitMyMeal-Prod-A/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +556,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90EE95352BD9CF780063870D /* XCRemoteSwiftPackageReference "MCEmojiPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/izyumkin/MCEmojiPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90EE95362BD9CF780063870D /* MCEmojiPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90EE95352BD9CF780063870D /* XCRemoteSwiftPackageReference "MCEmojiPicker" */;
+			productName = MCEmojiPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 90EE94FF2BD997250063870D /* Project object */;
 }
