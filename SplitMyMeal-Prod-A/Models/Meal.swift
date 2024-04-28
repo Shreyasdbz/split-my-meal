@@ -11,10 +11,15 @@ import SwiftData
 @Model
 class Meal {
     var id: String = UUID().uuidString
-    var title: String = ""
-    var charm: String = "🍱"
     var createdAt: Date = Date()
     var modifiedAt: Date = Date()
+
+    var title: String = ""
+    var charm: String = "🍱"
+    var taxPercentage: Double?
+    var taxAmount: Double?
+    var tipPercentage: Double?
+    var tipAmount: Double?
 
     var items: [MealItem]? = [MealItem]()
     var people: [MealPerson]? = [MealPerson]()

@@ -9,6 +9,45 @@ import Foundation
 import SwiftUI
 
 /**
+ Get the string to show in Home screen meal row
+ */
+func getPeopleInMealString(meal: Meal) -> String {
+    let STRING_NO_PEOPLE = "No people added yet"
+    guard let mealPeople = meal.people else { return STRING_NO_PEOPLE }
+    if(mealPeople.isEmpty) { return STRING_NO_PEOPLE }
+    
+    var names: [String] = []
+    mealPeople
+        .sorted(by: { personA, personB in
+            personA.name <  personB.name
+        }) 
+        .forEach { person in
+            var nameString = person.name
+            if(nameString.last == " "){
+                nameString = String(nameString.dropLast())
+            }
+            names.append(nameString)
+        }
+    
+    // Case: 1 Person -- Return 'name'
+    if(names.count == 1){
+        return "\(names[0])"
+    }
+    // Case: 2 People -- Return 'name' & 'name'
+    else if(names.count == 2){
+        return "\(names[0]) & \(names[1])"
+    }
+    // Case: 3 People -- Return 'name', 'name' & 'name'
+    else if(names.count == 3){
+        return "\(names[0]), \(names[1]) & \(names[2])"
+    }
+    // Case: + People -- Return 'name', 'name' & '(n-2) others'
+    else {
+        return "\(names[0]), \(names[1]) & \(names.count-2) others"
+    }
+}
+
+/**
  Returns all the meal persons for a given meal, returns nil if empty
  */
 func getAllMealPersonsForMeal(meal: Meal) -> [MealPerson]? {
@@ -25,7 +64,7 @@ func getPersonNameById(meal: Meal, personId: String) -> String {
     if let mealPeople = meal.people {
         if(!mealPeople.isEmpty){
             mealPeople.forEach { person in
-                if(person.id == personId) { 
+                if(person.id == personId) {
                     personName = person.name
                 }
             }
@@ -90,14 +129,14 @@ func getItemsForMealPerson(meal: Meal, person: MealPerson) -> [MealItem]? {
  */
 func getFormattedNameForMealItemCategory(_ category: MealItemCategory) -> String{
     switch category {
-        case MealItemCategory.Snack:
-            return "Snack"
-        case MealItemCategory.Entree:
-            return "Entree"
-        case MealItemCategory.Dessert:
-            return "Dessert"
-        case MealItemCategory.Drink:
-            return "Drink"
+    case MealItemCategory.Snack:
+        return "Snack"
+    case MealItemCategory.Entree:
+        return "Entree"
+    case MealItemCategory.Dessert:
+        return "Dessert"
+    case MealItemCategory.Drink:
+        return "Drink"
     }
 }
 

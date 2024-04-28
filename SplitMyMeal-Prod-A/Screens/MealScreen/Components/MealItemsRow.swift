@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MealItemsRow: View {
     
+    @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
 
     var meal: Meal
@@ -117,6 +118,7 @@ struct MealItemsRow: View {
                             personA.name < personB.name
                         })){ consumer in
                             Text("\(consumer.name)")
+                                .font(.subheadline)
                                 .foregroundStyle(
                                     getColorByMealItemCategory(category: category)
                                 )
@@ -158,7 +160,15 @@ struct MealItemsRow: View {
                 onEditClick(item)
             }
             Button("Delete", systemImage: "trash", role: .destructive){
-                //
+                // Clean up personId from meal's items
+                if let mealPeople = meal.people {
+                    mealPeople.forEach { person in
+                        person.itemIds = person.itemIds.filter({ itemId in
+                            itemId != item.id
+                        })
+                    }
+                }
+                modelContext.delete(item)
             }
         } preview: {
             mealItemCardTextPortion(item: item, isPreview: true)

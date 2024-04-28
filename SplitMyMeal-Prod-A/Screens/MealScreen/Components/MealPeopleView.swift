@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MealPeopleView: View {
     
+    @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
     
     let meal: Meal
@@ -67,6 +68,7 @@ struct MealPeopleView: View {
     
     private func itemBubble(item: MealItem) -> some View{
         Text("\(item.name)")
+            .font(.subheadline)
             .foregroundStyle(getColorByMealItemCategory(category: item.category))
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
@@ -83,7 +85,7 @@ struct MealPeopleView: View {
         VStack{
             HStack{
                 Text("\(person.name)")
-                    .font(.title3)
+                    .font(.headline)
                     .fontWeight(.medium)
                     .foregroundStyle(.primary)
                 Spacer()
@@ -129,7 +131,15 @@ struct MealPeopleView: View {
                 onEditClick(person)
             }
             Button("Delete", systemImage: "trash", role: .destructive){
-                //
+                // Clean up personId from meal's items
+                if let mealItems = meal.items {
+                    mealItems.forEach { item in
+                        item.consumerIds = item.consumerIds.filter({ consumerId in
+                            consumerId != person.id
+                        })
+                    }
+                }
+                modelContext.delete(person)
             }
         }
     }

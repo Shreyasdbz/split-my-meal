@@ -27,37 +27,17 @@ struct MealRowView: View {
             VStack(alignment: .leading, spacing: 6){
                 Text("\(meal.title)")
                     .font(.title3)
-                    .fontWeight(.semibold)
-                Text("Kendrick, Natalie & 3 others")
+                    .fontWeight(.medium)
+                Text("\(getPeopleInMealString(meal: meal))")
                     .foregroundStyle(Color.init(uiColor: .systemGray))
-                Text("$238.49")
+                if let mealTotal = getMealTotal(meal: meal) {
+                    Text("\(mealTotal.formatted(.currency(code: "USD")))")
+                } else {
+                    Text("No items added yet")
+                }
             }
             Spacer()
         }
-    }
-
-    private var mealRowCustom: some View {
-        HStack(alignment: .center){
-            // Charm
-            Text("\(meal.charm)")
-                .font(.largeTitle)
-                .padding(.trailing)
-            // Details Text
-            VStack(alignment: .leading){
-                Text("\(meal.title)")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                Text("Kendrick, Natalie & 3 others")
-                    .foregroundStyle(Color.init(uiColor: .systemGray))
-                Text("$238.49")
-            }
-            Spacer()
-        }
-        .padding()
-        .background(colorScheme == .light ? Color.white : Color.init(uiColor: .systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .frame(height: 120)
-        .shadow(color: .black.opacity(0.10), radius: 15, x: 2, y: 2)
     }
 }
 

@@ -118,21 +118,29 @@ struct EditMealPersonModal: View {
             }
             
             if let mealItems = getAllMealItemsForMeal(meal: meal){
-                FlexStack{
-                    ForEach(mealItems.sorted(by: { itemA, itemB in
-                        itemA.category.rawValue < itemB.category.rawValue
-                    })){ item in
-                        Button("\(item.name)",
-                               systemImage:
-                                itemsInput.contains(item.id) ? "checkmark.circle.fill" : "circle.dotted"
-                        ) {
-                            toggleMealItemSelection(itemId: item.id)
+                VStack{
+                    ForEach(MealItemCategory.allCases, id: \.rawValue) { category in
+                        FlexStack{
+                            ForEach(mealItems
+                                .filter({ item in
+                                    item.category == category
+                                })
+                                .sorted(by: { itemA, itemB in
+                                itemA.category.rawValue < itemB.category.rawValue
+                            })){ item in
+                                Button("\(item.name)",
+                                       systemImage:
+                                        itemsInput.contains(item.id) ? "checkmark.circle.fill" : "circle.dotted"
+                                ) {
+                                    toggleMealItemSelection(itemId: item.id)
+                                }
+                                .foregroundStyle(getColorByMealItemCategory(category: item.category))
+                                .padding(.horizontal)
+                                .padding(.vertical)
+                                .background(Color.init(uiColor: .systemGray6))
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                            }
                         }
-                        .foregroundStyle(getColorByMealItemCategory(category: item.category))
-                        .padding(.horizontal)
-                        .padding(.vertical)
-                        .background(Color.init(uiColor: .systemGray6))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
                 }
             } else {
