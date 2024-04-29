@@ -25,6 +25,6 @@ struct LabelWithCaptionLeading: View {
     }
 }
 
-#Preview {
-    LabelWithCaptionLeading(label: "Price", caption: "Set the price for your item")
-}
+//#Preview {
+//    LabelWithCaptionLeading(label: "Price", caption: "Set the price for your item")
+//}

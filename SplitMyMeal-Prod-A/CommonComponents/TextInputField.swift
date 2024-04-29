@@ -14,6 +14,7 @@ struct TextInputField: View {
     
     @State var inputString: Binding<String>
     @State var showError: Bool
+    @State var useLighterBg: Bool = false
 
     var body: some View {
         VStack(spacing: 5.0){
@@ -27,7 +28,11 @@ struct TextInputField: View {
             TextField("\(placeholder)", text: inputString)
                 .padding(.horizontal, 15)
                 .padding(.vertical, 10)
-                .background(Color.init(uiColor: .systemGray6))
+                .background(
+                    Color.init(
+                        uiColor: useLighterBg == true ? .systemGray5 : .systemGray6
+                    )
+                )
                 .cornerRadius(8)
                 .overlay(showError == true ?
                          RoundedRectangle(cornerRadius: 8)

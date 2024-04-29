@@ -21,13 +21,7 @@ struct BlockInputField: View {
             Button{
                 onClick()
             } label: {
-                RoundedRectangle(cornerRadius: 12)
-                    .overlay(alignment: .center) {
-                        Text("\(placeholder)")
-                            .font(.title)
-                    }
-                    .foregroundStyle(Color.init(uiColor: .systemGray6))
-                    .frame(width: 120, height: 90, alignment: .center)
+                BlockInputTrailing(placeholder: placeholder)
             }
         }
     }

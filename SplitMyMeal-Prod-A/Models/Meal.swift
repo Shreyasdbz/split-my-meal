@@ -24,6 +24,8 @@ class Meal {
     var items: [MealItem]? = [MealItem]()
     var people: [MealPerson]? = [MealPerson]()
 
+    var restaurantDetails: RestaurantDetails?
+    
     init() {
         //
     }

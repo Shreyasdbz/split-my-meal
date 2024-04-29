@@ -120,6 +120,7 @@ struct EditMealItemModal: View {
             inputString: $nameInput,
             showError: showNameInputError
         )
+        .submitLabel(.next)
         .focused($focusedField, equals: .name)
         .onSubmit {
             focusedField = .price
@@ -137,6 +138,7 @@ struct EditMealItemModal: View {
                     .foregroundStyle(.secondary)
                 
                 TextField("0.0", value: $priceInput, format: .number)
+                    .submitLabel(.next)
                     .frame(width: 65)
                     .padding(.horizontal, 15)
                     .padding(.vertical, 10)

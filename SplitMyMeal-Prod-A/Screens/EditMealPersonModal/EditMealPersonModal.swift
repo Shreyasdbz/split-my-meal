@@ -95,6 +95,7 @@ struct EditMealPersonModal: View {
             inputString: $nameInput,
             showError: showNameInputError
         )
+        .submitLabel(.done)
         .focused($nameInputFocused)
         .onSubmit {
             nameInputFocused = false

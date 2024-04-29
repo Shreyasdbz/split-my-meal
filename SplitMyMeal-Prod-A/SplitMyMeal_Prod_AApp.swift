@@ -15,7 +15,8 @@ struct SplitMyMeal_Prod_AApp: App {
         let schema = Schema([
             Meal.self,
             MealItem.self,
-            MealPerson.self
+            MealPerson.self,
+            RestaurantDetails.self
         ])
         let modelConfiguration = ModelConfiguration(
             schema: schema,
