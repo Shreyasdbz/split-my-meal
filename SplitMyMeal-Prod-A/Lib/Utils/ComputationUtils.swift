@@ -40,3 +40,11 @@ func getMealTotal(meal: Meal) -> Double? {
     }
     return total
 }
+
+
+/**
+ Computes the total amount a person owes
+ */
+func getSplitTotalForPerson(meal: Meal, person: MealPerson) -> Double? {
+    return nil
+}

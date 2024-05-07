@@ -24,7 +24,6 @@ struct SearchResult: Identifiable, Hashable {
     static func == (lhs: SearchResult, rhs: SearchResult) -> Bool {
         lhs.id == rhs.id
     }
-    
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
@@ -37,10 +36,10 @@ class RestaurantDetails {
     var relatedMeal: Meal?
     
     var id: String = UUID().uuidString
-    var title: String?
-    var address: String?
-    var lattitude: CLLocationDegrees?
-    var longitude: CLLocationDegrees?
+    var title: String = ""
+    var address: String = ""
+    var lattitude: CLLocationDegrees = 0
+    var longitude: CLLocationDegrees = 0
     
     init(){
         //

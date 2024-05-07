@@ -11,9 +11,6 @@ import MapKit
 import MCEmojiPicker
 
 struct EditMealModal: View {
-    
-    let STRING_EMPTY_RESTAURANT_SELECTION = "Select the restaurant"
-    
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) private var dismiss
@@ -32,9 +29,8 @@ struct EditMealModal: View {
     @State private var charmInput: String
     @State private var showEmojiPicker: Bool = false
 
+    @State private var restaurantDetailsInput: RestaurantDetails?
     @State private var mapSearchString: String
-    @State private var mapInputCaption: String
-    @State private var mapRegion: CLLocationCoordinate2D?
     @State private var showRestaurantPickerSheet: Bool = false
     
     
@@ -50,7 +46,6 @@ struct EditMealModal: View {
             self.titleInput = ""
             self.charmInput = "🍱"
             self.mapSearchString = ""
-            self.mapInputCaption = STRING_EMPTY_RESTAURANT_SELECTION
         } else {
             self.isNewMeal = false
             
@@ -60,21 +55,10 @@ struct EditMealModal: View {
             self.charmInput = meal.charm
             
             if let existingDetails = meal.restaurantDetails {
-                if let title = existingDetails.title, let subtitle = existingDetails.address {
-                    self.mapSearchString = title
-                    self.mapInputCaption = "\(title)\n\(subtitle)"
-                } else {
-                    self.mapSearchString = ""
-                    self.mapInputCaption = STRING_EMPTY_RESTAURANT_SELECTION
-                }
-                if let lattitude = existingDetails.lattitude, let longitude = existingDetails.longitude {
-                    self.mapRegion = CLLocationCoordinate2D(
-                        latitude: lattitude, longitude: longitude
-                    )
-                }
+                self.restaurantDetailsInput = existingDetails
+                self.mapSearchString = existingDetails.address
             } else {
                 self.mapSearchString = ""
-                self.mapInputCaption = STRING_EMPTY_RESTAURANT_SELECTION
             }
         }
     }
@@ -87,6 +71,9 @@ struct EditMealModal: View {
                     inputFieldCharm
                     inputFieldLocation
                     inputFieldReceipt
+                    if(!isNewMeal){
+                        deleteView
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.vertical)
@@ -105,10 +92,13 @@ struct EditMealModal: View {
                     }
                 }
             }
+            .onAppear {
+                CLLocationManager().requestWhenInUseAuthorization()
+            }
             .sheet(isPresented: $showRestaurantPickerSheet, content: {
                 LocationSearchModal(
                     meal: meal,
-                    searchString: mapSearchString,
+                    searchString: $mapSearchString,
                     onSetLocation: onSetLocation,
                     onClearLocation: onClearLocation
                 )
@@ -135,32 +125,43 @@ struct EditMealModal: View {
     }
     
     private var inputFieldCharm: some View {
-        //TODO: Add keyboard dismiss
-        BlockInputField(
-            label: "Charm",
-            caption: "Add a charm icon",
-            placeholder: charmInput,
-            onClick: {
+        HStack{
+            LabelWithCaptionLeading(
+                label: "Charm",
+                caption: "Add a charm icon"
+            )
+            Spacer()
+            Button{
                 titleFocusState = false
                 showEmojiPicker.toggle()
+            } label: {
+                RoundedRectangle(cornerRadius: 12)
+                    .overlay(alignment: .center) {
+                        Text("\(charmInput)")
+                            .font(.title)
+                    }
+                    .foregroundStyle(Color.init(uiColor: .systemGray6))
+                    .frame(width: 120, height: 90, alignment: .center)
+                    .emojiPicker(
+                        isPresented: $showEmojiPicker,
+                        selectedEmoji: $charmInput,
+                        arrowDirection: MCPickerArrowDirection.up,
+                        isDismissAfterChoosing: true
+                    )
             }
-        )
-        .emojiPicker(
-            isPresented: $showEmojiPicker,
-            selectedEmoji: $charmInput,
-            arrowDirection: MCPickerArrowDirection.up,
-            isDismissAfterChoosing: true
-        )
+        }
     }
     
     private func mapBlock(map: CLLocationCoordinate2D) -> some View {
         Map(
-            initialPosition: .region(
-                MKCoordinateRegion(
-                    center: map,
-                    span: MKCoordinateSpan(
-                        latitudeDelta: 0.015,
-                        longitudeDelta: 0.015
+            position: .constant(
+                .region(
+                    MKCoordinateRegion(
+                        center: map,
+                        span: MKCoordinateSpan(
+                            latitudeDelta: 0.015,
+                            longitudeDelta: 0.015
+                        )
                     )
                 )
             )
@@ -169,9 +170,8 @@ struct EditMealModal: View {
                 "",
                 coordinate: map,
                 anchor: .center) {
-                    Image(systemName: "mappin")
+                    Text("📍")
                         .font(.subheadline)
-                        .tint(.red)
                         .padding()
                 }
         }
@@ -181,16 +181,29 @@ struct EditMealModal: View {
     
     private var inputFieldLocation: some View{
         HStack{
-            LabelWithCaptionLeading(
-                label: "Location",
-                caption: mapInputCaption
-            )
+            if let details = restaurantDetailsInput {
+                LabelWithCaptionLeading(
+                    label: "Location",
+                    caption: "\(details.title)\n\(details.address)",
+                    useSmallCaption: true
+                )
+            } else {
+                LabelWithCaptionLeading(
+                    label: "Location",
+                    caption: "Select the restaurant"
+                )
+            }
             Spacer()
             Button{
                 showRestaurantPickerSheet = true
             } label: {
-                if let map = mapRegion {
-                    mapBlock(map: map)
+                if let details = restaurantDetailsInput {
+                    mapBlock(
+                        map: CLLocationCoordinate2D(
+                            latitude: details.lattitude,
+                            longitude: details.longitude
+                        )
+                    )
                 } else {
                     BlockInputTrailing(placeholder: "📍")
                 }
@@ -209,71 +222,88 @@ struct EditMealModal: View {
         )
     }
     
-    private func onSetLocation(_ service: LocationService, _ details: SearchCompletions?) async {
-        guard let restaurantDetails = details else { return }
-        let conversion = await convertSearchToLocation(
-            locationService: service,
-            title: restaurantDetails.title,
-            address: restaurantDetails.subTitle
-        )
-        guard let convertedDetails = conversion else { return }
-
-        //
-        // TODO: Move to save. Currently it's creating new meals on search press
-        //
-        
-        if let currentDetails = meal.restaurantDetails {
-            currentDetails.title = restaurantDetails.title
-            currentDetails.address = restaurantDetails.subTitle
-            currentDetails.lattitude = convertedDetails.location.latitude
-            currentDetails.longitude = convertedDetails.location.longitude
-        } else {
-            let newDetails = RestaurantDetails()
-            newDetails.relatedMeal = meal
-            newDetails.title = restaurantDetails.title
-            newDetails.address = restaurantDetails.subTitle
-            newDetails.lattitude = convertedDetails.location.latitude
-            newDetails.longitude = convertedDetails.location.longitude
-            modelContext.insert(newDetails)
+    private var deleteView: some View {
+        Button("Delete meal", systemImage: "trash", role: .destructive) {
+            dismiss()
+            modelContext.delete(meal)
+            navigationPath.removeLast()
         }
-        mapRegion = CLLocationCoordinate2D(
-            latitude: convertedDetails.location.latitude,
-            longitude: convertedDetails.location.longitude
-        )
-        mapSearchString = restaurantDetails.subTitle
-        mapInputCaption = "\(restaurantDetails.title)\n\(restaurantDetails.subTitle)"
+        .padding(.vertical, 30)
+    }
+    
+    private func onSetLocation(restaurantDetails: RestaurantDetails?) async {
+        self.restaurantDetailsInput = restaurantDetails
+        if let details = restaurantDetails {
+            mapSearchString = details.address
+        }
         showRestaurantPickerSheet = false
     }
 
     private func onClearLocation() {
-        //
+        self.restaurantDetailsInput = nil
+        self.mapSearchString = ""
+        showRestaurantPickerSheet = false
     }
     
     private func saveChanges(){
-        if(isNewMeal){
-            
-            if(!titleInput.isEmpty && !charmInput.isEmpty){
-                meal.title = titleInput
-                meal.charm = charmInput
-                
+        
+        var validationPassed: Bool = true
+        
+        // Title Validation
+        if (titleInput.isEmpty){
+            validationPassed = false
+            return
+        } else {
+            meal.title = titleInput
+        }
+        // Charm Validation
+        if(charmInput.isEmpty){
+            validationPassed = false
+            return
+        } else {
+            meal.charm = charmInput
+        }
+
+        if(validationPassed == true){
+            if(isNewMeal){
                 modelContext.insert(meal)
+                // Location Case - New meal, with map
+                if let details = restaurantDetailsInput {
+                    details.relatedMeal = meal
+                    modelContext.insert(details)
+                    meal.restaurantDetails = details
+                }
                 dismiss()
                 navigationPath.append(meal)
+
             } else {
-                showNameError = true
+                if let existingDetails = meal.restaurantDetails {
+                    if let newDetails = restaurantDetailsInput {
+                        if(existingDetails.address != newDetails.address){
+                            // Location Case - Existing meal, modify map
+                            existingDetails.title = newDetails.title
+                            existingDetails.address = newDetails.address
+                            existingDetails.lattitude = newDetails.lattitude
+                            existingDetails.longitude = newDetails.longitude
+                        }
+                    } else {
+                        // Location Case - Existing meal, remove map
+                        meal.restaurantDetails = nil
+                        modelContext.delete(existingDetails)
+                    }
+                } else {
+                    // Location Case - Existing meal, add map
+                    if let newDetails = restaurantDetailsInput {
+                        newDetails.relatedMeal = meal
+                        modelContext.insert(newDetails)
+                        meal.restaurantDetails = newDetails
+                    }
+                }
+                
+                meal.modifiedAt = Date()
+                dismiss()
             }
-        } else {
-            // TODO: Save
-            if(meal.title != titleInput && !titleInput.isEmpty){
-                meal.title = titleInput
-            }
-            if(meal.charm != charmInput && !charmInput.isEmpty){
-                meal.charm = charmInput
-            }
-            meal.modifiedAt = Date()
-            dismiss()
         }
-        
     }
 }
 

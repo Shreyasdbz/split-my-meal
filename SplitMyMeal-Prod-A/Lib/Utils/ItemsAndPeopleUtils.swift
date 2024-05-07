@@ -20,7 +20,7 @@ func getPeopleInMealString(meal: Meal) -> String {
     mealPeople
         .sorted(by: { personA, personB in
             personA.name <  personB.name
-        }) 
+        })
         .forEach { person in
             var nameString = person.name
             if(nameString.last == " "){

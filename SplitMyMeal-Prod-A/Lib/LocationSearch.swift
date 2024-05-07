@@ -27,6 +27,7 @@ class LocationService: NSObject, MKLocalSearchCompleterDelegate {
 
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         completions = completer.results.map { completion in
+                        
             return .init(
                 title: completion.title,
                 subTitle: completion.subtitle

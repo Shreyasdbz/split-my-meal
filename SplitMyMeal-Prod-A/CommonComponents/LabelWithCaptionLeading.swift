@@ -11,6 +11,7 @@ struct LabelWithCaptionLeading: View {
 
     let label: String
     let caption: String
+    @State var useSmallCaption: Bool = false
 
     var body: some View {
         VStack(alignment: .leading){
@@ -19,8 +20,9 @@ struct LabelWithCaptionLeading: View {
                 .fontWeight(.semibold)
                 .textCase(.uppercase)
             Text("\(caption)")
+                .font(!useSmallCaption ? .body : .callout)
                 .foregroundStyle(.secondary)
-                .fontWeight(.light)
+                .fontWeight(!useSmallCaption ? .light : .regular)
         }
     }
 }

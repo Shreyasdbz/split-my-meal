@@ -6,33 +6,33 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct LocationSearchModal: View {
 
     @Environment(\.dismiss) private var dismiss
-
     let locationService: LocationService = LocationService(.init())
+    @StateObject var locationManager = LocationManager()
 
     @Bindable private var meal: Meal
+    @Binding private var searchString: String
 
     @State private var isNewLocation: Bool
-    
-    @State private var searchString: String
     @State private var searchResults: [SearchResult] = []
     
-    var onSetLocation: (_ service: LocationService, _ details: SearchCompletions?) async -> ()
+    var onSetLocation: (_ restaurantDetails: RestaurantDetails?) async -> ()
     var onClearLocation: () -> ()
     
     init(
         meal: Meal,
-        searchString: String = "",
-        onSetLocation: @escaping (_ service: LocationService, _ details: SearchCompletions?) async -> (),
+        searchString: Binding<String>,
+        onSetLocation: @escaping (_ restaurantDetails: RestaurantDetails?) async -> (),
         onClearLocation: @escaping () -> ()
     ){
         self.meal = meal
-        self.searchString = searchString
-        if(!searchString.isEmpty){
-            self.locationService.update(queryFragment: searchString)
+        self._searchString = searchString
+        if(!searchString.wrappedValue.isEmpty){
+            self.locationService.update(queryFragment: searchString.wrappedValue)
             self.isNewLocation = false
         } else {
             self.isNewLocation = true
@@ -102,30 +102,56 @@ struct LocationSearchModal: View {
         .padding(.horizontal)
     }
     
-    private func searchResultRow(completion: SearchCompletions) -> some View {
-        Button {
-            Task {
-                await onSetLocation(locationService, completion)
+    private func searchResultRow(completion: SearchCompletions) -> some View {        
+        return(
+            Button {
+                Task {
+                    await onLocationClick(completion: completion)
+                }
+            } label: {
+                VStack(alignment: .leading){
+                    Text("\(completion.title)")
+                        .fontWeight(.medium)
+                    Text("\(completion.subTitle)")
+                    Text("12.3 miles away")
+                }
+                .font(.callout)
             }
-        } label: {
-            VStack(alignment: .leading){
-                Text("\(completion.title)")
-                    .fontWeight(.medium)
-                Text("\(completion.subTitle)")
-            }
-            .font(.callout)
-        }
+        )
     }
     
     private var searchResultsList: some View {
         List {
             ForEach(locationService.completions){ location in
-                searchResultRow(completion: location)
+                SearchResultRow(
+                    locationService: locationService,
+                    userLatitude: locationManager.lastLocation?.coordinate.latitude ?? 0.0,
+                    userLongitude: locationManager.lastLocation?.coordinate.longitude ?? 0.0,
+                    completion: location,
+                    onClick: onLocationClick
+                )
             }
         }
         .listStyle(.plain)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(.top, 10)
+    }
+    
+    private func onLocationClick(completion: SearchCompletions) async {
+        let restaurant = await convertSearchToLocation(
+            locationService: locationService,
+            title: completion.title,
+            address: completion.subTitle
+        )
+        if let details = restaurant {
+            let restaurantDetails = RestaurantDetails()
+            restaurantDetails.title = completion.title
+            restaurantDetails.address = completion.subTitle
+            restaurantDetails.lattitude = details.location.latitude
+            restaurantDetails.longitude = details.location.longitude
+            
+            await onSetLocation(restaurantDetails)
+        }
     }
 }
 

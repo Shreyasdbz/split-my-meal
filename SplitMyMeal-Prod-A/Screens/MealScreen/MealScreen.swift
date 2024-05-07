@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 enum MealDetailsViewType: String, CaseIterable, Identifiable {
     case items
@@ -20,20 +21,33 @@ struct MealScreen: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) private var dismiss
     
-    @Binding var navigationPath: NavigationPath
-    @Bindable var meal: Meal
+    @Binding private var navigationPath: NavigationPath
+    @Bindable private var meal: Meal
+    private var restaurantDetails: RestaurantDetails? {
+        return meal.restaurantDetails
+    }
     
     @State private var selectedDetailsView: MealDetailsViewType = .people
     
     @State private var showEditMealModal: Bool = false
+    @State private var showMapViewModal: Bool = false
+    
+    @State private var showSplitsModal: Bool = false
     
     @State var mealItemToEdit: MealItem? = nil
     @State var mealPersonToEdit: MealPerson? = nil
     
+    init(navigationPath: Binding<NavigationPath>, meal: Meal){
+        self._navigationPath = navigationPath
+        self.meal = meal
+    }
+    
     var body: some View {
         ScrollView{
             VStack{
-                InfoSectionView(meal: meal)
+                InfoSectionView(meal: meal) {
+                    showMapViewModal = true
+                }
                 DividerElement()
                 sliderSelector
                 if(selectedDetailsView == .items) {
@@ -45,7 +59,7 @@ struct MealScreen: View {
                 } else {
                     MealPeopleView(
                         meal: meal,
-                        onNewClick: openMealPersonModalNewItem,
+                        onNewClick: openMealPersonModalNewItem, 
                         onEditClick: openMealPersonModalEditItem
                     )
                 }
@@ -55,7 +69,7 @@ struct MealScreen: View {
         .toolbar{
             ToolbarItem(placement: .bottomBar) {
                 Button("Get split"){
-                    //
+                    showSplitsModal.toggle()
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
@@ -81,33 +95,29 @@ struct MealScreen: View {
                     mealItem: mealItemToEdit ?? MealItem(relatedMeal:nil, category: .Snack)
                 )
             }
-            .sheet(
-                item: $mealPersonToEdit) {
-                    mealPersonToEdit = nil
-                } content: { mealPerson in
-                    EditMealPersonModal(
+        .sheet(
+            item: $mealPersonToEdit) {
+                mealPersonToEdit = nil
+            } content: { mealPerson in
+                EditMealPersonModal(
+                    meal: meal,
+                    mealPerson: mealPersonToEdit ?? MealPerson(relatedMeal:nil)
+                )
+            }
+        .sheet(isPresented: $showMapViewModal, content: {
+                if let details = restaurantDetails {
+                    MapViewModal(
                         meal: meal,
-                        mealPerson: mealPersonToEdit ?? MealPerson(relatedMeal:nil)
+                        map: CLLocationCoordinate2D(
+                            latitude: details.lattitude,
+                            longitude: details.longitude
+                        )
                     )
                 }
-    }
-    
-    private var mapSection: some View {
-        BlockInputField(
-            label: "Location",
-            caption: "Select the restaurant",
-            placeholder: "📍") {
-                //
-            }
-    }
-    
-    private var receiptSection: some View {
-        BlockInputField(
-            label: "Receipt",
-            caption: "Attach a photo",
-            placeholder: "🧾") {
-                //
-            }
+            })
+        .sheet(isPresented: $showSplitsModal, content: {
+            SplitsModal(meal: meal)
+        })
     }
     
     private var sliderSelector: some View {
