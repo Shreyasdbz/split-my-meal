@@ -144,6 +144,7 @@ struct EditMealPersonModal: View {
                                 .padding(.vertical)
                                 .background(Color.init(uiColor: .systemGray6))
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .padding(.bottom, 5)
                             }
                         }
                     }

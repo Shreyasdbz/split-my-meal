@@ -78,11 +78,12 @@ struct MealScreen: View {
                     showSplitsModal.toggle()
                 }
             }
-            ToolbarItem(placement: .topBarTrailing) {
-                Button("", systemImage: "square.and.arrow.up") {
-                    //
-                }
-            }
+//            TODO: Implement after iOS 18 adds cloudkit sharing via swiftdata
+//            ToolbarItem(placement: .topBarTrailing) {
+//                Button("", systemImage: "square.and.arrow.up") {
+//                    //
+//                }
+//            }
             ToolbarItem(placement: .topBarTrailing) {
                 Button("", systemImage: "slider.vertical.3") {
                     showEditMealModal.toggle()
