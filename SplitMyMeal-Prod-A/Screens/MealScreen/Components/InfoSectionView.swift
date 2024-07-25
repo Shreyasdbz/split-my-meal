@@ -83,7 +83,7 @@ struct InfoSectionView: View {
             HStack{
                 LabelWithCaptionLeading(
                     label: "Receipt",
-                    caption: meal.receiptPhoto == nil ? "Attach a photo" : ""
+                    caption: meal.receiptPhoto == nil ? "Attach a photo" : "Tap to view"
                 )
                 Spacer()
                 if let imageData = meal.receiptPhoto, let uiImage = UIImage(data: imageData) {
