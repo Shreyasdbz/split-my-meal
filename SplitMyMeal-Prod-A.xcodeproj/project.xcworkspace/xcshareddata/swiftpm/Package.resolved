@@ -1,5 +1,5 @@
 {
-  "originHash" : "595d1748b1c3db11b79ffd9f75f2eb43bd054d2196cd9f3ba2c5add22061bf3c",
+  "originHash" : "d040947c7ce1def6ee62e061ffb2959e43c8beb174550ad895b06fe56e09a94e",
   "pins" : [
     {
       "identity" : "mcemojipicker",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "e0b4903b75ae1cc418d276d84d1cb946b8a1d73c",
         "version" : "1.2.3"
+      }
+    },
+    {
+      "identity" : "swiftui-image-viewer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fuzzzlove/swiftui-image-viewer.git",
+      "state" : {
+        "revision" : "ca77123064ae046eac2be01654ee756085c2b182",
+        "version" : "1.0.0"
       }
     }
   ],

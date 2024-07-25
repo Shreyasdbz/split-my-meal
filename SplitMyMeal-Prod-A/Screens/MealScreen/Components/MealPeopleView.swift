@@ -47,11 +47,13 @@ struct MealPeopleView: View {
                 Image(systemName: "plus")
                 Text("Add person")
             }
+            .font(.subheadline)
+            .fontWeight(.medium)
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
             .overlay {
                 RoundedRectangle(cornerRadius: 100, style: .continuous)
-                    .stroke(.primary, lineWidth: 1.25)
+                    .stroke(.primary, lineWidth: 1)
             }
         }
         .padding(.vertical, 20)
@@ -66,9 +68,9 @@ struct MealPeopleView: View {
         .padding(.vertical, 30)
     }
     
-    private func itemBubble(item: MealItem) -> some View{
+    private func itemBubbleOpenPill(item: MealItem) -> some View{
         Text("\(item.name)")
-            .font(.subheadline)
+            .font(.footnote)
             .foregroundStyle(getColorByMealItemCategory(category: item.category))
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
@@ -80,17 +82,34 @@ struct MealPeopleView: View {
                     )
             }
     }
+    private func itemBubble(item: MealItem) -> some View{
+        Text("\(item.name)")
+            .font(.subheadline)
+            .fontWeight(.regular)
+            .foregroundStyle(.primary)
+            .colorInvert()
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .background(getColorByMealItemCategory(category: item.category).opacity(0.75))
+            .overlay {
+                RoundedRectangle(cornerRadius: 100, style: .continuous)
+                    .stroke(
+                        getColorByMealItemCategory(category: item.category).opacity(0.75),
+                        lineWidth: 0.75
+                    )
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 100))
+    }
     
     private func mealPersonRowTextPortion(person: MealPerson) -> some View {
         VStack{
             HStack{
                 Text("\(person.name)")
                     .font(.headline)
-                    .fontWeight(.medium)
+                    .fontWeight(.regular)
                     .foregroundStyle(.primary)
                 Spacer()
             }
-            DividerElement(removePadding: true)
             if let items = getItemsForMealPerson(meal: meal, person: person) {
                 FlexStack{
                     ForEach(items.sorted(by: { itemA, itemB in
@@ -99,7 +118,7 @@ struct MealPeopleView: View {
                         itemBubble(item: item)
                     }
                 }
-                .padding(.top, 5)
+                .padding(.top, 1)
             } else {
                 VStack{
                     Text("\(person.name) hasn't had anything")

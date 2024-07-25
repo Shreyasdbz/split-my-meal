@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import MapKit
 import MCEmojiPicker
+import PhotosUI
 
 struct EditMealModal: View {
     @Environment(\.modelContext) var modelContext
@@ -33,6 +34,7 @@ struct EditMealModal: View {
     @State private var mapSearchString: String
     @State private var showRestaurantPickerSheet: Bool = false
     
+    @State private var selectedPhoto: PhotosPickerItem?
     
     init(navigationPath: Binding<NavigationPath>, meal: Meal){
         self._navigationPath = navigationPath
@@ -111,6 +113,7 @@ struct EditMealModal: View {
                     showNameError = false
                 }
             })
+            .onChange(of: selectedPhoto, setMealReceiptPhoto)
         }
     }
     
@@ -212,14 +215,48 @@ struct EditMealModal: View {
     }
     
     private var inputFieldReceipt: some View{
-        BlockInputField(
-            label: "Receipt",
-            caption: "Attach a photo",
-            placeholder: "🧾",
-            onClick: {
-                //
+        VStack{
+            HStack{
+                VStack(alignment: .leading){
+                    LabelWithCaptionLeading(
+                        label: "Receipt",
+                        caption: "Attach a photo"
+                    )
+                    if let imageData = meal.receiptPhoto, let _ = UIImage(data: imageData) {
+                        Button{
+                            meal.receiptPhoto = nil
+                            selectedPhoto = nil
+                        } label: {
+                            HStack(spacing: 5){
+                                Image(systemName: "xmark")
+                                Text("Remove")
+                            }
+                            .font(.callout)
+                            .fontWeight(.light)
+                            .tint(.red)
+                        }
+                    }
+
+                }
+                Spacer()
+                PhotosPicker(
+                    selection: $selectedPhoto,
+                    matching: .images
+                ) {
+                    if let imageData = meal.receiptPhoto, let uiImage = UIImage(data: imageData) {
+                        
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .frame(width: 120, height: 90, alignment: .center)
+                            .scaledToFill()
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    } else {
+                        BlockInputTrailing(placeholder: "🧾")
+                    }
+
+                }
             }
-        )
+        }
     }
     
     private var deleteView: some View {
@@ -243,6 +280,12 @@ struct EditMealModal: View {
         self.restaurantDetailsInput = nil
         self.mapSearchString = ""
         showRestaurantPickerSheet = false
+    }
+    
+    private func setMealReceiptPhoto(){
+        Task { @MainActor in
+            meal.receiptPhoto = try await selectedPhoto?.loadTransferable(type: Data.self)
+        }
     }
     
     private func saveChanges(){

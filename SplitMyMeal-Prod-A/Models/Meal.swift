@@ -25,6 +25,8 @@ class Meal {
     var people: [MealPerson]? = [MealPerson]()
 
     var restaurantDetails: RestaurantDetails?
+
+    @Attribute(.externalStorage) var receiptPhoto: Data?
     
     init() {
         //

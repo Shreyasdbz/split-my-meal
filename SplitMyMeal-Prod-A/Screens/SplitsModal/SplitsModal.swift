@@ -11,7 +11,7 @@ struct SplitsModal: View {
     
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) private var dismiss
-
+    
     @Bindable var meal: Meal
     
     var body: some View {
@@ -40,21 +40,41 @@ struct SplitsModal: View {
     private var totalsSection: some View {
         HStack{
             VStack(alignment: .leading){
-                Text("Total")
+                Text("Totals")
                     .font(.title3)
                     .fontWeight(.medium)
                     .padding(.bottom, 5)
-                if let total = getMealTotal(meal: meal) {
-                    Text("\(total.formatted(.currency(code: "USD")))")
-                } else {
-                    Text("$0.00")
+                VStack(spacing: 8) {
+                    HStack{
+                        Text("Subtotal")
+                            .fontWeight(.regular)
+                        Spacer()
+                        Text("\(getMealTotalPreTax(meal: meal).formatted(.currency(code: "USD")))")
+                            .fontWeight(.light)
+                    }
+                    HStack{
+                        Text("Tip")
+                            .fontWeight(.regular)
+                        Spacer()
+                        Text(getMealTaxText(meal: meal))
+                            .fontWeight(.light)
+                    }
+                    HStack{
+                        Text("Tax")
+                            .fontWeight(.regular)
+                        Spacer()
+                        Text(getMealTipText(meal: meal))
+                            .fontWeight(.light)
+                    }
+                    HStack{
+                        Text("Grand total")
+                            .fontWeight(.medium)
+                        Spacer()
+                        Text("\(getMealTotal(meal: meal).formatted(.currency(code: "USD")))")
+                            .fontWeight(.medium)
+                    }
                 }
-                VStack{
-                    Text("$32.23 (6.23%) Tax")
-                    Text("$10.23 (15.23%) Tip")
-                }
-                .font(.subheadline)
-                .fontWeight(.thin)
+                .font(.headline)
             }
             Spacer()
         }
@@ -74,11 +94,9 @@ struct SplitsModal: View {
                                 .foregroundStyle(getColorByMealItemCategory(category: item.category))
                         }
                     }
-                } else {
-                    Text("No items for \(person.name)")
-                }
+                } 
                 Spacer()
-                Text("$34.23")
+                Text("\(getSplitTotalForPerson(meal: meal, person: person).formatted(.currency(code: "USD")))")
             }
                 .padding()
         )

@@ -15,6 +15,10 @@
 		9016B0EC2BDC82F4006E3427 /* LabelWithCaptionLeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016B0EB2BDC82F4006E3427 /* LabelWithCaptionLeading.swift */; };
 		9016B0EE2BDC8A28006E3427 /* EditMealPersonModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016B0ED2BDC8A28006E3427 /* EditMealPersonModal.swift */; };
 		9016B0F02BDDB8CD006E3427 /* FlexGridUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016B0EF2BDDB8CD006E3427 /* FlexGridUI.swift */; };
+		905EA02A2BF43ECB00ABAF07 /* TaxModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905EA0292BF43ECB00ABAF07 /* TaxModal.swift */; };
+		905EA02C2BF43F9800ABAF07 /* TaxTipPercentAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905EA02B2BF43F9800ABAF07 /* TaxTipPercentAmountSlider.swift */; };
+		906DEFA12C51ECB000ACF79F /* SwiftUIImageViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 906DEFA02C51ECB000ACF79F /* SwiftUIImageViewer */; };
+		906DEFA32C51EDB900ACF79F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DEFA22C51EDB900ACF79F /* Image.swift */; };
 		90708C762BE1EC5500A20FC7 /* MapViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90708C752BE1EC5500A20FC7 /* MapViewModal.swift */; };
 		908B3F3C2BDB03440069BC52 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F3B2BDB03440069BC52 /* Constants.swift */; };
 		908B3F3E2BDB099E0069BC52 /* MealItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B3F3D2BDB099E0069BC52 /* MealItemsView.swift */; };
@@ -44,6 +48,8 @@
 		90EE95412BD9EF570063870D /* InfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95402BD9EF570063870D /* InfoSectionView.swift */; };
 		90EE95432BD9EFDB0063870D /* BlockInputFieldShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95422BD9EFDB0063870D /* BlockInputFieldShort.swift */; };
 		90EE95452BD9F1410063870D /* EmptyAreaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EE95442BD9F1410063870D /* EmptyAreaText.swift */; };
+		90F3C8C92C4C8D1300FBC147 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3C8C82C4C8D1300FBC147 /* Formatter.swift */; };
+		90FAD4BC2C455E6B00BA48CE /* TipModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAD4BB2C455E6B00BA48CE /* TipModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +61,9 @@
 		9016B0EB2BDC82F4006E3427 /* LabelWithCaptionLeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithCaptionLeading.swift; sourceTree = "<group>"; };
 		9016B0ED2BDC8A28006E3427 /* EditMealPersonModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMealPersonModal.swift; sourceTree = "<group>"; };
 		9016B0EF2BDDB8CD006E3427 /* FlexGridUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexGridUI.swift; sourceTree = "<group>"; };
+		905EA0292BF43ECB00ABAF07 /* TaxModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxModal.swift; sourceTree = "<group>"; };
+		905EA02B2BF43F9800ABAF07 /* TaxTipPercentAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxTipPercentAmountSlider.swift; sourceTree = "<group>"; };
+		906DEFA22C51EDB900ACF79F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		90708C752BE1EC5500A20FC7 /* MapViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModal.swift; sourceTree = "<group>"; };
 		908B3F3B2BDB03440069BC52 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		908B3F3D2BDB099E0069BC52 /* MealItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemsView.swift; sourceTree = "<group>"; };
@@ -86,6 +95,8 @@
 		90EE95402BD9EF570063870D /* InfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSectionView.swift; sourceTree = "<group>"; };
 		90EE95422BD9EFDB0063870D /* BlockInputFieldShort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInputFieldShort.swift; sourceTree = "<group>"; };
 		90EE95442BD9F1410063870D /* EmptyAreaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAreaText.swift; sourceTree = "<group>"; };
+		90F3C8C82C4C8D1300FBC147 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		90FAD4BB2C455E6B00BA48CE /* TipModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906DEFA12C51ECB000ACF79F /* SwiftUIImageViewer in Frameworks */,
 				90EE95372BD9CF780063870D /* MCEmojiPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +217,8 @@
 				9002A8BB2BDF213F0073CF69 /* LocationSearch.swift */,
 				90C427E82BE960660008CFD5 /* LocationManager.swift */,
 				908B3F412BDB0B370069BC52 /* Utils */,
+				90F3C8C82C4C8D1300FBC147 /* Formatter.swift */,
+				906DEFA22C51EDB900ACF79F /* Image.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -277,6 +291,9 @@
 				908B3F3F2BDB09B70069BC52 /* MealItemsRow.swift */,
 				908B3F422BDB12CF0069BC52 /* MealPeopleView.swift */,
 				90708C752BE1EC5500A20FC7 /* MapViewModal.swift */,
+				905EA0292BF43ECB00ABAF07 /* TaxModal.swift */,
+				905EA02B2BF43F9800ABAF07 /* TaxTipPercentAmountSlider.swift */,
+				90FAD4BB2C455E6B00BA48CE /* TipModal.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -299,6 +316,7 @@
 			name = "SplitMyMeal-Prod-A";
 			packageProductDependencies = (
 				90EE95362BD9CF780063870D /* MCEmojiPicker */,
+				906DEFA02C51ECB000ACF79F /* SwiftUIImageViewer */,
 			);
 			productName = "SplitMyMeal-Prod-A";
 			productReference = 90EE95072BD997250063870D /* SplitMyMeal-Prod-A.app */;
@@ -330,6 +348,7 @@
 			mainGroup = 90EE94FE2BD997250063870D;
 			packageReferences = (
 				90EE95352BD9CF780063870D /* XCRemoteSwiftPackageReference "MCEmojiPicker" */,
+				906DEF9F2C51ECB000ACF79F /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */,
 			);
 			productRefGroup = 90EE95082BD997250063870D /* Products */;
 			projectDirPath = "";
@@ -362,8 +381,11 @@
 				90EE952E2BD99B550063870D /* MealsListView.swift in Sources */,
 				908B3F3C2BDB03440069BC52 /* Constants.swift in Sources */,
 				90C427EB2BE9692A0008CFD5 /* SplitsModal.swift in Sources */,
+				905EA02C2BF43F9800ABAF07 /* TaxTipPercentAmountSlider.swift in Sources */,
 				90EE95262BD997A70063870D /* Meal.swift in Sources */,
 				90EE95302BD9C5610063870D /* MealScreen.swift in Sources */,
+				905EA02A2BF43ECB00ABAF07 /* TaxModal.swift in Sources */,
+				90FAD4BC2C455E6B00BA48CE /* TipModal.swift in Sources */,
 				90EE950D2BD997250063870D /* ContentView.swift in Sources */,
 				90EE95282BD9987A0063870D /* MealItem.swift in Sources */,
 				908B3F432BDB12CF0069BC52 /* MealPeopleView.swift in Sources */,
@@ -373,7 +395,9 @@
 				90EE952A2BD998DC0063870D /* MealPerson.swift in Sources */,
 				908B3F402BDB09B70069BC52 /* MealItemsRow.swift in Sources */,
 				90C427E92BE960660008CFD5 /* LocationManager.swift in Sources */,
+				906DEFA32C51EDB900ACF79F /* Image.swift in Sources */,
 				9016B0F02BDDB8CD006E3427 /* FlexGridUI.swift in Sources */,
+				90F3C8C92C4C8D1300FBC147 /* Formatter.swift in Sources */,
 				9016B0EE2BDC8A28006E3427 /* EditMealPersonModal.swift in Sources */,
 				90EE953D2BD9EE7D0063870D /* DividerElement.swift in Sources */,
 				90EE950B2BD997250063870D /* SplitMyMeal_Prod_AApp.swift in Sources */,
@@ -610,6 +634,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		906DEF9F2C51ECB000ACF79F /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fuzzzlove/swiftui-image-viewer.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		90EE95352BD9CF780063870D /* XCRemoteSwiftPackageReference "MCEmojiPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/izyumkin/MCEmojiPicker";
@@ -621,6 +653,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		906DEFA02C51ECB000ACF79F /* SwiftUIImageViewer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 906DEF9F2C51ECB000ACF79F /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */;
+			productName = SwiftUIImageViewer;
+		};
 		90EE95362BD9CF780063870D /* MCEmojiPicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 90EE95352BD9CF780063870D /* XCRemoteSwiftPackageReference "MCEmojiPicker" */;

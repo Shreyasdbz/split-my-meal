@@ -15,6 +15,7 @@ enum MealDetailsViewType: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
+
 struct MealScreen: View {
     
     @Environment(\.modelContext) var modelContext
@@ -32,6 +33,8 @@ struct MealScreen: View {
     @State private var showEditMealModal: Bool = false
     @State private var showMapViewModal: Bool = false
     
+    @State private var showTaxModal: Bool = false
+    @State private var showTipModal: Bool = false
     @State private var showSplitsModal: Bool = false
     
     @State var mealItemToEdit: MealItem? = nil
@@ -45,9 +48,12 @@ struct MealScreen: View {
     var body: some View {
         ScrollView{
             VStack{
-                InfoSectionView(meal: meal) {
-                    showMapViewModal = true
-                }
+                InfoSectionView(
+                    meal: meal,
+                    onMapClick: openMapView,
+                    onTaxClick: openTaxModal,
+                    onTipClick: openTipModal
+                )
                 DividerElement()
                 sliderSelector
                 if(selectedDetailsView == .items) {
@@ -115,6 +121,14 @@ struct MealScreen: View {
                     )
                 }
             })
+        .sheet(isPresented: $showTaxModal, content: {
+            TaxModal(meal: meal, onSave: saveTax)
+                .presentationDetents([.medium])
+        })
+        .sheet(isPresented: $showTipModal, content: {
+            TipModal(meal: meal, onSave: saveTip)
+                .presentationDetents([.medium])
+        })
         .sheet(isPresented: $showSplitsModal, content: {
             SplitsModal(meal: meal)
         })
@@ -147,7 +161,59 @@ struct MealScreen: View {
     private func openMealItemModalEditItem(item: MealItem){
         mealItemToEdit = item
     }
+
+    // ================================================
+    // Map Functions
+    // ================================================
+    private func openMapView(){
+        showMapViewModal = true
+    }
     
+    // ================================================
+    // Tax & Tip Functions
+    // ================================================
+    private func openTaxModal(){
+        showTaxModal = true
+    }
+    private func saveTax(percentage: Double?, amount: Double?, delete: Bool?){
+        if let toDelete = delete {
+            if(toDelete == true){
+                meal.taxPercentage = nil
+                meal.taxAmount = nil
+            }
+        }
+        if let usePercentage = percentage {
+            meal.taxPercentage = usePercentage
+            meal.taxAmount = nil
+        }
+        if let useAmount = amount {
+            meal.taxAmount = useAmount
+            meal.taxPercentage = nil
+        }
+        showTaxModal = false
+    }
+
+    private func openTipModal(){
+        showTipModal = true
+    }
+    private func saveTip(percentage: Double?, amount: Double?, delete: Bool?){
+        if let toDelete = delete {
+            if(toDelete == true){
+                meal.tipPercentage = nil
+                meal.tipAmount = nil
+            }
+        }
+        if let usePercentage = percentage {
+            meal.tipPercentage = usePercentage
+            meal.tipAmount = nil
+        }
+        if let useAmount = amount {
+            meal.tipAmount = useAmount
+            meal.tipPercentage = nil
+        }
+        showTipModal = false
+    }
+
     
     // ================================================
     // Meal Person Modal Functions

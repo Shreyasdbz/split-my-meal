@@ -30,11 +30,7 @@ struct MealRowView: View {
                     .fontWeight(.medium)
                 Text("\(getPeopleInMealString(meal: meal))")
                     .foregroundStyle(Color.init(uiColor: .systemGray))
-                if let mealTotal = getMealTotal(meal: meal) {
-                    Text("\(mealTotal.formatted(.currency(code: "USD")))")
-                } else {
-                    Text("No items added yet")
-                }
+                    Text("\(getMealTotal(meal: meal).formatted(.currency(code: "USD")))")
             }
             Spacer()
         }

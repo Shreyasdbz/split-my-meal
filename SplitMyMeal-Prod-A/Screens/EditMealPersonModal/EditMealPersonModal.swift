@@ -103,12 +103,16 @@ struct EditMealPersonModal: View {
     }
     
     private var noItemsInMealView: some View {
-        VStack(alignment: .center){
-            Text("No items in this meal")
-            Text("Add an item from the Items tab")
+        HStack{
+            Spacer()
+            VStack(alignment: .center){
+                Text("No items in this meal")
+                Text("Add an item from the Items tab")
+            }
+            .foregroundStyle(.secondary)
+            .padding(.vertical, 30)
+            Spacer()
         }
-        .foregroundStyle(.secondary)
-        .padding(.vertical, 30)
     }
     
     private var inputFieldMealItems: some View {
