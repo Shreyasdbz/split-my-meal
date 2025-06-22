@@ -53,14 +53,14 @@ struct SplitsModal: View {
                             .fontWeight(.light)
                     }
                     HStack{
-                        Text("Tip")
+                        Text("Tax")
                             .fontWeight(.regular)
                         Spacer()
                         Text(getMealTaxText(meal: meal))
                             .fontWeight(.light)
                     }
                     HStack{
-                        Text("Tax")
+                        Text("Tip")
                             .fontWeight(.regular)
                         Spacer()
                         Text(getMealTipText(meal: meal))

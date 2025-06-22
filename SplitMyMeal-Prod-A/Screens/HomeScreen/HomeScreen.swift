@@ -10,7 +10,7 @@ import SwiftData
 
 struct HomeScreen: View {
 
-    @Environment (\.modelContext) var modelContext
+    @Environment(\.modelContext) var modelContext
 
     @State private var path = NavigationPath()
     @State private var searchText: String = ""
