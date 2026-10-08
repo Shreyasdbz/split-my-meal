@@ -1,7 +1,7 @@
 {
   "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37745413903",
   "gitHead": "a79dec04b8160603413a8de97e59aa6f1d32633e",
-  "result": "Failed",
+  "result": "Incomplete",
   "sourceManifest": "ci-job-budget-source-manifest.json",
   "sourceManifestSHA256": "ba61ea8e638db48649470db7e104ecb586e838bdd8a1b646edc919a9b2d54737",
   "nativeExport": "iPhone completed native summary; iPad log observations only, because its native bundle was interrupted and has no completed summary.",
@@ -20,7 +20,8 @@
         "occurrences": 16
       }
     ],
-    "artifactUploadConclusion": "success"
+    "artifactUploadConclusion": "success",
+    "jobConclusion": "success"
   },
   "iPad": {
     "activeCaseAtInterruption": {
@@ -56,7 +57,7 @@
     "completedNativeSuitePass": false,
     "deviceFamily": "iPad",
     "exactHead": "a79dec04b8160603413a8de97e59aa6f1d32633e",
-    "jobConclusion": "failure",
+    "jobConclusion": "cancelled",
     "jobElapsedIncludingCancellationGraceAndUploadSeconds": 3132,
     "jobID": 113205602214,
     "jobLimitMinutes": 50,
@@ -449,6 +450,7 @@
     "runID": 37745413903,
     "sourceInputCount": 44,
     "testLogSHA256": "ed65e606a843835027f543667a0a841ec7ccaa8985815804ce1448b42b48aac8",
-    "verificationStepConclusion": "canceled"
-  }
+    "verificationStepConclusion": "cancelled"
+  },
+  "workflowConclusion": "cancelled"
 }
