@@ -1,0 +1,91 @@
+{
+  "nativeExport": "Sanitized native summaries and test-case exports; complete native bundles and logs retained locally.",
+  "scope": "Actual system Photos receipt attachment, replacement, Cancel/Save pixel comparisons and process-relaunch persistence after waiting for the exact selectable photo. No production change, retry or case-budget change.",
+  "sourceManifest": "photos-readiness-replay-source-manifest.json",
+  "sourceManifestSHA256": "483ebb23afc86d9acfaf62ed6bca4fc1c83f398a9a9911d2e99c1ead828c8c67",
+  "result": "Passed",
+  "devices": [
+    {
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1791445390.714,
+      "passedTests": 1,
+      "result": "Passed",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "skippedTests": 0,
+      "startTime": 1791445298.544,
+      "tests": [
+        {
+          "durationInSeconds": 86.15162491798401,
+          "name": "testNativePhotoAttachmentReplacementCancelAndSave()",
+          "nodeIdentifier": "MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 1,
+      "family": "iPhone",
+      "completeLogDiagnostics": {
+        "Invalid frame dimension (negative or non-finite).": 1,
+        "vnode unlinked while in use": 0,
+        "database integrity compromised": 0,
+        "Class UIAccessibilityLoaderWebShared is implemented in both": 1,
+        "Ignoring failure to get hierarchy": 0
+      }
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1791445379.309,
+      "passedTests": 1,
+      "result": "Passed",
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "skippedTests": 0,
+      "startTime": 1791445272.329,
+      "tests": [
+        {
+          "durationInSeconds": 103.4648950099945,
+          "name": "testNativePhotoAttachmentReplacementCancelAndSave()",
+          "nodeIdentifier": "MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 1,
+      "family": "iPad",
+      "completeLogDiagnostics": {
+        "Invalid frame dimension (negative or non-finite).": 1,
+        "vnode unlinked while in use": 0,
+        "database integrity compromised": 0,
+        "Class UIAccessibilityLoaderWebShared is implemented in both": 1,
+        "Ignoring failure to get hierarchy": 52
+      }
+    }
+  ]
+}

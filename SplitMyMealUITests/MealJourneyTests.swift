@@ -853,9 +853,13 @@ final class MealJourneyTests: XCTestCase {
 
     private func choosePhoto(at index: Int) {
         tapScrollable("choose-receipt")
-        XCTAssertTrue(app.navigationBars["Photos"].waitForExistence(timeout: 10))
         let photo = app.images.matching(identifier: "PXGGridLayout-Info").element(boundBy: index)
-        XCTAssertTrue(photo.waitForExistence(timeout: 10), "The verification script must import the fictional receipt fixtures before testing.")
+        // Hosted Photos initially exposes PUPickerUnavailableView and Loading…;
+        // wait for the actual selectable fixture, rather than its loading chrome.
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND isHittable == true"), object: photo)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 30), .completed, "The native Photos picker must load a selectable fictional receipt fixture.")
+        XCTAssertTrue(app.navigationBars["Photos"].exists)
+        XCTAssertTrue(photo.exists, "The verification script must import the fictional receipt fixtures before testing.")
         screenshot("native-photos-picker")
         photo.tap()
         XCTAssertTrue(app.navigationBars["Photos"].waitForNonExistence(timeout: 15), "Selecting an actual photo dismisses the native picker.")

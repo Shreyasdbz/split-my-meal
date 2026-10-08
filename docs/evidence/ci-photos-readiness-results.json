@@ -1,0 +1,84 @@
+{
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37739658669",
+  "gitHead": "324fced134cb03629f9b88b04f5960a25772f7bb",
+  "result": "Failed",
+  "nativeExport": "Sanitized native summaries; complete results, logs, assertion-time accessibility tree and failure screenshot remain in workflow artifacts.",
+  "sourceManifest": "ci-photos-readiness-source-manifest.json",
+  "sourceManifestSHA256": "3ecd00123a03b58d3da77c2b6831b7d82f4c7b6a6b54d6934dfafa24d147f382",
+  "scope": "Complete 27-unit and 24-journey suites on each device. The only failure was the first Photos navigation assertion while the system picker was loading.",
+  "observation": {
+    "failedAssertion": "First Photos navigation-bar readiness check, bounded at 10 seconds.",
+    "assertionAccessibilityState": [
+      "PUPickerUnavailableView",
+      "In progress",
+      "Loading\u2026"
+    ],
+    "laterFailureCaptureState": [
+      "Photos navigation bar",
+      "Selectable PXGGridLayout-Info fixture cells"
+    ],
+    "correction": "Wait up to 30 seconds for the exact selected photo to exist and be hittable, then assert Photos navigation and perform the unchanged selection, dismissal, Save, pixel, Cancel and relaunch checks. No second presentation tap, retry or case-budget change."
+  },
+  "devices": [
+    {
+      "family": "iPhone",
+      "result": "Failed",
+      "totalTestCount": 51,
+      "passedTests": 50,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "startTime": 1791442635.121,
+      "finishTime": 1791444912.591,
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "testFailures": [
+        {
+          "failureText": "XCTAssertTrue failed",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifierString": "MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 16
+        }
+      ],
+      "sqliteUnlinkedDiagnosticOccurrences": 0
+    },
+    {
+      "family": "iPad",
+      "result": "Passed",
+      "totalTestCount": 51,
+      "passedTests": 51,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "startTime": 1791442504.91,
+      "finishTime": 1791444922.695,
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "testFailures": [],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 16
+        }
+      ],
+      "sqliteUnlinkedDiagnosticOccurrences": 0
+    }
+  ]
+}
