@@ -665,6 +665,9 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps() throws {
+        // Hosted automation reached the repair/save steps after four minutes.
+        // Keep the bounded relaunch journey budget separate from control waits.
+        executionTimeAllowance = 420
         app.terminate()
         app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-demo", "--invalid-restaurant-location"]
         launchForMealTesting()

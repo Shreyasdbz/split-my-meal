@@ -1,0 +1,98 @@
+{
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37751949742",
+  "gitHead": "b7dc19169319660dc7455b1762643aa742c0bc20",
+  "result": "Failed",
+  "workflowConclusion": "failure",
+  "nativeExport": "Sanitized completed native summaries; complete results and logs remain in workflow artifacts.",
+  "sourceManifest": "ci-restaurant-budget-source-manifest.json",
+  "sourceManifestSHA256": "394a8c08db302674095b2274f69175c6f7e11e03b1f7165e45f390f48de6b747",
+  "scope": "Complete 27-unit and 24-journey suites on each device. The sole failure interrupted historical invalid-restaurant repair at the four-minute total case allowance.",
+  "observation": {
+    "failure": "Test exceeded execution time allowance of 4 minutes",
+    "phoneTrace": "The native log continued through Cancel preservation, Remove, Save and the cleared-restaurant assertion after the allowance expired. The final process-relaunch assertion was not reached; the interrupted case is unverified.",
+    "iPadCaseDurationSeconds": 157.672,
+    "correction": "Give only this complete multi-launch journey a 420-second allowance. Every assertion, control wait, retry policy and production input remains unchanged; the default is 240 seconds and workflow job limit is 75 minutes."
+  },
+  "devices": [
+    {
+      "result": "Failed",
+      "totalTestCount": 51,
+      "passedTests": 50,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "startTime": 1791449715.502,
+      "finishTime": 1791452318.656,
+      "family": "iPhone",
+      "jobConclusion": "failure",
+      "artifactUploadConclusion": "success",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "testFailures": [
+        {
+          "failureText": "Test exceeded execution time allowance of 4 minutes",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifierString": "MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 17
+        }
+      ],
+      "completeLogDiagnostics": {
+        "invalidFrameDimension": 17,
+        "sqliteVnodeUnlinked": 0,
+        "sqliteIntegrityCompromised": 0,
+        "duplicateNativeAccessibilityLoader": 2,
+        "ignoredRemoteHierarchy": 1,
+        "caseExecutionAllowanceExceeded": 1,
+        "runnerRestarts": 1
+      }
+    },
+    {
+      "result": "Passed",
+      "totalTestCount": 51,
+      "passedTests": 51,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "startTime": 1791450020.641,
+      "finishTime": 1791452974.004,
+      "family": "iPad",
+      "jobConclusion": "success",
+      "artifactUploadConclusion": "success",
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "testFailures": [],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 16
+        }
+      ],
+      "completeLogDiagnostics": {
+        "invalidFrameDimension": 16,
+        "sqliteVnodeUnlinked": 0,
+        "sqliteIntegrityCompromised": 0,
+        "duplicateNativeAccessibilityLoader": 1,
+        "ignoredRemoteHierarchy": 6,
+        "caseExecutionAllowanceExceeded": 0,
+        "runnerRestarts": 0
+      }
+    }
+  ]
+}

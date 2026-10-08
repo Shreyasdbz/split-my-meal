@@ -1,0 +1,67 @@
+{
+  "result": "Passed",
+  "nativeExport": "Completed native summaries with all unchanged repair, Cancel, Save and process-relaunch assertions retained.",
+  "scope": "Focused historical invalid-restaurant recovery after a measured 420-second complete-journey allowance. Individual control waits, retries and production source are unchanged.",
+  "sourceManifest": "restaurant-budget-replay-source-manifest.json",
+  "sourceManifestSHA256": "741adae0318c781492c1761c71409d78252a11f630093ac434b71144274e93df",
+  "devices": [
+    {
+      "baseGitHead": "b7dc19169319660dc7455b1762643aa742c0bc20",
+      "cases": [
+        {
+          "durationSeconds": 52.165,
+          "name": "testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps",
+          "result": "Passed"
+        }
+      ],
+      "completeLogDiagnostics": {
+        "caseExecutionAllowanceExceeded": 0,
+        "duplicateNativeAccessibilityLoader": 1,
+        "ignoredRemoteHierarchy": 0,
+        "invalidFrameDimension": 0,
+        "runnerRestarts": 0,
+        "sqliteIntegrityCompromised": 0,
+        "sqliteVnodeUnlinked": 0
+      },
+      "deviceFamily": "iPhone",
+      "failedTests": 0,
+      "nativeResultCompleted": true,
+      "nativeRuntimeWarningCount": 0,
+      "nativeRuntimeWarnings": [],
+      "passedTests": 1,
+      "result": "Passed",
+      "runtime": "iOS 27.0 Simulator",
+      "skippedTests": 0,
+      "totalTestCount": 1
+    },
+    {
+      "baseGitHead": "b7dc19169319660dc7455b1762643aa742c0bc20",
+      "cases": [
+        {
+          "durationSeconds": 54.227,
+          "name": "testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps",
+          "result": "Passed"
+        }
+      ],
+      "completeLogDiagnostics": {
+        "caseExecutionAllowanceExceeded": 0,
+        "duplicateNativeAccessibilityLoader": 1,
+        "ignoredRemoteHierarchy": 28,
+        "invalidFrameDimension": 0,
+        "runnerRestarts": 0,
+        "sqliteIntegrityCompromised": 0,
+        "sqliteVnodeUnlinked": 0
+      },
+      "deviceFamily": "iPad",
+      "failedTests": 0,
+      "nativeResultCompleted": true,
+      "nativeRuntimeWarningCount": 0,
+      "nativeRuntimeWarnings": [],
+      "passedTests": 1,
+      "result": "Passed",
+      "runtime": "iOS 27.0 Simulator",
+      "skippedTests": 0,
+      "totalTestCount": 1
+    }
+  ]
+}
