@@ -19,7 +19,9 @@ jobs:
     # Official image inventory checked 2026-10-07:
     # https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md
     runs-on: xcode-27
-    timeout-minutes: 50
+    # The complete iPad suite outgrew 50 minutes on a slower hosted run.
+    # Individual XCTest limits remain 240 seconds (420 for two long journeys).
+    timeout-minutes: 75
     strategy:
       fail-fast: false
       matrix:
