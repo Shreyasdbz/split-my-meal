@@ -1,0 +1,74 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791435597.74,
+  "nativeExport": "Sanitized xcresulttool summary and tests; identical warnings grouped with their actual occurrence counts.",
+  "note": "This is a replay of affected phone sheet paths on the later source. It does not repeat the other 44 tests from the earlier complete run.",
+  "passedTests": 7,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17 Pro",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 5
+    }
+  ],
+  "scope": "Seven affected iPhone journeys on the focused iPad presentation candidate: cancelled meal, complete create/edit/assign/split/share/persistence, all entity edits/deletions, all-type accessibility inventory collection, strict native control accessibility gate, large text/landscape, and native swipe-dismiss/reopen unchanged draft.",
+  "skippedTests": 0,
+  "sourceManifest": "iphone-presentation-source-manifest.json",
+  "sourceManifestSHA256": "612e2ef02195bce4741fbce9114af76d502f3a2067f0231c339125172f055d18",
+  "startTime": 1791435270.679,
+  "tests": [
+    {
+      "durationInSeconds": 14.085430979728699,
+      "name": "testCancelledMealDoesNotPersist()",
+      "nodeIdentifier": "MealJourneyTests/testCancelledMealDoesNotPersist()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 47.08642399311066,
+      "name": "testCollectAllTypeAccessibilityIssueInventory()",
+      "nodeIdentifier": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 82.98226201534271,
+      "name": "testCreateEditSplitShareAndPersistence()",
+      "nodeIdentifier": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 21.63238000869751,
+      "name": "testDismissedDraftLeavesSavedMealUnchanged()",
+      "nodeIdentifier": "MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 63.134745955467224,
+      "name": "testEditAndDeleteItemPersonAndMeal()",
+      "nodeIdentifier": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 76.72901093959808,
+      "name": "testLargeTextAndLandscapeNavigation()",
+      "nodeIdentifier": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 18.48380398750305,
+      "name": "testNativeAccessibleControlSemanticsAndHitRegions()",
+      "nodeIdentifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 7
+}

@@ -1,0 +1,1762 @@
+[
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "9D1D1153-A4B2-4019-A182-FD5992540226.ips",
+        "isAssociatedWithFailure": true,
+        "suggestedHumanReadableName": "Crash Log 2026-10-07 at 11.11.57 PM.ips",
+        "timestamp": 1791429117.233
+      }
+    ],
+    "testIdentifier": "MealStoreTests/testUnversionedShippedStoreMigratesWithoutLosingData()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealTests/MealStoreTests/testUnversionedShippedStoreMigratesWithoutLosingData"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "88FA6FBF-113A-4F7E-BEFB-6038A60CED15.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_9EF5992C-E583-4E25-B9FE-B5841E69B906.txt",
+        "timestamp": 1791429132.762
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "93A5D1EC-91F9-4A8B-891F-89A167274A1A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_A26F1428-912F-4100-ABF7-1E52D728A6C0.txt",
+        "timestamp": 1791429123.215
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testCancelledMealDoesNotPersist()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testCancelledMealDoesNotPersist"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "ED22CD28-D545-4EA8-A484-A7C110DC856D.json",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "all-type-accessibility-issue-inventory_0_7C161A1F-E5C0-450F-863D-5C9D17FC1C44.json",
+        "timestamp": 1791429183.722
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D0B8B042-5A6C-4FF9-94BD-4B577F1C8727.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-complete-inventory_0_DCA45D39-4D4F-4BDC-BE25-F912C04BDA1C.txt",
+        "timestamp": 1791429183.721
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "466BEF1A-B8E5-4AA7-8D05-820F27596C61.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_D7C419F9-F05F-40CE-81DF-8113018589EF.txt",
+        "timestamp": 1791429183.484
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B7D777A3-C96B-4E4F-9012-730408BE7F0A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_D68B719D-CE5D-460C-B084-CF8380BCEE3A.txt",
+        "timestamp": 1791429182.995
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F597DECE-B84B-43BD-9218-6165A1B63A7B.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_411141FD-4AFA-48CA-BF1F-0983CCE60D54.txt",
+        "timestamp": 1791429182.502
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5664AEE0-70FA-42CD-9397-D31ADDF6EBF3.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_64E75792-4DF0-40DF-B15E-58EE447B25E3.txt",
+        "timestamp": 1791429182.006
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D20ADC7C-67A5-47CE-8500-03B823A2C087.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_38154789-FB8B-417F-B064-0C043A517EDB.txt",
+        "timestamp": 1791429181.501
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "AA6F1B79-AC7C-4A77-9E96-F89BC65E9EFB.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_8F0F46AF-B9EE-44BF-9AF3-3F902FAB13D5.txt",
+        "timestamp": 1791429181.002
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "219C3C8E-06CE-4CF6-ADE1-9BDC23FA6C9E.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_D838A810-96E7-440B-BCE8-5A3B2BC416D2.txt",
+        "timestamp": 1791429180.514
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "66E95DC4-0FFB-4DA4-AC8A-72A1CAD9ACB5.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_CD876962-F108-480D-AECA-50D476AE5458.txt",
+        "timestamp": 1791429179.894
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F74A87CE-2B20-4570-A6D8-771A3CCC5760.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_27719D5F-4553-48FC-80F4-DA32D56043FC.txt",
+        "timestamp": 1791429179.305
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2E72C2A2-D8D4-468A-9C5E-4E3A79397824.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_35C9F728-0460-4C52-A1B0-2A19F9CC34E0.txt",
+        "timestamp": 1791429178.945
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "8EA35382-C04A-492D-AF47-1DFF49EF5F72.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_342E5C83-A4B0-46BF-9EBB-9FAE98052D62.txt",
+        "timestamp": 1791429178.945
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4D5A6BC8-2212-4F62-8CCD-D99965810378.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_EE887FC8-F02F-443F-844F-F5051036FAF1.txt",
+        "timestamp": 1791429178.645
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "8C11384F-E0A6-41DA-9CBC-442854663276.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal-editor_0_21B763D2-21C9-49CF-8C8E-A852CD0B4E27.txt",
+        "timestamp": 1791429178.024
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "CAF9A185-6ADA-4D72-B9CC-AB8A33700182.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-meal-editor-window-geometry_0_12D212CD-6B23-4EC1-84E4-15CE602D3DF8.txt",
+        "timestamp": 1791429175.62
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6B3E1671-80D5-45C3-8FFE-6CF626AE1F62.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-meal-editor_0_6A4508AB-9B07-4488-A64E-3B0FB916F90C.png",
+        "timestamp": 1791429175.035
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F8CB2962-A3E2-4362-ADD0-01B1C110A58C.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-split_0_885648C9-E421-489A-BFCF-2425919CB82E.txt",
+        "timestamp": 1791429173.175
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2C8A7A19-F06A-4E9B-A1A5-CDF8036A3A77.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-split_0_CA6CF5E3-F0BF-498A-8340-141C5AFDCA07.txt",
+        "timestamp": 1791429172.683
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F52D4E43-76A9-4CFB-B7AF-73CB1DBD7309.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-split_0_D2F69FDE-C42C-4359-A0B5-0880B90E6299.txt",
+        "timestamp": 1791429172.178
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4794E183-CC3F-4651-9509-5D6AC1A22ADD.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-split_0_A3F82B86-4118-49BF-B345-D9030E74849D.txt",
+        "timestamp": 1791429171.668
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "93B45B8C-F91B-4E1F-8DC2-B18935A130FD.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-split_0_7F2C3F3F-531A-4A7B-BA76-CFEE134BFABD.txt",
+        "timestamp": 1791429171.293
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "52197182-00A6-4134-ABE5-F83C0BF42620.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-split_0_8E2FFE22-3C03-493F-ACE1-2048D4D88D6F.txt",
+        "timestamp": 1791429171.293
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "AE8AC3AB-5B67-4DE8-ABA7-8B9777B1C2A0.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-split_0_554912D0-ECEB-4CB8-BD96-31199F9AD890.txt",
+        "timestamp": 1791429170.961
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "9FA26746-D691-4115-B32D-31D83943E439.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-split-window-geometry_0_0C8062EF-956D-43B9-9F84-85F25FC85729.txt",
+        "timestamp": 1791429168.561
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D86802B2-21D9-40B6-A48E-2C218480BFFF.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-split_0_D745CE01-60B4-4C24-9906-85CCE62D8C27.png",
+        "timestamp": 1791429167.86
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F525C2E8-DC54-4A8E-96C1-E7086E9B34FA.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_01EAB7CB-CCC0-40CD-8AF8-76F761F22901.txt",
+        "timestamp": 1791429166.845
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "36EFCEA5-9F0C-420E-BA31-2EB794CA1542.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_3DD77076-183F-449E-89CA-3CD5883B8630.txt",
+        "timestamp": 1791429166.504
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4EE6B853-00AF-45F5-ADEA-4C0AF376753F.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_07A87F15-166C-4E76-A5BD-D8FFFFF567F4.txt",
+        "timestamp": 1791429166.164
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "0C923EF9-A742-4E52-B0FC-CFD7EA6E86BF.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_584F581A-D444-4C3A-8C9D-98FCEE59CB28.txt",
+        "timestamp": 1791429165.794
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "55907ED9-C2A3-4A6E-BC1D-38FA4B380303.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_EB1635D7-DAE4-4D51-A429-39EFFF7718DA.txt",
+        "timestamp": 1791429157.222
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "11DC09F7-3F50-423F-B082-5710F5587672.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_D95A52A5-2082-47E8-8EC3-47BE15A1A017.txt",
+        "timestamp": 1791429155.134
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "97D5AA97-6390-466D-A6E6-E494956D6DEA.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_58B0A921-EB73-4F6A-8E6F-9BF4C3EE0EAE.txt",
+        "timestamp": 1791429154.934
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "10236DF6-6ACE-49F0-89AE-1BC70BA3F9BA.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-meal_0_6F1E2240-28F0-4D56-A9E0-0B381E6FA88F.txt",
+        "timestamp": 1791429154.528
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D08D70DD-A163-48CF-99C7-4CAB2C991DC7.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-meal-window-geometry_0_B7DB1BB3-40B3-4D31-B229-9C383630169F.txt",
+        "timestamp": 1791429152.231
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "219A0659-4715-47CB-AEA9-B9A7144B6C1A.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-meal_0_98C2B530-E032-4C36-B9EF-26B44E03C8AD.png",
+        "timestamp": 1791429151.908
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "BF5AF7FB-C6F7-4921-885E-A60CC4D62F1E.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-library_0_1350F26E-FF89-4B4B-B981-16335CFA9205.txt",
+        "timestamp": 1791429150.041
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6BEE454C-A41B-4ACA-8613-C089F90B6022.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-library_0_740C81AB-F8D8-418C-AD92-3710B507BD5D.txt",
+        "timestamp": 1791429149.946
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5E172B52-5BF5-497E-9D6D-2B7294ECADB6.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-library_0_04529C18-320E-41E9-BC26-B4A6ED4923AF.txt",
+        "timestamp": 1791429149.692
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B5998556-AB13-4492-B283-749EEE1BDDAC.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-finding-library_0_AC3CD305-60CB-4C85-984C-2C02D9B25270.txt",
+        "timestamp": 1791429149.491
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "ECF10F7C-FFAD-4661-A8F7-3DC6A371A8FD.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-library-window-geometry_0_F31D5B65-3804-49D1-9161-FC64D2283DA4.txt",
+        "timestamp": 1791429147.489
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A01133B1-13F9-4970-8922-22ACE1C0E75C.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-library_0_66485A19-4947-45D0-A8B9-5723841CA242.png",
+        "timestamp": 1791429147.268
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "7F54F9A6-B2DC-4435-BAC1-22958CE831C3.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_6C54D181-5457-4A6A-A23D-43A03ACC300E.txt",
+        "timestamp": 1791429142.582
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "AD2C5233-8114-403B-AE73-9F83D5F64D32.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_F59A2A7A-D388-4C45-8961-8334E797C690.txt",
+        "timestamp": 1791429137.724
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "9698C81A-89AD-4EDA-B550-25D0AEF39326.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "edited-meal_0_8483877C-81BA-4DE9-9C59-64F01DB580DB.png",
+        "timestamp": 1791429264.053
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "533D0FC7-3102-4D63-9877-63BC51FE5638.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_047CFA89-22C7-46A0-88B6-DAE06B18E819.txt",
+        "timestamp": 1791429251.644
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E2A49A61-F1E6-4B92-8FDB-D93BAD2E168D.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-share-sheet_0_C967BA23-561C-438E-8E35-D6C902F1C7D2.png",
+        "timestamp": 1791429246.66
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "00B7F9EC-3EE2-493F-B28F-02067DEBED25.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "balanced-split_0_794F2911-5AE2-4019-A75D-5780FF8419D6.png",
+        "timestamp": 1791429243.354
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "28597C5D-5AD7-4470-9082-81D16A07A9ED.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-with-people-items-and-charges_0_491EFA03-35DF-4130-8994-F2A8AB50CC71.png",
+        "timestamp": 1791429240.651
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6FB2F515-F73E-418A-8BAF-51C2489BB0B6.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-edit-tax_0_37762BC6-C130-476D-8B9C-028084B062B9.txt",
+        "timestamp": 1791429230.345
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "ADECC2B8-B51D-488B-9C2B-EBCC1548765D.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-add-item_0_709A54ED-143C-42ED-A706-C22D503BDE94.txt",
+        "timestamp": 1791429209.5
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "FBF2EFF8-585E-4E75-B626-66C4E93245A9.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_05777C23-A2D4-4964-B083-EF55DBA10D9F.txt",
+        "timestamp": 1791429184.857
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "BDD8786F-252B-491C-9DE7-3D20C12BC4FE.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_02AED309-F13F-4A3A-8CAC-AD81C0743CBB.txt",
+        "timestamp": 1791429300.474
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2779C53C-2BF6-47CB-B95E-AFB42B8EA8CB.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "assigned-person-deleted-item-preserved_0_FCACBBDF-B5A0-4D0B-B5BE-A8C34EA4AD5B.png",
+        "timestamp": 1791429299.44
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A0726B9D-44D8-456B-BE1B-88C1985EAAED.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-add-item_0_AB3ED177-F542-4EC2-8582-FE5C118F2CF9.txt",
+        "timestamp": 1791429282.937
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "8CD80BC7-2AE4-40A3-8C12-51D832423058.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_39F2A664-DD44-4D77-9D60-7EBD8BB3A683.txt",
+        "timestamp": 1791429265.219
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2701B0C4-AB27-41B2-803D-7D3D10A9EC7D.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-dark-window-geometry_0_C145100F-06AD-4A1B-811C-DBCAF294331D.txt",
+        "timestamp": 1791429348.839
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "CA63FE15-211F-4DC2-900E-06BAB9E24712.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-dark_0_EF82A075-3597-4607-A22E-5D4D9E73B743.png",
+        "timestamp": 1791429348.523
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4E6CA044-A6A8-4BEB-9DD2-68FCD433C8AB.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-library-dark-window-geometry_0_60D6E741-D655-485C-BFDB-BADF041E5C8B.txt",
+        "timestamp": 1791429346.649
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F12BF8BE-6460-4F13-9092-E039A3998150.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-library-dark_0_07E8CE25-FD08-445D-829B-1ABDA99C1CF8.png",
+        "timestamp": 1791429346.396
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "10C385E1-48C7-48E5-B7B4-36C93E4F6C94.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_D68FDBF2-50C8-4290-8E00-2D2ED830F336.txt",
+        "timestamp": 1791429342.541
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "9FAD64DD-F902-43ED-9D81-AED66D7203AD.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-landscape-light-window-geometry_0_E346523F-9AA8-4070-9A44-6A568383FB80.txt",
+        "timestamp": 1791429338.764
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "748F7D61-EEDB-4E7A-9CB9-99505EB43872.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-landscape-light_0_3284F894-734F-4BA7-9A88-4E7A61DB5B05.png",
+        "timestamp": 1791429338.343
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "EEB1CE46-D8CF-406A-BBBD-99DC16F475EC.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-editor-light-window-geometry_0_B4A16E5A-0723-4AB6-8AF5-BB971FF59AFB.txt",
+        "timestamp": 1791429335.34
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "ACD553B9-B1BC-4350-801A-83A203660F94.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-editor-light_0_D3171002-1885-43F5-8186-75BD9F1A5CCB.png",
+        "timestamp": 1791429334.746
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "49BB1E40-F238-4F8E-B75C-4968466DA7FB.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-receipt-light-window-geometry_0_483A08B5-C905-4736-9FC3-0A9417E9B0A2.txt",
+        "timestamp": 1791429332.692
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "52AAD9A8-87CB-43A5-892F-3CC7E0DD1012.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-receipt-light_0_56AE7E66-9474-41AE-9DD1-FF5EE56A1FD7.png",
+        "timestamp": 1791429332.166
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B51CBCD9-F0C7-4FE3-BDE0-9B015F6A9DC9.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-View receipt_0_D55F230F-E567-47AB-8773-4DFE5A2206F3.txt",
+        "timestamp": 1791429329.397
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "95E7B4A7-0863-4051-BE00-0DF270730A26.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-itemized-split-light-window-geometry_0_613C5E0F-BF37-4020-927E-99F56B7FBBFE.txt",
+        "timestamp": 1791429321.806
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B64F558A-FD3E-400C-84B2-4BEB8F50C3FB.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-itemized-split-light_0_8DF48C0D-8CB5-4CA6-9AB6-D79C2BBB2EFB.png",
+        "timestamp": 1791429321.09
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "61668933-5CA7-4BFB-B696-0227068FF3FE.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-split-light-window-geometry_0_241AA488-6517-4675-8A0F-E7208525DA73.txt",
+        "timestamp": 1791429320.236
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "FCA1E284-2F58-444D-9CC8-6CCD54F3DD55.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-split-light_0_5E14E321-85B0-4D3A-965A-BC04A4AC447E.png",
+        "timestamp": 1791429319.628
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "0E26DCD3-E9C9-44FE-B899-68A571C08E6D.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-light-window-geometry_0_47DA09C4-2885-472E-BB36-FCE554EC54CC.txt",
+        "timestamp": 1791429317.618
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "31197110-B1F9-4FE1-9096-264BA25FFC28.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-meal-light_0_34D65F28-0F29-46CF-AD35-F75E33B99B8E.png",
+        "timestamp": 1791429317.305
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5E13C488-49DC-4DBB-B742-6275D10DC37A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-library-light-window-geometry_0_C923602C-7821-491B-B7F2-B22B6124F417.txt",
+        "timestamp": 1791429315.362
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B15FF011-9D92-4AF0-9D3A-1EBEF58B9119.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "demo-library-light_0_08957BC0-98A3-4C43-AB5D-CF3C474D9CBB.png",
+        "timestamp": 1791429315.17
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "237FCD07-DE9C-4610-9CF5-F65276549C7A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_D782BBB2-4C62-4788-B293-EABC2310D2C7.txt",
+        "timestamp": 1791429310.632
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E2B2CAB1-2C78-48F3-AD6F-2A0EB51F9460.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_FF22F435-1E9B-4C03-A782-0A4734712C90.txt",
+        "timestamp": 1791429305.949
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "896FC6C1-6017-46D7-9D8E-47C5BDA39D84.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "normal-and-xxxl-frame-growth-measurements_0_6694358E-9A26-4EED-B9DD-24544D1FCF8E.txt",
+        "timestamp": 1791429383.96
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F3D3F0B9-FD68-47F9-BCC8-67A6387FCCCE.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-receipt-UICTContentSizeCategoryAccessibilityXXXL-window-geometry_0_C4808DD2-C3E9-4BB5-87BB-0396BCAAEDAC.txt",
+        "timestamp": 1791429383.215
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B4FE88CD-C3DA-4C3D-929C-734A56EEFCF5.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-receipt-UICTContentSizeCategoryAccessibilityXXXL_0_F033EBD9-3D7E-449F-86A0-112BC433EC7C.png",
+        "timestamp": 1791429382.845
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "47BD3E8C-5E80-4DD9-AA31-7818B2850F77.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-choose-receipt_0_15EC275B-0088-4669-A396-9C9E41D07894.txt",
+        "timestamp": 1791429382.317
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "9024993B-C992-4860-9B3A-DCCA4874D70A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-title-UICTContentSizeCategoryAccessibilityXXXL-window-geometry_0_148CC15F-EAD0-4BEB-92B3-1CA9E139E431.txt",
+        "timestamp": 1791429376.971
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "39AB2A73-C50C-401B-985A-E56BC81A57D4.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-title-UICTContentSizeCategoryAccessibilityXXXL_0_F31A6105-7364-45FC-AAC1-9BF62166D3DB.png",
+        "timestamp": 1791429376.584
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A63784F1-1659-4F98-9476-0B1CE68B62C9.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-meal-UICTContentSizeCategoryAccessibilityXXXL-window-geometry_0_5FB9A04D-9612-418C-9EA6-EFEB04B52CC1.txt",
+        "timestamp": 1791429374.469
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4E4D226F-4D88-408B-8ACB-92C1E1047357.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-meal-UICTContentSizeCategoryAccessibilityXXXL_0_FDC5A1E4-DA56-4617-BFE7-15DC27241AA9.png",
+        "timestamp": 1791429374.264
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "35DC7080-56BF-4EEE-83CA-C7AAA9CFC41F.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-library-UICTContentSizeCategoryAccessibilityXXXL-window-geometry_0_9CDC2F45-11A7-4799-B71D-7693E48751BB.txt",
+        "timestamp": 1791429372.371
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "865518AF-4609-48CD-B552-A931587428A0.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-library-UICTContentSizeCategoryAccessibilityXXXL_0_B43B619E-09BF-464F-BE2F-44589639563E.png",
+        "timestamp": 1791429372.183
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "91D830A1-0271-4513-9470-4F55C44CCF75.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_6CDAAD6B-38D0-474A-B8B2-76E776870E13.txt",
+        "timestamp": 1791429367.641
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5ECB82C0-A2CD-4168-86FD-9C9C596298BD.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-receipt-UICTContentSizeCategoryL-window-geometry_0_BA64F531-EED0-4C16-87BE-04894947233B.txt",
+        "timestamp": 1791429365.822
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4891DC92-B26E-4462-8580-C1E8803DC1AA.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-receipt-UICTContentSizeCategoryL_0_3F977389-2EEB-4A8E-917E-D8B161437932.png",
+        "timestamp": 1791429365.223
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "786532CE-6F28-48AB-BADD-94CCA5A8BD70.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-title-UICTContentSizeCategoryL-window-geometry_0_4D3B6B15-5426-40EC-B629-985C37DE8259.txt",
+        "timestamp": 1791429364
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F08B6A6F-864D-4197-A2B4-54B2E4C1D338.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-title-UICTContentSizeCategoryL_0_CD19BE97-9E83-4D5D-ADB7-9FF35153C6AC.png",
+        "timestamp": 1791429363.437
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "481FF8AA-57A5-403E-A967-02B4564F61ED.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-meal-UICTContentSizeCategoryL-window-geometry_0_E188B0BE-6547-403C-ADBC-0D5E8180616C.txt",
+        "timestamp": 1791429361.3
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E6A5F3F9-773F-48AD-B7B0-253E4858D243.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-meal-UICTContentSizeCategoryL_0_DAB1B9B7-9C18-4A1A-803B-7D1DEACD0A2D.png",
+        "timestamp": 1791429360.985
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "989A447D-24FE-4355-B494-037A11DDA921.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-library-UICTContentSizeCategoryL-window-geometry_0_291A042F-E0E7-4035-99EE-EF532A7058E9.txt",
+        "timestamp": 1791429359.08
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5023DFCC-D79F-4896-A614-1C5FDC1F00B6.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "accessibility-growth-library-UICTContentSizeCategoryL_0_55167817-3D34-4E52-A057-A634D57C24BC.png",
+        "timestamp": 1791429358.904
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "99E928F1-C9C3-407F-9A63-BAC8E884559A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_6A077AEE-DB8A-4FDE-B251-3CA4BB137A32.txt",
+        "timestamp": 1791429354.361
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "497A2B6D-B426-4AD9-A395-809A75E35408.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_CA4590C3-A988-4563-BA0B-721CC7CB1411.txt",
+        "timestamp": 1791429349.965
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "AA0A5D49-95C9-46A2-9416-A61368A9CAEF.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_F9AC6128-4A82-48DC-91AF-8AF5643C35A1.txt",
+        "timestamp": 1791429441.282
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "198DBFF9-5FA6-4799-BD6E-E73FEF071F79.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-add-item_0_6B4F5916-0982-4EAD-A8E7-753546C7486D.txt",
+        "timestamp": 1791429410.049
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A7D56488-64C4-4495-95BF-E431FD436003.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_96A2A907-5A5C-4390-8358-B35CB706F199.txt",
+        "timestamp": 1791429385.104
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "46C0791A-250E-4732-BB88-57152105C192.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-Add restaurant_0_DC7031F7-D46F-4AF4-B5FD-CCAF1F61C75E.txt",
+        "timestamp": 1791429493.218
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "29546AAA-4869-47BC-A148-9A37C8727D80.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_A35D224F-D29F-4D41-82DD-F420AD9A3864.txt",
+        "timestamp": 1791429479.917
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "8D6BA8A8-CEBE-4E56-BC17-B2535E831D97.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "historical-restaurant-location-unavailable_0_90D68F72-9841-4569-9114-DE68F780B645.png",
+        "timestamp": 1791429465.787
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4EBD9AD4-80F4-4816-97B3-B0ECC79597B8.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-invalid-historical-restaurant_0_0EA45B53-D9F5-4129-917F-39EDB4CC0583.txt",
+        "timestamp": 1791429463.016
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "EF7FC9C7-0C92-4E0F-B931-1507B095D571.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_751FFDC2-C997-4012-98FC-A34F601428D1.txt",
+        "timestamp": 1791429450.312
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "12B6D8DB-21CE-4A94-BDEF-1945D3EBBC91.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_1B7460ED-DD5A-4F47-84C8-5676D9DEE0A7.txt",
+        "timestamp": 1791429445.865
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "993C406C-5455-4704-996C-1C04EB644B15.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "unreadable-receipt-recovery_0_115103FC-8FC7-4629-B250-E61D5D93FCD7.png",
+        "timestamp": 1791429519.304
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5E0FB2F4-9C56-4566-831D-B4E1E31381CA.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-View receipt_0_3F67257E-8CA5-4FA2-B8B8-C24098FB963F.txt",
+        "timestamp": 1791429516.58
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6E94A77C-7A2E-4A0E-B7F0-D7A20B5205A5.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "historical-invalid-split_0_BC945411-395A-4EB8-9337-74818329DD90.png",
+        "timestamp": 1791429507.525
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "8610A7A0-F508-40DB-ABE5-D42B14F9625A.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "historical-invalid-bill-warning_0_024E796C-0EBC-4C28-88A2-211BE8205294.png",
+        "timestamp": 1791429505.483
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5730E276-B9B1-43BA-9CC1-6223EA054289.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_5F666484-F62E-44AB-8885-122A6897500F.txt",
+        "timestamp": 1791429499.778
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "C1A3C2DD-CBE7-40C8-803A-8CB9E7034578.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_C89268EE-0B12-4C3E-ABAE-50122E7EFA53.txt",
+        "timestamp": 1791429494.995
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "659FEAA4-A478-4B86-9263-B98CF33BAEA5.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "historical-unknown-consumer-repair-preserves-known-shares_0_2D8273F2-C768-4F42-892C-F2B8ED67FCFC.png",
+        "timestamp": 1791429638.127
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "ED0BA009-AAB9-4B64-9447-249DB41034DD.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-meal-total_0_3482D469-C8D6-402E-AF12-0E17883D4B2B.txt",
+        "timestamp": 1791429630.104
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "0D7F7EA9-2FA1-4285-95D3-4B87743640B1.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-item-Shared edamame_0_CB447A81-48B7-47A7-BBC1-A52C09E9EFBE.txt",
+        "timestamp": 1791429619.998
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F790112C-552B-4ACA-916C-D9A588B12051.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_B1FE464D-9B77-4169-A25D-C3CEBE4243BD.txt",
+        "timestamp": 1791429610.392
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "84E07B21-1B72-431E-B7B2-2D7EAB16BC10.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-meal-total_0_F8DB1568-77A3-4E49-B73C-D7B63D1C13C9.txt",
+        "timestamp": 1791429601.156
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B0977A7B-4BFB-4D01-97E7-9F5D48F87645.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-item-Edamame_0_B41F70AD-C679-42ED-B01C-4A85BF50E518.txt",
+        "timestamp": 1791429584.278
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "596CDB1A-713F-4AE1-87EB-78925026EC84.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-meal-total_0_AF7C2E1C-63FB-4E06-90A0-E8E605AD9B1C.txt",
+        "timestamp": 1791429570.885
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6C3CD4E0-7B54-4174-8AEE-8F76BA1AA993.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-item-Edamame_0_4A1FEF74-F011-4898-8B7F-3ED4211C7393.txt",
+        "timestamp": 1791429552.699
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F3709184-0BE7-4CA9-9827-F3FD3E5647A3.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_7FDBD777-C871-401A-8526-4800480408D2.txt",
+        "timestamp": 1791429533.558
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "CE4A45AC-4E8A-44D3-8437-5C6C7D143C19.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_5C7BD730-3233-41E3-89E4-0881BD29E2D8.txt",
+        "timestamp": 1791429528.77
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "084107C6-2C40-45D4-9774-5CC4FAF31E51.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-add-item_0_4D1A07AB-ABA1-49C5-B16D-5B7BAC3F53B1.txt",
+        "timestamp": 1791429663.262
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "DAEC734B-5B21-456C-B7E1-A5E103C266BF.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_8686E942-D4A5-4192-9354-13FBFC89A483.txt",
+        "timestamp": 1791429639.355
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "DB015F11-F6D5-4661-A02B-12979B6BC0D8.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-largest-title-cancel-preserves-saved-value_0_E1073DA6-8154-4ADF-B842-F857DC0A3321.png",
+        "timestamp": 1791429704.422
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E64772DF-3C72-4924-9152-1A864E9380CD.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-largest-title-edited-full-value_0_DFA44612-0960-4B1E-ACFB-F4C3544A04C4.png",
+        "timestamp": 1791429702.751
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "04E812A1-DC47-47F9-B4E4-00AA0DC25B0C.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-direct-accessibility-text-receipt-window-geometry_0_7D37AB9A-F4B2-44AB-9949-7AB4E0E3126D.txt",
+        "timestamp": 1791429693.47
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "740C739A-CFFE-4C6B-9949-72DC145F3C21.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-direct-accessibility-text-receipt_0_FDFD754E-13E2-44DE-A8CD-B38AC2F9F844.png",
+        "timestamp": 1791429693.115
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6FD13237-71A5-40CF-B908-1C15F7CF70D2.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-choose-receipt_0_887D9494-4D60-462D-86C5-FB4B85E89098.txt",
+        "timestamp": 1791429692.641
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "BE2B0780-F26F-4F6A-9A40-75E0F0AA4778.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-direct-accessibility-text-title-window-geometry_0_80BCB4B1-DA14-4F52-8210-F6D762D5E0FA.txt",
+        "timestamp": 1791429687.42
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "18654F04-FA8A-4AB0-9463-444FE5B09551.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-direct-accessibility-text-title_0_000BAA40-26AC-4071-8A86-F47BE7192827.png",
+        "timestamp": 1791429686.999
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F6C63837-FFF4-48AD-9825-04AE13F789E8.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "library-direct-accessibility-text-window-geometry_0_1FFFC138-21D5-46F4-AEF6-B35CF313F4DF.txt",
+        "timestamp": 1791429683.105
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "DAEA52CF-8A6E-4331-84EC-38C3D35A8835.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "library-direct-accessibility-text_0_4760DD17-7E69-451F-8F81-987805471401.png",
+        "timestamp": 1791429682.882
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "EC771A91-EA48-4F06-A4EA-9CEE244CAC64.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_47462AB8-B212-47BE-A8DD-94CAB2F9538F.txt",
+        "timestamp": 1791429679.023
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B062E2D0-9B8B-4F3D-884A-5194EE9881C7.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_4C7E1A0F-2E08-4425-948E-2D278652F923.txt",
+        "timestamp": 1791429674.622
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4E14840A-83C5-4E18-951E-2969C8BD0468.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "home-landscape-accessibility-text-window-geometry_0_53B20B32-6DB7-48E9-8623-2017E16D26FF.txt",
+        "timestamp": 1791429783.293
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6B3BE4B7-76E1-451B-B231-5B8967FF5E1D.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "home-landscape-accessibility-text_0_948CF9A0-0211-49E4-B59F-A3EFD1352581.png",
+        "timestamp": 1791429783.053
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D82895CA-80E5-454A-8527-5A90A945AE5D.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-accessibility-text-receipt-window-geometry_0_83C1045B-2674-4260-B528-CDFB9EA4213B.txt",
+        "timestamp": 1791429777.228
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F8340D0B-A66D-4FA7-B8C9-3B1DDCDA4396.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-accessibility-text-receipt_0_1E96BB05-2347-4832-A513-50F105C4449C.png",
+        "timestamp": 1791429776.763
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "00217696-42E4-4BC1-9699-CCE039DCDC9A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-choose-receipt_0_E54F9584-8502-4E66-AC42-6E7FE1AAA18F.txt",
+        "timestamp": 1791429776.29
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "0872B758-E813-424A-B3F8-09FEFFFC1184.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-accessibility-text-title-window-geometry_0_0FFF6EEF-C5CD-4D3A-A52A-BBA40DE7E905.txt",
+        "timestamp": 1791429771.334
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "9A47C6F0-36B0-4B63-A975-ED3579DE0922.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-editor-accessibility-text-title_0_2AA6C84F-863C-4585-9B4E-CB020604D7D0.png",
+        "timestamp": 1791429770.941
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "164B5E96-52B8-437E-A6B0-8F0CDE77D504.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "charge-editor-accessibility-text-window-geometry_0_00DD8C81-4AEA-4E57-9765-47EDDD03A81B.txt",
+        "timestamp": 1791429768.238
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "0DDD326A-6F8C-4E7E-8D59-51C6EFEB6B90.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "charge-editor-accessibility-text_0_8BD07E7F-CFE4-406F-8F89-09E9E2AAB502.png",
+        "timestamp": 1791429767.866
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "EEC640D8-CEB3-4ABC-80B8-CB58F952386A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-edit-tax_0_32A1B55E-6FEF-45D0-87AE-4FF4599F1215.txt",
+        "timestamp": 1791429765.641
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "53BBFAF1-5F52-413D-8949-A4355DDE5159.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "item-editor-accessibility-text-window-geometry_0_E60E41F4-40C9-4AED-9B1D-A4A5D3295D48.txt",
+        "timestamp": 1791429751.06
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A041E579-D5CE-4CB3-A5C6-38C52B341CB2.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "item-editor-accessibility-text_0_BB7E72F9-A224-425C-A954-B04ECFCBC141.png",
+        "timestamp": 1791429750.665
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "94FDB705-13F0-4FD4-BC7B-75F21669E4A4.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-item-Miso ramen_0_B66593E1-BC51-430F-9EF5-7631BDED979F.txt",
+        "timestamp": 1791429749.43
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "1FC1A3A1-5032-4EEC-97AF-B0C5518FC4F5.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "person-editor-accessibility-text-window-geometry_0_A049828F-0E44-4076-A796-6B97B4A2E91A.txt",
+        "timestamp": 1791429738.166
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2ACB2F82-579C-4E55-A8E0-A7E7A098266D.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "person-editor-accessibility-text_0_2184AFFE-56A2-41D0-9D52-C103F612D804.png",
+        "timestamp": 1791429737.695
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "C089C92C-3193-43BA-B24A-F0780D3360DF.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-person-Alex_0_1F2A7384-71C1-45A8-9B8B-477E1D9CE5C8.txt",
+        "timestamp": 1791429736.552
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "BA1E8F0E-DAF4-4CB4-BF3C-34E08700434D.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "split-accessibility-text-window-geometry_0_B001332D-4571-442B-BCA5-951B8D8C1E95.txt",
+        "timestamp": 1791429728.796
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D9D51E98-1A5D-48BF-8D76-276889A8AE9A.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "split-accessibility-text_0_BC388C1C-2A95-4210-98E2-71C402FFCD4C.png",
+        "timestamp": 1791429728.301
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A1210565-1E15-4120-9EDC-392CFB3D0589.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-accessibility-text-window-geometry_0_D0851791-E96E-43A9-8683-A17A6E5A6B90.txt",
+        "timestamp": 1791429721.003
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5795E4B7-8362-4231-9373-3C2E21F20D32.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "meal-accessibility-text_0_6F6A96A2-DD26-4061-9BDF-188E89104D69.png",
+        "timestamp": 1791429720.782
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6A4FF750-E802-4095-863F-3C88F2CE7CBA.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "home-accessibility-text-window-geometry_0_3DA081EC-D2F6-4F19-AE2C-2014829090BB.txt",
+        "timestamp": 1791429716.268
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "81BBD064-8A7B-4437-93FA-143736133918.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "home-accessibility-text_0_B5F43049-1D58-44E8-A06A-CBFC421798AA.png",
+        "timestamp": 1791429716.072
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "87F00A57-88B2-428C-B02D-BB4B62549F3E.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_567DB5CC-247B-485C-A58B-815BE795E615.txt",
+        "timestamp": 1791429711.057
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6D8D3E9E-6650-4880-9953-F870C9243585.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_5F02EDC1-E942-488B-BE1C-FC772054DF8A.txt",
+        "timestamp": 1791429706.3
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "28E290DC-EFC2-4A18-AE0F-7B9EAB747AFE.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-saved-restaurant-after-cancel_0_300F0FD6-5FA0-4D2B-ACFF-6690F46F85B5.txt",
+        "timestamp": 1791429823.327
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "BF344462-E6A3-4597-A0B8-457B116FA649.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "restaurant-text-search_0_FC8B81FC-84DE-4A09-B89D-C5D909D7234E.png",
+        "timestamp": 1791429812.237
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E6C93E08-3F8E-4F90-AF7E-4C8785074399.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "library-search-no-results_0_0055A406-1BB4-4D03-8C4A-E09977F865BD.png",
+        "timestamp": 1791429798.353
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A5218A72-45D7-4DFD-BE32-BDDBB7B121C1.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_8E202484-C135-41F5-B27C-7D48E1CE3E6B.txt",
+        "timestamp": 1791429789.445
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "422691E6-9C5B-4390-AD39-FD044231AB6E.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_6468765A-8C15-4731-B010-49240E7BBC7C.txt",
+        "timestamp": 1791429784.918
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "EA113D55-E3C7-4DE1-9DCF-F00B9C11764D.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_DC8CC754-F429-4D99-82A8-CEE041EAAFC2.txt",
+        "timestamp": 1791429861.557
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5A322C7D-5DD1-430A-87A5-F479A13362E2.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "library-sorting-actual-row-order_0_AD049743-DAB3-42A1-BF5B-EB7E2BC55EE6.png",
+        "timestamp": 1791429860.505
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "580E5E9D-0D3A-464B-B5E5-DB87DE12EA47.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_A6F5DC15-E4E2-42C8-AEAC-12B9B386C725.txt",
+        "timestamp": 1791429825.161
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testLibrarySortOrderingAndSearchByPeopleAndRestaurant()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testLibrarySortOrderingAndSearchByPeopleAndRestaurant"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2BD9E5A6-A65F-4CDC-9ABA-14B3F6EBF3F6.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-meal-editor-window-geometry_0_80B2D8E0-BDDB-413B-B359-343505680553.txt",
+        "timestamp": 1791429897.47
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B50CB348-EC37-4239-B110-A9B37FEC8FB8.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-meal-editor_0_1F567168-EDC8-431A-BE9A-C7C1558D5783.png",
+        "timestamp": 1791429896.663
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "26587FEE-1064-49F4-8407-1ED0C0F823E4.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-split-window-geometry_0_5964514D-7938-4247-A663-C325B71BCE0C.txt",
+        "timestamp": 1791429894.481
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A957A302-EB3E-411F-84DF-83709CF198F5.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-split_0_13059C82-FBB0-47AB-9D90-BBFBD465C196.png",
+        "timestamp": 1791429893.865
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "B753E58A-BABF-4B0D-A721-8B5A38F77357.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-meal-window-geometry_0_3F5C9AC5-E29A-454C-8677-1E9E479FFF59.txt",
+        "timestamp": 1791429892.442
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "3ED7E88F-E74F-474B-986C-8028ABE7F723.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-meal_0_6E5D6CD4-CF07-41DF-A696-410D386E313C.png",
+        "timestamp": 1791429892.109
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D84594AB-EE8F-4EBD-BABF-EAF69C3217C4.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-library-window-geometry_0_B4908BAB-CCDD-41DA-A9DD-2B74EE7F3241.txt",
+        "timestamp": 1791429889.582
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A9043120-86F1-4158-99A0-9788669C71E2.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "gated-accessibility-library_0_D0E7724F-FDB6-477B-8B93-0D8E64BFF067.png",
+        "timestamp": 1791429889.373
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5ED99E58-8FED-40CC-B9EC-C9AEC89DA1ED.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_816C6C30-289D-456B-84C9-BA974CE19A33.txt",
+        "timestamp": 1791429884.617
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "21650D2F-DDCF-41E0-ABA7-3DDD4CF2B704.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_D1DDA8C3-6A04-4D3E-B706-84823EA4BA15.txt",
+        "timestamp": 1791429879.902
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A2906143-B119-4FFA-AC09-2859A318A65C.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "custom-icon-and-category-persisted_0_6007D5DA-A248-468F-AF51-ACC64AFEB883.png",
+        "timestamp": 1791429946.602
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "DC9BFD16-B308-4F39-9955-2A246263B19E.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-item-Lemonade_0_0A75B35E-626A-4D68-84E0-A120635B8224.txt",
+        "timestamp": 1791429946.052
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5D9AFAD5-BDA5-43B8-87C3-485831AFFB8F.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_DDBA87E0-FAE1-40BF-846A-9E8F0C2F7A09.txt",
+        "timestamp": 1791429937.616
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F8FA175B-C54D-449D-88A5-143208F97059.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-item-category-menu_0_70034513-43DC-4A0D-82A7-F97D33709700.png",
+        "timestamp": 1791429927.17
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "BDD466E0-CC5D-45E4-9BF7-2962B9302E44.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-add-item_0_4EC56EAA-C63D-4391-B648-2EBE69D7FCFB.txt",
+        "timestamp": 1791429918.774
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "5E6F24C2-59B2-439C-B328-5B46838EB788.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_D390DFD3-3C75-4C60-9A46-10F682528FB5.txt",
+        "timestamp": 1791429899.462
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "8E1B3F43-EE71-4F2D-93CF-225C735B1FCB.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "photo-replacement-persisted_0_2E41C141-051F-4619-8388-32F03E62DB6B.png",
+        "timestamp": 1791430024.384
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "134D3FFC-5E03-4654-BC0F-ABF8588AD5B3.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "photo-saved-replacement-survives-relaunch_0_9B9AD871-ED22-4E83-B2CD-C8B3EA6290F2.png",
+        "timestamp": 1791430024.301
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E0FDB96C-D3A0-48AE-BF5E-8EF9A205424F.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-View receipt_0_4FB946F2-D21E-46D1-922C-E6B0DC51907C.txt",
+        "timestamp": 1791430020.65
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "00A9F640-FB64-4140-A755-DC249D060C35.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_39E05B9D-EDCE-4D3C-B1BC-1F200DE5959A.txt",
+        "timestamp": 1791430013.234
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2D0647EE-460A-45B5-BA21-18E465B66A8C.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-photos-picker_0_9A8D35C9-A7BD-4A82-A4CC-73C70164E49E.png",
+        "timestamp": 1791430007.153
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "7607F474-4C36-46D5-B37A-898ED02EF640.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "photo-cancelled-replacement-preserves-image_0_D83B663C-0B9C-46EF-84E8-9539E4599EF6.png",
+        "timestamp": 1791430000.735
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E30AB27E-1C44-4D74-A12C-AC5DE5CDCD0E.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "photo-replacement-draft_0_E55E9C3D-6D8F-4FD1-904C-690B76880579.png",
+        "timestamp": 1791429997.008
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "0EF05916-93E0-46B4-BC09-5122E53B3C14.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-photos-picker_0_85F2F0FB-2C86-4E05-B07E-60401D3DE857.png",
+        "timestamp": 1791429992.578
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "6471E349-1B71-4A29-B0E5-5CF694217038.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "photo-original-saved-image_0_3897DD33-38A7-46CE-93B3-2AAE8E988079.png",
+        "timestamp": 1791429986.242
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "047F5B03-5E9D-4646-A605-49BC550B9F50.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-photos-picker_0_ECB54167-D968-41D4-9E2F-7285F03753C5.png",
+        "timestamp": 1791429977.249
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "339A533D-34A3-4110-B574-D9B89E43C81F.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-Attach receipt_0_3B7A6C6B-CCBE-49F9-909A-C6DC03EC9EAD.txt",
+        "timestamp": 1791429971.336
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "FD59BEF8-7DA1-48D8-8414-58286EEFD9D2.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "photo-attachment-draft_0_CE1039A5-4121-4E55-AC5B-3AF72E980C30.png",
+        "timestamp": 1791429967.654
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "28885433-B874-45C2-B04C-1B609D4846B6.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-photos-picker_0_36BFBBB7-4A41-420F-86A8-1414CF22F83B.png",
+        "timestamp": 1791429963.843
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "834128C7-9F2B-44C6-AAEA-821BE364FD5B.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_22094A4B-4B22-46BD-BB17-0986096718CE.txt",
+        "timestamp": 1791429947.902
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D72643A1-5124-4F32-B995-4DC27F2B4C8F.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-Attach receipt_0_4526F535-4ECE-4953-A381-C73F763FB634.txt",
+        "timestamp": 1791430119.827
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "25C11385-F09A-4659-8F80-36CB0B83E457.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_498B027A-6673-49C5-AD24-A29A967D0F76.txt",
+        "timestamp": 1791430106.962
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "C889C2C5-4D7D-4827-AEB7-78BCFE86CF05.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-Remove receipt_0_A987FA69-654D-46B4-B716-731F1C5A081B.txt",
+        "timestamp": 1791430102.584
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "38FC7D5D-BB1A-4712-B13D-08AAF3E9F331.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-View receipt_0_21957E41-F133-4CED-B901-B51E350FCF5B.txt",
+        "timestamp": 1791430096.956
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2E93F144-9F7C-4222-94B9-CEF12DBB120A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-Remove receipt_0_C7289690-8493-4DD5-B8F3-EAF38CF38CA9.txt",
+        "timestamp": 1791430087.826
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "9865119C-8B08-4796-9664-734790D8D7C0.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_07EF0DAA-B4B2-42C3-BAC8-F34E834E2E96.txt",
+        "timestamp": 1791430077.024
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "D6B55577-99D2-4246-8460-C68FE9D8CD14.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "receipt-native-sharing_0_ABE9EFA0-7A7E-46C0-944C-650651588B6E.png",
+        "timestamp": 1791430071.677
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2ABCCD70-9DD9-4356-BC22-FCEAAEE45DC1.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "receipt-zoomed_0_D36E4179-3A30-4C3D-9F5B-E684914CC753.png",
+        "timestamp": 1791430064.069
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "4912E52B-5C63-4623-88D5-0234DC531FA8.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "receipt-native-rotation-fit-landscape-window-geometry_0_37D2B3C3-4C90-43AE-BFAE-D028E4D753E9.txt",
+        "timestamp": 1791430060.09
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2BDD541A-8871-46C8-8C04-1F4042805E51.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "receipt-native-rotation-fit-landscape_0_DDD8E52C-EB53-4161-A7B0-008740B33F47.png",
+        "timestamp": 1791430059.344
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "C1B599C3-8A7D-4340-A504-592B417FDD35.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "receipt-native-pinch-zoom_0_1CAF90D6-1707-424E-B8D8-AC082F39CECF.png",
+        "timestamp": 1791430051.905
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "98E3884E-5CAD-43B9-84C6-41BFF04D63E2.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-View receipt_0_E1C6B727-FB97-42DE-88ED-86CFD004C546.txt",
+        "timestamp": 1791430044.36
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "3A8BE0CE-8244-49D3-ADFE-14EE9A37E8AE.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_6F8716FD-3B87-48D4-B223-31DEEEF9DC1A.txt",
+        "timestamp": 1791430030.386
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "E3DC5F8A-3117-4BEE-9A5B-053A4CBB009E.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_08B264D0-99CF-4ED8-B485-39DE01496C90.txt",
+        "timestamp": 1791430025.642
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2ED60CD9-695B-4328-BDF2-EE57735329FE.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "historical-person-name-change-preserves-item-shares_0_781AE7B9-4867-4FE9-A524-C58FF5E27188.png",
+        "timestamp": 1791430168.165
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "A2A2CA03-88C7-4F72-B873-BCC2FE68D90B.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_0F2B6A6A-9F85-4152-A472-C69BDB3601AA.txt",
+        "timestamp": 1791430147.329
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "01089041-A0A5-48DE-AE7A-0237CDBFD03A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_8490B528-3602-4743-A6A0-D452B41C5D8A.txt",
+        "timestamp": 1791430126.812
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "7EDEFFBE-A8F0-4B32-928C-B52C92B2BDE8.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_0CA27E7C-6451-437F-B622-76C2941F67D2.txt",
+        "timestamp": 1791430121.677
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "14086188-67D1-49EA-809A-C65D2695652B.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "reverse-assignment-and-cleared-charges_0_D3CAA0C3-FC88-4242-AC54-650EB5DA91D6.png",
+        "timestamp": 1791430246.059
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "2F5014B7-7BBF-4254-9B19-9DAD51DBFA45.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-edit-tax_0_70CA10BF-D724-402A-9114-2D1E9BFB7957.txt",
+        "timestamp": 1791430210.907
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F287B830-BD53-4B3D-9ADA-FA31BA98D8E2.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "native-scroll-geometry-add-item_0_4E554726-8A36-4907-9300-0E55747F6C89.txt",
+        "timestamp": 1791430190.687
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "8594B5E9-A555-4E3E-9B41-7923A3712CD4.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_3FD08D05-228D-4BD4-B318-F1B279989237.txt",
+        "timestamp": 1791430169.51
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "CA5780D6-43DF-4F60-947F-00F4986CC525.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "startup-recovery-keeps-saved-data_0_57A4F978-66D6-4D4D-90D4-829E811359E8.png",
+        "timestamp": 1791430264.578
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "1073949D-5EBF-48E8-BC8A-BDFBBA87114A.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_C66F780C-3A98-4962-A20D-E21716D59810.txt",
+        "timestamp": 1791430259.313
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "F8CAC093-A2DE-4397-8272-58368DA22D1F.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_1D00325C-6EE1-4F59-957E-AF469EDD65E5.txt",
+        "timestamp": 1791430247.31
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testStartupRecoveryRetriesWithoutDiscardingSavedMeals()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testStartupRecoveryRetriesWithoutDiscardingSavedMeals"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "64AB2214-440B-4855-86C5-0E5FA433B040.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_1BE5D30A-8F59-4E33-9A1D-1820367FC1C1.txt",
+        "timestamp": 1791430268.139
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testSwipeDismissedDraftLeavesSavedMealUnchanged()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testSwipeDismissedDraftLeavesSavedMealUnchanged"
+  },
+  {
+    "attachments": [
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "C6BF8F56-C586-4F9E-9D71-909BDFE4BA21.png",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "charge-row-before-center-tap_0_0094FC77-9B01-4D27-AD33-97F3B7A8E58C.png",
+        "timestamp": 1791430300.325
+      },
+      {
+        "configurationName": "Test Scheme Action",
+        "exportedFileName": "29ED6AA0-5EA7-41FC-B866-306454C81B56.txt",
+        "isAssociatedWithFailure": false,
+        "suggestedHumanReadableName": "isolated-ui-launch-arguments_0_F615DE01-8E09-4271-9A6F-04F80763D9DC.txt",
+        "timestamp": 1791430290.061
+      }
+    ],
+    "testIdentifier": "MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth()",
+    "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth"
+  }
+]

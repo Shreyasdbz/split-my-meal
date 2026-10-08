@@ -1,143 +1,93 @@
-//
-//  SplitsModal.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 5/6/24.
-//
-
 import SwiftUI
 
+/// A reconciled, itemized bill that remains honest about unassigned charges.
 struct SplitsModal: View {
-    
-    @Environment(\.colorScheme) var colorScheme
+    let meal: Meal
     @Environment(\.dismiss) private var dismiss
-    
-    @Bindable var meal: Meal
-    
+    private var people: [MealPerson] { (meal.people ?? []).sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending } }
+
     var body: some View {
-        NavigationStack{
-            ScrollView(.vertical) {
-                VStack(spacing: 15){
-                    totalsSection
-                    DividerElement(removePadding: true)
-                    splitsSection
+        let amounts = MealAmounts(meal: meal)
+        NavigationStack {
+            List {
+                Section {
+                    AmountRow(title: "Subtotal", amount: amounts.subtotal)
+                    AmountRow(title: "Tax", amount: amounts.tax)
+                    AmountRow(title: "Tip", amount: amounts.tip)
+                    AmountRow(title: "Total", amount: amounts.total, emphasized: true)
+                        .accessibilityIdentifier("split-total")
+                } header: { Text(meal.title) } footer: {
+                    Text("Tax and tip follow item shares. Rounding keeps the total exact.")
+                        .foregroundStyle(Color.mealSecondaryText)
                 }
-                .padding(.horizontal)
-                .padding(.top, 15)
-            }
-            .navigationTitle("\(meal.charm) \(meal.title)")
-            .background(colorScheme == .dark ? Color.black : Color.white)
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Dismiss"){
-                        dismiss()
-                    }
-                }
-            }
-        }
-    }
-    
-    private var totalsSection: some View {
-        HStack{
-            VStack(alignment: .leading){
-                Text("Totals")
-                    .font(.title3)
-                    .fontWeight(.medium)
-                    .padding(.bottom, 5)
-                VStack(spacing: 8) {
-                    HStack{
-                        Text("Subtotal")
-                            .fontWeight(.regular)
-                        Spacer()
-                        Text("\(getMealTotalPreTax(meal: meal).formatted(.currency(code: "USD")))")
-                            .fontWeight(.light)
-                    }
-                    HStack{
-                        Text("Tax")
-                            .fontWeight(.regular)
-                        Spacer()
-                        Text(getMealTaxText(meal: meal))
-                            .fontWeight(.light)
-                    }
-                    HStack{
-                        Text("Tip")
-                            .fontWeight(.regular)
-                        Spacer()
-                        Text(getMealTipText(meal: meal))
-                            .fontWeight(.light)
-                    }
-                    HStack{
-                        Text("Grand total")
-                            .fontWeight(.medium)
-                        Spacer()
-                        Text("\(getMealTotal(meal: meal).formatted(.currency(code: "USD")))")
-                            .fontWeight(.medium)
-                    }
-                }
-                .font(.headline)
-            }
-            Spacer()
-        }
-    }
-    
-    private func splitsRowText(person: MealPerson) -> some View {
-        return(
-            HStack{
-                Text("\(person.name)")
-                if let items = getItemsForMealPerson(meal: meal, person: person){
-                    ForEach(items.sorted(by: { itemA, itemB in
-                        itemA.category.rawValue < itemB.category.rawValue
-                    })){ item in
-                        HStack(spacing: 4){
-                            Circle()
-                                .frame(width: 8, height: 8, alignment: .center)
-                                .foregroundStyle(getColorByMealItemCategory(category: item.category))
+                if amounts.hasInvalidValues {
+                    Section {
+                        Label {
+                            Text("Some saved values are invalid and excluded. Correct the prices, tax, or tip before sharing or settling.")
+                        } icon: {
+                            Image(systemName: "exclamationmark.triangle").foregroundStyle(.red)
                         }
                     }
-                } 
-                Spacer()
-                Text("\(getSplitTotalForPerson(meal: meal, person: person).formatted(.currency(code: "USD")))")
-            }
-                .padding()
-        )
-    }
-    
-    private func splitsRow(person: MealPerson) -> some View {
-        return(
-            splitsRowText(person: person)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 12)
-                        .foregroundStyle(colorScheme == .light ? .white : Color.init(uiColor: .systemGray6))
-                        .overlay(alignment: .center, content: {
-                            splitsRowText(person: person)
-                        })
-                        .shadow(color: .primary.opacity(0.075), radius: 6, x: 0, y: 0)
                 }
-        )
-    }
-    
-    private var splitsSection: some View {
-        VStack{
-            HStack{
-                Text("Splits")
-                    .font(.title3)
-                    .fontWeight(.medium)
-                    .padding(.bottom, 5)
-                Spacer()
-            }
-            VStack{
-                if let mealPeople = meal.people {
-                    ForEach(mealPeople.sorted(by: { personA, personB in
-                        personA.name < personB.name
-                    })){ person in
-                        splitsRow(person: person)
+                Section("Per person") {
+                    if people.isEmpty {
+                        Text("Add people and assign their items to split this meal.").foregroundStyle(Color.mealSecondaryText)
                     }
+                    ForEach(people) { person in
+                        DisclosureGroup {
+                            let items = (meal.items ?? []).filter { $0.consumerIds.contains(person.id) }.sorted { $0.name < $1.name }
+                            if items.isEmpty { Text("No items assigned").foregroundStyle(Color.mealSecondaryText) }
+                            ForEach(items) { item in
+                                VStack(alignment: .leading, spacing: 4) {
+                                    AmountRow(title: item.name, amount: amounts.amount(for: item, person: person))
+                                    Text("Item price \(mealCurrency(item.price)) · shared by \(Set(item.consumerIds).intersection(Set(people.map(\.id))).count)")
+                                        .font(.caption).foregroundStyle(Color.mealSecondaryText)
+                                }
+                            }
+                            AmountRow(title: "Item subtotal", amount: amounts.subtotal(for: person))
+                            AmountRow(title: "Tax share", amount: amounts.tax(for: person))
+                            AmountRow(title: "Tip share", amount: amounts.tip(for: person))
+                        } label: { AmountRow(title: person.name, amount: amounts.amount(for: person), emphasized: true) }
+                        .accessibilityIdentifier("split-\(person.name)")
+                    }
+                }
+                if amounts.unassignedCents > 0 {
+                    Section {
+                        AmountRow(title: "Unassigned", amount: amounts.unassigned, emphasized: true)
+                        Text(amounts.subtotalCents == 0
+                             ? "Fixed charges need priced items before they can be divided. Add and assign items, or clear the charges."
+                             : "This amount is included in the total but isn’t owed by a person yet. Assign the remaining items before settling the bill.")
+                            .foregroundStyle(Color.mealSecondaryText)
+                    }
+                }
+            }
+            .mealFocusedContent()
+            .navigationTitle("Split summary").navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
+                ToolbarItem(placement: .bottomBar) {
+                    ShareLink(item: shareText, subject: Text("\(meal.title) — meal split")) {
+                        Label("Share split", systemImage: "square.and.arrow.up")
+                    }.accessibilityIdentifier("share-split").disabled(amounts.hasInvalidValues)
                 }
             }
         }
     }
-}
 
-//#Preview {
-//    SplitsModal()
-//}
+    private var shareText: String {
+        let amounts = MealAmounts(meal: meal)
+        var lines = [meal.title, "Subtotal: \(mealCurrency(amounts.subtotal))", "Tax: \(mealCurrency(amounts.tax))", "Tip: \(mealCurrency(amounts.tip))", "Total: \(mealCurrency(amounts.total))", ""]
+        for person in people {
+            lines += ["\(person.name): \(mealCurrency(amounts.amount(for: person)))"]
+            let items = (meal.items ?? []).filter { $0.consumerIds.contains(person.id) }.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+            lines += items.map { "  \($0.name): \(mealCurrency(amounts.amount(for: $0, person: person)))" }
+            lines += ["  Tax: \(mealCurrency(amounts.tax(for: person))) · Tip: \(mealCurrency(amounts.tip(for: person)))", ""]
+        }
+        if amounts.unassignedCents > 0 {
+            lines += ["Unassigned: \(mealCurrency(amounts.unassigned))", amounts.subtotalCents == 0
+                      ? "Add priced items or clear fixed charges before settling."
+                      : "Assign remaining items before settling."]
+        }
+        return lines.joined(separator: "\n")
+    }
+}

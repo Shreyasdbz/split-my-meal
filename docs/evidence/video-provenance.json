@@ -1,0 +1,33 @@
+{
+  "bytes": 13971148,
+  "durationSeconds": 36.3,
+  "encodedHeight": 1280,
+  "encodedWidth": 588,
+  "file": "iphone-walkthrough.mp4",
+  "nativeResult": "testDemoWalkthrough passed; zero failures or skips",
+  "processing": "Initial test setup and final teardown trimmed; re-encoded at720p. Native interaction speed, in-app relaunch, and rotation preserved.",
+  "sha256": "5713cd0e7a48f26332b34a42477b688338eaa4b27cfe3c1d42eab88ea1169fe8",
+  "source": "demo-walkthrough.mp4",
+  "sourceManifest": "iphone-demo-final-source-manifest.json",
+  "sourceRangeSeconds": [
+    14.5,
+    50.8
+  ],
+  "sourceRun": "iphone-demo-final",
+  "sourceVideoSHA256": "289b4a45e00505283b14908affe7e887c65c4d7e444f9768be406c1a0a11c2d3",
+  "transform": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "verifiedFrameTimesSeconds": [
+    1.0883333333333334,
+    8.58,
+    17.83,
+    26.765,
+    34.47
+  ]
+}

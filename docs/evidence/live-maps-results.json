@@ -1,0 +1,19 @@
+{
+  "failedTests": 0,
+  "finishTime": 1791433989.417,
+  "passedTests": 4,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17 Pro",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "scope": "Actual Apple autocomplete and exact selected restaurant, settled native Maps destination, initial Allow and denial, native Settings Ask Next Time and Never revocation, explicit fresh prompt, cleared cached nearby status, preserved query/draft on Settings return and cancellation.",
+  "skippedTests": 0,
+  "sourceManifest": "live-maps-source-manifest.json",
+  "startTime": 1791433835.47,
+  "totalTestCount": 4
+}

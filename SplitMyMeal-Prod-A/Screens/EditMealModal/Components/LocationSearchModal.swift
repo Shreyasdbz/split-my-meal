@@ -1,160 +1,100 @@
-//
-//  LocationSearchModal.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 4/28/24.
-//
-
 import SwiftUI
 import MapKit
+import UIKit
 
+/// Searches restaurants without location permission and resolves a selected completion before committing it.
 struct LocationSearchModal: View {
-
     @Environment(\.dismiss) private var dismiss
-    let locationService: LocationService = LocationService(.init())
-    @StateObject var locationManager = LocationManager()
+    @State private var service = LocationService()
+    @StateObject private var location = LocationManager()
+    @State private var query = ""
+    @State private var resolutionTask: Task<Void, Never>?
+    @State private var resolvingID: String?
+    @State private var errorMessage: String?
+    let onSelect: (RestaurantDraft) -> Void
 
-    @Bindable private var meal: Meal
-    @Binding private var searchString: String
-
-    @State private var isNewLocation: Bool
-    @State private var searchResults: [SearchResult] = []
-    
-    var onSetLocation: (_ restaurantDetails: RestaurantDetails?) async -> ()
-    var onClearLocation: () -> ()
-    
-    init(
-        meal: Meal,
-        searchString: Binding<String>,
-        onSetLocation: @escaping (_ restaurantDetails: RestaurantDetails?) async -> (),
-        onClearLocation: @escaping () -> ()
-    ){
-        self.meal = meal
-        self._searchString = searchString
-        if(!searchString.wrappedValue.isEmpty){
-            self.locationService.update(queryFragment: searchString.wrappedValue)
-            self.isNewLocation = false
-        } else {
-            self.isNewLocation = true
-        }
-        self.onSetLocation = onSetLocation
-        self.onClearLocation = onClearLocation
-    }
-    
     var body: some View {
-        NavigationStack{
-            VStack{
-                searchField
-                if(isNewLocation == false){
-                    clearLocationButton
+        let permissionBlocked = location.failure == .denied || location.failure == .restricted
+        NavigationStack {
+            List {
+                Section {
+                    Button { location.requestNearbyLocation() } label: {
+                        Label(location.lastLocation == nil ? "Search near me" : "Nearby search enabled", systemImage: "location")
+                    }
+                    .disabled(location.isRequesting)
+                    .accessibilityIdentifier("nearby-restaurants")
+                    if location.isRequesting { ProgressView("Finding your location…") }
+                    if let message = location.errorMessage { Text(message).foregroundStyle(Color.mealSecondaryText).accessibilityIdentifier("restaurant-location-error") }
+                    if location.failure == .denied, let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                        Link("Open Settings", destination: settingsURL)
+                            .accessibilityIdentifier("restaurant-open-settings")
+                    }
+                    if permissionBlocked {
+                        Text("You can still search by name, address, or city.")
+                            .foregroundStyle(Color.mealSecondaryText)
+                    }
+                    if let message = service.errorMessage { Text(message).foregroundStyle(Color.mealSecondaryText).accessibilityIdentifier("restaurant-search-error") }
                 }
-                if(!locationService.completions.isEmpty){
-                    searchResultsList
-                }
-                Spacer()
-            }
-            .navigationTitle("Location")
-            .padding(.horizontal)
-            .padding(.top, 30)
-            .presentationBackground(.ultraThinMaterial)
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Dismiss"){
-                        dismiss()
+                Section {
+                    if service.isSearching { ProgressView("Searching restaurants…") }
+                    ForEach(service.suggestions) { suggestion in
+                        Button { resolve(suggestion) } label: {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(suggestion.completion.title).foregroundStyle(Color.primary)
+                                    Text(suggestion.completion.subtitle).font(.caption).foregroundStyle(Color.mealSecondaryText)
+                                }
+                                Spacer()
+                                if resolvingID == suggestion.id { ProgressView() }
+                            }
+                        }
+                        .disabled(resolvingID != nil)
+                        .accessibilityIdentifier("restaurant-result-\(suggestion.id)")
+                    }
+                    if !service.isSearching, service.suggestions.isEmpty, service.errorMessage == nil,
+                       query.count >= 2 || !permissionBlocked {
+                        Text(query.count >= 2 ? "No restaurants found. Try a name, address, or city." : "Enter a restaurant name, address, or city.")
+                            .foregroundStyle(Color.mealSecondaryText)
                     }
                 }
             }
+            .navigationTitle("Restaurant")
+            .navigationBarTitleDisplayMode(.inline)
+            .searchable(text: $query, prompt: "Restaurant, address, or city")
+            .autocorrectionDisabled()
+            .toolbar { ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } } }
+            .task(id: query) {
+                resolutionTask?.cancel()
+                resolvingID = nil
+                service.cancel()
+                do {
+                    try await Task.sleep(for: .milliseconds(300))
+                    try Task.checkCancellation()
+                    service.update(query: query, near: location.lastLocation?.coordinate)
+                } catch { }
+            }
+            .onChange(of: location.lastLocation) { _, latest in service.update(query: query, near: latest?.coordinate) }
+            .alert("Couldn’t select restaurant", isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })) {
+                Button("OK") { errorMessage = nil }
+            } message: { Text(errorMessage ?? "") }
+            .onDisappear { resolutionTask?.cancel(); service.cancel(); location.cancel() }
         }
     }
-    
-    private var searchField: some View {
-        TextInputField(
-            label: "Search",
-            placeholder: "Look for a restaurant name",
-            inputString: $searchString,
-            showError: false,
-            useLighterBg: true
-        )
-        .submitLabel(.search)
-        .autocorrectionDisabled()
-        .onChange(of: searchString, { _, newValue in
-            if(newValue.count > 2){
-                locationService.update(queryFragment: searchString)
+
+    private func resolve(_ suggestion: LocationSuggestion) {
+        resolutionTask?.cancel()
+        resolvingID = suggestion.id
+        resolutionTask = Task { @MainActor in
+            do {
+                let restaurant = try await service.resolve(suggestion)
+                try Task.checkCancellation()
+                onSelect(restaurant)
+                dismiss()
+            } catch {
+                guard !Task.isCancelled else { return }
+                resolvingID = nil
+                errorMessage = error.localizedDescription
             }
-        })
-        .onSubmit {
-            locationService.update(queryFragment: searchString)
-        }
-    }
-    
-    private var clearLocationButton: some View {
-        Button {
-            onClearLocation()
-        } label: {
-            HStack(spacing: 10){
-                Image(systemName: "trash")
-                Text("Clear location")
-            }
-            .padding()
-            .foregroundStyle(Color.red)
-        }
-        .padding(.top)
-        .padding(.horizontal)
-    }
-    
-    private func searchResultRow(completion: SearchCompletions) -> some View {        
-        return(
-            Button {
-                Task {
-                    await onLocationClick(completion: completion)
-                }
-            } label: {
-                VStack(alignment: .leading){
-                    Text("\(completion.title)")
-                        .fontWeight(.medium)
-                    Text("\(completion.subTitle)")
-                    Text("12.3 miles away")
-                }
-                .font(.callout)
-            }
-        )
-    }
-    
-    private var searchResultsList: some View {
-        List {
-            ForEach(locationService.completions){ location in
-                SearchResultRow(
-                    locationService: locationService,
-                    userLatitude: locationManager.lastLocation?.coordinate.latitude ?? 0.0,
-                    userLongitude: locationManager.lastLocation?.coordinate.longitude ?? 0.0,
-                    completion: location,
-                    onClick: onLocationClick
-                )
-            }
-        }
-        .listStyle(.plain)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding(.top, 10)
-    }
-    
-    private func onLocationClick(completion: SearchCompletions) async {
-        let restaurant = await convertSearchToLocation(
-            locationService: locationService,
-            title: completion.title,
-            address: completion.subTitle
-        )
-        if let details = restaurant {
-            let restaurantDetails = RestaurantDetails()
-            restaurantDetails.title = completion.title
-            restaurantDetails.address = completion.subTitle
-            restaurantDetails.lattitude = details.location.latitude
-            restaurantDetails.longitude = details.location.longitude
-            
-            await onSetLocation(restaurantDetails)
         }
     }
 }
-
-//#Preview {
-//    LocationSearchModal()
-//}

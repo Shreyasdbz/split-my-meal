@@ -1,13 +1,8 @@
-//
-//  Meal.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 4/24/24.
-//
-
 import Foundation
 import SwiftData
 
+/// A saved meal owns its items, people, optional restaurant, and receipt. Stored names and types retain 2024 compatibility.
+/// Amount and percentage charge fields are mutually exclusive for new writes; calculations favor fixed amounts in older records.
 @Model
 class Meal {
     var id: String = UUID().uuidString
@@ -28,9 +23,5 @@ class Meal {
 
     @Attribute(.externalStorage) var receiptPhoto: Data?
     
-    init() {
-        //
-    }
-    
-    
+    init() {}
 }

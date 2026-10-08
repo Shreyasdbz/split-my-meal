@@ -1,38 +1,12 @@
-//
-//  MapData.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 4/28/24.
-//
-
 import Foundation
 import SwiftData
-import MapKit
+import CoreLocation
 
-
-struct SearchCompletions: Identifiable {
-    let id = UUID()
-    let title: String
-    let subTitle: String
-}
-
-
-struct SearchResult: Identifiable, Hashable {
-    let id = UUID()
-    let location: CLLocationCoordinate2D
-    
-    static func == (lhs: SearchResult, rhs: SearchResult) -> Bool {
-        lhs.id == rhs.id
-    }
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-}
-
+/// Restaurant coordinates in degrees and display metadata owned by one meal. The legacy lattitude spelling is preserved on disk.
 @Model
 class RestaurantDetails {
     
-    @Relationship(inverse: \Meal.items)
+    @Relationship(inverse: \Meal.restaurantDetails)
     var relatedMeal: Meal?
     
     var id: String = UUID().uuidString
@@ -41,7 +15,5 @@ class RestaurantDetails {
     var lattitude: CLLocationDegrees = 0
     var longitude: CLLocationDegrees = 0
     
-    init(){
-        //
-    }
+    init() {}
 }

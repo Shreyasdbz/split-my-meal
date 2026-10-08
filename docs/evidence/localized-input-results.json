@@ -1,0 +1,73 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791436005.739,
+  "nativeExport": "Sanitized xcresulttool summary and tests; identical warnings grouped with their actual occurrence counts.",
+  "passedTests": 7,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17 Pro",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 2
+    }
+  ],
+  "scope": "Final raw locale-grouping rejection: five EditorInput tests and native invalid-input/Cancel plus reverse-assignment/fixed-charge conversion/Cancel/clear journeys.",
+  "skippedTests": 0,
+  "sourceManifest": "localized-input-source-manifest.json",
+  "sourceManifestSHA256": "97f8e8c9e16ca22823b975272b40f0f71c8783a9ba4cdcd31b7b4108427c27b7",
+  "startTime": 1791435894.696,
+  "tests": [
+    {
+      "durationInSeconds": 0.0024939775466918945,
+      "name": "testChargeModeConversionUsesCurrentDraftAndCalculationBase()",
+      "nodeIdentifier": "EditorInputTests/testChargeModeConversionUsesCurrentDraftAndCalculationBase()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0007129907608032227,
+      "name": "testInvalidNumericInputNeverBecomesSuccessfulSaveValue()",
+      "nodeIdentifier": "EditorInputTests/testInvalidNumericInputNeverBecomesSuccessfulSaveValue()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0005049705505371094,
+      "name": "testLocalizedDecimalInputConsumesEntireString()",
+      "nodeIdentifier": "EditorInputTests/testLocalizedDecimalInputConsumesEntireString()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.09804105758666992,
+      "name": "testReceiptDownsamplesAndKeepsReadableImage()",
+      "nodeIdentifier": "EditorInputTests/testReceiptDownsamplesAndKeepsReadableImage()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.009801983833312988,
+      "name": "testReceiptRejectsUnreadableAndOversizedData()",
+      "nodeIdentifier": "EditorInputTests/testReceiptRejectsUnreadableAndOversizedData()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 36.456104040145874,
+      "name": "testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged()",
+      "nodeIdentifier": "MealJourneyTests/testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 68.48156893253326,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 7
+}

@@ -1,28 +1,16 @@
-//
-//  MealItem.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 4/24/24.
-//
-
 import Foundation
 import SwiftData
 
-/**
- Different cateogries that a meal item can belong to
- */
+/// Persisted category raw values are stable across releases and determine category ordering.
 enum MealItemCategory: String, Codable, CaseIterable {
     case Snack = "00_Snack"
     case Entree = "10_Entree"
     case Dessert = "20_Dessert"
     case Drink = "30_Drink"
-    
-    var id: Self { self }
 }
 
-/**
- An item within a meal that represents a single item that was consumed
- */
+/// An owned meal item. Price remains USD Double storage for migration compatibility; MealStore writes cent-normalized values.
+/// consumerIds is the authoritative sharing assignment. MealAmounts divides its price equally and conserves remainder cents.
 @Model
 class MealItem {
 

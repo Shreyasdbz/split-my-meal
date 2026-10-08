@@ -1,0 +1,295 @@
+{
+  "issuesReported" : 32,
+  "knownDecorativeRasterReports" : 0,
+  "reports" : [
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(84.0, 241.33333333333334, 62.66666666666666, 17.99999999999997)",
+      "elementIdentifier" : "",
+      "elementLabel" : "$113.66",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(316.33333333333337, 243.16666666666666, 31.666666666666686, 14.333333333333343)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Oct 6",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 131072,
+      "compactDescription" : "Text clipped",
+      "detailedDescription" : "Text of this element may be clipped at larger Dynamic Type sizes.",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 781.3333333333334, 370.0, 50.666666666666515)",
+      "elementIdentifier" : "",
+      "elementLabel" : "View split",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast nearly passed",
+      "detailedDescription" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+      "elementFrame" : "(16.0, 491.3333333333333, 370.0, 40.333333333333314)",
+      "elementIdentifier" : "",
+      "elementLabel" : "People",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 491.3333333333333, 370.0, 40.333333333333314)",
+      "elementIdentifier" : "",
+      "elementLabel" : "People",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(32.0, 305.5, 64.0, 20.333333333333314)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Subtotal",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 445.6666666666667, 370.0, 45.66666666666663)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Tax is proportional to each person’s items. Percentage tips include tax.",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(314.0, 305.5, 56.0, 20.333333333333314)",
+      "elementIdentifier" : "",
+      "elementLabel" : "$87.00",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(316.3333333333333, 82.0, 65.66666666666669, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Done",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast nearly passed",
+      "detailedDescription" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast nearly passed",
+      "detailedDescription" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(314.0, 292.16666666666674, 56.0, 20.333333333333258)",
+      "elementIdentifier" : "",
+      "elementLabel" : "$18.94",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(32.0, 292.16666666666674, 24.0, 20.333333333333258)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Tip",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 380.3333333333333, 370.0, 61.66666666666674)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Tax and tip follow each person’s share. Any remaining cents are allocated consistently so the bill adds up exactly.",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(316.3333333333333, 82.0, 65.66666666666669, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Done",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(20.0, 82.0, 76.66666666666667, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Cancel",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(319.66666666666663, 82.0, 62.333333333333314, 36.0)",
+      "elementIdentifier" : "save-meal",
+      "elementLabel" : "Save",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast nearly passed",
+      "detailedDescription" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast nearly passed",
+      "detailedDescription" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast nearly passed",
+      "detailedDescription" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+      "elementFrame" : "(16.0, 455.0, 370.0, 52.0)",
+      "elementIdentifier" : "remove-restaurant",
+      "elementLabel" : "Remove restaurant",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast nearly passed",
+      "detailedDescription" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+      "elementFrame" : "(16.0, 524.3333333333333, 370.0, 40.33333333333337)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Receipt",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(319.66666666666663, 82.0, 62.333333333333314, 36.0)",
+      "elementIdentifier" : "save-meal",
+      "elementLabel" : "Save",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 455.0, 370.0, 52.0)",
+      "elementIdentifier" : "remove-restaurant",
+      "elementLabel" : "Remove restaurant",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 524.3333333333333, 370.0, 40.33333333333337)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Receipt",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(20.0, 82.0, 76.66666666666667, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Cancel",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(31.33333396911621, 580.5, 207.6666717529297, 20.33331298828125)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Replace receipt photo",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 131072,
+      "compactDescription" : "Text clipped",
+      "detailedDescription" : "Text of this SwiftUI.AccessibilityNode may be clipped at larger Dynamic Type sizes.",
+      "elementFrame" : "(31.33333396911621, 580.5, 207.6666717529297, 20.33331298828125)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Replace receipt photo",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 131072,
+      "compactDescription" : "Text clipped",
+      "detailedDescription" : "Text of this SwiftUI.UIKitTextField may be clipped at larger Dynamic Type sizes.",
+      "elementFrame" : "(32.0, 187.33333333333334, 338.0, 22.0)",
+      "elementIdentifier" : "meal-title",
+      "elementLabel" : "",
+      "surface" : "meal-editor"
+    }
+  ],
+  "requiresReview" : 32
+}

@@ -1,255 +1,102 @@
-//
-//  EditMealPersonModal.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 4/26/24.
-//
-
 import SwiftUI
+import SwiftData
 
-
-struct EditMealPersonModal: View {
-    
-    private let STRING_NAVINGATION_TITLE_NEW = "Add person"
-    private let STRING_NAVINGATION_TITLE_EDIT = "Edit person"
-    private let STRING_SAVE_CHANGES_NEW = "Add new person"
-    private let STRING_SAVE_CHANGES_EDIT = "Save changes"
-    
-    @Environment(\.modelContext) var modelContext
-    @Environment(\.colorScheme) var colorScheme
+/// Edits a person and their item selections without changing stored assignments on Cancel.
+struct PersonEditor: View {
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
-    
-    @Bindable private var meal: Meal
-    @Bindable private var mealPerson: MealPerson
-    
-    @State private var isNewMealPerson: Bool
-    @State private var navigationTitleText: String
-    @State private var saveButtonText: String
-    
-    @State private var nameInput: String
-    @State private var showNameInputError: Bool = false
-    @State private var itemsInput: [String]
-    
-    @FocusState private var nameInputFocused: Bool
-    
-    init(meal: Meal, mealPerson: MealPerson){
+    private let meal: Meal
+    private let existingPerson: MealPerson?
+    @State private var name: String
+    @State private var itemIDs: Set<String>
+    @State private var errorMessage: String?
+    @State private var confirmDelete = false
+    @FocusState private var nameFocused: Bool
+
+    init(meal: Meal, person: MealPerson? = nil) {
         self.meal = meal
-        self.mealPerson = mealPerson
-        
-        if(mealPerson.name.isEmpty){
-            // New Person
-            self.isNewMealPerson = true
-            self.navigationTitleText = STRING_NAVINGATION_TITLE_NEW
-            self.saveButtonText = STRING_SAVE_CHANGES_NEW
-            self.nameInput = ""
-            self.itemsInput = []
-        } else {
-            // Existing Person
-            self.isNewMealPerson = false
-            self.navigationTitleText = STRING_NAVINGATION_TITLE_EDIT
-            self.saveButtonText = STRING_SAVE_CHANGES_EDIT
-            self.nameInput = mealPerson.name
-            self.itemsInput = mealPerson.itemIds
-        }
+        existingPerson = person
+        _name = State(initialValue: person?.name ?? "")
+        // Item consumers are authoritative; older reverse indexes can omit saved shares.
+        _itemIDs = State(initialValue: Set((meal.items ?? []).filter { item in
+            person.map { item.consumerIds.contains($0.id) } ?? false
+        }.map(\.id)))
     }
-    
+
     var body: some View {
-        NavigationStack{
-            ScrollView(.vertical){
-                VStack(spacing: 30){
-                    inputFieldName
-                    inputFieldMealItems
-                    if(!isNewMealPerson){
-                        deletePersonView
-                    }
+        NavigationStack {
+            Form {
+                Section("Person") {
+                    TextField("Person name", text: $name)
+                        .textInputAutocapitalization(.words)
+                        .focused($nameFocused)
+                        .submitLabel(.done)
+                        .onSubmit { nameFocused = false }
+                        .accessibilityIdentifier("person-name")
                 }
-                .padding(.horizontal)
-                .padding(.vertical)
-            }
-            .background(colorScheme == .dark ? Color.black : Color.white)
-            .navigationTitle("\(navigationTitleText)")
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Cancel"){
-                        dismiss()
-                    }
-                }
-                ToolbarItem(placement: .bottomBar) {
-                    Button("\(saveButtonText)"){
-                        saveChanges()
-                    }
-                }
-            }
-            .onChange(of: mealPerson) { oldValue, newValue in
-                if(oldValue.name == "" && newValue.name != ""){
-                    updateStateForEdit(newMeal: meal, newPerson: newValue)
-                }
-            }
-        }
-    }
-    
-    private var inputFieldName: some View {
-        TextInputField(
-            label: "Name",
-            placeholder: "Give the person a name",
-            inputString: $nameInput,
-            showError: showNameInputError
-        )
-        .submitLabel(.done)
-        .focused($nameInputFocused)
-        .onSubmit {
-            nameInputFocused = false
-        }
-    }
-    
-    private var noItemsInMealView: some View {
-        HStack{
-            Spacer()
-            VStack(alignment: .center){
-                Text("No items in this meal")
-                Text("Add an item from the Items tab")
-            }
-            .foregroundStyle(.secondary)
-            .padding(.vertical, 30)
-            Spacer()
-        }
-    }
-    
-    private var inputFieldMealItems: some View {
-        VStack(alignment: .leading, spacing: 10){
-            HStack{
-                LabelWithCaptionLeading(label: "Items", caption: "Select the items that this person had")
-                Spacer()
-            }
-            
-            if let mealItems = getAllMealItemsForMeal(meal: meal){
-                VStack{
-                    ForEach(MealItemCategory.allCases, id: \.rawValue) { category in
-                        FlexStack{
-                            ForEach(mealItems
-                                .filter({ item in
-                                    item.category == category
-                                })
-                                .sorted(by: { itemA, itemB in
-                                itemA.category.rawValue < itemB.category.rawValue
-                            })){ item in
-                                Button("\(item.name)",
-                                       systemImage:
-                                        itemsInput.contains(item.id) ? "checkmark.circle.fill" : "circle.dotted"
-                                ) {
-                                    toggleMealItemSelection(itemId: item.id)
+                if let items = meal.items, !items.isEmpty {
+                    ForEach(MealItemCategory.allCases, id: \.self) { category in
+                        let categoryItems = items.filter { $0.category == category }.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+                        if !categoryItems.isEmpty {
+                            Section(category.displayName) {
+                                ForEach(categoryItems) { item in
+                                    Toggle(isOn: Binding(get: { itemIDs.contains(item.id) }, set: { selected in
+                                        if selected { itemIDs.insert(item.id) } else { itemIDs.remove(item.id) }
+                                    })) {
+                                        VStack(alignment: .leading) {
+                                            Text(item.name)
+                                            Text(item.price.formatted(.currency(code: "USD"))).font(.caption).foregroundStyle(Color.mealSecondaryText)
+                                        }
+                                    }
+                                    .accessibilityIdentifier("person-item-\(item.name)")
                                 }
-                                .foregroundStyle(getColorByMealItemCategory(category: item.category))
-                                .padding(.horizontal)
-                                .padding(.vertical)
-                                .background(Color.init(uiColor: .systemGray6))
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                .padding(.bottom, 5)
                             }
                         }
                     }
-                }
-            } else {
-                noItemsInMealView
-            }
-        }
-    }
-    
-    private var deletePersonView: some View {
-        Button("Delete person", systemImage: "trash", role: .destructive) {
-            // Clean up personId from meal's items
-            if let mealItems = meal.items {
-                mealItems.forEach { item in
-                    item.consumerIds = item.consumerIds.filter({ consumerId in
-                        consumerId != mealPerson.id
-                    })
-                }
-            }
-            
-            mealPerson.relatedMeal = meal
-            modelContext.delete(mealPerson)
-            dismiss()
-        }
-        .padding(.vertical, 30)
-    }
-
-    /**
-     Updates the meal with selected value
-     */
-    private func toggleMealItemSelection(itemId: String){
-        if(itemsInput.contains(itemId)){
-            itemsInput = itemsInput.filter({ $0 != itemId })
-        } else {
-            itemsInput.append(itemId)
-        }
-    }
-    
-    /**
-     Tackles the problem of mealPersonToEdit not updating quick enough when editing existing
-     */
-    private func updateStateForEdit(newMeal: Meal, newPerson: MealPerson){
-        isNewMealPerson = false
-        
-        mealPerson.relatedMeal = newMeal
-        mealPerson.id = newPerson.id
-        mealPerson.name = newPerson.name
-        mealPerson.itemIds = newPerson.itemIds
-        
-        navigationTitleText = STRING_NAVINGATION_TITLE_EDIT
-        saveButtonText = STRING_SAVE_CHANGES_EDIT
-        nameInput = newPerson.name
-        itemsInput = newPerson.itemIds
-    }
-    
-    /**
-     Saves changes (both add or edit)
-     */
-    private func saveChanges(){
-        var validationPass: Bool = true
-        
-        if(nameInput.isEmpty || nameInput == ""){
-            validationPass = false
-            showNameInputError = true
-        } else {
-            validationPass = true
-            showNameInputError = false
-        }
-        
-        if(validationPass == true){
-            mealPerson.name = nameInput
-            mealPerson.itemIds = itemsInput
-
-            // Update meal's items with person's selection
-            if let mealItems = meal.items {
-                mealItems.forEach { item in
-                    // inInput & inItem -- NA
-                    // NOT inInput & NOT inItem -- NA
-                    // inInput & NOT inItem: -- APPEND
-                    if(itemsInput.contains(item.id) && !item.consumerIds.contains(mealPerson.id)){
-                        item.consumerIds.append(mealPerson.id)
+                } else {
+                    Section("Items") {
+                        Text("Add items from the meal’s Items section, then select what this person had.").foregroundStyle(Color.mealSecondaryText)
                     }
-                    // NOT inInput & inItem: -- FILTER OUT
-                    if(!itemsInput.contains(item.id) && item.consumerIds.contains(mealPerson.id)){
-                        item.consumerIds = item.consumerIds.filter({ consumerId in
-                            consumerId != mealPerson.id
-                        })
+                }
+                if existingPerson != nil {
+                    Section {
+                        Button("Delete person", role: .destructive) { confirmDelete = true }
+                            .accessibilityIdentifier("delete-person")
                     }
                 }
             }
-
-            
-            if(isNewMealPerson){
-                mealPerson.relatedMeal = meal
-                modelContext.insert(mealPerson)
+            .navigationTitle(existingPerson == nil ? "New person" : "Edit person")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save", action: save).accessibilityIdentifier("save-person")
+                }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") { nameFocused = false }
+                }
             }
-            meal.modifiedAt = Date()
-            dismiss()
+            .confirmationDialog("Delete this person? Their item shares become unassigned unless others share them.", isPresented: $confirmDelete, titleVisibility: .visible) {
+                Button("Delete person", role: .destructive) { deletePerson() }
+                    .accessibilityIdentifier("confirm-delete-person")
+            }
+            .alert("Couldn’t update person", isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })) {
+                Button("OK") { errorMessage = nil }
+            } message: { Text(errorMessage ?? "") }
         }
     }
-    
 
+    private func save() {
+        do {
+            try MealStore.savePerson(existingPerson ?? MealPerson(relatedMeal: nil), meal: meal, name: name, itemIDs: Array(itemIDs), isNew: existingPerson == nil, in: context)
+            dismiss()
+        } catch { errorMessage = error.localizedDescription }
+    }
+
+    private func deletePerson() {
+        guard let existingPerson else { return }
+        do { try MealStore.deletePerson(existingPerson, in: context); dismiss() }
+        catch { errorMessage = error.localizedDescription }
+    }
 }
-
-//#Preview {
-//    EditMealPersonModal()
-//}

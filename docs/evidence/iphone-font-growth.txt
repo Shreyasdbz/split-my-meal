@@ -1,0 +1,1 @@
+[["libraryAmountHeight": 17.99999999999997, "receiptControlHeight": 52.0, "titleInputHeight": 22.0, "mealAmountHeight": 40.66666666666666], ["libraryAmountHeight": 58.66666666666674, "titleInputHeight": 64.99999999999997, "receiptControlHeight": 155.33333333333337, "mealAmountHeight": 71.66666666666666]]

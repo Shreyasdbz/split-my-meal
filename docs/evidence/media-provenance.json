@@ -1,0 +1,389 @@
+[
+  {
+    "file": "iphone-increase-contrast-editor.png",
+    "nativeAttachment": "29EE4E18-DB3D-41EF-A1EF-5D533F7FEC58.png",
+    "pixels": "unaltered supporting contrast capture; app-owned colors unchanged in final source",
+    "sha256": "8b2f59af2099a1cb90d6b52a9a52ff55994a2a5ba68f56d2b9afc4d9efacd0ad",
+    "sourceManifest": "iphone-increase-contrast-source-manifest.json",
+    "sourceRun": "iphone-r9-increase-contrast"
+  },
+  {
+    "file": "iphone-meal-dark.png",
+    "nativeAttachment": "CA63FE15-211F-4DC2-900E-06BAB9E24712.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "22dc97e29d9a30ec2ebf04fad0a6b2f3d8a416464a568f0e9262b9c2f28f5b8d",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-meal-landscape.png",
+    "nativeAttachment": "748F7D61-EEDB-4E7A-9CB9-99505EB43872.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "082b4ba53fe842bf7f253c75c03781e804d6ee8bbcdac5ad9e6acd7ca3877fb4",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-largest-text-library.png",
+    "nativeAttachment": "81BBD064-8A7B-4437-93FA-143736133918.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "9e364e36d5c2ee6f5060153e0d6020545cb1a92a32458e94426bc99c9637bf25",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-largest-text-item-editor.png",
+    "nativeAttachment": "A041E579-D5CE-4CB3-A5C6-38C52B341CB2.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "9cbc1300064fb3a6c25f1f647265bf923b87c8a6a81b42813b1e4da283e77e9b",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-largest-text-receipt-editor.png",
+    "nativeAttachment": "F8340D0B-A66D-4FA7-B8C9-3B1DDCDA4396.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "4edb941bf44da0c1baec5382eeabf7428b52e27e5b3158ff74d5d60f5787f616",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-largest-text-title-edit.png",
+    "nativeAttachment": "E64772DF-3C72-4924-9152-1A864E9380CD.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "350083fc8941fc5e5288217c4b0267ed2a8ed476639e42256a792e26e1d3696e",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-largest-text-title-cancel.png",
+    "nativeAttachment": "DB015F11-F6D5-4661-A02B-12979B6BC0D8.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "b2080feb890b93ec6a4b0d94db00749c20f3d377eca72768e175162f3db04bf7",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-receipt-fit.png",
+    "nativeAttachment": "52AAD9A8-87CB-43A5-892F-3CC7E0DD1012.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "1bc6313e1ddd03675955bcf9257f60215e87ebc5c77206503536473510bd11ea",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-receipt-original.png",
+    "nativeAttachment": "6471E349-1B71-4A29-B0E5-5CF694217038.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "9aac399dfcde197b8e8d686c2337cf39052739925da13fcc2c7efbbe0a20b1a0",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-receipt-cancelled-replacement.png",
+    "nativeAttachment": "7607F474-4C36-46D5-B37A-898ED02EF640.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "9aac399dfcde197b8e8d686c2337cf39052739925da13fcc2c7efbbe0a20b1a0",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-receipt-saved-replacement.png",
+    "nativeAttachment": "134D3FFC-5E03-4654-BC0F-ABF8588AD5B3.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "77ab76322a6b2f69469e3a5d7756c5d6a18f9dd6ef11f9542c366489e2393889",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-invalid-restaurant-location.png",
+    "nativeAttachment": "8D6BA8A8-CEBE-4E56-BC17-B2535E831D97.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "e5bcf7e1b9d77f6016652dffa58ed1db3c2884283af1350bb5305509a321cc98",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-unreadable-receipt.png",
+    "nativeAttachment": "993C406C-5455-4704-996C-1C04EB644B15.png",
+    "pixels": "unaltered native screenshot",
+    "review": "independently inspected pixels",
+    "sha256": "72ff9f53aaf47af4bda55d9ab53499c34c9d54739a28ad4108a6f12fdc3ff2f5",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-accessibility-inventory.json",
+    "nativeAttachment": "ED22CD28-D545-4EA8-A484-A7C110DC856D.json",
+    "review": "independently read native inventory or measurements",
+    "sha256": "2a1e09fd6e43b52c572de937f823743af1f950f4476c2eb2288ac4311f9071d9",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-accessibility-inventory.txt",
+    "nativeAttachment": "D0B8B042-5A6C-4FF9-94BD-4B577F1C8727.txt",
+    "review": "independently read native inventory or measurements",
+    "sha256": "c17176a5887aef4aa72c36d2b019e0a20d771f0595a8b1d71ef3bc0a37aa1630",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-font-growth.txt",
+    "nativeAttachment": "896FC6C1-6017-46D7-9D8E-47C5BDA39D84.txt",
+    "review": "independently read native inventory or measurements",
+    "sha256": "85d01dfeb153d413d59cfd9788cab895c0366fff04ca640248c790756651bac4",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-final-attachment-manifest.json",
+    "nativeAttachment": "manifest.json",
+    "review": "native attachment inventory with local simulator identifiers omitted",
+    "sha256": "9298aaaa732178fa7ea2b87e90a91d9b2bad991e5234bdd7701f7b09a71928c9",
+    "sourceManifest": "iphone-final-source-manifest.json",
+    "sourceRun": "iphone-final-r2"
+  },
+  {
+    "file": "iphone-itemized-split-light.png",
+    "nativeAttachment": "E9AE3963-328E-473F-925F-8B9807ADDD54.png",
+    "pixels": "unaltered native screenshot",
+    "sha256": "d673ab9d77e1ccc2e4f4cd3d7d1633168ce0ccba355316e74a909438f378e978",
+    "sourceManifest": "iphone-demo-final-source-manifest.json",
+    "sourceRun": "iphone-demo-final"
+  },
+  {
+    "file": "iphone-largest-text-split.png",
+    "nativeAttachment": "EA1FCA01-0368-4E49-8C21-AA5C2893F7DB.png",
+    "pixels": "unaltered native screenshot",
+    "sha256": "ee5c352732feb9a36f6f024f761bc54ff7003cfbb8e3145fc9d17081a921f8a0",
+    "sourceManifest": "iphone-final-affected-source-manifest.json",
+    "sourceRun": "iphone-final-affected"
+  },
+  {
+    "file": "iphone-walkthrough.mp4",
+    "processing": "See video-provenance.json for native recording hash, trim range, encoding, and verified frames",
+    "sha256": "5713cd0e7a48f26332b34a42477b688338eaa4b27cfe3c1d42eab88ea1169fe8",
+    "sourceManifest": "iphone-demo-final-source-manifest.json",
+    "sourceRun": "iphone-demo-final"
+  },
+  {
+    "file": "iphone-restaurant-map.png",
+    "nativeAttachment": "D2B8D45D-780C-473B-9076-DE269F38300E.png",
+    "nativeTest": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "5226299f641ca45ad387419b2b8638900be296a7044510f277b9926fcd48e8a9",
+    "sourceManifest": "live-maps-source-manifest.json",
+    "sourceRun": "iphone-live-final-auth"
+  },
+  {
+    "file": "iphone-restaurant-search.png",
+    "nativeAttachment": "DE61499C-337E-4BF0-86D7-155AA44D9126.png",
+    "nativeTest": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "396643c51dcd1aa1990cbddd67f1ca0b5fe0eb6e131292e7329f95f11432d712",
+    "sourceManifest": "live-maps-source-manifest.json",
+    "sourceRun": "iphone-live-final-auth"
+  },
+  {
+    "file": "iphone-location-denied.png",
+    "nativeAttachment": "21D93D07-984F-47EC-9E0A-947FD4BBB047.png",
+    "nativeTest": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "43f79d8322eb093abc2779599ffe711f2a245061667d4c7fe3580a9c27a66630",
+    "sourceManifest": "live-maps-source-manifest.json",
+    "sourceRun": "iphone-live-final-auth"
+  },
+  {
+    "file": "iphone-native-maps-destination.png",
+    "nativeAttachment": "CCE83CC7-4A6E-4586-9EC4-20F54C76862E.png",
+    "nativeTest": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "2689e505c6310440f25e9a5f9d12d43e68f2a7a6cddd8beb5b5dfddf2214e9ee",
+    "sourceManifest": "live-maps-source-manifest.json",
+    "sourceRun": "iphone-live-final-auth"
+  },
+  {
+    "file": "iphone-location-settings-return.png",
+    "nativeAttachment": "CCAE21B0-17E1-403D-B385-01383592232E.png",
+    "nativeTest": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "0592fca39e421073e7e2612532260324272cbedb99444c1ae4397463a89c2aaa",
+    "sourceManifest": "live-maps-source-manifest.json",
+    "sourceRun": "iphone-live-final-auth"
+  },
+  {
+    "file": "iphone-location-revoked.png",
+    "nativeAttachment": "432002D8-EF67-435D-86E1-2492EB4DF00B.png",
+    "nativeTest": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "bbc3e9d905e12aad554d27bef0f33cb49de620ff6449952b08e1704a3e86e4b8",
+    "sourceManifest": "live-maps-source-manifest.json",
+    "sourceRun": "iphone-live-final-auth"
+  },
+  {
+    "file": "iphone-location-ask-next-time.png",
+    "nativeAttachment": "00B6992C-51AA-4FC6-B6C9-7EFEA6732C11.png",
+    "nativeTest": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "271a95440770d00ea5446c2f0941b58464ec9d43e1ccdff7c8af887b83ac26df",
+    "sourceManifest": "live-maps-source-manifest.json",
+    "sourceRun": "iphone-live-final-auth"
+  },
+  {
+    "file": "ipad-library-light.png",
+    "nativeAttachment": "A9029205-E332-4F06-9612-74F9F9FC2877.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "c574d7be7ef120495ac39b7362d89b3edc8c05a32e76bb2f530c14ded7330b90",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-meal-light.png",
+    "nativeAttachment": "526751BE-F67A-4F91-A61B-300B7224D144.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "114cdf10f1c054c323e26edfd9bc07329ad8419674fd82dfb6d2b03349460b6e",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-split-light.png",
+    "nativeAttachment": "F38D2480-82EE-4AFE-95CD-0EEC6CE856C7.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "a05a5b21f8403641f7d36375cb73818cddc281d08eeb343c38db666fc1179283",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-itemized-split-light.png",
+    "nativeAttachment": "84E4F112-9D78-40EE-B506-81A86AFD7147.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "abb96102d1e37e796abceaf87e19ad09cffe0528c655b2f739f6652563a0022a",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-meal-editor.png",
+    "nativeAttachment": "38A2332A-1334-4B39-B762-35155D406291.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "49926712a81aeb11f1caf2a7aec966df80276b8d29b86c66444ae23009d25982",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-receipt-fit.png",
+    "nativeAttachment": "EEEBE75C-0940-4B53-BE33-45A4FBD94813.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "775b8a84f7f05c33c170b3d22afc037426074b1b6959cfb8531c8d02e1f269cc",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-meal-landscape.png",
+    "nativeAttachment": "7D005851-AC2C-4617-86B3-46F339866642.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "190de8fbf762fc43d3036eb0dba4a851e212ae6fd6c4def88799bac6d7e8766c",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-meal-dark.png",
+    "nativeAttachment": "6D367B67-BEB2-4EA0-92DE-6789D7A30036.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "5104b048b664611f8c4e7e3b914442b63be24655b4e7c636294ab4b0c4d9bf2d",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-largest-text-library.png",
+    "nativeAttachment": "3426D757-007C-49E6-A9C2-E61E650B36D9.png",
+    "nativeTest": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "5c4442dab5b89fdb911737495c75ff452a4d4bf91e78bad98d82fea79cc6026d",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-largest-text-title-edit.png",
+    "nativeAttachment": "03CDEAF0-42AD-4132-ADDC-6BC5979726B0.png",
+    "nativeTest": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "02524445d5b919bf6ad7cd3bfeff17f8a39beb6269f0c610b9c25db89e2c4e2e",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-largest-text-receipt-editor.png",
+    "nativeAttachment": "470402A8-8865-4904-8ED8-4A02A4F0BE34.png",
+    "nativeTest": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "2b7c182cd26c5fcf1260e1f55c5d2485f5e1dc3c3924987eadf6eb2c57b08155",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "ipad-largest-text-title-cancel.png",
+    "nativeAttachment": "87CAEDD2-62FA-47F6-BC46-862EEA30310C.png",
+    "nativeTest": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "2b7c182cd26c5fcf1260e1f55c5d2485f5e1dc3c3924987eadf6eb2c57b08155",
+    "sourceManifest": "ipad-focused-source-manifest.json",
+    "sourceRun": "ipad-focused-pilot"
+  },
+  {
+    "file": "iphone-library-light.png",
+    "nativeAttachment": "DB0A46F9-8D4F-4D55-833C-9B73280114C4.png",
+    "nativeTest": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "07475b3fe425d50910f11a8657ade191a0274439d19fc9b979e915e44f90fc62",
+    "sourceManifest": "iphone-presentation-source-manifest.json",
+    "sourceRun": "iphone-presentation-final"
+  },
+  {
+    "file": "iphone-meal-light.png",
+    "nativeAttachment": "9DF0EC0F-1596-4D6F-BD1F-4EE64289B2B0.png",
+    "nativeTest": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "6d433734bbee4ec954f3dab40f94963d9e4c0fbebe8f9b5eb85f3b808b89829b",
+    "sourceManifest": "iphone-presentation-source-manifest.json",
+    "sourceRun": "iphone-presentation-final"
+  },
+  {
+    "file": "iphone-split-light.png",
+    "nativeAttachment": "4CB9C293-A073-43D8-BD76-C371B04BC4DF.png",
+    "nativeTest": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "d74406d2c8b3d881b60f70ed066160c6182a95cac7e22b7ec0e0c24e12a1ad1a",
+    "sourceManifest": "iphone-presentation-source-manifest.json",
+    "sourceRun": "iphone-presentation-final"
+  },
+  {
+    "file": "iphone-meal-editor.png",
+    "nativeAttachment": "130BDC71-1553-432C-9E9F-686811F288A1.png",
+    "nativeTest": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+    "pixels": "unaltered native screenshot",
+    "sha256": "0c7cde0de4ad7029f679c38c5b1edaa68f78d7c3331d6aaeefe570670a8bf65d",
+    "sourceManifest": "iphone-presentation-source-manifest.json",
+    "sourceRun": "iphone-presentation-final"
+  }
+]

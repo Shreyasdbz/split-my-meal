@@ -1,78 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Scheme
-   LastUpgradeVersion = "1530"
-   version = "1.7">
-   <BuildAction
-      parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES"
-      buildArchitectures = "Automatic">
+<?xml version='1.0' encoding='UTF-8'?>
+<Scheme LastUpgradeVersion="2700" version="1.7">
+   <BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES" buildArchitectures="Automatic">
       <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90EE95062BD997250063870D"
-               BuildableName = "SplitMyMeal-Prod-A.app"
-               BlueprintName = "SplitMyMeal-Prod-A"
-               ReferencedContainer = "container:SplitMyMeal-Prod-A.xcodeproj">
+         <BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES">
+            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="90EE95062BD997250063870D" BuildableName="SplitMyMeal-Prod-A.app" BlueprintName="SplitMyMeal-Prod-A" ReferencedContainer="container:SplitMyMeal-Prod-A.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
-   <TestAction
-      buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+   <TestAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" shouldUseLaunchSchemeArgsEnv="NO" codeCoverageEnabled="YES">
+      <Testables>
+         <TestableReference skipped="NO" parallelizable="NO">
+            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="A20000000000000000000001" BuildableName="SplitMyMealTests.xctest" BlueprintName="SplitMyMealTests" ReferencedContainer="container:SplitMyMeal-Prod-A.xcodeproj" />
+         </TestableReference>
+         <TestableReference skipped="NO" parallelizable="NO">
+            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="A30000000000000000000001" BuildableName="SplitMyMealUITests.xctest" BlueprintName="SplitMyMealUITests" ReferencedContainer="container:SplitMyMeal-Prod-A.xcodeproj" />
+         </TestableReference>
+      </Testables>
+      <CommandLineArguments>
+         <CommandLineArgument argument="--uitesting" isEnabled="YES" />
+      </CommandLineArguments>
    </TestAction>
-   <LaunchAction
-      buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
-      ignoresPersistentStateOnLaunch = "NO"
-      debugDocumentVersioning = "YES"
-      debugServiceExtension = "internal"
-      allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90EE95062BD997250063870D"
-            BuildableName = "SplitMyMeal-Prod-A.app"
-            BlueprintName = "SplitMyMeal-Prod-A"
-            ReferencedContainer = "container:SplitMyMeal-Prod-A.xcodeproj">
+   <LaunchAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" launchStyle="0" useCustomWorkingDirectory="NO" ignoresPersistentStateOnLaunch="NO" debugDocumentVersioning="YES" debugServiceExtension="internal" allowLocationSimulation="YES">
+      <BuildableProductRunnable runnableDebuggingMode="0">
+         <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="90EE95062BD997250063870D" BuildableName="SplitMyMeal-Prod-A.app" BlueprintName="SplitMyMeal-Prod-A" ReferencedContainer="container:SplitMyMeal-Prod-A.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
-   <ProfileAction
-      buildConfiguration = "Release"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      savedToolIdentifier = ""
-      useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90EE95062BD997250063870D"
-            BuildableName = "SplitMyMeal-Prod-A.app"
-            BlueprintName = "SplitMyMeal-Prod-A"
-            ReferencedContainer = "container:SplitMyMeal-Prod-A.xcodeproj">
+   <ProfileAction buildConfiguration="Release" shouldUseLaunchSchemeArgsEnv="YES" savedToolIdentifier="" useCustomWorkingDirectory="NO" debugDocumentVersioning="YES">
+      <BuildableProductRunnable runnableDebuggingMode="0">
+         <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="90EE95062BD997250063870D" BuildableName="SplitMyMeal-Prod-A.app" BlueprintName="SplitMyMeal-Prod-A" ReferencedContainer="container:SplitMyMeal-Prod-A.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
-   <AnalyzeAction
-      buildConfiguration = "Debug">
+   <AnalyzeAction buildConfiguration="Debug">
    </AnalyzeAction>
-   <ArchiveAction
-      buildConfiguration = "Release"
-      revealArchiveInOrganizer = "YES">
+   <ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES">
    </ArchiveAction>
 </Scheme>

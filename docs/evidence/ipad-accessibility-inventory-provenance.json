@@ -1,0 +1,39 @@
+{
+  "collectionResult": "Passed",
+  "collectionTest": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+  "excludedReports": 0,
+  "inventoryFile": "ipad-all-type-accessibility-inventory.json",
+  "inventorySHA256": "d26b341f3df53c5a231bf7fac7e1ca4eeeb8cb9e9b4f65de4accc9a39279423e",
+  "issuesReported": 32,
+  "knownDecorativeRasterReports": 2,
+  "meaning": "All native diagnostic reports are retained. Collection completion is not an accessibility pass or a zero-finding claim. No report is removed or waived.",
+  "nativeAttachmentIdentifier": "630DC188-FDCB-46FE-8092-650BE95D34E2",
+  "observational": true,
+  "reportCountsByAuditType": {
+    "1": 14,
+    "131072": 6,
+    "65536": 12
+  },
+  "separateNativeControlGate": {
+    "auditTypes": [
+      "hitRegion",
+      "sufficientElementDescription",
+      "trait",
+      "elementDetection"
+    ],
+    "durationInSeconds": 20.417497038841248,
+    "meaning": "This separate strict gate passed without exemptions; it does not clear contrast, font scaling or clipping reports in the all-type inventory.",
+    "result": "Passed",
+    "surfaces": [
+      "library",
+      "meal detail",
+      "split summary",
+      "meal editor"
+    ],
+    "test": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()"
+  },
+  "sourceManifest": "ipad-complete-source-manifest.json",
+  "sourceManifestSHA256": "612e2ef02195bce4741fbce9114af76d502f3a2067f0231c339125172f055d18",
+  "sourceResults": "ipad-complete-results.json",
+  "unavailableElementIdentityReports": 2
+}

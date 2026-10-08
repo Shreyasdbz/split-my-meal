@@ -1,0 +1,34 @@
+{
+  "bytes": 16269861,
+  "durationSeconds": 38,
+  "encodedHeight": 1280,
+  "encodedWidth": 892,
+  "file": "ipad-walkthrough.mp4",
+  "nativeResult": "testDemoWalkthrough passed 48.455 seconds; pilot3 tests passed with zero failures or skips",
+  "processing": "Initial test setup and final teardown trimmed; native interaction speed, in-app appearance relaunch and rotation retained. Re-encoded with the native720p export preset.",
+  "sha256": "67ddd266c21255de0bcf725ae340c59bb1ad893e6ce52604d5c9c703949f5d36",
+  "source": "native-replay.mp4",
+  "sourceManifest": "ipad-focused-source-manifest.json",
+  "sourceRangeSeconds": [
+    12,
+    50
+  ],
+  "sourceRun": "ipad-focused-pilot",
+  "sourceVideoSHA256": "e7477a5383521d5d87de99194265a45aebaed1f7e9cc5a373e242a25be067edb",
+  "transform": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "verifiedFrameTimesSeconds": [
+    0,
+    9.345,
+    18.143333333333334,
+    26.775,
+    35.1,
+    36.583333333333336
+  ]
+}

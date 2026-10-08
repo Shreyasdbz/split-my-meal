@@ -1,13 +1,7 @@
-//
-//  MealPerson.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 4/24/24.
-//
-
 import Foundation
 import SwiftData
 
+/// A person belongs to one meal. itemIds is the legacy reverse index, derived from item consumerIds by MealStore.
 @Model
 class MealPerson {
 

@@ -1,0 +1,31 @@
+{
+  "analyzer": "passed",
+  "binarySHA256": "70080610853c4cfff86676978beaed7d6a82174616e06bdd27f42c26b89061ae",
+  "build": "2",
+  "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+  "codeSigning": "disabled for local verification",
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "releaseBuild": "passed",
+  "scope": "Unsigned device build and analysis; no physical-device signing, CloudKit account or App Store operation",
+  "sourceManifest": "release-source-manifest.json",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "validation": "Unsigned device Release build and Xcode analyzer succeeded after focused iPad presentation, authorization recovery and locale grouping rejection",
+  "verifiedAt": "2026-10-08T05:06:16.900228+00:00",
+  "version": "2.0.0"
+}

@@ -1,355 +1,250 @@
-//
-//  EditMealModal.swift
-//  SplitMyMeal-Prod-A
-//
-//  Created by Shreyas Sane on 4/24/24.
-//
-
 import SwiftUI
 import SwiftData
-import MapKit
-import MCEmojiPicker
 import PhotosUI
+import ImageIO
 
-struct EditMealModal: View {
-    @Environment(\.modelContext) var modelContext
-    @Environment(\.colorScheme) var colorScheme
+/// Edits an isolated draft; only Save writes meal and receipt changes to persistent storage.
+struct MealEditor: View {
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
-    
-    @Binding var navigationPath: NavigationPath
-    @Bindable var meal: Meal
-    
-    @State private var isNewMeal: Bool
-    @State private var navigationTitleText: String
-    @State private var saveButtonText: String
-    
-    @State private var titleInput: String
-    @FocusState private var titleFocusState: Bool
-    @State private var showNameError: Bool = false
-
-    @State private var charmInput: String
-    @State private var showEmojiPicker: Bool = false
-
-    @State private var restaurantDetailsInput: RestaurantDetails?
-    @State private var mapSearchString: String
-    @State private var showRestaurantPickerSheet: Bool = false
-    
+    private let existingMeal: Meal?
+    private let onSaved: (Meal) -> Void
+    private let onDeleted: () -> Void
+    @State private var title: String
+    @State private var charm: String
+    @State private var restaurant: RestaurantDraft?
+    @State private var receipt: Data?
+    @State private var receiptPreview: UIImage?
     @State private var selectedPhoto: PhotosPickerItem?
-    
-    init(navigationPath: Binding<NavigationPath>, meal: Meal){
-        self._navigationPath = navigationPath
-        self.meal = meal
-        
-        if(meal.title == ""){
-            self.isNewMeal = true
-            
-            self.navigationTitleText = "New meal"
-            self.saveButtonText = "Add new meal"
-            self.titleInput = ""
-            self.charmInput = "🍱"
-            self.mapSearchString = ""
-        } else {
-            self.isNewMeal = false
-            
-            self.navigationTitleText = "Edit meal"
-            self.saveButtonText = "Save changes"
-            self.titleInput = meal.title
-            self.charmInput = meal.charm
-            
-            if let existingDetails = meal.restaurantDetails {
-                self.restaurantDetailsInput = existingDetails
-                self.mapSearchString = existingDetails.address
-            } else {
-                self.mapSearchString = ""
-            }
-        }
+    @State private var photoTask: Task<Void, Never>?
+    @State private var photoRequest = UUID()
+    @State private var isLoadingPhoto = false
+    @State private var showLocationSearch = false
+    @State private var showDeleteConfirmation = false
+    @State private var errorMessage: String?
+    @FocusState private var focusedField: Field?
+    private enum Field { case title, emoji }
+    private let charms = ["🍱", "🍽️", "🍕", "🍔", "🌮", "🍜", "🍣", "🥗", "🥞", "☕️", "🥂", "🎉"]
+
+    init(meal: Meal?, onSaved: @escaping (Meal) -> Void, onDeleted: @escaping () -> Void = {}) {
+        existingMeal = meal
+        self.onSaved = onSaved
+        self.onDeleted = onDeleted
+        _title = State(initialValue: meal?.title ?? "")
+        _charm = State(initialValue: meal?.charm ?? "🍱")
+        _receipt = State(initialValue: meal?.receiptPhoto)
+        _receiptPreview = State(initialValue: meal?.receiptPhoto.flatMap { ReceiptPhoto.preview($0, maximumPixelSize: 600) })
+        _restaurant = State(initialValue: meal?.restaurantDetails.map {
+            RestaurantDraft(title: $0.title, address: $0.address, latitude: $0.lattitude, longitude: $0.longitude)
+        })
     }
-    
+
     var body: some View {
-        NavigationStack{
-            ScrollView {
-                VStack(spacing: 10){
-                    inputFieldTitle
-                    inputFieldCharm
-                    inputFieldLocation
-                    inputFieldReceipt
-                    if(!isNewMeal){
-                        deleteView
+        let receiptPickerTitle = receipt == nil ? "Add receipt photo" : "Replace receipt photo"
+        return NavigationStack {
+            Form {
+                Section("Meal") {
+                    TextField("Meal title", text: $title)
+                        .textInputAutocapitalization(.words)
+                        .focused($focusedField, equals: .title)
+                        .submitLabel(.done)
+                        .onSubmit { focusedField = nil }
+                        .accessibilityIdentifier("meal-title")
+                    Picker("Meal icon", selection: $charm) {
+                        ForEach(charms, id: \.self) { icon in
+                            Text(icon).tag(icon)
+                        }
+                        if !charms.contains(charm) {
+                            Text(charm.utf8.count <= 64 && charm.count == 1 ? charm : "Choose an emoji").tag(charm)
+                        }
+                    }
+                    .accessibilityIdentifier("meal-icon-picker")
+                    LabeledContent("Custom emoji") {
+                        TextField("", text: $charm)
+                            .multilineTextAlignment(.trailing)
+                            .autocorrectionDisabled()
+                            .textInputAutocapitalization(.never)
+                            .focused($focusedField, equals: .emoji)
+                            .submitLabel(.done)
+                            .onSubmit { focusedField = nil }
+                            .accessibilityIdentifier("meal-emoji")
+                    }
+                    if charm.utf8.count > 64 || charm.count != 1 {
+                        Button("Reset meal icon") { charm = "🍱" }
+                            .accessibilityIdentifier("reset-meal-emoji")
                     }
                 }
-                .padding(.horizontal)
-                .padding(.vertical)
-                .navigationTitle(navigationTitleText)
-            }
-            .background(colorScheme == .dark ? Color.black : Color.white)
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Cancel"){
-                        dismiss()
-                    }
-                }
-                ToolbarItem(placement: .bottomBar) {
-                    Button(saveButtonText){
-                        saveChanges()
-                    }
-                }
-            }
-            .onAppear {
-                CLLocationManager().requestWhenInUseAuthorization()
-            }
-            .sheet(isPresented: $showRestaurantPickerSheet, content: {
-                LocationSearchModal(
-                    meal: meal,
-                    searchString: $mapSearchString,
-                    onSetLocation: onSetLocation,
-                    onClearLocation: onClearLocation
-                )
-                    .interactiveDismissDisabled(true)
-            })
-            .onChange(of: titleInput, { oldValue, newValue in
-                if(newValue.isEmpty){
-                    showNameError = true
-                } else {
-                    showNameError = false
-                }
-            })
-            .onChange(of: selectedPhoto, setMealReceiptPhoto)
-        }
-    }
-    
-    private var inputFieldTitle: some View {
-        TextInputField(
-            label: "Title",
-            placeholder: "Give your meal a name",
-            inputString: $titleInput,
-            showError: showNameError
-        )
-        .focused($titleFocusState)
-    }
-    
-    private var inputFieldCharm: some View {
-        HStack{
-            LabelWithCaptionLeading(
-                label: "Charm",
-                caption: "Add a charm icon"
-            )
-            Spacer()
-            Button{
-                titleFocusState = false
-                showEmojiPicker.toggle()
-            } label: {
-                RoundedRectangle(cornerRadius: 12)
-                    .overlay(alignment: .center) {
-                        Text("\(charmInput)")
-                            .font(.title)
-                    }
-                    .foregroundStyle(Color.init(uiColor: .systemGray6))
-                    .frame(width: 120, height: 90, alignment: .center)
-                    .emojiPicker(
-                        isPresented: $showEmojiPicker,
-                        selectedEmoji: $charmInput,
-                        arrowDirection: MCPickerArrowDirection.up,
-                        isDismissAfterChoosing: true
-                    )
-            }
-        }
-    }
-    
-    private func mapBlock(map: CLLocationCoordinate2D) -> some View {
-        Map(
-            position: .constant(
-                .region(
-                    MKCoordinateRegion(
-                        center: map,
-                        span: MKCoordinateSpan(
-                            latitudeDelta: 0.015,
-                            longitudeDelta: 0.015
-                        )
-                    )
-                )
-            )
-        ){
-            Annotation(
-                "",
-                coordinate: map,
-                anchor: .center) {
-                    Text("📍")
-                        .font(.subheadline)
-                        .padding()
-                }
-        }
-        .frame(width: 120, height: 90, alignment: .center)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-    }
-    
-    private var inputFieldLocation: some View{
-        HStack{
-            if let details = restaurantDetailsInput {
-                LabelWithCaptionLeading(
-                    label: "Location",
-                    caption: "\(details.title)\n\(details.address)",
-                    useSmallCaption: true
-                )
-            } else {
-                LabelWithCaptionLeading(
-                    label: "Location",
-                    caption: "Select the restaurant"
-                )
-            }
-            Spacer()
-            Button{
-                showRestaurantPickerSheet = true
-            } label: {
-                if let details = restaurantDetailsInput {
-                    mapBlock(
-                        map: CLLocationCoordinate2D(
-                            latitude: details.lattitude,
-                            longitude: details.longitude
-                        )
-                    )
-                } else {
-                    BlockInputTrailing(placeholder: "📍")
-                }
-            }
-        }
-    }
-    
-    private var inputFieldReceipt: some View{
-        VStack{
-            HStack{
-                VStack(alignment: .leading){
-                    LabelWithCaptionLeading(
-                        label: "Receipt",
-                        caption: "Attach a photo"
-                    )
-                    if let imageData = meal.receiptPhoto, let _ = UIImage(data: imageData) {
-                        Button{
-                            meal.receiptPhoto = nil
-                            selectedPhoto = nil
-                        } label: {
-                            HStack(spacing: 5){
-                                Image(systemName: "xmark")
-                                Text("Remove")
+                Section("Restaurant") {
+                    Button {
+                        focusedField = nil
+                        showLocationSearch = true
+                    } label: {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(restaurant?.title ?? "Choose a restaurant").foregroundStyle(Color.primary)
+                                if let restaurant {
+                                    Text(restaurant.address).font(.caption).foregroundStyle(Color.mealSecondaryText)
+                                }
                             }
-                            .font(.callout)
-                            .fontWeight(.light)
-                            .tint(.red)
+                            Spacer()
+                            Image(systemName: "magnifyingglass")
                         }
                     }
-
-                }
-                Spacer()
-                PhotosPicker(
-                    selection: $selectedPhoto,
-                    matching: .images
-                ) {
-                    if let imageData = meal.receiptPhoto, let uiImage = UIImage(data: imageData) {
-                        
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .frame(width: 120, height: 90, alignment: .center)
-                            .scaledToFill()
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                    } else {
-                        BlockInputTrailing(placeholder: "🧾")
+                    .accessibilityIdentifier("choose-restaurant")
+                    if restaurant != nil {
+                        Button("Remove restaurant", role: .destructive) { restaurant = nil }
+                            .accessibilityIdentifier("remove-restaurant")
                     }
-
+                }
+                Section("Receipt") {
+                    PhotosPicker(selection: $selectedPhoto, matching: .images) {
+                        Label(receiptPickerTitle, systemImage: "photo")
+                    }
+                    .accessibilityIdentifier("choose-receipt")
+                    if isLoadingPhoto {
+                        ProgressView("Preparing receipt…")
+                    }
+                    if receipt != nil {
+                        if let receiptPreview {
+                            Image(uiImage: receiptPreview)
+                                .resizable().scaledToFit().frame(maxHeight: 220)
+                                .accessibilityLabel("Attached receipt preview")
+                        } else {
+                            Text("This saved photo couldn’t be opened. Replace or remove it.")
+                                .foregroundStyle(Color.mealSecondaryText)
+                        }
+                        Button("Remove receipt", role: .destructive) {
+                            cancelPhotoLoad()
+                            selectedPhoto = nil
+                            self.receipt = nil
+                            receiptPreview = nil
+                        }
+                    }
+                }
+                if existingMeal != nil {
+                    Section {
+                        Button("Delete meal", role: .destructive) { showDeleteConfirmation = true }
+                            .accessibilityIdentifier("delete-meal")
+                    }
                 }
             }
+            .mealFocusedContent()
+            .navigationTitle(existingMeal == nil ? "New meal" : "Edit meal")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { cancelPhotoLoad(); dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save", action: save)
+                        .disabled(isLoadingPhoto)
+                        .accessibilityIdentifier("save-meal")
+                }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") { focusedField = nil }
+                }
+            }
+            .sheet(isPresented: $showLocationSearch) {
+                LocationSearchModal { restaurant = $0 }
+            }
+            .confirmationDialog("Delete this meal and all its items and people?", isPresented: $showDeleteConfirmation, titleVisibility: .visible) {
+                Button("Delete meal", role: .destructive) { deleteMeal() }
+                    .accessibilityIdentifier("confirm-delete-meal")
+            }
+            .alert("Couldn’t update meal", isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })) {
+                Button("OK") { errorMessage = nil }
+            } message: { Text(errorMessage ?? "") }
+            .onChange(of: selectedPhoto) { _, selection in loadPhoto(selection) }
+            .onDisappear { cancelPhotoLoad() }
         }
     }
-    
-    private var deleteView: some View {
-        Button("Delete meal", systemImage: "trash", role: .destructive) {
+
+    private func save() {
+        guard !isLoadingPhoto else { return }
+        do {
+            let meal = existingMeal ?? Meal()
+            try MealStore.saveMeal(meal, title: title, charm: charm, restaurant: restaurant, receiptPhoto: receipt, isNew: existingMeal == nil, in: context)
             dismiss()
-            modelContext.delete(meal)
-            navigationPath.removeLast()
-        }
-        .padding(.vertical, 30)
-    }
-    
-    private func onSetLocation(restaurantDetails: RestaurantDetails?) async {
-        self.restaurantDetailsInput = restaurantDetails
-        if let details = restaurantDetails {
-            mapSearchString = details.address
-        }
-        showRestaurantPickerSheet = false
+            onSaved(meal)
+        } catch { errorMessage = error.localizedDescription }
     }
 
-    private func onClearLocation() {
-        self.restaurantDetailsInput = nil
-        self.mapSearchString = ""
-        showRestaurantPickerSheet = false
+    private func deleteMeal() {
+        guard let existingMeal else { return }
+        do {
+            try MealStore.deleteMeal(existingMeal, in: context)
+            dismiss()
+            onDeleted()
+        } catch { errorMessage = error.localizedDescription }
     }
-    
-    private func setMealReceiptPhoto(){
-        Task { @MainActor in
-            meal.receiptPhoto = try await selectedPhoto?.loadTransferable(type: Data.self)
-        }
-    }
-    
-    private func saveChanges(){
-        
-        var validationPassed: Bool = true
-        
-        // Title Validation
-        if (titleInput.isEmpty){
-            validationPassed = false
-            return
-        } else {
-            meal.title = titleInput
-        }
-        // Charm Validation
-        if(charmInput.isEmpty){
-            validationPassed = false
-            return
-        } else {
-            meal.charm = charmInput
-        }
 
-        if(validationPassed == true){
-            if(isNewMeal){
-                modelContext.insert(meal)
-                // Location Case - New meal, with map
-                if let details = restaurantDetailsInput {
-                    details.relatedMeal = meal
-                    modelContext.insert(details)
-                    meal.restaurantDetails = details
+    private func cancelPhotoLoad() {
+        photoTask?.cancel()
+        photoTask = nil
+        photoRequest = UUID()
+        isLoadingPhoto = false
+    }
+
+    private func loadPhoto(_ selection: PhotosPickerItem?) {
+        cancelPhotoLoad()
+        guard let selection else { return }
+        isLoadingPhoto = true
+        let request = photoRequest
+        photoTask = Task { @MainActor in
+            do {
+                guard let data = try await selection.loadTransferable(type: Data.self) else {
+                    throw ReceiptPhotoError.unavailable
                 }
-                dismiss()
-                navigationPath.append(meal)
-
-            } else {
-                if let existingDetails = meal.restaurantDetails {
-                    if let newDetails = restaurantDetailsInput {
-                        if(existingDetails.address != newDetails.address){
-                            // Location Case - Existing meal, modify map
-                            existingDetails.title = newDetails.title
-                            existingDetails.address = newDetails.address
-                            existingDetails.lattitude = newDetails.lattitude
-                            existingDetails.longitude = newDetails.longitude
-                        }
-                    } else {
-                        // Location Case - Existing meal, remove map
-                        meal.restaurantDetails = nil
-                        modelContext.delete(existingDetails)
-                    }
-                } else {
-                    // Location Case - Existing meal, add map
-                    if let newDetails = restaurantDetailsInput {
-                        newDetails.relatedMeal = meal
-                        modelContext.insert(newDetails)
-                        meal.restaurantDetails = newDetails
-                    }
-                }
-                
-                meal.modifiedAt = Date()
-                dismiss()
+                try Task.checkCancellation()
+                let prepared = try await Task.detached(priority: .userInitiated) {
+                    try ReceiptPhoto.prepare(data)
+                }.value
+                try Task.checkCancellation()
+                guard photoRequest == request else { return }
+                receipt = prepared
+                receiptPreview = ReceiptPhoto.preview(prepared, maximumPixelSize: 600)
+                isLoadingPhoto = false
+            } catch {
+                guard photoRequest == request, !Task.isCancelled else { return }
+                isLoadingPhoto = false
+                selectedPhoto = nil
+                errorMessage = error.localizedDescription
             }
         }
+    }
+
+}
+
+/// Downsamples without decoding a full-resolution image, bounding stored receipt dimensions and size.
+enum ReceiptPhoto {
+    /// Bounds decoding of historical attachments too; unreadable or oversized data returns nil without changing storage.
+    nonisolated static func preview(_ data: Data, maximumPixelSize: Int = 2400) -> UIImage? {
+        guard data.count <= 40 * 1024 * 1024, maximumPixelSize > 0,
+              let source = CGImageSourceCreateWithData(data as CFData, nil),
+              let image = CGImageSourceCreateThumbnailAtIndex(source, 0, [
+                kCGImageSourceCreateThumbnailFromImageAlways: true,
+                kCGImageSourceCreateThumbnailWithTransform: true,
+                kCGImageSourceThumbnailMaxPixelSize: min(maximumPixelSize, 2400),
+                kCGImageSourceShouldCacheImmediately: true
+              ] as CFDictionary) else { return nil }
+        return UIImage(cgImage: image)
+    }
+
+    nonisolated static func prepare(_ data: Data) throws -> Data {
+        guard let image = preview(data),
+              let compressed = image.jpegData(compressionQuality: 0.85),
+              compressed.count <= 8 * 1024 * 1024 else { throw ReceiptPhotoError.unsupported }
+        return compressed
     }
 }
 
-//#Preview {
-//    EditMealModal()
-//}
+private enum ReceiptPhotoError: LocalizedError {
+    case unavailable, unsupported
+    var errorDescription: String? {
+        switch self {
+        case .unavailable: "The photo couldn’t be downloaded. Check your connection and choose it again."
+        case .unsupported: "Choose a readable image smaller than 40 MB."
+        }
+    }
+}
