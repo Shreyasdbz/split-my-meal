@@ -16,6 +16,14 @@ final class MealStoreTests: XCTestCase {
         return container
     }
 
+    /// Allocates test-only storage left for app/runner temporary-sandbox cleanup.
+    /// SwiftData can retain SQLite connections beyond scoped contexts, so tests must not unlink live store files.
+    private func temporaryStoreDirectory() throws -> URL {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        return directory
+    }
+
     func testNamesRequireVisibleContentWithoutChangingUnicodeNames() throws {
         let container = try container()
         let context = container.mainContext
@@ -86,9 +94,7 @@ final class MealStoreTests: XCTestCase {
     }
 
     func testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether() throws {
-        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-        defer { try? FileManager.default.removeItem(at: directory) }
+        let directory = try temporaryStoreDirectory()
         let url = directory.appendingPathComponent("meals.store")
         try autoreleasepool {
             let container = try container(at: url)
@@ -135,9 +141,7 @@ final class MealStoreTests: XCTestCase {
 
     func testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt() throws {
         let fixture = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Legacy26Fixture", withExtension: "bundle"))
-        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-        defer { try? FileManager.default.removeItem(at: directory) }
+        let directory = try temporaryStoreDirectory()
         let url = directory.appendingPathComponent("legacy.store")
         try FileManager.default.copyItem(at: fixture.appendingPathComponent("legacy.store"), to: url)
         try FileManager.default.copyItem(at: fixture.appendingPathComponent("ExternalStorage"), to: directory.appendingPathComponent(".legacy_SUPPORT"))
@@ -205,9 +209,7 @@ final class MealStoreTests: XCTestCase {
     }
 
     func testConfiguredReadOnlyStoreRejectsBeforeMutation() throws {
-        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-        defer { try? FileManager.default.removeItem(at: directory) }
+        let directory = try temporaryStoreDirectory()
         let url = directory.appendingPathComponent("readonly.store")
         try autoreleasepool {
             let container = try container(at: url)
@@ -227,9 +229,7 @@ final class MealStoreTests: XCTestCase {
     }
 
     func testCommitRestoresGraphAfterNativeReadOnlySaveRejection() throws {
-        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-        defer { try? FileManager.default.removeItem(at: directory) }
+        let directory = try temporaryStoreDirectory()
         let url = directory.appendingPathComponent("readonly.store")
         try autoreleasepool {
             let container = try container(at: url)

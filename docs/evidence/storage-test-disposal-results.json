@@ -1,0 +1,52 @@
+{
+  "nativeExport": "Sanitized xcresulttool summaries; exact complete logs and native bundles retained locally.",
+  "scope": "All11storage tests on each device after removing four in-process temporary-store deletion defers. Saves, reopening, migration, rollback assertions, autorelease pools and autosave settings are unchanged.",
+  "sourceManifest": "storage-test-disposal-source-manifest.json",
+  "sourceManifestSHA256": "8cd9213900664bf163cb26d5b14b8ea71b83929ad5a1172c877533ea2a18a8fd",
+  "result": "Passed",
+  "cleanup": "Unique test-only stores remain in the app temporary sandbox until OS/container disposal. No live store files are unlinked by these tests.",
+  "devices": [
+    {
+      "family": "iPhone",
+      "result": "Passed",
+      "totalTestCount": 11,
+      "passedTests": 11,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "startTime": 1791441929.773,
+      "finishTime": 1791441933.544,
+      "runtime": [
+        {
+          "modelName": "iPhone 17 Pro",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [],
+      "sqliteUnlinkedDiagnosticOccurrences": 0,
+      "completeLogLineCount": 90
+    },
+    {
+      "family": "iPad",
+      "result": "Passed",
+      "totalTestCount": 11,
+      "passedTests": 11,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "startTime": 1791441929.264,
+      "finishTime": 1791441933.015,
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [],
+      "sqliteUnlinkedDiagnosticOccurrences": 0,
+      "completeLogLineCount": 92
+    }
+  ]
+}
