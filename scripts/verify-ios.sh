@@ -110,7 +110,9 @@ common=(
   -parallel-testing-enabled NO
   -test-timeouts-enabled YES
   -default-test-execution-time-allowance 240
-  -maximum-test-execution-time-allowance 300
+  # Two complete multi-launch journeys set their own measured hosted-run budget.
+  # Every other test retains the four-minute default above.
+  -maximum-test-execution-time-allowance 420
   # Xcode27's simulator diagnostics collector stalled after completed failures.
   # Keep the complete native result, screenshots, videos, AX and logs; omit that
   # separate system-wide diagnostic collection from reproducible app checks.

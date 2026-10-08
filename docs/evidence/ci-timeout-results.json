@@ -1,0 +1,80 @@
+{
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37733118650",
+  "gitHead": "b0474226c6fcfa889bf3f068fe9e8094ed7ddae8",
+  "result": "Failed",
+  "nativeExport": "Sanitized xcresulttool summaries; complete native bundles and logs are retained in the run artifacts.",
+  "sourceManifest": "ci-timeout-source-manifest.json",
+  "sourceManifestSHA256": "cf416fae0c91c06a6e5bf743d4cdbc3b2364a1d49bcd40d413819e309f1e97dd",
+  "scope": "Complete 27-unit and 24-journey suites on each device. Failures retain the native timeout description; assertions and control waits remain unchanged in the follow-up.",
+  "devices": [
+    {
+      "family": "iPhone",
+      "result": "Failed",
+      "totalTestCount": 51,
+      "passedTests": 50,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "startTime": 1791438235.018,
+      "finishTime": 1791440396.017,
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "testFailures": [
+        {
+          "failureText": "Test exceeded execution time allowance of 4 minutes",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifierString": "MealJourneyTests/testCreateEditSplitShareAndPersistence()"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 16
+        }
+      ]
+    },
+    {
+      "family": "iPad",
+      "result": "Failed",
+      "totalTestCount": 51,
+      "passedTests": 49,
+      "failedTests": 2,
+      "skippedTests": 0,
+      "startTime": 1791438025.15,
+      "finishTime": 1791440263.589,
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "testFailures": [
+        {
+          "failureText": "Test exceeded execution time allowance of 4 minutes",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifierString": "MealJourneyTests/testCreateEditSplitShareAndPersistence()"
+        },
+        {
+          "failureText": "Test exceeded execution time allowance of 4 minutes",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifierString": "MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 16
+        }
+      ]
+    }
+  ]
+}

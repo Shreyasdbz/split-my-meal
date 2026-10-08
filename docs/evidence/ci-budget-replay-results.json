@@ -1,0 +1,59 @@
+{
+  "nativeExport": "Sanitized xcresulttool summaries; native result bundles and logs retained locally.",
+  "scope": "The two complete journeys that exceeded hosted total-duration limits, replayed with per-case420-second budgets. Assertions and individual control waits unchanged; no retries.",
+  "sourceManifest": "ci-budget-replay-source-manifest.json",
+  "sourceManifestSHA256": "c18559cfdecddf12f6cdf3807079b08a3605fa496696a4e99ff2a46361c36d97",
+  "result": "Passed",
+  "devices": [
+    {
+      "family": "iPhone",
+      "result": "Passed",
+      "totalTestCount": 2,
+      "passedTests": 2,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "startTime": 1791440807.814,
+      "finishTime": 1791441016.245,
+      "runtime": [
+        {
+          "modelName": "iPhone 17 Pro",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "family": "iPad",
+      "result": "Passed",
+      "totalTestCount": 2,
+      "passedTests": 2,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "startTime": 1791440820.859,
+      "finishTime": 1791441032.339,
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 2
+        }
+      ]
+    }
+  ]
+}

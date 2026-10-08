@@ -27,6 +27,10 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testCreateEditSplitShareAndPersistence() throws {
+        // Hosted iOS 27 automation reached the share/relaunch steps after four
+        // minutes. Budget the complete multi-launch journey without extending
+        // its individual control waits or retrying a failed test.
+        executionTimeAllowance = 420
         createMeal("Dinner with friends")
         addPerson("Alice")
         addPerson("Bob")
@@ -606,6 +610,9 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares() throws {
+        // This repair checks every person's shares before Cancel, after Save,
+        // and after relaunch; hosted automation exceeded the four-minute default.
+        executionTimeAllowance = 420
         app.terminate()
         app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-demo", "--unknown-item-consumer"]
         launchForMealTesting()
