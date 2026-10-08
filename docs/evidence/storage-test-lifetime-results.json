@@ -1,0 +1,25 @@
+{
+  "completeLogLineCount": 515,
+  "failedTests": 0,
+  "finishTime": 1791437405.964,
+  "meaning": "The completed local replay has no vnode/unlinked SQLite diagnostic. This supports the candidate; it does not prove autosave was the sole earlier CI cause or guarantee all future disposal timing.",
+  "nativeExport": "Sanitized xcresulttool summary; exact raw test log retained locally.",
+  "passedTests": 11,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17 Pro",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "All 11 native MealStoreTests after disabling automatic autosave in disposable explicitly-saved test contexts. Production code and assertions unchanged.",
+  "skippedTests": 0,
+  "sourceManifest": "storage-test-lifetime-source-manifest.json",
+  "sourceManifestSHA256": "f0e365d2b769e5d8b350613f74941ab12b872c9a9f4f76ee6bf5476864112546",
+  "sqliteUnlinkedDiagnosticOccurrences": 0,
+  "startTime": 1791437395.734,
+  "totalTestCount": 11
+}

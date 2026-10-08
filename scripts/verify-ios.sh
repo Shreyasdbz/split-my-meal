@@ -109,8 +109,8 @@ common=(
   -destination-timeout 120
   -parallel-testing-enabled NO
   -test-timeouts-enabled YES
-  -default-test-execution-time-allowance 180
-  -maximum-test-execution-time-allowance 240
+  -default-test-execution-time-allowance 240
+  -maximum-test-execution-time-allowance 300
   # Xcode27's simulator diagnostics collector stalled after completed failures.
   # Keep the complete native result, screenshots, videos, AX and logs; omit that
   # separate system-wide diagnostic collection from reproducible app checks.

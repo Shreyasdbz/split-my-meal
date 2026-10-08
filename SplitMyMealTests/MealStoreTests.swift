@@ -10,7 +10,10 @@ final class MealStoreTests: XCTestCase {
         let config: ModelConfiguration
         if let url { config = ModelConfiguration(schema: schema, url: url, cloudKitDatabase: .none) }
         else { config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true, cloudKitDatabase: .none) }
-        return try ModelContainer(for: schema, migrationPlan: MealMigrationPlan.self, configurations: [config])
+        let container = try ModelContainer(for: schema, migrationPlan: MealMigrationPlan.self, configurations: [config])
+        // Tests control save timing explicitly; avoid scheduling autosaves around disposable-store cleanup.
+        container.mainContext.autosaveEnabled = false
+        return container
     }
 
     func testNamesRequireVisibleContentWithoutChangingUnicodeNames() throws {
@@ -214,6 +217,7 @@ final class MealStoreTests: XCTestCase {
             let schema = Schema(versionedSchema: MealSchemaV2.self)
             let configuration = ModelConfiguration(schema: schema, url: url, allowsSave: false, cloudKitDatabase: .none)
             let readonly = try ModelContainer(for: schema, migrationPlan: MealMigrationPlan.self, configurations: [configuration])
+            readonly.mainContext.autosaveEnabled = false
             let meal = try XCTUnwrap(readonly.mainContext.fetch(FetchDescriptor<Meal>()).first)
             XCTAssertThrowsError(try MealStore.saveMeal(meal, title: "Rejected", charm: "🍜", restaurant: nil, receiptPhoto: nil, in: readonly.mainContext))
             XCTAssertEqual(meal.title, "Read only")
@@ -240,6 +244,7 @@ final class MealStoreTests: XCTestCase {
             let schema = Schema(versionedSchema: MealSchemaV2.self)
             let configuration = ModelConfiguration(schema: schema, url: url, allowsSave: false, cloudKitDatabase: .none)
             let readonly = try ModelContainer(for: schema, migrationPlan: MealMigrationPlan.self, configurations: [configuration])
+            readonly.mainContext.autosaveEnabled = false
             let meal = try XCTUnwrap(readonly.mainContext.fetch(FetchDescriptor<Meal>()).first)
             XCTAssertThrowsError(try MealStore.persist(meal: meal, in: readonly.mainContext) {
                 meal.title = "After failure"
