@@ -61,10 +61,10 @@ struct ItemEditor: View {
                             .accessibilityIdentifier("item-consumer-\(person.name)")
                         }
                     } else {
-                        Text("Add people from the meal’s People section to assign this item.").foregroundStyle(Color.mealSecondaryText)
+                        Text("Add people to the meal to assign this item.").foregroundStyle(Color.mealSecondaryText)
                     }
                 } header: { Text("Shared by") } footer: {
-                    Text("Each selected person pays an equal share of this item. Items without people remain unassigned.")
+                    Text(consumerIDs.isEmpty ? "Unassigned until someone is selected." : "Shared equally by selected people.")
                         .foregroundStyle(Color.mealSecondaryText)
                 }
                 if existingItem != nil {

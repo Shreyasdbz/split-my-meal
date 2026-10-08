@@ -27,15 +27,17 @@ struct ReceiptViewer: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Close") { dismiss() } }
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button("Zoom out", systemImage: "minus.magnifyingglass") { zoomScale = max(1, zoomScale - 1) }
-                        .disabled(zoomScale <= 1 || image == nil)
-                    Spacer()
-                    Text("\(Int(zoomScale * 100))%")
-                        .monospacedDigit()
-                        .accessibilityLabel("Zoom \(Int(zoomScale * 100)) percent")
-                    Spacer()
-                    Button("Zoom in", systemImage: "plus.magnifyingglass") { zoomScale = min(6, zoomScale + 1) }
-                        .disabled(zoomScale >= 6 || image == nil)
+                    if image != nil {
+                        Button("Zoom out", systemImage: "minus.magnifyingglass") { zoomScale = max(1, zoomScale - 1) }
+                            .disabled(zoomScale <= 1)
+                        Spacer()
+                        Text("\(Int(zoomScale * 100))%")
+                            .monospacedDigit()
+                            .accessibilityLabel("Zoom \(Int(zoomScale * 100)) percent")
+                        Spacer()
+                        Button("Zoom in", systemImage: "plus.magnifyingglass") { zoomScale = min(6, zoomScale + 1) }
+                            .disabled(zoomScale >= 6)
+                    }
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button("Share", systemImage: "square.and.arrow.up") { showShare = true }

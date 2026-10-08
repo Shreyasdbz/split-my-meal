@@ -53,11 +53,9 @@ struct HomeScreen: View {
                 if meals.isEmpty {
                     ContentUnavailableView {
                         Label("No meals yet", systemImage: "fork.knife.circle")
-                    } description: {
-                        Text("Add a meal, list what everyone ordered, and split the bill.")
                     } actions: {
                         Button { showNewMeal = true } label: {
-                            Text("Add a meal").foregroundStyle(Color.mealPrimaryText)
+                            Text("New meal").foregroundStyle(Color.mealPrimaryText)
                         }
                             .modifier(MealPrimaryButtonStyle())
                     }
@@ -66,7 +64,7 @@ struct HomeScreen: View {
                 }
             }
             .navigationTitle("Meals")
-            .searchable(text: $search, prompt: "Meals, restaurants, or people")
+            .searchable(text: $search, prompt: "Search meals")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Menu("Sort meals", systemImage: "arrow.up.arrow.down") {
@@ -85,7 +83,7 @@ struct HomeScreen: View {
                 MealScreen(meal: meal, onDeleted: { selectedMealID = nil })
                     .id(meal.id)
             } else {
-                ContentUnavailableView("Select a meal", systemImage: "fork.knife", description: Text("Choose a saved meal or add a new one."))
+                ContentUnavailableView("Select a meal", systemImage: "fork.knife")
             }
         }
         .onChange(of: meals.map(\.persistentModelID)) { _, identifiers in
@@ -106,7 +104,7 @@ struct HomeScreen: View {
             }
             Button("Cancel", role: .cancel) { pendingDeleteID = nil }
         } message: {
-            Text("This deletes the meal, its items, people, and receipt. This cannot be undone.")
+            Text("The meal, items, people and receipt will be deleted. This can’t be undone.")
         }
         .alert("Couldn’t save changes", isPresented: Binding(get: { error != nil }, set: { if !$0 { error = nil } })) {
             Button("OK", role: .cancel) { error = nil }

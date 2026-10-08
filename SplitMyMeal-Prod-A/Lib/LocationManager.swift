@@ -11,7 +11,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
         var message: String {
             switch self {
-            case .denied: "Location access is off. Review it in Settings."
+            case .denied: "Location access is off."
             case .restricted: "Location access is restricted on this device."
             case .unavailable: "Your current location is unavailable. Try again later."
             case .notFound: "Your location couldn’t be found. Try again when a location signal is available."

@@ -27,8 +27,10 @@ private struct MealStartupView: View {
                 ContentUnavailableView {
                     Label("Couldn’t open your meals", systemImage: "externaldrive.badge.exclamationmark")
                 } description: {
-                    Text("Your saved data has been kept. Try again, or contact support if this continues.")
-                    Text(failure).font(.caption)
+                    Text("Your saved data has been kept.")
+                    DisclosureGroup("Error details") {
+                        Text(failure).font(.caption)
+                    }
                 } actions: {
                     Button { openStore() } label: {
                         Text("Try again").foregroundStyle(Color.mealPrimaryText)

@@ -19,21 +19,35 @@ struct LocationSearchModal: View {
             List {
                 Section {
                     Button { location.requestNearbyLocation() } label: {
-                        Label(location.lastLocation == nil ? "Search near me" : "Nearby search enabled", systemImage: "location")
+                        Label(location.lastLocation == nil ? "Use my location" : "Using your location", systemImage: "location")
                     }
                     .disabled(location.isRequesting)
                     .accessibilityIdentifier("nearby-restaurants")
                     if location.isRequesting { ProgressView("Finding your location…") }
                     if let message = location.errorMessage { Text(message).foregroundStyle(Color.mealSecondaryText).accessibilityIdentifier("restaurant-location-error") }
                     if location.failure == .denied, let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                        Link("Open Settings", destination: settingsURL)
+                        Link(destination: settingsURL) {
+                            Text("Open Settings")
+                                .frame(minHeight: 44)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .contentShape(Rectangle())
+                        }
                             .accessibilityIdentifier("restaurant-open-settings")
                     }
                     if permissionBlocked {
-                        Text("You can still search by name, address, or city.")
+                        Text("Search by name, address or city.")
                             .foregroundStyle(Color.mealSecondaryText)
                     }
-                    if let message = service.errorMessage { Text(message).foregroundStyle(Color.mealSecondaryText).accessibilityIdentifier("restaurant-search-error") }
+                    if let message = service.errorMessage {
+                        Text(message).foregroundStyle(Color.mealSecondaryText).accessibilityIdentifier("restaurant-search-error")
+                        Button("Retry", systemImage: "arrow.clockwise") {
+                            resolutionTask?.cancel()
+                            resolvingID = nil
+                            service.cancel()
+                            service.update(query: query, near: location.lastLocation?.coordinate)
+                        }
+                        .accessibilityIdentifier("retry-restaurant-search")
+                    }
                 }
                 Section {
                     if service.isSearching { ProgressView("Searching restaurants…") }
@@ -53,7 +67,7 @@ struct LocationSearchModal: View {
                     }
                     if !service.isSearching, service.suggestions.isEmpty, service.errorMessage == nil,
                        query.count >= 2 || !permissionBlocked {
-                        Text(query.count >= 2 ? "No restaurants found. Try a name, address, or city." : "Enter a restaurant name, address, or city.")
+                        Text(query.count >= 2 ? "No results. Try another name, address or city." : "Search by name, address or city.")
                             .foregroundStyle(Color.mealSecondaryText)
                     }
                 }

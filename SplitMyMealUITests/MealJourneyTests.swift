@@ -9,6 +9,7 @@ final class MealJourneyTests: XCTestCase {
 
     override func setUp() async throws {
         continueAfterFailure = false
+        XCUIDevice.shared.orientation = .portrait
         app = XCUIApplication()
         app.launchArguments = ["--uitesting", "--reset-test-data"]
         launchForMealTesting()
@@ -85,13 +86,16 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged() throws {
+        screenshot("library-empty-state")
         app.buttons["new-meal"].tap()
         app.buttons["save-meal"].tap()
         XCTAssertTrue(app.alerts["Couldn’t update meal"].waitForExistence(timeout: 5))
+        screenshot("new-meal-validation-alert")
         app.alerts.buttons["OK"].tap()
         app.buttons["Cancel"].tap()
         createMeal("Validation dinner")
         tapScrollable("add-person")
+        screenshot("new-person-with-no-items")
         app.buttons["save-person"].tap()
         XCTAssertTrue(app.alerts["Couldn’t update person"].waitForExistence(timeout: 5))
         app.alerts.buttons["OK"].tap()
@@ -99,10 +103,12 @@ final class MealJourneyTests: XCTestCase {
         app.buttons["Cancel"].tap()
         XCTAssertFalse(app.staticTexts["Unsaved person"].exists)
         tapScrollable("add-item")
+        screenshot("new-item-with-no-people")
         fill("item-name", "Unsaved dessert")
         fill("item-price", "0")
         app.buttons["save-item"].tap()
         XCTAssertTrue(app.alerts["Couldn’t update item"].waitForExistence(timeout: 5))
+        screenshot("item-price-validation-alert")
         app.alerts.buttons["OK"].tap()
         app.buttons["Cancel"].tap()
         XCTAssertFalse(app.staticTexts["Unsaved dessert"].exists)
@@ -126,14 +132,20 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertTrue(app.buttons["item-Green salad"].waitForExistence(timeout: 5))
         tapScrollable("item-Green salad")
         app.buttons["delete-item"].tap()
+        XCTAssertTrue(app.buttons["confirm-delete-item"].firstMatch.waitForExistence(timeout: 5))
+        screenshot("delete-item-confirmation")
         app.buttons["confirm-delete-item"].firstMatch.tap()
         XCTAssertTrue(app.buttons["item-Green salad"].waitForNonExistence(timeout: 5))
         tapScrollable("person-Casey")
         app.buttons["delete-person"].tap()
+        XCTAssertTrue(app.buttons["confirm-delete-person"].firstMatch.waitForExistence(timeout: 5))
+        screenshot("delete-person-confirmation")
         app.buttons["confirm-delete-person"].firstMatch.tap()
         XCTAssertTrue(app.buttons["person-Casey"].waitForNonExistence(timeout: 5))
         app.buttons["edit-meal"].tap()
         app.buttons["delete-meal"].tap()
+        XCTAssertTrue(app.buttons["confirm-delete-meal"].firstMatch.waitForExistence(timeout: 5))
+        screenshot("delete-meal-confirmation")
         app.buttons["confirm-delete-meal"].firstMatch.tap()
         XCTAssertTrue(app.buttons["new-meal"].waitForExistence(timeout: 5))
         app.terminate()
@@ -156,9 +168,14 @@ final class MealJourneyTests: XCTestCase {
         screenshot("meal-accessibility-text")
         app.buttons["view-split"].tap()
         XCTAssertTrue(app.navigationBars["Split summary"].waitForExistence(timeout: 5))
-        let largeSplit = app.descendants(matching: .any)["split-Alex"].firstMatch
-        for _ in 0..<12 where !largeSplit.exists { scrollContent(up: true) }
-        XCTAssertTrue(largeSplit.exists, "A person’s split must remain reachable at the largest text size.")
+        for name in ["Alex", "Jordan", "Sam"] {
+            let person = app.descendants(matching: .any)["split-" + name].firstMatch
+            revealButton(person, name: "largest-split-" + name)
+            XCTAssertTrue(person.isHittable, "Every person's share must remain reachable at the largest text size.")
+        }
+        let billDetails = app.descendants(matching: .any)["bill-details"].firstMatch
+        revealButton(billDetails, name: "largest-bill-details")
+        XCTAssertTrue(billDetails.isHittable)
         screenshot("split-accessibility-text")
         app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch.tap()
         tapScrollable("person-Alex")
@@ -213,11 +230,37 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertEqual((app.staticTexts["meal-total"].value as? String), "$25.00")
         tapScrollable("edit-tax")
         app.buttons["clear-charge"].tap()
+        XCTAssertEqual(app.textFields["charge-value"].value as? String, "0", "Clear must stage a zero draft rather than closing the editor.")
+        XCTAssertTrue(app.buttons["save-charge"].isHittable, "A staged clear requires the ordinary Save action.")
+        screenshot("tax-cleared-draft-awaiting-save")
+        app.buttons["Cancel"].tap()
+        XCTAssertEqual((app.staticTexts["meal-total"].value as? String), "$25.00", "Cancelling a cleared draft must preserve the saved tax.")
+        tapScrollable("edit-tax")
+        app.buttons["clear-charge"].tap()
+        app.buttons["save-charge"].tap()
         XCTAssertEqual((app.staticTexts["meal-total"].value as? String), "$23.00")
         tapScrollable("edit-tip")
         app.buttons["clear-charge"].tap()
+        XCTAssertEqual(app.textFields["charge-value"].value as? String, "0")
+        replace("charge-value", with: "1")
+        app.buttons["save-charge"].tap()
+        XCTAssertEqual((app.staticTexts["meal-total"].value as? String), "$21.00", "Editing after Clear must replace the nil intent with the entered adjustment.")
+        tapScrollable("edit-tip")
+        app.buttons["clear-charge"].tap()
+        app.buttons["Percentage"].tap()
+        app.buttons["Amount"].tap()
+        app.buttons["save-charge"].tap()
         XCTAssertEqual((app.staticTexts["meal-total"].value as? String), "$20.00")
         screenshot("reverse-assignment-and-cleared-charges")
+        app.terminate()
+        app.launchArguments = ["--uitesting"]
+        launchForMealTesting()
+        app.buttons["meal-Assignment dinner"].tap()
+        XCTAssertEqual((app.staticTexts["meal-total"].value as? String), "$20.00", "Saved charge removal must survive process relaunch.")
+        tapScrollable("edit-tip")
+        XCTAssertEqual(app.textFields["charge-value"].value as? String, "0")
+        XCTAssertTrue(app.buttons["Percentage"].isSelected, "A cleared fixed tip must reopen in the canonical percentage mode rather than as a stored zero amount.")
+        app.buttons["Cancel"].tap()
     }
 
     func testReceiptViewZoomShareAndDraftRemoval() throws {
@@ -320,6 +363,39 @@ final class MealJourneyTests: XCTestCase {
         screenshot("photo-replacement-persisted")
     }
 
+    func testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto() throws {
+        createMeal("Draft preview dinner")
+        app.buttons["edit-meal"].tap()
+        choosePhoto(at: 0)
+        app.buttons["save-meal"].tap()
+        tapScrollable("View receipt")
+        let original = receiptPixels("draft-preview-original-saved-image")
+        app.buttons["Close"].tap()
+        app.buttons["edit-meal"].tap()
+        choosePhoto(at: 1)
+        tapScrollable("preview-receipt")
+        XCTAssertTrue(app.navigationBars["Receipt"].waitForExistence(timeout: 5))
+        XCTAssertNotEqual(receiptPixels("draft-preview-replacement-image"), original, "Preview must render the unsaved replacement rather than the stored photo.")
+        let zoom = app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Zoom ")).firstMatch
+        XCTAssertEqual(zoom.label, "Zoom 100 percent")
+        app.buttons["Zoom in"].tap()
+        let magnified = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label != %@", "Zoom 100 percent"), object: zoom)
+        XCTAssertEqual(XCTWaiter.wait(for: [magnified], timeout: 5), .completed, "An unsaved receipt preview must support the same native viewer controls.")
+        screenshot("draft-receipt-preview-zoomed")
+        app.buttons["Close"].tap()
+        XCTAssertTrue(app.buttons["save-meal"].waitForExistence(timeout: 5), "Closing preview returns to the unsaved meal editor.")
+        app.buttons["Cancel"].tap()
+        tapScrollable("View receipt")
+        XCTAssertEqual(receiptPixels("draft-preview-cancel-preserves-saved-image"), original)
+        app.buttons["Close"].tap()
+        app.terminate()
+        app.launchArguments = ["--uitesting"]
+        launchForMealTesting()
+        app.buttons["meal-Draft preview dinner"].tap()
+        tapScrollable("View receipt")
+        XCTAssertEqual(receiptPixels("draft-preview-cancel-survives-relaunch"), original, "Viewing a draft must never commit its replacement photo.")
+    }
+
     func testLibrarySearchSortAndRestaurantPickerCancellation() throws {
         launchDemo()
         let search = app.searchFields.firstMatch
@@ -338,7 +414,7 @@ final class MealJourneyTests: XCTestCase {
         let restaurantSearch = app.searchFields.firstMatch
         restaurantSearch.tap()
         restaurantSearch.typeText("X")
-        XCTAssertTrue(app.staticTexts["Enter a restaurant name, address, or city."].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Search by name, address or city."].waitForExistence(timeout: 5))
         screenshot("restaurant-text-search")
         let closeSearch = app.buttons["close"].firstMatch
         if closeSearch.exists { closeSearch.tap() }
@@ -356,12 +432,47 @@ final class MealJourneyTests: XCTestCase {
         openDemo()
         XCTAssertEqual((app.staticTexts["meal-total"].value as? String), "$113.66")
         screenshot("demo-meal-light")
+        tapScrollable("person-Alex")
+        XCTAssertEqual(app.textFields["person-name"].value as? String, "Alex")
+        screenshot("demo-person-editor-light")
+        app.buttons["Cancel"].tap()
+        tapScrollable("item-Miso ramen")
+        XCTAssertEqual(app.textFields["item-name"].value as? String, "Miso ramen")
+        screenshot("demo-item-editor-light")
+        app.buttons["Cancel"].tap()
+        tapScrollable("edit-tax")
+        XCTAssertEqual(app.textFields["charge-value"].value as? String, "8.875")
+        screenshot("demo-tax-editor-light")
+        app.buttons["Cancel"].tap()
+        tapScrollable("edit-tip")
+        XCTAssertEqual(app.textFields["charge-value"].value as? String, "20")
+        screenshot("demo-tip-editor-light")
+        app.buttons["Cancel"].tap()
         app.buttons["view-split"].tap()
         XCTAssertTrue(app.descendants(matching: .any)["split-Alex"].firstMatch.waitForExistence(timeout: 5))
         screenshot("demo-split-light")
         app.descendants(matching: .any)["split-Alex"].firstMatch.tap()
         screenshot("demo-itemized-split-light")
+        app.descendants(matching: .any)["split-Alex"].firstMatch.tap()
+        let billDetails = app.descendants(matching: .any)["bill-details"].firstMatch
+        revealButton(billDetails, name: "bill-details")
+        let allocationRule = app.staticTexts["Shared items are divided equally. Tax and tip follow item shares. Percentage tips include tax. Rounding keeps totals exact."]
+        XCTAssertFalse(allocationRule.exists, "Bill details must start collapsed so individual shares remain the main content.")
+        screenshot("demo-bill-details-collapsed-light")
+        billDetails.tap()
+        revealButton(allocationRule, name: "bill-allocation-rule")
+        screenshot("demo-bill-details-expanded-light")
         app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch.tap()
+        let restaurant = app.buttons.containing(NSPredicate(format: "label CONTAINS %@", "Juniper · sample restaurant")).firstMatch
+        revealButton(restaurant, name: "demo-restaurant").tap()
+        XCTAssertTrue(app.navigationBars["Juniper · sample restaurant"].waitForExistence(timeout: 5))
+        screenshot("demo-restaurant-map-light")
+        settleOrientation(.landscapeLeft)
+        screenshot("demo-restaurant-map-landscape-light")
+        settleOrientation(.portrait)
+        app.navigationBars["Juniper · sample restaurant"].buttons["Done"].tap()
+        revealButton("View receipt")
+        screenshot("demo-meal-footer-light")
         tapScrollable("View receipt")
         XCTAssertTrue(app.navigationBars["Receipt"].waitForExistence(timeout: 5))
         screenshot("demo-receipt-light")
@@ -535,6 +646,12 @@ final class MealJourneyTests: XCTestCase {
         launchForMealTesting()
         XCTAssertTrue(app.buttons["Try again"].waitForExistence(timeout: 5))
         screenshot("startup-recovery-keeps-saved-data")
+        app.buttons["Error details"].tap()
+        let details = app.staticTexts["A test store-open failure was requested. Your production meals are untouched."]
+        XCTAssertTrue(details.waitForExistence(timeout: 5))
+        screenshot("startup-recovery-expanded-error-details")
+        app.buttons["Error details"].tap()
+        XCTAssertTrue(details.waitForNonExistence(timeout: 5))
         app.buttons["Try again"].tap()
         XCTAssertTrue(app.buttons["meal-Recovery dinner"].waitForExistence(timeout: 10))
         app.buttons["meal-Recovery dinner"].tap()
@@ -546,7 +663,7 @@ final class MealJourneyTests: XCTestCase {
         app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-invalid-demo"]
         launchForMealTesting()
         openDemo()
-        XCTAssertTrue(app.staticTexts["Some saved prices or charges are invalid. Edit them before settling this bill."].exists)
+        XCTAssertTrue(app.staticTexts["Some prices or charges are invalid. Edit them before settling."].exists)
         screenshot("historical-invalid-bill-warning")
         app.buttons["view-split"].tap()
         XCTAssertTrue(app.buttons["share-split"].waitForExistence(timeout: 5))
@@ -555,6 +672,9 @@ final class MealJourneyTests: XCTestCase {
         app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch.tap()
         tapScrollable("View receipt")
         XCTAssertTrue(app.staticTexts["Receipt unavailable"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Zoom ")).firstMatch.exists, "An unreadable receipt must not expose a meaningless zoom readout.")
+        XCTAssertFalse(app.buttons["Zoom in"].exists)
+        XCTAssertFalse(app.buttons["Zoom out"].exists)
         screenshot("unreadable-receipt-recovery")
         app.buttons["Close"].tap()
         app.buttons["edit-meal"].tap()
@@ -750,16 +870,23 @@ final class MealJourneyTests: XCTestCase {
     func testNativeCategoryAndCustomIconEditingPersists() throws {
         createMeal("Icon dinner")
         app.buttons["edit-meal"].tap()
+        tapScrollable("custom-emoji")
         XCTAssertEqual(app.textFields["meal-emoji"].label, "Custom emoji", "The native labeled field must announce its visible name once.")
-        replace("meal-emoji", with: "🍕")
-        app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch.tap()
+        replace("meal-emoji", with: "🦄")
+        // A hardware-keyboard layout can expose an offscreen system return key;
+        // use the editor's visible keyboard accessory instead of that placeholder.
+        dismissKeyboard()
         XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Custom icon Done must clear keyboard focus.")
         app.buttons["save-meal"].tap()
-        XCTAssertTrue(app.navigationBars["🍕 Icon dinner"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["🦄 Icon dinner"].waitForExistence(timeout: 5))
+        app.buttons["edit-meal"].tap()
+        XCTAssertEqual(app.textFields["meal-emoji"].value as? String, "🦄", "A saved custom icon must reopen with its field expanded.")
+        screenshot("custom-icon-disclosure-reopened")
+        app.buttons["Cancel"].tap()
         tapScrollable("add-item")
         fill("item-name", "Lemonade")
         fill("item-price", "4.50")
-        app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch.tap()
+        dismissKeyboard()
         XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Done must dismiss the price keyboard before opening the category picker.")
         app.buttons["item-category"].tap()
         screenshot("native-item-category-menu")
@@ -776,7 +903,7 @@ final class MealJourneyTests: XCTestCase {
         app.launchArguments = ["--uitesting"]
         launchForMealTesting()
         app.buttons["meal-Icon dinner"].tap()
-        XCTAssertTrue(app.navigationBars["🍕 Icon dinner"].exists)
+        XCTAssertTrue(app.navigationBars["🦄 Icon dinner"].exists)
         XCTAssertTrue(revealButton("item-Lemonade").label.contains("Drink"))
         screenshot("custom-icon-and-category-persisted")
     }
@@ -792,6 +919,24 @@ final class MealJourneyTests: XCTestCase {
         tip.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.5)).tap()
         XCTAssertTrue(app.textFields["charge-value"].waitForExistence(timeout: 5), "The labeled leading edge must open the tip editor.")
         app.buttons["Cancel"].tap()
+    }
+
+    func testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape() throws {
+        app.terminate()
+        app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-demo", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        launchForMealTesting()
+        openDemo()
+        let restaurant = app.buttons.containing(NSPredicate(format: "label CONTAINS %@", "Juniper · sample restaurant")).firstMatch
+        revealButton(restaurant, name: "largest-restaurant").tap()
+        let bar = app.navigationBars["Juniper · sample restaurant"]
+        XCTAssertTrue(bar.waitForExistence(timeout: 5))
+        for orientation in [UIDeviceOrientation.portrait, .landscapeLeft] {
+            settleOrientation(orientation)
+            assertReadableRestaurantMap(app, title: "Juniper · sample restaurant", address: "Fictional dinner for app screenshots", orientation: orientation)
+        }
+        bar.buttons["Done"].tap()
+        XCTAssertTrue(app.buttons["edit-meal"].waitForExistence(timeout: 5))
+        settleOrientation(.portrait)
     }
 
     func testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable() throws {
@@ -966,8 +1111,15 @@ final class MealJourneyTests: XCTestCase {
         let lower = origin.withOffset(CGVector(dx: x, dy: middle + travel * 0.5))
         // Keep native gutter drags inside the current sheet or detail column so
         // the background dismissal region and fixed footer cannot consume them.
-        if up { lower.press(forDuration: 0.1, thenDragTo: upper) }
-        else { upper.press(forDuration: 0.1, thenDragTo: lower) }
+        let start = up ? lower : upper
+        let end = up ? upper : lower
+        if distance != nil {
+            // Stop the finger before lifting on fine adjustments. Immediate
+            // release added inertia and oscillated past otherwise reachable rows.
+            start.press(forDuration: 0.1, thenDragTo: end, withVelocity: .slow, thenHoldForDuration: 0.2)
+        } else {
+            start.press(forDuration: 0.1, thenDragTo: end)
+        }
     }
 
     private func dismissKeyboard() {
@@ -1048,10 +1200,19 @@ final class MealJourneyTests: XCTestCase {
         let field = app.textFields[identifier]
         XCTAssertTrue(field.waitForExistence(timeout: 5), "Missing field: \(identifier)")
         field.tap()
-        // Submit person names in the same native key sequence so the existing
-        // onSubmit clears focus before XCTest waits for the next UI event.
-        field.typeText(identifier == "person-name" ? text + "\n" : text)
+        field.typeText(text)
         XCTAssertEqual(field.value as? String, text, "Entering a field must preserve the complete intended value.")
+        // The keyboard marker can arrive after the typed value; this focused field requires native Done.
+        if identifier == "person-name" {
+            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch
+            let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND isHittable == true"), object: done)
+            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed, "Person-name entry must expose a visible native Done control.")
+            XCTAssertTrue(done.exists)
+            XCTAssertTrue(done.isHittable)
+            XCTAssertEqual(app.state, .runningForeground)
+            done.tap()
+            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Native Done must dismiss the keyboard before saving.")
+        }
     }
 
     private func replace(_ identifier: String, with text: String) {
@@ -1075,5 +1236,156 @@ final class MealJourneyTests: XCTestCase {
             geometry.lifetime = .keepAlways
             add(geometry)
         }
+    }
+}
+
+extension XCTestCase {
+    /// Checks the actual visible map and fully rendered largest-text details;
+    /// scrolling may reveal long address portions and individual native actions.
+    @MainActor
+    func assertReadableRestaurantMap(_ app: XCUIApplication, title: String, address expectedAddress: String, orientation: UIDeviceOrientation, capturePrefix: String = "restaurant-map-accessibility-text") {
+        let bar = app.navigationBars[title]
+        XCTAssertTrue(bar.waitForExistence(timeout: 5))
+        func capture(_ name: String) {
+            let captureName = name.replacingOccurrences(of: "restaurant-map-accessibility-text", with: capturePrefix)
+            let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            attachment.name = captureName
+            attachment.lifetime = .keepAlways
+            add(attachment)
+            let geometry = XCTAttachment(string: "Application frame: \(app.frame)\nFull accessibility tree: \(app.debugDescription)")
+            geometry.name = captureName + "-window-geometry"
+            geometry.lifetime = .keepAlways
+            add(geometry)
+        }
+        let suffix = orientation == .portrait ? "portrait" : "landscape"
+        let openMaps = app.buttons["Open in Maps"]
+        let showLocation = app.buttons["Show my location"]
+        let done = bar.buttons["Done"]
+        let address = app.staticTexts["restaurant-address"]
+        let map = app.maps.firstMatch
+        XCTAssertTrue(map.waitForExistence(timeout: 5))
+        XCTAssertTrue(address.waitForExistence(timeout: 5))
+        XCTAssertEqual(address.label, expectedAddress)
+        XCTAssertEqual(app.state, .runningForeground, "Map layout checks must observe the foreground app.")
+        let compact = UIDevice.current.userInterfaceIdiom == .phone && orientation == .landscapeLeft
+        let detailCandidates = app.scrollViews.containing(.staticText, identifier: "restaurant-address").allElementsBoundByIndex.filter { candidate in
+            let frame = candidate.frame
+            guard frame.width >= 100, frame.height >= 100, app.frame.intersects(frame) else { return false }
+            return compact ? frame.minX >= map.frame.maxX - 2 : frame.minY >= map.frame.maxY - 2
+        }
+        XCTAssertLessThanOrEqual(detailCandidates.count, 1, "The address must identify one native details viewport beside or below the map.")
+        let details = detailCandidates.first
+        if compact { XCTAssertNotNil(details, "Compact landscape must give restaurant details their own native scroll viewport.") }
+        let visibleMapTop = max(map.frame.minY, bar.frame.maxY)
+        let visibleMapBottom: CGFloat
+        if let details {
+            if compact {
+                XCTAssertLessThanOrEqual(map.frame.maxX, details.frame.minX + 2, "The visible map must sit beside the scrollable details, away from their text and actions.")
+            } else {
+                XCTAssertLessThanOrEqual(map.frame.maxY, details.frame.minY + 2, "The visible map must sit above the scrollable details, away from their text and actions.")
+            }
+            visibleMapBottom = min(map.frame.maxY, app.frame.maxY - 20)
+            let viewport = details.frame.intersection(CGRect(x: app.frame.minX, y: bar.frame.maxY, width: app.frame.width, height: app.frame.maxY - 20 - bar.frame.maxY))
+            enum Portion { case entire, top, bottom }
+            func revealDetail(_ element: XCUIElement, portion: Portion = .entire) {
+                revealLoop: for _ in 0..<8 {
+                    let frame = element.frame
+                    let upperGap = viewport.minY - frame.minY
+                    let lowerGap = frame.maxY - viewport.maxY
+                    let gap: CGFloat
+                    switch portion {
+                    case .entire:
+                        if viewport.contains(frame) && element.isHittable { break revealLoop }
+                        gap = upperGap > 0 ? -upperGap - 8 : lowerGap + 8
+                    case .top:
+                        if frame.minY >= viewport.minY && frame.minY < viewport.maxY { break revealLoop }
+                        gap = -upperGap - 8
+                    case .bottom:
+                        if frame.maxY <= viewport.maxY && frame.maxY > viewport.minY { break revealLoop }
+                        gap = lowerGap + 8
+                    }
+                    XCTAssertEqual(app.state, .runningForeground, "A map details pan must start in the foreground app.")
+                    // Begin on visible non-action text or actual spacing, so
+                    // scrolling cannot start by pressing a native action label.
+                    let neutralTexts = [address, app.staticTexts["Location access is off."]].filter { $0.exists }.map { $0.frame.intersection(viewport) }.filter { !$0.isNull && $0.height >= 16 }
+                    let startPoint: CGPoint
+                    if let text = neutralTexts.max(by: { $0.height < $1.height }) {
+                        startPoint = CGPoint(x: text.midX, y: gap > 0 ? text.maxY - 4 : text.minY + 4)
+                    } else {
+                        let actions = [openMaps, showLocation, app.links["map-open-settings"]].filter { $0.exists }.map { $0.frame.intersection(viewport) }.filter { !$0.isNull }.sorted { $0.minY < $1.minY }
+                        var spaces: [CGRect] = []
+                        var edge = viewport.minY
+                        for action in actions {
+                            if action.minY - edge >= 4 { spaces.append(CGRect(x: viewport.minX, y: edge, width: viewport.width, height: action.minY - edge)) }
+                            edge = max(edge, action.maxY)
+                        }
+                        if viewport.maxY - edge >= 4 { spaces.append(CGRect(x: viewport.minX, y: edge, width: viewport.width, height: viewport.maxY - edge)) }
+                        // Select room to move in the required direction. A
+                        // taller gap at the viewport edge can allow only a tap.
+                        guard let space = spaces.max(by: {
+                            gap > 0 ? $0.midY < $1.midY : $0.midY > $1.midY
+                        }) else {
+                            XCTFail("Map details must expose visible non-action content for a native pan.")
+                            return
+                        }
+                        startPoint = CGPoint(x: address.frame.minX + 8, y: space.midY)
+                    }
+                    let available = gap > 0 ? startPoint.y - viewport.minY - 2 : viewport.maxY - startPoint.y - 2
+                    let travel = min(max(abs(gap), 20), available)
+                    XCTAssertGreaterThan(travel, 0)
+                    let endPoint = CGPoint(x: startPoint.x, y: startPoint.y + (gap > 0 ? -travel : travel))
+                    let origin = details.coordinate(withNormalizedOffset: .zero)
+                    let start = origin.withOffset(CGVector(dx: startPoint.x - details.frame.minX, dy: startPoint.y - details.frame.minY))
+                    let end = origin.withOffset(CGVector(dx: endPoint.x - details.frame.minX, dy: endPoint.y - details.frame.minY))
+                    start.press(forDuration: 0, thenDragTo: end, withVelocity: .slow, thenHoldForDuration: 0)
+                    XCTAssertEqual(app.state, .runningForeground, "Scrolling map details must preserve the app's foreground presentation.")
+                }
+                switch portion {
+                case .entire: XCTAssertTrue(viewport.contains(element.frame), "The whole native action must remain within the foreground details viewport.")
+                case .top: XCTAssertTrue(element.frame.minY >= viewport.minY && element.frame.minY < viewport.maxY, "The full address's first lines must be reachable.")
+                case .bottom: XCTAssertTrue(element.frame.maxY <= viewport.maxY && element.frame.maxY > viewport.minY, "The full address's last lines must be reachable.")
+                }
+                XCTAssertTrue(element.isHittable)
+            }
+            if address.frame.height > viewport.height {
+                revealDetail(address, portion: .top)
+                capture("restaurant-map-accessibility-text-" + suffix + "-address-top")
+                revealDetail(address, portion: .bottom)
+            } else {
+                revealDetail(address)
+            }
+            capture("restaurant-map-accessibility-text-" + suffix + "-address")
+            var controls = [openMaps, showLocation]
+            let locationError = app.staticTexts["Location access is off."]
+            let openSettings = app.links["map-open-settings"]
+            if locationError.exists { controls.append(locationError) }
+            if openSettings.exists { controls.append(openSettings) }
+            for control in controls {
+                revealDetail(control)
+                capture("restaurant-map-accessibility-text-" + suffix + "-" + control.label)
+            }
+        } else {
+            visibleMapBottom = address.frame.minY - 16
+            for control in [address, openMaps, showLocation] {
+                XCTAssertTrue(control.isHittable)
+                XCTAssertTrue(map.frame.contains(control.frame), "The complete address and native action must remain within the foreground map presentation.")
+                XCTAssertTrue(app.frame.contains(control.frame))
+            }
+            capture("restaurant-map-accessibility-text-" + suffix)
+        }
+        // AX preserves the entire label even when text is visually ellipsized.
+        // Compare its rendered height with the native font's complete layout.
+        let font = UIFont.preferredFont(forTextStyle: .body, compatibleWith: UITraitCollection(preferredContentSizeCategory: .accessibilityExtraExtraExtraLarge))
+        let fullText = (address.label as NSString).boundingRect(with: CGSize(width: address.frame.width, height: CGFloat.greatestFiniteMagnitude), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [.font: font], context: nil)
+        XCTAssertGreaterThanOrEqual(address.frame.height + 4, fullText.height, "The full restaurant address must be rendered at the selected text size without an ellipsis.")
+        XCTAssertGreaterThanOrEqual(visibleMapBottom - visibleMapTop, 100, "Restaurant details must leave a useful, unoccluded map viewport.")
+        XCTAssertGreaterThanOrEqual(map.frame.width, 100)
+        XCTAssertTrue(done.isHittable)
+        XCTAssertTrue(bar.frame.contains(done.frame))
+        XCTAssertTrue(app.frame.contains(done.frame))
+        let geometry = XCTAttachment(string: "Map frame: \(map.frame)\nUnoccluded map height: \(visibleMapBottom - visibleMapTop)\nDetails frame: \(details.map { String(describing: $0.frame) } ?? "native bottom pane")\nAddress frame: \(address.frame)\nFull native text height: \(fullText.height)")
+        geometry.name = "restaurant-map-" + suffix + "-visible-viewport"
+        geometry.lifetime = .keepAlways
+        add(geometry)
     }
 }

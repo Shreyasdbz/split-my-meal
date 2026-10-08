@@ -19,12 +19,14 @@ struct MealEditor: View {
     @State private var photoTask: Task<Void, Never>?
     @State private var photoRequest = UUID()
     @State private var isLoadingPhoto = false
+    @State private var customEmojiExpanded: Bool
+    @State private var showDraftReceipt = false
     @State private var showLocationSearch = false
     @State private var showDeleteConfirmation = false
     @State private var errorMessage: String?
     @FocusState private var focusedField: Field?
     private enum Field { case title, emoji }
-    private let charms = ["🍱", "🍽️", "🍕", "🍔", "🌮", "🍜", "🍣", "🥗", "🥞", "☕️", "🥂", "🎉"]
+    private static let charms = ["🍱", "🍽️", "🍕", "🍔", "🌮", "🍜", "🍣", "🥗", "🥞", "☕️", "🥂", "🎉"]
 
     init(meal: Meal?, onSaved: @escaping (Meal) -> Void, onDeleted: @escaping () -> Void = {}) {
         existingMeal = meal
@@ -32,6 +34,7 @@ struct MealEditor: View {
         self.onDeleted = onDeleted
         _title = State(initialValue: meal?.title ?? "")
         _charm = State(initialValue: meal?.charm ?? "🍱")
+        _customEmojiExpanded = State(initialValue: !Self.charms.contains(meal?.charm ?? "🍱"))
         _receipt = State(initialValue: meal?.receiptPhoto)
         _receiptPreview = State(initialValue: meal?.receiptPhoto.flatMap { ReceiptPhoto.preview($0, maximumPixelSize: 600) })
         _restaurant = State(initialValue: meal?.restaurantDetails.map {
@@ -40,7 +43,7 @@ struct MealEditor: View {
     }
 
     var body: some View {
-        let receiptPickerTitle = receipt == nil ? "Add receipt photo" : "Replace receipt photo"
+        let receiptPickerTitle = receipt == nil ? "Add photo" : "Replace photo"
         return NavigationStack {
             Form {
                 Section("Meal") {
@@ -51,27 +54,31 @@ struct MealEditor: View {
                         .onSubmit { focusedField = nil }
                         .accessibilityIdentifier("meal-title")
                     Picker("Meal icon", selection: $charm) {
-                        ForEach(charms, id: \.self) { icon in
+                        ForEach(Self.charms, id: \.self) { icon in
                             Text(icon).tag(icon)
                         }
-                        if !charms.contains(charm) {
+                        if !Self.charms.contains(charm) {
                             Text(charm.utf8.count <= 64 && charm.count == 1 ? charm : "Choose an emoji").tag(charm)
                         }
                     }
                     .accessibilityIdentifier("meal-icon-picker")
-                    LabeledContent("Custom emoji") {
-                        TextField("", text: $charm)
-                            .multilineTextAlignment(.trailing)
-                            .autocorrectionDisabled()
-                            .textInputAutocapitalization(.never)
-                            .focused($focusedField, equals: .emoji)
-                            .submitLabel(.done)
-                            .onSubmit { focusedField = nil }
-                            .accessibilityIdentifier("meal-emoji")
-                    }
-                    if charm.utf8.count > 64 || charm.count != 1 {
-                        Button("Reset meal icon") { charm = "🍱" }
-                            .accessibilityIdentifier("reset-meal-emoji")
+                    DisclosureGroup(isExpanded: $customEmojiExpanded) {
+                        LabeledContent("Custom emoji") {
+                            TextField("", text: $charm)
+                                .multilineTextAlignment(.trailing)
+                                .autocorrectionDisabled()
+                                .textInputAutocapitalization(.never)
+                                .focused($focusedField, equals: .emoji)
+                                .submitLabel(.done)
+                                .onSubmit { focusedField = nil }
+                                .accessibilityIdentifier("meal-emoji")
+                        }
+                        if charm.utf8.count > 64 || charm.count != 1 {
+                            Button("Reset meal icon") { charm = "🍱" }
+                                .accessibilityIdentifier("reset-meal-emoji")
+                        }
+                    } label: {
+                        Text("Custom emoji").accessibilityIdentifier("custom-emoji")
                     }
                 }
                 Section("Restaurant") {
@@ -101,16 +108,28 @@ struct MealEditor: View {
                         Label(receiptPickerTitle, systemImage: "photo")
                     }
                     .accessibilityIdentifier("choose-receipt")
+                    .accessibilityLabel(receipt == nil ? "Add receipt photo" : "Replace receipt photo")
                     if isLoadingPhoto {
                         ProgressView("Preparing receipt…")
                     }
                     if receipt != nil {
                         if let receiptPreview {
-                            Image(uiImage: receiptPreview)
-                                .resizable().scaledToFit().frame(maxHeight: 220)
-                                .accessibilityLabel("Attached receipt preview")
+                            Button {
+                                focusedField = nil
+                                showDraftReceipt = true
+                            } label: {
+                                Image(uiImage: receiptPreview)
+                                    .resizable().scaledToFit().frame(maxHeight: 220)
+                                    .frame(maxWidth: .infinity)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            .disabled(isLoadingPhoto)
+                            .accessibilityLabel("Preview receipt")
+                            .accessibilityHint("Open this draft photo to zoom")
+                            .accessibilityIdentifier("preview-receipt")
                         } else {
-                            Text("This saved photo couldn’t be opened. Replace or remove it.")
+                            Text("Photo unavailable. Replace or remove it.")
                                 .foregroundStyle(Color.mealSecondaryText)
                         }
                         Button("Remove receipt", role: .destructive) {
@@ -148,9 +167,14 @@ struct MealEditor: View {
             .sheet(isPresented: $showLocationSearch) {
                 LocationSearchModal { restaurant = $0 }
             }
-            .confirmationDialog("Delete this meal and all its items and people?", isPresented: $showDeleteConfirmation, titleVisibility: .visible) {
+            .fullScreenCover(isPresented: $showDraftReceipt) {
+                if let receipt { ReceiptViewer(data: receipt) }
+            }
+            .confirmationDialog("Delete meal?", isPresented: $showDeleteConfirmation, titleVisibility: .visible) {
                 Button("Delete meal", role: .destructive) { deleteMeal() }
                     .accessibilityIdentifier("confirm-delete-meal")
+            } message: {
+                Text("Deletes its items, people and receipt. This can’t be undone.")
             }
             .alert("Couldn’t update meal", isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })) {
                 Button("OK") { errorMessage = nil }

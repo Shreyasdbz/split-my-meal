@@ -2,6 +2,20 @@ import SwiftUI
 import UIKit
 
 extension View {
+    /// Registers bottom controls with the native scroll-edge treatment. Older
+    /// systems use their standard bar material without recreating Liquid Glass.
+    @ViewBuilder
+    func mealBottomBar<Bar: View>(@ViewBuilder content: () -> Bar) -> some View {
+        if #available(iOS 26.0, *) {
+            self.safeAreaBar(edge: .bottom, spacing: 0, content: content)
+                .scrollEdgeEffectStyle(.soft, for: .bottom)
+        } else {
+            self.safeAreaInset(edge: .bottom, spacing: 0) {
+                content().background(.bar)
+            }
+        }
+    }
+
     /// Gives in-depth meal editing and settlement their own iPad window surface;
     /// phones retain sheets. The presented view must provide explicit dismissal.
     @ViewBuilder
@@ -17,6 +31,16 @@ extension View {
     /// Accessibility sizes use the entire available window width.
     func mealFocusedContent() -> some View {
         modifier(MealFocusedContent())
+    }
+}
+
+/// A decorative disclosure cue; the containing button owns its accessible name.
+struct MealRowAccessory: View {
+    var body: some View {
+        Image(systemName: "chevron.forward")
+            .font(.caption.weight(.semibold))
+            .foregroundStyle(Color.mealSecondaryText)
+            .accessibilityHidden(true)
     }
 }
 

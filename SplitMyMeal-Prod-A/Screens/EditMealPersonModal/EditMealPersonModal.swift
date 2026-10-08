@@ -45,7 +45,7 @@ struct PersonEditor: View {
                                     })) {
                                         VStack(alignment: .leading) {
                                             Text(item.name)
-                                            Text(item.price.formatted(.currency(code: "USD"))).font(.caption).foregroundStyle(Color.mealSecondaryText)
+                                            Text("Item price \(mealCurrency(item.price))").font(.caption).foregroundStyle(Color.mealSecondaryText)
                                         }
                                     }
                                     .accessibilityIdentifier("person-item-\(item.name)")
@@ -55,7 +55,7 @@ struct PersonEditor: View {
                     }
                 } else {
                     Section("Items") {
-                        Text("Add items from the meal’s Items section, then select what this person had.").foregroundStyle(Color.mealSecondaryText)
+                        Text("Add items to the meal, then select them here.").foregroundStyle(Color.mealSecondaryText)
                     }
                 }
                 if existingPerson != nil {

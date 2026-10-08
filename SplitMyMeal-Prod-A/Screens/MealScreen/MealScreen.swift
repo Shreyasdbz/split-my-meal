@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import MapKit
+import UIKit
 
 /// Owns presentation of meal details and keeps edits inside draft editors.
 struct MealScreen: View {
@@ -37,19 +38,24 @@ struct MealScreen: View {
                         .font(.subheadline).foregroundStyle(Color.mealSecondaryText)
                 }.padding(.vertical, 8)
                 AmountRow(title: "Subtotal", amount: amounts.subtotal)
-                Button { charge = .tax } label: { AmountRow(title: "Tax", amount: amounts.tax) }
+                Button { charge = .tax } label: {
+                    HStack(spacing: 12) { AmountRow(title: "Tax", amount: amounts.tax); MealRowAccessory() }
+                        .contentShape(Rectangle())
+                }
                     .accessibilityIdentifier("edit-tax").foregroundStyle(Color.primary)
-                Button { charge = .tip } label: { AmountRow(title: "Tip", amount: amounts.tip) }
+                    .accessibilityHint("Edit tax")
+                Button { charge = .tip } label: {
+                    HStack(spacing: 12) { AmountRow(title: "Tip", amount: amounts.tip); MealRowAccessory() }
+                        .contentShape(Rectangle())
+                }
                     .accessibilityIdentifier("edit-tip").foregroundStyle(Color.primary)
-            } footer: {
-                Text("Tax is proportional to each person’s items. Percentage tips include tax.")
-                    .foregroundStyle(Color.mealSecondaryText)
+                    .accessibilityHint("Edit tip")
             }
 
             if amounts.hasInvalidValues {
                 Section {
                     Label {
-                        Text("Some saved prices or charges are invalid. Edit them before settling this bill.")
+                        Text("Some prices or charges are invalid. Edit them before settling.")
                     } icon: {
                         Image(systemName: "exclamationmark.triangle").foregroundStyle(.red)
                     }
@@ -61,8 +67,8 @@ struct MealScreen: View {
                         VStack(alignment: .leading, spacing: 4) {
                             Text("\(mealCurrency(amounts.unassigned)) unassigned").font(.headline)
                             Text(amounts.subtotalCents == 0
-                                 ? "Add priced items and assign them, or clear the fixed charges."
-                                 : "Assign every item to include the full bill in everyone’s split.").font(.subheadline)
+                                 ? "Add and assign priced items, or clear fixed charges."
+                                 : "Assign the remaining items before settling.").font(.subheadline)
                         }
                     } icon: { Image(systemName: "exclamationmark.circle").foregroundStyle(.orange) }
                     .accessibilityIdentifier("unassigned-warning")
@@ -70,28 +76,28 @@ struct MealScreen: View {
             }
 
             Section {
-                if people.isEmpty {
-                    Text("Add everyone who shared this meal.").foregroundStyle(Color.mealSecondaryText)
-                }
                 ForEach(people) { person in
                     let assignedNames = items.filter { $0.consumerIds.contains(person.id) }.map(\.name).joined(separator: ", ")
                     Button { selectedPerson = person } label: {
-                        VStack(alignment: .leading, spacing: 6) {
-                            ViewThatFits(in: .horizontal) {
-                                HStack { Text(person.name).font(.headline); Spacer(); Text(mealCurrency(amounts.amount(for: person))).monospacedDigit() }
-                                VStack(alignment: .leading) { Text(person.name).font(.headline); Text(mealCurrency(amounts.amount(for: person))).monospacedDigit() }
+                        HStack(spacing: 12) {
+                            VStack(alignment: .leading, spacing: 6) {
+                                ViewThatFits(in: .horizontal) {
+                                    HStack { Text(person.name).font(.headline); Spacer(); Text(mealCurrency(amounts.amount(for: person))).monospacedDigit() }
+                                    VStack(alignment: .leading) { Text(person.name).font(.headline); Text(mealCurrency(amounts.amount(for: person))).monospacedDigit() }
+                                }
+                                Text(assignedNames.isEmpty ? "No items assigned" : assignedNames)
+                                    .font(.subheadline).foregroundStyle(Color.mealSecondaryText).lineLimit(2)
                             }
-                            Text(assignedNames.isEmpty ? "No items assigned" : assignedNames)
-                                .font(.subheadline).foregroundStyle(Color.mealSecondaryText).lineLimit(2)
+                            MealRowAccessory()
                         }.padding(.vertical, 4).contentShape(Rectangle()).foregroundStyle(Color.primary)
                     }.accessibilityIdentifier("person-\(person.name)")
+                        .accessibilityHint("Edit person and item shares")
                 }
                 Button("Add person", systemImage: "person.badge.plus") { showNewPerson = true }
                     .accessibilityIdentifier("add-person")
             } header: { Text("People") }
 
             Section {
-                if items.isEmpty { Text("Add the items from your receipt.").foregroundStyle(Color.mealSecondaryText) }
                 ForEach(items) { item in
                     Button { selectedItem = item } label: {
                         HStack(alignment: .top, spacing: 12) {
@@ -107,8 +113,10 @@ struct MealScreen: View {
                                 Text("\(item.category.displayName) · \(consumerNames(item))")
                                     .font(.subheadline).foregroundStyle(Color.mealSecondaryText).lineLimit(2)
                             }
+                            MealRowAccessory()
                         }.padding(.vertical, 4).contentShape(Rectangle()).foregroundStyle(Color.primary)
                     }.accessibilityIdentifier("item-\(item.name)")
+                        .accessibilityHint("Edit item and who shares it")
                 }
                 Button("Add item", systemImage: "plus.circle") { showNewItem = true }
                     .accessibilityIdentifier("add-item")
@@ -117,12 +125,16 @@ struct MealScreen: View {
             Section("Restaurant & receipt") {
                 if let restaurant = meal.restaurantDetails {
                     Button { showMap = true } label: {
-                        Label {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(restaurant.title)
-                                Text(restaurant.address).font(.subheadline).foregroundStyle(Color.mealSecondaryText)
-                            }
-                        } icon: { Image(systemName: "mappin.and.ellipse") }
+                        HStack(spacing: 12) {
+                            Label {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(restaurant.title)
+                                    Text(restaurant.address).font(.subheadline).foregroundStyle(Color.mealSecondaryText)
+                                }
+                            } icon: { Image(systemName: "mappin.and.ellipse") }
+                            Spacer(minLength: 0)
+                            MealRowAccessory()
+                        }
                         .contentShape(Rectangle())
                     }.foregroundStyle(Color.primary)
                 } else {
@@ -137,14 +149,15 @@ struct MealScreen: View {
         }
         .navigationTitle("\(mealDisplayCharm(meal.charm)) \(meal.title)")
         .navigationBarTitleDisplayMode(.inline)
-        .safeAreaInset(edge: .bottom) {
+        .mealBottomBar {
             Button { showSplit = true } label: {
                 Label("View split", systemImage: "person.2").font(.headline).foregroundStyle(Color.mealPrimaryText).frame(maxWidth: .infinity).padding(.vertical, 8)
             }
             .modifier(MealPrimaryButtonStyle())
             .accessibilityIdentifier("view-split")
+            .frame(maxWidth: 440)
+            .frame(maxWidth: .infinity)
             .padding(.horizontal).padding(.vertical, 8)
-            .background(.bar)
         }
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -172,6 +185,8 @@ struct MealScreen: View {
 private struct RestaurantMap: View {
     let restaurant: RestaurantDetails
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    @Environment(\.dynamicTypeSize) private var textSize
     @StateObject private var location = LocationManager()
     @State private var position: MapCameraPosition
     private let coordinate: CLLocationCoordinate2D?
@@ -191,34 +206,42 @@ private struct RestaurantMap: View {
         NavigationStack {
             Group {
                 if let coordinate {
-                    Map(position: $position) {
-                        Marker(restaurant.title, coordinate: coordinate)
-                        if location.lastLocation != nil { UserAnnotation() }
-                    }
-                    .mapControls { MapCompass(); MapScaleView(); MapPitchToggle() }
-                    .safeAreaInset(edge: .bottom) {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(restaurant.address)
-                            Button("Show my location", systemImage: "location") { location.requestNearbyLocation() }
-                                .disabled(location.isRequesting)
-                            if let error = location.errorMessage { Text(error).font(.caption).foregroundStyle(Color.mealSecondaryText) }
-                            Button("Open in Maps", systemImage: "arrow.up.right.square") {
-                                let item: MKMapItem
-                                if #available(iOS 26.0, *) {
-                                    item = MKMapItem(location: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude), address: nil)
-                                } else {
-                                    item = MKMapItem(placemark: MKPlacemark(coordinate: coordinate))
-                                }
-                                item.name = restaurant.title
-                                item.openInMaps()
+                    if verticalSizeClass == .compact {
+                        // A bottom pane can consume the whole landscape map at
+                        // accessibility sizes. Separate scrolling details keep
+                        // the map visible without reducing the selected font.
+                        HStack(spacing: 0) {
+                            map(at: coordinate)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            ScrollView {
+                                details(at: coordinate).padding()
                             }
-                        }.frame(maxWidth: .infinity, alignment: .leading).padding().background(.bar)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(.bar)
+                            // Contain scrolled controls below navigation chrome;
+                            // layout bounds alone do not clip their rendering.
+                            .clipped()
+                        }
+                    } else if textSize.isAccessibilitySize {
+                        // Permission feedback adds rows; keep map context
+                        // visible while full-size details scroll independently.
+                        GeometryReader { geometry in
+                            VStack(spacing: 0) {
+                                map(at: coordinate)
+                                    .frame(height: geometry.size.height * 0.4)
+                                ScrollView {
+                                    details(at: coordinate).padding()
+                                }
+                                .background(.bar)
+                                .clipped()
+                            }
+                        }
+                    } else {
+                        map(at: coordinate)
+                            .safeAreaInset(edge: .bottom) {
+                                details(at: coordinate).padding().background(.bar)
+                            }
                     }
-                    .onReceive(location.$lastLocation) { value in
-                        guard let value else { return }
-                        position = .region(MKCoordinateRegion(center: value.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)))
-                    }
-                    .onDisappear { location.cancel() }
                 } else {
                     ContentUnavailableView("Restaurant location unavailable", systemImage: "mappin.slash", description: Text("This saved location is invalid. Edit the meal to replace or remove the restaurant."))
                         .accessibilityIdentifier("invalid-restaurant-location")
@@ -227,5 +250,56 @@ private struct RestaurantMap: View {
             .navigationTitle(restaurant.title).navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
         }
+        .onReceive(location.$lastLocation) { value in
+            guard let value else { return }
+            position = .region(MKCoordinateRegion(center: value.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)))
+        }
+        .onDisappear { location.cancel() }
+    }
+
+    private func map(at coordinate: CLLocationCoordinate2D) -> some View {
+        Map(position: $position) {
+            Marker(restaurant.title, coordinate: coordinate)
+            if location.lastLocation != nil { UserAnnotation() }
+        }
+        .mapControls { MapCompass(); MapScaleView(); MapPitchToggle() }
+    }
+
+    private func details(at coordinate: CLLocationCoordinate2D) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(restaurant.address)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityIdentifier("restaurant-address")
+            Button("Open in Maps", systemImage: "arrow.up.right.square") {
+                let item: MKMapItem
+                if #available(iOS 26.0, *) {
+                    item = MKMapItem(location: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude), address: nil)
+                } else {
+                    item = MKMapItem(placemark: MKPlacemark(coordinate: coordinate))
+                }
+                item.name = restaurant.title
+                item.openInMaps()
+            }
+            .foregroundStyle(Color.mealPrimaryText)
+            .modifier(MealPrimaryButtonStyle())
+            .controlSize(.large)
+            Button("Show my location", systemImage: "location") { location.requestNearbyLocation() }
+                .buttonStyle(.bordered)
+                .controlSize(.large)
+                .disabled(location.isRequesting)
+            if location.isRequesting { ProgressView("Finding your location…") }
+            if let error = location.errorMessage {
+                Text(error).font(.caption).foregroundStyle(Color.mealSecondaryText)
+            }
+            if location.failure == .denied, let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                Link(destination: settingsURL) {
+                    Text("Open Settings")
+                        .frame(minHeight: 44)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .contentShape(Rectangle())
+                }
+                    .accessibilityIdentifier("map-open-settings")
+            }
+        }.frame(maxWidth: .infinity, alignment: .leading)
     }
 }

@@ -1,4 +1,5 @@
 import XCTest
+import UIKit
 
 /// Opt-in live Apple Maps integration. CI excludes this suite because provider
 /// availability is external; unavailable responses are retained as explicit skips.
@@ -8,6 +9,7 @@ final class LiveMapKitTests: XCTestCase {
 
     override func setUp() async throws {
         continueAfterFailure = false
+        XCUIDevice.shared.orientation = .portrait
         app = XCUIApplication()
         // Reset before launching so no already-created CLLocationManager retains
         // the previous authorization state while the protected resource resets.
@@ -20,6 +22,7 @@ final class LiveMapKitTests: XCTestCase {
 
     override func tearDown() async throws {
         evidence("live-mapkit-final-state")
+        XCUIDevice.shared.orientation = .portrait
         app.terminate()
     }
 
@@ -124,6 +127,16 @@ final class LiveMapKitTests: XCTestCase {
         search.tap()
         search.typeText("Coffee")
         XCTAssertEqual(search.value as? String, "Coffee")
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            // The centered native search sheet moves as its keyboard settles.
+            // Dismiss that keyboard before resolving the Settings link's hit point.
+            let hideKeyboard = app.keyboards.buttons["Hide keyboard"]
+            XCTAssertTrue(hideKeyboard.waitForExistence(timeout: 5))
+            XCTAssertTrue(hideKeyboard.isHittable)
+            hideKeyboard.tap()
+            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+            XCTAssertEqual(search.value as? String, "Coffee", "Dismissing the native keyboard must preserve the restaurant query.")
+        }
         app.links["restaurant-open-settings"].tap()
         let settings = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
         XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 15), "Denied location recovery must open native Settings.")
@@ -141,10 +154,91 @@ final class LiveMapKitTests: XCTestCase {
         XCTAssertEqual(search.value as? String, "Coffee", "Returning from Settings preserves the restaurant query.")
         XCTAssertTrue(search.isEnabled)
         evidence("denied-location-settings-return-preserves-query")
-        app.buttons["close"].firstMatch.tap()
+        let closeSearch = app.buttons["close"].firstMatch
+        if closeSearch.exists { closeSearch.tap() }
         app.navigationBars["Restaurant"].buttons["Cancel"].tap()
         XCTAssertEqual(title.value as? String, "Location recovery draft", "Returning from Settings preserves the unsaved meal draft.")
         app.buttons["Cancel"].tap()
+        assertOriginalRestaurant()
+
+        // Preserve the denied authorization and the saved fixture while testing
+        // the map's expanded recovery pane at the largest native text size.
+        app.terminate()
+        app.launchArguments = ["--uitesting", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        launchForMealTesting()
+        app.buttons["meal-Dinner at Juniper"].tap()
+        let restaurant = app.buttons.containing(NSPredicate(format: "label CONTAINS %@", "Juniper · sample restaurant")).firstMatch
+        let footer = app.buttons["view-split"]
+        XCTAssertTrue(footer.waitForExistence(timeout: 5))
+        let foregroundLists = app.collectionViews.allElementsBoundByIndex.filter {
+            $0.frame.contains(CGPoint(x: footer.frame.midX, y: footer.frame.minY - 20))
+        }
+        let mealList = foregroundLists.min { $0.frame.width < $1.frame.width }
+        XCTAssertNotNil(mealList, "The saved meal must expose its foreground detail list.")
+        if let mealList {
+            var movements: [String] = []
+            func viewport() -> (top: CGFloat, bottom: CGFloat) {
+                let navBottom = app.navigationBars.allElementsBoundByIndex.filter(\.isHittable).map { $0.frame.maxY }.max() ?? mealList.frame.minY
+                return (max(navBottom, mealList.frame.minY), min(footer.frame.minY - 20, mealList.frame.maxY - 4))
+            }
+            for attempt in 0..<24 {
+                let bounds = viewport()
+                if restaurant.exists && restaurant.frame.minY > bounds.top && restaurant.frame.maxY < bounds.bottom && restaurant.isHittable { break }
+                let before = restaurant.exists ? String(describing: restaurant.frame) : "not instantiated"
+                let gap = restaurant.exists ? (restaurant.frame.minY <= bounds.top ? bounds.top - restaurant.frame.minY + 12 : restaurant.frame.maxY - bounds.bottom + 12) : nil
+                let up = restaurant.exists ? restaurant.frame.minY > bounds.top : attempt < 12
+                let top = bounds.top + 20
+                let bottom = bounds.bottom - 20
+                XCTAssertGreaterThan(bottom, top, "The foreground meal list must have a usable scroll viewport.")
+                let origin = mealList.coordinate(withNormalizedOffset: .zero)
+                let leading = max(mealList.frame.minX + 8, footer.frame.minX - 8) - mealList.frame.minX
+                let travel = gap.map { min(max($0, 20), min(150, (bottom - top) * 0.5)) } ?? (bottom - top) * 0.6
+                let middle = (top + bottom) * 0.5 - mealList.frame.minY
+                let upper = origin.withOffset(CGVector(dx: leading, dy: middle - travel * 0.5))
+                let lower = origin.withOffset(CGVector(dx: leading, dy: middle + travel * 0.5))
+                (up ? lower : upper).press(forDuration: 0.1, thenDragTo: up ? upper : lower, withVelocity: .slow, thenHoldForDuration: 0.2)
+                movements.append("Attempt \(attempt): before \(before); after \(restaurant.exists ? String(describing: restaurant.frame) : "not instantiated"); viewport \(bounds.top)...\(bounds.bottom)")
+            }
+            let geometry = XCTAttachment(string: movements.joined(separator: "\n"))
+            geometry.name = "denied-map-restaurant-row-scroll-geometry"
+            geometry.lifetime = .keepAlways
+            add(geometry)
+            let bounds = viewport()
+            XCTAssertGreaterThan(restaurant.frame.minY, bounds.top, "The entire restaurant row must be below the foreground toolbar.")
+            XCTAssertLessThan(restaurant.frame.maxY, bounds.bottom, "The entire restaurant row must be above View split before tapping its center.")
+        }
+        XCTAssertTrue(restaurant.isHittable)
+        restaurant.tap()
+        XCTAssertTrue(app.buttons["Show my location"].waitForExistence(timeout: 5))
+        app.buttons["Show my location"].tap()
+        XCTAssertTrue(app.staticTexts["Location access is off."].waitForExistence(timeout: 5))
+        func rotate(_ orientation: UIDeviceOrientation) {
+            XCUIDevice.shared.orientation = orientation
+            let settled = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+                let frame = XCUIApplication().frame
+                return orientation == .portrait ? frame.height > frame.width : frame.width > frame.height
+            }, object: app)
+            XCTAssertEqual(XCTWaiter.wait(for: [settled], timeout: 5), .completed)
+            Thread.sleep(forTimeInterval: 1)
+        }
+        for orientation in [UIDeviceOrientation.portrait, .landscapeLeft] {
+            rotate(orientation)
+            assertReadableRestaurantMap(app, title: "Juniper · sample restaurant", address: "Fictional dinner for app screenshots", orientation: orientation, capturePrefix: "restaurant-map-denied-accessibility-text")
+        }
+        rotate(.portrait)
+        assertReadableRestaurantMap(app, title: "Juniper · sample restaurant", address: "Fictional dinner for app screenshots", orientation: .portrait, capturePrefix: "restaurant-map-denied-before-settings")
+        let settingsLink = app.links["map-open-settings"]
+        XCTAssertTrue(settingsLink.waitForExistence(timeout: 5))
+        XCTAssertTrue(settingsLink.isHittable)
+        settingsLink.tap()
+        XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 15), "The map's denied-location recovery must open native Settings.")
+        XCTAssertTrue(settings.windows.firstMatch.waitForExistence(timeout: 10))
+        app.activate()
+        XCTAssertTrue(app.navigationBars["Juniper · sample restaurant"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Location access is off."].exists)
+        XCTAssertFalse(permission.exists, "Returning from Settings must preserve the map without automatically requesting location.")
+        evidence("denied-map-settings-return-preserves-saved-restaurant")
+        app.navigationBars["Juniper · sample restaurant"].buttons["Done"].tap()
         assertOriginalRestaurant()
     }
 
@@ -157,7 +251,7 @@ final class LiveMapKitTests: XCTestCase {
         let allow = permission.buttons.matching(NSPredicate(format: "label CONTAINS %@", "While Using")).firstMatch
         XCTAssertTrue(allow.exists)
         allow.tap()
-        guard app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Nearby search enabled")).firstMatch.waitForExistence(timeout: 15) else {
+        guard app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Using your location")).firstMatch.waitForExistence(timeout: 15) else {
             evidence("synthetic-nearby-location-unavailable")
             throw XCTSkip("The simulator did not deliver the synthetic location. Its actual state is retained.")
         }
@@ -190,7 +284,7 @@ final class LiveMapKitTests: XCTestCase {
         askTree.lifetime = .keepAlways
         add(askTree)
         app.activate()
-        let cacheCleared = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "Search near me"), object: app.buttons["nearby-restaurants"])
+        let cacheCleared = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "Use my location"), object: app.buttons["nearby-restaurants"])
         XCTAssertEqual(XCTWaiter.wait(for: [cacheCleared], timeout: 5), .completed)
         XCTAssertFalse(permission.exists, "Ask Next Time must not request location automatically on return.")
         XCTAssertFalse(app.staticTexts["restaurant-location-error"].exists)
@@ -201,7 +295,7 @@ final class LiveMapKitTests: XCTestCase {
         app.buttons["nearby-restaurants"].tap()
         XCTAssertTrue(permission.waitForExistence(timeout: 10), "An explicit Nearby retry must request permission again.")
         allow.tap()
-        XCTAssertTrue(app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Nearby search enabled")).firstMatch.waitForExistence(timeout: 15))
+        XCTAssertTrue(app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Using your location")).firstMatch.waitForExistence(timeout: 15))
         search.tap()
         search.typeText("Coffee")
         settings.activate()
@@ -218,7 +312,7 @@ final class LiveMapKitTests: XCTestCase {
         add(revokedTree)
         app.activate()
         XCTAssertTrue(app.staticTexts["restaurant-location-error"].waitForExistence(timeout: 10), "Revoking permission while idle must replace cached nearby status with an actionable error.")
-        XCTAssertTrue(app.buttons["nearby-restaurants"].label.contains("Search near me"))
+        XCTAssertTrue(app.buttons["nearby-restaurants"].label.contains("Use my location"))
         XCTAssertTrue(app.links["restaurant-open-settings"].exists)
         XCTAssertEqual(search.value as? String, "Coffee", "Idle revocation preserves the independently editable restaurant query.")
         evidence("idle-location-revocation-clears-cached-nearby-status")
@@ -240,6 +334,39 @@ final class LiveMapKitTests: XCTestCase {
         app.buttons["Cancel"].tap()
         assertOriginalRestaurant()
         evidence("live-rapid-query-cancelled")
+    }
+
+    func testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit() throws {
+        app.terminate()
+        app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-demo", "--fail-first-restaurant-search"]
+        launchForMealTesting()
+        XCTAssertTrue(app.buttons["meal-Dinner at Juniper"].waitForExistence(timeout: 10))
+        app.buttons["meal-Dinner at Juniper"].tap()
+        app.buttons["edit-meal"].tap()
+        app.buttons["choose-restaurant"].tap()
+        let search = app.searchFields.firstMatch
+        let query = "Blue Bottle Coffee San Francisco"
+        search.tap()
+        search.typeText(query)
+        XCTAssertTrue(app.staticTexts["restaurant-search-error"].waitForExistence(timeout: 10), "The isolated DEBUG fixture must expose the actual retry control before any provider request.")
+        XCTAssertEqual(search.value as? String, query)
+        evidence("restaurant-staged-search-failure-with-retry")
+        app.buttons["retry-restaurant-search"].tap()
+        XCTAssertEqual(search.value as? String, query, "Retry must preserve the complete restaurant query.")
+        let result = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "restaurant-result-")).firstMatch
+        guard result.waitForExistence(timeout: 25) else {
+            evidence("restaurant-retry-live-provider-unavailable")
+            throw XCTSkip("The staged error and same-query Retry were exercised, but Apple Maps returned no real suggestions within 25 seconds. Retained evidence distinguishes the fixture from the unavailable provider.")
+        }
+        XCTAssertFalse(app.staticTexts["restaurant-search-error"].exists)
+        XCTAssertEqual(search.value as? String, query)
+        evidence("restaurant-same-query-retry-live-suggestions")
+        let closeSearch = app.buttons["close"].firstMatch
+        if closeSearch.exists { closeSearch.tap() }
+        app.navigationBars["Restaurant"].buttons["Cancel"].tap()
+        app.buttons["Cancel"].tap()
+        assertOriginalRestaurant()
+        evidence("restaurant-retry-cancel-preserves-saved-restaurant")
     }
 
     private func assertOriginalRestaurant() {

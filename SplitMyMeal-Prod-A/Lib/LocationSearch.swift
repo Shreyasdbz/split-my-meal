@@ -15,6 +15,10 @@ final class LocationService: NSObject, MKLocalSearchCompleterDelegate {
     private var activeSearch: MKLocalSearch?
     private var activeSearchID: UUID?
     private var query = ""
+    private static let searchUnavailableMessage = "Restaurant search is unavailable. Check your connection and retry."
+    #if DEBUG
+    private var didInjectSearchFailure = false
+    #endif
     var suggestions: [LocationSuggestion] = []
     var isSearching = false
     var errorMessage: String?
@@ -32,6 +36,17 @@ final class LocationService: NSObject, MKLocalSearchCompleterDelegate {
         suggestions = []
         errorMessage = nil
         guard self.query.count >= 2 else { isSearching = false; return }
+        #if DEBUG
+        let arguments = ProcessInfo.processInfo.arguments
+        if arguments.contains("--uitesting"), arguments.contains("--fail-first-restaurant-search"), !didInjectSearchFailure {
+            // Exercise same-query Retry through the real UI before the next
+            // attempt reaches MapKit. Production builds contain no fixture path.
+            didInjectSearchFailure = true
+            isSearching = false
+            errorMessage = Self.searchUnavailableMessage
+            return
+        }
+        #endif
         // A new completer gives each query an identity, so queued callbacks from older queries are discarded.
         completer = MKLocalSearchCompleter()
         completer.delegate = self
@@ -58,7 +73,7 @@ final class LocationService: NSObject, MKLocalSearchCompleterDelegate {
         Task { @MainActor [weak self] in
             guard let self, query.count >= 2, ObjectIdentifier(self.completer) == sourceID, self.completer.queryFragment == query else { return }
             isSearching = false
-            errorMessage = "Restaurant search is unavailable. Check your connection and try again."
+            errorMessage = Self.searchUnavailableMessage
         }
     }
 

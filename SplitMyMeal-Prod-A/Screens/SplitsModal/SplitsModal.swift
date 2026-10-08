@@ -11,27 +11,31 @@ struct SplitsModal: View {
         NavigationStack {
             List {
                 Section {
-                    AmountRow(title: "Subtotal", amount: amounts.subtotal)
-                    AmountRow(title: "Tax", amount: amounts.tax)
-                    AmountRow(title: "Tip", amount: amounts.tip)
                     AmountRow(title: "Total", amount: amounts.total, emphasized: true)
+                        .font(.title2)
                         .accessibilityIdentifier("split-total")
-                } header: { Text(meal.title) } footer: {
-                    Text("Tax and tip follow item shares. Rounding keeps the total exact.")
-                        .foregroundStyle(Color.mealSecondaryText)
-                }
+                } header: { Text(meal.title) }
                 if amounts.hasInvalidValues {
                     Section {
                         Label {
-                            Text("Some saved values are invalid and excluded. Correct the prices, tax, or tip before sharing or settling.")
+                            Text("Invalid saved values are excluded. Edit prices, tax or tip before sharing.")
                         } icon: {
                             Image(systemName: "exclamationmark.triangle").foregroundStyle(.red)
                         }
                     }
                 }
+                if amounts.unassignedCents > 0 {
+                    Section {
+                        AmountRow(title: "Unassigned", amount: amounts.unassigned, emphasized: true)
+                        Text(amounts.subtotalCents == 0
+                             ? "Add and assign priced items, or clear fixed charges."
+                             : "Included in the total, but not yet assigned. Assign the remaining items before settling.")
+                            .foregroundStyle(Color.mealSecondaryText)
+                    }
+                }
                 Section("Per person") {
                     if people.isEmpty {
-                        Text("Add people and assign their items to split this meal.").foregroundStyle(Color.mealSecondaryText)
+                        Text("Add people and assign items to see their shares.").foregroundStyle(Color.mealSecondaryText)
                     }
                     ForEach(people) { person in
                         DisclosureGroup {
@@ -40,7 +44,8 @@ struct SplitsModal: View {
                             ForEach(items) { item in
                                 VStack(alignment: .leading, spacing: 4) {
                                     AmountRow(title: item.name, amount: amounts.amount(for: item, person: person))
-                                    Text("Item price \(mealCurrency(item.price)) · shared by \(Set(item.consumerIds).intersection(Set(people.map(\.id))).count)")
+                                    let consumerCount = Set(item.consumerIds).intersection(Set(people.map(\.id))).count
+                                    Text(consumerCount > 1 ? "Item price \(mealCurrency(item.price)) · \(consumerCount) people" : "Item price \(mealCurrency(item.price))")
                                         .font(.caption).foregroundStyle(Color.mealSecondaryText)
                                 }
                             }
@@ -51,14 +56,15 @@ struct SplitsModal: View {
                         .accessibilityIdentifier("split-\(person.name)")
                     }
                 }
-                if amounts.unassignedCents > 0 {
-                    Section {
-                        AmountRow(title: "Unassigned", amount: amounts.unassigned, emphasized: true)
-                        Text(amounts.subtotalCents == 0
-                             ? "Fixed charges need priced items before they can be divided. Add and assign items, or clear the charges."
-                             : "This amount is included in the total but isn’t owed by a person yet. Assign the remaining items before settling the bill.")
-                            .foregroundStyle(Color.mealSecondaryText)
+                Section {
+                    DisclosureGroup("Bill details") {
+                        AmountRow(title: "Subtotal", amount: amounts.subtotal)
+                        AmountRow(title: "Tax", amount: amounts.tax)
+                        AmountRow(title: "Tip", amount: amounts.tip)
+                        Text("Shared items are divided equally. Tax and tip follow item shares. Percentage tips include tax. Rounding keeps totals exact.")
+                            .font(.footnote).foregroundStyle(Color.mealSecondaryText)
                     }
+                    .accessibilityIdentifier("bill-details")
                 }
             }
             .mealFocusedContent()

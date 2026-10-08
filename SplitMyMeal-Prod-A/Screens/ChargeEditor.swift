@@ -16,6 +16,7 @@ struct ChargeEditor: View {
     private let kind: ChargeKind
     @State private var mode: Mode
     @State private var value: String
+    @State private var clearRequested = false
     @State private var errorMessage: String?
     @FocusState private var valueFocused: Bool
     private enum Mode: String, CaseIterable { case percentage = "Percentage", amount = "Amount" }
@@ -45,26 +46,37 @@ struct ChargeEditor: View {
                     }
                     .pickerStyle(.segmented)
                     LabeledContent(mode == .percentage ? "Percentage" : "Amount (USD)") {
-                        TextField("0", text: $value)
+                        TextField("0", text: Binding(get: { value }, set: {
+                            value = $0
+                            clearRequested = false
+                        }))
                             .keyboardType(.decimalPad)
                             .multilineTextAlignment(.trailing)
                             .focused($valueFocused)
                             .accessibilityLabel("\(kind.title) \(mode == .percentage ? "percentage" : "amount in US dollars")")
                             .accessibilityIdentifier("charge-value")
                     }
-                } header: { Text(kind.title) } footer: {
-                    Text(kind == .tax ? "Percentage tax uses the item subtotal." : "Percentage tip uses the subtotal including tax.")
-                        .foregroundStyle(Color.mealSecondaryText)
-                }
-                Section {
-                    LabeledContent("Calculation base", value: base.formatted(.currency(code: "USD")))
-                    if let parsed = try? DecimalInput.parse(value, allowZero: true, maximumFractionDigits: mode == .percentage ? 4 : 2),
-                       let cents = mode == .amount ? Money.cents(parsed) : Money.percentageCents(parsed, baseCents: baseCents) {
-                        LabeledContent("\(kind.title) amount", value: mealCurrency(Double(cents) / 100))
+                } footer: {
+                    if mode == .percentage {
+                        Text(kind == .tax ? "Applied to the item subtotal." : "Applied to subtotal plus tax.")
+                            .foregroundStyle(Color.mealSecondaryText)
                     }
                 }
                 Section {
-                    Button("Clear \(kind.rawValue)", role: .destructive) { save(clear: true) }
+                    if mode == .percentage {
+                        AmountRow(title: kind == .tax ? "Subtotal" : "Subtotal + tax", amount: base)
+                    }
+                    if let parsed = try? DecimalInput.parse(value, allowZero: true, maximumFractionDigits: mode == .percentage ? 4 : 2),
+                       let cents = mode == .amount ? Money.cents(parsed) : Money.percentageCents(parsed, baseCents: baseCents) {
+                        AmountRow(title: kind.title, amount: Double(cents) / 100, emphasized: true)
+                    }
+                }
+                Section {
+                    Button("Clear \(kind.rawValue)", role: .destructive) {
+                        valueFocused = false
+                        value = "0"
+                        clearRequested = true
+                    }
                         .accessibilityIdentifier("clear-charge")
                 }
             }
@@ -73,7 +85,7 @@ struct ChargeEditor: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") { save(clear: false) }.accessibilityIdentifier("save-charge")
+                    Button("Save", action: save).accessibilityIdentifier("save-charge")
                 }
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
@@ -81,6 +93,9 @@ struct ChargeEditor: View {
                 }
             }
             .onChange(of: mode) { oldMode, newMode in
+                // Clearing is a draft operation in either mode; only typing a
+                // replacement restores a numeric charge before Save.
+                guard !clearRequested else { return }
                 guard let parsed = try? DecimalInput.parse(value, allowZero: true, maximumFractionDigits: oldMode == .percentage ? 4 : 2) else { return }
                 do {
                     let converted = try DecimalInput.convert(parsed, toPercentage: newMode == .percentage, base: base)
@@ -96,9 +111,9 @@ struct ChargeEditor: View {
         }
     }
 
-    private func save(clear: Bool) {
+    private func save() {
         do {
-            let parsed = clear ? nil : try DecimalInput.parse(value, allowZero: true, maximumFractionDigits: mode == .percentage ? 4 : 2)
+            let parsed = clearRequested ? nil : try DecimalInput.parse(value, allowZero: true, maximumFractionDigits: mode == .percentage ? 4 : 2)
             let percentage = mode == .percentage ? parsed : nil
             let amount = mode == .amount ? parsed : nil
             if kind == .tax { try MealStore.setTax(meal, percentage: percentage, amount: amount, in: context) }
