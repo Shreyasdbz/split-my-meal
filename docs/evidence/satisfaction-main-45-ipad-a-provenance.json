@@ -1,0 +1,17 @@
+{
+  "all47InputsMatchCommit": true,
+  "disabledLiveCases": 5,
+  "exactCasesExecuted": 43,
+  "failed": 1,
+  "head": "45c1bfc67de8711b54f00879d71c117adbbc15e8",
+  "jobURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37877376983/job/113649610581",
+  "nativeCompiledStableCases": 56,
+  "partition": "a",
+  "passed": 42,
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37877376983",
+  "scope": "Completed failed hosted partition on parent main45. Exact native failures remain failures; later corrections require their own execution.",
+  "selectedResult": "satisfaction-main-45-ipad-a-selection-results.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-main-45-ipad-a-source-manifest.json",
+  "sourceResults": "satisfaction-main-45-ipad-a-results.json"
+}

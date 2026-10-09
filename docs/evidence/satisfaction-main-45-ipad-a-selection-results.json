@@ -1,0 +1,4 @@
+{
+  "result": "Rejected",
+  "reason": "Every selected native case must pass: [{'identifier': 'SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()', 'status': 'Failed'}]"
+}

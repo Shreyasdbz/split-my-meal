@@ -1,0 +1,23 @@
+{
+  "devices": {
+    "ipad": {
+      "executed": 56,
+      "failed": 1,
+      "partitionsDisjoint": true,
+      "passed": 55,
+      "skipped": 0
+    },
+    "iphone": {
+      "executed": 56,
+      "failed": 3,
+      "partitionsDisjoint": true,
+      "passed": 53,
+      "skipped": 0
+    }
+  },
+  "head": "45c1bfc67de8711b54f00879d71c117adbbc15e8",
+  "nativeOutcome": "Failed",
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37877376983",
+  "scope": "Completed four-partition failed native run; 112 exact cases executed on one source. Subsequent fixes are separately verified.",
+  "sourceManifestSHA256": "bb5fc3625e6565b2073a3241733d2647f75a19c4f55a6a0c04f46a2d625a041d"
+}

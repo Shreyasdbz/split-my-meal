@@ -1,0 +1,25 @@
+{
+  "actualCaseCount": 1,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "status": "Passed"
+    }
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    }
+  ],
+  "passedCaseCount": 1,
+  "requestedSelectorCount": 1,
+  "result": "Passed",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0
+}

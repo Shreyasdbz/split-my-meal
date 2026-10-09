@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "caseLogSHA256": "42a50f401f562428f38647446f0949e3cc7d545ee26b61033e042de2c96e08ac",
+      "events": [
+        {
+          "elapsedSeconds": 224.56,
+          "event": "Terminate app before dark relaunch"
+        },
+        {
+          "elapsedSeconds": 239.24,
+          "event": "Final meal readiness wait begins"
+        },
+        {
+          "elapsedSeconds": 240.27,
+          "event": "Readiness query continues after allowance"
+        },
+        {
+          "elapsedSeconds": 243.98,
+          "event": "Final dark meal screenshot added"
+        },
+        {
+          "elapsedSeconds": 245.89,
+          "event": "Final dark meal geometry added"
+        },
+        {
+          "elapsedSeconds": 245.97,
+          "event": "Teardown begins"
+        },
+        {
+          "elapsedSeconds": 306.66,
+          "event": "Teardown after app termination failure"
+        }
+      ],
+      "executionAllowanceSeconds": 240,
+      "nativeCase": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+      "nativeResult": "Failed",
+      "partition": "iphone-a",
+      "secondaryTeardownTerminationFailure": true,
+      "testLogSHA256": "fea3fc13c9d474ca571b3f9922fce4c02832a530ee472a7e442ab10d04a0e1ca"
+    },
+    {
+      "caseLogSHA256": "71ffe821c17856060612f6420884431509c91e05059f99873e4179ea55def56e",
+      "events": [
+        {
+          "elapsedSeconds": 240.68,
+          "event": "Charge readiness query after allowance"
+        },
+        {
+          "elapsedSeconds": 269.27,
+          "event": "Receipt screenshot added"
+        },
+        {
+          "elapsedSeconds": 298.1,
+          "event": "Final landscape library screenshot added"
+        },
+        {
+          "elapsedSeconds": 300.13,
+          "event": "Teardown begins"
+        }
+      ],
+      "executionAllowanceSeconds": 240,
+      "nativeCase": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "nativeResult": "Failed",
+      "partition": "iphone-b",
+      "secondaryTeardownTerminationFailure": false,
+      "testLogSHA256": "3f4ad6d7033d2c9022491d1f6080cb6a9792221b5bf87bc6c49b900bdd8cfc13"
+    }
+  ],
+  "head": "45c1bfc67de8711b54f00879d71c117adbbc15e8",
+  "scope": "Original hosted activity timeline supports a scoped complete-journey allowance; failed original outcomes are retained. It does not establish cause of hosted timing or certify elimination of failures.",
+  "sourceManifestSHA256": "bb5fc3625e6565b2073a3241733d2647f75a19c4f55a6a0c04f46a2d625a041d"
+}

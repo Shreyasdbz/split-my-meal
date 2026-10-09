@@ -1,0 +1,22 @@
+{
+  "all33ProductionProjectInputsMatchPublishedRelease": true,
+  "all47InputsMatchCurrentFiles": true,
+  "controlsAndAssertions": "Actual native Settings route, real trailing-switch tap, original-value equality, five-second native wait, asynchronous UIKit readback, final native hierarchy and pixels; no preference injection.",
+  "originalAttachments": {
+    "B3D7F043-7829-468F-8FE9-B1D217DB556C.txt": "ebadb71c45c4a928a307238ef235ccb7838c79e5a88cb5e0cf6dbddb5d0783de",
+    "EDC701F4-3EB5-4AD0-A966-11DB92F59A59.png": "a632d5217806593be5770f7b97b8a059bc858ca590270b59b4d0cdc3e07434ef",
+    "F1AC2221-FC98-4C38-ACCC-D64C70818642.txt": "2d42e006681fd38b53b39309fa6feb310d213a1306d6b51479cf39251c85a21e"
+  },
+  "originalPreference": "0",
+  "outerExitCode": 0,
+  "restoredNativeSwitch": "0",
+  "restoredPixels": "satisfaction-ipad-native-motion-route-final-restored-setting.png",
+  "restoredPixelsSHA256": "a632d5217806593be5770f7b97b8a059bc858ca590270b59b4d0cdc3e07434ef",
+  "restoredUIKitReduceMotion": false,
+  "rootInspectedOriginalPixels": true,
+  "scope": "One exact native iPad Reduce Motion journey. Restores the real system preference through native Settings and verifies UIKit. Local Settings retained the same process; hosted restart recovery remains a separate CI boundary.",
+  "selectionResults": "satisfaction-ipad-native-motion-route-final-selection-results.json",
+  "sourceManifest": "satisfaction-ipad-native-motion-route-final-source-manifest.json",
+  "sourceManifestSHA256": "422cbd52efa112e6df6f881f7e7ce73597e8b1e57f93bf648181c5d92c031337",
+  "sourceResults": "satisfaction-ipad-native-motion-route-final-results.json"
+}

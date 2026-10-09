@@ -1,0 +1,51 @@
+{
+  "actualCaseCount": 3,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "status": "Passed"
+    }
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    }
+  ],
+  "passedCaseCount": 3,
+  "requestedSelectorCount": 3,
+  "result": "Passed",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0
+}

@@ -1,6 +1,6 @@
 # iOS 27 verification
 
-Evidence recorded on 7–8 October 2026 with Xcode 27.0 (27A266a), Swift 6, SDK 27.0 (24A430), and simulator runtime 27.0 (24A434). Version 2.0.0, build 2; minimum OS 17.4. See the [surface audit](ui-refinement.md), [paired gallery](ui-gallery.md), [validation history](refinement-validation-history.md), and [initial modernization record](verification-modernization.md).
+Evidence recorded on 7–9 October 2026 with Xcode 27.0 (27A266a), Swift 6, SDK 27.0 (24A430), and simulator runtime 27.0 (24A434). Version 2.0.0, build 2; minimum OS 17.4. See the [surface audit](ui-refinement.md), [paired gallery](ui-gallery.md), [validation history](refinement-validation-history.md), and [initial modernization record](verification-modernization.md).
 
 ## Current interaction refinement
 
@@ -20,6 +20,8 @@ Both complete corrected journeys passed on [iPad](evidence/satisfaction-ipad-nat
 
 The [focused-selector correction](evidence/satisfaction-focused-selector-guard-final-provenance.json) passes 23 checker tests and one actual native strict-control case on `be71fd…`. It rejects malformed requests before build and reconciles every requested scope with actual native IDs and statuses after execution. A [negative analysis](evidence/satisfaction-focused-selector-guard-final-negative-provenance.json) of retained native evidence rejects a mixed valid/nonexistent request even though the valid case passed; it does not replay that native case. Only three verification-script inputs differ from `e2f96f…`; production and UI-test sources are unchanged.
 
+The subsequent guarded native Settings cleanup passes all three exact [phone journeys](evidence/satisfaction-iphone-native-navigation-budget-final-provenance.json) and the exact [iPad Motion journey](evidence/satisfaction-ipad-native-motion-route-final-provenance.json), with zero failures or skips on one `422cbd…` source. Both native switches and UIKit restore to their original disabled value; original restoration pixels and hashes are retained. All 33 production/project inputs still match the published unsigned Release build. This focused proof does not replace the four-job full hosted acceptance or establish the cause of earlier Settings process changes.
+
 ## Historical modernization evidence
 
 | Check | Recorded result | Evidence and scope |
@@ -37,7 +39,7 @@ The retained complete iPad attempts include keyboard-disappearance and individua
 
 The first final-main iPad B job [rejected incomplete discovery](evidence/satisfaction-main-bootstrap-ipad-b-provenance.json). The corrected [cold-start prerequisite check](evidence/satisfaction-boot-order-provenance.json) completes boot and validates isolation before discovery, then reconciles all 56 stable identities and five disabled Live identities without errors. Only the runner script changed; all 33 final production/project hashes are unchanged. Complete hosted journeys remain a separate acceptance boundary.
 
-The subsequent hosted [iPad B13 partition on parent main45](evidence/satisfaction-main-45-ipad-b-provenance.json) passes every exact selected identity with zero failures or skips; all 47 artifact hashes match that commit. Its [complete observational inventory](evidence/satisfaction-main-45-ipad-b-accessibility-inventory-provenance.json) remains retained. This single partition does not establish full 56-case coverage or execution of the later person-submit and focused-selector changes.
+The completed [parent main45 hosted run](https://github.com/Shreyasdbz/split-my-meal/actions/runs/37877376983) executed all 56 exact identities per device. Phone recorded 53 passes and three failures; iPad recorded 55 passes and one failure, with zero skips. All 47 input hashes match the checked-out commit. [Phone A](evidence/satisfaction-main-45-iphone-a-provenance.json), [phone B](evidence/satisfaction-main-45-iphone-b-provenance.json), [iPad A](evidence/satisfaction-main-45-ipad-a-provenance.json) and [iPad B](evidence/satisfaction-main-45-ipad-b-provenance.json) preserve their actual outcomes. The [iPad B observational inventory](evidence/satisfaction-main-45-ipad-b-accessibility-inventory-provenance.json) remains retained. This failed full-suite result does not execute the later person-submit or focused-selector corrections.
 
 ## Hosted coverage contract
 
@@ -47,7 +49,7 @@ The [explicit catalogue](../scripts/stable-test-partitions.json) is checked agai
 
 Focused requests use `-only-testing:Target[/Class[/testMethod]]`, with optional method parentheses. Every requested scope must match actual native identities; unknown scopes, duplicate requests/results, failed or incomplete outcomes, and missing identity evidence reject verification. Exact matches and statuses remain in `focused-selection-results.json`. A target/class match establishes at least one executed case, not complete class coverage; skipped Live identities establish selection rather than passing provider execution. Full-suite claims use the separate exact catalogue gate.
 
-Case limits stay four minutes, with seven minutes for three long multi-launch journeys; individual control waits and native quiescence remain unchanged. Each hosted job retains its 75-minute limit. Partitioning leaves room for native execution and evidence export without retrying failed cases. The separate system-wide diagnostics collector remains disabled after an earlier stall; native result bundles and app evidence remain retained.
+Case limits stay four minutes, with seven minutes for six measured long journeys; individual control waits and native quiescence remain unchanged. Each hosted job retains its 75-minute limit. Partitioning leaves room for native execution and evidence export without retrying failed cases. The separate system-wide diagnostics collector remains disabled after an earlier stall; native result bundles and app evidence remain retained.
 
 ## Data and interaction coverage
 

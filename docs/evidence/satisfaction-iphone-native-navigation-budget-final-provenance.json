@@ -1,0 +1,26 @@
+{
+  "all33ProductionProjectInputsMatchPublishedRelease": true,
+  "all47InputsMatchCurrentFiles": true,
+  "controlsAndAssertions": "Actual native Settings route, real trailing-switch tap, original-value equality, five-second native wait, asynchronous UIKit readback, final native hierarchy and pixels; no preference injection.",
+  "originalAttachments": {
+    "5C952D8E-D87B-4079-B08F-9CB3CD6305CC.txt": "8075f9716c28aca082ee1e9490ab5b8e61302aaba48772b2d1f7a331fb09835e",
+    "C6C5BB8D-C83B-4FD9-908B-45FE3AAE2C59.png": "899150c979dcd738d8de4d91ed781d7991787e74c8be4678272a4d63782bbb79",
+    "F5FDD058-CD3F-4F0A-B6BB-2C6F445D4A36.txt": "2d42e006681fd38b53b39309fa6feb310d213a1306d6b51479cf39251c85a21e"
+  },
+  "originalPreference": "0",
+  "outerExitCode": 0,
+  "restoredNativeSwitch": "0",
+  "restoredPixels": "satisfaction-iphone-native-navigation-budget-final-restored-setting.png",
+  "restoredPixelsSHA256": "899150c979dcd738d8de4d91ed781d7991787e74c8be4678272a4d63782bbb79",
+  "restoredUIKitReduceMotion": false,
+  "rootInspectedAppPixels": [
+    "FE293B55-7D30-41BD-9401-047F31494930.png",
+    "3F2EFC32-E7A2-48F4-9433-A44E0657C6B5.png"
+  ],
+  "rootInspectedOriginalPixels": true,
+  "scope": "Three exact native iPhone journeys on the corrected source. Local checks do not certify full hosted coverage or cause/elimination of prior failures.",
+  "selectionResults": "satisfaction-iphone-native-navigation-budget-final-selection-results.json",
+  "sourceManifest": "satisfaction-iphone-native-navigation-budget-final-source-manifest.json",
+  "sourceManifestSHA256": "422cbd52efa112e6df6f881f7e7ce73597e8b1e57f93bf648181c5d92c031337",
+  "sourceResults": "satisfaction-iphone-native-navigation-budget-final-results.json"
+}

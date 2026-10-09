@@ -1,0 +1,96 @@
+{
+  "devices": {
+    "ipad": {
+      "assertionTimeHierarchies": [
+        "2BEB017F-D9CF-4829-87EC-6385CE4CF4F9.txt",
+        "13E4E1DC-68CF-488D-8B2B-FBE651247C7D.txt",
+        "E2147476-AEAA-4553-B833-ED919DE12695.txt"
+      ],
+      "assertionTimeSettingsPage": "General",
+      "baselineAttachment": "30B83730-CE60-4E7D-84E7-A865F93A06C2.txt",
+      "bodyShareDismissalSeconds": 220.1,
+      "cleanupStartSeconds": 220.27,
+      "dependentHittabilityQuerySeconds": 234.63,
+      "dependentValueQuerySeconds": 236.97,
+      "executionAllowanceSeconds": 240,
+      "failureSnapshot": "7C9A21CD-03B4-4CB1-8E33-72E184E91A97",
+      "firstMissingSwitchFailureSeconds": 234.11,
+      "initialMotionHierarchy": "42164635-194A-4F15-AC31-5BE5DD2A5B19.txt",
+      "initialSettingsRouteReadySeconds": 32.64,
+      "initialSettingsRouteSeconds": 27.31,
+      "initialSettingsRouteStartSeconds": 5.33,
+      "missingSnapshotFailureSeconds": 239.57,
+      "nativeFailureMessages": 4,
+      "nativeResult": "Failed",
+      "originalAttachmentSHA256": {
+        "13E4E1DC-68CF-488D-8B2B-FBE651247C7D.txt": "fa33bc7c28b93204798f69fa79f4b6a17db71391f969695740724e4d9fb38c1f",
+        "2BEB017F-D9CF-4829-87EC-6385CE4CF4F9.txt": "be6011b91a0e1f7b022cbfa1d2a445e84111997042815b799ab411748fb4dbae",
+        "30B83730-CE60-4E7D-84E7-A865F93A06C2.txt": "2d42e006681fd38b53b39309fa6feb310d213a1306d6b51479cf39251c85a21e",
+        "42164635-194A-4F15-AC31-5BE5DD2A5B19.txt": "dcc60bb3f19d85cb582d3045368fec9dd9211b450772922b440111fcaa2cde86",
+        "78C7C58C-D9EF-4131-9E00-122C543D12C5": "710db784bd0594025e4f83a838d59fda6cc1e2a4cfe85ce53f758964423d2bb9",
+        "7C9A21CD-03B4-4CB1-8E33-72E184E91A97": "94da550f463c47c39a74af3836dcfd91829b4e79f173f790d2ce899c41756697",
+        "E2147476-AEAA-4553-B833-ED919DE12695.txt": "8eaec8539473c09735bb473758be964f78e13d0e90a7825df07b8a1eed053686"
+      },
+      "originalTestLogSHA256": "da2df11f426595d9ab86ff956c4004b8ed326b0efb85622a3de35c12156c20c4",
+      "runtimeWarnings": 1,
+      "screenRecordingAttachment": "78C7C58C-D9EF-4131-9E00-122C543D12C5",
+      "settingsActivationSeconds": 221.44,
+      "settingsForegroundSeconds": 228.84
+    },
+    "iphone": {
+      "assertionTimeHierarchies": [
+        "87431B25-35BA-41FB-9476-C3194065AD9D.txt",
+        "1C2526AD-8046-48F0-B116-957CE2BE08CC.txt",
+        "1EFBEE94-A924-4846-BD8B-45B0EA284AB7.txt"
+      ],
+      "assertionTimeSettingsPage": "Settings root",
+      "baselineAttachment": "C9CEE342-DE04-4486-8257-D6DDE6D2EEA3.txt",
+      "bodyShareDismissalSeconds": 155.49,
+      "cleanupStartSeconds": 155.59,
+      "dependentHittabilityQuerySeconds": 168.42,
+      "dependentValueQuerySeconds": 170.62,
+      "executionAllowanceSeconds": 240,
+      "failureSnapshot": "584B9197-7C41-46E8-A895-1B756D0FEC58",
+      "firstMissingSwitchFailureSeconds": 168.21,
+      "initialMotionHierarchy": "32615470-261F-4ADA-9E01-FC1933F16A59.txt",
+      "initialSettingsRouteReadySeconds": 29.55,
+      "initialSettingsRouteSeconds": 24.37,
+      "initialSettingsRouteStartSeconds": 5.18,
+      "lastLoggedTeardownSeconds": 173.03,
+      "missingSnapshotFailureSeconds": 172.96,
+      "nativeFailureMessages": 4,
+      "nativeResult": "Failed",
+      "originalAttachmentSHA256": {
+        "1C2526AD-8046-48F0-B116-957CE2BE08CC.txt": "a69e65bea13a946c50fa70ff4b41ad35b0706a418a495b914d614dbedc044c5d",
+        "1EFBEE94-A924-4846-BD8B-45B0EA284AB7.txt": "d320dd5d5988ca852f461bac054f5d74708cd6982f07e1723a003d3ac10c16e4",
+        "32615470-261F-4ADA-9E01-FC1933F16A59.txt": "37603a640b49d423e1f206efe8379f71c58c4e29bf56d801f6a0fc74c98c47c5",
+        "584B9197-7C41-46E8-A895-1B756D0FEC58": "6376a6502c8e10e24c125e9184d00acc6c55a35d7e586c1bb11148ae9873c713",
+        "87431B25-35BA-41FB-9476-C3194065AD9D.txt": "24b4ae3621c4dcf8f630996cad322182aafe1e964098ef2e2516f9f4583a66ae",
+        "AF38B761-29CC-45B9-AC5D-F1203EF0B619": "710db784bd0594025e4f83a838d59fda6cc1e2a4cfe85ce53f758964423d2bb9",
+        "C9CEE342-DE04-4486-8257-D6DDE6D2EEA3.txt": "2d42e006681fd38b53b39309fa6feb310d213a1306d6b51479cf39251c85a21e"
+      },
+      "originalTestLogSHA256": "fea3fc13c9d474ca571b3f9922fce4c02832a530ee472a7e442ab10d04a0e1ca",
+      "runtimeWarnings": 1,
+      "screenRecordingAttachment": "AF38B761-29CC-45B9-AC5D-F1203EF0B619",
+      "settingsActivationSeconds": 156.61,
+      "settingsForegroundSeconds": 163.09
+    }
+  },
+  "earlierJourneyAssertionFailure": false,
+  "failureEvidenceLimits": {
+    "noReasonEstablishedForSettingsProcessChange": true,
+    "phoneAfter173SecondsUnloggedUntilAllowance": true,
+    "recordingPayload": "Unexpected Error: Finished test run with pending attachment.",
+    "settingsFailurePixelsAvailable": false,
+    "snapshotContainsOnlyAccessibilityArchive": true
+  },
+  "finalNativePreference": "unverified",
+  "initialNativePreference": "0",
+  "observation": "The Settings activation used for cleanup launched a different Settings process at a page without the Reduce Motion switch. Cleanup assumed the Motion page remained open. No restoration tap or restored-preference proof executed.",
+  "observedHead": "45c1bfc67de8711b54f00879d71c117adbbc15e8",
+  "proposedCorrection": "Re-enter the existing native Accessibility to Motion route for cleanup; stop dependent control queries after a recorded routing failure; preserve original switch, real native tap, notification and restoration proof checks.",
+  "sourceInputCount": 47,
+  "sourceManifestSHA256": "bb5fc3625e6565b2073a3241733d2647f75a19c4f55a6a0c04f46a2d625a041d",
+  "testFileSHA256": "ec8712a4f1b8b7aa601a914fa6850a4aa752f8241af2eedc5e3c538a638ce30c",
+  "testID": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit"
+}

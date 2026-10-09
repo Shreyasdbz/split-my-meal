@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791518689.063,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Focused native Reduce Motion journey and verified real preference restoration; not full-suite acceptance.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-native-motion-route-final-source-manifest.json",
+  "sourceManifestSHA256": "422cbd52efa112e6df6f881f7e7ce73597e8b1e57f93bf648181c5d92c031337",
+  "startTime": 1791518535.536,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 150.36649203300476,
+      "name": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "nodeIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

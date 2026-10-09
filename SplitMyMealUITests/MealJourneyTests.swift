@@ -171,21 +171,34 @@ final class MealJourneyTests: XCTestCase {
 
     /// Uses the real system preference and restores its original value even after a journey assertion fails.
     func testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit() throws {
+        // Hosted iPad interaction plus the required native restoration route exceeded four minutes.
+        executionTimeAllowance = 420
         let settings = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
-        let motion = openReduceMotionSetting(in: settings)
+        // Registered first so it also runs after an initial routing failure,
+        // and runs after preference restoration under XCTest's reverse order.
+        addTeardownBlock { @MainActor [self] () async throws in
+            settings.terminate()
+            app.activate()
+        }
+        guard let motion = openReduceMotionSetting(in: settings) else { return }
         let original = motion.value as? String
-        XCTAssertTrue(original == "0" || original == "1", "Native Reduce Motion must expose its original switch value.")
-        guard let original else { return }
+        guard let original, original == "0" || original == "1" else {
+            XCTFail("Native Reduce Motion must expose its original switch value.")
+            return
+        }
         addTeardownBlock { @MainActor [self] () async throws in
             // Restoration must finish and report every failed check even when
             // the journey stopped at its first assertion.
             continueAfterFailure = true
             XCUIDevice.shared.orientation = .portrait
-            settings.activate()
-            XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 5))
-            let control = settings.switches["Reduce Motion"].firstMatch
-            XCTAssertTrue(control.waitForExistence(timeout: 5), "The original native preference must remain available for restoration.")
-            XCTAssertTrue(control.isHittable)
+            // Settings can relaunch at its root while the app journey runs.
+            guard let control = openReduceMotionSetting(in: settings) else {
+                let proof = XCTAttachment(string: "Original Reduce Motion: \(original)\nRestoration unverified: the native Motion route failed.\nRunner Reduce Motion: \(UIAccessibility.isReduceMotionEnabled)")
+                proof.name = "reduce-motion-native-restoration-unverified"
+                proof.lifetime = .keepAlways
+                add(proof)
+                return
+            }
             if control.value as? String != original {
                 control.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
             }
@@ -206,8 +219,6 @@ final class MealJourneyTests: XCTestCase {
             pixels.lifetime = .keepAlways
             add(pixels)
             XCTAssertEqual(UIAccessibility.isReduceMotionEnabled, original == "1", "UIKit must reflect the restored native preference.")
-            settings.terminate()
-            app.activate()
         }
         let baseline = XCTAttachment(string: "Original Reduce Motion: \(original)\nRunner Reduce Motion: \(UIAccessibility.isReduceMotionEnabled)")
         baseline.name = "reduce-motion-native-baseline"
@@ -294,8 +305,8 @@ final class MealJourneyTests: XCTestCase {
         closeShareSheet()
     }
 
-    /// Opens Accessibility → Motion through native Settings rows, without relying on its search index.
-    private func openReduceMotionSetting(in settings: XCUIApplication) -> XCUIElement {
+    /// Opens the native Motion page without changing preferences; failed routing is recorded and returns nil.
+    private func openReduceMotionSetting(in settings: XCUIApplication) -> XCUIElement? {
         func capture(_ stage: String) {
             let tree = XCTAttachment(string: settings.debugDescription)
             tree.name = "reduce-motion-settings-" + stage + "-hierarchy"
@@ -306,56 +317,64 @@ final class MealJourneyTests: XCTestCase {
             pixels.lifetime = .keepAlways
             add(pixels)
         }
-        settings.launch()
-        XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 5))
+        func require(_ condition: Bool, _ message: String) -> Bool {
+            guard condition else {
+                capture("routing-failure")
+                XCTFail(message)
+                return false
+            }
+            return true
+        }
+        settings.activate()
+        guard require(settings.wait(for: .runningForeground, timeout: 5), "Native Settings must reach the foreground.") else { return nil }
         capture("entry")
         let search = settings.searchFields["Search"].firstMatch
         if search.exists {
             let clear = search.buttons["Clear text"]
             if clear.exists {
-                XCTAssertTrue(clear.isHittable)
+                guard require(clear.isHittable, "The native Settings search clear control must be reachable.") else { return nil }
                 clear.tap()
             }
         }
         let close = settings.buttons["close"]
         if close.exists {
-            XCTAssertTrue(close.isHittable)
+            guard require(close.isHittable, "The native Settings search close control must be reachable.") else { return nil }
             close.tap()
-            XCTAssertTrue(settings.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+            guard require(settings.keyboards.firstMatch.waitForNonExistence(timeout: 5), "The native Settings search keyboard must dismiss.") else { return nil }
         }
         if settings.keyboards.firstMatch.exists {
             let hide = settings.keyboards.buttons["Hide keyboard"]
-            XCTAssertTrue(hide.waitForExistence(timeout: 5), "The native Settings keyboard must expose its dismissal control.")
-            XCTAssertTrue(hide.isHittable)
+            guard require(hide.waitForExistence(timeout: 5), "The native Settings keyboard must expose its dismissal control."),
+                  require(hide.isHittable, "The native Settings keyboard dismissal control must be reachable.") else { return nil }
             hide.tap()
-            XCTAssertTrue(settings.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+            guard require(settings.keyboards.firstMatch.waitForNonExistence(timeout: 5), "The native Settings keyboard must dismiss.") else { return nil }
         }
         let sidebar = settings.collectionViews["com.apple.settings.sidebar.collectionView"]
         for _ in 0..<6 where !sidebar.exists {
             let back = settings.navigationBars.buttons.matching(NSPredicate(format: "label IN %@", ["Settings", "Apps", "Split My Meal", "Accessibility", "Motion"])).firstMatch
-            XCTAssertTrue(back.waitForExistence(timeout: 5), "Native Settings must expose its parent navigation before opening Accessibility.")
-            XCTAssertTrue(back.isHittable)
+            guard require(back.waitForExistence(timeout: 5), "Native Settings must expose its parent navigation before opening Accessibility."),
+                  require(back.isHittable, "The native Settings parent navigation must be reachable.") else { return nil }
             back.tap()
         }
         capture("root")
-        XCTAssertTrue(sidebar.waitForExistence(timeout: 5))
-        XCTAssertTrue(settings.frame.intersects(sidebar.frame), "The native Settings sidebar must be inside its visible window.")
+        guard require(sidebar.waitForExistence(timeout: 5), "Native Settings must expose its sidebar."),
+              require(settings.frame.intersects(sidebar.frame), "The native Settings sidebar must be inside its visible window.") else { return nil }
         let accessibility = sidebar.buttons["com.apple.settings.accessibility"]
         for _ in 0..<8 where !accessibility.isHittable { sidebar.swipeUp(velocity: .slow) }
-        XCTAssertTrue(accessibility.waitForExistence(timeout: 5), "Native Settings must expose the Accessibility row.")
-        XCTAssertTrue(accessibility.isHittable)
+        guard require(accessibility.waitForExistence(timeout: 5), "Native Settings must expose the Accessibility row."),
+              require(accessibility.isHittable, "The native Accessibility row must be reachable.") else { return nil }
         accessibility.tap()
         capture("accessibility")
-        XCTAssertTrue(settings.navigationBars["Accessibility"].waitForExistence(timeout: 5))
+        guard require(settings.navigationBars["Accessibility"].waitForExistence(timeout: 5), "Native Settings must open Accessibility.") else { return nil }
         let motion = settings.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Motion")).firstMatch
-        XCTAssertTrue(motion.waitForExistence(timeout: 5), "Accessibility must expose its native Motion row.")
-        XCTAssertTrue(motion.isHittable)
+        guard require(motion.waitForExistence(timeout: 5), "Accessibility must expose its native Motion row."),
+              require(motion.isHittable, "The native Motion row must be reachable.") else { return nil }
         motion.tap()
         capture("motion")
-        XCTAssertTrue(settings.navigationBars["Motion"].waitForExistence(timeout: 5))
+        guard require(settings.navigationBars["Motion"].waitForExistence(timeout: 5), "Native Settings must open Motion.") else { return nil }
         let control = settings.switches["Reduce Motion"].firstMatch
-        XCTAssertTrue(control.waitForExistence(timeout: 5))
-        XCTAssertTrue(control.isHittable)
+        guard require(control.waitForExistence(timeout: 5), "The original native preference must remain available for restoration."),
+              require(control.isHittable, "The native Reduce Motion switch must be reachable.") else { return nil }
         return control
     }
 
@@ -429,6 +448,8 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testLargeTextAndLandscapeNavigation() throws {
+        // Hosted navigation reached its final checks after the four-minute default.
+        executionTimeAllowance = 420
         app.terminate()
         app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-demo", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
         launchForMealTesting()
@@ -701,6 +722,8 @@ final class MealJourneyTests: XCTestCase {
 
     /// Produces principal screen evidence and a repeatable source for simulator video capture.
     func testDemoWalkthrough() throws {
+        // Hosted screen capture reached its final checks after the four-minute default.
+        executionTimeAllowance = 420
         launchDemo()
         screenshot("demo-library-light")
         openDemo()
