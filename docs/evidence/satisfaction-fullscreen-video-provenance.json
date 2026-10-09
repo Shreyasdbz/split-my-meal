@@ -1,0 +1,323 @@
+{
+  "devices": {
+    "ipad": {
+      "bytes": 38344426,
+      "decodedBoundaryFrameSHA256": [
+        {
+          "file": "frame-0.00.png",
+          "sha256": "13f212e6bf16e95d2c912ba2b20f7411dec4f01489491fa65b3f37c3d4a79a6e"
+        },
+        {
+          "file": "frame-63.05.png",
+          "sha256": "a6a2901a59d35e2e1d2f76025f711543cac7807092d1be2d396459981abb2a10"
+        }
+      ],
+      "decodedBoundaryMetadata": {
+        "durationSeconds": 63.2,
+        "encodedHeight": 1280,
+        "encodedWidth": 892,
+        "frames": [
+          {
+            "actualSeconds": 0,
+            "file": "frame-0.00.png",
+            "requestedSeconds": 0
+          },
+          {
+            "actualSeconds": 63.045,
+            "file": "frame-63.05.png",
+            "requestedSeconds": 63.05
+          }
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "decodedSampleFrameSHA256": [
+        {
+          "file": "frame-25.png",
+          "sha256": "dee2271b201d4c20372ee5c56cb99e127c344d90fa4be580afe9b70f8c53d82a"
+        },
+        {
+          "file": "frame-3.png",
+          "sha256": "0e9e96cf51683193a01051e6f8c5174a11dce424979bee8d4d10bdb5671e1f64"
+        },
+        {
+          "file": "frame-50.png",
+          "sha256": "a27a51afb5ffbba0f373b430ce65162997f5b290a6d45c1d099bf793996bddfc"
+        },
+        {
+          "file": "frame-75.png",
+          "sha256": "573a3ff53859308544d30633379eb2b4ba31c45291f45d3ee204de65434003f1"
+        },
+        {
+          "file": "frame-95.png",
+          "sha256": "6ea7abe6e5a4d889cfc4f31994fa5740365bfa370e5d979fb77195d9d48227b8"
+        }
+      ],
+      "encodedMetadata": {
+        "bytes": 38344426,
+        "durationSeconds": 63.2,
+        "encodedHeight": 1280,
+        "encodedWidth": 892,
+        "source": "demo-walkthrough.mp4",
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "verifiedFrameTimesSeconds": [
+          0.8066666666666666,
+          15.795,
+          31.243333333333332,
+          45.833333333333336,
+          60.035
+        ]
+      },
+      "encoding": "AVFoundation H.264 1280x720 preset; source orientation retained; no internal cuts, overlays or speed changes.",
+      "file": "satisfaction-fullscreen-ipad-walkthrough.mp4",
+      "filesystemTimeScope": "Artifact filesystem timestamps; not asserted to equal native first/last event time.",
+      "nativeResult": "satisfaction-fullscreen-ipad-demo-results.json",
+      "nativeResultSHA256": "4c7f4117992fed65857c3a94a70fbe95bfc13c2e57709814704d6f1d8557dc4a",
+      "originalBirthTimeUnixSeconds": 1791531933.1282706,
+      "originalBytes": 134473647,
+      "originalDurationSeconds": 90.01166666666667,
+      "originalModificationTimeUnixSeconds": 1791532023.3520625,
+      "originalRecordingFile": "demo-walkthrough.mp4",
+      "originalSHA256": "400eccd3508e075b990c23637a7fa84238595aa026530814f052aa0a7ec8c9fe",
+      "playbackSpeed": 1,
+      "rejectedCandidate": {
+        "archiveFile": "smm-fullscreen-ipad-sideways-ending-candidate.mp4",
+        "bytes": 39800161,
+        "reason": "Sideways ending was rejected for publication; exact candidate retained privately before replacement.",
+        "sha256": "6cac91a5a5c8044788597043f5202c2e7b555f2f13f2872d2bcd8d0a4e977675"
+      },
+      "sampledReview": {
+        "boundaryFramesViewed": 2,
+        "finding": "Upright endpoints approved. Tax sample includes a native sheet transition and the sideways map remains at its original native orientation.",
+        "limit": "Sampled review only. Last decoded boundary precedes the literal final encoded timestamp; no full-video fluidity, physical haptic or global accessibility claim.",
+        "reviewer": "Independent visual designer, as reported by parent",
+        "samplesViewed": 5
+      },
+      "sha256": "48ef6955ce648b141f3317608f82d74652e859c4e3534197f1419136276faea5",
+      "sourceManifest": "satisfaction-fullscreen-ipad-demo-source-manifest.json",
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+      "trimEndSeconds": 75.2,
+      "trimStartSeconds": 12.0
+    },
+    "iphone": {
+      "bytes": 42998622,
+      "decodedBoundaryFrameSHA256": [
+        {
+          "file": "frame-0.00.png",
+          "sha256": "c076f5e6ea8f1e1c2d918c8a6d5cfdb17aee86b07ba32ca271c549b1a397eea7"
+        },
+        {
+          "file": "frame-60.85.png",
+          "sha256": "37e4073030328c6b052ff75637e0003a0ec77e7c6ac2148aef42f501df2f8ac9"
+        }
+      ],
+      "decodedBoundaryMetadata": {
+        "durationSeconds": 61,
+        "encodedHeight": 1280,
+        "encodedWidth": 588,
+        "frames": [
+          {
+            "actualSeconds": 0,
+            "file": "frame-0.00.png",
+            "requestedSeconds": 0
+          },
+          {
+            "actualSeconds": 60.843333333333334,
+            "file": "frame-60.85.png",
+            "requestedSeconds": 60.85
+          }
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "decodedSampleFrameSHA256": [
+        {
+          "file": "frame-25.png",
+          "sha256": "7ff43f67789bf3d92c08954fbc8e707c416ac3e90ae899bc5739cf3a98159df1"
+        },
+        {
+          "file": "frame-3.png",
+          "sha256": "6b0dfde1be70d62a1861354cbc58c9e268a4957a5a53277fd70156465d08f07e"
+        },
+        {
+          "file": "frame-50.png",
+          "sha256": "4431c9fa0bbc9b0e1a0b01647a8182175a69fe732458c08ceba45bd0fcff6799"
+        },
+        {
+          "file": "frame-75.png",
+          "sha256": "a0085f1744cf193a22cfbb0021908f115320620fa70cb13329b07e915b5b37a5"
+        },
+        {
+          "file": "frame-95.png",
+          "sha256": "56f421bfd18e8ca5e09d9876abcbc251e6ea530b7f0432704071ffa0e40abd1e"
+        }
+      ],
+      "encodedMetadata": {
+        "bytes": 42998622,
+        "durationSeconds": 61,
+        "encodedHeight": 1280,
+        "encodedWidth": 588,
+        "source": "demo-walkthrough.mp4",
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "verifiedFrameTimesSeconds": [
+          1.8233333333333333,
+          15.228333333333333,
+          30.49,
+          44.60333333333333,
+          57.94
+        ]
+      },
+      "encoding": "AVFoundation H.264 1280x720 preset; source orientation retained; no internal cuts, overlays or speed changes.",
+      "file": "satisfaction-fullscreen-iphone-walkthrough.mp4",
+      "filesystemTimeScope": "Artifact filesystem timestamps; not asserted to equal native first/last event time.",
+      "nativeResult": "satisfaction-fullscreen-iphone-demo-results.json",
+      "nativeResultSHA256": "2a16441b9a1aff3d590df25358237e6e0e5b524426c924a17736210b3b143775",
+      "originalBirthTimeUnixSeconds": 1791531850.984177,
+      "originalBytes": 95664626,
+      "originalDurationSeconds": 82.83666666666667,
+      "originalModificationTimeUnixSeconds": 1791531933.9838164,
+      "originalRecordingFile": "demo-walkthrough.mp4",
+      "originalSHA256": "0aa181420064045f023d8a7788e6c2540f3834264d9a3df458128e6d849ecf3b",
+      "playbackSpeed": 1,
+      "sampledReview": {
+        "boundaryFramesViewed": 2,
+        "finding": "Upright library at the first boundary and upright meal footer at the last boundary. Native sideways map retained at 44.6033 seconds and native rotation transition retained at 57.94 seconds.",
+        "limit": "Sampled review only. Last decoded boundary precedes the literal final encoded timestamp; no full-video fluidity, physical haptic or global accessibility claim.",
+        "reviewer": "Verification worker",
+        "samplesViewed": 5
+      },
+      "sha256": "6d1cc7420644f77d82da61a14762bcda11f3f9444345d26cc4cc61c584eb69a1",
+      "sourceManifest": "satisfaction-fullscreen-iphone-demo-source-manifest.json",
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+      "trimEndSeconds": 73.0,
+      "trimStartSeconds": 12.0
+    }
+  },
+  "productionComparisonRecordedDuringMediaFinalization": {
+    "analyzer": "passed",
+    "comparedAtUTC": "2026-10-09T08:10:29.196005+00:00",
+    "currentSourceCertification": "Pending new Release/native capture after the parent introduced a DEBUG viewport measurement; this manifest does not certify all current inputs.",
+    "differentInputsAtComparisonSHA256": {
+      "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "8d28d844bf3273fc98e4029de74f37fff7326c37d89dd1f5428ad90575ee6fbe"
+    },
+    "inputCount": 33,
+    "inputSHA256": {
+      "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "85d030acdd33a8eb3690f1c691823a8a46b7832dd4ec9ad220bbc0a2af5cb873",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+      "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/AppIcon.png": "5f9e252952b674f8ff5677fb5d686095b21896b4775d2336483ba9beb2928a32",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/Contents.json": "852920cb36e95beb53771138a4b8195a16fcce1cc31250632f246081cc638f9a",
+      "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+      "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+      "SplitMyMeal-Prod-A/Design/MealDemo.swift": "ed5979d8705723b7235af118cc72f2a7a5693652b48ea509be028bbb32c1a27f",
+      "SplitMyMeal-Prod-A/Design/MealUI.swift": "133391ba64ffb2fe955c1e7c9ec0676f593bc74f29e98ded3d7b06b02a9975ae",
+      "SplitMyMeal-Prod-A/Info.plist": "8a1af94ec2577542de3bd3f23d76107f552bf993754059739ba158d39f9dd20c",
+      "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+      "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+      "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+      "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+      "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+      "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+      "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+      "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+      "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+      "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+      "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "380f10c29f27277d1a4e271ad169ee2f19bec340a4df9e3f7d74ba00c0935a91",
+      "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "ff88f280b693a4856517cda638f1c71f5d7fbfd8a55b91c5a962b89952a0d593",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "22e7c75a4db107b6a52dbea28a8f5e689f7dd6b538436cffdf4dec1c84eea9bc",
+      "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "83f5a419d25067832a06546cc49aefd68ff0a60e4bc0fc6b0805e28b935f555f",
+      "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "21d7d27fdc3019f650f515673bee8e73d08dec8d006433f85d0e9698630ca839",
+      "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "048cd2d5e5c0f198d6dc320c7b20049671553d9e853393212d702bfe71e31f11",
+      "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+      "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "7526ead54eac7d898c8b1c902cd0b1d7ab3c07322b27f92c86cb3cfb9d255951",
+      "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+      "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "a44d7c2a068c0db6b31089734abf69debdabd14305ec482acd47a66bc7627051"
+    },
+    "matchingInputCount": 32,
+    "matchingInputsAtComparisonSHA256": {
+      "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "85d030acdd33a8eb3690f1c691823a8a46b7832dd4ec9ad220bbc0a2af5cb873",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+      "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/AppIcon.png": "5f9e252952b674f8ff5677fb5d686095b21896b4775d2336483ba9beb2928a32",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/Contents.json": "852920cb36e95beb53771138a4b8195a16fcce1cc31250632f246081cc638f9a",
+      "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+      "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+      "SplitMyMeal-Prod-A/Design/MealDemo.swift": "ed5979d8705723b7235af118cc72f2a7a5693652b48ea509be028bbb32c1a27f",
+      "SplitMyMeal-Prod-A/Design/MealUI.swift": "133391ba64ffb2fe955c1e7c9ec0676f593bc74f29e98ded3d7b06b02a9975ae",
+      "SplitMyMeal-Prod-A/Info.plist": "8a1af94ec2577542de3bd3f23d76107f552bf993754059739ba158d39f9dd20c",
+      "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+      "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+      "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+      "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+      "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+      "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+      "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+      "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+      "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+      "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+      "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "380f10c29f27277d1a4e271ad169ee2f19bec340a4df9e3f7d74ba00c0935a91",
+      "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "ff88f280b693a4856517cda638f1c71f5d7fbfd8a55b91c5a962b89952a0d593",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "22e7c75a4db107b6a52dbea28a8f5e689f7dd6b538436cffdf4dec1c84eea9bc",
+      "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "83f5a419d25067832a06546cc49aefd68ff0a60e4bc0fc6b0805e28b935f555f",
+      "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "21d7d27fdc3019f650f515673bee8e73d08dec8d006433f85d0e9698630ca839",
+      "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+      "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "7526ead54eac7d898c8b1c902cd0b1d7ab3c07322b27f92c86cb3cfb9d255951",
+      "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+      "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "a44d7c2a068c0db6b31089734abf69debdabd14305ec482acd47a66bc7627051"
+    },
+    "mismatches": [
+      "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift"
+    ],
+    "releaseBinarySHA256": "966490cc423e88bd1e0bfc36d223f002da743a082a27b43c0f5784debbcdb68c",
+    "releaseBuild": "passed",
+    "releaseProvenance": "satisfaction-fullscreen-release-provenance.json",
+    "releaseProvenanceSHA256": "11c943c1d4d4adfa4f98530da943c5c34517173ba5f63ca7dbe5540b89735936",
+    "releaseSourceManifest": "satisfaction-fullscreen-release-source-manifest.json",
+    "releaseSourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+    "scope": "Historical production/project file comparison at the recorded UTC time; later source edits are not certified by this comparison. Capture-time47-input native manifests remain separate evidence."
+  },
+  "scope": "One continuous native light-mode interval per device at actual interaction speed, no internal cuts, overlays or generated pixels. Original PNGs separately retain dark states. Native rotations and transitions remain in the recordings; sampled review does not establish full playback fluidity.",
+  "subsequentReleaseVerification": {
+    "analyzer": "passed",
+    "binarySHA256": "62745e3a499578937da549132036f80c0cced0cccd095cc7d5ca767957e513d0",
+    "build": "passed",
+    "captureSourceDifference": "The captures retain their exact earlier source. The later MealScreen difference adds the isolated DEBUG pane measurement and empty Release backgrounds; 32 of33 capture production/project files match the final source.",
+    "debugMeasurementStringsAbsent": true,
+    "provenance": "satisfaction-viewport-release-provenance.json",
+    "provenanceSHA256": "a67562ecd1b5a2e45ea5f4d937368c9e5f626473ed392b250271057900d80893",
+    "sourceManifest": "satisfaction-viewport-release-source-manifest.json",
+    "sourceManifestSHA256": "fa828d3eed6cb54c2fa055842020c648797ca6a907f297ff588f7ab89fd4c058"
+  }
+}

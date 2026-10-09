@@ -1,0 +1,32 @@
+{
+  "actualCaseCount": 1,
+  "allSelectedPassed": true,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "status": "Passed"
+    }
+  ],
+  "exactNativeIDSet": true,
+  "expectedExactNativeIDs": [
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "outerExit": 0,
+  "passedCaseCount": 1,
+  "requestedSelectorCount": 1,
+  "result": "Passed",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0,
+  "sourceManifestSHA256": "adcd04f82a4d8b5093762385b377180a8a59a6ef5b296432f0b3306123f8c783"
+}

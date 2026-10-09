@@ -1,0 +1,32 @@
+{
+  "actualCaseCount": 1,
+  "allSelectedPassed": true,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+      "status": "Passed"
+    }
+  ],
+  "exactNativeIDSet": true,
+  "expectedExactNativeIDs": [
+    "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()"
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()"
+    }
+  ],
+  "outerExit": 0,
+  "passedCaseCount": 1,
+  "requestedSelectorCount": 1,
+  "result": "Passed",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0,
+  "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79"
+}

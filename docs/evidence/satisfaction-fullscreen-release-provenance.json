@@ -1,0 +1,39 @@
+{
+  "all33ProductionProjectInputsMatchedAtBuildVerification": true,
+  "all47InputsMatchedFilesAtBuildVerification": true,
+  "analyzer": "passed",
+  "binarySHA256": "966490cc423e88bd1e0bfc36d223f002da743a082a27b43c0f5784debbcdb68c",
+  "build": "2",
+  "codeSigning": "disabled for local verification",
+  "comparisonScope": "Historical file comparison when this build and analyzer finalized; subsequent source revisions require a fresh comparison.",
+  "compilerWarnings": [
+    "2026-10-09 03:42:43.111 appintentsmetadataprocessor[80698:10727449] warning: Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search",
+    "SplitMyMeal.MapDiagnostic"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionAndProjectSourceCount": 33,
+  "releaseBuild": "passed",
+  "scope": "Unsigned Release build and static analysis of the fullscreen restaurant map, native prominent content action, compact address summary with full accessible value, and My location copy. Physical devices, signing, Store and CloudKit remain separate.",
+  "sourceManifest": "satisfaction-fullscreen-release-source-manifest.json",
+  "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "verifiedAt": "2026-10-09T07:43:37.634977+00:00",
+  "version": "2.0.0"
+}

@@ -1,0 +1,62 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791521422.385,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 5,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Five current live MapKit cases on the owned iPad simulator; real Apple provider and native Settings/Maps handoffs, synthetic GPS, and one explicit DEBUG staged search error. Local integration evidence excludes physical devices and real accounts.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-live-ipad-0bad-source-manifest.json",
+  "sourceManifestSHA256": "d06abc0bdd33fc8067c5e4c67eb6eec33c5b3e53d1535c157b052867aa0e0399",
+  "startTime": 1791521129.418,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 45.29926002025604,
+      "name": "testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "nodeIdentifier": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 52.4721999168396,
+      "name": "testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 136.94447493553162,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 21.997634053230286,
+      "name": "testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "nodeIdentifier": "LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 31.35138201713562,
+      "name": "testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "nodeIdentifier": "LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 5
+}

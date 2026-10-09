@@ -1,0 +1,175 @@
+{
+  "appearancePreference": {
+    "equal": true,
+    "original": "light",
+    "restorationObservedByParent": true,
+    "restored": "light"
+  },
+  "comparisonScope": "All 47 compiled inputs compared after native outer completion before subsequent edits.",
+  "completeLogDiagnosticOccurrences": {
+    "animationSixtySecondWaitWarnings": [],
+    "executionAllowanceExceeded": [],
+    "invalidFrameWarnings": [
+      {
+        "logLine": 55,
+        "text": "<unknown>:0: warning: -[SplitMyMealUITests.LiveMapKitTests testNearbyLocationDeniedStillAllowsTextSearchAndCancellation] : Invalid frame dimension (negative or non-finite)."
+      }
+    ],
+    "sqliteUnlinkOrIntegrityDiagnostics": []
+  },
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 1,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "completeNativeLogSHA256": "6b6b0bbe9900c9ece6b1324cc5052e94408cead4bf54d196a3c222e0e4de2132",
+  "diagnosticCountContract": "Case-insensitive matching of actual native warning variants; counts are diagnostic occurrences, not case failures or cause attribution.",
+  "diagnosticMeasurementScope": "Compiled DEBUG --uitesting probe exposed the actual clipped pane rectangle through a full-pane accessibility marker. The marker remains part of this historical measurement source and can overlap static text; the outcome does not establish a production cause.",
+  "exactNativeIDSet": true,
+  "failedTests": 1,
+  "nativeResult": "Failed",
+  "noSourceEditsDuringRun": true,
+  "noStatusOverrides": true,
+  "originalFailureEvidence": [
+    {
+      "file": "BDF730E5-1069-4C64-9FDA-A717C7F07D81.txt",
+      "scope": "Actual exported failure hierarchy; full-pane probe marker and denied-error text retained.",
+      "sha256": "00c6300084e04e00bb44acf89443ead9ec9dc0e0ac77bb381dc32341ba3bb30a"
+    }
+  ],
+  "originalInputs": 47,
+  "originalNativeReviewAttachments": [
+    {
+      "file": "0FE4FE73-565B-41D5-BDAB-6EADA6791642.txt",
+      "name": "restaurant-map-portrait-detail-pan-7_0_AE07F01A-1A58-4E90-B0A8-FEC98E458F04.txt",
+      "sha256": "eb0b6a500909f42d9a6024a99ae005d5de6e7f29f5a2d48d7085d9a39091e48a",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533557.864
+    },
+    {
+      "file": "B24703B5-2C91-4276-9334-F065D28E2286.txt",
+      "name": "restaurant-map-portrait-detail-pan-6_0_6E14E57B-878C-4AB6-8196-D16683C86B67.txt",
+      "sha256": "0c23d2e26b22d7662a7f7af80a3aa9e0f45f24574c88090740d2c3ff1d5b4fc3",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533556.514
+    },
+    {
+      "file": "CC2A495B-5DAC-4C5D-B754-1C274B4AC23C.txt",
+      "name": "restaurant-map-portrait-detail-pan-5_0_8DF4015D-E6D8-41EC-8E3D-BC07B4E73A6B.txt",
+      "sha256": "ea3f1c7f19855723b665edc4e8af88041a51e79e3a87206ee72442b4db45d8d3",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533555.124
+    },
+    {
+      "file": "E113669F-93A8-4AA3-8609-D1D113B5F97E.txt",
+      "name": "restaurant-map-portrait-detail-pan-4_0_D3200B58-993B-4078-8C7A-E43BAD57B783.txt",
+      "sha256": "ea81589eb49932f0ed2fa216700cd6af9d16d9aa4c89a67208df5fe5712daa6f",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533553.75
+    },
+    {
+      "file": "570B68E8-7AEA-466E-9D60-922983347F50.txt",
+      "name": "restaurant-map-portrait-detail-pan-3_0_19063582-F2A9-41C0-B1B3-B9E60BDF356D.txt",
+      "sha256": "a7c059fb57ac7b0ef1c22be59753b56f234aa9ab6fdc8cc873dad3e3d1b6c441",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533552.334
+    },
+    {
+      "file": "68782015-3CC3-4A81-BCCB-60DE7B932C00.txt",
+      "name": "restaurant-map-portrait-detail-pan-2_0_AEE1FB68-58C2-44A5-A202-4E9ABE3EC2C4.txt",
+      "sha256": "3c0caf497999cecb6e7ee7d834317f08f7787049c41b6aaa30f8059454bcfda6",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533550.987
+    },
+    {
+      "file": "3103E703-0D6C-41CD-BC6D-DF9C70016C43.txt",
+      "name": "restaurant-map-portrait-detail-pan-1_0_0DC0DD36-2A2E-4C94-80AD-DB0BB70EF8FE.txt",
+      "sha256": "7530c6fecd34f08c1021fbe4355df3444f357e54ff5305e296694bf0e5d667e0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533549.612
+    },
+    {
+      "file": "B91FD98E-6C44-4B4E-937D-E3611CF1E27A.txt",
+      "name": "restaurant-map-portrait-detail-pan-0_0_28F30828-7D07-4956-99F3-70AD41BC4785.txt",
+      "sha256": "bce3944b2655f164028f6fae56e6b7fbfb0c4485bcd7b0e96e6a7ce802ac251d",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533548.261
+    },
+    {
+      "file": "7F724801-3E14-4A2B-A8BF-E855BDDD6B31.txt",
+      "name": "restaurant-map-portrait-detail-pan-1_0_E6D14AF0-BA9A-4D6A-A46B-F5B377E2CE98.txt",
+      "sha256": "c11ebbfaec3d8d1de9e9c5ee4045e83bdabcae1c0eea22d4303c27374fe0a57b",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533545.978
+    },
+    {
+      "file": "083F8EB5-8B17-44C3-86FC-FDE69CDC9E7C.txt",
+      "name": "restaurant-map-portrait-detail-pan-0_0_A32BE67C-5E16-43F1-B28D-4C35CE14DE46.txt",
+      "sha256": "b04a78100e54f23f00297037658fb7dec0033a57b80b18e3205d2ae06fc665eb",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533544.598
+    },
+    {
+      "file": "42383270-2048-45D9-9220-EED62609DEDD.txt",
+      "name": "restaurant-map-portrait-native-details-viewport_0_B0521DEA-BBF6-411B-8ADD-E53937EF83AA.txt",
+      "sha256": "d8f1b430797b3c05c9eec61f8f44a7ac4a614fdde42f8e7d6f9a69f60d199914",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533541.69
+    },
+    {
+      "file": "1C6DC3A9-EDE5-45E0-B50C-FBBB7F3A9506.txt",
+      "name": "denied-map-largest-text-saved-restaurant-row-accessibility-tree_0_87B8DAC7-B402-4173-9D1D-7CEFDC2917B9.txt",
+      "sha256": "f0091e2dea87f5b8ff3671aeaa245af6db29aa812a8b9cbf1b19cd849821b14a",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533531.925
+    },
+    {
+      "file": "D4210101-6E86-43E1-A81E-2DEE0A79E1DC.png",
+      "name": "denied-map-largest-text-saved-restaurant-row_0_FAB41BBB-9E8E-446F-BB1A-6FEC915167FB.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "ac40649943bca6a17478de331dae287fd1f1e375c1c5fe35d5275807d7590795",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533531.811
+    },
+    {
+      "file": "ACFE2667-C1C9-4FBD-AEEF-EA3D24A1F7D3.txt",
+      "name": "denied-map-restaurant-row-scroll-geometry_0_EF9C400F-C3CD-4492-96E9-A2160694AA0E.txt",
+      "sha256": "bf6fd798a0d1f366f12df2855490cb175109be5f9229af86dc10e047c8ba204d",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533531.466
+    },
+    {
+      "file": "9156415E-6F4B-46EB-A147-791316DC9019.txt",
+      "name": "denied-location-settings-return-preserves-query-accessibility-tree_0_2ADD6770-BEEC-49B2-86FF-A62C5F38891A.txt",
+      "sha256": "4ec5d1c98d187dbfd26fabfbec3ba5d93ff29cceed77ff479f695ba05cb29ace",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533481.889
+    },
+    {
+      "file": "10B913CA-28F1-4E93-AB17-77523BF75A4E.png",
+      "name": "denied-location-settings-return-preserves-query_0_F1C736CE-3E23-4A11-8500-568D6A285366.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "11a4d242d074346671a1b953bb86ab5f321cd639e69a1eedb73af69a88a1d3d3",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791533481.245
+    }
+  ],
+  "outerExit": 65,
+  "passedTests": 1,
+  "recoveryScope": "Denied failed at Location access is off. static-text hittability; no successful complete denied recovery claim. Read the retained native case failure and hierarchy.",
+  "results": "satisfaction-phone-clipped-viewport-diagnostic-results.json",
+  "scope": "Historical exact two-case DEBUG clipped-pane measurement diagnostic. Normal passed; Denied failed its static-text hittability assertion despite fitting bounds. No complete-suite, later-source acceptance or production defect cause claim.",
+  "selection": "satisfaction-phone-clipped-viewport-diagnostic-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-phone-clipped-viewport-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "58931feca3c01bd3d76388d6fc00371e7c201963c86b90ab9f58c393365c59d1",
+  "sourceMismatchesAtRunFinalization": [],
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No physical GPS or private preference readback claim."
+}

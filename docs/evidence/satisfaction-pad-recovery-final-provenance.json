@@ -1,0 +1,19 @@
+{
+  "failed": 0,
+  "limitation": "The compact run on the same source failed whole-row geometry before reaching its map; this paired run does not clear that compact failure.",
+  "location": "Native Deny and Settings return with synthetic simulator GPS; clear checked by exit wrapper.",
+  "noWaitsAssertionsGesturesQuiescenceOrAttemptLimitsRelaxed": true,
+  "outerExitCode": 0,
+  "passed": 2,
+  "perCaseAllowancesSeconds": {
+    "NearbyLocationDeniedStillAllowsTextSearchAndCancellation": 240,
+    "ReverseAssignmentFixedChargesConversionCancelAndClear": 300
+  },
+  "productionInputsMatchPublishedRelease": 33,
+  "results": "satisfaction-pad-recovery-final-results.json",
+  "scope": "Two exact local iPad recovery journeys passed on the corrected source, including full native teardown. Compact and full hosted acceptance remain separate.",
+  "selection": "satisfaction-pad-recovery-final-selection.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-pad-recovery-final-source-manifest.json",
+  "sourceManifestSHA256": "c0c291c796dbf6516c06983f60bc72fb41dc60ebc58cfa6c0e9da024bbde4949"
+}

@@ -1,0 +1,21 @@
+{
+  "all47InputsMatchedAtRunFinalization": true,
+  "exactCatalogueCases": [
+    "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+    "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+    "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()"
+  ],
+  "failed": 0,
+  "location": "Real MapKit and native permission/Settings with synthetic simulator GPS; one documented DEBUG first-search-error injection exercises Retry. EXIT clears GPS and checks completion.",
+  "outerExit": 0,
+  "passed": 5,
+  "result": "Passed",
+  "results": "satisfaction-pad-gutter-final-results.json",
+  "scope": "Completed exact five-case real MapKit and permission integration on final iPad source. Actual case identities equal the complete disabled-live catalogue; physical location and real accounts remain separate.",
+  "selection": "satisfaction-pad-gutter-final-selection.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-pad-gutter-final-source-manifest.json",
+  "sourceManifestSHA256": "adcd04f82a4d8b5093762385b377180a8a59a6ef5b296432f0b3306123f8c783"
+}

@@ -1,0 +1,40 @@
+{
+  "all33ProductionProjectInputsMatchedAtBuildVerification": true,
+  "all47InputsMatchedFilesAtBuildVerification": true,
+  "analyzer": "passed",
+  "binarySHA256": "7fa07bb75ce71f7a4c1e1413fb66dcfadb5a6fcdc261690800fed1e7154314ee",
+  "build": "2",
+  "codeSigning": "disabled for local verification",
+  "comparisonScope": "Historical comparison performed when this build and analyzer finalized; these fields do not assert equality with subsequent source revisions.",
+  "compilerWarnings": [
+    "2026-10-09 01:04:49.005 appintentsmetadataprocessor[42238:9639444] warning: Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionAndProjectSourceCount": 33,
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Historical unsigned iOS Release build/analyzer for the rejected icon-width candidate. Its native row-fit case failed and this candidate was superseded. Signing, physical devices, CloudKit and Store remain separate.",
+  "sourceManifest": "satisfaction-release-restaurant-width-source-manifest.json",
+  "sourceManifestSHA256": "44492ee70e4492d5eee0a44b2b9e633fec6b754fd668b64850e68c6a19d7b284",
+  "supersededBy": "satisfaction-release-restaurant-summary-provenance.json",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "verifiedAt": "2026-10-09T05:05:23.061471+00:00",
+  "version": "2.0.0"
+}

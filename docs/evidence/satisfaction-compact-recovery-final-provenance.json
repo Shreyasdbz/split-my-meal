@@ -1,0 +1,66 @@
+{
+  "attachmentSHA256": {
+    "finalHierarchy": "a8ac47b081449d5e41424731520fe4740df902a0e8a792524e974e0d1628f2e5",
+    "finalScreenshot": "6c77f881701206e4f9d3573aadc202c66ff162bd33c1d1c9335a822755f55d76",
+    "rowGeometry": "d52970eeae9bda79c16d1e45224d58ca066400aaa901b9edc45ac594f2cc6776"
+  },
+  "comparisonScope": "Historical source comparison at this failed run finalization, before subsequent restaurant layout and viewport corrections.",
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 2,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "failedTests": 1,
+  "failureAttachmentNames": {
+    "finalHierarchy": "FA2FA619-2094-4619-9984-E51ED086999A.txt",
+    "finalScreenshot": "3DED97AD-1105-4DDB-BD96-F6D1EBEBA729.png",
+    "rowGeometry": "F7FF41C6-8C0D-44CE-8779-3527D2DED992.txt"
+  },
+  "nativeResult": "Failed",
+  "noSourceEditsDuringNativeRun": true,
+  "noStatusOverrides": true,
+  "originalFailurePixels": "satisfaction-compact-restaurant-row-oversized.png",
+  "originalFailurePixelsSHA256": "6c77f881701206e4f9d3573aadc202c66ff162bd33c1d1c9335a822755f55d76",
+  "originalInputs": 47,
+  "outerExit": 65,
+  "passedTests": 1,
+  "results": "satisfaction-compact-recovery-final-results.json",
+  "runtimeWarningsRetained": true,
+  "scope": "Preserved failed two-case compact recovery run; no replay or combined passing claim.",
+  "scrollObservation": {
+    "conclusion": "The restaurant row exceeds the usable viewport by 44.5 points, so the unchanged full-row visibility guard cannot succeed. The row was discovered after continued upward seeking; final positioning alternated across the toolbar boundary.",
+    "gestureXPoints": 8,
+    "lastThreeYPositionsPoints": [
+      27.5,
+      76,
+      27.5
+    ],
+    "restaurantFirstInstantiatedAfterAttempt": 17,
+    "restaurantFrameAfterAttempt17": [
+      16,
+      537,
+      343,
+      454
+    ],
+    "restaurantRowHeightPoints": 454,
+    "source": "Retained native scroll geometry, final native accessibility tree and original screenshot.",
+    "totalAttempts": 24,
+    "unexecutedDeniedMapScope": "The case stopped before opening the largest-text map, its error/actions pane and map Settings handoff.",
+    "usableHeightPoints": 409.5,
+    "usableViewportYPoints": [
+      74,
+      483.5
+    ]
+  },
+  "selection": "satisfaction-compact-recovery-final-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-recovery-final-source-manifest.json",
+  "sourceManifestSHA256": "c0c291c796dbf6516c06983f60bc72fb41dc60ebc58cfa6c0e9da024bbde4949",
+  "sourceMismatchesAtRunFinalization": [],
+  "syntheticLocation": {
+    "clearCompletedByExitWrapper": true,
+    "source": "San Francisco simulator fixture",
+    "verificationScope": "The wrapper checked scoped clear completion; no clear-error message was emitted. No device setting, account or physical GPS changes claimed."
+  }
+}

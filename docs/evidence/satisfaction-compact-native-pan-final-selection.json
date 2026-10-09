@@ -1,0 +1,86 @@
+{
+  "actualCaseCount": 6,
+  "allSelectedPassed": false,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "status": "Failed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "status": "Passed"
+    }
+  ],
+  "exactNativeIDSet": true,
+  "expectedExactNativeIDs": [
+    "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+    "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+    "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+    "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "status": "Failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/LiveMapKitTests"
+    },
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    }
+  ],
+  "outerExit": 65,
+  "passedCaseCount": 5,
+  "reasons": [
+    "Focused native cases include failed or incomplete outcomes.",
+    "Native summary does not match the actual completed focused identities and statuses."
+  ],
+  "requestedSelectorCount": 2,
+  "result": "Rejected",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0,
+  "sourceManifestSHA256": "efec88293906e0159801027d57a42d1a448017dd0a8eac85fc58fb928e5125d3"
+}

@@ -1,0 +1,17 @@
+{
+  "all47InputsMatchedAtRunFinalization": true,
+  "exactRequestedCases": [
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+  ],
+  "failed": 0,
+  "location": "Real native permission and Settings, synthetic simulator GPS with checked EXIT cleanup.",
+  "outerExit": 0,
+  "passed": 1,
+  "result": "Passed",
+  "results": "satisfaction-pad-held-pan-final-results.json",
+  "scope": "Completed exact native iPad denied-location recovery on the My location/held-pan source, including largest text, full action bounds in both orientations and actual Settings handoff/return. The compact same-source run failed and remains separate.",
+  "selection": "satisfaction-pad-held-pan-final-selection.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-pad-held-pan-final-source-manifest.json",
+  "sourceManifestSHA256": "b599850b653c02a60c4802b749959a6ac217db1bb3ea6ef240c90e708f37b2c6"
+}

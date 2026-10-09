@@ -1,0 +1,50 @@
+{
+  "actualCaseCount": 2,
+  "allSelectedPassed": false,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "status": "Failed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "status": "Failed"
+    }
+  ],
+  "exactNativeIDSet": true,
+  "expectedExactNativeIDs": [
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+    "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "status": "Failed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    },
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "status": "Failed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+    }
+  ],
+  "outerExit": 65,
+  "passedCaseCount": 0,
+  "reasons": [
+    "Focused native cases include failed or incomplete outcomes.",
+    "Native summary does not match the actual completed focused identities and statuses."
+  ],
+  "requestedSelectorCount": 2,
+  "result": "Rejected",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0,
+  "sourceManifestSHA256": "f24233b6dde06b2d383bdc3862f7eedba8551f58035a564805275a1c57bd83f5"
+}

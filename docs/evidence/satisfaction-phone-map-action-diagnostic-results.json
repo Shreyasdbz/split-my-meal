@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791529616.379,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Completed temporary passive DEBUG action diagnostic: intentional live restaurant search and Maps handoff passed; largest-text map layout case failed its unchanged-geometry guard. No cause or maintained-source claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-phone-map-action-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "fb1c8359042676825a613c1b5ab8554e8b085fcef38850af0cefdbc531a39f9f",
+  "startTime": 1791529519.246,
+  "testFailures": [
+    {
+      "failureText": "failed - A details pan requires unchanged foreground geometry. Details: (0.0, 138.44444444444443, 134.0, 152.88888888888889); window: (0.0, 0.0, 402.0, 874.0); navigation: (0.0, 26.0, 134.0, 18.0); captured viewport: (0.0, 415.3333333333333, 402.0, 458.6666666666667)",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape",
+      "testName": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 42.34674596786499,
+      "name": "testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "nodeIdentifier": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 47.55094492435455,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 2
+}

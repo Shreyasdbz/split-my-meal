@@ -1,0 +1,57 @@
+{
+  "actualCaseCount": 5,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "status": "Passed"
+    }
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/LiveMapKitTests"
+    }
+  ],
+  "passedCaseCount": 5,
+  "requestedSelectorCount": 1,
+  "result": "Passed",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0
+}

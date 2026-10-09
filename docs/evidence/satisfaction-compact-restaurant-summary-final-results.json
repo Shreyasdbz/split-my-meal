@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791522702.72,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone SE (3rd generation)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Preserved compact summary candidate: full restaurant label and row fit passed; denied-map portrait Settings-link full-bounds check failed before landscape and map Settings handoff. No passing completion claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-restaurant-summary-final-source-manifest.json",
+  "sourceManifestSHA256": "c63fceb4981f071a9d910fe897c48bd75ab37eccbf590e212d1d93343b47d8e6",
+  "startTime": 1791522582.439,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - The whole native action must remain within the foreground details viewport.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 115.49501502513885,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

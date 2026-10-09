@@ -1,0 +1,64 @@
+{
+  "all33ProductionProjectInputsMatchReleaseSummary": true,
+  "all47InputsMatchBoundReleaseSummaryManifest": true,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "status": "Passed"
+    }
+  ],
+  "completeLogDiagnostics": {
+    "animationWaitWarnings": 2,
+    "caseAllowanceExceeded": 0,
+    "invalidFrameWarnings": 2,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "completeNativeLogSHA256": "a015282e1674cdf9d52d976c850f5e1ffb366cd96cf53ddb5449f8323e7598df",
+  "correction": "The correctly named DemoWalkthrough is explicitly selected in the subsequent frozen-source run, alongside the changed viewport recovery case.",
+  "diagnosticCountContract": "Case-insensitive complete native log line counts; actual animation-continuation warnings remain diagnostics and do not change native outcomes or establish cause.",
+  "nativeCasesFailed": 0,
+  "nativeCasesPassed": 7,
+  "nativeCasesSkipped": 0,
+  "outerExitCode": 1,
+  "rejection": "The extra testDemoJourneyAndEvidenceCapture selector names no compiled case; the intended DemoWalkthrough was not executed.",
+  "results": "satisfaction-pad-selector-error-retained-results.json",
+  "retainedAnimationContinuationWarnings": [
+    {
+      "logLine": 355,
+      "text": "    t =    84.20s App animations complete notification not received, will attempt to continue."
+    },
+    {
+      "logLine": 361,
+      "text": "    t =   145.35s App animations complete notification not received, will attempt to continue."
+    }
+  ],
+  "scope": "Retained local selector error. Seven actual cases passed, but the complete requested invocation is rejected and is not full acceptance.",
+  "selection": "satisfaction-pad-selector-error-retained-selection.json",
+  "sourceManifest": "satisfaction-pad-selector-error-retained-source-manifest.json",
+  "sourceManifestSHA256": "c63fceb4981f071a9d910fe897c48bd75ab37eccbf590e212d1d93343b47d8e6",
+  "syntheticLocation": "The dedicated simulator coordinate was cleared by the checked exit wrapper; provider data and native Settings/Maps handoffs were real."
+}

@@ -134,6 +134,9 @@ struct MealScreen: View {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(restaurant.title)
                                     Text(restaurant.address).font(.subheadline).foregroundStyle(Color.mealSecondaryText)
+                                        // Keep secondary copy within the compact
+                                        // viewport; its full value stays accessible.
+                                        .lineLimit(textSize.isAccessibilitySize ? 2 : nil)
                                 }
                             } icon: { Image(systemName: "mappin.and.ellipse") }
                             Spacer(minLength: 0)
@@ -141,6 +144,7 @@ struct MealScreen: View {
                         }
                         .contentShape(Rectangle())
                     }.foregroundStyle(Color.primary)
+                        .accessibilityLabel("\(restaurant.title), \(restaurant.address)")
                 } else {
                     Button("Add restaurant", systemImage: "mappin.and.ellipse") { showEditor = true }
                 }
@@ -177,7 +181,7 @@ struct MealScreen: View {
         .sheet(item: $charge) { ChargeEditor(meal: meal, kind: $0) }
         .mealFocusedPresentation(isPresented: $showSplit) { SplitsModal(meal: meal) }
         .fullScreenCover(isPresented: $showReceipt) { if let data = meal.receiptPhoto { ReceiptViewer(data: data) } }
-        .sheet(isPresented: $showMap) { if let restaurant = meal.restaurantDetails { RestaurantMap(restaurant: restaurant) } }
+        .fullScreenCover(isPresented: $showMap) { if let restaurant = meal.restaurantDetails { RestaurantMap(restaurant: restaurant) } }
     }
 
     private func consumerNames(_ item: MealItem) -> String {
@@ -222,6 +226,7 @@ private struct RestaurantMap: View {
                             }
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(.bar)
+                            .background { detailsViewportProbe }
                             // Contain scrolled controls below navigation chrome;
                             // layout bounds alone do not clip their rendering.
                             .clipped()
@@ -237,6 +242,7 @@ private struct RestaurantMap: View {
                                     details(at: coordinate).padding()
                                 }
                                 .background(.bar)
+                                .background { detailsViewportProbe }
                                 .clipped()
                             }
                         }
@@ -269,6 +275,26 @@ private struct RestaurantMap: View {
         .mapControls { MapCompass(); MapScaleView(); MapPitchToggle() }
     }
 
+    /// Exposes the target pane's layout rectangle only during isolated UI tests.
+    /// Native AX scroll frames can include safe-area strips that clipping hides.
+    @ViewBuilder private var detailsViewportProbe: some View {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--uitesting") {
+            GeometryReader { geometry in
+                Color.clear
+                    // Keep the measurement's AX footprint in the padding,
+                    // away from native content and its hit points.
+                    .frame(width: 1, height: 1)
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel("Restaurant details viewport")
+                    .accessibilityIdentifier("restaurant-details-viewport")
+                    .accessibilityValue(NSCoder.string(for: geometry.frame(in: .global)))
+            }
+            .allowsHitTesting(false)
+        }
+        #endif
+    }
+
     private func details(at coordinate: CLLocationCoordinate2D) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(restaurant.address)
@@ -285,9 +311,11 @@ private struct RestaurantMap: View {
                 item.openInMaps()
             }
             .foregroundStyle(Color.mealPrimaryText)
-            .modifier(MealPrimaryButtonStyle())
+            // Details scroll with content; glass belongs to floating controls.
+            .buttonStyle(.borderedProminent)
             .controlSize(.large)
-            Button("Show my location", systemImage: "location") { location.requestNearbyLocation() }
+            Button("My location", systemImage: "location") { location.requestNearbyLocation() }
+                .accessibilityLabel("Show my location")
                 .buttonStyle(.bordered)
                 .controlSize(.large)
                 .disabled(location.isRequesting)

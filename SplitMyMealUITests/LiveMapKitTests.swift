@@ -186,7 +186,11 @@ final class LiveMapKitTests: XCTestCase {
                 if restaurant.exists && restaurant.frame.minY > bounds.top && restaurant.frame.maxY < bounds.bottom && restaurant.isHittable { break }
                 let before = restaurant.exists ? String(describing: restaurant.frame) : "not instantiated"
                 let gap = restaurant.exists ? (restaurant.frame.minY <= bounds.top ? bounds.top - restaurant.frame.minY + 12 : restaurant.frame.maxY - bounds.bottom + 12) : nil
-                let up = restaurant.exists ? restaurant.frame.minY > bounds.top : attempt < 12
+                // This saved meal opens at the top; Restaurant follows its
+                // people, items and charges. Keep seeking downward until the
+                // lazy row exists instead of reversing halfway through a long
+                // largest-text list and returning to the summary.
+                let up = restaurant.exists ? restaurant.frame.minY > bounds.top : true
                 let top = bounds.top + 20
                 let bottom = bounds.bottom - 20
                 XCTAssertGreaterThan(bottom, top, "The foreground meal list must have a usable scroll viewport.")
@@ -197,7 +201,7 @@ final class LiveMapKitTests: XCTestCase {
                 let upper = origin.withOffset(CGVector(dx: leading, dy: middle - travel * 0.5))
                 let lower = origin.withOffset(CGVector(dx: leading, dy: middle + travel * 0.5))
                 (up ? lower : upper).press(forDuration: 0.1, thenDragTo: up ? upper : lower, withVelocity: .slow, thenHoldForDuration: 0.2)
-                movements.append("Attempt \(attempt): before \(before); after \(restaurant.exists ? String(describing: restaurant.frame) : "not instantiated"); viewport \(bounds.top)...\(bounds.bottom)")
+                movements.append("Attempt \(attempt): before \(before); after \(restaurant.exists ? String(describing: restaurant.frame) : "not instantiated"); viewport \(bounds.top)...\(bounds.bottom); gesture x \(mealList.frame.minX + leading); up \(up)")
             }
             let geometry = XCTAttachment(string: movements.joined(separator: "\n"))
             geometry.name = "denied-map-restaurant-row-scroll-geometry"
@@ -208,6 +212,8 @@ final class LiveMapKitTests: XCTestCase {
             XCTAssertLessThan(restaurant.frame.maxY, bounds.bottom, "The entire restaurant row must be above View split before tapping its center.")
         }
         XCTAssertTrue(restaurant.isHittable)
+        XCTAssertEqual(restaurant.label, "Juniper · sample restaurant, Fictional dinner for app screenshots", "The complete saved title and address must remain available to accessibility at the largest text size.")
+        evidence("denied-map-largest-text-saved-restaurant-row")
         restaurant.tap()
         XCTAssertTrue(app.buttons["Show my location"].waitForExistence(timeout: 5))
         app.buttons["Show my location"].tap()

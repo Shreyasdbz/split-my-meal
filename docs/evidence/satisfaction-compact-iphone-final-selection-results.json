@@ -1,0 +1,38 @@
+{
+  "actualCaseCount": 2,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "status": "Passed"
+    }
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    }
+  ],
+  "passedCaseCount": 2,
+  "requestedSelectorCount": 2,
+  "result": "Passed",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0
+}

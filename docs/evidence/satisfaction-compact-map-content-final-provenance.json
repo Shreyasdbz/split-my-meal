@@ -1,0 +1,221 @@
+{
+  "comparisonScope": "Compared every captured input to the checkout after native outer completion and before subsequent source edits.",
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 1,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "exactNativeIDSet": true,
+  "failedTests": 2,
+  "failureCaptureInputs": [
+    {
+      "file": "3304B7AD-1EC2-471F-8450-483B06E370EF.png",
+      "sha256": "7e292929d95531db66914344ef6c944c1aaa6a48f8fd6992a291047431e89038"
+    },
+    {
+      "file": "7B74C0B8-1925-4DCD-99AF-D04CEFB4E46F.txt",
+      "sha256": "5a8367e22ac3f6c35fa180bbc1156edad94ed2ec07c582e18df3c4554cc03671"
+    },
+    {
+      "file": "ED8F1B3F-72C3-4A20-8BA3-2294F442285D.png",
+      "sha256": "662b34f2dbf6c2ccd2e80c55737f7093f61ce4cb680642a6dec80bd04c28ec22"
+    },
+    {
+      "file": "41CD981B-2B19-48A2-99FD-6556D562CDB2.txt",
+      "sha256": "7b585bf9090e0fb3f6ff9c67a999859738266430aa9ed4870a75f0d545400ff4"
+    },
+    {
+      "file": "9DB90984-8891-4D97-A3E7-A9A3F9C03624.txt",
+      "sha256": "b4ef181faef20cb87ed7393b8c070ce4b510447fafca289aab583368587e5458"
+    },
+    {
+      "file": "EC8DF361-D7D5-4B54-9861-DFF765ADEF94.txt",
+      "sha256": "88f7bc84ed690a49bb5ed56e08d724225a233d1a7258382cd21c5a35c2321b09"
+    },
+    {
+      "file": "1F57076D-8124-4773-8E72-81A8DFF71FCD.txt",
+      "sha256": "4ba55211711454235aa1dd94b485224db2a0ec079b1bf8aec1dd42fed1134a91"
+    }
+  ],
+  "gestureRecordScope": "Original planned contact offsets and coordinates; not measured hardware timing or a cause attribution.",
+  "nativeResult": "Failed",
+  "noSourceEditsDuringRun": true,
+  "noStatusOverrides": true,
+  "observedFailureBoundary": "Intentional provider search, selection, Maps handoff and removal passed. Both map-layout cases failed unchanged-geometry guards before a further pan: current details and navigation frames had half the captured dimensions. Original failure captures show an app-switcher transition with a native Maps card, not settled in-app map proof.",
+  "originalInputs": 47,
+  "originalNativeReviewAttachments": [
+    {
+      "file": "9DB90984-8891-4D97-A3E7-A9A3F9C03624.txt",
+      "name": "restaurant-map-portrait-detail-pan-0_0_16BB5FA8-B8EF-42F3-BC56-A2A4B3A4FED9.txt",
+      "sha256": "b4ef181faef20cb87ed7393b8c070ce4b510447fafca289aab583368587e5458",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791529034.046
+    },
+    {
+      "file": "C5750286-898F-47A9-92A4-BD21FA0AD749.txt",
+      "name": "restaurant-map-portrait-native-details-viewport_0_DAFCB65E-F584-4330-B73C-4DA68BE0EAB5.txt",
+      "sha256": "add36900264189c571263b1b657ddb299410d00cb1d0053ba580e13edb38408d",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791529031.175
+    },
+    {
+      "file": "706965C6-70F2-43C4-82C9-38AC2F91C13B.txt",
+      "name": "denied-map-largest-text-saved-restaurant-row-accessibility-tree_0_F7DEDBCF-4C20-4422-A490-FF069C785D68.txt",
+      "sha256": "c20eadec55d3739fd44acc2cf4c6e22da694f9f629afb7ab1a8fbbe291cfcc73",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791529022.093
+    },
+    {
+      "file": "9B02A7D4-B584-4C7C-BB5C-92FFE8F805E3.png",
+      "name": "denied-map-largest-text-saved-restaurant-row_0_B831F8F3-F4BF-49C1-88AA-CB3F3417627B.png",
+      "rawPNGDimensions": [
+        750,
+        1334
+      ],
+      "sha256": "83f4cf32a9157f5bdb357de8d94dca2528ca3c7cb1cd56e45d93c23ae9f218c1",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791529021.987
+    },
+    {
+      "file": "E34BC50E-F7ED-48A1-8D10-3476E563C6E5.txt",
+      "name": "denied-map-restaurant-row-scroll-geometry_0_DF53916A-98E3-42D1-9405-BDAFDC3BBAF4.txt",
+      "sha256": "cd46d1528f3f63ca71005a7a49953a50f8513373e005fd1aec3d07975ed1e356",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791529021.73
+    },
+    {
+      "file": "E4110BD4-8A61-49B2-85DC-93F75FF6A3FC.txt",
+      "name": "denied-location-settings-return-preserves-query-accessibility-tree_0_85022296-1E3A-4572-ACF2-FD8960D92679.txt",
+      "sha256": "7a381dfd18749b3c4f66a77fa7d01d038ce333145ad3eeef8d7859634b20831c",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791528959.229
+    },
+    {
+      "file": "164DAF2B-1073-405F-B701-6B1F45DCA9E5.png",
+      "name": "denied-location-settings-return-preserves-query_0_8FBE4F03-1AF3-4A00-B27D-408FD3CF6BBA.png",
+      "rawPNGDimensions": [
+        750,
+        1334
+      ],
+      "sha256": "40a1489d1024a71abcc28038a968f9def3d83c3d6c532a0316359be9018ed0b0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791528958.744
+    }
+  ],
+  "originalSynthesizedEventInputs": [
+    {
+      "file": "AA5E5238-DCDB-481D-9A83-2A5CC8F27779",
+      "pointerPaths": [
+        [
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 397.75,
+            "eventType": 1,
+            "offset": 0.0
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 397.75,
+            "eventType": 2,
+            "offset": 0.1
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 590.25,
+            "eventType": 2,
+            "offset": 2.025
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 590.25,
+            "eventType": 3,
+            "offset": 2.225
+          }
+        ]
+      ],
+      "sha256": "c0f16a6982db96a1d31dbacc9536552a6c23e6cf931d00c5bcae28e9f116d1b0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791529033.964
+    },
+    {
+      "file": "F35EEF1B-07D6-4952-9122-CE1C9062150D",
+      "pointerPaths": [
+        [
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 575.25,
+            "eventType": 1,
+            "offset": 0.0
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 575.25,
+            "eventType": 2,
+            "offset": 0.1
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 412.75,
+            "eventType": 2,
+            "offset": 1.725
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 412.75,
+            "eventType": 3,
+            "offset": 1.925
+          }
+        ]
+      ],
+      "sha256": "81332d80645e5995b5673243d7d15901bc6b1f670e1314a8513a86b9e5631b2a",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791529091.74
+    },
+    {
+      "file": "9007B7EF-1B51-4EF7-BF97-FC4FAF962809",
+      "pointerPaths": [
+        [
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 514.0,
+            "eventType": 1,
+            "offset": 0.0
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 514.0,
+            "eventType": 2,
+            "offset": 0.1
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 474.0,
+            "eventType": 2,
+            "offset": 0.5
+          },
+          {
+            "coordinate.x": 187.5,
+            "coordinate.y": 474.0,
+            "eventType": 3,
+            "offset": 0.7
+          }
+        ]
+      ],
+      "sha256": "dc5db9a88cbf1d1bea4d805d63ec122ac3029f58cda6facdadde7b1cd60a38f4",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791529088.853
+    }
+  ],
+  "outerExit": 65,
+  "passedTests": 1,
+  "recoveryScope": "Read actual case results and failure boundaries; no complete recovery claim.",
+  "results": "satisfaction-compact-map-content-final-results.json",
+  "scope": "Completed failed exact 3-case compact verification; earlier failed candidates remain separate.",
+  "selection": "satisfaction-compact-map-content-final-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-map-content-final-source-manifest.json",
+  "sourceManifestSHA256": "d40f9fbb832e8f81b744ce76fa361334f19c4a9ca67859a7a19130ca7cd439fd",
+  "sourceMismatchesAtRunFinalization": [],
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No physical GPS or private preference readback claim."
+}

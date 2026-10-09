@@ -1,0 +1,53 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791522107.204,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone SE (3rd generation)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 2
+    }
+  ],
+  "scope": "Preserved failed two-case compact iPhone recovery verification: the charge journey passed; the denied-map journey failed its full-row visibility guard before opening the largest-text map. No combined passing claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-recovery-final-source-manifest.json",
+  "sourceManifestSHA256": "c0c291c796dbf6516c06983f60bc72fb41dc60ebc58cfa6c0e9da024bbde4949",
+  "startTime": 1791521922.896,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertGreaterThan failed: (\"27.5\") is not greater than (\"74.0\") - The entire restaurant row must be below the foreground toolbar.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 92.06527602672577,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 87.11680102348328,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

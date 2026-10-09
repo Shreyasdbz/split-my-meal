@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791522076.32,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 2
+    }
+  ],
+  "scope": "Two exact corrected native iPad journeys: denied largest-text map recovery in both orientations and the complete reverse assignment/charge conversion journey including teardown. Local evidence excludes hosted acceptance.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-pad-recovery-final-source-manifest.json",
+  "sourceManifestSHA256": "c0c291c796dbf6516c06983f60bc72fb41dc60ebc58cfa6c0e9da024bbde4949",
+  "startTime": 1791521828.03,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 139.23391807079315,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 106.44523811340332,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

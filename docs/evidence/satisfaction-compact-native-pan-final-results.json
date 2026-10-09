@@ -1,0 +1,77 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791526105.448,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 5,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone SE (3rd generation)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Completed exact six-case compact verification: all five live integration cases plus large-text navigation. Five passed; denied-map landscape pan changed reported foreground geometry and the new pre-pan guard failed before another gesture. No passing complete-selection claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-native-pan-final-source-manifest.json",
+  "sourceManifestSHA256": "efec88293906e0159801027d57a42d1a448017dd0a8eac85fc58fb928e5125d3",
+  "startTime": 1791525729.912,
+  "testFailures": [
+    {
+      "failureText": "failed - A details pan requires unchanged foreground geometry. Details: (0.0, 41.5, 187.5, 166.75); window: (0.0, 0.0, 667.0, 375.0); navigation: (12.0, 41.5, 27.0, 333.5); captured viewport: (333.5, 78.0, 333.5, 297.0)",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 3,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 43.14256405830383,
+      "name": "testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "nodeIdentifier": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 51.71844792366028,
+      "name": "testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 121.2486469745636,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 25.74510097503662,
+      "name": "testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "nodeIdentifier": "LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 35.02267396450043,
+      "name": "testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "nodeIdentifier": "LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 93.84280800819397,
+      "name": "testLargeTextAndLandscapeNavigation()",
+      "nodeIdentifier": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 6
+}

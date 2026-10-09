@@ -1,0 +1,22 @@
+{
+  "all47InputsMatchCommit": true,
+  "bootElapsedSeconds": 90,
+  "bootStatus": "Finished",
+  "catalogueGuardExitCode": 1,
+  "completeUnitEnumerationIdentities": 28,
+  "diagnosticGap": "The discovery session xcresult named under DerivedData/Logs/Test was not uploaded by this workflow. No abort backtrace is available in the artifact; a crash report is unverified.",
+  "disabledLiveIdentities": 0,
+  "discoveryError": "SplitMyMealUITests-Runner (45238) encountered an error. (Underlying Error: Early unexpected exit, operation never finished bootstrapping - no restart will be attempted. (Underlying Error: Test crashed with signal abrt while preparing to run tests.))",
+  "discoveryXcodeExitCode": 0,
+  "head": "0bad7ef6df0ad543df68d1d080c34189de21e10f",
+  "incompleteUISuitePlaceholders": 1,
+  "jobLogSHA256": "6aef1a4233060ff80ae496e60850e7e4b16b93b194e9671c35c99bfe26eb3a37",
+  "jobURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37882566711/job/113665674916",
+  "maintainedCasesExecuted": 0,
+  "nativeLogSHA256": "45c720b49334b3c881b3e6c0444844b0051819f5f50c2b7ff98ce0e1967d7416",
+  "result": "Rejected before maintained execution",
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37882566711",
+  "sourceManifestSHA256": "d06abc0bdd33fc8067c5e4c67eb6eec33c5b3e53d1535c157b052867aa0e0399",
+  "sourceOfFailure": "UI runner aborted during discovery bootstrap after a logged simulator service-hub interruption. No app-owned cause is established; enumerated identities do not count as passing cases.",
+  "testBuild": "Passed"
+}

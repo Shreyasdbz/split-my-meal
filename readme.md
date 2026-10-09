@@ -12,11 +12,11 @@ The item editor’s Everyone action selects the current people; individual switc
 
 ## Screens and walkthrough
 
-<img src="docs/evidence/satisfaction-final-iphone-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">
+<img src="docs/evidence/satisfaction-fullscreen-iphone-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">
 
-The final native [iPhone](docs/evidence/satisfaction-final-iphone-walkthrough.mp4) and [iPad](docs/evidence/satisfaction-final-ipad-walkthrough.mp4) walkthroughs preserve actual interaction speed. [Video provenance](docs/evidence/satisfaction-final-video-provenance.json) and the [36-state gallery](docs/ui-gallery.md) bind the final screenshots and recordings to passing native Demo cases and matching source hashes. Captures use fictional meal data; [verification](docs/verification.md) records the complete validation scope.
+The current native [iPhone](docs/evidence/satisfaction-fullscreen-iphone-walkthrough.mp4) and [iPad](docs/evidence/satisfaction-fullscreen-ipad-walkthrough.mp4) walkthroughs preserve actual interaction speed. [Video provenance](docs/evidence/satisfaction-fullscreen-video-provenance.json) and the [36-state gallery](docs/ui-gallery.md) bind the current screenshots and recordings to passing native Demo cases and matching production source hashes. Captures use fictional meal data; [verification](docs/verification.md) records the complete validation scope.
 
-<img src="docs/evidence/satisfaction-final-ipad-meal-landscape-light.png" width="760" alt="iPad landscape meal detail beside the searchable meal library">
+<img src="docs/evidence/satisfaction-fullscreen-ipad-meal-landscape-light.png" width="760" alt="iPad landscape meal detail beside the searchable meal library">
 
 ## Build and test
 

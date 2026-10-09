@@ -1,0 +1,78 @@
+{
+  "attachmentSHA256": {
+    "finalHierarchy": "7bc71e363c5c923964761e2bcdf184c2cc623f7091c19e94e9339ab01730eec6",
+    "finalScreenshot": "b5dff7ced609af1e7319295f89fa2b54e72b1cc2a1b23766b4c9c5bf38925c1e",
+    "restaurantRowHierarchy": "527f06fc1347121e671520091a286c49c6c663acf799e9c4c53efcabba7e879d",
+    "restaurantRowScreenshot": "b7a280dc8b63026b673943dc66ea36535acf8d40d12a12701a0b543562d71947",
+    "rowGeometry": "cd46d1528f3f63ca71005a7a49953a50f8513373e005fd1aec3d07975ed1e356"
+  },
+  "failedTests": 1,
+  "failureAttachmentNames": {
+    "finalHierarchy": "854205F6-ADA3-4BFD-95D7-DEF64993EC63.txt",
+    "finalScreenshot": "EE0046E0-056F-43BA-B175-C68824711C28.png",
+    "restaurantRowHierarchy": "8AFD3C3F-3773-4E92-A9A5-5DFD1142C093.txt",
+    "restaurantRowScreenshot": "C7BD17DD-C47D-4E54-AF64-05CA41342BA9.png",
+    "rowGeometry": "09E8737F-AE49-4616-B462-A223379DDD2B.txt"
+  },
+  "nativeObservations": {
+    "actualSavedRestaurantMapOpened": true,
+    "detailsGuardMaximumYPoints": 647,
+    "failure": "The whole native action must remain within the foreground details viewport.",
+    "finalMapDetailsScrollFramePoints": [
+      0,
+      321,
+      375,
+      346
+    ],
+    "finalSettingsLinkFramePoints": [
+      16,
+      587.5,
+      343,
+      63.5
+    ],
+    "fullRestaurantAccessibilityLabelAssertionPassed": true,
+    "interpretation": "The observed Settings-link frame exceeds the test viewport bottom by four points. The retained native screenshot shows the Settings text visible. Native content-inset and guard behavior require review; no root-cause claim.",
+    "lastEightReportedScrollViewRelativePans": {
+      "end": [
+        168.8,
+        234.5
+      ],
+      "holdSeconds": 0,
+      "initialPressSeconds": 0,
+      "start": [
+        168.8,
+        254.5
+      ],
+      "velocityPointsPerSecond": 250
+    },
+    "portraitFullAddressAndPrimaryLocationActionChecksPassed": true,
+    "restaurantRowFinalFramePoints": [
+      16,
+      143.5,
+      343,
+      338
+    ],
+    "restaurantRowHeightPoints": 338,
+    "restaurantUsableViewportYPoints": [
+      74,
+      483.5
+    ],
+    "settingsLinkMaximumYPoints": 651,
+    "unexecutedScope": "Largest-text landscape map and map Settings handoff were not reached."
+  },
+  "nativeResult": "Failed",
+  "noStatusOverrides": true,
+  "originalInputs": 47,
+  "originalMarginFailurePixels": "satisfaction-compact-map-settings-margin-failure.png",
+  "originalMarginFailurePixelsSHA256": "b5dff7ced609af1e7319295f89fa2b54e72b1cc2a1b23766b4c9c5bf38925c1e",
+  "outerExit": 65,
+  "passedTests": 0,
+  "results": "satisfaction-compact-restaurant-summary-final-results.json",
+  "runtimeInvalidFrameWarnings": 1,
+  "scope": "Preserved failed compact summary candidate; row fit and full accessible label passed, later native map Settings-link bounds failed. No replay or combined passing claim.",
+  "selection": "satisfaction-compact-restaurant-summary-final-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-restaurant-summary-final-source-manifest.json",
+  "sourceManifestSHA256": "c63fceb4981f071a9d910fe897c48bd75ab37eccbf590e212d1d93343b47d8e6",
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No GPS readback claim."
+}

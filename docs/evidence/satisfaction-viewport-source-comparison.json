@@ -1,0 +1,35 @@
+{
+  "final33ProductionAndProjectInputsMatchAtComparison": true,
+  "final47InputsMatchAtComparison": true,
+  "finalReleaseSourceManifest": "satisfaction-viewport-release-source-manifest.json",
+  "finalReleaseSourceManifestSHA256": "fa828d3eed6cb54c2fa055842020c648797ca6a907f297ff588f7ab89fd4c058",
+  "nativeComparisons": [
+    {
+      "differenceScope": "Only helper failure propagation differs; production, control containment, gesture parameters and successful handoff assertions are unchanged.",
+      "differentNativeInputs": [
+        "SplitMyMealUITests/MealJourneyTests.swift"
+      ],
+      "productionAndProjectInputsMatched": 33,
+      "sourceManifest": "satisfaction-phone-clipped-viewport-final-source-manifest.json",
+      "sourceManifestSHA256": "1cf1b04125218546ce9116f2678c42282d5b48430640994b03751645a90ae3bf"
+    },
+    {
+      "differenceScope": "Only helper failure propagation differs; production, control containment, gesture parameters and successful handoff assertions are unchanged.",
+      "differentNativeInputs": [
+        "SplitMyMealUITests/MealJourneyTests.swift"
+      ],
+      "productionAndProjectInputsMatched": 33,
+      "sourceManifest": "satisfaction-pad-clipped-viewport-final-source-manifest.json",
+      "sourceManifestSHA256": "1cf1b04125218546ce9116f2678c42282d5b48430640994b03751645a90ae3bf"
+    },
+    {
+      "all47InputsMatched": true,
+      "differentNativeInputs": [],
+      "productionAndProjectInputsMatched": 33,
+      "sourceManifest": "satisfaction-compact-clipped-viewport-final-source-manifest.json",
+      "sourceManifestSHA256": "fa828d3eed6cb54c2fa055842020c648797ca6a907f297ff588f7ab89fd4c058"
+    }
+  ],
+  "recordedAtUTC": "2026-10-09T08:25:33.006776+00:00",
+  "scope": "File-hash comparison supplements exact historical native results; it does not execute a newer test helper or replace pushed-head hosted acceptance."
+}

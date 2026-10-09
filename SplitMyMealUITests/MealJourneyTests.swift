@@ -496,6 +496,9 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testReverseAssignmentFixedChargesConversionCancelAndClear() throws {
+        // Hosted assertions finished at 239 seconds; native termination crossed
+        // the four-minute default. Keep a bounded allowance for the full journey.
+        executionTimeAllowance = 300
         createMeal("Assignment dinner")
         addPerson("Riley")
         tapScrollable("add-item")
@@ -1229,7 +1232,7 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertTrue(bar.waitForExistence(timeout: 5))
         for orientation in [UIDeviceOrientation.portrait, .landscapeLeft] {
             settleOrientation(orientation)
-            assertReadableRestaurantMap(app, title: "Juniper · sample restaurant", address: "Fictional dinner for app screenshots", orientation: orientation)
+            assertReadableRestaurantMap(app, title: "Juniper · sample restaurant", address: "Fictional dinner for app screenshots", orientation: orientation, verifyMapsHandoffAfterScrolling: true)
         }
         bar.buttons["Done"].tap()
         XCTAssertTrue(app.buttons["edit-meal"].waitForExistence(timeout: 5))
@@ -1617,8 +1620,10 @@ final class MealJourneyTests: XCTestCase {
 extension XCTestCase {
     /// Checks the actual visible map and fully rendered largest-text details;
     /// scrolling may reveal long address portions and individual native actions.
+    /// Optional handoff verification drags directly on Open in Maps, then opens
+    /// native Maps intentionally and returns to the unchanged map presentation.
     @MainActor
-    func assertReadableRestaurantMap(_ app: XCUIApplication, title: String, address expectedAddress: String, orientation: UIDeviceOrientation, capturePrefix: String = "restaurant-map-accessibility-text") {
+    func assertReadableRestaurantMap(_ app: XCUIApplication, title: String, address expectedAddress: String, orientation: UIDeviceOrientation, capturePrefix: String = "restaurant-map-accessibility-text", verifyMapsHandoffAfterScrolling: Bool = false) {
         let bar = app.navigationBars[title]
         XCTAssertTrue(bar.waitForExistence(timeout: 5))
         func capture(_ name: String) {
@@ -1660,10 +1665,48 @@ extension XCTestCase {
                 XCTAssertLessThanOrEqual(map.frame.maxY, details.frame.minY + 2, "The visible map must sit above the scrollable details, away from their text and actions.")
             }
             visibleMapBottom = min(map.frame.maxY, app.frame.maxY - 20)
-            let viewport = details.frame.intersection(CGRect(x: app.frame.minX, y: bar.frame.maxY, width: app.frame.width, height: app.frame.maxY - 20 - bar.frame.maxY))
+            // AX scroll frames can extend into a safe-area strip that SwiftUI
+            // clips. Read the target pane's own layout, never runner insets or
+            // a fixed device allowance, before accepting a complete action.
+            let detailsFrame = details.frame
+            let windowFrame = app.frame
+            let navigationFrame = bar.frame
+            let probes = app.descendants(matching: .any).matching(identifier: "restaurant-details-viewport")
+            let probe = probes.firstMatch
+            guard probe.waitForExistence(timeout: 5), let value = probe.value as? String else {
+                XCTFail("The isolated target app must expose its actual clipped details layout.")
+                return
+            }
+            guard probes.count == 1 else {
+                XCTFail("Exactly one target pane must report its clipped layout.")
+                return
+            }
+            let layoutFrame = NSCoder.cgRect(for: value)
+            guard [layoutFrame.minX, layoutFrame.minY, layoutFrame.width, layoutFrame.height].allSatisfy(\.isFinite), layoutFrame.width > 0, layoutFrame.height > 0 else {
+                XCTFail("Invalid target details layout: \(value)")
+                return
+            }
+            let viewport = layoutFrame.intersection(detailsFrame).intersection(CGRect(x: windowFrame.minX, y: navigationFrame.maxY, width: windowFrame.width, height: windowFrame.maxY - navigationFrame.maxY))
+            guard !viewport.isNull, !viewport.isEmpty else {
+                XCTFail("The target details layout must intersect the foreground content: \(layoutFrame)")
+                return
+            }
+            let nativeViewport = XCTAttachment(string: "Target clipped layout: \(layoutFrame); details AX frame: \(detailsFrame); foreground window: \(windowFrame); navigation: \(navigationFrame); visible details viewport: \(viewport)")
+            nativeViewport.name = "restaurant-map-" + suffix + "-native-details-viewport"
+            nativeViewport.lifetime = .keepAlways
+            add(nativeViewport)
+            // Native snapshots can round the same component differently (for
+            // example, 402 vs 402.00000000000006). This comparison only guards
+            // stable container geometry; action containment stays exact.
+            func sameGeometry(_ lhs: CGRect, _ rhs: CGRect) -> Bool {
+                zip([lhs.minX, lhs.minY, lhs.width, lhs.height],
+                    [rhs.minX, rhs.minY, rhs.width, rhs.height]).allSatisfy { pair in
+                    pair.0.isFinite && pair.1.isFinite && abs(pair.0 - pair.1) < 0.001
+                }
+            }
             enum Portion { case entire, top, bottom }
-            func revealDetail(_ element: XCUIElement, portion: Portion = .entire) {
-                revealLoop: for _ in 0..<8 {
+            func revealDetail(_ element: XCUIElement, portion: Portion = .entire) -> Bool {
+                revealLoop: for attempt in 0..<8 {
                     let frame = element.frame
                     let upperGap = viewport.minY - frame.minY
                     let lowerGap = frame.maxY - viewport.maxY
@@ -1680,54 +1723,64 @@ extension XCTestCase {
                         gap = lowerGap + 8
                     }
                     XCTAssertEqual(app.state, .runningForeground, "A map details pan must start in the foreground app.")
-                    // Begin on visible non-action text or actual spacing, so
-                    // scrolling cannot start by pressing a native action label.
-                    let neutralTexts = [address, app.staticTexts["Location access is off."]].filter { $0.exists }.map { $0.frame.intersection(viewport) }.filter { !$0.isNull && $0.height >= 16 }
-                    let startPoint: CGPoint
-                    if let text = neutralTexts.max(by: { $0.height < $1.height }) {
-                        startPoint = CGPoint(x: text.midX, y: gap > 0 ? text.maxY - 4 : text.minY + 4)
-                    } else {
-                        let actions = [openMaps, showLocation, app.links["map-open-settings"]].filter { $0.exists }.map { $0.frame.intersection(viewport) }.filter { !$0.isNull }.sorted { $0.minY < $1.minY }
-                        var spaces: [CGRect] = []
-                        var edge = viewport.minY
-                        for action in actions {
-                            if action.minY - edge >= 4 { spaces.append(CGRect(x: viewport.minX, y: edge, width: viewport.width, height: action.minY - edge)) }
-                            edge = max(edge, action.maxY)
-                        }
-                        if viewport.maxY - edge >= 4 { spaces.append(CGRect(x: viewport.minX, y: edge, width: viewport.width, height: viewport.maxY - edge)) }
-                        // Select room to move in the required direction. A
-                        // taller gap at the viewport edge can allow only a tap.
-                        guard let space = spaces.max(by: {
-                            gap > 0 ? $0.midY < $1.midY : $0.midY > $1.midY
-                        }) else {
-                            XCTFail("Map details must expose visible non-action content for a native pan.")
-                            return
-                        }
-                        startPoint = CGPoint(x: address.frame.minX + 8, y: space.midY)
+                    let currentDetailsFrame = details.frame
+                    let currentWindowFrame = app.frame
+                    let currentNavigationFrame = bar.frame
+                    guard sameGeometry(currentDetailsFrame, detailsFrame),
+                          sameGeometry(currentWindowFrame, windowFrame),
+                          sameGeometry(currentNavigationFrame, navigationFrame),
+                          let currentLayout = probe.value as? String,
+                          sameGeometry(NSCoder.cgRect(for: currentLayout), layoutFrame) else {
+                        XCTFail("A details pan requires unchanged foreground geometry. Details: \(currentDetailsFrame); window: \(currentWindowFrame); navigation: \(currentNavigationFrame); captured viewport: \(viewport)")
+                        return false
                     }
-                    let available = gap > 0 ? startPoint.y - viewport.minY - 2 : viewport.maxY - startPoint.y - 2
-                    let travel = min(max(abs(gap), 20), available)
-                    XCTAssertGreaterThan(travel, 0)
-                    let endPoint = CGPoint(x: startPoint.x, y: startPoint.y + (gap > 0 ? -travel : travel))
+                    // A fixed native swipe can skip a large control's visible
+                    // position in this short viewport. Pan by the measured gap
+                    // at a controlled velocity, keeping both contacts inside
+                    // the clipped viewport and full-action bounds exact.
+                    let up = gap > 0
+                    let travel = min(max(abs(gap), 40), viewport.height - 32)
+                    let startPoint = CGPoint(x: viewport.midX, y: viewport.midY + (up ? travel : -travel) * 0.5)
+                    let endPoint = CGPoint(x: viewport.midX, y: viewport.midY - (up ? travel : -travel) * 0.5)
+                    guard travel.isFinite, travel > 0,
+                          [startPoint.x, startPoint.y, endPoint.x, endPoint.y].allSatisfy(\.isFinite),
+                          viewport.contains(startPoint), viewport.contains(endPoint) else {
+                        XCTFail("A details pan requires finite contacts inside the target viewport: \(startPoint), \(endPoint), \(viewport)")
+                        return false
+                    }
                     let origin = details.coordinate(withNormalizedOffset: .zero)
-                    let start = origin.withOffset(CGVector(dx: startPoint.x - details.frame.minX, dy: startPoint.y - details.frame.minY))
-                    let end = origin.withOffset(CGVector(dx: endPoint.x - details.frame.minX, dy: endPoint.y - details.frame.minY))
-                    start.press(forDuration: 0, thenDragTo: end, withVelocity: .slow, thenHoldForDuration: 0)
+                    let start = origin.withOffset(CGVector(dx: startPoint.x - currentDetailsFrame.minX, dy: startPoint.y - currentDetailsFrame.minY))
+                    let end = origin.withOffset(CGVector(dx: endPoint.x - currentDetailsFrame.minX, dy: endPoint.y - currentDetailsFrame.minY))
+                    let velocity = XCUIGestureVelocity(rawValue: 100)
+                    start.press(forDuration: 0.1, thenDragTo: end, withVelocity: velocity, thenHoldForDuration: 0.2)
+                    let panGeometry = XCTAttachment(string: "Attempt: \(attempt); portion: \(portion); action: \(element.label); viewport: \(viewport); before: \(frame); start: \(startPoint); end: \(endPoint); travel: \(travel); velocity pixels/second: \(velocity.rawValue); after: \(element.frame); details: \(currentDetailsFrame); window: \(currentWindowFrame); navigation: \(currentNavigationFrame)")
+                    panGeometry.name = "restaurant-map-" + suffix + "-detail-pan-\(attempt)"
+                    panGeometry.lifetime = .keepAlways
+                    add(panGeometry)
                     XCTAssertEqual(app.state, .runningForeground, "Scrolling map details must preserve the app's foreground presentation.")
                 }
+                let contained: Bool
                 switch portion {
-                case .entire: XCTAssertTrue(viewport.contains(element.frame), "The whole native action must remain within the foreground details viewport.")
-                case .top: XCTAssertTrue(element.frame.minY >= viewport.minY && element.frame.minY < viewport.maxY, "The full address's first lines must be reachable.")
-                case .bottom: XCTAssertTrue(element.frame.maxY <= viewport.maxY && element.frame.maxY > viewport.minY, "The full address's last lines must be reachable.")
+                case .entire:
+                    contained = viewport.contains(element.frame)
+                    XCTAssertTrue(contained, "The whole native action must remain within the foreground details viewport.")
+                case .top:
+                    contained = element.frame.minY >= viewport.minY && element.frame.minY < viewport.maxY
+                    XCTAssertTrue(contained, "The full address's first lines must be reachable.")
+                case .bottom:
+                    contained = element.frame.maxY <= viewport.maxY && element.frame.maxY > viewport.minY
+                    XCTAssertTrue(contained, "The full address's last lines must be reachable.")
                 }
-                XCTAssertTrue(element.isHittable)
+                let hittable = element.isHittable
+                XCTAssertTrue(hittable)
+                return contained && hittable
             }
             if address.frame.height > viewport.height {
-                revealDetail(address, portion: .top)
+                guard revealDetail(address, portion: .top) else { return }
                 capture("restaurant-map-accessibility-text-" + suffix + "-address-top")
-                revealDetail(address, portion: .bottom)
+                guard revealDetail(address, portion: .bottom) else { return }
             } else {
-                revealDetail(address)
+                guard revealDetail(address) else { return }
             }
             capture("restaurant-map-accessibility-text-" + suffix + "-address")
             var controls = [openMaps, showLocation]
@@ -1736,8 +1789,46 @@ extension XCTestCase {
             if locationError.exists { controls.append(locationError) }
             if openSettings.exists { controls.append(openSettings) }
             for control in controls {
-                revealDetail(control)
+                guard revealDetail(control) else { return }
                 capture("restaurant-map-accessibility-text-" + suffix + "-" + control.label)
+                if verifyMapsHandoffAfterScrolling && control.label == openMaps.label {
+                    // Reproduce the cancellation boundary with a real contact
+                    // beginning on the fully revealed native handoff button.
+                    let before = openMaps.frame
+                    let startPoint = CGPoint(x: before.midX, y: before.midY)
+                    let endPoint = CGPoint(x: startPoint.x, y: startPoint.y - 50)
+                    guard [startPoint.x, startPoint.y, endPoint.x, endPoint.y].allSatisfy(\.isFinite),
+                          viewport.contains(startPoint), viewport.contains(endPoint) else {
+                        XCTFail("Button-started scrolling requires both contacts inside the native details viewport: \(startPoint), \(endPoint), \(viewport)")
+                        return
+                    }
+                    let origin = details.coordinate(withNormalizedOffset: .zero)
+                    let start = origin.withOffset(CGVector(dx: startPoint.x - detailsFrame.minX, dy: startPoint.y - detailsFrame.minY))
+                    let end = origin.withOffset(CGVector(dx: endPoint.x - detailsFrame.minX, dy: endPoint.y - detailsFrame.minY))
+                    start.press(forDuration: 0.1, thenDragTo: end, withVelocity: XCUIGestureVelocity(rawValue: 100), thenHoldForDuration: 0.2)
+                    let cancellation = XCTAttachment(string: "Button before: \(before); viewport: \(viewport); contact start: \(startPoint); contact end: \(endPoint); button after: \(openMaps.frame); application state: \(app.state.rawValue)")
+                    cancellation.name = "restaurant-map-" + suffix + "-button-started-scroll"
+                    cancellation.lifetime = .keepAlways
+                    add(cancellation)
+                    capture("restaurant-map-accessibility-text-" + suffix + "-button-started-scroll")
+                    let maps = XCUIApplication(bundleIdentifier: "com.apple.Maps")
+                    guard app.state == .runningForeground, maps.state != .runningForeground else {
+                        XCTFail("Scrolling from Open in Maps must cancel the press without handing off to Maps.")
+                        return
+                    }
+                    guard revealDetail(openMaps) else { return }
+                    openMaps.tap()
+                    guard maps.wait(for: .runningForeground, timeout: 15) else {
+                        XCTFail("An intentional tap after scrolling must still open native Maps.")
+                        return
+                    }
+                    capture("restaurant-map-accessibility-text-" + suffix + "-intentional-native-maps")
+                    app.activate()
+                    XCTAssertTrue(app.wait(for: .runningForeground, timeout: 10))
+                    XCTAssertTrue(bar.waitForExistence(timeout: 5), "Returning from Maps must preserve the same restaurant presentation.")
+                    XCTAssertEqual(address.label, expectedAddress)
+                    capture("restaurant-map-accessibility-text-" + suffix + "-intentional-maps-return")
+                }
             }
         } else {
             visibleMapBottom = address.frame.minY - 16

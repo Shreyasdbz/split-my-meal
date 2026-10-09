@@ -1,0 +1,2216 @@
+{
+  "additionalReviews": [
+    {
+      "attachmentIndexSHA256": "8e7a55a4f048856571d59eec98e27f2ed03388771b8237115a64480007a78ce0",
+      "evidenceRun": "split-my-meal-qa-compact-map-cancellation-final",
+      "findings": [],
+      "images": [
+        {
+          "nativeAttachment": "1A12396A-44E6-4CD4-877E-A9CC96B8DF32.png",
+          "nativeName": "live-mapkit-final-state_0_3EEE8C70-B75C-404A-93CE-1E902060E752.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "cccfaa365edaff43a42f4d14a2aac9baa633456f5e8778b0332aa35f67a376e1",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "7E9A827D-2BBC-4166-969E-86B229950964.png",
+          "nativeName": "denied-map-settings-return-preserves-saved-restaurant_0_86A8EF31-CF8B-4206-8470-C248731FF345.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "a3b4c0e9833ba8132ed19e421b5d5bf1dfed6f52a610973b5b2af2da07a24c35",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "90BADC1D-3286-4BE9-9F8D-115F97DAABA7.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Open Settings_0_CC34A7FF-BCB1-4C8E-B3F0-0F7684ABC2AA.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "300023caeeade36c16baa8573d38bc7c75ff4b7ce0eb381b98e29e4fabee99dd",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "B8960156-0291-4409-A988-F240063F90E3.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Location access is off._0_CC790C26-F745-48F6-B48D-33F69986C649.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "30cd314a7d85758b8b40a2a03b9bd1e8c5cf06b3a96c1eef2f50e6be91cb6c4d",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "AA4C2B95-6D82-4288-92DD-FECEC80A90F4.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Show my location_0_805237E6-253E-4FC0-AF85-3041CB50B988.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "73a491990d34f73a35acb8fb880d8e7d336f403c85a36a226d07a626ad927d39",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "60F94A9B-D50C-4921-9675-7082A6649BA3.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Open in Maps_0_B959663F-50FC-4C38-AA1B-15CB77D1C355.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "51501884313a9be6ff126c4f11b7a5449a38ced76ca04b1ff5cadff525fcd000",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "165ABFA5-3AEC-4129-AB87-D3FD6B576964.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-address_0_FA2CD686-25F4-40AF-9CDD-A07E8888A8CC.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "31bb71a8caa817e1bc0269fe5eda955c1da04807d460d6d57b6e67bbc337f946",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "1A992761-2EA4-409B-9D0B-C39C8BCB47F6.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Open Settings_0_EED3D0C9-41B8-4419-BC53-C879A28E1126.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "787c6f138ed1dc93cb5a501c1d832cd0594a6b57465cd4a499da1629929bc3cf",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "7123881B-2C98-49DF-9EC4-3B2E3FE76C12.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Location access is off._0_808A0448-A0FA-46FC-989F-9F494DC5B746.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "d4af6c7eccb883af98b19b88895ff64ce302dda8465e08af1c382e9a7ea96731",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "DE919682-E284-4B17-B621-9B2FDEF3F969.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Show my location_0_B1752630-8EAA-4350-AA13-724016E09BF7.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "e7e09253ca28a781623711fa7ba4be84f81c4ef12f083b695ae897e0192225db",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "FC4EA6B8-49C3-4DFF-BBCC-20E3FB1C9E6F.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Open in Maps_0_C4FE0E03-04D7-4344-9E31-B0880063EAD7.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "0b0989ac3b4824987186188212d0dc5cbc58954196a1225cb512ef6649e55175",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "3977A3A3-C348-4A10-BF71-E24C2338465E.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-address_0_C663C665-6B43-4994-A5A4-6EA6BE5BF66F.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "0f564d1cbd1d5d9bb2405da464c54863741f9558960a86732491d9eb06772661",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "834497B9-BB56-444E-8F5C-13EF4F311556.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Open Settings_0_F1479C90-4275-43E1-AF02-BDC28FE00717.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "2fd7d5b0c74094da4e853b3de2066883731aceaa332240d88c7136886ac0a42c",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "22333E3F-38D1-47DD-9DB7-CA32EF7CE64D.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Location access is off._0_26DC1D95-BB04-4F01-BB27-D68F2FE8B63D.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "93102177611fd9a2ef7ca1744210795bf839113b473bd03cd2c5930e32119694",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "DE7E521F-838A-4E14-9995-987F38F454BA.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Show my location_0_3CD51A6B-B6E6-46CF-9DB8-3F973328CC4F.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "a75d9a4e3962c6a0d0273081edd4e5808080d7e7de5ce335e30c9e7d32d0f83a",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "957D6EFC-5886-499B-A149-3B135E19B440.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Open in Maps_0_10A34EE1-F967-4EF0-A4FC-510115AF8457.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "7e402513c784bab9fb52e7ce00b34865cae61434c5ad0d000e44621de7e12865",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "E8F871AB-BF98-463E-A25D-7CEDA4711125.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-address_0_0FEE6D9F-2B46-4A52-AC8E-B2DD30863C1A.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "644b2ff2b12159aafaae808a3516e55b894da438ed06d4b8bac972f2738f0b5e",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "CFC72867-0B51-4074-827F-6E5491E3F46C.png",
+          "nativeName": "denied-map-largest-text-saved-restaurant-row_0_E610F3CA-4DCC-4C60-B70A-CB2D9FB3D348.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "20f5dbbaa4add199c6c60c30b34d8aa72102fde55862d2d24b5e965b7189a062",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "3643C12D-9FFC-4DDE-8BDC-A4851DB6F6C4.png",
+          "nativeName": "denied-location-settings-return-preserves-query_0_9A891AB7-7F90-4965-874E-D693634898AE.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "63231153bc53bd52e524efc683c4a321c157ad441e90285de177f1b54debd3b0",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "DB52E522-DF85-46EA-A847-C1678C3A87A9.png",
+          "nativeName": "denied-location-opened-in-native-settings_0_BA082A96-13D5-401F-AAD0-15A4EFF70E07.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "edfe09c85497071d35c683277a964c1a3caa6f85d078712beedb6b0b16a83c23",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "8D5B778A-F290-4BDE-8C5E-97FD9504D678.png",
+          "nativeName": "nearby-location-denied_0_C3F2F2E1-2B1C-4F62-AFC5-12D5569720C1.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "9960088d8d8caf9a4d41e14e40f0bfce9473faf5a87be6cd2cac6ebfce6693b8",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "7437B912-DD46-417F-8994-F9D8DEF0E3B1.png",
+          "nativeName": "historical-restaurant-location-unavailable_0_DEA3C791-322A-4D98-A0CF-5B25831E272D.png",
+          "nativeTestID": "MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+          "reviewedOriginal": true,
+          "sha256": "9b45c2ede09cb99e98c2e78ab7b25258b56f5afae571a144b0111b0a2daf9e99",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "8633660F-208F-401C-8CB0-0D751812C160.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-Show my location_0_797E038C-020A-484A-A72A-355FBE8E52A5.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "95912ce1f93e1065b51bed9916e977e90f0aa92e84742d702f73762f42b88313",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "020D9685-D147-4F90-9A9A-50C0B3EBED5C.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-intentional-maps-return_0_0B09090F-AADC-405D-9CB5-4280CB7F061D.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "743ef02dfe57b2f0b99df82f0867d04217c2a7a41eeffa897ac2a50d1614709c",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "EFCE231A-BB4B-45B8-A979-A95AA618AE69.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-intentional-native-maps_0_7C61F055-ED20-4858-B747-CCD404DB2CEF.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "1c5b2869b185a8c626a2cfb78c9880e14e77392ac3c95f9c5d87ca861d655926",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "3F7EFCE0-73DF-48C4-9A01-DF9B679E8639.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-button-started-scroll_0_366D0CCF-5D5D-4965-B416-7FA2F24F0F7F.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "1f8143892f6a322312db9616cb8ae3dd7b2ff0d8c12012f163935a3e87ebbe3f",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "7268A410-4684-4652-9953-56CB646A8678.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-Open in Maps_0_D399A108-8EE4-4000-8738-5C7847E5F4B1.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "ab096d9f37930fe01635f248b12f87c57a8c9d046123d912af8a1bf4221f688a",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "22D40047-1C0E-4E5E-B435-9F592A03B551.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-address_0_ABDC7EAE-7BD3-4C6F-B4E1-0C530308057E.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "6f29735104ae5d62cd711c100f6cba9e6900c9a49a4efbf53a661ca2b5f98333",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "BF6E2B8E-5C9A-4F69-BD97-9DE7497AF46A.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-Show my location_0_539468AC-3BD0-41BA-B820-CB30739242F6.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "e092d3b12f6ead9721b07e06e13a1b4f5521d324a1a6a3c8823c0333e5b4c1b1",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "FA16DFF4-31D2-4086-9CCA-82D7C0D5F89F.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-intentional-maps-return_0_B213B061-A11E-424C-803D-EBF6155BEACB.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "88ae3949269cce3b1c1f91231306ecd003a08be8193b4a83b4e7e5d0661491c8",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "ABCB87C6-615C-4F41-9B0F-4AF8A9DDB9A7.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-intentional-native-maps_0_2D24ED5D-BD5F-44B9-808E-C6CA687E6312.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "5a2a32a74b1b3d378be8854b28a66a9d0bb354f144cbe9fa658a55ed6a58e87f",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "469257E9-C52E-41AC-ACEF-E84E2521BC2B.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-button-started-scroll_0_9A0C2BF5-A707-4C3E-9178-CBB893339814.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "e0c273cd3fd2776863c468cc75ff04fd7bb281c8563e9d2ee47cd4c5dbfd655c",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "221E6992-C34D-4D1C-BD40-227ADC9A45A3.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-Open in Maps_0_2CD8D088-15DD-4D06-9DD4-B7008EF8230F.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "39689fc7237d4880de6746469f66211b6421ce89b07c1fb44c048cec69061345",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "074E15E5-33A8-4EF1-AE8B-C0D2A57127AC.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-address_0_9E80EFF4-6BC2-43BB-9F4A-00F0EAA7DEA5.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "9eb4ec62100cdaed9b2be5e9bae7b9e78724cea58bfb33f28fe3bc18207a78b6",
+          "surface": "App-owned captured state"
+        }
+      ],
+      "limits": [
+        "No independent interaction, continuous motion, VoiceOver, haptic, or broad accessibility certification.",
+        "Captures reflect separate scrolled states; system transition captures do not establish a settled Maps screen.",
+        "Only listed originals were inspected; unrelated cases or appearances remain outside this review."
+      ],
+      "nativeResultEvidence": {
+        "actualCaseCount": 4,
+        "distinction": "Reported maintained native cases; reviewer independently inspected pixels and did not operate the app.",
+        "passedCaseCount": 4,
+        "source": "focused-selection-results.json"
+      },
+      "observations": [
+        "Useful visible map region and separate readable details; Done retains a clear return path.",
+        "At largest text each full address and action is readable in its respective scroll state; content cut at the scroll boundary is not a permanent control truncation.",
+        "Prominent Open in Maps and secondary My location remain distinct; denied recovery text and Open Settings are readable where captured."
+      ],
+      "productionProjectInputsMatched": 33,
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79"
+    },
+    {
+      "attachmentIndexSHA256": "e4a302aaeddb9bcc09eda74d110e3aa54edb77c1fcfb6e25261148d15a058ae1",
+      "captureLimitations": [
+        {
+          "classification": "Evidence limitation; persistent unreachable control not established.",
+          "nativeAttachment": "C9692527-5956-41BA-8969-9341D705DC11.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "observed": "Lower line of My location is partially clipped at the clipped detail pane bottom.",
+          "requiredEvidence": "Corrective native capture with full text and target inside actual clipped pane, excluding bottom safe-area chrome.",
+          "sha256": "02671c8b62780ea7ead516db71b1cd33937c6aec4df94eee7f07e182d6f694f5",
+          "status": "Pending corrective native capture"
+        }
+      ],
+      "evidenceRun": "split-my-meal-qa-phone-map-dark-final",
+      "findings": [],
+      "images": [
+        {
+          "nativeAttachment": "D00054EB-F2E9-49D8-A26F-237610B8AFC9.png",
+          "nativeName": "live-mapkit-final-state_0_C268A583-55A8-403A-B7CC-3033DDB65761.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "ae3c717a4101d22152bee5de85f721b714ec87fafc235d826dc2e7d765988ae4",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "F8F23BB6-0A6E-464F-8EE4-DDE9B6C04E37.png",
+          "nativeName": "selected-restaurant-opened-in-native-maps_0_2DDE8CB1-925A-46EE-8425-41EED2F46A9A.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "287ec3764bb84170732cbb2a994c32b77c8f3a9bad1e74210f4d80475e1d4b2e",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "F75C321E-E622-429B-BE20-87FD4F8BE947.png",
+          "nativeName": "live-selected-restaurant-map_0_CCE6213F-8DA1-4474-B4A6-156467B5E63D.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "ecf119512d55dead7c297644039cd06faf18c2239ae2d0dedc08cbeb4fa9e2ac",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "E206967C-9E20-4936-9330-3EAD5C3B2BF2.png",
+          "nativeName": "live-mapkit-autocomplete-results_0_C5D53B65-90CD-446C-A45D-5335C7A56944.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "50adcba4fe5d984eb34717fbed6ba02a9130dfe5d3377fdc01090bd4e54e7703",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "0EEB13BF-DA41-4129-9081-8BE337E92B8C.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-Show my location_0_713D824E-7486-448D-92EE-DFFEB51A7B9E.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "aeeb212540338ac1a6eacef68f0d1f3ad985df61b3922b3412a25ebe1508f721",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "492AE30E-47DD-4E54-AAB5-70D70708B841.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-intentional-maps-return_0_EEE55AFF-1725-40E7-B9D4-A615D568003C.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "cd0b9423ac8754b262e3e6b353641a309521c2817aab430f438cb3db165c0947",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "CBE5028F-60D0-4335-A90A-3DCF15FFCF18.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-intentional-native-maps_0_A606C992-C5CE-483D-8A79-43AF3970F526.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "80a9b2e9ce27afe19038f5fae845b0284d5c091f8c986499d679d73d66695a49",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "DB88147A-E230-4401-8437-BB871A6FB434.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-button-started-scroll_0_9F43DC44-09E6-435F-B9B4-6D90469E3699.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "eb497d061877c9d2eeda0f70a22d2248a171f91a0e8c85a5a87fbab572daeb89",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "DB0E72B6-9C46-4223-9C7B-BF7B8176995A.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-Open in Maps_0_E30D3137-89E3-4CCA-B065-62F32CE61774.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "e27203cd30ce1b0344c5a46db613b9e78b4dddb12d78d9bd041166ce15b337a5",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "296BE20B-2A41-4FD2-AA21-C2E59B58F434.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-address_0_1C095560-AC81-40F9-B0D5-BA8EEA8DF7D1.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "e12087083461787f6a4be901ef257d2e76b54571d937e2b42966ff1fb168cb92",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "C9692527-5956-41BA-8969-9341D705DC11.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-Show my location_0_7095D798-692D-457E-9BBE-288D3D8AF908.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "02671c8b62780ea7ead516db71b1cd33937c6aec4df94eee7f07e182d6f694f5",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "376763E9-F465-4CC0-BC18-227629567B46.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-intentional-maps-return_0_93E06EEF-12CC-49CC-AD03-94A27E79E2BE.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "0be3e6a7a1c50637870316939665790b65b4b6f965917fab17859cd9aad9a8e9",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "F329F526-207E-4497-BB14-2CE0B4370D4B.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-intentional-native-maps_0_14551C44-CC32-4141-B127-B27E8B058525.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "b0a34627acdd423cb52eea254fb3888bbe589a87d3247d1b85ef1b891994433a",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "40290543-E423-4368-ACFF-971233642E17.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-button-started-scroll_0_02F61E77-2DF2-475E-9A63-0827CEC1ECA4.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "80294dbf68be3a05dc18208282ae3930d7e56db24115d0f2d0fcc3914545533e",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "1E945083-0A8B-4771-B792-61B0A2E2913C.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-Open in Maps_0_DAA832E7-B73D-48FE-B1CC-B7E1278AE925.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "33bc0f545152ee704840abed6c099da1afdc9ab9e9e9a30a6bea8607b76a079e",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "83869443-F0B2-4485-A0D0-D2F173EEF9BC.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-address_0_9702AABC-B69D-4484-B209-3A3685531EFB.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "33bc0f545152ee704840abed6c099da1afdc9ab9e9e9a30a6bea8607b76a079e",
+          "surface": "App-owned captured state"
+        }
+      ],
+      "limits": [
+        "No independent interaction, continuous motion, VoiceOver, haptic, or broad accessibility certification.",
+        "Captures reflect separate scrolled states; system transition captures do not establish a settled Maps screen.",
+        "Only listed originals were inspected; unrelated cases or appearances remain outside this review.",
+        "Existing passing AX containment assertions included bottom safe area outside the actual clipped content pane; this frame does not certify complete target containment."
+      ],
+      "nativeResultEvidence": {
+        "actualCaseCount": 2,
+        "distinction": "Reported maintained native cases; reviewer independently inspected pixels and did not operate the app.",
+        "passedCaseCount": 2,
+        "source": "focused-selection-results.json"
+      },
+      "observations": [
+        "Largest-text address and primary action are readable in their respective states. Phone dark portrait My location capture C9692527 partially clips its lower line at the detail pane edge; full secondary-target containment is not established by this capture.",
+        "Dark normal selected-restaurant Map shows readable full address, black text on mint primary, and mint secondary on dark backing."
+      ],
+      "productionProjectInputsMatched": 33,
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79"
+    },
+    {
+      "attachmentIndexSHA256": "00f9bc17560de8f34ac63529e83b85f84fdc1166f3807bc7d85dd4521887d276",
+      "evidenceRun": "split-my-meal-qa-pad-map-dark-final",
+      "findings": [],
+      "images": [
+        {
+          "nativeAttachment": "BAE30697-0889-45B1-82E4-0CE181612A45.png",
+          "nativeName": "live-mapkit-final-state_0_F257DDE8-9EA1-4E15-8267-47EBBF36D4F4.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "4d6d4f8407ba2ee699677b57b76edc7ff780bee3b678ab82bbfcc1b62a86321b",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "FC057F70-5F54-4EF4-8B71-096264DB914B.png",
+          "nativeName": "selected-restaurant-opened-in-native-maps_0_E934A7E2-16D5-49E3-A894-3722275353BD.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "95e800415efc4f1d9146f4cb415758a4ba2c22714320f51a4f4341faddb06da5",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "78B7538C-CDCA-4D12-B19F-0F7230C42369.png",
+          "nativeName": "live-selected-restaurant-map_0_837BF094-0EEF-4EB2-9299-2363B8C16658.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "eab2a22393ac0731081e1092bc92032d3502ccd091ec47a982e60e266ca4fde4",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "3B5F8C8D-43D5-4CE5-BA55-DF963056E481.png",
+          "nativeName": "live-mapkit-autocomplete-results_0_26475EAE-1780-4961-B1C4-180F18DD0D57.png",
+          "nativeTestID": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "reviewedOriginal": true,
+          "sha256": "58f5f6bf4e61045b82629ebf68eae0fce4d9afbcc398218494927c00674bed94",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "DE4D9F02-42DF-4454-84FF-A538F5A49580.png",
+          "nativeName": "denied-map-settings-return-preserves-saved-restaurant_0_3848DFF6-91AA-47D0-AF85-939809C3ECEB.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "4764df9197117db45b94c6234f0e190493d8e8a7313043a116fc0876797012a6",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "E0146E82-16F6-4E95-9912-DA18E10FD899.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Open Settings_0_705D86CC-BDFA-4B18-AE50-BF5878DAC4C9.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "e4cbc7adc45b11994deea3e9c4d0059b118a94de77586c38abd078b8a8a986ce",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "8753A85B-2036-4D45-8621-B0DE9822F002.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Location access is off._0_43F5437C-813A-4431-AA1D-87CC5E71F768.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "e4cbc7adc45b11994deea3e9c4d0059b118a94de77586c38abd078b8a8a986ce",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "582DAF86-C616-4B95-8759-D2C47B793845.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Show my location_0_E2429C9A-BFE0-427B-AD58-2773C4B57D43.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "e4cbc7adc45b11994deea3e9c4d0059b118a94de77586c38abd078b8a8a986ce",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "CA6B5095-1B59-4ED4-B807-E9256A2DE33B.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-Open in Maps_0_2EE1CBA9-611D-410B-8151-7107121E9F86.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "e4cbc7adc45b11994deea3e9c4d0059b118a94de77586c38abd078b8a8a986ce",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "C77EF438-A87B-42F9-A6A1-EF0ED0717902.png",
+          "nativeName": "restaurant-map-denied-before-settings-portrait-address_0_DEED8B1A-8217-4F04-9B44-414EC4B83850.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "e4cbc7adc45b11994deea3e9c4d0059b118a94de77586c38abd078b8a8a986ce",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "4B4E436D-3CAC-48BE-90B4-304F6432DE41.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Open Settings_0_CA904E7E-1AD2-4D1B-8D88-06B67DDE5659.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "b9a8a7f51a012ac0946b2d5b0a3f7289349083acf68793b6ffd4f19b0b3ad0ba",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "CF950C88-F8A5-4C09-9FBE-FC8461F1723F.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Location access is off._0_7F11B751-72A6-48D2-BBE5-47DF7763D473.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "b9a8a7f51a012ac0946b2d5b0a3f7289349083acf68793b6ffd4f19b0b3ad0ba",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "FE1030D4-628B-4988-9286-8AD2E5400C58.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Show my location_0_B5C38C00-B17E-464A-A7FE-20486040F7ED.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "b9a8a7f51a012ac0946b2d5b0a3f7289349083acf68793b6ffd4f19b0b3ad0ba",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "961B18D8-D292-4377-914B-59F018767E75.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-Open in Maps_0_92ABEC17-F36D-46C5-B027-CE4FD5BFB22E.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "b9a8a7f51a012ac0946b2d5b0a3f7289349083acf68793b6ffd4f19b0b3ad0ba",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "6F35EAC4-3ECA-46B8-B27E-86496C3732CB.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-landscape-address_0_B741497C-A45D-450E-98BA-1C5B18BA79C7.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "b9a8a7f51a012ac0946b2d5b0a3f7289349083acf68793b6ffd4f19b0b3ad0ba",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "2EA911FC-A173-4DF8-9EBE-AE858C5200AD.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Open Settings_0_F6693D6E-C43A-49D3-911A-DA6D1CD2B15E.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "67d57c0799378b7fd5a0fdb623b916c72721a472a0fa84719aad4fa808bd234d",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "AFECAC61-EEDC-42F2-B5C3-8F267277FD8B.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Location access is off._0_EBCA548A-4DDB-40AA-B5B0-526205B79A79.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "67d57c0799378b7fd5a0fdb623b916c72721a472a0fa84719aad4fa808bd234d",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "E1F01B7D-D608-4AC8-908E-35CB502AB25D.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Show my location_0_204DB1BF-A3FE-4446-906A-2D39795404FB.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "67d57c0799378b7fd5a0fdb623b916c72721a472a0fa84719aad4fa808bd234d",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "BEFD3673-6620-4CD0-9862-5B480E45D4A5.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-Open in Maps_0_3A4D24CE-F0ED-4932-867D-643340CA6E16.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "67d57c0799378b7fd5a0fdb623b916c72721a472a0fa84719aad4fa808bd234d",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "D106D163-4A50-4D0E-A25E-AB30066DD715.png",
+          "nativeName": "restaurant-map-denied-accessibility-text-portrait-address_0_05593F95-5AE8-462F-841B-25C1C7BBB994.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "67d57c0799378b7fd5a0fdb623b916c72721a472a0fa84719aad4fa808bd234d",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "2956095A-9D20-4A86-8F31-EDC82C469540.png",
+          "nativeName": "denied-map-largest-text-saved-restaurant-row_0_3A95DEEA-24E1-4292-A2DC-47B729DD7B89.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "1a5f77f01e968772a1a2056082bcb171669281ac7b177acd07cf4700e2c4983e",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "5D6975D5-0F55-4A54-81F8-4CF0432642BD.png",
+          "nativeName": "denied-location-settings-return-preserves-query_0_EAD7768E-7CD4-4E73-97E4-534AA0B63502.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "b8a5e28cd03c56aa67e6f653f344d8e5a6898ca56817f53952b911f95b6a0a8c",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "505716DE-F1CA-4435-9979-866182E5FDF6.png",
+          "nativeName": "nearby-location-denied_0_963BA8C1-4806-4317-AEA2-394DF71CFD54.png",
+          "nativeTestID": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "reviewedOriginal": true,
+          "sha256": "5fae3afa89a5bf98d0e6046c6a23859847fce6efbba726a76b3698f9efc18042",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "956A923B-62E1-4ABA-A9A1-7FE56A96EC41.png",
+          "nativeName": "historical-restaurant-location-unavailable_0_36965741-3B9A-462B-9206-F78482FCBAA3.png",
+          "nativeTestID": "MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+          "reviewedOriginal": true,
+          "sha256": "4be1091442837498d522c676cbe0c52eeea4db366597ea86ea9db8558a9844fd",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "9EF35527-5D22-4ACD-9917-441CCA644EBB.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-Show my location_0_7E66352A-CA7F-43DE-BE9D-0F2624FD7E95.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "44eb36105239dfa4ca13eead71a86a8a358b273ea555b5cfed8d44386d8437af",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "C4924C01-0D47-4AE1-822D-F15A0EE04FF4.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-intentional-maps-return_0_910C11CA-06D7-4F62-9AFA-4D5C536FCFC6.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "8df4e6a11b461639bc1dad0e5b08334c8839db1ca457182be90287e13fb04c4a",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "E08F23C9-13BE-44A2-9A2C-C4E31D66AECA.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-intentional-native-maps_0_42E424D8-7CB9-4D96-8A4A-ABB479810A5E.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "7323791455442ec57afe65268dd49b5f6a573da1c8d2248aeccabab9eddf0082",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "8C4CC5E6-FBD8-41CA-99B0-139089C8F542.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-button-started-scroll_0_B48D5D49-920D-427B-B76E-22F8BF887BAC.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "cce25d4fe7fabd10e687031dc2d4ab99164062625df867b5bb3bae9e32b786f3",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "A0FEB704-E07F-4F63-8ACF-CA79B0BBDC9C.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-Open in Maps_0_490BB98E-4302-4D73-9214-D6BC998FDAEF.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "cce25d4fe7fabd10e687031dc2d4ab99164062625df867b5bb3bae9e32b786f3",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "F820BB70-0AF2-4E3D-ABF3-9BAFB4D43A63.png",
+          "nativeName": "restaurant-map-accessibility-text-landscape-address_0_407F950E-DD05-4072-85C7-1A89D383E654.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "cce25d4fe7fabd10e687031dc2d4ab99164062625df867b5bb3bae9e32b786f3",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "D45A594D-BA1D-43C2-95F9-D682361249D1.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-Show my location_0_D64EE1DF-88B9-44C9-8179-D32D1B62A558.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "48d1d78bfa3fc4ccdff935b9a74e35c730d3fbd32ddcdc16168e011d4bd53b95",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "35998C82-7642-4F2B-B03D-919C6558E0C6.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-intentional-maps-return_0_A886287B-6DC4-4328-A36D-96675CDA4975.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "bc0a28b3fbbd0da3ecce2836850a974b9824e6ffbdb996da57713298daab0467",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "2DBEB4C5-2CF0-4D04-82AA-34B4689559D2.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-intentional-native-maps_0_96327B66-7E2E-4AF9-A715-7D39C7057C95.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "4e4fe60c8b0f616799832ac8c80e4f294ae784fce5f0bc6a4dd7dc13e0f525f6",
+          "surface": "System handoff context, excluded from app-owned settled layout claims"
+        },
+        {
+          "nativeAttachment": "18DA61BB-AB79-4837-B347-766D74BFFE6C.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-button-started-scroll_0_0C7AB5B6-30E5-43EE-AA2E-14EBF757A311.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "93756a902b08f210886ad053d4c9d83d0a19a45a336a2c0f61a354b622a5cbb1",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "4E5C6BC0-180E-4DE4-B1BC-421DC8EE1193.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-Open in Maps_0_C216CF42-52DF-49E1-B726-BE8561377645.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "93756a902b08f210886ad053d4c9d83d0a19a45a336a2c0f61a354b622a5cbb1",
+          "surface": "App-owned captured state"
+        },
+        {
+          "nativeAttachment": "84374FA2-A5B0-4BD2-B6CF-E74DFED91CCE.png",
+          "nativeName": "restaurant-map-accessibility-text-portrait-address_0_56BFA4D7-09D8-4433-BB16-84984E8E1A59.png",
+          "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "reviewedOriginal": true,
+          "sha256": "93756a902b08f210886ad053d4c9d83d0a19a45a336a2c0f61a354b622a5cbb1",
+          "surface": "App-owned captured state"
+        }
+      ],
+      "limits": [
+        "No independent interaction, continuous motion, VoiceOver, haptic, or broad accessibility certification.",
+        "Captures reflect separate scrolled states; system transition captures do not establish a settled Maps screen.",
+        "Only listed originals were inspected; unrelated cases or appearances remain outside this review."
+      ],
+      "nativeResultEvidence": {
+        "actualCaseCount": 7,
+        "distinction": "Reported maintained native cases; reviewer independently inspected pixels and did not operate the app.",
+        "passedCaseCount": 7,
+        "source": "focused-selection-results.json"
+      },
+      "observations": [
+        "Useful visible map region and separate readable details; Done retains a clear return path.",
+        "At largest text each full address and action is readable in its respective scroll state; content cut at the scroll boundary is not a permanent control truncation.",
+        "Prominent Open in Maps and secondary My location remain distinct; denied recovery text and Open Settings are readable where captured."
+      ],
+      "productionProjectInputsMatched": 33,
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79"
+    }
+  ],
+  "attachmentIndexSHA256": "3867a52aa5d2118c8a45bca310316e6b98f510a30d87420600d52dd9a2387314",
+  "correctiveTargetContainmentReview": {
+    "currentProductionProjectInputsVerified": {
+      "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "85d030acdd33a8eb3690f1c691823a8a46b7832dd4ec9ad220bbc0a2af5cb873",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+      "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/AppIcon.png": "5f9e252952b674f8ff5677fb5d686095b21896b4775d2336483ba9beb2928a32",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/Contents.json": "852920cb36e95beb53771138a4b8195a16fcce1cc31250632f246081cc638f9a",
+      "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+      "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+      "SplitMyMeal-Prod-A/Design/MealDemo.swift": "ed5979d8705723b7235af118cc72f2a7a5693652b48ea509be028bbb32c1a27f",
+      "SplitMyMeal-Prod-A/Design/MealUI.swift": "133391ba64ffb2fe955c1e7c9ec0676f593bc74f29e98ded3d7b06b02a9975ae",
+      "SplitMyMeal-Prod-A/Info.plist": "8a1af94ec2577542de3bd3f23d76107f552bf993754059739ba158d39f9dd20c",
+      "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+      "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+      "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+      "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+      "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+      "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+      "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+      "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+      "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+      "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+      "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "380f10c29f27277d1a4e271ad169ee2f19bec340a4df9e3f7d74ba00c0935a91",
+      "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "ff88f280b693a4856517cda638f1c71f5d7fbfd8a55b91c5a962b89952a0d593",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "22e7c75a4db107b6a52dbea28a8f5e689f7dd6b538436cffdf4dec1c84eea9bc",
+      "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "83f5a419d25067832a06546cc49aefd68ff0a60e4bc0fc6b0805e28b935f555f",
+      "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "21d7d27fdc3019f650f515673bee8e73d08dec8d006433f85d0e9698630ca839",
+      "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "344727fa6b217656d47f1c8247c7126161dec173a038285f7c1cf5948b50e77a",
+      "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+      "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "7526ead54eac7d898c8b1c902cd0b1d7ab3c07322b27f92c86cb3cfb9d255951",
+      "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+      "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "a44d7c2a068c0db6b31089734abf69debdabd14305ec482acd47a66bc7627051"
+    },
+    "currentReleaseSourceManifest": "satisfaction-viewport-release-source-manifest.json",
+    "currentReleaseSourceManifestSHA256": "fa828d3eed6cb54c2fa055842020c648797ca6a907f297ff588f7ab89fd4c058",
+    "limits": [
+      "Scoped original-pixel inspection and source comparison only; recorded native passes are separate evidence.",
+      "No whole-app accessibility, VoiceOver/focus order, continuous fluidity, physical-device performance, haptic or subjective satisfaction certification."
+    ],
+    "observations": [
+      "Each intended target is fully readable in its respective portrait or landscape scroll state. Neighboring offscreen content can remain cropped.",
+      "The map retains useful space, Done remains clear, and the one-point transparent marker has no visible content overlap.",
+      "The original Phone C9692527 capture remains clipped. New Phone original 8B12E736/public location portrait shows both lines and the complete rounded target above the real clip edge."
+    ],
+    "originalViews": 48,
+    "portraitGeometryPoints": {
+      "compact": {
+        "locationBottom": 651,
+        "paneBottom": 667,
+        "settingsBottom": 651
+      },
+      "pad": {
+        "locationBottom": 860,
+        "paneBottom": 1160,
+        "settingsBottom": 991
+      },
+      "phone": {
+        "locationBottom": 824,
+        "paneBottom": 840,
+        "settingsBottom": 824
+      }
+    },
+    "recordedAtUTC": "2026-10-09T08:36:09.226118+00:00",
+    "recordedBy": "Root from the completed read-only reviewer report",
+    "reviewer": "ios_visual_designer",
+    "runs": [
+      {
+        "appearance": "dark",
+        "attachmentIndexSHA256": "e223c37cfe97474ec202dcae1d08b3d8b658b6e77ae4296f72a43799ed599ac7",
+        "differentNativeInputs": [
+          "SplitMyMealUITests/MealJourneyTests.swift"
+        ],
+        "findings": [],
+        "images": [
+          {
+            "file": "9C6CB9C5-8268-44DA-8C3F-F843C8A93C24.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Open Settings_0_DC030D83-EF9A-464B-91B5-5C842BBD1BF7.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "02f5291aa02b7fd63b165be9c113ba77b70e4b8c013faa43ee1c8f756ec82d6f",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533977.493
+          },
+          {
+            "file": "4A91CB6B-6D3E-4884-A5A1-9E98A65B7B67.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Location access is off._0_329342FB-EC45-472D-83F2-E77C0D0AE4CE.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "5b7ccde08a0a2efce54de4c4afeac84febe12ad7b7a2c6952f33d06354620db2",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533974.046
+          },
+          {
+            "file": "2DC32457-BA0B-4284-B760-64A84797C545.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Show my location_0_19A0EC04-F192-45BC-AAE2-60C31B3CE21C.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "02ab14991ecaa340dde641a8082354179099d8f5e10db0852dedd3a48950ca25",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533970.389
+          },
+          {
+            "file": "ECC98A76-45CC-4CA2-BA13-8140F7222903.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Open in Maps_0_2C2AEF64-B62F-4EE5-96E6-74604CAA6A65.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "685893f958756a86ebe403ee64d27eb54d12aa3ce23200348695f39f5950da31",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533965.373
+          },
+          {
+            "file": "1E408DDF-3E12-4EDE-88B4-79E38110EBAE.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-address_0_70D6FF12-50BD-4A57-BBAE-4865204437E6.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "81103e19da4cc33fefb4b93e5d78a54c67a34dca8e33842389acc35c8923cbca",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533961.841
+          },
+          {
+            "file": "05C07CD2-ADCE-4A3E-90B9-B1189EE110D6.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Open Settings_0_4A8C89D9-A2FC-4653-9621-9136E5A27CC1.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "d4b68a8ec677a3e0136846a9a8e6b1a56639e4fe6a930898fc1684dc36a13393",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533953.523
+          },
+          {
+            "file": "0DF9AC5D-48A5-4549-BA24-9C4D7260E5B3.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Location access is off._0_E6C64476-C8F0-4372-8B19-00D2712C5865.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a324d428c0a4ccfda63185bda89e1507cbcccb1cef4ee6be9c86f8d2444e5451",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533950.013
+          },
+          {
+            "file": "27D41925-F388-4CE6-BF8D-9AF24B63DC55.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Show my location_0_16942E86-F3AF-40AF-8810-049960A077F2.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "258f96c4545dcc435e7f58b2f1684a383a5138753addd8d2874b909fd9253fce",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533946.397
+          },
+          {
+            "file": "869E79BF-6D05-4951-840C-9CB0FCF41ECF.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Open in Maps_0_102CE812-17C9-443C-9DA5-D52FA3746333.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "e0359b8d28b646187ef8e91c0174f3ab94351a881430739acf7de99ff737ea72",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533942.567
+          },
+          {
+            "file": "58EC2270-B306-438D-8BC7-97C49D0A7736.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-address_0_11ED73B2-9923-4B00-A61C-C90C7C283C05.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "e0359b8d28b646187ef8e91c0174f3ab94351a881430739acf7de99ff737ea72",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533942.037
+          },
+          {
+            "file": "56A4EE16-CA7B-407D-A06A-D0501A4F5504.png",
+            "name": "restaurant-map-accessibility-text-landscape-Show my location_0_A6337143-5AB8-450C-B0E1-E7AA9E7E0F80.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "4e05191e2af36a8eb7001b6b8ba85a1d4cb5cbf0edc3b72510c0a4dda8123a29",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534095.804
+          },
+          {
+            "file": "7A7F27A9-B325-45C4-811B-2AE204711494.png",
+            "name": "restaurant-map-accessibility-text-landscape-Open in Maps_0_63C10E20-E9B6-4323-AD62-DFE9F782A65C.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "aa0f9939aa80f7ee0e52a0c3f7f54e37fd866f6fb74278c1d8e0af6a6f634a1d",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534086.47
+          },
+          {
+            "file": "1A8F4F9B-A1BF-421A-AEE7-6E7DDC97760D.png",
+            "name": "restaurant-map-accessibility-text-landscape-address_0_973CD026-E85E-4580-9632-16D5E8FB15D1.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a60b8b9f37329bceb0ef179fb9d46e44bb13ac7d56aca3146a1db883bf55a6f6",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534082.977
+          },
+          {
+            "file": "8B12E736-DB70-4A08-ABDD-9FF22534E23F.png",
+            "name": "restaurant-map-accessibility-text-portrait-Show my location_0_D186DF22-CB88-4DD6-AF83-1F7253BABB50.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "8b131450e2f16bc45f61d35db2d83466200aa6d2fcaecc7802907af60ef8b668",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534074.644
+          },
+          {
+            "file": "EA64A914-DA2A-45D4-BBA1-FA885E700698.png",
+            "name": "restaurant-map-accessibility-text-portrait-Open in Maps_0_6E13E46B-F38D-49A3-8B78-F6E91B2A21FE.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "58b22718afaa5c53e9949b501b05c68e833a598f19fcc973adaff11307508636",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534066.454
+          },
+          {
+            "file": "7E821ADA-3D57-45FB-8835-EE643A72028E.png",
+            "name": "restaurant-map-accessibility-text-portrait-address_0_534C0995-7B6F-438C-B655-FCC325BC1E08.png",
+            "rawPNGDimensions": [
+              1206,
+              2622
+            ],
+            "reviewedOriginal": true,
+            "sha256": "58b22718afaa5c53e9949b501b05c68e833a598f19fcc973adaff11307508636",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534066.004
+          }
+        ],
+        "method": "Independent designer individually viewed all listed original PNGs at original detail; native execution and geometry are separate proof. Root saved the read-only report.",
+        "originalTargetViews": 16,
+        "productionProjectInputsMatchingFinal33": true,
+        "publishedTargets": [
+          {
+            "file": "satisfaction-viewport-phone-location-portrait.png",
+            "matchesReviewedOriginal": true,
+            "sha256": "8b131450e2f16bc45f61d35db2d83466200aa6d2fcaecc7802907af60ef8b668"
+          },
+          {
+            "file": "satisfaction-viewport-phone-denied-settings-portrait.png",
+            "matchesReviewedOriginal": true,
+            "sha256": "d4b68a8ec677a3e0136846a9a8e6b1a56639e4fe6a930898fc1684dc36a13393"
+          }
+        ],
+        "run": "split-my-meal-qa-phone-clipped-viewport-final3",
+        "sourceManifest": "satisfaction-phone-clipped-viewport-final-source-manifest.json",
+        "sourceManifestSHA256": "1cf1b04125218546ce9116f2678c42282d5b48430640994b03751645a90ae3bf"
+      },
+      {
+        "appearance": "light",
+        "attachmentIndexSHA256": "6b9cb9b0964a2dfee9e5db17a804499838339343cc3d45ad3f646b4dab6f5641",
+        "differentNativeInputs": [
+          "SplitMyMealUITests/MealJourneyTests.swift"
+        ],
+        "findings": [],
+        "images": [
+          {
+            "file": "7D066117-C292-43B8-98DF-B2DC15B77D5B.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Open Settings_0_8F2EA3BF-FF75-4EC9-9220-A03EC8C43CCE.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a982d14fafad4924170fb5f6687b1475eaa41ca1687b7f7b7b9dc80b8d388f36",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533955.167
+          },
+          {
+            "file": "48AD3387-EA7D-43A4-AE83-CA6776707FED.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Location access is off._0_B4B29829-1EE5-41EE-A8AF-95AA6FC5D2DC.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a982d14fafad4924170fb5f6687b1475eaa41ca1687b7f7b7b9dc80b8d388f36",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533954.485
+          },
+          {
+            "file": "D48718E2-9960-424E-BC6A-4A28314B85D4.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Show my location_0_29F2DE3A-611E-4582-BEEB-94898F005715.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a982d14fafad4924170fb5f6687b1475eaa41ca1687b7f7b7b9dc80b8d388f36",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533953.705
+          },
+          {
+            "file": "DB8F1E57-B631-481C-869A-85B275A818CB.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Open in Maps_0_FF5C5C05-E86C-4133-80C6-4C60EE28C2D6.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a982d14fafad4924170fb5f6687b1475eaa41ca1687b7f7b7b9dc80b8d388f36",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533952.982
+          },
+          {
+            "file": "1FB2393C-B4F6-41E3-8E9B-6F7D4BDAD16E.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-address_0_6BB4B6C0-D7F2-4629-96F2-132CD7876231.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a982d14fafad4924170fb5f6687b1475eaa41ca1687b7f7b7b9dc80b8d388f36",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533952.222
+          },
+          {
+            "file": "6D437A45-DBD8-4BA5-AB6D-205E1A7B3F71.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Open Settings_0_0036B704-B7A7-4176-A523-9F67A0C752BE.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "1a1995adf956b205956f273c34333569c8a5d246fabf4255e6de532f17ba2801",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533943.05
+          },
+          {
+            "file": "97A79794-8E12-46C0-A656-B2262D8CAE51.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Location access is off._0_7975F68B-8436-43BF-8265-C2781E76FA6C.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "1a1995adf956b205956f273c34333569c8a5d246fabf4255e6de532f17ba2801",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533942.391
+          },
+          {
+            "file": "857ED5AF-A00B-455F-A4A1-2F94681094CF.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Show my location_0_8B248801-3ABC-408E-BDF7-316768939253.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "1a1995adf956b205956f273c34333569c8a5d246fabf4255e6de532f17ba2801",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533941.689
+          },
+          {
+            "file": "BDC4898F-C58B-43E7-AC64-554AE30CF644.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Open in Maps_0_DDEBF200-0DF1-4F57-9A03-C132549AB7D5.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "1a1995adf956b205956f273c34333569c8a5d246fabf4255e6de532f17ba2801",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533941.046
+          },
+          {
+            "file": "95C0ADC7-1435-4C2B-BB23-E085BAD33469.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-address_0_124C3E14-5213-4E01-B9E1-F661BEE8F805.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "1a1995adf956b205956f273c34333569c8a5d246fabf4255e6de532f17ba2801",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791533940.299
+          },
+          {
+            "file": "9FDAB309-E56E-4967-AA2B-3EDF44878246.png",
+            "name": "restaurant-map-accessibility-text-landscape-Show my location_0_20485238-4305-4845-AD3E-BE4487FC3F88.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "1772626b2fd59d729865cc6789bc75df4a24065af087421e1f902f180d634329",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534045.375
+          },
+          {
+            "file": "00F1B3F0-620C-4E3A-A6B6-1451276245A5.png",
+            "name": "restaurant-map-accessibility-text-landscape-Open in Maps_0_333C884C-2AA7-4A31-8753-930E77B5C844.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "d772bf1a2a2e4246697c4e9347d5b991c177680cfe91683bc1a8f648457ae4e6",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534038.841
+          },
+          {
+            "file": "F50796B4-249C-447C-A645-7ED81A4D1BAB.png",
+            "name": "restaurant-map-accessibility-text-landscape-address_0_10CDF734-73C6-4A4D-AD8E-D2D8364930DF.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "d772bf1a2a2e4246697c4e9347d5b991c177680cfe91683bc1a8f648457ae4e6",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534038.083
+          },
+          {
+            "file": "EC61B232-0D6E-4BBE-B319-6C03F2FEC549.png",
+            "name": "restaurant-map-accessibility-text-portrait-Show my location_0_3FE9BC5A-6E03-44A5-9921-ABE220984018.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "33433a93c5a7eace86c9a6bbb4a43d4e8751ef2ba7a1f0eadcb87058ecbf1b35",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534028.861
+          },
+          {
+            "file": "75451A0D-3CDF-4FA5-8C3C-D0140D45338A.png",
+            "name": "restaurant-map-accessibility-text-portrait-Open in Maps_0_B1917EF1-642C-4692-AD31-C2BED34E2A71.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "15af14520e939c9867f58e6ce207b555cecbd9368b780f233db45027c95ea67e",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534022.431
+          },
+          {
+            "file": "18DA0D40-26E5-4BE7-8CAE-D6278FE4D70B.png",
+            "name": "restaurant-map-accessibility-text-portrait-address_0_DF104B4C-B3A1-44B0-9FFC-36CC5BD9CBEF.png",
+            "rawPNGDimensions": [
+              1640,
+              2360
+            ],
+            "reviewedOriginal": true,
+            "sha256": "15af14520e939c9867f58e6ce207b555cecbd9368b780f233db45027c95ea67e",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534021.637
+          }
+        ],
+        "method": "Independent designer individually viewed all listed original PNGs at original detail; native execution and geometry are separate proof. Root saved the read-only report.",
+        "originalTargetViews": 16,
+        "productionProjectInputsMatchingFinal33": true,
+        "publishedTargets": [
+          {
+            "file": "satisfaction-viewport-pad-location-portrait.png",
+            "matchesReviewedOriginal": true,
+            "sha256": "33433a93c5a7eace86c9a6bbb4a43d4e8751ef2ba7a1f0eadcb87058ecbf1b35"
+          },
+          {
+            "file": "satisfaction-viewport-pad-denied-settings-portrait.png",
+            "matchesReviewedOriginal": true,
+            "sha256": "1a1995adf956b205956f273c34333569c8a5d246fabf4255e6de532f17ba2801"
+          }
+        ],
+        "run": "split-my-meal-qa-pad-clipped-viewport-final3",
+        "sourceManifest": "satisfaction-pad-clipped-viewport-final-source-manifest.json",
+        "sourceManifestSHA256": "1cf1b04125218546ce9116f2678c42282d5b48430640994b03751645a90ae3bf"
+      },
+      {
+        "appearance": "light",
+        "attachmentIndexSHA256": "19e19d6c1ec3bac6a42a4dba5f561b0138d67a1530453dc2919e600e45ca50eb",
+        "differentNativeInputs": [],
+        "findings": [],
+        "images": [
+          {
+            "file": "E71E33F4-B7C5-482F-893A-D5F816617074.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Open Settings_0_B8C49FE9-286A-454D-9CDF-64D9138BEC2A.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "1fc4f0722da33ad238c16494a1059fa48110bbd05b2ebec0bfdb3fd907c1ac2e",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534335.87
+          },
+          {
+            "file": "E0D7FA3E-BC41-454C-AE43-F74890F9DBF5.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Location access is off._0_6B3970A1-DA51-4F7B-A8BE-726C34B2145C.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "f6b48e1c49030f04c332c64f500dadaf69d1bdb8d2d28efc797029f4d4da92f9",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534331.01
+          },
+          {
+            "file": "34223E9A-7B81-406A-9295-2B34B7DF2AAB.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Show my location_0_BC3BCB76-D594-47EA-A5E4-A295D744C16F.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "e16ef4e647b07f4666f2d38acbc2b6440430cd06dadca5965230b84d15cbcf91",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534327.5
+          },
+          {
+            "file": "9BBD2BD9-3EEB-4A65-9CC8-8AA591584064.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-Open in Maps_0_4AD1093F-C91C-4E8F-B04F-7A80215F38D2.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "09c9d295dcf7208e9fff0b6cdacaf320514e4ca7924f11d3bed55b8ba4423b47",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534322.562
+          },
+          {
+            "file": "789A17FE-532B-439A-9727-C2F0AE5D1FA0.png",
+            "name": "restaurant-map-denied-accessibility-text-landscape-address_0_0B3D31DF-A3EC-4284-AB0A-EF86087BEAF3.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "be3ea9ac6bb90a778e97f08b94b78b4e48f4e6c35ebee4e125455cc177a4eced",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534317.622
+          },
+          {
+            "file": "3BDA655E-C4FD-4F6E-B110-2DBC8B7F11D8.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Open Settings_0_E579586B-7509-4338-8633-D6385937C68E.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "3af178839bb633d118b588abe5ec5c18948f9f543e9372dfed2a637734f5a11c",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534309.452
+          },
+          {
+            "file": "A6C67261-DE33-433A-8E3F-ADC1449CD9B4.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Location access is off._0_A7A3CBEE-F0A5-4ECA-B180-8062CFB9371D.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "64f8b8095f04610fa2fa9a92c22d686797c661fcb28dd5f75a7a334c400ad5c4",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534304.738
+          },
+          {
+            "file": "7D7DC17C-61A1-41E4-ADAF-BFC8D19C6739.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Show my location_0_B7AD80F0-2E19-4DA5-A23E-C770720194BB.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "e7aaaa7d0101d5ca15e34ac9b1d0135e945ad9821914292ae387a0cc0880b26a",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534299.922
+          },
+          {
+            "file": "24B4F621-838C-43A1-952F-61746D3B01CD.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-Open in Maps_0_9DD33B7A-7F69-425C-B153-A677C617EDF6.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "585a38b67a08bda6d77991e851146f1fedffc92d712c024272762432da077637",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534294.162
+          },
+          {
+            "file": "1D4D56BF-F876-4DFE-B99B-5F546B82B759.png",
+            "name": "restaurant-map-denied-accessibility-text-portrait-address_0_586C89E0-DA24-4677-A604-C740F24CC02F.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "c675cb1dbfdcb393309a4eda4091c24105bc813dfe4abc6e693931a64ef63b66",
+            "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+            "timestamp": 1791534291.759
+          },
+          {
+            "file": "866F391E-E036-4BDF-B5DC-47037F1EF9EF.png",
+            "name": "restaurant-map-accessibility-text-landscape-Show my location_0_BF52F8DB-9336-4667-AC36-DFD89CC8B6F8.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "ff56344a60e3439b45cf6734d76187db2ffbf6bb65747ac1ce0b7633d803a84c",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534455.282
+          },
+          {
+            "file": "38CEA5B8-8399-4EC2-9F37-5C1DDF599C4E.png",
+            "name": "restaurant-map-accessibility-text-landscape-Open in Maps_0_2B7FFE34-2C8F-4D71-A61E-66511C440DD4.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "fa8880dab45ca7fa638b65b7c1d25cb94a95f26eaa10561fa652348b5fb048d6",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534446.428
+          },
+          {
+            "file": "244CCDC7-E2E8-4CB8-97A4-B140470BDD17.png",
+            "name": "restaurant-map-accessibility-text-landscape-address_0_F0F69139-3868-4830-8F3A-880745FA7881.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "5beb5c72819187c6385d3af689ad75c3175a51299e75b3a349b032ef7412c8bd",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534441.539
+          },
+          {
+            "file": "A522F425-626D-43D2-AAB0-52067F245888.png",
+            "name": "restaurant-map-accessibility-text-portrait-Show my location_0_BFC92F03-2F02-4ED5-B709-6A53FF86C575.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "a46229520dd5c9e82a4880f7b6feb14ddbc58fa0b24d4819cea7025d468b66df",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534433.357
+          },
+          {
+            "file": "BDA40EB2-4452-4DB5-A05A-B393A78E1687.png",
+            "name": "restaurant-map-accessibility-text-portrait-Open in Maps_0_34DED2F0-6EA3-4F70-AA2E-C9566AC206F2.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "f555f7ffc8fa7e123b2fcb05f5f41c1c7254a542eb98d0b4e991006d101b0762",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534422.62
+          },
+          {
+            "file": "1CF66242-C7D6-4662-A864-8094B651A738.png",
+            "name": "restaurant-map-accessibility-text-portrait-address_0_73B1175D-A069-4885-9DF2-F933B3FBC74E.png",
+            "rawPNGDimensions": [
+              750,
+              1334
+            ],
+            "reviewedOriginal": true,
+            "sha256": "68f948cc3aa240f13501401e6d1471dfa1ccdf5a0b42484dc8aafaf36f970830",
+            "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+            "timestamp": 1791534420.202
+          }
+        ],
+        "method": "Independent designer individually viewed all listed original PNGs at original detail; native execution and geometry are separate proof. Root saved the read-only report.",
+        "originalTargetViews": 16,
+        "productionProjectInputsMatchingFinal33": true,
+        "publishedTargets": [
+          {
+            "file": "satisfaction-viewport-compact-location-portrait.png",
+            "matchesReviewedOriginal": true,
+            "sha256": "a46229520dd5c9e82a4880f7b6feb14ddbc58fa0b24d4819cea7025d468b66df"
+          },
+          {
+            "file": "satisfaction-viewport-compact-denied-settings-portrait.png",
+            "matchesReviewedOriginal": true,
+            "sha256": "3af178839bb633d118b588abe5ec5c18948f9f543e9372dfed2a637734f5a11c"
+          }
+        ],
+        "run": "split-my-meal-qa-compact-clipped-viewport-final3",
+        "sourceManifest": "satisfaction-compact-clipped-viewport-final-source-manifest.json",
+        "sourceManifestSHA256": "fa828d3eed6cb54c2fa055842020c648797ca6a907f297ff588f7ab89fd4c058"
+      }
+    ],
+    "status": "Historical clipping capture gap resolved by new independently reviewed full-target captures; historical frame remains clipped."
+  },
+  "demoReviews": [
+    {
+      "device": "iphone",
+      "evidenceRun": "split-my-meal-qa-phone-fullscreen-demo-final",
+      "findings": [],
+      "images": [
+        {
+          "capturedAtUnixSeconds": 1791531931.876,
+          "file": "satisfaction-fullscreen-iphone-meal-dark.png",
+          "nativeAttachment": "5EC2D1DD-AA7E-454A-BC4D-064C9980A1EC.png",
+          "nativeName": "demo-meal-dark_0_71BBE98B-1613-4243-B0C2-3EAD83458E18.png",
+          "sha256": "183cb5ce5fd9614b3a55e85fdf9e02da03fe02443001cc3a802c9aaa408d1b9b",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531929.751,
+          "file": "satisfaction-fullscreen-iphone-library-dark.png",
+          "nativeAttachment": "519EDF97-0CBC-4662-B96B-2C0E65D9CC06.png",
+          "nativeName": "demo-library-dark_0_B7938286-7B9D-4C27-8567-403B07C7F96D.png",
+          "sha256": "69ec1142b7e94ed944ec4d8bfffbf3da21c0f1d5025943ad0efadd1dcd758931",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531922.845,
+          "file": "satisfaction-fullscreen-iphone-meal-landscape-light.png",
+          "nativeAttachment": "545EC35F-65B2-49AA-BE74-78642414C4AF.png",
+          "nativeName": "demo-meal-landscape-light_0_9C0B09CC-05B8-442C-844D-B102D44B2B31.png",
+          "sha256": "48cb4cea438e8576d8508266f67592b0c16bdb0f8c3205eec6094ada38ff6f60",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531919.254,
+          "file": "satisfaction-fullscreen-iphone-meal-editor-light.png",
+          "nativeAttachment": "693F4578-327F-46EB-8952-06EA38CACB30.png",
+          "nativeName": "demo-meal-editor-light_0_D19A1B3E-FBD9-4105-953F-89267F7B6DFA.png",
+          "sha256": "89a7c44bc0834f026c0cfda1782664cf42a7cbf2c4ebcfc0246ec8fc50bb0090",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531916.753,
+          "file": "satisfaction-fullscreen-iphone-receipt-light.png",
+          "nativeAttachment": "654F20FB-A947-49C8-B785-BDA18BCCE78C.png",
+          "nativeName": "demo-receipt-light_0_1616BCDE-1446-46AA-B95C-DB1693204DF5.png",
+          "sha256": "f2582af583a2b67387b53ee4292902ad8090e2aeeb5ec5d2eea762f3b770071a",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531913.443,
+          "file": "satisfaction-fullscreen-iphone-meal-footer-light.png",
+          "nativeAttachment": "BD06965C-D13D-43CF-B430-0B5C6D075BED.png",
+          "nativeName": "demo-meal-footer-light_0_8255FE57-66B7-4760-A860-E130F156343E.png",
+          "sha256": "60c408e89162a09c193aad625d3fd6b6e06dfcbe37bb6785bd088f807e6116af",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531908.624,
+          "file": "satisfaction-fullscreen-iphone-restaurant-map-landscape-light.png",
+          "nativeAttachment": "9D73C4E4-4393-4519-BF9D-B61F1B988B65.png",
+          "nativeName": "demo-restaurant-map-landscape-light_0_ED047B5F-9C5A-4384-A4B1-297A123942ED.png",
+          "sha256": "e560c16382a704266473b005226005d71625be43adf1ba74f301c35fd694d25d",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531905.217,
+          "file": "satisfaction-fullscreen-iphone-restaurant-map-light.png",
+          "nativeAttachment": "FF6C041E-00EB-47CC-BE8F-D61B3A176C27.png",
+          "nativeName": "demo-restaurant-map-light_0_57B68002-AD1D-4FCA-A708-137111D3DDBC.png",
+          "sha256": "883d5b61cdcf754838b391531c6fa1db69ae55c80ef4ae07a3ad2416d50addac",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531895.541,
+          "file": "satisfaction-fullscreen-iphone-bill-details-expanded-light.png",
+          "nativeAttachment": "3D8C47F7-9EDC-42E5-876E-682E7271DF52.png",
+          "nativeName": "demo-bill-details-expanded-light_0_0AD28D2A-3D1A-4D64-9DE3-B72DC4492DC6.png",
+          "sha256": "8a10f9617e8d1af082a0b86f6de2efb9f4b3954678f85c7092f7303e7ea2320e",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531890.489,
+          "file": "satisfaction-fullscreen-iphone-bill-details-collapsed-light.png",
+          "nativeAttachment": "420B05C5-DE5C-4D75-8E9D-FC98DA5F63D8.png",
+          "nativeName": "demo-bill-details-collapsed-light_0_79688A8A-5CC8-4A40-A542-FA9B00C14A0E.png",
+          "sha256": "9c2eb8cf245ae1eeba6383da0de164a1bdab92c0a8e11a5c5135698b45c014c3",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531887.325,
+          "file": "satisfaction-fullscreen-iphone-itemized-split-light.png",
+          "nativeAttachment": "670DC808-7E1A-4CDC-A7CA-F93450B41AE3.png",
+          "nativeName": "demo-itemized-split-light_0_EB77128B-63F4-4746-A428-D8A1CE336E5D.png",
+          "sha256": "1bd9d9481214ccea1e0e3b14ec74eef01e0bcbadaa05a5858a347ec0ed0c24c1",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531885.998,
+          "file": "satisfaction-fullscreen-iphone-split-light.png",
+          "nativeAttachment": "18DC9493-0AB8-4554-BB3E-5167312C7B67.png",
+          "nativeName": "demo-split-light_0_171B5897-A2F4-412A-9214-7301A771D423.png",
+          "sha256": "002c90446c268062b4be47ce81891f3952d014a62aca5df47befec6d8ee62e68",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531882.787,
+          "file": "satisfaction-fullscreen-iphone-tip-editor-light.png",
+          "nativeAttachment": "52322F87-D98C-459C-B844-8EAA283BE11C.png",
+          "nativeName": "demo-tip-editor-light_0_7DB20B72-C330-46CD-A434-B0AF8902A268.png",
+          "sha256": "6d76284ca4be893062d018ad22ac108e8d2b8e9dcc5f64aa13beb0b108e6e211",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531879.891,
+          "file": "satisfaction-fullscreen-iphone-tax-editor-light.png",
+          "nativeAttachment": "08F31961-09B8-4B04-83E0-7F9AD9C8721C.png",
+          "nativeName": "demo-tax-editor-light_0_8E0E9C1C-7B66-400A-A720-D27C561CECBE.png",
+          "sha256": "8be9d8228a161bcd0316044a71e999de73a6b2d351f9f34381fafa8c3c3ca0ef",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531873.845,
+          "file": "satisfaction-fullscreen-iphone-item-editor-light.png",
+          "nativeAttachment": "404D6F7F-9CAA-432D-A850-3F74ECD61804.png",
+          "nativeName": "demo-item-editor-light_0_B5E23D2E-9CEA-4E81-9099-384926F7DD67.png",
+          "sha256": "53b0b5df96d73eb910fb0cb3458b317ef71195720552dc23e526eb42ce141259",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531867.55,
+          "file": "satisfaction-fullscreen-iphone-person-editor-light.png",
+          "nativeAttachment": "49EFE442-3824-4C6A-8C93-FBC0F0C7BB2B.png",
+          "nativeName": "demo-person-editor-light_0_E758EECF-7120-4DBC-A341-B15BF441B37F.png",
+          "sha256": "7273b1ab4c190afd46034db6294f800145edeab9bda69f84707da102e78c1c5c",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531865.649,
+          "file": "satisfaction-fullscreen-iphone-meal-light.png",
+          "nativeAttachment": "C56CA962-3A3B-4B12-B1E7-731A3638B980.png",
+          "nativeName": "demo-meal-light_0_21A5E5FD-EEA4-4A08-8FCB-A26769405A49.png",
+          "sha256": "2e55930a7ff2783eec55e91670d657770562c81822f6e99685bb6dea272ee17e",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531863.558,
+          "file": "satisfaction-fullscreen-iphone-library-light.png",
+          "nativeAttachment": "B0A72CCE-6D63-42AB-B7B0-9577BC1B5732.png",
+          "nativeName": "demo-library-light_0_6844B71D-D402-44DF-9814-BFEC93EC752B.png",
+          "sha256": "224847d64f1534753eabf35be643dd0602efec2862be1aea02969d40b4d5d79b",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        }
+      ],
+      "limits": [
+        "Normal Demo captures only; largest text and denied recovery are covered separately in Map reviews.",
+        "No new native interaction, VoiceOver, physical-device contrast, haptic or continuous-motion certification."
+      ],
+      "nativeResultEvidence": {
+        "actualPassedCaseCount": 1,
+        "case": "MealJourneyTests/testDemoWalkthrough()",
+        "caseSeconds": 79.032,
+        "distinction": "Native execution results are separate evidence; this reviewer viewed original pixels without operating the app.",
+        "source": "focused-selection-results.json and test.log"
+      },
+      "observations": [
+        "Total and per-person amounts establish clear hierarchy; related bill detail stays optional.",
+        "Native editor controls, exact item shares, receipt controls and Map Done preserve a clear task and return path.",
+        "View split and Share split remain visually primary with no app-owned background panel.",
+        "Normal light and dark library metadata are readable in these captures.",
+        "Landscape and scrolled content under native edges are distinguished from persistent clipping; no actionable app-owned clipping is visible in this set."
+      ],
+      "originalPNGCountViewed": 18,
+      "productionProjectInputCountVerified": 33,
+      "publishedMediaIndexSHA256": "97f154643994b0c9eb6fe62eca26e217fac4865507a5b2a89b52e4bb07d4d4cf",
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79"
+    },
+    {
+      "device": "ipad",
+      "evidenceRun": "split-my-meal-qa-pad-fullscreen-demo-final",
+      "findings": [],
+      "images": [
+        {
+          "capturedAtUnixSeconds": 1791532020.96,
+          "file": "satisfaction-fullscreen-ipad-meal-dark.png",
+          "nativeAttachment": "BA7E1A68-8B36-4417-8513-81F0A8CCEB3C.png",
+          "nativeName": "demo-meal-dark_0_2F633C28-16FC-4F2E-8A3E-F9AEDDBC0090.png",
+          "sha256": "397d6be6254ece1e4e9819306fc801c5e6a53399d1d2e6d78bbca78bc9acf1a1",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791532019.018,
+          "file": "satisfaction-fullscreen-ipad-library-dark.png",
+          "nativeAttachment": "C2CF9E74-60B1-45E4-9EE2-1A626B64259A.png",
+          "nativeName": "demo-library-dark_0_EC790115-4711-47A2-BF89-562937E954BD.png",
+          "sha256": "14c7d7604747c062e4288c6e51e76042061b495fa2f16c0cf578854c1c008b39",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791532011.246,
+          "file": "satisfaction-fullscreen-ipad-meal-landscape-light.png",
+          "nativeAttachment": "1589A8CD-29D2-485C-A2FD-5DB80BC00540.png",
+          "nativeName": "demo-meal-landscape-light_0_0AE5369D-18E3-4BCB-A6F4-2DF67A18D288.png",
+          "sha256": "7c3d12638fc2b797c0a55932c82a176090278dfd629537ace6e37c715d0ed8d8",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791532006.208,
+          "file": "satisfaction-fullscreen-ipad-meal-editor-light.png",
+          "nativeAttachment": "82648A91-FB2A-4464-99D3-220CC2E8D99C.png",
+          "nativeName": "demo-meal-editor-light_0_1D7D0725-3AF3-49BA-B222-82E2C7D38104.png",
+          "sha256": "bfdcb463f3cc9695e124c99f8a3fb2b7b78079d1c998bbb782dfd378ee55c7e8",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791532003.059,
+          "file": "satisfaction-fullscreen-ipad-receipt-light.png",
+          "nativeAttachment": "8A1EA91A-F09E-4F82-8291-30179A75A835.png",
+          "nativeName": "demo-receipt-light_0_08E69C07-A6B5-429C-B8D2-1F5D16939976.png",
+          "sha256": "55a633ca89bc50585b43c5af3be8fc4f30afa5b60a9da15e6d86bafaf1e14900",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531998.628,
+          "file": "satisfaction-fullscreen-ipad-meal-footer-light.png",
+          "nativeAttachment": "6F6D16E7-5EDA-48A6-B76D-94A1E616DE00.png",
+          "nativeName": "demo-meal-footer-light_0_AFCB246C-4885-48FE-8EE1-94DE90F67632.png",
+          "sha256": "156fca84c404ad06f30db30be742b3ac6519877509aa9942fb3914abaf61d8e3",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531992.038,
+          "file": "satisfaction-fullscreen-ipad-restaurant-map-landscape-light.png",
+          "nativeAttachment": "C395BC7F-C570-4518-81CA-58D9C7594B64.png",
+          "nativeName": "demo-restaurant-map-landscape-light_0_83D8BC19-3707-4173-ABE3-F1C6649974C7.png",
+          "sha256": "f15ca8edcc21ac177e277d8ae96f70ba2348fd9eb8c1181b1314008d90c0220a",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531988.224,
+          "file": "satisfaction-fullscreen-ipad-restaurant-map-light.png",
+          "nativeAttachment": "1082EE0D-D41D-4351-B373-05D271D275CB.png",
+          "nativeName": "demo-restaurant-map-light_0_B62A7AC0-1E0D-4B79-88A7-83345B13141A.png",
+          "sha256": "7d964989c42b814475d8b9570a3d27d0fba84aa3355c6154496532f7ec96a505",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531979.024,
+          "file": "satisfaction-fullscreen-ipad-bill-details-expanded-light.png",
+          "nativeAttachment": "1800B6FA-8304-4D9C-85BF-B09112D5C438.png",
+          "nativeName": "demo-bill-details-expanded-light_0_9E1302C6-C58A-4F2D-B213-F0970E695129.png",
+          "sha256": "3fa58b5f940c310aeded106c12cf120b0409299737650ee47608af02c05c8da2",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531974.612,
+          "file": "satisfaction-fullscreen-ipad-bill-details-collapsed-light.png",
+          "nativeAttachment": "2363CBF5-0465-4EFE-ACF6-A2511187FF00.png",
+          "nativeName": "demo-bill-details-collapsed-light_0_4301AFC3-3BDD-48FD-9584-CC466C358281.png",
+          "sha256": "d83af9d75564cc339eba3363a58547b49f1220539dc23abbd252a310638b14ca",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531969.877,
+          "file": "satisfaction-fullscreen-ipad-itemized-split-light.png",
+          "nativeAttachment": "59C2B40F-910F-4274-8539-59B7CCBD97E8.png",
+          "nativeName": "demo-itemized-split-light_0_EBE641D0-3002-46AC-B431-9B219BA21FAF.png",
+          "sha256": "46603738eb839005a8b3b457dc91c912d5c3cea6d3486c2d494b434653d5f603",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531968.196,
+          "file": "satisfaction-fullscreen-ipad-split-light.png",
+          "nativeAttachment": "59CF2216-EFEE-436A-8ED0-A5AE6C72A04A.png",
+          "nativeName": "demo-split-light_0_0D7FCA80-CBC3-4371-958C-CBDB7DE2B28F.png",
+          "sha256": "d83af9d75564cc339eba3363a58547b49f1220539dc23abbd252a310638b14ca",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531964.212,
+          "file": "satisfaction-fullscreen-ipad-tip-editor-light.png",
+          "nativeAttachment": "954C1325-8AAB-46B5-8D3E-584ED202CCD0.png",
+          "nativeName": "demo-tip-editor-light_0_869485EE-D3C4-4A62-84D8-B289C7D41643.png",
+          "sha256": "b0052ffa778a98f875defa77a47e53108407557a0e4e057d537feb984d3c3919",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531959.739,
+          "file": "satisfaction-fullscreen-ipad-tax-editor-light.png",
+          "nativeAttachment": "6E069913-F28F-44C2-9AB2-263673C3557F.png",
+          "nativeName": "demo-tax-editor-light_0_716D4C04-8A5C-486B-A102-CEBA67DF3A6F.png",
+          "sha256": "45d17327b9c3874cd9e5c3b7cd2cc77f207ab810afab51cbfb6c71040bbb7c59",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531955.297,
+          "file": "satisfaction-fullscreen-ipad-item-editor-light.png",
+          "nativeAttachment": "0A5A1803-CFC9-4A5B-801A-B6D37F6A9F86.png",
+          "nativeName": "demo-item-editor-light_0_585C5E1F-0035-4E80-869A-55389E310D40.png",
+          "sha256": "3d02aa081ba1b02103ce12ba7c8069f5df8909f1bfd85364b3348fb14a8bed8a",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531950.705,
+          "file": "satisfaction-fullscreen-ipad-person-editor-light.png",
+          "nativeAttachment": "AA4BA840-5C4D-467E-8C09-051A21A3FE96.png",
+          "nativeName": "demo-person-editor-light_0_611414C7-F728-47FD-B09E-41B424C45108.png",
+          "sha256": "750d641cad218f433c367d355f2485b82b544abf019d4a7fec01a71a683413e5",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531947.242,
+          "file": "satisfaction-fullscreen-ipad-meal-light.png",
+          "nativeAttachment": "3A06C245-535A-47F8-B782-15CE493BEEF1.png",
+          "nativeName": "demo-meal-light_0_ACCBEE4E-118E-41D2-99B1-2626844D6483.png",
+          "sha256": "8f92f83a523ea8d1efe5632b4bd72d1222e16f30cc91372aeb41e37b1923deed",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "capturedAtUnixSeconds": 1791531945.379,
+          "file": "satisfaction-fullscreen-ipad-library-light.png",
+          "nativeAttachment": "37CA873F-D70D-43B7-9814-88979B1D840C.png",
+          "nativeName": "demo-library-light_0_447E4A07-C37F-4915-8ECB-674EF6A26914.png",
+          "sha256": "b51c49806cc48cca2c2d2ba74ef74ce8ceae93d6e31524048cae593fea60fd68",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        }
+      ],
+      "limits": [
+        "Normal Demo captures only; largest text and denied recovery are covered separately in Map reviews.",
+        "No new native interaction, VoiceOver, physical-device contrast, haptic or continuous-motion certification."
+      ],
+      "nativeResultEvidence": {
+        "actualPassedCaseCount": 1,
+        "case": "MealJourneyTests/testDemoWalkthrough()",
+        "caseSeconds": 86.593,
+        "distinction": "Native execution results are separate evidence; this reviewer viewed original pixels without operating the app.",
+        "source": "focused-selection-results.json and test.log"
+      },
+      "observations": [
+        "Total and per-person amounts establish clear hierarchy; related bill detail stays optional.",
+        "Native editor controls, exact item shares, receipt controls and Map Done preserve a clear task and return path.",
+        "View split and Share split remain visually primary with no app-owned background panel.",
+        "Normal light and dark library metadata are readable in these captures.",
+        "Landscape and scrolled content under native edges are distinguished from persistent clipping; no actionable app-owned clipping is visible in this set."
+      ],
+      "originalPNGCountViewed": 18,
+      "productionProjectInputCountVerified": 33,
+      "publishedMediaIndexSHA256": "be4759cf2a3759f1984d26cb7e0b373fe4a44e3dc246fb7663f56156940598bb",
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79"
+    }
+  ],
+  "evidenceRun": "split-my-meal-qa-phone-map-cancellation-final",
+  "findings": [],
+  "images": [
+    {
+      "nativeAttachment": "12DC7E80-05B1-4385-AA05-FF22F1D34E24.png",
+      "nativeName": "historical-restaurant-location-unavailable_0_87CFAC0E-7AA9-4DF1-8FBE-5D660740C10F.png",
+      "nativeTestID": "MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+      "reviewedOriginal": true,
+      "sha256": "80a47b74e174ac8a73a2f4970c9918d20417a50a5a5d9a953d8256fb403dbe38",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "D15114E2-19B6-4DB5-BC96-18CEB22FFED7.png",
+      "nativeName": "restaurant-map-accessibility-text-landscape-Show my location_0_46DB40AE-E197-42F0-8783-A5068E066FD8.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "1fa935c5229cd51fb0904c57b29eb968a28e3216bb91679f74e76ba811e37451",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "1BF061AC-E755-4FDE-8C37-BEC101632B58.png",
+      "nativeName": "restaurant-map-accessibility-text-landscape-intentional-maps-return_0_C41FBCCD-219A-4A47-A4A7-9B0B26A19485.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "97c42aa9ea0275841dd016ccf0b86b5a8508846b152de2b8ba3e93673168fe8d",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "F428FB69-A820-452D-853B-F4480C23D20F.png",
+      "nativeName": "restaurant-map-accessibility-text-landscape-intentional-native-maps_0_A0460BA5-F35F-448A-B346-75A33E3BDE8B.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "fd3d4d7b56f515faa0d4f23850b775e2ecc4f9d79d09a1709006435ad7c040b2",
+      "surface": "system app-switching transition"
+    },
+    {
+      "nativeAttachment": "6458B211-14D4-4291-AE4C-228F14C1D7DF.png",
+      "nativeName": "restaurant-map-accessibility-text-landscape-button-started-scroll_0_8AFA52F1-19F4-4E47-A5F1-0EA4EF1443BD.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "63893cd0ebc5eb8873ce8b13367911605917c087077d939626ee67ef5990cee3",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "5BC4D8B6-D791-4426-9AC7-189E2F916A47.png",
+      "nativeName": "restaurant-map-accessibility-text-landscape-Open in Maps_0_BE7DFC96-795F-4624-9A25-5448232D7E1B.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "4d43a61564e1323fffa46a914e7d00732ecb993f9c564627b9ed1be15bf77e26",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "150E9502-B3D9-4A12-A030-C19D6B709615.png",
+      "nativeName": "restaurant-map-accessibility-text-landscape-address_0_FC213A75-A83D-49D9-9302-37E76858FB98.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "b9da3d37c2c8fc381b5dc1404fcb2651461665db2a5f61a9614940da38429c4d",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "C607C499-7750-4B62-8A6D-E74EF97D39C3.png",
+      "nativeName": "restaurant-map-accessibility-text-portrait-Show my location_0_49F01083-AD44-43FB-9333-2BDCA7FCC3F9.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "61eb5b12522242a34520e6ed15097460f6c252de09db31ff5c822517b0919310",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "82930906-A986-40CE-8081-A906B13DC721.png",
+      "nativeName": "restaurant-map-accessibility-text-portrait-intentional-maps-return_0_A96A2D4A-BF9A-4855-BF56-3D725D13F307.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "d143ad73003123385f38080fcd1f8582c477d62c99d17dd8f5263761d4bf0d03",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "254AEE2C-0ECE-40D7-A2B0-60363763B1DB.png",
+      "nativeName": "restaurant-map-accessibility-text-portrait-intentional-native-maps_0_D4807134-76DA-4B0D-A0A7-A95D0D64350B.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "1ca61fd41e87594b9c992c4da933abc8687539376ffb6c5992438177bbbe5746",
+      "surface": "system app-switching transition"
+    },
+    {
+      "nativeAttachment": "7216B7CC-5406-4C20-A930-AF093410EE95.png",
+      "nativeName": "restaurant-map-accessibility-text-portrait-button-started-scroll_0_FCDD28E0-3C46-48C2-8120-8A6BAF3F6D7C.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "b93c19a180bd76f7ddb4e0759def67e83cc9e265eb96a0be15efc25df92d8563",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "29BB3109-B4ED-4BF6-B85E-9DC2ED66A562.png",
+      "nativeName": "restaurant-map-accessibility-text-portrait-Open in Maps_0_86619A1E-127A-4A79-94BA-683A1A05F77A.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "37e82b33f4d6651ed4a33518a3e0673f729169bc7baaa73b0cebd9d17e494809",
+      "surface": "app-owned Map or invalid-location state"
+    },
+    {
+      "nativeAttachment": "2F64AED8-B4A8-4B3B-AAB3-AF1ABF416F5E.png",
+      "nativeName": "restaurant-map-accessibility-text-portrait-address_0_4698D8C1-CD32-49B3-9490-96BFA79F1042.png",
+      "nativeTestID": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "reviewedOriginal": true,
+      "sha256": "37e82b33f4d6651ed4a33518a3e0673f729169bc7baaa73b0cebd9d17e494809",
+      "surface": "app-owned Map or invalid-location state"
+    }
+  ],
+  "initialReviewLimits": [
+    "No independent interaction or gesture execution.",
+    "No screenshot of meal after Done in this index; Done-return evidence is the passed native assertion.",
+    "No clearance of compact iPhone SE, iPad, dark appearance, denied-location recovery, or normal-size full Demo media in this report.",
+    "No accessibility conformance, measured contrast, continuous motion, haptic, performance, or subjective satisfaction certification."
+  ],
+  "initialReviewScope": "Independent original-pixel review of current iPhone light-appearance fullscreen restaurant Map, largest text portrait and landscape; no device actions or new native jobs.",
+  "limits": [
+    "Review covers only original PNGs listed in the initial and additional sections.",
+    "Native case outcomes are separate supplied execution evidence; reviewer performed no device actions.",
+    "No continuous-motion, physical satisfaction, haptic, or broad accessibility certification.",
+    "Initial-review limits describe that original phone-light scope; additional scopes are recorded separately.",
+    "Phone dark portrait My location capture C9692527 clips its lower line; Map full-target containment clearance is pending corrective native capture. No persistent unreachable defect is inferred from that scrolled frame."
+  ],
+  "mapContainmentReviewStatus": "Corrected intended targets independently reviewed and fully visible in the 48 listed states; original clipped capture retained as historical.",
+  "nativeResultEvidence": {
+    "actualPassedCaseCount": 2,
+    "distinction": "Native test results are separate from pixel review. Source test verifies button-started pan cancels handoff, intentional tap foregrounds Maps, app return, and Done returns to meal; screenshots alone do not prove those interactions.",
+    "invalidLocationCaseSeconds": 46.819,
+    "normalMapCaseSeconds": 76.398,
+    "source": "focused-selection-results.json and test.log"
+  },
+  "observations": [
+    "Fullscreen title and Done remain visibly separated from map and scrolling details in portrait and landscape.",
+    "Largest-text full address is readable in address captures. Open in Maps and My location are fully readable in their respective scroll states without shrinking the selected font.",
+    "Primary bordered-prominent Open in Maps and secondary bordered My location retain a clear hierarchy.",
+    "Meaningful map space remains beside or above scrolling details; scrolled content is clipped within the detail pane rather than overlapping navigation chrome.",
+    "Returned app captures preserve the Map layout and visible native home-indicator clearance.",
+    "Invalid-location capture gives a readable explanation, concrete edit recovery, and visible Done.",
+    "The two intentional-native-maps screenshots show an app-switching transition, not a settled Maps result; they are excluded from app-owned layout clearance."
+  ],
+  "productionProjectInputsVerifiedAtInitialReview": {
+    "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "85d030acdd33a8eb3690f1c691823a8a46b7832dd4ec9ad220bbc0a2af5cb873",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+    "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+    "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/AppIcon.png": "5f9e252952b674f8ff5677fb5d686095b21896b4775d2336483ba9beb2928a32",
+    "SplitMyMeal-Prod-A/Assets.xcassets/AppIcon.appiconset/Contents.json": "852920cb36e95beb53771138a4b8195a16fcce1cc31250632f246081cc638f9a",
+    "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+    "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+    "SplitMyMeal-Prod-A/Design/MealDemo.swift": "ed5979d8705723b7235af118cc72f2a7a5693652b48ea509be028bbb32c1a27f",
+    "SplitMyMeal-Prod-A/Design/MealUI.swift": "133391ba64ffb2fe955c1e7c9ec0676f593bc74f29e98ded3d7b06b02a9975ae",
+    "SplitMyMeal-Prod-A/Info.plist": "8a1af94ec2577542de3bd3f23d76107f552bf993754059739ba158d39f9dd20c",
+    "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+    "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+    "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+    "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+    "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+    "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+    "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+    "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+    "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+    "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+    "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "380f10c29f27277d1a4e271ad169ee2f19bec340a4df9e3f7d74ba00c0935a91",
+    "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "ff88f280b693a4856517cda638f1c71f5d7fbfd8a55b91c5a962b89952a0d593",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "22e7c75a4db107b6a52dbea28a8f5e689f7dd6b538436cffdf4dec1c84eea9bc",
+    "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "83f5a419d25067832a06546cc49aefd68ff0a60e4bc0fc6b0805e28b935f555f",
+    "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "21d7d27fdc3019f650f515673bee8e73d08dec8d006433f85d0e9698630ca839",
+    "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "048cd2d5e5c0f198d6dc320c7b20049671553d9e853393212d702bfe71e31f11",
+    "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+    "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "7526ead54eac7d898c8b1c902cd0b1d7ab3c07322b27f92c86cb3cfb9d255951",
+    "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+    "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "a44d7c2a068c0db6b31089734abf69debdabd14305ec482acd47a66bc7627051"
+  },
+  "reviewedAtUTC": "2026-10-09T08:06:55.280446+00:00",
+  "reviewer": "ios_visual_designer",
+  "sampledVideoReviews": [
+    {
+      "boundaryMetadataSHA256": "64b6dd32642f3166854488eb83d75067fe0ed378a2b9a145fe611d2f5d61845e",
+      "decodedMetadataSHA256": "bb75a1d17cd42a762518183a445fb27a14214509ab3b40fd33e7ad0d005bb53d",
+      "device": "iphone",
+      "durationSeconds": 61,
+      "encodedDimensions": [
+        588,
+        1280
+      ],
+      "findings": [],
+      "frames": [
+        {
+          "actualSeconds": 1.8233333333333333,
+          "decodeRun": "smm-fullscreen-iphone-video-review",
+          "frame": "frame-3.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 3,
+          "sha256": "6b0dfde1be70d62a1861354cbc58c9e268a4957a5a53277fd70156465d08f07e"
+        },
+        {
+          "actualSeconds": 15.228333333333333,
+          "decodeRun": "smm-fullscreen-iphone-video-review",
+          "frame": "frame-25.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 25,
+          "sha256": "7ff43f67789bf3d92c08954fbc8e707c416ac3e90ae899bc5739cf3a98159df1"
+        },
+        {
+          "actualSeconds": 30.49,
+          "decodeRun": "smm-fullscreen-iphone-video-review",
+          "frame": "frame-50.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 50,
+          "sha256": "4431c9fa0bbc9b0e1a0b01647a8182175a69fe732458c08ceba45bd0fcff6799"
+        },
+        {
+          "actualSeconds": 44.60333333333333,
+          "decodeRun": "smm-fullscreen-iphone-video-review",
+          "frame": "frame-75.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 75,
+          "sha256": "a0085f1744cf193a22cfbb0021908f115320620fa70cb13329b07e915b5b37a5"
+        },
+        {
+          "actualSeconds": 57.94,
+          "decodeRun": "smm-fullscreen-iphone-video-review",
+          "frame": "frame-95.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 95,
+          "sha256": "56f421bfd18e8ca5e09d9876abcbc251e6ea530b7f0432704071ffa0e40abd1e"
+        },
+        {
+          "actualSeconds": 0,
+          "boundary": true,
+          "decodeRun": "smm-fullscreen-iphone-video-boundaries",
+          "frame": "frame-0.00.png",
+          "reviewedOriginalDecodedFrame": true,
+          "sha256": "c076f5e6ea8f1e1c2d918c8a6d5cfdb17aee86b07ba32ca271c549b1a397eea7"
+        },
+        {
+          "actualSeconds": 60.843333333333334,
+          "boundary": true,
+          "decodeRun": "smm-fullscreen-iphone-video-boundaries",
+          "frame": "frame-60.85.png",
+          "reviewedOriginalDecodedFrame": true,
+          "sha256": "37e4073030328c6b052ff75637e0003a0ec77e7c6ac2148aef42f501df2f8ac9"
+        }
+      ],
+      "limits": [
+        "Seven original decoded samples only; no continuous playback review, fluidity/performance measurement, physical satisfaction, haptic or accessibility certification.",
+        "Native transitions are retained and distinguished from settled surfaces."
+      ],
+      "observations": [
+        "Five selected samples plus two boundary frames inspected. Both boundaries are settled upright library and meal footer.",
+        "The 75 percent sample is retained native landscape Map footage encoded within portrait dimensions.",
+        "The 95 percent sample catches native rotation with black corners; it is transition evidence, not a settled layout or an app clipping defect."
+      ],
+      "sourceIntervalSeconds": [
+        12.0,
+        73.0
+      ],
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+      "speed": 1,
+      "video": {
+        "bytes": 42998622,
+        "file": "satisfaction-fullscreen-iphone-walkthrough.mp4",
+        "sha256": "6d1cc7420644f77d82da61a14762bcda11f3f9444345d26cc4cc61c584eb69a1"
+      }
+    },
+    {
+      "boundaryMetadataSHA256": "f90fc6a483541f8b786a39bc90a20017eebf5e5438a8dc9e05d06197d3e4862b",
+      "decodedMetadataSHA256": "f7ac7a479eda3dc361e33a1ee3d153920cff5af494a8b5295edd9f58dcbd6f5c",
+      "device": "ipad",
+      "durationSeconds": 63.2,
+      "encodedDimensions": [
+        892,
+        1280
+      ],
+      "findings": [],
+      "frames": [
+        {
+          "actualSeconds": 0.8066666666666666,
+          "decodeRun": "smm-fullscreen-ipad-video-upright-review",
+          "frame": "frame-3.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 3,
+          "sha256": "0e9e96cf51683193a01051e6f8c5174a11dce424979bee8d4d10bdb5671e1f64"
+        },
+        {
+          "actualSeconds": 15.795,
+          "decodeRun": "smm-fullscreen-ipad-video-upright-review",
+          "frame": "frame-25.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 25,
+          "sha256": "dee2271b201d4c20372ee5c56cb99e127c344d90fa4be580afe9b70f8c53d82a"
+        },
+        {
+          "actualSeconds": 31.243333333333332,
+          "decodeRun": "smm-fullscreen-ipad-video-upright-review",
+          "frame": "frame-50.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 50,
+          "sha256": "a27a51afb5ffbba0f373b430ce65162997f5b290a6d45c1d099bf793996bddfc"
+        },
+        {
+          "actualSeconds": 45.833333333333336,
+          "decodeRun": "smm-fullscreen-ipad-video-upright-review",
+          "frame": "frame-75.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 75,
+          "sha256": "573a3ff53859308544d30633379eb2b4ba31c45291f45d3ee204de65434003f1"
+        },
+        {
+          "actualSeconds": 60.035,
+          "decodeRun": "smm-fullscreen-ipad-video-upright-review",
+          "frame": "frame-95.png",
+          "reviewedOriginalDecodedFrame": true,
+          "samplePercent": 95,
+          "sha256": "6ea7abe6e5a4d889cfc4f31994fa5740365bfa370e5d979fb77195d9d48227b8"
+        },
+        {
+          "actualSeconds": 0,
+          "boundary": true,
+          "decodeRun": "smm-fullscreen-ipad-video-upright-boundaries",
+          "frame": "frame-0.00.png",
+          "reviewedOriginalDecodedFrame": true,
+          "sha256": "13f212e6bf16e95d2c912ba2b20f7411dec4f01489491fa65b3f37c3d4a79a6e"
+        },
+        {
+          "actualSeconds": 63.045,
+          "boundary": true,
+          "decodeRun": "smm-fullscreen-ipad-video-upright-boundaries",
+          "frame": "frame-63.05.png",
+          "reviewedOriginalDecodedFrame": true,
+          "sha256": "a6a2901a59d35e2e1d2f76025f711543cac7807092d1be2d396459981abb2a10"
+        }
+      ],
+      "limits": [
+        "Seven original decoded samples only; no continuous playback review, fluidity/performance measurement, physical satisfaction, haptic or accessibility certification.",
+        "Native transitions are retained and distinguished from settled surfaces."
+      ],
+      "observations": [
+        "Corrected selected 63.2-second trim only; rejected 66.4-second candidate excluded.",
+        "Both boundaries are settled upright library and meal footer. The 75 percent sample retains the landscape Map.",
+        "The 25 percent sample catches the tax sheet during presentation or dismissal; its lower position and faded Cancel are transition evidence, not settled editor clearance."
+      ],
+      "publicationBinding": "Selected corrected public replacement bytes independently matched to supplied export hash and decoded metadata byte count.",
+      "sourceIntervalSeconds": [
+        12,
+        75.2
+      ],
+      "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+      "speed": 1,
+      "video": {
+        "bytes": 38344426,
+        "file": "satisfaction-fullscreen-ipad-walkthrough.mp4",
+        "sha256": "48ef6955ce648b141f3317608f82d74652e859c4e3534197f1419136276faea5"
+      }
+    }
+  ],
+  "scope": "Independent original-pixel review of fullscreen restaurant Map across specified devices and appearances, 36 current normal Demo originals, and seven decoded samples from each selected walkthrough; native execution is separate evidence.",
+  "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79"
+}

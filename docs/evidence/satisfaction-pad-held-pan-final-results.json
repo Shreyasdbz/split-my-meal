@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791524586.249,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Exact final-source iPad denied-location recovery with largest text in both orientations and native Settings return.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-pad-held-pan-final-source-manifest.json",
+  "sourceManifestSHA256": "b599850b653c02a60c4802b749959a6ac217db1bb3ea6ef240c90e708f37b2c6",
+  "startTime": 1791524438.493,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 144.75889801979065,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

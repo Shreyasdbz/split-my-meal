@@ -1,0 +1,570 @@
+{
+  "comparisonScope": "Historical comparison against source files at this run's finalization; does not assert equivalence to later test-helper revisions.",
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 1,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "exactNativeIDSet": true,
+  "failedTests": 2,
+  "failureObservations": {
+    "deniedLandscape": {
+      "boundary": "Pre-pan unchanged foreground geometry guard.",
+      "capturedDetailsHeightPoints": 402,
+      "capturedViewportPoints": [
+        437,
+        78,
+        437,
+        324
+      ],
+      "interpretation": "The preserved guard failure reports matching coordinates with only a floating-point details-height difference. Exact geometry comparison rejected the next pan. No device transition or product cause is inferred.",
+      "navigationFramePoints": [
+        0,
+        24,
+        874,
+        54
+      ],
+      "reportedDetailsHeightPoints": 402.00000000000006,
+      "reportedHeightDifferencePoints": 5.684341886080802e-14,
+      "windowFramePoints": [
+        0,
+        0,
+        874,
+        402
+      ]
+    },
+    "normalLargestLandscape": {
+      "boundary": "Full native Open in Maps action bounds after eight alternating native swipes.",
+      "interpretation": "The original per-pan records and failure hierarchy retain actual positioning; no pass or relaxed bound is claimed."
+    }
+  },
+  "nativeResult": "Failed",
+  "noSourceEditsDuringRun": true,
+  "noStatusOverrides": true,
+  "originalInputs": 47,
+  "originalNativeReviewAttachments": [
+    {
+      "file": "2892BD49-CEC5-4F94-AFB6-663964A63F49.txt",
+      "name": "live-mapkit-final-state-accessibility-tree_0_BB57DB4D-013E-4F5E-8F4F-0A8B61080245.txt",
+      "sha256": "31894d38a84e2240033cad7f7bf116faaa14e4f1e24c77a21876d414a0dc277e",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526554.638
+    },
+    {
+      "file": "390F4B5E-C7B4-40A8-96D9-353923B7ABDD.png",
+      "name": "live-mapkit-final-state_0_BC73E361-FDB1-4807-8D56-6D28C3B7C552.png",
+      "sha256": "26455e047b7ca99e795c04e32e4e7267632c6ee33d14f252477d2ae9c214899b",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526554.478
+    },
+    {
+      "file": "D45539E3-CF2F-4A1E-8066-978FBFF887F6.txt",
+      "name": "restaurant-map-landscape-detail-pan-0_0_125B685C-3AF0-44A3-BAB9-26B698EC5C2B.txt",
+      "sha256": "eb186367a06ee9bfd9d8f48ab818a1318b3cd9f1fd70218227606bc955fbf655",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526554.26
+    },
+    {
+      "file": "C49F7E38-0815-40A3-B22A-918361B846A5",
+      "name": "Synthesized Event 2026-10-09 at 02.15.53 AM",
+      "sha256": "dae2c4eeeca3158d4b56a46d399170a7eeabb10383fa1b2b7d668f5a832862a7",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526553.255
+    },
+    {
+      "file": "74FD0534-C496-42A3-B68C-FB6A14BA559A.txt",
+      "name": "restaurant-map-landscape-native-details-viewport_0_905F68E5-B5D9-4045-ACBD-A31DA0426946.txt",
+      "sha256": "8fc46524d890b5f5de4a73517db3014c9805a634c3eb4f2cad2263e26d1ed8d0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526552.076
+    },
+    {
+      "file": "08D61BD9-CD4B-441C-889C-C4155B6257E2.txt",
+      "name": "restaurant-map-portrait-detail-pan-0_0_5DCFA2CB-FB99-44CB-8C6F-A3F19E50D0D3.txt",
+      "sha256": "8fd6487d0f1c96146b74cabc456cacd164657e619b64d1486bfb09c1161cdb9c",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526543.829
+    },
+    {
+      "file": "E29B35EA-1033-4479-B073-46FA3B56B98B",
+      "name": "Synthesized Event 2026-10-09 at 02.15.43 AM",
+      "sha256": "d6514b1219aa5c3b9f1b340ff257afaf5ceff4b4ab6e62adca16aa1a1a17b4ff",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526543.129
+    },
+    {
+      "file": "C8626AE4-3F8E-4066-B6AE-3DC4165611E9.txt",
+      "name": "restaurant-map-portrait-native-details-viewport_0_66D47B11-C728-40A2-9F1A-B9585F1CE70E.txt",
+      "sha256": "2e7769bd3993d297423b992b9eceff9b6181b8dc344124f206930b9803850b87",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526541.45
+    },
+    {
+      "file": "DBFFE95A-01A5-4929-93FE-C3A214916CF5",
+      "name": "Synthesized Event 2026-10-09 at 02.15.34 AM",
+      "sha256": "0172cebb444d2127e602fcbb09214d4186c157e177d2b0433cff6cf5be5d299c",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526534.752
+    },
+    {
+      "file": "63BD7CF5-D94A-43CE-A48B-D47867871C6A",
+      "name": "Synthesized Event 2026-10-09 at 02.15.33 AM",
+      "sha256": "2051c0f66431f0a1902b37fdd5de848dfdad9751d860d78b54ea39384ef44fe5",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526533.272
+    },
+    {
+      "file": "450B1743-FE4A-4140-A904-45B1E5BA1EE6",
+      "name": "Synthesized Event 2026-10-09 at 02.15.31 AM",
+      "sha256": "4d3d6432b722bac99cdf709d7535767cca084aaaf60abfabeffe129a572ab2b4",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526531.863
+    },
+    {
+      "file": "0092D4D1-CAD1-4425-9D3D-75D2A1782F59",
+      "name": "Synthesized Event 2026-10-09 at 02.15.30 AM",
+      "sha256": "4ecbcda34f6dec170910badf595784731b2c7c3183c1e0eb25f9660f55ba43fa",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526530.161
+    },
+    {
+      "file": "2AE85A2D-5354-4D63-A310-AF3F5F824D15",
+      "name": "Synthesized Event 2026-10-09 at 02.15.28 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526528.173
+    },
+    {
+      "file": "2E54E288-EBAB-48FA-9BCD-8BA528C9D094",
+      "name": "Synthesized Event 2026-10-09 at 02.15.25 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526525.672
+    },
+    {
+      "file": "225F8170-D6F2-4B4B-B292-76E4FA383643",
+      "name": "Synthesized Event 2026-10-09 at 02.15.23 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526523.157
+    },
+    {
+      "file": "8C4E720F-5C97-4B6F-8761-6A5E5164E4F4",
+      "name": "Synthesized Event 2026-10-09 at 02.15.20 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526520.663
+    },
+    {
+      "file": "EE65F28C-4710-4B8D-B027-D432D4BAF7C6",
+      "name": "Synthesized Event 2026-10-09 at 02.15.18 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526518.178
+    },
+    {
+      "file": "F33A8634-8F44-474F-B800-B5E70235D5C3",
+      "name": "Synthesized Event 2026-10-09 at 02.15.15 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526515.713
+    },
+    {
+      "file": "5FCAC38F-7A1C-407B-841E-8B4ECC3534E4",
+      "name": "Synthesized Event 2026-10-09 at 02.15.13 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526513.185
+    },
+    {
+      "file": "F6A2C9E1-4DF9-42D7-89BE-962206C5BECC",
+      "name": "Synthesized Event 2026-10-09 at 02.15.10 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526510.462
+    },
+    {
+      "file": "1CA8EF5B-B00C-4434-85D9-663DE1659E4D",
+      "name": "Synthesized Event 2026-10-09 at 02.15.07 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526507.811
+    },
+    {
+      "file": "0463E74A-B689-46D4-AA2A-166A76891518",
+      "name": "Synthesized Event 2026-10-09 at 02.15.05 AM",
+      "sha256": "db9bcf0f0d487c69a5c2d8d1c4dc25cc83b8f2830dc0b7b6cf3734832e3e5135",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526505.262
+    },
+    {
+      "file": "46E07339-B310-4FFB-8E27-49C57B8A97B3",
+      "name": "Synthesized Event 2026-10-09 at 02.15.02 AM",
+      "sha256": "edc2b2a82ba85422c1f6bbc6e3881beaacee4e634bad9e905d751bfc2c45bff0",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526502.702
+    },
+    {
+      "file": "7F917CCF-D417-4013-9718-DE2C5839184E",
+      "name": "Synthesized Event 2026-10-09 at 02.14.58 AM",
+      "sha256": "d52fc150279849e477cb01bb39698ad1d9278b468ab5a06906429764c34c0c75",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526498.813
+    },
+    {
+      "file": "56F50F73-5639-475F-A764-DD3986759C0A",
+      "name": "Synthesized Event 2026-10-09 at 02.14.50 AM",
+      "sha256": "b87ad2706ca3e65849ea4e806897b92d9b900949f316207844dc34855a690c38",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526490.416
+    },
+    {
+      "file": "533E0F88-3957-4DAB-B978-3EA75742AF74",
+      "name": "Synthesized Event 2026-10-09 at 02.14.47 AM",
+      "sha256": "8d2da80c6dfbf8ef207e7996f69b6d6b3d0384367e4aa9fb1f0728a42ce5f24e",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526487.346
+    },
+    {
+      "file": "BC617A59-58C0-46FF-9EDD-7B86503E1AEE",
+      "name": "Synthesized Event 2026-10-09 at 02.14.45 AM",
+      "sha256": "9290f76123378e647270cf4cc3f820a8abb51f4685f5f7f52e12ac5662d3c504",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526485.096
+    },
+    {
+      "file": "6D7584C7-5BBB-48E7-8806-F84895E7CBD1",
+      "name": "Synthesized Event 2026-10-09 at 02.14.43 AM",
+      "sha256": "a8a14151900ab89fd107427ed8217c056a67362cb0c7f4d17209eb7081862b86",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526483.214
+    },
+    {
+      "file": "4D9F7F20-90E7-41AD-B48B-1015CC89457E",
+      "name": "Synthesized Event 2026-10-09 at 02.14.38 AM",
+      "sha256": "0de9643f7aaebeb7afb7d346a7108f3a3cb30796cb3e82a9ae33b31331d41118",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526478.721
+    },
+    {
+      "file": "9817AD1F-6107-4805-A970-15C2DF050C13",
+      "name": "Synthesized Event 2026-10-09 at 02.14.38 AM",
+      "sha256": "a58ed59962efe04f96bf18b5d84d9ed085cbdc2d2d42c3daa7174e88c26f9ae7",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526478.083
+    },
+    {
+      "file": "C2E43177-FA68-4FFC-ABAE-79D470EC64AE",
+      "name": "Synthesized Event 2026-10-09 at 02.14.36 AM",
+      "sha256": "6a06c548ca28c6202f04de6ec4b9f9ed8c19d768c32cb1d95525efcf2f682a10",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526476.826
+    },
+    {
+      "file": "2863E85F-D556-4940-A535-C2B6CDB4F646",
+      "name": "Synthesized Event 2026-10-09 at 02.14.34 AM",
+      "sha256": "08168943c5c0445f97cbde9544d7ec16bc9e2dbc958c2a40cd763a4ec34b2e2a",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526474.513
+    },
+    {
+      "file": "09A31203-0F9F-406E-BBE1-00EC1F0E83A8",
+      "name": "Synthesized Event 2026-10-09 at 02.14.32 AM",
+      "sha256": "cc205b8fd4223e5da6a27b0b6f00afe4279e3c390f23288fa4ade2d7717df5e8",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526472.811
+    },
+    {
+      "file": "12C3093E-A11D-4D57-A992-AC63C9E79A9E",
+      "name": "Synthesized Event 2026-10-09 at 02.14.31 AM",
+      "sha256": "9c097ba72afbe8397ac523947045e9e823c382abc8bfa67ed506cfa116034000",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526471.986
+    },
+    {
+      "file": "48068D00-25AE-4B66-B60B-6B89B928CC44",
+      "name": "Synthesized Event 2026-10-09 at 02.14.30 AM",
+      "sha256": "4152df44b22785fd96036af12bd2293384a44c6af1cb2a2334285ea391ea2045",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526470.204
+    },
+    {
+      "file": "24584886-DA98-47C0-9381-067B8CA6FB87",
+      "name": "Synthesized Event 2026-10-09 at 02.14.29 AM",
+      "sha256": "133cb2d900655b652783ad8ae3d934acf8272f4df6a8c3d5370d08fd2f2eda49",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526469.663
+    },
+    {
+      "file": "A548494F-AE2B-497F-B2B7-ED5D8B0A0ADC",
+      "name": "Synthesized Event 2026-10-09 at 02.14.28 AM",
+      "sha256": "8f3beddf30c88c17e2949039dd2ead38e9021701395e5dceaf44b01f28e282e2",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526468.207
+    },
+    {
+      "file": "1C3F9A49-C512-4EF6-84F0-10E30389BABA",
+      "name": "Synthesized Event 2026-10-09 at 02.14.26 AM",
+      "sha256": "2082b86c4b5a7a7f3d335297a4d42d612b274fa659a993af9ce7b3c241ba7465",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526466.027
+    },
+    {
+      "file": "BC857E62-91F1-4D2A-84E8-5FFBB8F11151",
+      "name": "Synthesized Event 2026-10-09 at 02.14.25 AM",
+      "sha256": "c3cc00ed24c4ba34e26f09f64c2fe8fc13ea7be91645756bc94fb5615c024488",
+      "test": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "timestamp": 1791526465.213
+    },
+    {
+      "file": "6AED8439-8895-4F37-986B-C217CF7D3B44.txt",
+      "name": "failure-accessibility-tree_0_2376E4EF-A799-4E25-A039-77FC88ED6BC4.txt",
+      "sha256": "4a3aa1bcea3b662c3dd0183d662ee73d696ee25714e72132129376e3a8c78cba",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526623.303
+    },
+    {
+      "file": "3B121938-B930-4A18-BD51-88C126668D05.png",
+      "name": "failure--[MealJourneyTests testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape]_0_A341A3C8-7921-4273-A41B-5DBD1E9C5C94.png",
+      "sha256": "ab7b3b3aec2796248a91497eee3980d31f41c91efa8fb8f9344710032aa120eb",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526623.138
+    },
+    {
+      "file": "72B9BFB0-19A8-4241-8694-9BEDFDD2726E.txt",
+      "name": "restaurant-map-landscape-detail-pan-7_0_AD9C5ECF-565E-4D4F-AEB4-F1537CCB4A94.txt",
+      "sha256": "4ad2d81f4b6f7a902d5076213e51d33d8b25c92682c2507130210823899e020a",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526622.995
+    },
+    {
+      "file": "F5C4E2B0-823A-4548-94C5-CC0B8DCAFE45",
+      "name": "Synthesized Event 2026-10-09 at 02.17.02 AM",
+      "sha256": "123bca3660775c062df626e6a700db76c7d6181269dcdec13bbf7a20a5286000",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526622.214
+    },
+    {
+      "file": "7C62E5D2-639A-4485-8676-27DDCDFFCDCC.txt",
+      "name": "restaurant-map-landscape-detail-pan-6_0_93ED15A4-DE5C-4C82-BCDA-F306AEA3B87C.txt",
+      "sha256": "9b2e6baf79a5631323f67e5e9cc60b91e8a66b8ece754e6aff8a0bd32e617076",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526621.547
+    },
+    {
+      "file": "A60276FD-E681-4A62-A5E6-CB5E61AC07A0",
+      "name": "Synthesized Event 2026-10-09 at 02.17.00 AM",
+      "sha256": "99bb059b5621e131515181c6fd47d4b126b70f778de27dd05b5ff2fbc1ef4f65",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526620.771
+    },
+    {
+      "file": "3CCADAEC-048D-460F-9D53-D0BD14B374AE.txt",
+      "name": "restaurant-map-landscape-detail-pan-5_0_FB851DA1-D93E-40B7-B26C-B689929FD8D9.txt",
+      "sha256": "31de623eb290174bf61e8193ca3c6abd6b78b94c8525b88177c33f7c36a2a427",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526620.095
+    },
+    {
+      "file": "DB705F0B-E3D7-4A80-8748-62D06411CF41",
+      "name": "Synthesized Event 2026-10-09 at 02.16.59 AM",
+      "sha256": "123bca3660775c062df626e6a700db76c7d6181269dcdec13bbf7a20a5286000",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526619.313
+    },
+    {
+      "file": "B060B790-5407-4377-BF49-AE28C93CC42D.txt",
+      "name": "restaurant-map-landscape-detail-pan-4_0_23DF181F-4195-4C98-B344-E411CB56F896.txt",
+      "sha256": "f45eae668aa1059282751bc40ef4f59477b32beb021d97d7372d3fe6b77a3918",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526618.66
+    },
+    {
+      "file": "849520FD-E351-4EEE-802A-7539923C4C99",
+      "name": "Synthesized Event 2026-10-09 at 02.16.57 AM",
+      "sha256": "99bb059b5621e131515181c6fd47d4b126b70f778de27dd05b5ff2fbc1ef4f65",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526617.867
+    },
+    {
+      "file": "01558F8D-1186-44BB-AD5A-63433FAF5213.txt",
+      "name": "restaurant-map-landscape-detail-pan-3_0_B3D0B5D3-7082-48EC-903F-C4A1472FCFDA.txt",
+      "sha256": "17f1cfea2027cf320f1ebad0236280959d63e0bf68ee35a063e211feedc3bb0e",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526617.21
+    },
+    {
+      "file": "11DFB85B-35AB-415D-838E-1478450D46B7",
+      "name": "Synthesized Event 2026-10-09 at 02.16.56 AM",
+      "sha256": "123bca3660775c062df626e6a700db76c7d6181269dcdec13bbf7a20a5286000",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526616.412
+    },
+    {
+      "file": "6AADB3BF-87E5-4694-87E3-877A3BCC9861.txt",
+      "name": "restaurant-map-landscape-detail-pan-2_0_C774BCBA-4770-4C0B-89C4-5649CDEDC847.txt",
+      "sha256": "b7c47e0360af3dcf0942cc3673663b4a8b2775722e6088f8eda09c66a5c94d85",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526615.757
+    },
+    {
+      "file": "96CCCA5B-10BB-4530-8AE5-9111ED132892",
+      "name": "Synthesized Event 2026-10-09 at 02.16.55 AM",
+      "sha256": "99bb059b5621e131515181c6fd47d4b126b70f778de27dd05b5ff2fbc1ef4f65",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526615.097
+    },
+    {
+      "file": "6BE1EC61-1A6F-430F-875B-47A7235ADD10.txt",
+      "name": "restaurant-map-landscape-detail-pan-1_0_F04E3085-0336-4862-A37B-BD2CB388A41A.txt",
+      "sha256": "daabbe342068988849b1d60b3c6fd2cbf04a834e5075eed3a7ba7fbbc239754c",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526614.443
+    },
+    {
+      "file": "C8C17AB8-53FD-48BD-9547-F3DB3384DFD5",
+      "name": "Synthesized Event 2026-10-09 at 02.16.53 AM",
+      "sha256": "123bca3660775c062df626e6a700db76c7d6181269dcdec13bbf7a20a5286000",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526613.797
+    },
+    {
+      "file": "2ED4C1F7-97B8-4477-BA92-AE95C0C33CA0.txt",
+      "name": "restaurant-map-landscape-detail-pan-0_0_48632708-486F-488E-A987-B56BB6839144.txt",
+      "sha256": "c5821c1a2df35655010ea9aa11fe88a2334c678ba5c8fbe3fe829ae35173ae37",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526613.13
+    },
+    {
+      "file": "63315335-6528-4DE2-9ECF-90146F362F59",
+      "name": "Synthesized Event 2026-10-09 at 02.16.52 AM",
+      "sha256": "99bb059b5621e131515181c6fd47d4b126b70f778de27dd05b5ff2fbc1ef4f65",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526612.359
+    },
+    {
+      "file": "9BA70495-DF8A-4816-8C37-F67C7951AB69.txt",
+      "name": "restaurant-map-landscape-native-details-viewport_0_1EF6935C-49B2-44A9-8FA7-B5FD6EAF46A8.txt",
+      "sha256": "8fc46524d890b5f5de4a73517db3014c9805a634c3eb4f2cad2263e26d1ed8d0",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526611.161
+    },
+    {
+      "file": "47C3DDC1-2CD4-4977-88BA-5252FD6EFB30.txt",
+      "name": "restaurant-map-portrait-detail-pan-0_0_AFF18ED9-2FAB-44F6-A0D8-B2B12FBB025B.txt",
+      "sha256": "942333b2c3157057914622f0260dc7000b4035b41d1948f4934a64a61a42f975",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526603.905
+    },
+    {
+      "file": "E562526C-BE6A-4D62-802E-C225C3FB67A3",
+      "name": "Synthesized Event 2026-10-09 at 02.16.43 AM",
+      "sha256": "0155cd4fe62a2d7c670e0158ee300a78ef843a84238dcfc6d28a851edb7f3fc0",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526603.212
+    },
+    {
+      "file": "1395BD42-3E31-4800-98C2-E98FF9A0B8A6.txt",
+      "name": "restaurant-map-portrait-native-details-viewport_0_B2E9764C-1D12-4459-8182-B2A3455E8F1E.txt",
+      "sha256": "2e7769bd3993d297423b992b9eceff9b6181b8dc344124f206930b9803850b87",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526601.56
+    },
+    {
+      "file": "0FB2BA3C-8312-468E-8F85-EFBA4CF1A03A",
+      "name": "Synthesized Event 2026-10-09 at 02.16.34 AM",
+      "sha256": "9c16d96d29cc4409b50907acd40622be064e87f3738bf71e68962a64d1000852",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526594.719
+    },
+    {
+      "file": "3BBEDFB6-BAA7-4D7C-AD43-5C60956DE2A2",
+      "name": "Synthesized Event 2026-10-09 at 02.16.33 AM",
+      "sha256": "281c280e2f29a34db39efde1d9382e612876522160584ecc406b498836bfaf6f",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526593.726
+    },
+    {
+      "file": "E340D9A5-3DBA-4576-8F31-857149017AD5",
+      "name": "Synthesized Event 2026-10-09 at 02.16.32 AM",
+      "sha256": "6fbd252d815fd1e750adf4e042b4f640349baf9e0942e5dd43df63022e5b44ae",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526592.145
+    },
+    {
+      "file": "1C3A2FE1-0A97-4464-A56F-8F06765206C8",
+      "name": "Synthesized Event 2026-10-09 at 02.16.30 AM",
+      "sha256": "6fbd252d815fd1e750adf4e042b4f640349baf9e0942e5dd43df63022e5b44ae",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526590.496
+    },
+    {
+      "file": "0DF63882-5E25-442D-A15E-FB0B1373AE83",
+      "name": "Synthesized Event 2026-10-09 at 02.16.27 AM",
+      "sha256": "579f6ca6b4bd7576838aeaa7196257334198e86a30d97fe02edbde9a1b6d55ef",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526587.295
+    },
+    {
+      "file": "89C92C54-A24D-409A-924A-225483EA5D33",
+      "name": "Synthesized Event 2026-10-09 at 02.16.24 AM",
+      "sha256": "579f6ca6b4bd7576838aeaa7196257334198e86a30d97fe02edbde9a1b6d55ef",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526584.274
+    },
+    {
+      "file": "53D36E5E-3659-4AA4-AAAC-863B030C8610",
+      "name": "Synthesized Event 2026-10-09 at 02.16.21 AM",
+      "sha256": "579f6ca6b4bd7576838aeaa7196257334198e86a30d97fe02edbde9a1b6d55ef",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526581.238
+    },
+    {
+      "file": "E2264294-50C2-473A-9D5E-598A47E43434",
+      "name": "Synthesized Event 2026-10-09 at 02.16.18 AM",
+      "sha256": "579f6ca6b4bd7576838aeaa7196257334198e86a30d97fe02edbde9a1b6d55ef",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526578.197
+    },
+    {
+      "file": "C833EA18-9C43-4EFF-9CC7-8590682E0D6F",
+      "name": "Synthesized Event 2026-10-09 at 02.16.15 AM",
+      "sha256": "579f6ca6b4bd7576838aeaa7196257334198e86a30d97fe02edbde9a1b6d55ef",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526575.164
+    },
+    {
+      "file": "F71953A3-5E67-4C3F-AC51-F045D8B5F27D",
+      "name": "Synthesized Event 2026-10-09 at 02.16.12 AM",
+      "sha256": "579f6ca6b4bd7576838aeaa7196257334198e86a30d97fe02edbde9a1b6d55ef",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526572.128
+    },
+    {
+      "file": "94BFCE96-F607-401E-ABA2-399C05F3798B",
+      "name": "Synthesized Event 2026-10-09 at 02.16.09 AM",
+      "sha256": "579f6ca6b4bd7576838aeaa7196257334198e86a30d97fe02edbde9a1b6d55ef",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526569.061
+    },
+    {
+      "file": "96A0789A-62F7-4B04-9E19-A312AE2715AE",
+      "name": "Synthesized Event 2026-10-09 at 02.16.06 AM",
+      "sha256": "be29e1e1f9021ee3aa45502ebf004798aac544e8129fb9aa6d419bc93b1cf0c3",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791526566.146
+    }
+  ],
+  "outerExit": 65,
+  "passedTests": 0,
+  "results": "satisfaction-phone-native-swipe-final-results.json",
+  "scope": "Completed failed phone native swipe comparison, zero passes and two failures. No retry or passing completion claim.",
+  "selection": "satisfaction-phone-native-swipe-final-selection.json",
+  "skippedTests": 0,
+  "sourceComparisonScope": "All 47 input hashes matched the checkout at native finalization/publication; later source candidates are separate.",
+  "sourceManifest": "satisfaction-phone-native-swipe-final-source-manifest.json",
+  "sourceManifestSHA256": "f24233b6dde06b2d383bdc3862f7eedba8551f58035a564805275a1c57bd83f5",
+  "sourceMismatchesAtRunFinalization": [],
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No physical GPS or private preference readback claim."
+}

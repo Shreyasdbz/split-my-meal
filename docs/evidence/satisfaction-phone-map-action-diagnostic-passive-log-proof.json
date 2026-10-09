@@ -1,0 +1,43 @@
+{
+  "collector": {
+    "boundedDurationSeconds": 300,
+    "eventCount": 5,
+    "outerExit": 0,
+    "rawInputSHA256": "394b64921cd3524db4ea02dcd590edfef5fe6be4c8da85a04b80faee24f8679a",
+    "sanitizedKeys": [
+      "timestamp",
+      "eventMessage"
+    ]
+  },
+  "events": [
+    {
+      "eventMessage": "map appeared; time=1791529547.693491; appState=0; scrolls=UpdateCoalescingCollectionView frame=(0.0, 0.0, 402.0, 874.0) offset=(0.0, 565.0) dragging=false decelerating=false pan=5",
+      "timestamp": "2026-10-09 03:05:47.693650-0400"
+    },
+    {
+      "eventMessage": "Open in Maps action; time=1791529549.9928432; appState=0; scrolls=UpdateCoalescingCollectionView frame=(0.0, 0.0, 402.0, 874.0) offset=(0.0, 565.0) dragging=false decelerating=false pan=0",
+      "timestamp": "2026-10-09 03:05:49.992857-0400"
+    },
+    {
+      "eventMessage": "entered background; time=1791529550.806185; appState=2; scrolls=UpdateCoalescingCollectionView frame=(0.0, 0.0, 402.0, 874.0) offset=(0.0, 565.0) dragging=false decelerating=false pan=0",
+      "timestamp": "2026-10-09 03:05:50.806197-0400"
+    },
+    {
+      "eventMessage": "map appeared; time=1791529602.306376; appState=0; scrolls=UpdateCoalescingCollectionView frame=(0.0, 0.0, 402.0, 873.9999999999995) offset=(0.0, 3685.6666666666665) dragging=false decelerating=false pan=5",
+      "timestamp": "2026-10-09 03:06:42.306514-0400"
+    },
+    {
+      "eventMessage": "Open in Maps action; time=1791529611.7170138; appState=0; scrolls=UpdateCoalescingCollectionView frame=(0.0, 0.0, 402.0, 873.9999999999995) offset=(0.0, 3685.6666666666665) dragging=false decelerating=false pan=0 | HostingScrollView frame=(0.0, 415.3333333333333, 402.0, 458.6666666666667) offset=(0.0, 69.33333333333333) dragging=false decelerating=false pan=3",
+      "timestamp": "2026-10-09 03:06:51.717037-0400"
+    }
+  ],
+  "interpretationLimit": "Action entry and background timestamps show observed execution. Ended pan state read at action entry does not establish why a button was activated or whether cancellation behavior is correct.",
+  "scope": "Temporary passive DEBUG-only app observation, not maintained production source or proof of gesture cause.",
+  "sourceInputCount": 47,
+  "sourceManifestSHA256": "fb1c8359042676825a613c1b5ab8554e8b085fcef38850af0cefdbc531a39f9f",
+  "temporarySourceDelta": {
+    "originalPatchSHA256": "426543f30ccad3e78696f69b342093d1f478273ea290678a90e491ef891072fa",
+    "sanitizedCodePatch": "--- MealScreen-before-diagnostic.swift\n+++ MealScreen-diagnostic.swift\n@@ -2,6 +2,9 @@\n import SwiftData\n import MapKit\n import UIKit\n+#if DEBUG\n+import OSLog\n+#endif\n \n /// Owns presentation of meal details and keeps edits inside draft editors.\n struct MealScreen: View {\n@@ -263,7 +266,37 @@\n             position = .region(MKCoordinateRegion(center: value.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)))\n         }\n         .onDisappear { location.cancel() }\n-    }\n+        #if DEBUG\n+        .onAppear { logMapActionDiagnostic(\"map appeared\") }\n+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) { _ in\n+            logMapActionDiagnostic(\"entered background\")\n+        }\n+        #endif\n+    }\n+\n+    #if DEBUG\n+    /// Temporary passive diagnostic: records attached scroll state without\n+    /// changing views, recognizers, event dispatch or layout.\n+    @MainActor\n+    private func logMapActionDiagnostic(_ marker: String) {\n+        func descendants(_ view: UIView) -> [UIView] {\n+            [view] + view.subviews.flatMap { descendants($0) }\n+        }\n+        var records: [String] = []\n+        for scene in UIApplication.shared.connectedScenes.compactMap({ $0 as? UIWindowScene }) {\n+            for window in scene.windows {\n+                for view in descendants(window) {\n+                    guard let scroll = view as? UIScrollView, scroll.window === window, !scroll.isHidden, scroll.alpha > 0 else { continue }\n+                    let frame = scroll.convert(scroll.bounds, to: window)\n+                    guard [frame.minX, frame.minY, frame.width, frame.height].allSatisfy(\\.isFinite) else { continue }\n+                    records.append(\"\\(type(of: scroll)) frame=\\(frame) offset=\\(scroll.contentOffset) dragging=\\(scroll.isDragging) decelerating=\\(scroll.isDecelerating) pan=\\(scroll.panGestureRecognizer.state.rawValue)\")\n+                }\n+            }\n+        }\n+        let message = \"\\(marker); time=\\(Date().timeIntervalSince1970); appState=\\(UIApplication.shared.applicationState.rawValue); scrolls=\\(records.joined(separator: \" | \"))\"\n+        Logger(subsystem: \"SplitMyMeal.MapDiagnostic\", category: \"OpenMaps\").notice(\"\\(message, privacy: .public)\")\n+    }\n+    #endif\n \n     private func map(at coordinate: CLLocationCoordinate2D) -> some View {\n         Map(position: $position) {\n@@ -279,6 +312,9 @@\n                 .fixedSize(horizontal: false, vertical: true)\n                 .accessibilityIdentifier(\"restaurant-address\")\n             Button(\"Open in Maps\", systemImage: \"arrow.up.right.square\") {\n+                #if DEBUG\n+                logMapActionDiagnostic(\"Open in Maps action\")\n+                #endif\n                 let item: MKMapItem\n                 if #available(iOS 26.0, *) {\n                     item = MKMapItem(location: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude), address: nil)\n",
+    "scope": "DEBUG-only notices at map appearance, Open in Maps action entry and app background notification. Reads public scroll frames, offset and gesture state without altering event forwarding, recognizers, layout, focus or assignments."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791527654.585,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone SE (3rd generation)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Completed passing exact two-case compact controlled native-swipe comparison: denied-map recovery and largest-text restaurant-map controls. This device/source-scoped pass is separate from the failed phone candidate.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-controlled-swipe-final-source-manifest.json",
+  "sourceManifestSHA256": "8fbe0bfc40839a807021df7ec620d0f37cbc71e43b07e70cbf1b44f2b6c3074a",
+  "startTime": 1791527431.788,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 147.8971689939499,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 72.14796805381775,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

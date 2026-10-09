@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791523547.539,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Two exact native iPad cases passed: complete denied map recovery with actual native viewport containment, and correctly selected DemoWalkthrough. Local evidence excludes full hosted acceptance.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-pad-native-viewport-final-source-manifest.json",
+  "sourceManifestSHA256": "66a6e4281a225866613d1d8f41b721fe0fe00c3b3fc76e51ed7083a8a41aefd7",
+  "startTime": 1791523311.699,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 143.77257800102234,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 89.45452499389648,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

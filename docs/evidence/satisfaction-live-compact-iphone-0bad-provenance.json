@@ -1,0 +1,74 @@
+{
+  "failedTests": 1,
+  "failureAttachmentNames": {
+    "finalHierarchy": "C2F2CFB4-8856-4705-A3FD-799C13B786D4.txt",
+    "finalScreenshot": "91517AEA-9C90-49FC-9758-A6E17F2DFA56.png",
+    "nativeFailureHierarchy": "678BC35C-07AC-436C-AE60-9574E0AAD06C.txt",
+    "rowGeometry": "98697083-6593-48BA-AFC5-91D4744F9C4E.txt"
+  },
+  "nativeResult": "Failed",
+  "originalInputs": 47,
+  "outerExit": 65,
+  "passedTests": 4,
+  "results": "satisfaction-live-compact-iphone-0bad-results.json",
+  "runtimeWarningsRetained": true,
+  "scope": "Preserved failed compact iPhone live run; no rerun, no full-pass claim.",
+  "scrollObservation": {
+    "conclusion": "The gesture reaches the native list, but the fixed halfway reversal starts before the final Restaurant & receipt section is reached.",
+    "foregroundListFramePoints": [
+      0,
+      0,
+      375,
+      667
+    ],
+    "gestureXPoints": 8,
+    "initialPressSeconds": 0.1,
+    "nativeFrames": [
+      {
+        "actualSeconds": 44.18833333333333,
+        "visibleContent": "Summary scrolled to Subtotal."
+      },
+      {
+        "actualSeconds": 59.99333333333333,
+        "visibleContent": "Last person and Add person, followed by Items heading."
+      },
+      {
+        "actualSeconds": 62.93833333333333,
+        "visibleContent": "First item Edamame and beginning of Miso ramen."
+      },
+      {
+        "actualSeconds": 89.69,
+        "visibleContent": "Meal summary at top after reverse gestures."
+      }
+    ],
+    "nativeGestureVelocityPointsPerSecond": 250,
+    "nativeRecordingAttachment": "2E6CE23A-27FF-4A9F-9C27-5F1FD6B32B90.mp4",
+    "nativeRecordingSHA256": "6f9b41a19af902712e2b4d891918cb73ebdb698ffc10d974209baaa880c44790",
+    "proposedBoundedCorrection": "Keep seeking downward while this known final-section row is absent; preserve the existing 24 attempts, gestures, full target bounds and assertions.",
+    "restaurantInstantiatedInAttemptLog": false,
+    "reverseStartsAtAttempt": 12,
+    "settleHoldSeconds": 0.2,
+    "source": "Retained native test recording, generated gestures and source ordering. No replay or source changes.",
+    "totalAttempts": 24,
+    "unexecutedDeniedMapScope": "The case stopped before the largest-text map recovery pane, its native controls, and its Settings handoff.",
+    "upwardGestureAttempts": 12,
+    "upwardGestureYPoints": [
+      389.6,
+      167.9
+    ],
+    "usableViewportYPoints": [
+      74,
+      483.5
+    ]
+  },
+  "selection": "satisfaction-live-compact-iphone-0bad-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-live-compact-iphone-0bad-source-manifest.json",
+  "sourceManifestSHA256": "d06abc0bdd33fc8067c5e4c67eb6eec33c5b3e53d1535c157b052867aa0e0399",
+  "sourceUnchangedFromReviewedInputDictionary": true,
+  "syntheticLocation": {
+    "clearCompletedByExitWrapper": true,
+    "source": "San Francisco simulator fixture",
+    "verificationScope": "The wrapper checked simctl location clear completion; no private preference readback or physical GPS claim."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "captureLimitations": [
+    {
+      "correctionForEvidence": "Capture the settled portrait detail position with the entire My location label visible before claiming full containment.",
+      "file": "C9692527-5956-41BA-8969-9341D705DC11.png",
+      "interpretation": "An individual deliberate scroll position does not establish persistent clipping or an unreachable control. Full visual containment cannot be certified from this frame.",
+      "observation": "The lower part of location is cut by the scrolling detail viewport bottom.",
+      "sha256": "02671c8b62780ea7ead516db71b1cd33937c6aec4df94eee7f07e182d6f694f5",
+      "state": "Phone dark largest-text portrait, Show my location target capture"
+    }
+  ],
+  "findings": [],
+  "limits": [
+    "Individual source-bound simulator screenshot states; largest-text details use separate scroll positions.",
+    "Fictional screenshot addresses do not certify every real address length or language.",
+    "Source accessible labels were inspected; no live VoiceOver, keyboard, focus-order or measured contrast audit was performed.",
+    "No live UI interaction, native execution, continuous video review, physical haptics, subjective satisfaction, accessibility conformance, physical-device delivery or hosted acceptance is certified."
+  ],
+  "method": {
+    "additionalOriginalViews": {
+      "compactLargestMapAndRestaurantRow": 19,
+      "phoneDarkLargestMap": 8
+    },
+    "demoOriginalViews": {
+      "ipad": 18,
+      "iphone": 18
+    },
+    "originalIndexHashMismatches": 0,
+    "originalViews": 63,
+    "publishedDemoByteMatches": 36,
+    "uiActionsPerformed": 0,
+    "uniqueContentSHA256Count": 61
+  },
+  "observations": [
+    "Meal totals, people and items have a readable order. View split and Share split remain clear primary actions in standard-text captures. Bill details and per-person itemization provide progressive detail.",
+    "All items assigned describes assignment rather than payment or delivery. The source requires a nonempty valid bill with no unassigned items or cents.",
+    "Displayed fixture: $87.00 subtotal + $7.72 tax + $18.94 tip = $113.66. Alex $39.19 + Jordan $36.59 + Sam $37.88 = $113.66. This checks the displayed fixture, not general calculation correctness.",
+    "Everyone is concise under Shared by. Item shares exclude tax and tip distinguishes the draft preview from the complete bill.",
+    "Forms, toggles, disclosure rows, navigation bars and Cancel/Save actions have a coherent native appearance. The iPad selected meal is visibly gray; no teal selection appearance is inferred.",
+    "Done supplies a clear map exit. Open in Maps has prominent native styling; My location remains secondary. Largest-text details scroll separately from the fixed map, and landscape places them side by side.",
+    "The compact restaurant row shows its complete title and a two-line truncated secondary address. Source preserves the complete accessible title/address and Show my location name.",
+    "Four intentional Maps-return captures support visible restaurant-context continuity; they do not establish focus restoration."
+  ],
+  "readOnlyReviewer": true,
+  "reportRepresentation": "Root saved the reviewer supplied counts, observations, limitation and source binding. Full original screenshot hashes are retained in linked capture provenance and the independent visual review.",
+  "review": "Independent fullscreen copy and rendered UI review",
+  "reviewDate": "2026-10-09",
+  "source": {
+    "captureManifestEntryCount": 47,
+    "comparisonLimit": "Comparison recorded at review time; historical test helpers were not rerun by this reviewer.",
+    "comparisonTiming": "These source and count fields describe the original independent review before the DEBUG viewport probe. Later correction evidence is recorded separately below.",
+    "currentProductionAndProjectInputsCompared": 33,
+    "manifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+    "matchingInputs": 33,
+    "mismatches": [],
+    "releaseManifest": "satisfaction-fullscreen-release-source-manifest.json"
+  },
+  "status": "No reproducible app defect established; corrective target containment evidence pending",
+  "subsequentCorrectionEvidence": {
+    "independentPixelReview": "satisfaction-fullscreen-map-visual-review.json",
+    "nativeProvenance": [
+      "satisfaction-phone-clipped-viewport-final-provenance.json",
+      "satisfaction-pad-clipped-viewport-final-provenance.json",
+      "satisfaction-compact-clipped-viewport-final-provenance.json"
+    ],
+    "publishedPhoneCorrection": "satisfaction-viewport-phone-location-portrait.png",
+    "recordedBy": "Root, separately from the original read-only copy review",
+    "scope": "Each device passes two complete map/recovery journeys with direct clipped-layout measurement and unchanged full-target hittability. The original clipped capture remains historical; this does not pretend the copy reviewer reran the native cases or independently inspected the new images.",
+    "sourceComparison": "satisfaction-viewport-source-comparison.json"
+  }
+}

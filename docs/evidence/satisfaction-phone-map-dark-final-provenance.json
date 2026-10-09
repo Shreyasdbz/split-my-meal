@@ -1,0 +1,403 @@
+{
+  "appearanceRestoration": {
+    "nativeOuterExit": 0,
+    "originalAppearance": "light",
+    "requestedAppearance": "dark",
+    "restorationExit": 0,
+    "restorationMatchesOriginal": true,
+    "restoredAppearance": "light",
+    "scope": "Supported native simctl appearance on the owned Phone only; no status overrides."
+  },
+  "appearanceRestorationInputSHA256": "1fc28e8ddf0fb9797fe8f25d0aa8c4b791707ac7d6977bcc0e9244157e0bfafc",
+  "comparisonScope": "All 47 compiled inputs compared after native outer completion before subsequent edits.",
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 0,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "exactNativeIDSet": true,
+  "failedTests": 0,
+  "nativeResult": "Passed",
+  "noSourceEditsDuringRun": true,
+  "noStatusOverrides": true,
+  "originalInputs": 47,
+  "originalNativeReviewAttachments": [
+    {
+      "file": "EE2F01EF-9C44-4607-9F7C-E2E12B2A2787.txt",
+      "name": "live-mapkit-final-state-accessibility-tree_0_9C85E25E-52A2-4925-BE23-4722CE46DD12.txt",
+      "sha256": "1529f3f628493092c577102076248c13a029529a32d80d9d49890bf781be3774",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531627.926
+    },
+    {
+      "file": "D00054EB-F2E9-49D8-A26F-237610B8AFC9.png",
+      "name": "live-mapkit-final-state_0_C268A583-55A8-403A-B7CC-3033DDB65761.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "ae3c717a4101d22152bee5de85f721b714ec87fafc235d826dc2e7d765988ae4",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531627.681
+    },
+    {
+      "file": "BA50ED7F-FE24-4BAC-B33A-322309BD0408.txt",
+      "name": "selected-restaurant-native-maps-accessibility-tree_0_24651D3A-BFC3-450E-959D-D7B2C8529A92.txt",
+      "sha256": "2b2fe295fb3b06612bfddf26818b8740a26ea6b31bfa9635706cf4c744410412",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531620.333
+    },
+    {
+      "file": "F8F23BB6-0A6E-464F-8EE4-DDE9B6C04E37.png",
+      "name": "selected-restaurant-opened-in-native-maps_0_2DDE8CB1-925A-46EE-8425-41EED2F46A9A.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "287ec3764bb84170732cbb2a994c32b77c8f3a9bad1e74210f4d80475e1d4b2e",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531620.175
+    },
+    {
+      "file": "CEE0EA87-31EB-462A-B676-EB26D5D53C20.txt",
+      "name": "live-selected-restaurant-map-accessibility-tree_0_3634F4BA-FF45-4B9D-95AA-967D64FFE3DE.txt",
+      "sha256": "62343036470d24018bfd28ec4c9c16c3e4637ade8c2ccdcea249fb40da9a6beb",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531612.434
+    },
+    {
+      "file": "F75C321E-E622-429B-BE20-87FD4F8BE947.png",
+      "name": "live-selected-restaurant-map_0_CCE6213F-8DA1-4474-B4A6-156467B5E63D.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "ecf119512d55dead7c297644039cd06faf18c2239ae2d0dedc08cbeb4fa9e2ac",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531612.102
+    },
+    {
+      "file": "5400138B-1062-40C6-A268-DA85FFADD2DF.txt",
+      "name": "live-mapkit-autocomplete-results-accessibility-tree_0_723EEC41-5F74-4158-88A4-9F7CE6733AC5.txt",
+      "sha256": "ab1aeb5e826332744e0c587761c6b20b9067a42c2de1c6982d24141871b2e441",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531600.766
+    },
+    {
+      "file": "E206967C-9E20-4936-9330-3EAD5C3B2BF2.png",
+      "name": "live-mapkit-autocomplete-results_0_C5D53B65-90CD-446C-A45D-5335C7A56944.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "50adcba4fe5d984eb34717fbed6ba02a9130dfe5d3377fdc01090bd4e54e7703",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791531600.28
+    },
+    {
+      "file": "AEDAFD55-EE28-4D4F-995A-B99AA52EF1EF.txt",
+      "name": "restaurant-map-landscape-visible-viewport_0_2098AF64-26A3-44D8-BE48-3B514421420D.txt",
+      "sha256": "c6ad0d86f0a446a70a19f9e8c473e2317f72f76761e2624d8d0e41b52de971d4",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531701.562
+    },
+    {
+      "file": "9FBFFD85-98D2-455D-AEC7-B29A2CCCAC23.txt",
+      "name": "restaurant-map-accessibility-text-landscape-Show my location-window-geometry_0_7F7CE805-EA8F-47A8-B02E-3C1C205095C9.txt",
+      "sha256": "155313c10114a327d7fc37ba48a02e337ddbbfa264a0c9a247655f8d9488549d",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531701.189
+    },
+    {
+      "file": "0EEB13BF-DA41-4129-9081-8BE337E92B8C.png",
+      "name": "restaurant-map-accessibility-text-landscape-Show my location_0_713D824E-7486-448D-92EE-DFFEB51A7B9E.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "aeeb212540338ac1a6eacef68f0d1f3ad985df61b3922b3412a25ebe1508f721",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531701.009
+    },
+    {
+      "file": "2FC51094-6B05-4186-A0D6-7D5D1BC17CE1.txt",
+      "name": "restaurant-map-landscape-detail-pan-1_0_96BDFD75-2A8C-4406-AB55-2EDE54E13EEC.txt",
+      "sha256": "b09a44b49326d33f6d69a6570dfce80911c57633a8b3e76c7566596dc523e9dd",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531700.776
+    },
+    {
+      "file": "1AD7DE85-D50E-492C-9C76-C56A240E1A3E.txt",
+      "name": "restaurant-map-landscape-detail-pan-0_0_C6E04499-CF65-4EEC-8DE3-A7C582314261.txt",
+      "sha256": "aeb71530de1037c44c0e42b4693c7f513d88a04ed7cf2032851d3867bf7179ff",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531699.175
+    },
+    {
+      "file": "50924752-C6C7-4841-A468-619180200252.txt",
+      "name": "restaurant-map-accessibility-text-landscape-intentional-maps-return-window-geometry_0_D4CC0C51-D0A6-4136-B6DD-7CA94BFC4931.txt",
+      "sha256": "bc4ce913b7920d04323a4ebb6aec7533660106433595b437abb3c9aefb219d80",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531696.525
+    },
+    {
+      "file": "492AE30E-47DD-4E54-AAB5-70D70708B841.png",
+      "name": "restaurant-map-accessibility-text-landscape-intentional-maps-return_0_EEE55AFF-1725-40E7-B9D4-A615D568003C.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "cd0b9423ac8754b262e3e6b353641a309521c2817aab430f438cb3db165c0947",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531696.352
+    },
+    {
+      "file": "96366FCD-6417-42D2-AF38-3FC16566567D.txt",
+      "name": "restaurant-map-accessibility-text-landscape-intentional-native-maps-window-geometry_0_8CE4E239-0B44-4E12-9DD8-0EC136151F65.txt",
+      "sha256": "70655253afb06092516975049dcc9e7923509a3d8f72eb527d4c9d9e9aeb4df3",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531694.488
+    },
+    {
+      "file": "CBE5028F-60D0-4335-A90A-3DCF15FFCF18.png",
+      "name": "restaurant-map-accessibility-text-landscape-intentional-native-maps_0_A606C992-C5CE-483D-8A79-43AF3970F526.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "80a9b2e9ce27afe19038f5fae845b0284d5c091f8c986499d679d73d66695a49",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531694.234
+    },
+    {
+      "file": "021A0A35-9678-488F-A3E4-E182C3A763DA.txt",
+      "name": "restaurant-map-accessibility-text-landscape-button-started-scroll-window-geometry_0_D1016A79-A774-4B61-A4B4-91DE09C9D4B1.txt",
+      "sha256": "6f9fd8b487597324e89dc7719dad0a51af52306db1399c03116d2722cb1d9c45",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531693.676
+    },
+    {
+      "file": "DB88147A-E230-4401-8437-BB871A6FB434.png",
+      "name": "restaurant-map-accessibility-text-landscape-button-started-scroll_0_9F43DC44-09E6-435F-B9B4-6D90469E3699.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "eb497d061877c9d2eeda0f70a22d2248a171f91a0e8c85a5a87fbab572daeb89",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531693.481
+    },
+    {
+      "file": "6226A9C6-A45A-4E27-B017-B04B034E68AA.txt",
+      "name": "restaurant-map-landscape-button-started-scroll_0_43BF3044-85F5-4504-9A55-EC23DD3A18AE.txt",
+      "sha256": "f0cb08c8aac46db6afea4cc14eb9f4fe316fd2b619f6e57699c23c03f5682cb6",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531693.399
+    },
+    {
+      "file": "DACEBAAD-A74D-4B12-B50C-36C7987735F6.txt",
+      "name": "restaurant-map-accessibility-text-landscape-Open in Maps-window-geometry_0_1EFE69B1-6755-448E-BD42-2A22CDD21027.txt",
+      "sha256": "12703c60f5035b1e46f770b0fd0a2e93dd00bfe24c86e3a68c9cf86eac6198ba",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531691.32
+    },
+    {
+      "file": "DB0E72B6-9C46-4223-9C7B-BF7B8176995A.png",
+      "name": "restaurant-map-accessibility-text-landscape-Open in Maps_0_E30D3137-89E3-4CCA-B065-62F32CE61774.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "e27203cd30ce1b0344c5a46db613b9e78b4dddb12d78d9bd041166ce15b337a5",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531691.124
+    },
+    {
+      "file": "8AD900C3-5A0D-43F5-BCF0-E2AE3F95CB48.txt",
+      "name": "restaurant-map-landscape-detail-pan-1_0_26D7A033-307E-4A47-A7FF-B4C174CDC186.txt",
+      "sha256": "94c36a72d6a24cdc61d89db50f51cea4376c9e3f48468b9991256b1b7bdd889c",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531690.855
+    },
+    {
+      "file": "1A7B3E4E-3940-4010-BB8D-4F87CDAC014D.txt",
+      "name": "restaurant-map-landscape-detail-pan-0_0_90BE2917-CFB2-4C92-A909-A25277D06571.txt",
+      "sha256": "c1fc1f810bd0f97daa80b72f63af9acd205ee2962404e42ca8c2430c3dde1097",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531689.514
+    },
+    {
+      "file": "BF3FA0E3-862F-44F1-A123-0C37008307B3.txt",
+      "name": "restaurant-map-accessibility-text-landscape-address-window-geometry_0_43DDB9FB-0261-42D6-9F04-4234C4B73A21.txt",
+      "sha256": "a33d28e0b3232175019202e313dff5bc10679d1369ee23688de543adc20942e4",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531687.982
+    },
+    {
+      "file": "296BE20B-2A41-4FD2-AA21-C2E59B58F434.png",
+      "name": "restaurant-map-accessibility-text-landscape-address_0_1C095560-AC81-40F9-B0D5-BA8EEA8DF7D1.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "e12087083461787f6a4be901ef257d2e76b54571d937e2b42966ff1fb168cb92",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531687.782
+    },
+    {
+      "file": "2D4441B9-485E-4A4E-85BE-D993F0571931.txt",
+      "name": "restaurant-map-landscape-native-details-viewport_0_7ACCEA26-F2E2-4477-B10B-E6AFE1327BBD.txt",
+      "sha256": "8fc46524d890b5f5de4a73517db3014c9805a634c3eb4f2cad2263e26d1ed8d0",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531687.535
+    },
+    {
+      "file": "A60867EC-BB79-4004-A507-FE0505745D40.txt",
+      "name": "restaurant-map-portrait-visible-viewport_0_61050B3F-3AE1-482E-868B-8001B13CF993.txt",
+      "sha256": "e51241b54808391c20f2620f4688fdadcb664cb952dc0ad90e927b6c4ff8266e",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531681.156
+    },
+    {
+      "file": "D4EEE1BF-BF58-4F73-9985-20F540F03662.txt",
+      "name": "restaurant-map-accessibility-text-portrait-Show my location-window-geometry_0_8877AE8F-2D33-4B04-9862-B2596E32AC88.txt",
+      "sha256": "7f1a882ef518083773155ceef490de6f17cbe2f51c7724e5fecaf30154c0ceaa",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531680.729
+    },
+    {
+      "file": "C9692527-5956-41BA-8969-9341D705DC11.png",
+      "name": "restaurant-map-accessibility-text-portrait-Show my location_0_7095D798-692D-457E-9BBE-288D3D8AF908.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "02671c8b62780ea7ead516db71b1cd33937c6aec4df94eee7f07e182d6f694f5",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531680.545
+    },
+    {
+      "file": "B592E8B5-2637-4769-8A1D-5D93DBF60350.txt",
+      "name": "restaurant-map-portrait-detail-pan-0_0_AF2D5483-F9A9-4317-87DB-50E10E464B07.txt",
+      "sha256": "687d7139571f695db9085d6d456aeb8cbe331a52a90e285b83845d1c8ff968c1",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531680.317
+    },
+    {
+      "file": "8D08655A-4B9D-4FC0-BF7B-4E4087D83F90.txt",
+      "name": "restaurant-map-accessibility-text-portrait-intentional-maps-return-window-geometry_0_1AA0BF8F-9489-48C0-B777-E69F5D6DA3C6.txt",
+      "sha256": "d7959799e483b785aaaca2237bb9539a8cba8ee835d9732bc1507e917ea0e16d",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531678.927
+    },
+    {
+      "file": "376763E9-F465-4CC0-BC18-227629567B46.png",
+      "name": "restaurant-map-accessibility-text-portrait-intentional-maps-return_0_93E06EEF-12CC-49CC-AD03-94A27E79E2BE.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "0be3e6a7a1c50637870316939665790b65b4b6f965917fab17859cd9aad9a8e9",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531678.681
+    },
+    {
+      "file": "580BD2B4-8EC5-4D1E-9CA5-A90E85A35F91.txt",
+      "name": "restaurant-map-accessibility-text-portrait-intentional-native-maps-window-geometry_0_7D2FC123-408D-47E2-BE2E-B7C536A17CCB.txt",
+      "sha256": "7c47cfd1df75a7fca639f3237ef06f33d4bec91551ddb36c18cd4f5edeffc315",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531676.907
+    },
+    {
+      "file": "F329F526-207E-4497-BB14-2CE0B4370D4B.png",
+      "name": "restaurant-map-accessibility-text-portrait-intentional-native-maps_0_14551C44-CC32-4141-B127-B27E8B058525.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "b0a34627acdd423cb52eea254fb3888bbe589a87d3247d1b85ef1b891994433a",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531676.64
+    },
+    {
+      "file": "9CF995C2-471D-4FE3-84E3-EC0B70DD1DBE.txt",
+      "name": "restaurant-map-accessibility-text-portrait-button-started-scroll-window-geometry_0_98F60E87-CB26-4DC6-BFCF-867AF9A01A2A.txt",
+      "sha256": "b6fd95d0d0b0c902671a61bfe08534719ea47959dc7c1438492d457a032ccf48",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531676.031
+    },
+    {
+      "file": "40290543-E423-4368-ACFF-971233642E17.png",
+      "name": "restaurant-map-accessibility-text-portrait-button-started-scroll_0_02F61E77-2DF2-475E-9A63-0827CEC1ECA4.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "80294dbf68be3a05dc18208282ae3930d7e56db24115d0f2d0fcc3914545533e",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531675.846
+    },
+    {
+      "file": "1CADE59B-1477-4D71-BE55-0B27071DDD28.txt",
+      "name": "restaurant-map-portrait-button-started-scroll_0_8FB41A12-699F-49FA-A052-AC64EBB7F9AE.txt",
+      "sha256": "ce3b2c38448d30feb2461031ef1b557a635c1d853ef05ac8d76b9131c8e09baa",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531675.756
+    },
+    {
+      "file": "5BC8F4EF-E813-454E-80A4-42BE98B6099C.txt",
+      "name": "restaurant-map-accessibility-text-portrait-Open in Maps-window-geometry_0_A4251769-3C21-4C14-B71E-7B08529CD76C.txt",
+      "sha256": "db6516ce0b9741b6b2d4e62b66f2b75f2ae6f9595b066f36f8240bb1f507a859",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531674.321
+    },
+    {
+      "file": "1E945083-0A8B-4771-B792-61B0A2E2913C.png",
+      "name": "restaurant-map-accessibility-text-portrait-Open in Maps_0_DAA832E7-B73D-48FE-B1CC-B7E1278AE925.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "33bc0f545152ee704840abed6c099da1afdc9ab9e9e9a30a6bea8607b76a079e",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531674.107
+    },
+    {
+      "file": "450EBC44-3791-4AEF-A0C3-9DD3B35B363A.txt",
+      "name": "restaurant-map-accessibility-text-portrait-address-window-geometry_0_15A5131F-31AD-49B6-997D-363B2AA15C5A.txt",
+      "sha256": "93522c21cb7d986bb76985819490a1914d3308125ea72410c1d7083cdec49da4",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531673.789
+    },
+    {
+      "file": "83869443-F0B2-4485-A0D0-D2F173EEF9BC.png",
+      "name": "restaurant-map-accessibility-text-portrait-address_0_9702AABC-B69D-4484-B209-3A3685531EFB.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "33bc0f545152ee704840abed6c099da1afdc9ab9e9e9a30a6bea8607b76a079e",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531673.513
+    },
+    {
+      "file": "F50BEE07-A3BC-4FE9-B6BA-58B457071F0A.txt",
+      "name": "restaurant-map-portrait-native-details-viewport_0_3EC42DEC-A53E-4C94-9692-BB4D6CE0F2F7.txt",
+      "sha256": "ed0cc0e4eeebeac5a1c78b0a60a4d574a0309c3ec0594c837b8e89756a4558ab",
+      "test": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "timestamp": 1791531673.249
+    }
+  ],
+  "outerExit": 0,
+  "passedTests": 2,
+  "recoveryScope": "Two complete dark-mode cases: actual provider restaurant selection, deliberate Maps handoff, restaurant removal Cancel/Save; and largest-text map controls, pan-on-button cancellation, deliberate Maps handoff and return preserving title/address in both orientations. No full-suite or denied Settings claim.",
+  "results": "satisfaction-phone-map-dark-final-results.json",
+  "scope": "Completed passing exact 2-case native verification; earlier failed candidates remain separate.",
+  "selection": "satisfaction-phone-map-dark-final-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-phone-map-dark-final-source-manifest.json",
+  "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+  "sourceMismatchesAtRunFinalization": [],
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No physical GPS or private preference readback claim."
+}

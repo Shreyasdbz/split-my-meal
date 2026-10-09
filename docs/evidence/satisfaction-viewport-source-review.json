@@ -1,0 +1,21 @@
+{
+  "findings": [],
+  "limits": [
+    "Independent source review only; native outcomes, Release binary bytes, physical touch and VoiceOver were not independently certified by this reviewer."
+  ],
+  "observations": [
+    "All five revealDetail callers stop on failure before subsequent input. Duplicate, invalid and changed geometry paths return before gestures.",
+    "Exact bounds, hittability, handoff and saved-meal assertions remain.",
+    "The geometry probe is DEBUG/--uitesting-only, state ownership is unchanged, and affected APIs support iOS17.4."
+  ],
+  "recordedAtUTC": "2026-10-09T08:37:00.095447+00:00",
+  "recordedBy": "Root from completed independent source-review report",
+  "reviewer": "final_architecture_review",
+  "sourceFilesSHA256": {
+    ".github/workflows/ios.yml": "2a83ad5f57953ad0a2faeff336f3b9d961f6957c2c117c7cbd3928c8ca6ca8a1",
+    "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "344727fa6b217656d47f1c8247c7126161dec173a038285f7c1cf5948b50e77a",
+    "SplitMyMealUITests/LiveMapKitTests.swift": "0fe12d5f4ff8d8665f14c81b08f25eef808f058adea0e805b0bde3c761acab7b",
+    "SplitMyMealUITests/MealJourneyTests.swift": "384683f6933b352b58725364729261afce687173eae9c4edba4f437ed5f35ad1",
+    "scripts/verify-ios.sh": "6f2adc693d9fe26f9730b077ed1202b5222b3bf23efb066c0773374fbdae87b5"
+  }
+}

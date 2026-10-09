@@ -1,4 +1,4 @@
-# UI refinement · 8 October 2026
+# UI refinement · 8–9 October 2026
 
 This follow-up reviews the modernized app against the request for cleaner surfaces, tighter copy and a more native flow. Three independent agents reviewed it from iOS visual design, native interaction/accessibility and product/copy perspectives. Two designers then inspected fresh iPhone and iPad captures; independent engineering and security reviewers checked the changed state and asynchronous boundaries. Source review, inspected pixels and executed interactions are distinct evidence. The [initial modernization audit](ui-audit.md) remains a historical record.
 
@@ -28,7 +28,7 @@ This inventory records the earlier refinement; its verification column does not 
 | Receipt fit/zoom/pinch/double tap/rotation/Share/Close | Working-image controls remain; unreadable images no longer display a false 100% readout or inactive zoom tools. | Native receipt gestures, sharing and unreadable repair journeys. External recipient delivery remains unverified. |
 | Restaurant search, suggestions, exact selection, error/Retry/Cancel | Search instructions shortened. Retry restarts the same query after canceling prior resolution/search work. Use my location accurately describes optional query bias. | Live test injects only the first error, then retries against real MapKit. DEBUG fixture is absent from Release. Existing live permission/revocation journeys remain. |
 | Nearby permission, denial, Settings return and revocation | Explicit opt-in, denied-only Settings recovery and permission-free text search remain. | Native live Allow/Deny, retained query/draft, Never/Ask Next Time and explicit new-request checks use synthetic location. Managed restriction remains source-reviewed. |
-| Restaurant map, address, Open in Maps, current location, error/Settings and Done | Open in Maps is primary; location is secondary with visible progress. Compact-height layouts put the map beside scrolling details. Accessibility text in regular-height layouts reserves map space above scrolling details. Denied access offers a secondary Open Settings link. | Native provider destination and Settings return, largest-text normal/denied portrait/landscape map checks, normal-map walkthrough captures. |
+| Restaurant map, address, Open in Maps, current location, error/Settings and Done | The map opens fullscreen with an explicit Done action restoring the meal. Open in Maps uses the standard prominent content style; location is secondary with visible progress. Compact-height layouts put the map beside scrolling details. Accessibility text in regular-height layouts reserves map space above scrolling details. Denied access offers a secondary Open Settings link. | Native provider destination and Settings return, largest-text normal/denied portrait/landscape map checks, normal-map walkthrough captures. |
 | Split total, warnings, people disclosures, item portions, Bill details, Share and Done | Settlement amounts come first; breakdown and calculation explanation expand on demand. Full item prices and shared-person counts are explicit. | Exact amounts/export unchanged; native collapsed/expanded, Share and largest-text reachability checks. |
 | Light/dark, landscape, Dynamic Type, semantics and keyboard | Semantic fonts, adaptive amount rows, native focus/submit and accessible action names remain. Decorations stay subordinate to content. | Fresh pixels and native control/font/layout gates. Manual spoken VoiceOver, full keyboard/pointer and reduced-motion gesture use remain separate checks. |
 
@@ -46,6 +46,7 @@ The earlier refinement’s 80-capture [paired iPhone and iPad gallery](ui-galler
 | This saved photo couldn't be opened. Replace or remove it. | Photo unavailable. Replace or remove it. |
 | No restaurants found. Try a name, address, or city. | No results. Try another name, address or city. |
 | Search near me / Nearby search enabled | Use my location / Using your location. |
+| Show my location in the restaurant map | My location; full Show my location accessible action name remains. |
 
 The app keeps actionable warnings and destructive consequences. It removes repeated instructions and makes secondary detail optional; monetary calculation, stored values, CloudKit identity and export behavior remain unchanged.
 
@@ -67,7 +68,7 @@ Automated accessibility diagnostics are retained without blanket exclusions. Pas
 
 ## Unpublished diagnostic follow-ups
 
-The repository had no existing issues when refreshed on 8 October 2026. These bounded maintenance drafts remain unpublished; no GitHub Project was designated for this audit.
+The repository had no open issues when refreshed on 9 October 2026. These bounded maintenance drafts remain unpublished; no GitHub Project was designated for this audit.
 
 - **Task: reconcile native accessibility diagnostics.** Retained all-type inventories report contrast, font-scaling, clipping and unidentified elements. Their presence prevents a complete-accessibility claim. Acceptance: trace each current report to its visible element or document the missing identity, reproduce at the reported text size and appearance, repair any confirmed app-owned defect, and retain the original report alongside the new native result. Manual spoken navigation and keyboard/pointer checks remain separate.
 - **Task: localize the native invalid-frame warning.** Native editor/input runs emit “Invalid frame dimension (negative or non-finite)”; the source is not established. Acceptance: isolate the triggering native transition with a stack trace or rendering diagnostic, identify the responsible boundary, and verify an in-scope correction through the same interaction without suppressing the warning. Healthy captures and passing tests do not determine its cause.

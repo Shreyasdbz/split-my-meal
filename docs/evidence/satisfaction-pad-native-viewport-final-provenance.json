@@ -1,0 +1,15 @@
+{
+  "exactRequestedCases": [
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+    "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()"
+  ],
+  "failed": 0,
+  "outerExit": 0,
+  "passed": 2,
+  "results": "satisfaction-pad-native-viewport-final-results.json",
+  "scope": "Historical completed exact native viewport validation before subsequent My location and held-pan changes. Full selected recovery includes portrait/landscape actions and native Settings return; no manual assistive technology or current-source full-suite claim.",
+  "selection": "satisfaction-pad-native-viewport-final-selection.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-pad-native-viewport-final-source-manifest.json",
+  "sourceManifestSHA256": "66a6e4281a225866613d1d8f41b721fe0fe00c3b3fc76e51ed7083a8a41aefd7"
+}

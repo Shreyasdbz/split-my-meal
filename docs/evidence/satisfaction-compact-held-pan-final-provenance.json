@@ -1,0 +1,50 @@
+{
+  "attachmentSHA256": {
+    "finalHierarchy": "7261f0952effb3b7cc329fcfa2bff28be9a37ca7ac48e650c1d2abf63c624caa",
+    "finalScreenshot": "a4c64cd5693afd1648b6bacdd6fef2f0374442c64831a5c2beba72137994a616",
+    "portraitViewport": "add36900264189c571263b1b657ddb299410d00cb1d0053ba580e13edb38408d",
+    "showLocationPan0": "527a04b07697b1307664c2ca1de98ec8b4cffeb92c4240d4d7e357dfc8cc0af7",
+    "showLocationPan1": "16a481fd40abcaf70821715a7b73cdec80da95bcc476a39b70ffbd9aafb6daba",
+    "showLocationPan2": "74049a2df743b7d08240c5cf83ce3d0aa534fd962f46b8bcf8179ed845fdc0b8"
+  },
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 1,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "failedTests": 1,
+  "nativeAttachmentNames": {
+    "finalHierarchy": "0F95930A-11A9-4FCA-BB7D-9343ED5B6C3F.txt",
+    "finalScreenshot": "CA85DEDE-76A9-439D-BC6F-A98BAC566BFF.png",
+    "portraitViewport": "6675D81F-C275-4447-B4B3-6B7B1D4C0946.txt",
+    "showLocationPan0": "7734999E-E64C-4626-9513-27DE92C9864D.txt",
+    "showLocationPan1": "D6D3BEC2-445E-430E-8821-E82ECFCDF8EC.txt",
+    "showLocationPan2": "8DCCAA0C-5B14-4045-B42D-12C3E69C714D.txt"
+  },
+  "nativeObservations": {
+    "failure": "Scrolling map details must preserve the app\u2019s foreground presentation.",
+    "finalScreenshotForeground": "Native Maps with fictional restaurant destination.",
+    "interpretation": "The recorded target frame becomes half-scale after pan1, and the following native event log references Maps. Native Maps is foreground in the preserved final screenshot. The activation cause is not established.",
+    "panRecords": [
+      "Attempt: 0; portion: entire; action: Show my location; viewport: (0.0, 321.0, 375.0, 346.0); before: (16.0, 666.0, 295.0, 155.5); start: (187.5, 490.5); end: (187.5, 328.0); after: (16.0, 518.0, 295.0, 155.5)",
+      "Attempt: 1; portion: entire; action: Show my location; viewport: (0.0, 321.0, 375.0, 346.0); before: (16.0, 518.0, 295.0, 155.5); start: (187.5, 342.5); end: (187.5, 323.0); after: (8.0, 254.5, 147.5, 77.75)",
+      "Attempt: 2; portion: entire; action: Show my location; viewport: (0.0, 321.0, 375.0, 346.0); before: (8.0, 254.5, 147.5, 77.75); start: (84.375, 340.25); end: (84.375, 414.75); after: (16.0, 509.0, 295.0, 155.5)"
+    ],
+    "phase": "Portrait Show my location positioning.",
+    "unexecutedScope": "Remaining portrait denial/error/Settings action checks, landscape denied-map checks, map Settings handoff and conditional broader execution."
+  },
+  "nativeResult": "Failed",
+  "noSourceEditsDuringRun": true,
+  "noStatusOverrides": true,
+  "originalInputs": 47,
+  "outerExit": 65,
+  "passedTests": 0,
+  "results": "satisfaction-compact-held-pan-final-results.json",
+  "scope": "Preserved failed compact held-pan candidate. Broader seven-case execution was conditional on this case passing and was not started. No retry or passing completion claim.",
+  "selection": "satisfaction-compact-held-pan-final-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-held-pan-final-source-manifest.json",
+  "sourceManifestSHA256": "b599850b653c02a60c4802b749959a6ac217db1bb3ea6ef240c90e708f37b2c6",
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No physical GPS or private preference readback claim."
+}

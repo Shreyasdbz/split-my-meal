@@ -1,0 +1,17 @@
+{
+  "all47InputsMatchCommit": "0bad7ef6df0ad543df68d1d080c34189de21e10f",
+  "exactCatalogueLiveCases": 5,
+  "failed": 0,
+  "failureInjection": "Only the existing DEBUG first-search-error fixture in the maintained same-query Retry case.",
+  "location": "Synthetic simulator GPS with wrapper cleanup completed; native Allow, Deny, Settings return and revocation.",
+  "note": "No account sign-in, payment, recipient message or permission injection.",
+  "outerExitCode": 0,
+  "passed": 5,
+  "provider": "Actual Apple Maps autocomplete, resolution and native Maps destination handoff.",
+  "scope": "All five exact catalogue Live identities passed once on an owned iPad simulator. Local integration does not certify hosted stable coverage, physical devices or real accounts.",
+  "selectionResults": "satisfaction-live-ipad-0bad-selection.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-live-ipad-0bad-source-manifest.json",
+  "sourceManifestSHA256": "d06abc0bdd33fc8067c5e4c67eb6eec33c5b3e53d1535c157b052867aa0e0399",
+  "sourceResults": "satisfaction-live-ipad-0bad-results.json"
+}

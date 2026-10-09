@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791524997.52,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone SE (3rd generation)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Focused compact denied-map recovery passed with exact full-label row, full map address and native controls in both orientations, Settings handoff/return and original draft preservation. Broader seven-case results are separate.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-gutter-final-source-manifest.json",
+  "sourceManifestSHA256": "adcd04f82a4d8b5093762385b377180a8a59a6ef5b296432f0b3306123f8c783",
+  "startTime": 1791524836.718,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 156.01190793514252,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

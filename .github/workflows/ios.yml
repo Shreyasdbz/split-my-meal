@@ -20,7 +20,7 @@ jobs:
     # https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md
     runs-on: xcode-27
     # Each partition runs on a fresh hosted simulator; their exact native IDs
-    # must cover the complete suite. Individual XCTest limits remain unchanged.
+    # must cover the complete suite. Bounded per-case XCTest limits are enforced.
     timeout-minutes: 75
     strategy:
       fail-fast: false
@@ -48,6 +48,7 @@ jobs:
           name: ios27-${{ matrix.device }}-${{ matrix.partition }}-${{ github.sha }}
           path: |
             artifacts/Tests.xcresult
+            artifacts/DerivedData/Logs/Test/*.xcresult
             artifacts/attachments
             artifacts/*.txt
             artifacts/*.json

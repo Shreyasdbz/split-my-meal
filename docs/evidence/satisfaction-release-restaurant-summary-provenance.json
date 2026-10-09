@@ -1,0 +1,39 @@
+{
+  "all33ProductionProjectInputsMatchedAtBuildVerification": true,
+  "all47InputsMatchedFilesAtBuildVerification": true,
+  "analyzer": "passed",
+  "binarySHA256": "2d68470ed984c579d6afe3da11b45134cba38e0ba18385fca1bc6bffff7b8119",
+  "build": "2",
+  "codeSigning": "disabled for local verification",
+  "comparisonScope": "Historical comparison performed when this build and analyzer finalized; these fields do not assert equality with subsequent source revisions.",
+  "compilerWarnings": [
+    "2026-10-09 01:09:24.433 appintentsmetadataprocessor[46336:9671810] warning: Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionAndProjectSourceCount": 33,
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Unsigned iOS Release build and analysis of the address summary and complete accessible label. Signing, physical devices, CloudKit and Store remain separate.",
+  "sourceManifest": "satisfaction-release-restaurant-summary-source-manifest.json",
+  "sourceManifestSHA256": "5dedbbd258173e09ab1ce779bfa8c76b1a75919e9d9d974f8400101006c95c89",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "verifiedAt": "2026-10-09T05:10:57.926407+00:00",
+  "version": "2.0.0"
+}

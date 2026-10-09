@@ -1,0 +1,39 @@
+{
+  "all33ProductionProjectInputsMatchedAtBuildVerification": true,
+  "all47InputsMatchedFilesAtBuildVerification": true,
+  "analyzer": "passed",
+  "binarySHA256": "b509b37a5e17d2978353398894b6ea909e60ab84a84ef7b417d79c9705934b26",
+  "build": "2",
+  "codeSigning": "disabled for local verification",
+  "comparisonScope": "Historical comparison performed when this build and analyzer finalized; these fields do not assert equality with subsequent source revisions.",
+  "compilerWarnings": [
+    "2026-10-09 01:41:04.829 appintentsmetadataprocessor[76396:9891581] warning: Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionAndProjectSourceCount": 33,
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Unsigned iOS 27 Release build and analysis of the final address summary, full accessible restaurant name and My location copy. Signing, physical devices, CloudKit and Store remain separate.",
+  "sourceManifest": "satisfaction-release-held-pan-source-manifest.json",
+  "sourceManifestSHA256": "d2701dfaaa69a42bb46b44db8db0ab04978dd242463b3c770e674e89c40a1f75",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "verifiedAt": "2026-10-09T05:41:42.962107+00:00",
+  "version": "2.0.0"
+}

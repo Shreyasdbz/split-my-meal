@@ -1,0 +1,61 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 2,
+  "finishTime": 1791528930.759,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Retained failed Phone button-style comparison: three requested selectors, two actual failed cases; nonexistent handoff selector rejected. No handoff execution or complete intended coverage claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-phone-map-content-selector-error-retained-source-manifest.json",
+  "sourceManifestSHA256": "d40f9fbb832e8f81b744ce76fa361334f19c4a9ca67859a7a19130ca7cd439fd",
+  "startTime": 1791528787.364,
+  "testFailures": [
+    {
+      "failureText": "failed - A details pan requires unchanged foreground geometry. Details: (0.0, 138.44444444444443, 134.0, 152.88888888888889); window: (0.0, 0.0, 402.0, 874.0); navigation: (0.0, 26.0, 134.0, 18.0); captured viewport: (0.0, 415.3333333333333, 402.0, 458.6666666666667)",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    },
+    {
+      "failureText": "failed - A details pan requires unchanged foreground geometry. Details: (0.0, 138.44444444444443, 134.0, 152.88888888888889); window: (0.0, 0.0, 402.0, 874.0); navigation: (0.0, 26.0, 134.0, 18.0); captured viewport: (0.0, 415.3333333333333, 402.0, 458.6666666666667)",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape",
+      "testName": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 85.34256505966187,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 48.84198999404907,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 2
+}

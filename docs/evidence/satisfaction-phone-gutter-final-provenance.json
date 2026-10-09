@@ -1,0 +1,30 @@
+{
+  "failed": 1,
+  "originalNativeAttachments": [
+    {
+      "nativeFile": "E9B638D4-B362-4C11-9FB3-9006DAA0B178.txt",
+      "nativeName": "restaurant-map-portrait-detail-pan-2_0_9BCCEBBB-A042-4B5A-8F4C-7E7C354E7E8A.txt",
+      "sha256": "d0d4ca095d30fed9c97b39e14f8e7506b539ad46c880ce61ebd11af180f11b44"
+    },
+    {
+      "nativeFile": "A9D3A659-A28A-455B-8A6E-860F3DB49913.txt",
+      "nativeName": "restaurant-map-portrait-detail-pan-1_0_1B57070C-9A5E-4477-950C-B3A0A80286A9.txt",
+      "sha256": "564e860bbbde737b2b95e70ed73c68b6f1be71eaff7f970bb461e419850cad32"
+    },
+    {
+      "nativeFile": "3181ED24-01B2-45FA-905C-4362CFF2D2E0.txt",
+      "nativeName": "restaurant-map-portrait-detail-pan-0_0_2125D3CF-E9F8-4F90-8829-4A4A92D204F4.txt",
+      "sha256": "d4a49a05d519a21d90c5254b9e6a8a0978570dc48e46ac6fecc8b3a119847f00"
+    }
+  ],
+  "outerExit": 65,
+  "panObservation": "After79.333-point upward travel the target ended3.333 points below the viewport. The next20-point movement began atx8 outside AX-reported action bounds, but native Maps became foreground; the full foreground assertion failed. AX bounds alone do not prove native hit regions or the gesture winner.",
+  "passed": 0,
+  "result": "Failed",
+  "results": "satisfaction-phone-gutter-final-results.json",
+  "scope": "Retained failed exact home-indicator iPhone candidate. Portrait details pan opened native Maps; landscape and later Settings recovery were not completed. Passing SE/iPad on this source does not clear this failure.",
+  "selection": "satisfaction-phone-gutter-final-selection.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-phone-gutter-final-source-manifest.json",
+  "sourceManifestSHA256": "adcd04f82a4d8b5093762385b377180a8a59a6ef5b296432f0b3306123f8c783"
+}

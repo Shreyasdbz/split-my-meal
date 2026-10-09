@@ -1,0 +1,87 @@
+{
+  "attachmentSHA256": {
+    "finalHierarchy": "a222e19fbe68dbb3623e2a5f1ebeef2d124d4e5f5841699d7ec1b9a10847e96c",
+    "finalScreenshot": "0467ee804bbc3901b573d7492ba8c7bb5f9ac383c06a569974b13fff2c762f6d",
+    "landscapeNativeViewport": "d00d236fc2718c50c8261fa45bc803e07203e737cc5c4fd6a5bbf7208ee780f5",
+    "landscapeOpenMapsScreenshot": "4c384e2a6267501ead408b9503208a23279d2c4937657dae14a875bb156acc7c",
+    "portraitNativeViewport": "add36900264189c571263b1b657ddb299410d00cb1d0053ba580e13edb38408d",
+    "portraitSettingsScreenshot": "298c8a13a929b6bb03f9072eaefbfc8690e788b9189a98b28de2eaa4a38064c3",
+    "rowGeometry": "cd46d1528f3f63ca71005a7a49953a50f8513373e005fd1aec3d07975ed1e356",
+    "rowHierarchy": "a8e03bae4a24f435f213d5208e4ab43ea3725ea0b171b4624c3e7641cd9a6d70",
+    "rowScreenshot": "40b93a4581154811609e9100f7203b99a8178345a28b7ff507263824a27ad397"
+  },
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 1,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "deniedMapObservations": {
+    "failure": "The whole native action must remain within the foreground details viewport.",
+    "finalNativePanOffsetsRelativeToScrollView": [
+      {
+        "end": [
+          24,
+          145.5
+        ],
+        "start": [
+          24,
+          197.5
+        ]
+      },
+      {
+        "end": [
+          166.8,
+          315.5
+        ],
+        "start": [
+          166.8,
+          265.5
+        ]
+      }
+    ],
+    "interpretation": "The 217.5-point action is smaller than the 297-point viewport, but its final bottom remains outside it after eight native positioning attempts. The retained native log alternates pan direction; cause is not established.",
+    "landscapeDetailsViewportPoints": [
+      333.5,
+      78,
+      333.5,
+      297
+    ],
+    "landscapeFullAddressAndOpenMapsBoundsPassed": true,
+    "landscapeShowLocationFinalFramePoints": [
+      349.5,
+      195.5,
+      295,
+      217.5
+    ],
+    "portraitFullAddressAndAllActionBoundsPassed": true,
+    "restaurantFullAccessibleLabelAndRowFitPassed": true,
+    "unexecutedScope": "Later landscape error/Settings bounds and map Settings handoff/return were not reached."
+  },
+  "exactSevenCatalogueIDs": true,
+  "failedTests": 1,
+  "nativeAttachmentNames": {
+    "finalHierarchy": "42DD2886-EB07-4589-9440-4860C35FE47D.txt",
+    "finalScreenshot": "65447900-DEFC-4775-9E1C-F66B3289AACC.png",
+    "landscapeNativeViewport": "3107067A-41F0-4617-96ED-3C469B91639D.txt",
+    "landscapeOpenMapsScreenshot": "56B7A5DA-DB30-453C-B8D1-D07F7DE78B9E.png",
+    "portraitNativeViewport": "3B0F99E4-2F8F-4CEC-BAF0-B399CA0392E1.txt",
+    "portraitSettingsScreenshot": "6CB4B0A1-9D13-4A96-BFD4-8FA4F8237EF1.png",
+    "rowGeometry": "00E908F3-9604-4335-A1A3-A2E97ADCC454.txt",
+    "rowHierarchy": "06689687-F4F7-407E-9336-6D47B90C685F.txt",
+    "rowScreenshot": "764926F8-B9A5-46B5-A94E-683A0DD3D548.png"
+  },
+  "nativeResult": "Failed",
+  "noSourceEditsDuringRun": true,
+  "noStatusOverrides": true,
+  "originalInputs": 47,
+  "outerExit": 65,
+  "passedTests": 6,
+  "results": "satisfaction-compact-native-viewport-final-results.json",
+  "scope": "Completed failed exact seven-case compact viewport and live integration run. Six cases passed; the denied-map landscape action bounds failed. No clean full-selection claim or replay.",
+  "selection": "satisfaction-compact-native-viewport-final-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-native-viewport-final-source-manifest.json",
+  "sourceManifestSHA256": "66a6e4281a225866613d1d8f41b721fe0fe00c3b3fc76e51ed7083a8a41aefd7",
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No physical GPS or private preference readback claim."
+}

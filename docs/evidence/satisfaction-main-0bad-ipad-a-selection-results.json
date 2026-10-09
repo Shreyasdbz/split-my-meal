@@ -1,0 +1,179 @@
+{
+  "cases": [
+    {
+      "identifier": "SplitMyMealTests/EditorInputTests/testChargeModeConversionUsesCurrentDraftAndCalculationBase()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/EditorInputTests/testInvalidNumericInputNeverBecomesSuccessfulSaveValue()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/EditorInputTests/testLocalizedDecimalInputConsumesEntireString()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/EditorInputTests/testReceiptDownsamplesAndKeepsReadableImage()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/EditorInputTests/testReceiptRejectsUnreadableAndOversizedData()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testDecimalRoundingAndFractionalCharges()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testEmptyMealWithFixedChargesHasFiniteUnassignedAmount()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testFixedChargesTakePrecedenceAndTipIncludesTax()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testItemizedPersonComponentsConserveEveryCent()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testLargeFormattedChargesAreNeverReparsedAsZero()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testLargestAcceptedInputsRemainFiniteAndConserved()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testSharedItemRemainderIsStableAndConserved()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testUnassignedItemsAndChargesReconcileToGrandTotal()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealAmountsTests/testUnknownAndDuplicateConsumersDoNotLoseMoney()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testCharmAcceptsOnePresentedEmojiAndRejectsText()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testCommitRestoresGraphAfterNativeReadOnlySaveRejection()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testConfiguredReadOnlyStoreRejectsBeforeMutation()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testDeletedMealCannotBeResurrectedFromStaleEditor()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testForeignContextAndCrossMealEditsAreRejected()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testInvalidInputsDoNotMutateSavedState()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testLegacyFixtureRetainsOriginal2024EntityHashes()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testNamesRequireVisibleContentWithoutChangingUnicodeNames()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealTests/MealStoreTests/testSaveAssignmentsAndDeletionAreConsistent()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testCancelledMealDoesNotPersist()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLibrarySortOrderingAndSearchByPeopleAndRestaurant()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testStartupRecoveryRetriesWithoutDiscardingSavedMeals()",
+      "status": "Passed"
+    }
+  ],
+  "partition": "a",
+  "result": "Passed",
+  "verifiedCaseCount": 43
+}

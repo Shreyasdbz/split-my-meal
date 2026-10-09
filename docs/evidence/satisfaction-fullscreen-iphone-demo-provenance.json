@@ -1,0 +1,506 @@
+{
+  "comparisonScope": "All 47 compiled inputs compared after native outer completion before subsequent edits.",
+  "completeLogDiagnostics": {
+    "animationSixtySecondWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 0,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "exactNativeIDSet": true,
+  "failedTests": 0,
+  "nativeResult": "Passed",
+  "noSourceEditsDuringRun": true,
+  "noStatusOverrides": true,
+  "originalInputs": 47,
+  "originalNativeReviewAttachments": [
+    {
+      "file": "6394DA65-F49B-499E-B7D5-CE12F8E1533E.txt",
+      "name": "demo-meal-dark-window-geometry_0_A131B7A5-95A6-4133-8D26-1EC994D74F71.txt",
+      "sha256": "d6ef825b4466b648632e7cbc6a7df59355fdf113a731af0e3c9a722bce010304",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531932.243
+    },
+    {
+      "file": "5EC2D1DD-AA7E-454A-BC4D-064C9980A1EC.png",
+      "name": "demo-meal-dark_0_71BBE98B-1613-4243-B0C2-3EAD83458E18.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "183cb5ce5fd9614b3a55e85fdf9e02da03fe02443001cc3a802c9aaa408d1b9b",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531931.876
+    },
+    {
+      "file": "5E07135F-0335-4A5D-A3C7-937A1DA5A030.txt",
+      "name": "demo-library-dark-window-geometry_0_D133EDF0-8C6B-449A-BE4A-F9824C05BCDC.txt",
+      "sha256": "d5f11a96c3d946f4dd70617ddbe0de353bdee49cb2a1a84d46875bdb295b9741",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531929.99
+    },
+    {
+      "file": "519EDF97-0CBC-4662-B96B-2C0E65D9CC06.png",
+      "name": "demo-library-dark_0_B7938286-7B9D-4C27-8567-403B07C7F96D.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "69ec1142b7e94ed944ec4d8bfffbf3da21c0f1d5025943ad0efadd1dcd758931",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531929.751
+    },
+    {
+      "file": "D7CA416A-8F4B-4A01-BE8F-0D8CCCB11A02.txt",
+      "name": "demo-meal-landscape-light-window-geometry_0_F41C9175-C37F-4825-A403-BBEFB1928D9E.txt",
+      "sha256": "d4160b4c34449ac603826dc0911512430043493f86d458e14725b59023b32f48",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531923.298
+    },
+    {
+      "file": "545EC35F-65B2-49AA-BE74-78642414C4AF.png",
+      "name": "demo-meal-landscape-light_0_9C0B09CC-05B8-442C-844D-B102D44B2B31.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "48cb4cea438e8576d8508266f67592b0c16bdb0f8c3205eec6094ada38ff6f60",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531922.845
+    },
+    {
+      "file": "81FA29CD-BB31-4B9C-BA17-F3974F90DFE4.txt",
+      "name": "demo-meal-editor-light-window-geometry_0_635A9DC8-7411-41BC-9C40-03B426B88702.txt",
+      "sha256": "db4b2c38fca401d2014c12f202bf2b1de970ea5b401ce2ef918d881058a34801",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531919.873
+    },
+    {
+      "file": "693F4578-327F-46EB-8952-06EA38CACB30.png",
+      "name": "demo-meal-editor-light_0_D19A1B3E-FBD9-4105-953F-89267F7B6DFA.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "89a7c44bc0834f026c0cfda1782664cf42a7cbf2c4ebcfc0246ec8fc50bb0090",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531919.254
+    },
+    {
+      "file": "6E460145-9CDE-46D4-8CC3-B83D9738B5D1.txt",
+      "name": "demo-receipt-light-window-geometry_0_22017FD0-0186-432F-980E-91B593C06539.txt",
+      "sha256": "ace130d6edc53291232665e2786f851b3a6a7a0e05860e8f46a71d5b6812a2af",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531917.283
+    },
+    {
+      "file": "654F20FB-A947-49C8-B785-BDA18BCCE78C.png",
+      "name": "demo-receipt-light_0_1616BCDE-1446-46AA-B95C-DB1693204DF5.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "f2582af583a2b67387b53ee4292902ad8090e2aeeb5ec5d2eea762f3b770071a",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531916.753
+    },
+    {
+      "file": "3D66B471-C7C9-4C70-ACA5-0D15B30B30E1.txt",
+      "name": "demo-meal-footer-light-window-geometry_0_516E39FD-60FE-41A0-9F9C-674FD861EB67.txt",
+      "sha256": "7441fe6721c89154928c023566eaaf19b3c48728edf5018638d3b1a246942707",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531913.849
+    },
+    {
+      "file": "BD06965C-D13D-43CF-B430-0B5C6D075BED.png",
+      "name": "demo-meal-footer-light_0_8255FE57-66B7-4760-A860-E130F156343E.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "60c408e89162a09c193aad625d3fd6b6e06dfcbe37bb6785bd088f807e6116af",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531913.443
+    },
+    {
+      "file": "2ADC2B2D-1C78-407D-8B6B-0B89BAECAB1A.txt",
+      "name": "demo-restaurant-map-landscape-light-window-geometry_0_D42CFE59-6ECE-4F27-98A5-4D973DEBB9D8.txt",
+      "sha256": "ddaad546d4cccde5914b4832204e205e76d71711ae808d8707cfc3072e28aad0",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531909.129
+    },
+    {
+      "file": "9D73C4E4-4393-4519-BF9D-B61F1B988B65.png",
+      "name": "demo-restaurant-map-landscape-light_0_ED047B5F-9C5A-4384-A4B1-297A123942ED.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "e560c16382a704266473b005226005d71625be43adf1ba74f301c35fd694d25d",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531908.624
+    },
+    {
+      "file": "C7A4DAFB-A6D8-4B29-9E3D-27501D8D68FE.txt",
+      "name": "demo-restaurant-map-light-window-geometry_0_3835F5F9-3FCA-4558-88A5-0F451127E926.txt",
+      "sha256": "0799c6a14e8e7a1193b81a9fc664b8581eab54ca7327b975172158cacf9cd551",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531905.661
+    },
+    {
+      "file": "FF6C041E-00EB-47CC-BE8F-D61B3A176C27.png",
+      "name": "demo-restaurant-map-light_0_57B68002-AD1D-4FCA-A708-137111D3DDBC.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "883d5b61cdcf754838b391531c6fa1db69ae55c80ef4ae07a3ad2416d50addac",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531905.217
+    },
+    {
+      "file": "13457277-3778-49FB-AFB9-D8832ADA6357.txt",
+      "name": "demo-bill-details-expanded-light-window-geometry_0_B30FD97D-B677-475D-B28F-623B87163DC0.txt",
+      "sha256": "efa10863deae6161025aeefa6d64a8e4428e636280e1fcff272b111de994f7ac",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531896.089
+    },
+    {
+      "file": "3D8C47F7-9EDC-42E5-876E-682E7271DF52.png",
+      "name": "demo-bill-details-expanded-light_0_0AD28D2A-3D1A-4D64-9DE3-B72DC4492DC6.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "8a10f9617e8d1af082a0b86f6de2efb9f4b3954678f85c7092f7303e7ea2320e",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531895.541
+    },
+    {
+      "file": "69DA5BA2-BE82-466B-8CB6-0A35ABF4AD8F.txt",
+      "name": "demo-bill-details-collapsed-light-window-geometry_0_E4ED31DF-BFEE-4876-ADD0-8BB3AE5BCB5D.txt",
+      "sha256": "d762d651c7efa80617ce584cb6839cd310278fe827453948dda7b3eb751d52fb",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531891.04
+    },
+    {
+      "file": "420B05C5-DE5C-4D75-8E9D-FC98DA5F63D8.png",
+      "name": "demo-bill-details-collapsed-light_0_79688A8A-5CC8-4A40-A542-FA9B00C14A0E.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "9c2eb8cf245ae1eeba6383da0de164a1bdab92c0a8e11a5c5135698b45c014c3",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531890.489
+    },
+    {
+      "file": "EF0A1BB5-D091-468F-8ACA-E8BA87136C6D.txt",
+      "name": "demo-itemized-split-light-window-geometry_0_581451E9-02A3-4999-9B82-BFFEC110448E.txt",
+      "sha256": "9656e326d59eb2680c855684eb39e6b1287a0dbe736588899f7b9fc091d864cb",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531887.901
+    },
+    {
+      "file": "670DC808-7E1A-4CDC-A7CA-F93450B41AE3.png",
+      "name": "demo-itemized-split-light_0_EB77128B-63F4-4746-A428-D8A1CE336E5D.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "1bd9d9481214ccea1e0e3b14ec74eef01e0bcbadaa05a5858a347ec0ed0c24c1",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531887.325
+    },
+    {
+      "file": "312BC3C8-4866-49D8-AEDE-BF990F54CF00.txt",
+      "name": "demo-split-light-window-geometry_0_FD53452F-3911-42D0-B886-EAC351E25C98.txt",
+      "sha256": "ab78e791e6737025b0f182d248c64b4d693cd5c5d42311a3fdd205432d91f3d9",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531886.525
+    },
+    {
+      "file": "18DC9493-0AB8-4554-BB3E-5167312C7B67.png",
+      "name": "demo-split-light_0_171B5897-A2F4-412A-9214-7301A771D423.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "002c90446c268062b4be47ce81891f3952d014a62aca5df47befec6d8ee62e68",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531885.998
+    },
+    {
+      "file": "471A432E-B8DE-4AEE-9A0A-96B6B50534C9.txt",
+      "name": "demo-tip-editor-light-window-geometry_0_009CA388-6DFB-4CDD-8350-52E4B1CC942B.txt",
+      "sha256": "2130c9d67991c73613d50cbcfcba98971b9c9a3734e7c8641537db04766fcb96",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531883.243
+    },
+    {
+      "file": "52322F87-D98C-459C-B844-8EAA283BE11C.png",
+      "name": "demo-tip-editor-light_0_7DB20B72-C330-46CD-A434-B0AF8902A268.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "6d76284ca4be893062d018ad22ac108e8d2b8e9dcc5f64aa13beb0b108e6e211",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531882.787
+    },
+    {
+      "file": "1F566B53-D8A7-4EB1-B21E-34A56DA7356A.txt",
+      "name": "demo-tax-editor-light-window-geometry_0_DC97C418-C5B0-4517-BA20-AEB6720B371A.txt",
+      "sha256": "290e0f305e26f67af41ec4771827636a37d2a1e09cd5b7527085c544adfb08cf",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531880.361
+    },
+    {
+      "file": "08F31961-09B8-4B04-83E0-7F9AD9C8721C.png",
+      "name": "demo-tax-editor-light_0_8E0E9C1C-7B66-400A-A720-D27C561CECBE.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "8be9d8228a161bcd0316044a71e999de73a6b2d351f9f34381fafa8c3c3ca0ef",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531879.891
+    },
+    {
+      "file": "D011985F-8562-437E-A2D7-F43CB62962F3.txt",
+      "name": "demo-item-editor-light-window-geometry_0_9837BCB6-73AA-4CA7-8986-25FB832E06BF.txt",
+      "sha256": "ef8a8bdec19fe3aadd663a3519d59a801320169e5fbf0fe793b74199df61b899",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531874.473
+    },
+    {
+      "file": "404D6F7F-9CAA-432D-A850-3F74ECD61804.png",
+      "name": "demo-item-editor-light_0_B5E23D2E-9CEA-4E81-9099-384926F7DD67.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "53b0b5df96d73eb910fb0cb3458b317ef71195720552dc23e526eb42ce141259",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531873.845
+    },
+    {
+      "file": "A0907A35-7B08-4D3A-B073-0A3DD3EA5508.txt",
+      "name": "demo-person-editor-light-window-geometry_0_5D9DE39C-08FB-4B68-85A8-EBCB06501241.txt",
+      "sha256": "638166377151d2c1aa4cf7af3803d10bc272f64d3941af98ab73bf03490c3044",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531868.139
+    },
+    {
+      "file": "49EFE442-3824-4C6A-8C93-FBC0F0C7BB2B.png",
+      "name": "demo-person-editor-light_0_E758EECF-7120-4DBC-A341-B15BF441B37F.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "7273b1ab4c190afd46034db6294f800145edeab9bda69f84707da102e78c1c5c",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531867.55
+    },
+    {
+      "file": "475ABDDE-3FB5-4EB9-AFB1-41E8BE01E715.txt",
+      "name": "demo-meal-light-window-geometry_0_D7339B66-3FA5-4C45-BC73-2C0A92566E98.txt",
+      "sha256": "af9a287718cc06861d32a62fcbe48fac0b7682a958e8b605cb688c397626f5ac",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531865.948
+    },
+    {
+      "file": "C56CA962-3A3B-4B12-B1E7-731A3638B980.png",
+      "name": "demo-meal-light_0_21A5E5FD-EEA4-4A08-8FCB-A26769405A49.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "2e55930a7ff2783eec55e91670d657770562c81822f6e99685bb6dea272ee17e",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531865.649
+    },
+    {
+      "file": "B7C4ED0F-8B3A-428E-8941-A63F15B5522B.txt",
+      "name": "demo-library-light-window-geometry_0_8E59C980-A357-4AF1-92B4-56E775F1A286.txt",
+      "sha256": "de09d3151d05e73a5e77fa15ae18e5596b95efb32ca86628af9d7a12a7c6079e",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531863.737
+    },
+    {
+      "file": "B0A72CCE-6D63-42AB-B7B0-9577BC1B5732.png",
+      "name": "demo-library-light_0_6844B71D-D402-44DF-9814-BFEC93EC752B.png",
+      "rawPNGDimensions": [
+        1206,
+        2622
+      ],
+      "sha256": "224847d64f1534753eabf35be643dd0602efec2862be1aea02969d40b4d5d79b",
+      "test": "MealJourneyTests/testDemoWalkthrough()",
+      "timestamp": 1791531863.558
+    }
+  ],
+  "originalRecording": {
+    "bytes": 95664626,
+    "file": "demo-walkthrough.mp4",
+    "recorderObservedCompletedWrite": true,
+    "recorderObservedStart": true,
+    "scope": "Original native simctl recording; no encoding, trimming or playback-speed change performed in this task.",
+    "sha256": "0aa181420064045f023d8a7788e6c2540f3834264d9a3df458128e6d849ecf3b"
+  },
+  "outerExit": 0,
+  "passedTests": 1,
+  "publishedOriginalScreenshots": [
+    {
+      "capturedAtUnixSeconds": 1791531931.876,
+      "file": "satisfaction-fullscreen-iphone-meal-dark.png",
+      "nativeAttachment": "5EC2D1DD-AA7E-454A-BC4D-064C9980A1EC.png",
+      "nativeName": "demo-meal-dark_0_71BBE98B-1613-4243-B0C2-3EAD83458E18.png",
+      "sha256": "183cb5ce5fd9614b3a55e85fdf9e02da03fe02443001cc3a802c9aaa408d1b9b",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531929.751,
+      "file": "satisfaction-fullscreen-iphone-library-dark.png",
+      "nativeAttachment": "519EDF97-0CBC-4662-B96B-2C0E65D9CC06.png",
+      "nativeName": "demo-library-dark_0_B7938286-7B9D-4C27-8567-403B07C7F96D.png",
+      "sha256": "69ec1142b7e94ed944ec4d8bfffbf3da21c0f1d5025943ad0efadd1dcd758931",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531922.845,
+      "file": "satisfaction-fullscreen-iphone-meal-landscape-light.png",
+      "nativeAttachment": "545EC35F-65B2-49AA-BE74-78642414C4AF.png",
+      "nativeName": "demo-meal-landscape-light_0_9C0B09CC-05B8-442C-844D-B102D44B2B31.png",
+      "sha256": "48cb4cea438e8576d8508266f67592b0c16bdb0f8c3205eec6094ada38ff6f60",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531919.254,
+      "file": "satisfaction-fullscreen-iphone-meal-editor-light.png",
+      "nativeAttachment": "693F4578-327F-46EB-8952-06EA38CACB30.png",
+      "nativeName": "demo-meal-editor-light_0_D19A1B3E-FBD9-4105-953F-89267F7B6DFA.png",
+      "sha256": "89a7c44bc0834f026c0cfda1782664cf42a7cbf2c4ebcfc0246ec8fc50bb0090",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531916.753,
+      "file": "satisfaction-fullscreen-iphone-receipt-light.png",
+      "nativeAttachment": "654F20FB-A947-49C8-B785-BDA18BCCE78C.png",
+      "nativeName": "demo-receipt-light_0_1616BCDE-1446-46AA-B95C-DB1693204DF5.png",
+      "sha256": "f2582af583a2b67387b53ee4292902ad8090e2aeeb5ec5d2eea762f3b770071a",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531913.443,
+      "file": "satisfaction-fullscreen-iphone-meal-footer-light.png",
+      "nativeAttachment": "BD06965C-D13D-43CF-B430-0B5C6D075BED.png",
+      "nativeName": "demo-meal-footer-light_0_8255FE57-66B7-4760-A860-E130F156343E.png",
+      "sha256": "60c408e89162a09c193aad625d3fd6b6e06dfcbe37bb6785bd088f807e6116af",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531908.624,
+      "file": "satisfaction-fullscreen-iphone-restaurant-map-landscape-light.png",
+      "nativeAttachment": "9D73C4E4-4393-4519-BF9D-B61F1B988B65.png",
+      "nativeName": "demo-restaurant-map-landscape-light_0_ED047B5F-9C5A-4384-A4B1-297A123942ED.png",
+      "sha256": "e560c16382a704266473b005226005d71625be43adf1ba74f301c35fd694d25d",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531905.217,
+      "file": "satisfaction-fullscreen-iphone-restaurant-map-light.png",
+      "nativeAttachment": "FF6C041E-00EB-47CC-BE8F-D61B3A176C27.png",
+      "nativeName": "demo-restaurant-map-light_0_57B68002-AD1D-4FCA-A708-137111D3DDBC.png",
+      "sha256": "883d5b61cdcf754838b391531c6fa1db69ae55c80ef4ae07a3ad2416d50addac",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531895.541,
+      "file": "satisfaction-fullscreen-iphone-bill-details-expanded-light.png",
+      "nativeAttachment": "3D8C47F7-9EDC-42E5-876E-682E7271DF52.png",
+      "nativeName": "demo-bill-details-expanded-light_0_0AD28D2A-3D1A-4D64-9DE3-B72DC4492DC6.png",
+      "sha256": "8a10f9617e8d1af082a0b86f6de2efb9f4b3954678f85c7092f7303e7ea2320e",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531890.489,
+      "file": "satisfaction-fullscreen-iphone-bill-details-collapsed-light.png",
+      "nativeAttachment": "420B05C5-DE5C-4D75-8E9D-FC98DA5F63D8.png",
+      "nativeName": "demo-bill-details-collapsed-light_0_79688A8A-5CC8-4A40-A542-FA9B00C14A0E.png",
+      "sha256": "9c2eb8cf245ae1eeba6383da0de164a1bdab92c0a8e11a5c5135698b45c014c3",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531887.325,
+      "file": "satisfaction-fullscreen-iphone-itemized-split-light.png",
+      "nativeAttachment": "670DC808-7E1A-4CDC-A7CA-F93450B41AE3.png",
+      "nativeName": "demo-itemized-split-light_0_EB77128B-63F4-4746-A428-D8A1CE336E5D.png",
+      "sha256": "1bd9d9481214ccea1e0e3b14ec74eef01e0bcbadaa05a5858a347ec0ed0c24c1",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531885.998,
+      "file": "satisfaction-fullscreen-iphone-split-light.png",
+      "nativeAttachment": "18DC9493-0AB8-4554-BB3E-5167312C7B67.png",
+      "nativeName": "demo-split-light_0_171B5897-A2F4-412A-9214-7301A771D423.png",
+      "sha256": "002c90446c268062b4be47ce81891f3952d014a62aca5df47befec6d8ee62e68",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531882.787,
+      "file": "satisfaction-fullscreen-iphone-tip-editor-light.png",
+      "nativeAttachment": "52322F87-D98C-459C-B844-8EAA283BE11C.png",
+      "nativeName": "demo-tip-editor-light_0_7DB20B72-C330-46CD-A434-B0AF8902A268.png",
+      "sha256": "6d76284ca4be893062d018ad22ac108e8d2b8e9dcc5f64aa13beb0b108e6e211",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531879.891,
+      "file": "satisfaction-fullscreen-iphone-tax-editor-light.png",
+      "nativeAttachment": "08F31961-09B8-4B04-83E0-7F9AD9C8721C.png",
+      "nativeName": "demo-tax-editor-light_0_8E0E9C1C-7B66-400A-A720-D27C561CECBE.png",
+      "sha256": "8be9d8228a161bcd0316044a71e999de73a6b2d351f9f34381fafa8c3c3ca0ef",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531873.845,
+      "file": "satisfaction-fullscreen-iphone-item-editor-light.png",
+      "nativeAttachment": "404D6F7F-9CAA-432D-A850-3F74ECD61804.png",
+      "nativeName": "demo-item-editor-light_0_B5E23D2E-9CEA-4E81-9099-384926F7DD67.png",
+      "sha256": "53b0b5df96d73eb910fb0cb3458b317ef71195720552dc23e526eb42ce141259",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531867.55,
+      "file": "satisfaction-fullscreen-iphone-person-editor-light.png",
+      "nativeAttachment": "49EFE442-3824-4C6A-8C93-FBC0F0C7BB2B.png",
+      "nativeName": "demo-person-editor-light_0_E758EECF-7120-4DBC-A341-B15BF441B37F.png",
+      "sha256": "7273b1ab4c190afd46034db6294f800145edeab9bda69f84707da102e78c1c5c",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531865.649,
+      "file": "satisfaction-fullscreen-iphone-meal-light.png",
+      "nativeAttachment": "C56CA962-3A3B-4B12-B1E7-731A3638B980.png",
+      "nativeName": "demo-meal-light_0_21A5E5FD-EEA4-4A08-8FCB-A26769405A49.png",
+      "sha256": "2e55930a7ff2783eec55e91670d657770562c81822f6e99685bb6dea272ee17e",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "capturedAtUnixSeconds": 1791531863.558,
+      "file": "satisfaction-fullscreen-iphone-library-light.png",
+      "nativeAttachment": "B0A72CCE-6D63-42AB-B7B0-9577BC1B5732.png",
+      "nativeName": "demo-library-light_0_6844B71D-D402-44DF-9814-BFEC93EC752B.png",
+      "sha256": "224847d64f1534753eabf35be643dd0602efec2862be1aea02969d40b4d5d79b",
+      "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+    }
+  ],
+  "recoveryScope": "Executed library, meal, split/Bill details, person/item/tax/tip editors, normal full-screen restaurant map in portrait/landscape, receipt and theme navigation; read exact native case assertions for interaction scope.",
+  "results": "satisfaction-fullscreen-iphone-demo-results.json",
+  "scope": "Completed passing single final Phone walkthrough, original 18 native PNGs and continuous native recording retained. No whole-suite claim.",
+  "selection": "satisfaction-fullscreen-iphone-demo-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-fullscreen-iphone-demo-source-manifest.json",
+  "sourceManifestSHA256": "2e85795484e7ca2845d46ccfb34da0ab3e2c27152d635a9399f55e93fd98ae79",
+  "sourceMismatchesAtRunFinalization": [],
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No physical GPS or private preference readback claim."
+}

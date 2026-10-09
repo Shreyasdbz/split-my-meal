@@ -1,0 +1,55 @@
+{
+  "attachmentSHA256": {
+    "finalHierarchy": "01d04e8ef4f79c23246be1a327ae23bd46be4171341770366848303383a5826e",
+    "finalScreenshot": "b9808edb58f479ebdf3aa5e5f76bb443e8c4b2171506bb4835756566730505a7",
+    "rowGeometry": "d52970eeae9bda79c16d1e45224d58ca066400aaa901b9edc45ac594f2cc6776"
+  },
+  "failedTests": 1,
+  "failureAttachmentNames": {
+    "finalHierarchy": "666F0DF7-CDC2-4137-BD25-0FFFBEA8B626.txt",
+    "finalScreenshot": "DA2F1A8E-6299-44BD-A9EB-1A1802FA3F62.png",
+    "rowGeometry": "EB446BF8-9BCC-455E-8FC0-DA11B8749C88.txt"
+  },
+  "nativeObservations": {
+    "addressFramePoints": [
+      32,
+      234,
+      254,
+      232.5
+    ],
+    "iconOmittedInNativeHierarchy": true,
+    "interpretation": "The title moved to the leading inset with greater width, but both text heights and the total row height remained unchanged. The strict full-row guard cannot fit a 454-point row inside the 409.5-point viewport.",
+    "restaurantRowHeightPoints": 454,
+    "rowFinalFramePoints": [
+      16,
+      27.5,
+      343,
+      454
+    ],
+    "titleFramePoints": [
+      32,
+      42.5,
+      226.5,
+      187.5
+    ],
+    "unexecutedScope": "Largest-text map address/actions in both orientations and map Settings handoff were not reached.",
+    "usableHeightPoints": 409.5,
+    "usableViewportYPoints": [
+      74,
+      483.5
+    ]
+  },
+  "nativeResult": "Failed",
+  "noStatusOverrides": true,
+  "originalInputs": 47,
+  "outerExit": 65,
+  "passedTests": 0,
+  "results": "satisfaction-compact-restaurant-width-final-results.json",
+  "runtimeInvalidFrameWarnings": 1,
+  "scope": "Failed conservative restaurant-width candidate; actual native guard retained. No replay or passing completion claim.",
+  "selection": "satisfaction-compact-restaurant-width-final-selection.json",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-compact-restaurant-width-final-source-manifest.json",
+  "sourceManifestSHA256": "0c4fc4d41df8651023fc0f98e88ea60c8c58231b8ea6b4bdec3be5d1397ac169",
+  "syntheticLocationClear": "The EXIT wrapper checked scoped clear completion; no clear-error message was emitted. No GPS readback claim."
+}

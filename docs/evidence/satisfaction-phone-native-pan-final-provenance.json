@@ -1,0 +1,30 @@
+{
+  "failed": 1,
+  "observations": "The actual native event retainsx8 and the full60-point travel. After the second pan the exported details/navigation frames scale to one-third; the guard rejects them. Original native video shows details content moving before Maps activation. No app-owned cause or gesture recognition threshold is established.",
+  "originalNativeAttachments": [
+    {
+      "nativeFile": "7F614A8A-7892-4125-88A9-5B3E7B96BB25.txt",
+      "nativeName": "restaurant-map-portrait-detail-pan-1_0_85853243-A6E9-4C25-88D9-BB27956CC4EE.txt",
+      "sha256": "bfad44ddc8b0cd54b6f0ba70d4b5b16295186c18a1f1237b395d4ddf3969a329"
+    },
+    {
+      "nativeFile": "36C8472B-4D01-419C-BA6B-714CC7CFC8DF.txt",
+      "nativeName": "restaurant-map-portrait-detail-pan-0_0_5D33F1D2-D04D-41C6-BABE-FFE020CE59A0.txt",
+      "sha256": "c61f4c281569a12dfd5463a41fa04cd48284d3b016b72b3bd0aaddb2c86aeb7f"
+    },
+    {
+      "nativeFile": "DFA93838-FAB8-40E9-A9DE-4A9DF1136D0D.txt",
+      "nativeName": "Complete Issue Description.txt",
+      "sha256": "bc1047c4be3260ea5b7bd7e01a541a5c91548969b3607bd299dc02465a35d204"
+    }
+  ],
+  "outerExit": 65,
+  "passed": 0,
+  "result": "Failed",
+  "results": "satisfaction-phone-native-pan-final-results.json",
+  "scope": "Retained failed exact home-indicator iPhone candidate with60-point minimum drag and initial0.1-second press. The geometry guard stopped a further pan after native Maps activation; landscape and later Settings recovery were not reached.",
+  "selection": "satisfaction-phone-native-pan-final-selection.json",
+  "skipped": 0,
+  "sourceManifest": "satisfaction-phone-native-pan-final-source-manifest.json",
+  "sourceManifestSHA256": "efec88293906e0159801027d57a42d1a448017dd0a8eac85fc58fb928e5125d3"
+}

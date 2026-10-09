@@ -1,0 +1,50 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791530790.08,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 3,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Completed passing exact three-case full-screen map presentation comparison: intentional provider/Maps handoff and both map reachability cases passed. No framework cause or whole-suite claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-phone-map-cover-comparison-source-manifest.json",
+  "sourceManifestSHA256": "65b7abd9f543f535af40dd183d8b72324829a6f429a5425e9a29af5603d77ee0",
+  "startTime": 1791530519.984,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 42.408965945243835,
+      "name": "testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "nodeIdentifier": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 155.8850690126419,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 69.16420698165894,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 3
+}

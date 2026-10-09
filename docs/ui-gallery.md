@@ -1,6 +1,42 @@
-# UI captures · 8 October 2026
+# UI captures · 8–9 October 2026
 
-The final gallery contains 36 unaltered native screenshots from the same 47-input source manifest. The dedicated iPhone and iPad Demo journeys pass, and independent iOS design and copy reviewers inspected all 18 originals per device with no actionable visible-state findings. [Capture provenance](evidence/satisfaction-final-media-provenance.json) binds each image to its exact native case and bytes; [verification](verification.md) records the separate interaction and accessibility boundaries.
+The current iPhone and iPad Demo journeys each pass and produce 18 original native screenshots. All 33 production/project inputs match the capture-time fullscreen Release build; each device keeps its exact capture-time test source. A later DEBUG-only pane measurement changes one source file, so the dated comparison records 32/33 matches to subsequent inputs. Independent visual review inspected all 36 originals without a new actionable visible finding. [Capture provenance](evidence/satisfaction-fullscreen-media-provenance.json) and [verification](verification.md) record the source and interaction boundaries.
+
+Watch the continuous actual-speed [iPhone](evidence/satisfaction-fullscreen-iphone-walkthrough.mp4) and [iPad](evidence/satisfaction-fullscreen-ipad-walkthrough.mp4) recordings. Each starts at the populated library and ends at the meal footer before the deliberate appearance relaunch. Five decoded samples and two boundary frames per device were independently inspected; this is sampled review, not a full-video fluidity claim. [Video provenance](evidence/satisfaction-fullscreen-video-provenance.json) retains hashes, trim ranges and actual decoded timestamps.
+
+| Current state | iPhone | iPad |
+| --- | --- | --- |
+| Meal dark | [Open](evidence/satisfaction-fullscreen-iphone-meal-dark.png) | [Open](evidence/satisfaction-fullscreen-ipad-meal-dark.png) |
+| Library dark | [Open](evidence/satisfaction-fullscreen-iphone-library-dark.png) | [Open](evidence/satisfaction-fullscreen-ipad-library-dark.png) |
+| Meal landscape light | [Open](evidence/satisfaction-fullscreen-iphone-meal-landscape-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-meal-landscape-light.png) |
+| Meal editor light | [Open](evidence/satisfaction-fullscreen-iphone-meal-editor-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-meal-editor-light.png) |
+| Receipt light | [Open](evidence/satisfaction-fullscreen-iphone-receipt-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-receipt-light.png) |
+| Meal footer light | [Open](evidence/satisfaction-fullscreen-iphone-meal-footer-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-meal-footer-light.png) |
+| Restaurant map landscape light | [Open](evidence/satisfaction-fullscreen-iphone-restaurant-map-landscape-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-restaurant-map-landscape-light.png) |
+| Restaurant map light | [Open](evidence/satisfaction-fullscreen-iphone-restaurant-map-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-restaurant-map-light.png) |
+| Bill details expanded light | [Open](evidence/satisfaction-fullscreen-iphone-bill-details-expanded-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-bill-details-expanded-light.png) |
+| Bill details collapsed light | [Open](evidence/satisfaction-fullscreen-iphone-bill-details-collapsed-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-bill-details-collapsed-light.png) |
+| Itemized split light | [Open](evidence/satisfaction-fullscreen-iphone-itemized-split-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-itemized-split-light.png) |
+| Split light | [Open](evidence/satisfaction-fullscreen-iphone-split-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-split-light.png) |
+| Tip editor light | [Open](evidence/satisfaction-fullscreen-iphone-tip-editor-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-tip-editor-light.png) |
+| Tax editor light | [Open](evidence/satisfaction-fullscreen-iphone-tax-editor-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-tax-editor-light.png) |
+| Item editor light | [Open](evidence/satisfaction-fullscreen-iphone-item-editor-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-item-editor-light.png) |
+| Person editor light | [Open](evidence/satisfaction-fullscreen-iphone-person-editor-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-person-editor-light.png) |
+| Meal light | [Open](evidence/satisfaction-fullscreen-iphone-meal-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-meal-light.png) |
+| Library light | [Open](evidence/satisfaction-fullscreen-iphone-library-light.png) | [Open](evidence/satisfaction-fullscreen-ipad-library-light.png) |
+
+## Largest-text map controls
+
+The corrected checks use the target pane's actual clipped layout rather than the expanded accessibility scroll frame. Each device passes both complete map and denied-location journeys in portrait and landscape. These originals show individual fully revealed targets; neighboring offscreen text can remain clipped at its deliberate scroll position. [Geometry and source comparisons](evidence/satisfaction-viewport-source-comparison.json) supplement the separately scoped [visual review](evidence/satisfaction-fullscreen-map-visual-review.json).
+
+| Portrait target | iPhone dark | Compact iPhone | iPad |
+| --- | --- | --- | --- |
+| My location | [Open](evidence/satisfaction-viewport-phone-location-portrait.png) | [Open](evidence/satisfaction-viewport-compact-location-portrait.png) | [Open](evidence/satisfaction-viewport-pad-location-portrait.png) |
+| Denied-location Settings | [Open](evidence/satisfaction-viewport-phone-denied-settings-portrait.png) | [Open](evidence/satisfaction-viewport-compact-denied-settings-portrait.png) | [Open](evidence/satisfaction-viewport-pad-denied-settings-portrait.png) |
+
+## Earlier interaction captures
+
+The earlier paired iPhone and iPad gallery contains 36 unaltered native screenshots from the same 47-input source manifest. The dedicated iPhone and iPad Demo journeys pass, and independent iOS design and copy reviewers inspected all 18 originals per device with no actionable visible-state findings. [Capture provenance](evidence/satisfaction-final-media-provenance.json) binds each image to its exact native case and bytes; [verification](verification.md) records the separate interaction and accessibility boundaries.
 
 The later person-keyboard correction adds only a stable identifier to an existing Done button; the gallery predates that identifier and retains its original source binding. Layout, copy and focus behavior are unchanged by that delta.
 
@@ -30,6 +66,45 @@ Watch the actual-speed, light-mode [iPhone](evidence/satisfaction-final-iphone-w
 A bounded direct iPad input check adds [invalid price with cleared previews](evidence/satisfaction-final-manual-ipad-invalid-draft.png) and [original saved values after Cancel/reopen](evidence/satisfaction-final-manual-ipad-cancel-reopened.png). [Manual provenance](evidence/satisfaction-final-manual-ipad-provenance.json) distinguishes pointer/hardware-key inspection from XCTest execution.
 
 Earlier interaction captures include [one-cent draft](evidence/satisfaction-iphone-one-cent-draft.png), [largest item share](evidence/satisfaction-iphone-largest-item-share.png), [fully visible landscape total](evidence/satisfaction-iphone-largest-landscape-total.png) and [native share sheet](evidence/satisfaction-iphone-largest-share-sheet.png). Their linked provenance and recorded sources predate the final keyboard and sidebar changes; they remain historical evidence.
+
+## Earlier compact iPhone captures
+
+Before the final location copy, the dedicated iPhone SE3 passed the walkthrough and largest-text navigation on a 375×667-point portrait viewport and 667×375 landscape viewport. [Provenance](evidence/satisfaction-compact-iphone-final-provenance.json) binds all 27 original PNGs and the exact two native results. Independent visual review inspected all 27; a second copy review inspected the nine largest-text captures. Neither found a new actionable visible defect. These stills do not establish continuous motion, manual assistive-technology operation or full hosted acceptance. Largest-text landscape library metadata is partly behind its native search edge at the sampled scroll position; full reveal is not established by that still.
+
+<details>
+<summary>Compact walkthrough and largest text</summary>
+
+| State | Original native capture |
+| --- | --- |
+| Meal dark | [Open](evidence/satisfaction-compact-iphone-demo-meal-dark.png) |
+| Library dark | [Open](evidence/satisfaction-compact-iphone-demo-library-dark.png) |
+| Meal landscape light | [Open](evidence/satisfaction-compact-iphone-demo-meal-landscape-light.png) |
+| Meal editor light | [Open](evidence/satisfaction-compact-iphone-demo-meal-editor-light.png) |
+| Receipt light | [Open](evidence/satisfaction-compact-iphone-demo-receipt-light.png) |
+| Meal footer light | [Open](evidence/satisfaction-compact-iphone-demo-meal-footer-light.png) |
+| Restaurant map landscape light | [Open](evidence/satisfaction-compact-iphone-demo-restaurant-map-landscape-light.png) |
+| Restaurant map light | [Open](evidence/satisfaction-compact-iphone-demo-restaurant-map-light.png) |
+| Bill details expanded light | [Open](evidence/satisfaction-compact-iphone-demo-bill-details-expanded-light.png) |
+| Bill details collapsed light | [Open](evidence/satisfaction-compact-iphone-demo-bill-details-collapsed-light.png) |
+| Itemized split light | [Open](evidence/satisfaction-compact-iphone-demo-itemized-split-light.png) |
+| Split light | [Open](evidence/satisfaction-compact-iphone-demo-split-light.png) |
+| Tip editor light | [Open](evidence/satisfaction-compact-iphone-demo-tip-editor-light.png) |
+| Tax editor light | [Open](evidence/satisfaction-compact-iphone-demo-tax-editor-light.png) |
+| Item editor light | [Open](evidence/satisfaction-compact-iphone-demo-item-editor-light.png) |
+| Person editor light | [Open](evidence/satisfaction-compact-iphone-demo-person-editor-light.png) |
+| Meal light | [Open](evidence/satisfaction-compact-iphone-demo-meal-light.png) |
+| Library light | [Open](evidence/satisfaction-compact-iphone-demo-library-light.png) |
+| Home landscape accessibility text | [Open](evidence/satisfaction-compact-iphone-home-landscape-accessibility-text.png) |
+| Meal editor accessibility text receipt | [Open](evidence/satisfaction-compact-iphone-meal-editor-accessibility-text-receipt.png) |
+| Meal editor accessibility text title | [Open](evidence/satisfaction-compact-iphone-meal-editor-accessibility-text-title.png) |
+| Charge editor accessibility text | [Open](evidence/satisfaction-compact-iphone-charge-editor-accessibility-text.png) |
+| Item editor accessibility text | [Open](evidence/satisfaction-compact-iphone-item-editor-accessibility-text.png) |
+| Person editor accessibility text | [Open](evidence/satisfaction-compact-iphone-person-editor-accessibility-text.png) |
+| Split accessibility text | [Open](evidence/satisfaction-compact-iphone-split-accessibility-text.png) |
+| Meal accessibility text | [Open](evidence/satisfaction-compact-iphone-meal-accessibility-text.png) |
+| Home accessibility text | [Open](evidence/satisfaction-compact-iphone-home-accessibility-text.png) |
+
+</details>
 
 The paired gallery below is historical and predates the interaction-refinement slice. Native screenshots use fictional meal data. Open an image for its full size. [Provenance](evidence/refinement-media-provenance.json) records unaltered bytes, passed capture cases and exact sources; [verification](verification.md) separates full-suite outcomes, failed pilots, diagnostics and external limits. The earlier [iPhone](evidence/refined-iphone-walkthrough.mp4) and [iPad](evidence/refined-ipad-walkthrough.mp4) walkthroughs belong to that historical source.
 

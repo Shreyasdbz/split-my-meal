@@ -1,0 +1,321 @@
+{
+  "all47InputsMatchCommit": true,
+  "head": "0bad7ef6df0ad543df68d1d080c34189de21e10f",
+  "largestTextPNGCount": 9,
+  "originalPNGCount": 27,
+  "outerExitCode": 0,
+  "reviewLimit": "Largest-text landscape library metadata is partly behind the native search edge at the sampled scroll position; that still does not establish full reveal or persistent clipping. No manual VoiceOver or physical-device check.",
+  "reviewedOriginalPNGs": [
+    {
+      "file": "satisfaction-compact-iphone-demo-meal-dark.png",
+      "name": "demo-meal-dark",
+      "originalAttachment": "ADB1D233-4F0C-4CBF-B019-B55174CF350D.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "8cf506a8584bf7ff26b931339a3aadb7eb2421549eef73d15b01baa078f5b7ee",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-library-dark.png",
+      "name": "demo-library-dark",
+      "originalAttachment": "2F7C80E6-8666-4A8C-825D-D8FDA0B59E74.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "a35bd7c85f3fbbebc2b2637ead70b31f6007f3ebca4b9db9283dab3a75a93c57",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-meal-landscape-light.png",
+      "name": "demo-meal-landscape-light",
+      "originalAttachment": "6EA1A5DB-4F04-49E5-A42F-A7784E8A5931.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "d67a00e01bbc6af14553014e94b58b751610429c6811c8035987bd670c231097",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-meal-editor-light.png",
+      "name": "demo-meal-editor-light",
+      "originalAttachment": "6294D087-55A4-4979-9C42-94B2F91D4D36.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "a35fc28c75bb39c1e6bcb6f4f5f67b06517f1f25b76e81eaabb26bb493819aaa",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-receipt-light.png",
+      "name": "demo-receipt-light",
+      "originalAttachment": "DBBD2611-D9AF-432D-9050-0BDDD8740838.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "58d178202be71ffd986e6d0046abf0c5c3e4bf98b5780cbe1033424d02c18703",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-meal-footer-light.png",
+      "name": "demo-meal-footer-light",
+      "originalAttachment": "A3909F77-4212-4845-A70D-EE0A9954BDA5.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "c2671180b1da9fa4e5ed7c07f3bae19970c2433db384e0e5c4a4c7bc9a513143",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-restaurant-map-landscape-light.png",
+      "name": "demo-restaurant-map-landscape-light",
+      "originalAttachment": "2E75E4E5-C2FB-4874-B072-1A876B938476.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "9b585cad6d3be415adb12aa11f1510dcd10bfe5e1fedbab0cd861e4759076d52",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-restaurant-map-light.png",
+      "name": "demo-restaurant-map-light",
+      "originalAttachment": "E876D76F-E452-4AEA-9A66-017AECEA4142.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "6178c519d2e4e4b81b037aac5a4b47b47d6ff419502fc87174c39adb4079e4a8",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-bill-details-expanded-light.png",
+      "name": "demo-bill-details-expanded-light",
+      "originalAttachment": "A3B85E51-C94D-4EA4-87D8-4FFB6E043FCC.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "e2fae46a14f22833544ff9e10d6819d98a114cd19a18aa20438b603b056a3a25",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-bill-details-collapsed-light.png",
+      "name": "demo-bill-details-collapsed-light",
+      "originalAttachment": "49E6DFBA-0041-4C91-8436-106315DC8C58.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "0ce98e648c6e6dc7923b5a83312fad1d9ee4c629745f00445653754c5606f9a6",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-itemized-split-light.png",
+      "name": "demo-itemized-split-light",
+      "originalAttachment": "EE5342BD-7D50-4932-883C-D6DA581F8141.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "dd150f903e2712ce12ccc07e86be5f4dacb26d73b5938254b79b659b19d53ecb",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-split-light.png",
+      "name": "demo-split-light",
+      "originalAttachment": "6E74CDA8-8835-43EB-B320-159E17275C75.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "eb4fcf8d117f4ed2ca135290304ee200514edb40312f16cbf7ed45435465a1b8",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-tip-editor-light.png",
+      "name": "demo-tip-editor-light",
+      "originalAttachment": "F7646BF1-BFDB-4C14-82B8-0C0CE146308E.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "c0683e106dd93339f82d97b7f727a382f17e8905ce898df12af5526eaf5f1e4d",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-tax-editor-light.png",
+      "name": "demo-tax-editor-light",
+      "originalAttachment": "D9E20284-ED70-4A75-BDC5-C61FC2A22040.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "bd37b3cf2ad7bff554f25d27772edd21997ca2acf4a9ccff96faafee71d4a16f",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-item-editor-light.png",
+      "name": "demo-item-editor-light",
+      "originalAttachment": "7B963504-0D9D-4536-A6F5-1EDF9360B844.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "cb1a5dcd202e56a5e9588869ef497ab466509dd1f2f0e3789ed30fcde9a3bd61",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-person-editor-light.png",
+      "name": "demo-person-editor-light",
+      "originalAttachment": "AEF49E89-DB46-4B80-B62F-A88FE24F6086.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "db7cdcf274af0b96247f93a76d60966e4d67c6915aa0fc7459e7c0c9e6e5d9ed",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-meal-light.png",
+      "name": "demo-meal-light",
+      "originalAttachment": "E414CB15-AC36-484F-B070-21B5EB760017.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "67b5c6b1e646bd1f85a453b11920dc99ea2584c44acfc02cdf0cda932ea2ed5c",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-demo-library-light.png",
+      "name": "demo-library-light",
+      "originalAttachment": "408623CF-4F4C-4C7A-8BA3-7FE52C7F07F8.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "32b2481af39934f4accdba2993fe10f91575f3ce12d9818aed594d0056cc09f0",
+      "testID": "MealJourneyTests/testDemoWalkthrough()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-home-landscape-accessibility-text.png",
+      "name": "home-landscape-accessibility-text",
+      "originalAttachment": "A97975A0-429E-4DFD-BAC9-A3ECA60098C9.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "fb4b3cc16623860ff7036786dc4c4c709b03cb0d8825a053872cebac6a50e67d",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-meal-editor-accessibility-text-receipt.png",
+      "name": "meal-editor-accessibility-text-receipt",
+      "originalAttachment": "3004A0CA-BEC4-4D72-BB8B-42CBA1E32EF6.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "1dd411054f0f841139bca799e93e6a57b67cf3d88b6a3a96107c5114e754a31c",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-meal-editor-accessibility-text-title.png",
+      "name": "meal-editor-accessibility-text-title",
+      "originalAttachment": "26A062A9-0D4D-48CF-BDE1-42E4A237D638.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "eb4dd3f66889fc34e7aedf065596bc0af058962bd3187cba7614ebb5157373a4",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-charge-editor-accessibility-text.png",
+      "name": "charge-editor-accessibility-text",
+      "originalAttachment": "5D71BB03-5B3E-44A2-9985-771AF887DA28.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "d1aea77ceba0605b0a17ff3a39220e915110f9dfbec6a937db21bac76883a941",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-item-editor-accessibility-text.png",
+      "name": "item-editor-accessibility-text",
+      "originalAttachment": "D7A8F68E-8BFF-402B-8748-77878A900E7E.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "6aa4c7f0b0351ab5cdfd43b41de4185a6a8e2e82fe5d04c6181aee93e17a598d",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-person-editor-accessibility-text.png",
+      "name": "person-editor-accessibility-text",
+      "originalAttachment": "A6D32030-DC52-4498-BC64-A67924C80973.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "75f20fa3c8d8a29569cd606b92c820b27e25ae1439f974230fffe7b0c84d03a9",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-split-accessibility-text.png",
+      "name": "split-accessibility-text",
+      "originalAttachment": "734E9061-F64F-4030-9F71-E08C658B2A12.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "f7c37e478ab485d203f2daf43ddd526d3ec04ef4012dcd57f8a12a76569bd9d9",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-meal-accessibility-text.png",
+      "name": "meal-accessibility-text",
+      "originalAttachment": "1A958DC8-D023-4ECA-BE5A-EC29E3EDA1E5.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "6a10ead07b6c85716cb95ae9e35b494b3224302ede3af5924bd8deb4297a4d6d",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    },
+    {
+      "file": "satisfaction-compact-iphone-home-accessibility-text.png",
+      "name": "home-accessibility-text",
+      "originalAttachment": "7D05E40D-3E74-4071-A3CD-1CD13AB41B3C.png",
+      "pngPixels": [
+        750,
+        1334
+      ],
+      "sha256": "890613e058beb6f53efd5ac134818a1670d700c77bdfdcb368bd77d158ba5c9d",
+      "testID": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+    }
+  ],
+  "scope": "Two exact native journeys on a dedicated iPhone SE3. Both independent rendered reviews found no new actionable visible defect; screenshots do not establish complete accessibility or continuous fluidity.",
+  "selectionResults": "satisfaction-compact-iphone-final-selection-results.json",
+  "sourceManifest": "satisfaction-compact-iphone-final-source-manifest.json",
+  "sourceManifestSHA256": "d06abc0bdd33fc8067c5e4c67eb6eec33c5b3e53d1535c157b052867aa0e0399",
+  "sourceResults": "satisfaction-compact-iphone-final-results.json",
+  "viewportLandscapePoints": [
+    667,
+    375
+  ],
+  "viewportPortraitPoints": [
+    375,
+    667
+  ],
+  "walkthroughPNGCount": 18
+}
