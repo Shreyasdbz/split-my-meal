@@ -1,0 +1,105 @@
+{
+  "MapsAuthorizationPath": "Already denied from the actual preceding native Don\u2019t Allow tap; no Maps prompt was observed by the bounded native helper on this handoff.",
+  "actualNativeCases": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "status": "Passed"
+    }
+  ],
+  "actualProviderObserved": "Native MapKit autocomplete resolved a Blue Bottle Coffee result, actual Maps opened and app return/restaurant removal checks passed; zero skips.",
+  "comparisonScope": "All 47 compiled source inputs compared after native outer completion and export before future edits. Manifest gitHead is the parent commit; the changed test helper is represented by its exact input hash.",
+  "completeLogDiagnostics": {
+    "animationWaitWarnings": 0,
+    "executionAllowanceExceeded": 0,
+    "invalidFrameWarnings": 0,
+    "remoteHierarchyWarnings": 46,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "completeNativeLogSHA256": "e3eb15add8b59e296dd78ea09ee538d29a7b811bbce49e07bd552bd66de67b57",
+  "diagnosticCountContract": "Case-insensitive actual native warning variants; diagnostics are retained without inferring another process or framework caused behavior.",
+  "durationSeconds": 47.588,
+  "noSourceEditsDuringRun": true,
+  "noTestRetries": true,
+  "originalInputs": 47,
+  "originalNativeEvidence": [
+    {
+      "file": "C2CA640A-E638-40D4-B27E-E029CB514808.txt",
+      "name": "live-mapkit-final-state-accessibility-tree_0_B0A7E627-9461-42A7-B1CB-CA020813685F.txt",
+      "sha256": "bf9c6f9b707d1d426437940be620432c5a93bcc417fcae85f5c06bcc4362eb1b",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538504.464
+    },
+    {
+      "file": "5B6E5FB8-36C2-43F5-9DB2-854D0616FED6.png",
+      "name": "live-mapkit-final-state_0_A552C6F2-BE96-4261-BF5C-4AF035B5479E.png",
+      "sha256": "bdcf80281cf9e07a609a3be1967b28c56e747723b954841f86c3c803afc09f28",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538504.1
+    },
+    {
+      "file": "26F631E1-393B-4591-8562-0CAF2C6C2048.txt",
+      "name": "selected-restaurant-native-maps-accessibility-tree_0_24233DF9-D0B1-458F-B049-EE23DD55BD65.txt",
+      "sha256": "f7e539cfd53bf96f325bde42b040d14e5ceab30db22034fcd156cfff5cd39d95",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538495.226
+    },
+    {
+      "file": "34387208-34DF-4FD9-B9D0-D22A7A2D79CE.png",
+      "name": "selected-restaurant-opened-in-native-maps_0_D9240305-6AC6-4ED3-80C5-616C41FC4480.png",
+      "sha256": "4afb160c193e1b248134be6266a09a0c22fe29cc3f336083c7f6196069d8f1e1",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538495.054
+    },
+    {
+      "file": "00BCF4F9-3495-44A9-81E6-3A9D2691AE8A.txt",
+      "name": "live-selected-restaurant-map-accessibility-tree_0_D1E68C04-B29A-4ADC-8904-C35B0043D775.txt",
+      "sha256": "c28bdb7143a615d651b5c80503e64a2b9bc1750eb096e5d6f83c97bdfc9ffeff",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538482.139
+    },
+    {
+      "file": "E37FD747-0260-45C5-A321-E156BDABBDF5.png",
+      "name": "live-selected-restaurant-map_0_74923051-7E8C-4514-A0B6-B68BA22A29CA.png",
+      "sha256": "8d285774b659bffeb0bbf1bad3b2754d60f0dbf8673a192deb16075479d24eba",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538481.684
+    },
+    {
+      "file": "1B60EA7D-6889-4954-ABE6-0964547FF23A.txt",
+      "name": "live-mapkit-autocomplete-results-accessibility-tree_0_19B3B4C2-B27C-4EBB-8741-612EE6479A6D.txt",
+      "sha256": "19d47e5264ea8b486186da632a38a409c06e8e72f2bf14930e881eb0cfd215a2",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538470.348
+    },
+    {
+      "file": "92951C0C-39EF-4C9D-B844-1A431C8FA2F2.png",
+      "name": "live-mapkit-autocomplete-results_0_EF0660AC-CD65-4E73-9563-A6619F13F502.png",
+      "sha256": "5b6d3f883d8de3a4a95bcff11c75577c1244abd0bb6dcae4d096f8616fa019f3",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538469.676
+    },
+    {
+      "file": "5D450FD1-CA5D-48A2-AE9D-C99B22E10B37.txt",
+      "name": "isolated-ui-launch-arguments_0_46F59B88-370C-4AA6-9BC6-87BDE269A8D6.txt",
+      "sha256": "dafadbfeb1c14654814b5898b603587593a64f66df78cde9f16f45f3d41917b2",
+      "test": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "timestamp": 1791538458.098
+    }
+  ],
+  "outerExit": 0,
+  "results": "satisfaction-pad-maps-permission-live-final-results.json",
+  "scope": "One complete focused live provider flow with Maps already denied. Native complete-flow proof only; hosted acceptance remains a separate gate.",
+  "selection": "satisfaction-pad-maps-permission-live-final-selection.json",
+  "sourceManifest": "satisfaction-pad-maps-permission-live-final-source-manifest.json",
+  "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+  "sourceMismatchesAtRunFinalization": [],
+  "syntheticGPSCleanup": {
+    "clearExitVerifiedByWrapperOuterZero": true,
+    "contract": "Wrapper fails if native simctl location clear fails; outer0 is retained. The public native API exposes no simulated-current-location readback, so no coordinate readback or physical GPS claim is made.",
+    "setup": {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "source": "synthetic simulator coordinate"
+    }
+  }
+}

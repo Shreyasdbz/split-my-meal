@@ -1,0 +1,28 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791538505.947,
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "One complete focused live provider flow with Maps already denied.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-pad-maps-permission-live-final-source-manifest.json",
+  "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+  "startTime": 1791538455.801,
+  "tests": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "status": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

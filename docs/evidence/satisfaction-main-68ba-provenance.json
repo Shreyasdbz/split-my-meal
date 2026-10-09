@@ -1,0 +1,79 @@
+{
+  "exactCases": 112,
+  "failed": 1,
+  "failureEvidence": {
+    "SHA256": "f47501f6d51661b1adf9f7f33ba416a4ea728517c71a134768f60742faf0c15f",
+    "assertion": "done.isHittable",
+    "identifier": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+    "line": 1849,
+    "observedSystemAlert": "Allow \u201cMaps\u201d to use your location?",
+    "originalScreenshot": "664284C0-71E3-43BB-801A-2FB4DE92AA71.png",
+    "publishedScreenshot": "satisfaction-main-68ba-ipad-maps-permission-alert.png",
+    "scope": "System Maps location prompt remains over the foreground meal after landscape handoff; original failure remains failed. Independent original-pixel inspection supports this interruption, not a production layout defect.",
+    "sourceFile": "SplitMyMealUITests/MealJourneyTests.swift"
+  },
+  "head": "68ba83e275fcd46a76e12c074a7ea93b6cbba242",
+  "partitions": [
+    {
+      "all47InputsMatchRecordedCommit": true,
+      "exactCoverageGate": "Passed",
+      "failed": 0,
+      "family": "iphone",
+      "originalNativeTreeSHA256": "fdb4a06147a09fbe4ff2a1b00834bfa17b55571959ff1fe11b5b8be2e6d08637",
+      "originalSummarySHA256": "991dc0455f21a6a51d9246ddde8976ba9bd17230e759ee513a97e46dfc574b18",
+      "partition": "a",
+      "passed": 43,
+      "result": "Passed",
+      "results": "satisfaction-main-68ba-iphone-a-results.json",
+      "skipped": 0,
+      "sourceManifest": "satisfaction-main-68ba-iphone-a-source-manifest.json"
+    },
+    {
+      "all47InputsMatchRecordedCommit": true,
+      "exactCoverageGate": "Passed",
+      "failed": 0,
+      "family": "iphone",
+      "originalNativeTreeSHA256": "0d15f6205793bdc3debdefc4d316c40f5d71e2db49399d95c4919a01ff78c5ee",
+      "originalSummarySHA256": "9203cf074c48b9c6b2e2fb2a985e6a14ac9e248ce96be55a09918f15510233b6",
+      "partition": "b",
+      "passed": 13,
+      "result": "Passed",
+      "results": "satisfaction-main-68ba-iphone-b-results.json",
+      "skipped": 0,
+      "sourceManifest": "satisfaction-main-68ba-iphone-b-source-manifest.json"
+    },
+    {
+      "all47InputsMatchRecordedCommit": true,
+      "exactCoverageGate": "Every selected native case must pass: [{'identifier': 'SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()', 'status': 'Failed'}]",
+      "failed": 1,
+      "family": "ipad",
+      "originalNativeTreeSHA256": "cb70e65615e257344144e0e9717138bd6aee45eccb2ace85368b3b489741da72",
+      "originalSummarySHA256": "671c62d3f950b14717514bbd1ba344aa1c42fd8a662b26331198bff3fe5c16b1",
+      "partition": "a",
+      "passed": 42,
+      "result": "Failed",
+      "results": "satisfaction-main-68ba-ipad-a-results.json",
+      "skipped": 0,
+      "sourceManifest": "satisfaction-main-68ba-ipad-a-source-manifest.json"
+    },
+    {
+      "all47InputsMatchRecordedCommit": true,
+      "exactCoverageGate": "Passed",
+      "failed": 0,
+      "family": "ipad",
+      "originalNativeTreeSHA256": "bf11df05642522994af07a6ac2e3dbffea7aed24aa84bad002d252ca404a1f91",
+      "originalSummarySHA256": "aee9ba49c4bbc18e03edb8776e7ebbca45ae4189df816f35e2ef5ea8c55db756",
+      "partition": "b",
+      "passed": 13,
+      "result": "Passed",
+      "results": "satisfaction-main-68ba-ipad-b-results.json",
+      "skipped": 0,
+      "sourceManifest": "satisfaction-main-68ba-ipad-b-source-manifest.json"
+    }
+  ],
+  "passed": 111,
+  "result": "Failed",
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37906443960",
+  "scope": "Completed historical hosted run before the test-only permission correction. All exact identities and recorded-commit hashes reconciled; subsequent source requires fresh acceptance.",
+  "skipped": 0
+}

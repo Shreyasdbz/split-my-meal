@@ -1,0 +1,16 @@
+{
+  "all47InputsMatchedAtFinalization": true,
+  "exactPassedCases": 1,
+  "failures": 0,
+  "nativeObservedBranches": {
+    "landscape": "Already denied: no system alert found within the bounded wait; handoff and strict return controls passed.",
+    "portrait": "Fresh exact Maps location prompt: Don\u2019t Allow tapped and dismissal required before return."
+  },
+  "result": "Passed",
+  "results": "satisfaction-pad-maps-permission-final-results.json",
+  "scope": "One exact native NormalMap case in portrait and landscape, after resetting only Maps location on an owned isolated simulator. Full action containment, scroll cancellation, intentional handoff, retained address and Done hittability remain required. Not a full-suite or complete-accessibility claim.",
+  "selection": "satisfaction-pad-maps-permission-final-selection.json",
+  "skips": 0,
+  "sourceManifest": "satisfaction-pad-maps-permission-final-source-manifest.json",
+  "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942"
+}

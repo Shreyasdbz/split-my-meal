@@ -1,0 +1,11 @@
+{
+  "finding": "No actionable source finding for the approved isolated simulator path. Shared bounded helper preserves system evidence, verifies the exact Maps heading and denial button, stops on unexpected alerts or failed dismissal, and requires Maps foreground. Live handoff reuse avoids duplicated permission handling. Original Done/layout assertions remain unchanged.",
+  "inputs": {
+    "SplitMyMealUITests/LiveMapKitTests.swift": "75854bddc28719858557b671ab6f75c00fddbfd61635dfa222275e18e06736f8",
+    "SplitMyMealUITests/MealJourneyTests.swift": "620d063c7b6484edbb70641069b932fa80edaeabdeda1d8c0760e5d3479e1208"
+  },
+  "limitations": "Unrelated-alert rejection is source-reviewed; no unrelated native alert was injected. Source review does not independently execute native tests, inspect Release bytes or certify whole-app accessibility.",
+  "nativeFollowUp": "Fresh Phone and Pad runs confirm exact system AX identifiers and both prompt-present and already-denied paths. A separate Pad live provider consumer passed after denial.",
+  "recordedAt": "2026-10-09T09:39:28.445557+00:00",
+  "recordedBy": "Root preserving the independent principal-engineer agent report"
+}

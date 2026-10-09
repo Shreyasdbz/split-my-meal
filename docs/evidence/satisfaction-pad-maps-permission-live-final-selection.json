@@ -1,0 +1,31 @@
+{
+  "actualCaseCount": 1,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "status": "Passed"
+    }
+  ],
+  "exactNativeIDSet": true,
+  "expectedExactNativeIDs": [
+    "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()"
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()"
+    }
+  ],
+  "outerExit": 0,
+  "passedCaseCount": 1,
+  "requestedSelectorCount": 1,
+  "result": "Passed",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0,
+  "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942"
+}

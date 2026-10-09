@@ -1618,6 +1618,40 @@ final class MealJourneyTests: XCTestCase {
 }
 
 extension XCTestCase {
+    /// Declines only Maps' observed location request on an isolated simulator.
+    /// Preserve system-owned evidence and reject other interruptions; returning
+    /// to this app before dismissal can leave its visible controls blocked.
+    @MainActor
+    func declineMapsLocationRequestIfPresent(_ maps: XCUIApplication, evidencePrefix: String) -> Bool {
+        let alert = XCUIApplication(bundleIdentifier: "com.apple.springboard").alerts.firstMatch
+        if alert.waitForExistence(timeout: 5) {
+            let pixels = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            pixels.name = evidencePrefix + "-maps-location-request"
+            pixels.lifetime = .keepAlways
+            add(pixels)
+            let hierarchy = XCTAttachment(string: alert.debugDescription)
+            hierarchy.name = evidencePrefix + "-maps-location-request-system-hierarchy"
+            hierarchy.lifetime = .keepAlways
+            add(hierarchy)
+            let title = alert.staticTexts["Allow “Maps” to use your location?"]
+            let deny = alert.buttons["Don’t Allow"]
+            guard title.exists, deny.exists, deny.isHittable else {
+                XCTFail("Maps handoff encountered an unexpected system alert; only the exact Maps location request may be declined.")
+                return false
+            }
+            deny.tap()
+            guard alert.waitForNonExistence(timeout: 5) else {
+                XCTFail("Declining Maps location must dismiss its system alert before returning to the meal.")
+                return false
+            }
+        }
+        guard maps.state == .runningForeground else {
+            XCTFail("Native Maps must remain foreground after its optional location request is resolved.")
+            return false
+        }
+        return true
+    }
+
     /// Checks the actual visible map and fully rendered largest-text details;
     /// scrolling may reveal long address portions and individual native actions.
     /// Optional handoff verification drags directly on Open in Maps, then opens
@@ -1823,6 +1857,7 @@ extension XCTestCase {
                         return
                     }
                     capture("restaurant-map-accessibility-text-" + suffix + "-intentional-native-maps")
+                    guard declineMapsLocationRequestIfPresent(maps, evidencePrefix: "restaurant-map-" + suffix) else { return }
                     app.activate()
                     XCTAssertTrue(app.wait(for: .runningForeground, timeout: 10))
                     XCTAssertTrue(bar.waitForExistence(timeout: 5), "Returning from Maps must preserve the same restaurant presentation.")

@@ -1,0 +1,107 @@
+{
+  "finding": "Maps permission overlay is absent in corrected portrait/landscape returned-app captures; Done remains fully visible. My location is readable in each intended scrolled target state. Phone immediate-return captures leave part of this later control offscreen, then the target capture fully reveals it. No actionable app-owned visual defect found within inspected states.",
+  "limitations": "Original hosted failure remains failed. No full-experience, physical haptics, continuous fluidity or complete-accessibility certification.",
+  "nativeEvidence": "Both focused native NormalMap cases separately passed their prompt-present portrait and already-denied landscape paths, including unchanged Done assertions. Pixel inspection is a separate evidence type.",
+  "originals": [
+    {
+      "family": "phone",
+      "nativeCaptureName": "restaurant-map-portrait-maps-location-request_0_11FEEA77-E0AD-41A0-A53C-4ABE32838B4A.png",
+      "originalFile": "B73D849E-8BAD-4A86-961D-231FE815A786.png",
+      "originalSHA256": "9baa920eb76694bc1237740fb19a4c0db3ad0557a4ac626dfe67f020694e7efb",
+      "publishedFile": "satisfaction-maps-permission-phone-prompt.png",
+      "sourceManifest": "satisfaction-phone-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "prompt"
+    },
+    {
+      "family": "phone",
+      "nativeCaptureName": "restaurant-map-accessibility-text-portrait-intentional-maps-return_0_C28221C1-FAD7-49FB-AD64-291044248142.png",
+      "originalFile": "F7C82F07-F687-4390-8B20-97A92AC41EB4.png",
+      "originalSHA256": "d0f6a78f534d5abdf748b41974e50777c313d82d4a67358285c112003ef24b59",
+      "sourceManifest": "satisfaction-phone-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "portrait-return"
+    },
+    {
+      "family": "phone",
+      "nativeCaptureName": "restaurant-map-accessibility-text-portrait-Show my location_0_277C11E4-A2E7-4250-BDF8-9994400FB7DD.png",
+      "originalFile": "9208C58F-1D88-4FE0-B4B6-5142613D8A54.png",
+      "originalSHA256": "ef0c0f12df46762a155231f32175d52f8e86aed22e3ba9c6a62695bacb5df973",
+      "publishedFile": "satisfaction-maps-permission-phone-portrait-location.png",
+      "sourceManifest": "satisfaction-phone-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "portrait-location"
+    },
+    {
+      "family": "phone",
+      "nativeCaptureName": "restaurant-map-accessibility-text-landscape-intentional-maps-return_0_0AF5B668-ACEB-44DD-84B1-C5FA756A0FB6.png",
+      "originalFile": "A7AA7E33-9AC6-4608-A0CB-5240C913D981.png",
+      "originalSHA256": "a1c554bba0c9b6cc401a230850326201ec77c23dbb8374c613cabd42d2b0a4c4",
+      "sourceManifest": "satisfaction-phone-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "landscape-return"
+    },
+    {
+      "family": "phone",
+      "nativeCaptureName": "restaurant-map-accessibility-text-landscape-Show my location_0_C54B0F6F-BEE6-4A62-A4D5-1ED898AB965A.png",
+      "originalFile": "7D936C3B-3DC2-4063-8B91-08E9435DD392.png",
+      "originalSHA256": "f703cfb9293b6dcc2409c1f429199c445ebb6ffbd0307e6310afed1f03405ea9",
+      "publishedFile": "satisfaction-maps-permission-phone-landscape-location.png",
+      "sourceManifest": "satisfaction-phone-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "landscape-location"
+    },
+    {
+      "family": "pad",
+      "nativeCaptureName": "restaurant-map-portrait-maps-location-request_0_CDE6432B-2E63-4783-98BC-3D96B973A9C9.png",
+      "originalFile": "BC0B0CF3-9067-4B5B-870B-BBA056233D74.png",
+      "originalSHA256": "7f26b73c3b19bf2e3682b7481e5c8b877c2976986e688e715f381bf350747e00",
+      "publishedFile": "satisfaction-maps-permission-pad-prompt.png",
+      "sourceManifest": "satisfaction-pad-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "prompt"
+    },
+    {
+      "family": "pad",
+      "nativeCaptureName": "restaurant-map-accessibility-text-portrait-intentional-maps-return_0_82B4B6FA-6B04-4ABC-A179-7C4700490CD6.png",
+      "originalFile": "860E3D9C-E5B7-41E1-A9C1-6C3DC2A38BA1.png",
+      "originalSHA256": "e15d7baf9d2f26c25452272a06876474315f6ab86e01a65ba467173efc26c9a7",
+      "sourceManifest": "satisfaction-pad-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "portrait-return"
+    },
+    {
+      "family": "pad",
+      "nativeCaptureName": "restaurant-map-accessibility-text-portrait-Show my location_0_C3232A98-C0F0-45E5-9CA7-719E8A148202.png",
+      "originalFile": "8E3ACA79-44FA-48EB-88EA-7BD4E439E7B4.png",
+      "originalSHA256": "e15d7baf9d2f26c25452272a06876474315f6ab86e01a65ba467173efc26c9a7",
+      "publishedFile": "satisfaction-maps-permission-pad-portrait-location.png",
+      "sourceManifest": "satisfaction-pad-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "portrait-location"
+    },
+    {
+      "family": "pad",
+      "nativeCaptureName": "restaurant-map-accessibility-text-landscape-intentional-maps-return_0_C78700B6-9796-4F92-9BE1-3F47FAD08000.png",
+      "originalFile": "F118D728-7ACB-4713-BD14-1C789FBF84D3.png",
+      "originalSHA256": "5a224eb13cb83a05be1e0b0c51904e40a03f86b09b7d43eb2cdf142a90e97740",
+      "sourceManifest": "satisfaction-pad-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "landscape-return"
+    },
+    {
+      "family": "pad",
+      "nativeCaptureName": "restaurant-map-accessibility-text-landscape-Show my location_0_16647E97-B735-44E8-8102-764A309EF8C0.png",
+      "originalFile": "25D2CAD9-AA84-4155-A49B-8408635736B7.png",
+      "originalSHA256": "5a224eb13cb83a05be1e0b0c51904e40a03f86b09b7d43eb2cdf142a90e97740",
+      "publishedFile": "satisfaction-maps-permission-pad-landscape-location.png",
+      "sourceManifest": "satisfaction-pad-maps-permission-final-source-manifest.json",
+      "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+      "state": "landscape-location"
+    }
+  ],
+  "originalsActuallyInspected": 10,
+  "recordedAt": "2026-10-09T09:39:28.445229+00:00",
+  "recordedBy": "Root preserving the independent ios_visual_designer agent report",
+  "uniquePNGHashes": 8
+}

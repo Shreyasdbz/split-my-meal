@@ -1,0 +1,21 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791538362.216,
+  "nativeExport": "Sanitized native summary and exact case identities; original JSON hashes retained in provenance.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtimeWarnings": [],
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-phone-maps-permission-final-source-manifest.json",
+  "sourceManifestSHA256": "830a579ff02235c6975c11b1e1898a885e9f74bdca2efe00dc8fb1767f214942",
+  "startTime": 1791538259.137,
+  "testFailures": [],
+  "tests": [
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "status": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

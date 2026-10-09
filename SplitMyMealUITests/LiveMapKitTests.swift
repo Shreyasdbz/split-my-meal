@@ -71,6 +71,7 @@ final class LiveMapKitTests: XCTestCase {
             // screen; this does not grant a protected-resource permission.
             maps.buttons["Continue"].tap()
         }
+        guard declineMapsLocationRequestIfPresent(maps, evidencePrefix: "live-selected-restaurant") else { return }
         let destination = maps.staticTexts.matching(NSPredicate(format: "label == %@", selectedTitle)).firstMatch
         let destinationLoaded = destination.waitForExistence(timeout: 20)
         let mapsPixels = XCTAttachment(screenshot: XCUIScreen.main.screenshot())

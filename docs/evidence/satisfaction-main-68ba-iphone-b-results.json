@@ -1,0 +1,75 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791537205.519,
+  "nativeExport": "Sanitized native summary and exact case identities; original JSON hashes retained in provenance.",
+  "passedTests": 13,
+  "result": "Passed",
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 8
+    }
+  ],
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-main-68ba-iphone-b-source-manifest.json",
+  "sourceManifestSHA256": "6a303bbd0c7a4ed69d08a48d6892c8e06d0a34a36e3f0ac3f82385ee4733d33b",
+  "startTime": 1791535731.937,
+  "testFailures": [],
+  "tests": [
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "status": "Passed"
+    },
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth()",
+      "status": "Passed"
+    }
+  ],
+  "totalTestCount": 13
+}
