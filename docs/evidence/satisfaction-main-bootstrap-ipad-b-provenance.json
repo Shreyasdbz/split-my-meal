@@ -1,0 +1,22 @@
+{
+  "causeLimit": "The ordering gap is source-confirmed; the log does not prove it caused the lost testmanagerd connection. No app defect is established by this bootstrap failure.",
+  "device": "iPad",
+  "disabledEntries": 0,
+  "enabledEntries": 29,
+  "enumeration": "satisfaction-main-bootstrap-ipad-b-enumeration.json",
+  "enumerationErrors": [
+    "SplitMyMealUITests-Runner encountered an error. (Underlying Error: Early unexpected exit, operation never finished bootstrapping - no restart will be attempted. (Underlying Error: Lost connection to testmanagerd))"
+  ],
+  "enumerationSHA256": "b99dc90b9c72abad98a97f4898cbf90e47672025a909a5bff540040c4443369d",
+  "headSHA": "11b62eb9bfed74c837fa697c323f64fa60ba8d33",
+  "incompleteUIEntry": "SplitMyMealUITests",
+  "jobURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37876114300/job/113644990941",
+  "maintainedCasesExecuted": false,
+  "observedOrderingGap": "The blocking simulator boot wait and compiled launch-isolation guard followed native enumeration, which launches the test host. Both are moved before discovery.",
+  "partition": "b",
+  "result": "Rejected",
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37876114300",
+  "scope": "Failed hosted discovery, not maintained journey execution. The exact native gate rejected enumeration errors and incomplete UI discovery; no acceptance pass is inferred from xcodebuild exit status.",
+  "sourceManifest": "satisfaction-main-bootstrap-ipad-b-source-manifest.json",
+  "sourceManifestSHA256": "bbad734eb714100bfe7d86b9283fbbc8c534997c5d9d53fbea55c37b2ccc87fe"
+}

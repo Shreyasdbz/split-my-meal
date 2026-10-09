@@ -1,0 +1,35 @@
+{
+  "captures": [
+    {
+      "capture": "Unaltered xcrun simctl screenshot after direct native Device Hub interaction; no desktop content included.",
+      "file": "satisfaction-final-manual-ipad-invalid-draft.png",
+      "sha256": "6ee88795c7a0393d630b800db81b13bb1c643ee63866f68800f6c33b7f59884f"
+    },
+    {
+      "capture": "Unaltered xcrun simctl screenshot after direct native Device Hub interaction; no desktop content included.",
+      "file": "satisfaction-final-manual-ipad-cancel-reopened.png",
+      "sha256": "e18be77db20668f95251f3aba6d428762c16af443b07e42fbba063f7f9cd3bf4"
+    }
+  ],
+  "launchArguments": [
+    "--uitesting",
+    "--appearance-light"
+  ],
+  "limits": [
+    "Hardware-key forwarding into a simulator is not physical iPad keyboard execution.",
+    "This set does not cover software keyboard typing/Done; separate maintained native tests do.",
+    "Manual inspection was earlier interrupted by a locked Mac; this later bounded sequence completed after unlock."
+  ],
+  "observations": [
+    "Pointer meal selection shows readable white labels on deep teal.",
+    "Miso ramen saved price19 and Alex19.00; Jordan/Sam unselected.",
+    "After focusing price, pointer Everyone dismisses focus, retains19 and shows Alex6.34/Jordan6.33/Sam6.33 with all selected.",
+    "Forwarded Command-A and literal12.345 produce exact visible invalid input and remove all monetary preview labels.",
+    "Native hardware Return ends field focus and removes the Done accessory; invalid text remains12.345.",
+    "Cancel and pointer reopen show original19, Alex19.00 and Jordan/Sam unselected.",
+    "Device Hub Capture Keyboard was observedOFF before testing, temporarilyON, and verifiedOFF after testing."
+  ],
+  "scope": "Direct CUA native pointer and forwarded hardware-key inspection on the dedicated synthetic iPad; not an XCTest case, physical-device execution, spoken accessibility review or complete keyboard/pointer certification.",
+  "sourceManifest": "satisfaction-final-ipad-demo-source-manifest.json",
+  "sourceManifestSHA256": "5c4da2492c794ab1ad128dcb6c9d0a0dbe337abc0537e0d5e7d4193d71eba44f"
+}

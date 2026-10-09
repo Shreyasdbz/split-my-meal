@@ -1,0 +1,197 @@
+{
+  "errors" : [
+
+  ],
+  "values" : [
+    {
+      "disabledTests" : [
+        {
+          "identifier" : "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()"
+        }
+      ],
+      "enabledTests" : [
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testChargeModeConversionUsesCurrentDraftAndCalculationBase()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testInvalidNumericInputNeverBecomesSuccessfulSaveValue()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testLocalizedDecimalInputConsumesEntireString()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testReceiptDownsamplesAndKeepsReadableImage()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testReceiptRejectsUnreadableAndOversizedData()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testDecimalRoundingAndFractionalCharges()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testEmptyMealWithFixedChargesHasFiniteUnassignedAmount()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testFixedChargesTakePrecedenceAndTipIncludesTax()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testItemizedPersonComponentsConserveEveryCent()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testLargeFormattedChargesAreNeverReparsedAsZero()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testLargestAcceptedInputsRemainFiniteAndConserved()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testSharedItemRemainderIsStableAndConserved()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testUnassignedItemsAndChargesReconcileToGrandTotal()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testUnknownAndDuplicateConsumersDoNotLoseMoney()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testCharmAcceptsOnePresentedEmojiAndRejectsText()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testCommitRestoresGraphAfterNativeReadOnlySaveRejection()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testConfiguredReadOnlyStoreRejectsBeforeMutation()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testDeletedMealCannotBeResurrectedFromStaleEditor()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testForeignContextAndCrossMealEditsAreRejected()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testInvalidInputsDoNotMutateSavedState()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testLegacyFixtureRetainsOriginal2024EntityHashes()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testNamesRequireVisibleContentWithoutChangingUnicodeNames()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testSaveAssignmentsAndDeletionAreConsistent()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testCancelledMealDoesNotPersist()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testLibrarySortOrderingAndSearchByPeopleAndRestaurant()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testStartupRecoveryRetriesWithoutDiscardingSavedMeals()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests/MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth()"
+        }
+      ],
+      "testPlan" : "SplitMyMeal-Prod-A"
+    }
+  ]
+}

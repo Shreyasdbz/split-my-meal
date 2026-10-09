@@ -142,18 +142,6 @@ common=(
   CODE_SIGNING_ALLOWED=NO
 )
 xcodebuild build-for-testing "${common[@]}" "$@" 2>&1 | tee "$output/build.log"
-if [[ -n "$partition" ]]; then
-  # Enumerate the complete compiled stable suite before applying any partition.
-  # Catalogue drift fails before Photos setup or native test execution.
-  xcodebuild test-without-building "${common[@]}" \
-    -skip-testing:SplitMyMealUITests/LiveMapKitTests -enumerate-tests \
-    -test-enumeration-style flat -test-enumeration-format json \
-    -test-enumeration-output-path "$output/test-enumeration.json" 2>&1 | tee "$output/test-enumeration.log"
-  python3 scripts/native-test-selection.py select \
-    --catalogue scripts/stable-test-partitions.json --enumeration "$output/test-enumeration.json" \
-    --partition "$partition" --selection "$output/test-selection.json" \
-    --response-file "$output/selected-tests.txt"
-fi
 # The unit host starts before test methods and must use the local test store.
 # UI classes independently assert and record arguments before every app launch.
 python3 - "$derived/Build/Products" "$output/test-launch-arguments.json" <<'PYARGUMENTS'
@@ -176,9 +164,22 @@ pathlib.Path(sys.argv[2]).write_text(json.dumps(arguments, indent=2) + "\n")
 if "--uitesting" not in arguments["unitHost"]:
     sys.exit("Test startup is not isolated. Enable --uitesting on the shared scheme's TestAction; inspect test-launch-arguments.json.")
 PYARGUMENTS
+# Boot once before native discovery, which launches the compiled UI test runner.
+xcrun simctl bootstatus "$udid" -b 2>&1 | tee "$output/boot.log"
+if [[ -n "$partition" ]]; then
+  # Enumerate the complete compiled stable suite before applying any partition.
+  # Catalogue drift fails before Photos setup or native test execution.
+  xcodebuild test-without-building "${common[@]}" \
+    -skip-testing:SplitMyMealUITests/LiveMapKitTests -enumerate-tests \
+    -test-enumeration-style flat -test-enumeration-format json \
+    -test-enumeration-output-path "$output/test-enumeration.json" 2>&1 | tee "$output/test-enumeration.log"
+  python3 scripts/native-test-selection.py select \
+    --catalogue scripts/stable-test-partitions.json --enumeration "$output/test-enumeration.json" \
+    --partition "$partition" --selection "$output/test-selection.json" \
+    --response-file "$output/selected-tests.txt"
+fi
 # Preload fictional photos from the isolated debug store, so receipt attachment
 # and replacement exercise the real system Photos picker on every fresh runner.
-xcrun simctl bootstatus "$udid" -b 2>&1 | tee "$output/boot.log"
 app_path="$derived/Build/Products/Debug-iphonesimulator/SplitMyMeal-Prod-A.app"
 xcrun simctl install "$udid" "$app_path"
 xcrun simctl launch --terminate-running-process "$udid" shreyassane.SplitMyMeal-Prod-A --uitesting --reset-test-data --seed-demo | tee "$output/fixture-launch.txt"

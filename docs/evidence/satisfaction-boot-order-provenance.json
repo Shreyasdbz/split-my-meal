@@ -1,0 +1,29 @@
+{
+  "bootWait": "Single blocking simctl bootstatus completed before native enumeration. Dedicated synthetic iPad was shut down before this check, without erasing data.",
+  "changedInputsSinceFinalMedia": [
+    "scripts/verify-ios.sh"
+  ],
+  "files": {
+    "satisfaction-boot-order-native-b-selection.json": "528ce46d03a43d72c29704ddf49e88a591c95509034de12325f0cf759f3c0298",
+    "satisfaction-boot-order-native-enumeration.json": "409d2315b6a221977bd9a8d98163c256452eab694dab4486b57672762088143c",
+    "satisfaction-boot-order-source-manifest.json": "a30e121a8676a0f63bd9f252d697871dd0f04875519eed3fa289c730ab6dd277"
+  },
+  "isolation": "Compiled unit host --uitesting validated before discovery launches the host.",
+  "nativeDiscovery": {
+    "attempts": 1,
+    "configurations": 1,
+    "disabledLiveCases": 5,
+    "enabledStableCases": 56,
+    "errors": []
+  },
+  "productionAndProjectInputsUnchanged": 33,
+  "scope": "Cold-start preflight and compiled discovery only. Complete journeys execute separately; discovery success does not certify their outcome or identify the earlier connection-loss cause.",
+  "selection": {
+    "partition": "b",
+    "result": "Passed",
+    "selectedCases": 13,
+    "stableCases": 56
+  },
+  "sourceManifest": "satisfaction-boot-order-source-manifest.json",
+  "sourceManifestSHA256": "a30e121a8676a0f63bd9f252d697871dd0f04875519eed3fa289c730ab6dd277"
+}

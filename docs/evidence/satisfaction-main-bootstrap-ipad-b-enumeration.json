@@ -1,0 +1,102 @@
+{
+  "errors" : [
+    "SplitMyMealUITests-Runner encountered an error. (Underlying Error: Early unexpected exit, operation never finished bootstrapping - no restart will be attempted. (Underlying Error: Lost connection to testmanagerd))"
+  ],
+  "values" : [
+    {
+      "disabledTests" : [
+
+      ],
+      "enabledTests" : [
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testChargeModeConversionUsesCurrentDraftAndCalculationBase()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testInvalidNumericInputNeverBecomesSuccessfulSaveValue()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testLocalizedDecimalInputConsumesEntireString()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testReceiptDownsamplesAndKeepsReadableImage()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/EditorInputTests/testReceiptRejectsUnreadableAndOversizedData()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testDecimalRoundingAndFractionalCharges()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testEmptyMealWithFixedChargesHasFiniteUnassignedAmount()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testFixedChargesTakePrecedenceAndTipIncludesTax()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testItemizedPersonComponentsConserveEveryCent()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testLargeFormattedChargesAreNeverReparsedAsZero()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testLargestAcceptedInputsRemainFiniteAndConserved()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testSharedItemRemainderIsStableAndConserved()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testUnassignedItemsAndChargesReconcileToGrandTotal()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealAmountsTests/testUnknownAndDuplicateConsumersDoNotLoseMoney()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testCharmAcceptsOnePresentedEmojiAndRejectsText()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testCommitRestoresGraphAfterNativeReadOnlySaveRejection()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testConfiguredReadOnlyStoreRejectsBeforeMutation()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testDeletedMealCannotBeResurrectedFromStaleEditor()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testForeignContextAndCrossMealEditsAreRejected()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testInvalidInputsDoNotMutateSavedState()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testLegacyFixtureRetainsOriginal2024EntityHashes()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testNamesRequireVisibleContentWithoutChangingUnicodeNames()"
+        },
+        {
+          "identifier" : "SplitMyMealTests/MealStoreTests/testSaveAssignmentsAndDeletionAreConsistent()"
+        },
+        {
+          "identifier" : "SplitMyMealUITests"
+        }
+      ],
+      "testPlan" : "SplitMyMeal-Prod-A"
+    }
+  ]
+}
