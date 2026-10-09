@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791512608.094,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 2
+    }
+  ],
+  "scope": "Both exact maintained final-source native cases passed: Everyone/real keyboard Done/exact shares/Save/Cancel/invalid literal/relaunch and native Reduce Motion/one-cent allocation/largest text/full landscape total/share sheet. Original status bar and native motion preference restored exactly. Full hosted56-case-per-device validation is separate.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-final-interactions-source-manifest.json",
+  "sourceManifestSHA256": "de0193ad3914f031a71da6404f6af5b5b4278e26d54059760db13bca79d8472d",
+  "startTime": 1791512356.72,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 88.34126102924347,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 160.15910494327545,
+      "name": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "nodeIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

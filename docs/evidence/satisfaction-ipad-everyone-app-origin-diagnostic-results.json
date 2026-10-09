@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791509541.534,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Private exact-center application-origin tap reproduced keyboard-dismissal failure; no assignment action entry was observed. This does not validate Save/Cancel/invalid/relaunch or identify a cause.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-app-origin-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "68b4cee7e567feb0607c34f9c3f947cce4a67d64d6ac16b6ba3142e45839bc6f",
+  "startTime": 1791509468.183,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - Bulk assignment must finish price entry without losing the draft.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 63.74963092803955,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

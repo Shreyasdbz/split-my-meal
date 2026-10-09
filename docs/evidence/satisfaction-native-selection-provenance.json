@@ -1,0 +1,15 @@
+{
+  "aCount": 43,
+  "bCount": 13,
+  "catalogue": "scripts/stable-test-partitions.json",
+  "catalogueSHA256": "126b45af88a8109970afbd8a50b40a538dbae52a091db649292425e91881b8c5",
+  "files": {
+    "satisfaction-compiled-stable-enumeration.json": "409d2315b6a221977bd9a8d98163c256452eab694dab4486b57672762088143c",
+    "satisfaction-native-a-selection.json": "33dbe01f821f5582660b0fa06bd45e469d8becd98f9a78494f3ad266c0b9ab34",
+    "satisfaction-native-b-selection.json": "528ce46d03a43d72c29704ddf49e88a591c95509034de12325f0cf759f3c0298"
+  },
+  "scope": "Current-source build native enumeration and exact catalogue reconciliation only. This does not execute 56 cases or validate hosted CI.",
+  "sourceManifest": "satisfaction-iphone-demo-current-source-manifest.json",
+  "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+  "stableCount": 56
+}

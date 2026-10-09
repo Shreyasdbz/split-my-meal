@@ -49,6 +49,8 @@ struct HomeScreen: View {
                     }
                 }
             }
+            // Native selected rows use white text in both appearances; keep their fill dark.
+            .tint(Color(.sRGB, red: 0, green: 0.43, blue: 0.35, opacity: 1))
             .overlay {
                 if meals.isEmpty {
                     ContentUnavailableView {
@@ -121,12 +123,16 @@ private struct MealLibraryRow: View {
             // Keep the full currency amount readable in a narrow iPad sidebar at accessibility sizes.
             if !textSize.isAccessibilitySize {
                 Text(mealDisplayCharm(meal.charm)).font(.largeTitle)
+                    .frame(width: 52, height: 52)
+                    .background(Color.accentColor.opacity(0.08), in: RoundedRectangle(cornerRadius: 14))
                     .accessibilityHidden(true).accessibilityIdentifier("decorative-meal-charm")
             }
             VStack(alignment: .leading, spacing: 6) {
                 Text(meal.title).font(.headline)
+                // Native primary styling keeps small metadata legible and follows
+                // the selected sidebar background; type size supplies the hierarchy.
                 Text((meal.people ?? []).isEmpty ? "No people added" : (meal.people ?? []).map(\.name).sorted().joined(separator: ", "))
-                    .font(.subheadline).foregroundStyle(Color.mealSecondaryText).lineLimit(2)
+                    .font(.subheadline).foregroundStyle(.primary).lineLimit(2)
                 ViewThatFits(in: .horizontal) {
                     HStack { total; Spacer(); date }
                     VStack(alignment: .leading, spacing: 4) { total; date }
@@ -138,5 +144,5 @@ private struct MealLibraryRow: View {
     }
 
     private var total: some View { Text(mealCurrency(MealAmounts(meal: meal).total)).font(.subheadline.weight(.semibold)).monospacedDigit() }
-    private var date: some View { Text(meal.modifiedAt, format: .dateTime.month(.abbreviated).day()).font(.caption).foregroundStyle(Color.mealSecondaryText) }
+    private var date: some View { Text(meal.modifiedAt, format: .dateTime.month(.abbreviated).day()).font(.caption).foregroundStyle(.primary) }
 }

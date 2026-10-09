@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791513276.097,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Final Home selection tint source; native demonstration of maintained journey, 1 test only.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-final-ipad-demo-source-manifest.json",
+  "sourceManifestSHA256": "5c4da2492c794ab1ad128dcb6c9d0a0dbe337abc0537e0d5e7d4193d71eba44f",
+  "startTime": 1791513173.771,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 99.11155998706818,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

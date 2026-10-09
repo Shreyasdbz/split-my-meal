@@ -1,0 +1,55 @@
+{
+  "ipadEveryone": {
+    "assignmentsChanged": false,
+    "causeEstablished": false,
+    "decodedFrom": "Native synthesized-event keyed archive, read as data without object instantiation",
+    "eventSHA256": "ced7cca08475e2ae30b4f0a9d639ffcb2ffac7c0068019b56f13daff32f5971f",
+    "keyboardDismissed": false,
+    "pointerCoordinates": [
+      [
+        410.0,
+        414.0
+      ],
+      [
+        410.0,
+        414.0
+      ]
+    ],
+    "preTapFrame": {
+      "height": 52,
+      "width": 548,
+      "x": 136,
+      "y": 388
+    },
+    "preTapObservationSHA256": "ee5cd687590c901d9c072d5c348eedade4b69bc9d1e74d136ae42e172742c7c1"
+  },
+  "scope": "Second new-slice pilot before any further source correction. Exact native center gesture did not establish assignment or keyboard dismissal.",
+  "settings": {
+    "ipad": {
+      "failedBoundary": "Sidebar container hittability false while its actual Accessibility child was visible; attempted nonexistent parent navigation before reaching Motion.",
+      "preferenceChanged": false,
+      "preferenceReached": false
+    },
+    "iphone": {
+      "afterParentCenterTap": "0",
+      "nativeTreeSHA256": "332106a0a89d960078914caaf7e1012532334f6ed1307ffde789f1a7a41d248c",
+      "nestedSwitchFrame": {
+        "height": 28,
+        "width": 63,
+        "x": 305,
+        "y": 146.3
+      },
+      "originalValue": "0",
+      "parentSwitchFrame": {
+        "height": 28,
+        "width": 330,
+        "x": 36,
+        "y": 146.3
+      },
+      "restorationProofSHA256": "11b400bfcce6acf1f5cdf43d2de9ff7a2c9fa46eb5855d5d1fb4ef9656928600",
+      "restoredValue": "0",
+      "route": "Settings \u2192 Accessibility \u2192 Motion",
+      "runnerReduceMotionAfterRestoration": false
+    }
+  }
+}

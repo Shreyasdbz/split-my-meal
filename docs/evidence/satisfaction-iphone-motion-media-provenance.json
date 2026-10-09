@@ -1,0 +1,82 @@
+{
+  "captures": [
+    {
+      "captureName": "reduce-motion-normal-accessibility-item-draft",
+      "file": "satisfaction-iphone-one-cent-draft.png",
+      "imageEdits": false,
+      "nativeAttachment": "02069C81-EE6D-4705-8927-C734B084ED15.png",
+      "nativeCaseResult": "Passed",
+      "sha256": "fe9a2238bc6988b7cf6473511f559056d5c5e98e4792bd0d26ccb2fc34eaa50f",
+      "sourceManifest": "satisfaction-iphone-motion-r6-source-manifest.json",
+      "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+      "testIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    },
+    {
+      "captureName": "reduce-motion-normal-accessibility-meal",
+      "file": "satisfaction-iphone-meal-light.png",
+      "imageEdits": false,
+      "nativeAttachment": "89B740ED-2430-4EA0-AE9E-F66E8AAEF454.png",
+      "nativeCaseResult": "Passed",
+      "sha256": "5eaf113a3e007659d861af1842030acd47f37765a4c95f20186aec3d98b09891",
+      "sourceManifest": "satisfaction-iphone-motion-r6-source-manifest.json",
+      "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+      "testIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    },
+    {
+      "captureName": "reduce-motion-largest-accessibility-library",
+      "file": "satisfaction-iphone-largest-library.png",
+      "imageEdits": false,
+      "nativeAttachment": "35B771C2-3C40-4268-AFA5-B7CA28CCF91D.png",
+      "nativeCaseResult": "Passed",
+      "sha256": "41022a082279b95004c52b60c1e34fb05d6df364a43eac7b01ef21d2092f2935",
+      "sourceManifest": "satisfaction-iphone-motion-r6-source-manifest.json",
+      "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+      "testIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    },
+    {
+      "captureName": "reduce-motion-largest-accessibility-meal",
+      "file": "satisfaction-iphone-largest-meal.png",
+      "imageEdits": false,
+      "nativeAttachment": "FB32D586-1999-44D1-95C5-C7DDB8DE2E63.png",
+      "nativeCaseResult": "Passed",
+      "sha256": "9e1dd0322979122164f6bb875eebdfb3fcd8aa948eb7523ca86f5dfb2c91deca",
+      "sourceManifest": "satisfaction-iphone-motion-r6-source-manifest.json",
+      "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+      "testIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    },
+    {
+      "captureName": "reduce-motion-largest-accessibility-item-share",
+      "file": "satisfaction-iphone-largest-item-share.png",
+      "imageEdits": false,
+      "nativeAttachment": "46BDB878-A47D-46EA-8B5D-C5EBCE8F904D.png",
+      "nativeCaseResult": "Passed",
+      "sha256": "bcf1e2be7286ceffe8e0a7839c4b185a52b53d74d5bee424fd690e63d709e484",
+      "sourceManifest": "satisfaction-iphone-motion-r6-source-manifest.json",
+      "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+      "testIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    },
+    {
+      "captureName": "reduce-motion-largest-accessibility-landscape-split",
+      "file": "satisfaction-iphone-largest-landscape-split.png",
+      "imageEdits": false,
+      "nativeAttachment": "D7DE0A2B-595A-4981-8A2E-198F3533D8C8.png",
+      "nativeCaseResult": "Passed",
+      "sha256": "e593b28c6b7448b1af797bc765cafd2fc09a3173237697ef38fe5fa707b82a31",
+      "sourceManifest": "satisfaction-iphone-motion-r6-source-manifest.json",
+      "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+      "testIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    },
+    {
+      "captureName": "reduce-motion-native-share-sheet",
+      "file": "satisfaction-iphone-largest-share-sheet.png",
+      "imageEdits": false,
+      "nativeAttachment": "D87A92FD-8FD4-4C02-A7F5-95CC3C1BBBD4.png",
+      "nativeCaseResult": "Passed",
+      "sha256": "7046d5de5608ec9baf017e194d488a317ac98945a0ee3325e705428b671ee3d8",
+      "sourceManifest": "satisfaction-iphone-motion-r6-source-manifest.json",
+      "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+      "testIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    }
+  ],
+  "scope": "Unaltered current native phone captures from the completed Reduce Motion journey. Largest item capture covers visible Alex row, not offscreen people. Independent pixel review found no actionable visual defect in these seven app/system-share captures and five Settings captures. No physical haptic or subjective satisfaction claim."
+}

@@ -1,0 +1,41 @@
+{
+  "encoding": "Native AVFoundation 1280x720 preset, upright portrait video588x1280",
+  "independentDecodedSampleReview": "iOS visual-design agent inspected final encoded samples3,25,50,75,95: clear meal/item hierarchy, readable receipt/zoom controls, subdued dark library icon. First sample is an in-progress native presentation. Sampled stills do not certify full-video fluidity.",
+  "limits": [
+    "A recording and sampled frames do not establish physical haptic quality, frame timing, CloudKit synchronization or every interaction in the app."
+  ],
+  "metadata": {
+    "bytes": 44221143,
+    "durationSeconds": 72,
+    "encodedHeight": 1280,
+    "encodedWidth": 588,
+    "source": "demo-walkthrough.mp4",
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "verifiedFrameTimesSeconds": [
+      2.1483333333333334,
+      17.195,
+      35.99666666666667,
+      53.98,
+      67.375
+    ]
+  },
+  "nativeResult": "satisfaction-iphone-demo-current-results.json",
+  "originalDurationSeconds": 88.73166666666667,
+  "originalRecordingSHA256": "017905a0ef25d48fb8ae16e4f72727162ce5ad4eb61f7ff33f3b143b16417012",
+  "playbackSpeed": 1,
+  "publishedFile": "satisfaction-iphone-walkthrough.mp4",
+  "scope": "Actual-speed walkthrough from one passing current native Demo case. Only initial setup and final teardown are trimmed; navigation, both appearance relaunches and their transient launch frames are preserved.",
+  "sha256": "bcaaf5fbd69efbfcd2530f59069e319de0fb8ae0d773a95a0b9a00f94aa5c2e5",
+  "sourceManifest": "satisfaction-iphone-demo-current-source-manifest.json",
+  "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+  "trimEndSeconds": 88,
+  "trimStartSeconds": 16,
+  "visualReview": "Original setup boundary and decoded samples reviewed. Independent reviewers examined original normal split/meal/share states and larger-resolution samples; encoded video source/byte integrity is separately bound here."
+}

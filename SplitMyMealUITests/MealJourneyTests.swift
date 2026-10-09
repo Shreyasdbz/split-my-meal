@@ -85,6 +85,280 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertFalse(app.buttons["meal-Cancelled dinner"].exists)
     }
 
+    func testEveryoneDraftSharesCancellationAndSavedCompletion() throws {
+        createMeal("Shared lunch")
+        XCTAssertFalse(app.descendants(matching: .any)["meal-assignment-status"].firstMatch.exists,
+                       "An empty bill must not claim assignment completion.")
+        addPerson("Alice")
+        addPerson("Bob")
+        tapScrollable("add-item")
+        fill("item-name", "Lunch")
+        fill("item-price", "12.00")
+        let everyone = revealButton("assign-everyone")
+        XCTAssertTrue(everyone.isEnabled)
+        XCTAssertTrue(app.frame.contains(everyone.frame))
+        let beforeSelection = XCTAttachment(string: "Everyone target: \(everyone.debugDescription)\nFrame: \(everyone.frame)\nApp: \(app.frame)")
+        beforeSelection.name = "everyone-native-full-row-target"
+        beforeSelection.lifetime = .keepAlways
+        add(beforeSelection)
+        let originalKeyboard = XCTAttachment(string: app.keyboards.debugDescription)
+        originalKeyboard.name = "everyone-original-native-keyboard-hierarchy"
+        originalKeyboard.lifetime = .keepAlways
+        add(originalKeyboard)
+        screenshot("everyone-original-native-keyboard")
+        everyone.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Bulk assignment must finish price entry without losing the draft.")
+        XCTAssertEqual(app.textFields["item-price"].value as? String, "12.00")
+        XCTAssertFalse(everyone.isEnabled)
+        for name in ["Alice", "Bob"] {
+            let person = app.switches["item-consumer-\(name)"]
+            XCTAssertEqual(person.value as? String, "1")
+            XCTAssertTrue(person.label.contains(name) && person.label.contains("6.00"), "The native switch must expose the person and exact item share.")
+        }
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            app.textFields["item-price"].tap()
+            let nativeDone = app.keyboards.buttons["Done"].firstMatch
+            let nativeReady = NSPredicate(format: "exists == 1 AND isHittable == 1")
+            XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: nativeReady, object: nativeDone)], timeout: 5), .completed,
+                           "Price entry must provide a hittable native keyboard Done key.")
+            XCTAssertTrue(nativeDone.exists)
+            XCTAssertTrue(nativeDone.isHittable)
+            let nativeKeyboard = XCTAttachment(string: "Native Done: \(nativeDone.debugDescription)\nDone frame: \(nativeDone.frame)\nKeyboard: \(app.keyboards.debugDescription)")
+            nativeKeyboard.name = "everyone-pad-price-native-done-ready"
+            nativeKeyboard.lifetime = .keepAlways
+            add(nativeKeyboard)
+            screenshot("everyone-pad-price-native-done-ready")
+            nativeDone.tap()
+            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Native price Done must finish entry.")
+            XCTAssertEqual(app.textFields["item-price"].value as? String, "12.00")
+            for name in ["Alice", "Bob"] {
+                XCTAssertEqual(app.switches["item-consumer-\(name)"].value as? String, "1")
+            }
+        }
+        screenshot("satisfaction-everyone-draft-item-shares")
+        app.buttons["save-item"].tap()
+        XCTAssertTrue(app.buttons["item-Lunch"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["meal-assignment-status"].firstMatch.exists)
+        tapScrollable("item-Lunch")
+        let alice = app.switches["item-consumer-Alice"]
+        revealButton(alice, name: "item-consumer-Alice")
+        alice.coordinate(withNormalizedOffset: CGVector(dx: 0.93, dy: 0.5)).tap()
+        XCTAssertEqual(alice.value as? String, "0")
+        XCTAssertTrue(app.switches["item-consumer-Bob"].label.contains("12.00"))
+        screenshot("satisfaction-individual-exception-draft")
+        app.buttons["Cancel"].tap()
+        tapScrollable("item-Lunch")
+        for name in ["Alice", "Bob"] {
+            let person = app.switches["item-consumer-\(name)"]
+            XCTAssertEqual(person.value as? String, "1", "Cancel must preserve saved assignments.")
+            XCTAssertTrue(person.label.contains("6.00"))
+        }
+        replace("item-price", with: "12.345")
+        XCTAssertFalse(app.switches["item-consumer-Alice"].label.contains("6.00"), "Invalid drafts must not retain stale monetary previews.")
+        app.buttons["Cancel"].tap()
+        app.terminate()
+        app.launchArguments = ["--uitesting"]
+        launchForMealTesting()
+        app.buttons["meal-Shared lunch"].tap()
+        XCTAssertTrue(app.buttons["item-Lunch"].waitForExistence(timeout: 5))
+        app.buttons["view-split"].tap()
+        XCTAssertTrue(app.descendants(matching: .any)["split-assignment-status"].firstMatch.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts.containing(NSPredicate(format: "label CONTAINS %@", "6.00")).firstMatch.exists)
+        XCTAssertTrue(app.buttons["share-split"].isHittable)
+        XCTAssertTrue(app.buttons["share-split"].label.contains("Share split"))
+        screenshot("satisfaction-complete-split")
+    }
+
+    /// Uses the real system preference and restores its original value even after a journey assertion fails.
+    func testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit() throws {
+        let settings = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
+        let motion = openReduceMotionSetting(in: settings)
+        let original = motion.value as? String
+        XCTAssertTrue(original == "0" || original == "1", "Native Reduce Motion must expose its original switch value.")
+        guard let original else { return }
+        addTeardownBlock { @MainActor [self] () async throws in
+            // Restoration must finish and report every failed check even when
+            // the journey stopped at its first assertion.
+            continueAfterFailure = true
+            XCUIDevice.shared.orientation = .portrait
+            settings.activate()
+            XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 5))
+            let control = settings.switches["Reduce Motion"].firstMatch
+            XCTAssertTrue(control.waitForExistence(timeout: 5), "The original native preference must remain available for restoration.")
+            XCTAssertTrue(control.isHittable)
+            if control.value as? String != original {
+                control.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
+            }
+            let restored = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == %@", original), object: control)
+            XCTAssertEqual(XCTWaiter.wait(for: [restored], timeout: 5), .completed)
+            let runnerRestored = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+                UIAccessibility.isReduceMotionEnabled == (original == "1")
+            }, object: nil)
+            let runnerRestoration = await XCTWaiter.fulfillment(of: [runnerRestored], timeout: 5)
+            XCTAssertEqual(runnerRestoration, .completed,
+                           "UIKit must receive the native preference-change notification.")
+            let proof = XCTAttachment(string: "Original Reduce Motion: \(original)\nRestored switch: \(String(describing: control.value))\nRunner Reduce Motion: \(UIAccessibility.isReduceMotionEnabled)\nNative Settings hierarchy: \(settings.debugDescription)")
+            proof.name = "reduce-motion-native-restoration"
+            proof.lifetime = .keepAlways
+            add(proof)
+            let pixels = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            pixels.name = "reduce-motion-native-restored-setting"
+            pixels.lifetime = .keepAlways
+            add(pixels)
+            XCTAssertEqual(UIAccessibility.isReduceMotionEnabled, original == "1", "UIKit must reflect the restored native preference.")
+            settings.terminate()
+            app.activate()
+        }
+        let baseline = XCTAttachment(string: "Original Reduce Motion: \(original)\nRunner Reduce Motion: \(UIAccessibility.isReduceMotionEnabled)")
+        baseline.name = "reduce-motion-native-baseline"
+        baseline.lifetime = .keepAlways
+        add(baseline)
+        // Settings exposes a labeled parent and a trailing nested switch.
+        // Target the native switch rather than the center of its text label.
+        if original == "0" { motion.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap() }
+        let enabled = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == %@", "1"), object: motion)
+        XCTAssertEqual(XCTWaiter.wait(for: [enabled], timeout: 5), .completed)
+        XCTAssertTrue(UIAccessibility.isReduceMotionEnabled, "The runner must observe the real native Reduce Motion preference.")
+        launchDemo()
+        openDemo()
+        XCTAssertEqual(app.staticTexts["meal-total"].value as? String, "$113.66")
+        screenshot("reduce-motion-normal-accessibility-meal")
+        tapScrollable("item-Miso ramen")
+        let originalPrice = app.textFields["item-price"].value as? String
+        var originalAssignments: [String: String] = [:]
+        for name in ["Alex", "Jordan", "Sam"] {
+            let person = app.switches["item-consumer-" + name]
+            revealButton(person, name: "reduce-motion-original-" + name)
+            originalAssignments[name] = person.value as? String
+        }
+        replace("item-price", with: "0.01")
+        let everyone = revealButton("assign-everyone")
+        XCTAssertTrue(everyone.isEnabled)
+        everyone.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+        var previewLabels: [String] = []
+        for name in ["Alex", "Jordan", "Sam"] {
+            let person = app.switches["item-consumer-" + name]
+            revealButton(person, name: "reduce-motion-everyone-" + name)
+            XCTAssertEqual(person.value as? String, "1")
+            previewLabels.append(person.label)
+        }
+        XCTAssertEqual(previewLabels.filter { $0.contains("0.01") }.count, 1)
+        XCTAssertEqual(previewLabels.filter { $0.contains("0.00") }.count, 2)
+        XCTAssertFalse(everyone.isEnabled)
+        screenshot("reduce-motion-normal-accessibility-item-draft")
+        app.buttons["Cancel"].tap()
+        tapScrollable("item-Miso ramen")
+        XCTAssertEqual(app.textFields["item-price"].value as? String, originalPrice)
+        for name in ["Alex", "Jordan", "Sam"] {
+            let person = app.switches["item-consumer-" + name]
+            revealButton(person, name: "reduce-motion-cancelled-" + name)
+            XCTAssertEqual(person.value as? String, originalAssignments[name], "Cancel must preserve the original saved assignment.")
+        }
+        app.buttons["Cancel"].tap()
+        app.terminate()
+        app.launchArguments = ["--uitesting", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        launchForMealTesting()
+        XCTAssertTrue(app.buttons["meal-Dinner at Juniper"].waitForExistence(timeout: 5))
+        screenshot("reduce-motion-largest-accessibility-library")
+        openDemo()
+        XCTAssertTrue(UIAccessibility.isReduceMotionEnabled)
+        XCTAssertEqual(app.staticTexts["meal-total"].value as? String, "$113.66")
+        screenshot("reduce-motion-largest-accessibility-meal")
+        tapScrollable("item-Miso ramen")
+        let preview = app.switches["item-consumer-Alex"]
+        revealButton(preview, name: "reduce-motion-largest-item-share")
+        XCTAssertEqual(preview.value as? String, "1")
+        XCTAssertTrue(preview.label.contains("Alex") && preview.label.contains("19.00"))
+        XCTAssertTrue(app.frame.contains(preview.frame))
+        screenshot("reduce-motion-largest-accessibility-item-share")
+        app.buttons["Cancel"].tap()
+        app.buttons["view-split"].tap()
+        XCTAssertTrue(app.navigationBars["Split summary"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["split-total"].value as? String, "$113.66")
+        XCTAssertTrue(app.descendants(matching: .any)["split-assignment-status"].firstMatch.waitForExistence(timeout: 5))
+        settleOrientation(.landscapeLeft)
+        let total = app.staticTexts["split-total"]
+        revealButton(total, name: "reduce-motion-largest-landscape-total")
+        XCTAssertEqual(total.value as? String, "$113.66")
+        screenshot("reduce-motion-largest-accessibility-landscape-total")
+        let share = app.buttons["share-split"]
+        XCTAssertTrue(share.waitForExistence(timeout: 5))
+        XCTAssertTrue(share.isHittable)
+        XCTAssertTrue(share.isEnabled)
+        XCTAssertTrue(app.frame.contains(share.frame), "The complete Share split target must remain inside the largest-text landscape viewport.")
+        screenshot("reduce-motion-largest-accessibility-landscape-split")
+        share.tap()
+        XCTAssertTrue(app.otherElements["ActivityListView"].waitForExistence(timeout: 5))
+        screenshot("reduce-motion-native-share-sheet")
+        closeShareSheet()
+    }
+
+    /// Opens Accessibility → Motion through native Settings rows, without relying on its search index.
+    private func openReduceMotionSetting(in settings: XCUIApplication) -> XCUIElement {
+        func capture(_ stage: String) {
+            let tree = XCTAttachment(string: settings.debugDescription)
+            tree.name = "reduce-motion-settings-" + stage + "-hierarchy"
+            tree.lifetime = .keepAlways
+            add(tree)
+            let pixels = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            pixels.name = "reduce-motion-settings-" + stage
+            pixels.lifetime = .keepAlways
+            add(pixels)
+        }
+        settings.launch()
+        XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 5))
+        capture("entry")
+        let search = settings.searchFields["Search"].firstMatch
+        if search.exists {
+            let clear = search.buttons["Clear text"]
+            if clear.exists {
+                XCTAssertTrue(clear.isHittable)
+                clear.tap()
+            }
+        }
+        let close = settings.buttons["close"]
+        if close.exists {
+            XCTAssertTrue(close.isHittable)
+            close.tap()
+            XCTAssertTrue(settings.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+        }
+        if settings.keyboards.firstMatch.exists {
+            let hide = settings.keyboards.buttons["Hide keyboard"]
+            XCTAssertTrue(hide.waitForExistence(timeout: 5), "The native Settings keyboard must expose its dismissal control.")
+            XCTAssertTrue(hide.isHittable)
+            hide.tap()
+            XCTAssertTrue(settings.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+        }
+        let sidebar = settings.collectionViews["com.apple.settings.sidebar.collectionView"]
+        for _ in 0..<6 where !sidebar.exists {
+            let back = settings.navigationBars.buttons.matching(NSPredicate(format: "label IN %@", ["Settings", "Apps", "Split My Meal", "Accessibility", "Motion"])).firstMatch
+            XCTAssertTrue(back.waitForExistence(timeout: 5), "Native Settings must expose its parent navigation before opening Accessibility.")
+            XCTAssertTrue(back.isHittable)
+            back.tap()
+        }
+        capture("root")
+        XCTAssertTrue(sidebar.waitForExistence(timeout: 5))
+        XCTAssertTrue(settings.frame.intersects(sidebar.frame), "The native Settings sidebar must be inside its visible window.")
+        let accessibility = sidebar.buttons["com.apple.settings.accessibility"]
+        for _ in 0..<8 where !accessibility.isHittable { sidebar.swipeUp(velocity: .slow) }
+        XCTAssertTrue(accessibility.waitForExistence(timeout: 5), "Native Settings must expose the Accessibility row.")
+        XCTAssertTrue(accessibility.isHittable)
+        accessibility.tap()
+        capture("accessibility")
+        XCTAssertTrue(settings.navigationBars["Accessibility"].waitForExistence(timeout: 5))
+        let motion = settings.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Motion")).firstMatch
+        XCTAssertTrue(motion.waitForExistence(timeout: 5), "Accessibility must expose its native Motion row.")
+        XCTAssertTrue(motion.isHittable)
+        motion.tap()
+        capture("motion")
+        XCTAssertTrue(settings.navigationBars["Motion"].waitForExistence(timeout: 5))
+        let control = settings.switches["Reduce Motion"].firstMatch
+        XCTAssertTrue(control.waitForExistence(timeout: 5))
+        XCTAssertTrue(control.isHittable)
+        return control
+    }
+
     func testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged() throws {
         screenshot("library-empty-state")
         app.buttons["new-meal"].tap()
@@ -1044,16 +1318,21 @@ final class MealJourneyTests: XCTestCase {
             let context = scrollingContext()
             let top = context.top
             let bottom = context.bottom
-            if button.exists && button.frame.minY > top && button.frame.maxY < bottom { break }
-            let before = button.exists ? String(describing: button.frame) : "not instantiated"
-            if button.exists && button.frame.minY < top {
-                scrollContent(up: false, distance: top - button.frame.minY + 12)
-            } else if button.exists && button.frame.maxY >= bottom {
-                scrollContent(up: true, distance: button.frame.maxY - bottom + 12)
+            let exists = button.exists
+            let frame = exists ? button.frame : nil
+            if let frame, frame.minY > top && frame.maxY < bottom { break }
+            let before = frame.map { String(describing: $0) } ?? "not instantiated"
+            if let frame, frame.minY < top {
+                scrollContent(up: false, distance: top - frame.minY + 12, context: context)
+            } else if let frame, frame.maxY >= bottom {
+                scrollContent(up: true, distance: frame.maxY - bottom + 12, context: context)
             } else {
-                scrollContent(up: prefersTop ? attempt >= 12 : attempt < 12)
+                scrollContent(up: prefersTop ? attempt >= 12 : attempt < 12, context: context)
             }
-            movements.append("Attempt \(attempt): before \(before); after \(button.exists ? String(describing: button.frame) : "not instantiated"); viewport \(top)...\(bottom)")
+            // Refresh after the native gesture; an earlier frame cannot describe its result.
+            let afterExists = button.exists
+            let afterFrame = afterExists ? button.frame : nil
+            movements.append("Attempt \(attempt): before \(before); after \(afterFrame.map { String(describing: $0) } ?? "not instantiated"); viewport \(top)...\(bottom)")
         }
         if !movements.isEmpty {
             let record = XCTAttachment(string: movements.joined(separator: "\n"))
@@ -1061,45 +1340,66 @@ final class MealJourneyTests: XCTestCase {
             record.lifetime = .keepAlways
             add(record)
         }
-        XCTAssertTrue(button.exists, "Control must be reachable: \(identifier)")
-        let context = scrollingContext()
-        XCTAssertGreaterThan(button.frame.minY, context.top, "List control must be below its foreground toolbar.")
-        XCTAssertLessThan(button.frame.maxY, context.bottom, "List control must remain within the foreground content viewport.")
+        let exists = button.exists
+        XCTAssertTrue(exists, "Control must be reachable: \(identifier)")
+        if exists {
+            // Independently resolve the final foreground viewport and target after all gestures.
+            let context = scrollingContext()
+            let frame = button.frame
+            XCTAssertGreaterThan(frame.minY, context.top, "List control must be below its foreground toolbar.")
+            if frame.minY <= context.top || frame.maxY >= context.bottom {
+                screenshot("unreachable-control-" + identifier)
+            }
+            XCTAssertLessThan(frame.maxY, context.bottom, "List control must remain within the foreground content viewport.")
+        }
         return button
     }
 
+    private typealias ScrollingContext = (surface: XCUIElement, frame: CGRect, top: CGFloat, bottom: CGFloat, leading: CGFloat)
+
     /// Identifies the foreground form from its native modal navigation bar and
-    /// collection geometry; a backing split-view footer can remain hittable.
-    private func scrollingContext() -> (surface: XCUIElement, top: CGFloat, bottom: CGFloat, leading: CGFloat) {
+    /// collection geometry; captured frames are valid only until the next native interaction.
+    private func scrollingContext() -> ScrollingContext {
         let bars = app.navigationBars.allElementsBoundByIndex
         let modal = bars.last { $0.buttons["Cancel"].exists || $0.buttons["Done"].exists || $0.buttons["Close"].exists }
         let collections = app.collectionViews.allElementsBoundByIndex
+        let appFrame = app.frame
         if let modal {
             let bar = modal.frame
             let belowBar = CGPoint(x: bar.midX, y: bar.maxY + 10)
-            let candidates = collections.filter {
-                let frame = $0.frame
-                return abs(frame.minX - bar.minX) < 2 && abs(frame.width - bar.width) < 2 && frame.contains(belowBar)
+            let candidates = collections.map { (element: $0, frame: $0.frame) }.filter {
+                abs($0.frame.minX - bar.minX) < 2 && abs($0.frame.width - bar.width) < 2 && $0.frame.contains(belowBar)
             }
-            let surface = candidates.min { $0.frame.height < $1.frame.height } ?? app!
+            let surface = candidates.min { $0.frame.height < $1.frame.height } ?? (element: app!, frame: appFrame)
             XCTAssertFalse(candidates.isEmpty, "A native editor must expose its foreground scrollable form.")
-            return (surface, max(bar.maxY, surface.frame.minY), surface.frame.maxY - 4, bar.minX + 8)
+            let share = app.buttons["share-split"]
+            let shareFrame = modal.identifier == "Split summary" && share.exists && share.isHittable ? share.frame : nil
+            let bottom = min(surface.frame.maxY - 4, shareFrame.map { $0.minY - 4 } ?? surface.frame.maxY - 4)
+            // Landscape lists include the device's horizontal safe area in their
+            // AX frame. Drag inside the noninteractive total row, rather than
+            // the screen-edge gutter outside the actual split content.
+            let total = app.staticTexts["split-total"]
+            let leading = modal.identifier == "Split summary" && total.exists ? total.frame.minX + 12 : bar.minX + 8
+            return (surface.element, surface.frame, max(bar.maxY, surface.frame.minY), bottom, leading)
         }
-        let surface = collections.last ?? app!
+        let surface = collections.last.map { (element: $0, frame: $0.frame) } ?? (element: app!, frame: appFrame)
         let footer = app.buttons["view-split"]
-        let top = bars.filter(\.isHittable).map { $0.frame.maxY }.max() ?? app.frame.minY
-        let bottom = min(footer.isHittable ? footer.frame.minY - 4 : app.frame.maxY - 20, surface.frame.maxY - 4)
-        let leading = footer.isHittable ? footer.frame.minX - 8 : surface.frame.minX + 8
-        return (surface, max(top, surface.frame.minY), bottom, leading)
+        let footerHittable = footer.isHittable
+        let footerFrame = footerHittable ? footer.frame : nil
+        let visibleBarFrames = bars.filter(\.isHittable).map(\.frame)
+        let top = visibleBarFrames.map(\.maxY).max() ?? appFrame.minY
+        let bottom = min(footerFrame.map { $0.minY - 4 } ?? appFrame.maxY - 20, surface.frame.maxY - 4)
+        let leading = footerFrame.map { $0.minX - 8 } ?? surface.frame.minX + 8
+        return (surface.element, surface.frame, max(top, surface.frame.minY), bottom, leading)
     }
 
     private func visibleNavigationBottom() -> CGFloat {
         scrollingContext().top
     }
 
-    private func scrollContent(up: Bool, distance: CGFloat? = nil) {
-        let context = scrollingContext()
-        let frame = context.surface.frame
+    private func scrollContent(up: Bool, distance: CGFloat? = nil, context capturedContext: ScrollingContext? = nil) {
+        let context = capturedContext ?? scrollingContext()
+        let frame = context.frame
         let top = context.top + 20
         let bottom = context.bottom - 20
         XCTAssertGreaterThan(bottom, top, "The foreground form must have a usable scroll viewport.")
@@ -1204,23 +1504,53 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertEqual(field.value as? String, text, "Entering a field must preserve the complete intended value.")
         // The keyboard marker can arrive after the typed value; this focused field requires native Done.
         if identifier == "person-name" {
-            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch
+            let done = app.keyboards.buttons["Done"]
             let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND isHittable == true"), object: done)
             XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed, "Person-name entry must expose a visible native Done control.")
             XCTAssertTrue(done.exists)
             XCTAssertTrue(done.isHittable)
             XCTAssertEqual(app.state, .runningForeground)
+            let keyGeometry = XCTAttachment(string: "Native keyboard key identifier: \(done.identifier)\nLabel: \(done.label)\nFrame: \(done.frame)\nKeyboard frame: \(app.keyboards.firstMatch.frame)")
+            keyGeometry.name = "native-keyboard-submit-ready-" + text
+            keyGeometry.lifetime = .keepAlways
+            add(keyGeometry)
+            screenshot("native-keyboard-submit-ready-" + text)
             done.tap()
             XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Native Done must dismiss the keyboard before saving.")
+            XCTAssertEqual(field.value as? String, text, "Native submit must preserve the complete intended person name.")
         }
     }
 
     private func replace(_ identifier: String, with text: String) {
         let field = app.textFields[identifier]
         XCTAssertTrue(field.waitForExistence(timeout: 5))
-        field.coordinate(withNormalizedOffset: CGVector(dx: 0.99, dy: 0.5)).tap()
-        let existing = field.value as? String ?? ""
-        field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: existing.count))
+        if identifier == "item-price" && UIDevice.current.userInterfaceIdiom == .pad {
+            // Focus first: the sheet moves when the native keyboard appears.
+            field.tap()
+            XCTAssertTrue(app.keyboards.firstMatch.waitForExistence(timeout: 5), "Price selection requires the actual native keyboard.")
+            let currentField = app.textFields[identifier]
+            let geometry = XCTAttachment(string: "Field before native double tap: \(currentField.debugDescription)\nField frame: \(currentField.frame)\nKeyboard: \(app.keyboards.debugDescription)\nKeyboard frame: \(app.keyboards.firstMatch.frame)")
+            geometry.name = "item-price-before-native-double-tap"
+            geometry.lifetime = .keepAlways
+            add(geometry)
+            screenshot("item-price-before-native-double-tap")
+            currentField.coordinate(withNormalizedOffset: CGVector(dx: 0.99, dy: 0.5)).doubleTap()
+            currentField.typeText(XCUIKeyboardKey.delete.rawValue)
+            screenshot("item-price-after-native-delete")
+            let cleared = XCTAttachment(string: "Field after selected native deletion: \(currentField.debugDescription)")
+            cleared.name = "item-price-after-native-delete-hierarchy"
+            cleared.lifetime = .keepAlways
+            add(cleared)
+            // XCTest returns the placeholder for empty native fields; the exact
+            // assertion below still rejects any text left behind by deletion.
+            XCTAssertEqual(currentField.placeholderValue, "0.00")
+            let clearedValue = currentField.value as? String
+            XCTAssertTrue(clearedValue == "" || clearedValue == currentField.placeholderValue, "An empty native price field may report its placeholder; replacement must still match the complete intended text.")
+        } else {
+            field.coordinate(withNormalizedOffset: CGVector(dx: 0.99, dy: 0.5)).tap()
+            let existing = field.value as? String ?? ""
+            field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: existing.count))
+        }
         field.typeText(text)
         XCTAssertEqual(field.value as? String, text, "Replacement must update the complete field before saving or converting modes.")
     }

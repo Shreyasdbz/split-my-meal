@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791511080.165,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Private Pad price keyboard experiment: initial Everyone selection, exact draft shares, actual native keyboard Done, save and exception cancellation passed; full case failed at native test replacement (12.34512 instead of 12.345) before invalid-price and relaunch assertions. No production adoption. Diagnostic observer overhead prevents an uninstrumented delivery claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-pad-input-prototype-source-manifest.json",
+  "sourceManifestSHA256": "f97e074176d6327243f9d119bbb7c73417b979000ca3f35ca48360f66313522e",
+  "startTime": 1791510997.981,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"Optional(\"12.34512\")\") is not equal to (\"Optional(\"12.345\")\") - Replacement must update the complete field before saving or converting modes.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 76.14232409000397,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

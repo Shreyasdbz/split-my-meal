@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791512177.235,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Complete uninstrumented private Pad keyboard candidate passes Everyone, actual native Done, exact shares, Save, individual exception Cancel, exact invalid-price replacement and process relaunch. Native deletion reports the empty field placeholder; final literal assertion remains exact. Maintained adoption adds Pad-only test guards and a comment; a final current-source run is separate. One invalid-frame warning and native remote hierarchy warnings remain recorded.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-native-placeholder-contract-source-manifest.json",
+  "sourceManifestSHA256": "f9021c5a7112b4def2f604fce19e8782def63c07727dca7ee896ee7b7c553b72",
+  "startTime": 1791512087.589,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 87.00271105766296,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

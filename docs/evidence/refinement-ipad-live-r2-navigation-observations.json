@@ -1,0 +1,80 @@
+{
+  "allowedLocationFailure": {
+    "actual": "CoffeeCoffee",
+    "assertion": "Idle revocation preserves the independently editable restaurant query.",
+    "expected": "Coffee",
+    "finalTreeAttachment": "0EEEC39C-FDF6-4167-8128-9D161AD45C84.txt",
+    "priorQueryAssertionPassed": true,
+    "productionQueryMutationClaim": false,
+    "retainedQueryTreeAttachment": "A3E7733E-6756-424D-BFB0-9DC7BD93CF25.txt",
+    "secondCoffeeTypingCaseRelativeSeconds": 158.58,
+    "testSequenceFinding": "The optional absent iPad close leaves the verified query intact. The later typeText appends Coffee again."
+  },
+  "appAnimationWarnings": {
+    "count": 2,
+    "nativeCaseRelativeSeconds": [
+      84.02,
+      145.34
+    ],
+    "observedInside": "native Settings"
+  },
+  "baseGitHead": "93e52bec241467ab0f7356850f527f96a5a854e3",
+  "changedInputsSincePriorMaintainedDemo": [
+    "SplitMyMealUITests/LiveMapKitTests.swift"
+  ],
+  "nativeResult": {
+    "failedTests": 2,
+    "passedTests": 3,
+    "result": "Failed",
+    "skippedTests": 0,
+    "totalTestCount": 5
+  },
+  "productionInputsUnchanged": true,
+  "rapidCancellationFailure": {
+    "assertion": "Second unscoped Cancel tap cannot resolve a unique element.",
+    "failureTreeAttachment": "216B3B49-6A45-4DBC-A473-FE3910411DDD.txt",
+    "finalScreenshotAttachment": "03D4B0E7-E281-4CE4-8E41-2672A5F4E1D9.png",
+    "firstScopedCancelTap": {
+      "caseRelativeSeconds": 10.82,
+      "downPoint": [
+        172.25,
+        292.0
+      ],
+      "eventAttachment": "8B893BF7-0534-438C-B5A5-C0DAD520F9C6",
+      "preTapScreenshotAttachedToTapActivity": false,
+      "preTapTargetFrameEstablished": false,
+      "targetFrameRecorded": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "upOffsetSeconds": 0.05,
+      "upPoint": [
+        172.25,
+        292.0
+      ]
+    },
+    "interpretation": "The earlier event point differs from the later Restaurant Cancel frame. This does not establish the earlier target frame or a production cancellation defect.",
+    "laterFailureFrames": {
+      "mealEditorCancel": [
+        14,
+        36,
+        76.5,
+        36
+      ],
+      "restaurantCancel": [
+        134,
+        105.5,
+        76.5,
+        36
+      ]
+    },
+    "laterState": "Restaurant sheet still appears with Pizza New York query and native keyboard; meal editor remains behind it.",
+    "nativeIssueAttachment": "C8DA248A-2927-41E4-A493-ED327EC3B9D4.txt"
+  },
+  "scope": "Completed five-case native iPad Live integration run; three passed and two failed. No complete stable-suite, physical-device, or causal claim.",
+  "sourceInputCount": 44,
+  "sourceManifestSha256": "32974e41238fefbeebb8f95e44aa61cc3506fc252432b060be54fbd41cbb7bfa",
+  "statusBarBaselineRestoredExactly": true
+}

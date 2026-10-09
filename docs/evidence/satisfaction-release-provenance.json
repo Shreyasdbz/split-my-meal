@@ -1,0 +1,37 @@
+{
+  "analyzer": "passed",
+  "binarySHA256": "f5804bd2385270ee32735b24f09c5cbbf3b1302382267e248bd29405e808ddc0",
+  "build": "2",
+  "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+  "codeSigning": "disabled for local verification",
+  "compilerWarnings": [
+    "Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Unsigned device build and analysis; no physical-device signing, CloudKit account or App Store operation",
+  "sourceManifest": "satisfaction-release-source-manifest.json",
+  "sourceManifestSHA256": "cc25bf3c154014beb8f8d0e5d4ebb3d645ad467d4e77884098844611e187d3db",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "validation": "Unsigned device Release build and analysis passed after adding the explicit full-row Everyone hit surface. Exact production/project source hashes match this manifest; DEBUG fixture strings are absent. Test-only Settings navigation was typechecked separately and is not a Release input.",
+  "verifiedAt": "2026-10-08T19:38:06.737905+00:00",
+  "version": "2.0.0"
+}

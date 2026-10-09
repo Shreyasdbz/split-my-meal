@@ -1,0 +1,11 @@
+{
+  "imageEdits": false,
+  "independentPixelReview": "iOS visual-design agent inspected original screenshot: complete $113.66 total and Share split/Done readable; assignment status partly under native footer at this scroll position, not certified as a complete accessibility result.",
+  "nativeAttachment": "259D0A52-E9B0-45DC-BA46-C4F494BC37F2.png",
+  "nativeResult": "satisfaction-iphone-motion-r8-results.json",
+  "publishedFile": "satisfaction-iphone-largest-landscape-total.png",
+  "scope": "Original assertion-time screenshot from passing full amount-visibility check; independent pixel review remains separate.",
+  "sha256": "6d468da75ab7d1bedd6de5341b512a85b5e6297c27ec779dd40e416be196abd0",
+  "sourceManifest": "satisfaction-iphone-motion-r8-source-manifest.json",
+  "sourceManifestSHA256": "d749f54d9d74750ada9dcbc18cb6193f319897ce71fc0b5eaf428dd1207846c8"
+}

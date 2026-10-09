@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791480138.224,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Dedicated native iPad walkthrough: one passed; native video recorded separately from complete-suite and live-suite outcomes. Production sources unchanged; original test revision retained.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-demo-source-manifest.json",
+  "sourceManifestSHA256": "fc6616bfd0080fc6cfd5a16eadedd7ef12389a8bee43f63889123c8fe59d48d8",
+  "startTime": 1791480042.176,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 93.50179708003998,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

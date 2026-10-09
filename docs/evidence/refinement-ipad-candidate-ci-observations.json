@@ -1,0 +1,64 @@
+{
+  "allTypeAccessibilityInventory": {
+    "auditTypeCounts": {
+      "1": 17,
+      "131072": 6,
+      "65536": 14
+    },
+    "issuesReported": 37,
+    "scope": "observational inventory, all reports preserved; no zero-finding certification",
+    "sha256": "0de3a7a9ab5a18c81e1104fc2f9469db1c70782486b7396522156401b0d5a02d",
+    "sourceAttachment": "3E7FCD51-3BBE-4AFF-B1E3-5B0ABA3B678E.json",
+    "unavailableIdentityReports": 10
+  },
+  "artifactId": 11568623636,
+  "artifactUploadSucceeded": true,
+  "completeNativeLogSha256": "a247cb7c091b0a3b346eaf489c3fb8d5cdbc0bb192792b31dac17756d3cf8796",
+  "diagnosticCounts": {
+    "appAnimationWarnings": 0,
+    "duplicateAccessibilityLoader": 7,
+    "executionAllowanceFailures": 5,
+    "ignoredRemoteHierarchy": 0,
+    "invalidFrameWarnings": 17,
+    "sqliteIntegrityDiagnostics": 0,
+    "sqliteUnlinkDiagnostics": 0
+  },
+  "expectedHead": "93e52bec241467ab0f7356850f527f96a5a854e3",
+  "hostCancellationUTC": "2026-10-08T17:57:33Z",
+  "hostedNativeStepConclusion": "cancelled at existing75-minute job boundary",
+  "jobId": 113425428086,
+  "nativeBundleCompleted": true,
+  "nativeResult": {
+    "failedTests": 6,
+    "passedTests": 47,
+    "result": "Failed",
+    "skippedTests": 0,
+    "totalTestCount": 53
+  },
+  "nativeSummaryRecovered": true,
+  "nativeTestExecuteFailedBeforeHostCancellation": true,
+  "nativeTestExecuteFailedUTC": "2026-10-08T17:57:29Z",
+  "productionDifferencesFromRelease": [],
+  "productionInputCount": 33,
+  "runtime": {
+    "architecture": "arm64",
+    "model": "iPad A16",
+    "osBuildNumber": "24A434",
+    "osVersion": "27.0",
+    "platform": "iOS Simulator"
+  },
+  "scope": "Hosted candidate iPad verification; completed native failed suite, no clean full-pass claim.",
+  "sourceDifferencesFromPrior594FileDictionary": [],
+  "sourceInputCount": 44,
+  "sourceManifestSha256": "fc6616bfd0080fc6cfd5a16eadedd7ef12389a8bee43f63889123c8fe59d48d8",
+  "strictFourTypeGate": {
+    "identifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+    "seconds": 78.45920193195343,
+    "status": "Passed"
+  },
+  "uiPasses": 20,
+  "unitPasses": 27,
+  "uploadedSummaryRetainedUnchanged": true,
+  "uploadedSummaryWasEmpty": true,
+  "workflowRun": 37810387834
+}

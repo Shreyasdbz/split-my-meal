@@ -1,0 +1,16 @@
+{
+  "excludedReports": 0,
+  "inventoryFile": "satisfaction-iphone-b-current-all-type-accessibility-inventory.json",
+  "inventorySHA256": "8aed5fe13413571728bdefedb9034d9613050c0bc50be4d94d5fdc21120770d2",
+  "issuesReported": 30,
+  "reportCountsByAuditType": {
+    "1": 16,
+    "131072": 3,
+    "65536": 11
+  },
+  "scope": "Complete current B-partition diagnostic inventory; collecting reports is not an accessibility pass. Native strict control gate belongs to A and is not executed by this partition. Library people/date have near-failed contrast reports after the semantic-label change; review remains required.",
+  "sourceManifest": "satisfaction-iphone-b-current-source-manifest.json",
+  "sourceManifestSHA256": "b6d6cd6661bb549f783610ce87e82fc6fe1eb0771b7a4f8894ac79c972564738",
+  "sourceResults": "satisfaction-iphone-b-current-results.json",
+  "unavailableElementIdentityReports": 1
+}

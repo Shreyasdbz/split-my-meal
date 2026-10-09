@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791512367.457,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Maintained final iPhone Everyone case passed. The launch command also included a nonexistent motion selector, so native results certify only this one executed case; the actual motion case is verified separately. No full two-case claim is made.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-final-everyone-source-manifest.json",
+  "sourceManifestSHA256": "de0193ad3914f031a71da6404f6af5b5b4278e26d54059760db13bca79d8472d",
+  "startTime": 1791512295.85,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 68.58444106578827,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

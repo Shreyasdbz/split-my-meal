@@ -1,0 +1,70 @@
+{
+  "changedInputs": [
+    "SplitMyMealUITests/MealJourneyTests.swift"
+  ],
+  "failure": {
+    "actualDoneTapExecuted": false,
+    "assertion": "Person-name entry must expose a visible native Done control.",
+    "debugDescriptionSeconds": 21.58,
+    "failureScreenshot": "A31391BC-3C18-4696-B6A0-C630D2146D73.png",
+    "failureScreenshotSHA256": "ec1b7eb3f8643ba90b8b3e9a341fbf718121ac1059c08a09feef221401c084ed",
+    "failureTree": "2A533F19-23A5-4AA1-8786-74F68658FEBE.txt",
+    "failureTreeSHA256": "abe6eb1089cf9a9e4aec5812d6b6e800f635ca88ef7184b1c001b6e0e8df8a03",
+    "findCandidateSeconds": 19.88,
+    "hittabilityIndividualValueNotRecorded": true,
+    "laterFailureState": {
+      "foregroundVisibleSurface": "New person",
+      "keyboard": {
+        "existsInTree": true,
+        "frame": [
+          0,
+          898,
+          820,
+          279
+        ]
+      },
+      "keyboardReturn": {
+        "frame": [
+          691.5,
+          969,
+          126.5,
+          63.5
+        ],
+        "identifier": "Done",
+        "label": "done"
+      },
+      "textFieldKeyboardFocused": true,
+      "toolbarDone": {
+        "frame": [
+          731.5,
+          803,
+          64.5,
+          36
+        ],
+        "label": "Done"
+      },
+      "typedPersonName": "Riley"
+    },
+    "laterFrameCaveat": "The teardown screenshot/tree establish this later visible state, not readiness or hittability during the failed five-second predicate.",
+    "observedPredicateCheckSeconds": 17.33,
+    "readinessCandidateDescription": "EF8ECDC6-9491-4BBD-9B48-BD451BCACBA9.txt",
+    "readinessPredicate": "exists == true AND isHittable == true",
+    "result": "timedOut",
+    "seconds": 24.663,
+    "test": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+    "waitLimitSeconds": 5
+  },
+  "nativeResult": {
+    "failed": 1,
+    "passed": 4,
+    "skipped": 0,
+    "total": 5
+  },
+  "performanceOrFrameworkCauseAttributed": false,
+  "requestedSoleActiveJobConditionMet": false,
+  "scope": "Observation of unchanged native Done readiness failure in the private scroll-query comparison; no cause or adoption claim.",
+  "sourceInputCount": 44,
+  "sourceManifestSha256": "860fd82a266b35f1a4d55550b2b1d5d1200e0742309ec488559bcddf9abd65d7",
+  "statusBarBaselineRestoredExactly": true,
+  "unrelatedNativeJobsActive": true
+}

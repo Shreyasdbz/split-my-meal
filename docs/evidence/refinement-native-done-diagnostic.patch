@@ -1,0 +1,30 @@
+--- baseline-a8/MealJourneyTests.swift
++++ private-direct-Done/MealJourneyTests.swift
+@@ -1202,8 +1202,25 @@
+         field.tap()
+         field.typeText(text)
+         XCTAssertEqual(field.value as? String, text, "Entering a field must preserve the complete intended value.")
+-        // Exercise visible native Done after complete person-name entry.
+-        if identifier == "person-name" { dismissKeyboard() }
++        if identifier == "person-name" {
++            let keyboardMarkerBeforeReady = app.keyboards.firstMatch.exists
++            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch
++            let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND isHittable == true"), object: done)
++            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed, "The foreground person editor must expose its visible native Done action.")
++            XCTAssertTrue(done.exists)
++            XCTAssertTrue(done.isHittable)
++            XCTAssertEqual(app.state, .runningForeground)
++            let selection = XCTAttachment(string: "Person value: \(field.value as? String ?? "")\nChosen native Done frame: \(done.frame)\nHittable: \(done.isHittable)\nForeground app state: \(app.state.rawValue)\nSoftware keyboard marker before ready: \(keyboardMarkerBeforeReady)\nSoftware keyboard marker at direct tap: \(app.keyboards.firstMatch.exists)\nAccessibility tree: \(app.debugDescription)")
++            selection.name = "private-person-native-done-direct-selection"
++            selection.lifetime = .keepAlways
++            add(selection)
++            let visible = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
++            visible.name = "private-person-native-done-visible-state"
++            visible.lifetime = .keepAlways
++            add(visible)
++            done.tap()
++            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "The keyboard must dismiss after directly tapping the selected native Done action.")
++        }
+     }
+ 
+     private func replace(_ identifier: String, with text: String) {

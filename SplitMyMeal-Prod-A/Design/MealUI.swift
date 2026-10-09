@@ -32,6 +32,32 @@ extension View {
     func mealFocusedContent() -> some View {
         modifier(MealFocusedContent())
     }
+
+    /// Connects changes to an existing amount without delaying its final value.
+    /// Initial presentation is static; Reduce Motion removes the transition.
+    func mealAmountTransition(_ amount: Double) -> some View {
+        modifier(MealAmountChange(amount: amount))
+    }
+}
+
+private struct MealAmountChange: ViewModifier {
+    let amount: Double
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func body(content: Content) -> some View {
+        content
+            .contentTransition(reduceMotion ? .identity : .numericText(value: amount))
+            .animation(reduceMotion ? nil : .smooth(duration: 0.22), value: amount)
+    }
+}
+
+/// A positive assignment state, separate from payment or delivery of a share.
+struct MealAssignmentStatus: View {
+    var body: some View {
+        Label("All items assigned", systemImage: "checkmark.circle.fill")
+            .font(.subheadline)
+            .foregroundStyle(Color.mealSecondaryText)
+    }
 }
 
 /// A decorative disclosure cue; the containing button owns its accessible name.
@@ -90,13 +116,13 @@ struct AmountRow: View {
             if textSize.isAccessibilitySize {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
-                    Text(mealCurrency(amount)).monospacedDigit()
+                    Text(mealCurrency(amount)).monospacedDigit().mealAmountTransition(amount)
                 }
             } else {
                 HStack(alignment: .firstTextBaseline) {
                     Text(title)
                     Spacer(minLength: 16)
-                    Text(mealCurrency(amount)).monospacedDigit()
+                    Text(mealCurrency(amount)).monospacedDigit().mealAmountTransition(amount)
                 }
             }
         }

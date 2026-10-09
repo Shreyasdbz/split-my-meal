@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791489655.743,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Failed focused native phone attempt: all motion journey body checks completed, but synchronous runner preference-restoration polling timed out. Native original setting restoration and runner notification are distinct; this is not a passing journey.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-motion-r4-source-manifest.json",
+  "sourceManifestSHA256": "54afa571943be0804054baac357f0373087936f8748ac0f533d64816e6e91f1c",
+  "startTime": 1791489366.192,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\") - UIKit must receive the native preference-change notification.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit",
+      "testName": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 240,
+      "name": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "nodeIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

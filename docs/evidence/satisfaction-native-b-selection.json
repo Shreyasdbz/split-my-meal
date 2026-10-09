@@ -1,0 +1,30 @@
+{
+  "catalogueSha256": "126b45af88a8109970afbd8a50b40a538dbae52a091db649292425e91881b8c5",
+  "disabledLiveTests": [
+    "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+    "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+    "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+    "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()"
+  ],
+  "enumerationSha256": "409d2315b6a221977bd9a8d98163c256452eab694dab4486b57672762088143c",
+  "partition": "b",
+  "schemaVersion": 1,
+  "selectedTestCount": 13,
+  "stableTestCount": 56,
+  "testIdentifiers": [
+    "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+    "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+    "SplitMyMealUITests/MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+    "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+    "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+    "SplitMyMealUITests/MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+    "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+    "SplitMyMealUITests/MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation()",
+    "SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+    "SplitMyMealUITests/MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+    "SplitMyMealUITests/MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares()",
+    "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+    "SplitMyMealUITests/MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth()"
+  ]
+}

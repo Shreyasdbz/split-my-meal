@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791509248.456,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Complete strengthened native Reduce Motion journey passed, including exact-cent draft cancellation, largest-text landscape total fully within the content viewport, native share sheet and asynchronous restoration of original Settings and runner values.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-motion-r8-source-manifest.json",
+  "sourceManifestSHA256": "d749f54d9d74750ada9dcbc18cb6193f319897ce71fc0b5eaf428dd1207846c8",
+  "startTime": 1791509132.32,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 113.30118703842163,
+      "name": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "nodeIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

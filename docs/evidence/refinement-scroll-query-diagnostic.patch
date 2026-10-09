@@ -1,0 +1,109 @@
+diff --git a/SplitMyMealUITests/MealJourneyTests.swift b/SplitMyMealUITests/MealJourneyTests.swift
+index 139dfeb..de15175 100644
+--- a/SplitMyMealUITests/MealJourneyTests.swift
++++ b/SplitMyMealUITests/MealJourneyTests.swift
+@@ -1044,16 +1044,21 @@ final class MealJourneyTests: XCTestCase {
+             let context = scrollingContext()
+             let top = context.top
+             let bottom = context.bottom
+-            if button.exists && button.frame.minY > top && button.frame.maxY < bottom { break }
+-            let before = button.exists ? String(describing: button.frame) : "not instantiated"
+-            if button.exists && button.frame.minY < top {
+-                scrollContent(up: false, distance: top - button.frame.minY + 12)
+-            } else if button.exists && button.frame.maxY >= bottom {
+-                scrollContent(up: true, distance: button.frame.maxY - bottom + 12)
++            let exists = button.exists
++            let frame = exists ? button.frame : nil
++            if let frame, frame.minY > top && frame.maxY < bottom { break }
++            let before = frame.map { String(describing: $0) } ?? "not instantiated"
++            if let frame, frame.minY < top {
++                scrollContent(up: false, distance: top - frame.minY + 12, context: context)
++            } else if let frame, frame.maxY >= bottom {
++                scrollContent(up: true, distance: frame.maxY - bottom + 12, context: context)
+             } else {
+-                scrollContent(up: prefersTop ? attempt >= 12 : attempt < 12)
++                scrollContent(up: prefersTop ? attempt >= 12 : attempt < 12, context: context)
+             }
+-            movements.append("Attempt \(attempt): before \(before); after \(button.exists ? String(describing: button.frame) : "not instantiated"); viewport \(top)...\(bottom)")
++            // Refresh after the native gesture; an earlier frame cannot describe its result.
++            let afterExists = button.exists
++            let afterFrame = afterExists ? button.frame : nil
++            movements.append("Attempt \(attempt): before \(before); after \(afterFrame.map { String(describing: $0) } ?? "not instantiated"); viewport \(top)...\(bottom)")
+         }
+         if !movements.isEmpty {
+             let record = XCTAttachment(string: movements.joined(separator: "\n"))
+@@ -1061,45 +1066,55 @@ final class MealJourneyTests: XCTestCase {
+             record.lifetime = .keepAlways
+             add(record)
+         }
+-        XCTAssertTrue(button.exists, "Control must be reachable: \(identifier)")
+-        let context = scrollingContext()
+-        XCTAssertGreaterThan(button.frame.minY, context.top, "List control must be below its foreground toolbar.")
+-        XCTAssertLessThan(button.frame.maxY, context.bottom, "List control must remain within the foreground content viewport.")
++        let exists = button.exists
++        XCTAssertTrue(exists, "Control must be reachable: \(identifier)")
++        if exists {
++            // Independently resolve the final foreground viewport and target after all gestures.
++            let context = scrollingContext()
++            let frame = button.frame
++            XCTAssertGreaterThan(frame.minY, context.top, "List control must be below its foreground toolbar.")
++            XCTAssertLessThan(frame.maxY, context.bottom, "List control must remain within the foreground content viewport.")
++        }
+         return button
+     }
+ 
++    private typealias ScrollingContext = (surface: XCUIElement, frame: CGRect, top: CGFloat, bottom: CGFloat, leading: CGFloat)
++
+     /// Identifies the foreground form from its native modal navigation bar and
+-    /// collection geometry; a backing split-view footer can remain hittable.
+-    private func scrollingContext() -> (surface: XCUIElement, top: CGFloat, bottom: CGFloat, leading: CGFloat) {
++    /// collection geometry; captured frames are valid only until the next native interaction.
++    private func scrollingContext() -> ScrollingContext {
+         let bars = app.navigationBars.allElementsBoundByIndex
+         let modal = bars.last { $0.buttons["Cancel"].exists || $0.buttons["Done"].exists || $0.buttons["Close"].exists }
+         let collections = app.collectionViews.allElementsBoundByIndex
++        let appFrame = app.frame
+         if let modal {
+             let bar = modal.frame
+             let belowBar = CGPoint(x: bar.midX, y: bar.maxY + 10)
+-            let candidates = collections.filter {
+-                let frame = $0.frame
+-                return abs(frame.minX - bar.minX) < 2 && abs(frame.width - bar.width) < 2 && frame.contains(belowBar)
++            let candidates = collections.map { (element: $0, frame: $0.frame) }.filter {
++                abs($0.frame.minX - bar.minX) < 2 && abs($0.frame.width - bar.width) < 2 && $0.frame.contains(belowBar)
+             }
+-            let surface = candidates.min { $0.frame.height < $1.frame.height } ?? app!
++            let surface = candidates.min { $0.frame.height < $1.frame.height } ?? (element: app!, frame: appFrame)
+             XCTAssertFalse(candidates.isEmpty, "A native editor must expose its foreground scrollable form.")
+-            return (surface, max(bar.maxY, surface.frame.minY), surface.frame.maxY - 4, bar.minX + 8)
++            return (surface.element, surface.frame, max(bar.maxY, surface.frame.minY), surface.frame.maxY - 4, bar.minX + 8)
+         }
+-        let surface = collections.last ?? app!
++        let surface = collections.last.map { (element: $0, frame: $0.frame) } ?? (element: app!, frame: appFrame)
+         let footer = app.buttons["view-split"]
+-        let top = bars.filter(\.isHittable).map { $0.frame.maxY }.max() ?? app.frame.minY
+-        let bottom = min(footer.isHittable ? footer.frame.minY - 4 : app.frame.maxY - 20, surface.frame.maxY - 4)
+-        let leading = footer.isHittable ? footer.frame.minX - 8 : surface.frame.minX + 8
+-        return (surface, max(top, surface.frame.minY), bottom, leading)
++        let footerHittable = footer.isHittable
++        let footerFrame = footerHittable ? footer.frame : nil
++        let visibleBars = bars.filter(\.isHittable).map { (element: $0, frame: $0.frame) }
++        let top = visibleBars.map { $0.frame.maxY }.max() ?? appFrame.minY
++        let bottom = min(footerFrame.map { $0.minY - 4 } ?? appFrame.maxY - 20, surface.frame.maxY - 4)
++        let leading = footerFrame.map { $0.minX - 8 } ?? surface.frame.minX + 8
++        return (surface.element, surface.frame, max(top, surface.frame.minY), bottom, leading)
+     }
+ 
+     private func visibleNavigationBottom() -> CGFloat {
+         scrollingContext().top
+     }
+ 
+-    private func scrollContent(up: Bool, distance: CGFloat? = nil) {
+-        let context = scrollingContext()
+-        let frame = context.surface.frame
++    private func scrollContent(up: Bool, distance: CGFloat? = nil, context capturedContext: ScrollingContext? = nil) {
++        let context = capturedContext ?? scrollingContext()
++        let frame = context.frame
+         let top = context.top + 20
+         let bottom = context.bottom - 20
+         XCTAssertGreaterThan(bottom, top, "The foreground form must have a usable scroll viewport.")

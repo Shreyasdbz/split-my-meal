@@ -1,0 +1,116 @@
+{
+  "causeClaim": null,
+  "maintainedSourceEdit": false,
+  "noAutomaticRetry": true,
+  "personSubmitObservations": [
+    {
+      "actualTapActivityStart": 1791484272.893,
+      "geometry": "Native keyboard key identifier: Done\nLabel: done\nFrame: (691.5, 969.0, 126.5, 63.5)\nKeyboard frame: (0.0, 898.0, 820.0, 279.0)",
+      "postSubmitExactValueAssertionRetained": true,
+      "preTapGeometryAttachment": "0285024C-9F9D-4CC1-972C-F917D5B1B4ED.txt",
+      "preTapGeometryAttachmentSha256": "635163fbc198025eb6a5b968ab0c80d1bd9e2c1fd4d91a1b23a35a06de90acfe",
+      "preTapObservationTimestamp": 1791484272.795,
+      "preTapScreenshot": "2F8183D1-C2F7-4BAD-ABA5-A6F1BCEA6079.png",
+      "preTapScreenshotSha256": "033df6576ed2dc3daa688f65cbca72de46c2bae6007c05fe9194c4acd5cafa5f",
+      "test": "MealJourneyTests/testCreateEditSplitShareAndPersistence()"
+    },
+    {
+      "actualTapActivityStart": 1791484261.132,
+      "geometry": "Native keyboard key identifier: Done\nLabel: done\nFrame: (691.5, 969.0, 126.5, 63.5)\nKeyboard frame: (0.0, 898.0, 820.0, 279.0)",
+      "postSubmitExactValueAssertionRetained": true,
+      "preTapGeometryAttachment": "DD20F247-22C7-4AF5-975E-1778A164749E.txt",
+      "preTapGeometryAttachmentSha256": "635163fbc198025eb6a5b968ab0c80d1bd9e2c1fd4d91a1b23a35a06de90acfe",
+      "preTapObservationTimestamp": 1791484261.03,
+      "preTapScreenshot": "FB1256A7-CA36-404D-8521-F93EA341F937.png",
+      "preTapScreenshotSha256": "64d11ff218ed0b658019b436fdb11027fb3c1bb75c998970a881227176fa529c",
+      "test": "MealJourneyTests/testCreateEditSplitShareAndPersistence()"
+    },
+    {
+      "actualTapActivityStart": 1791484357.228,
+      "geometry": "Native keyboard key identifier: Done\nLabel: done\nFrame: (691.5, 969.0, 126.5, 63.5)\nKeyboard frame: (0.0, 898.0, 820.0, 279.0)",
+      "nativeEventAttachment": "8A16E528-1FD5-401C-97C2-87A7C35A5B09",
+      "nativeEventTimestamp": 1791484357.668,
+      "nativeTouchEvents": [
+        {
+          "coordinate.x": 754.75,
+          "coordinate.y": 1000.75,
+          "eventType": 1,
+          "offset": 0.0
+        },
+        {
+          "coordinate.x": 754.75,
+          "coordinate.y": 1000.75,
+          "eventType": 3,
+          "offset": 0.05
+        }
+      ],
+      "postSubmitExactValueAssertionRetained": true,
+      "preTapGeometryAttachment": "424171F5-1CC2-4812-9C13-8B92D888D640.txt",
+      "preTapGeometryAttachmentSha256": "635163fbc198025eb6a5b968ab0c80d1bd9e2c1fd4d91a1b23a35a06de90acfe",
+      "preTapObservationTimestamp": 1791484357.131,
+      "preTapScreenshot": "D727202F-17EF-400C-8D4E-F7E7ABFF5074.png",
+      "preTapScreenshotSha256": "1e6c4ecd35a11cdc5631aa1e34afe4b054810b10f6e32a8bc54cc6bbac412a19",
+      "test": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()"
+    },
+    {
+      "actualTapActivityStart": 1791484405.18,
+      "geometry": "Native keyboard key identifier: Done\nLabel: done\nFrame: (691.5, 969.0, 126.5, 63.5)\nKeyboard frame: (0.0, 898.0, 820.0, 279.0)",
+      "postSubmitExactValueAssertionRetained": true,
+      "preTapGeometryAttachment": "E54C53F8-EEE2-4B4C-84BA-5CA028FFD7EF.txt",
+      "preTapGeometryAttachmentSha256": "635163fbc198025eb6a5b968ab0c80d1bd9e2c1fd4d91a1b23a35a06de90acfe",
+      "preTapObservationTimestamp": 1791484405.085,
+      "preTapScreenshot": "C4A97A26-DCE3-4E92-B2F9-D44FBAD6C2E9.png",
+      "preTapScreenshotSha256": "6ffffd7f7504c6dd21e3f8bf4f2bb8db5bfe6faa834452ecc85196960f6e9716",
+      "test": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()"
+    }
+  ],
+  "scope": "Private person-name native keyboard submit comparison, complete native workflows; unchanged generic keyboard failure remains failed.",
+  "separateGenericPriceKeyboardFailure": {
+    "case": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+    "eventFile": "B88B9955-410A-417E-9365-55B04F0C310F",
+    "failureScreenshot": "27964336-5301-4D7C-A3EE-2397F890FBAB.png",
+    "failureScreenshotSha256": "6bd985493205ce7d0b9010d530d78eaed1eac9cfe85b41a178c7a85ad43c692a",
+    "genericTapActivityStart": 1791484377.867,
+    "laterAccessoryDoneFrame": [
+      731.5,
+      803.0,
+      64.5,
+      36.0
+    ],
+    "laterFieldValue": "12.00",
+    "laterFloatingNumericKeypadVisible": true,
+    "laterFullKeyboardFrame": [
+      0,
+      898,
+      820,
+      279
+    ],
+    "laterHideKeyboard": {
+      "frame": [
+        720,
+        1096.5,
+        98,
+        63.5
+      ],
+      "hittabilityNotRecorded": true,
+      "label": "Hide keyboard",
+      "type": "Button"
+    },
+    "laterTree": "B70EEE8A-A48D-4396-AA61-F16B9C457FD4.txt",
+    "laterTreeSha256": "7953ac68fba102c4e8354e038e5f053624275b05c98b64ee59b42a91ad90a990",
+    "laterTreeTimestamp": 1791484385.029,
+    "message": "The keyboard must dismiss before another control can be tapped.",
+    "nativeEventTimestamp": 1791484378.38,
+    "nativeTapPoint": [
+      763.75,
+      1138.0
+    ],
+    "nativeTouchDurationSeconds": 0.05,
+    "preTapSnapshotContainsTarget": false,
+    "preTapSnapshotFile": "AD116D78-2A1B-42F4-8803-DDC84D5B7E13",
+    "targetFramePreserved": false,
+    "timingLimitation": "Later failure geometry cannot establish the target frame or keyboard layout at the earlier generic tap. No wrong-target or causal claim.",
+    "typedField": "item-price"
+  },
+  "sourceManifestSha256": "99c34de786892a36c0639d3aa8d4e2b22611e02e0300b949300bbe79988f7e88"
+}

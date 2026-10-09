@@ -1,0 +1,753 @@
+{
+  "buildOnlyFailures": [
+    {
+      "buildResult": "Failed",
+      "nativeExecutionStarted": false,
+      "reason": "Optional attachment name concatenation",
+      "run": "refinement-iphone-build-pilot-r6",
+      "sourceManifest": "refinement-iphone-build-pilot-r6-source-manifest.json",
+      "sourceManifestSHA256": "f2ff821f4adafe613162fcae2a9839c1cc17538713d54e4a147e87b05d2c3d02"
+    },
+    {
+      "buildResult": "Failed",
+      "nativeExecutionStarted": false,
+      "reason": "Optional attachment name concatenation",
+      "run": "refinement-ipad-build-pilot-r6",
+      "sourceManifest": "refinement-ipad-build-pilot-r6-source-manifest.json",
+      "sourceManifestSHA256": "f2ff821f4adafe613162fcae2a9839c1cc17538713d54e4a147e87b05d2c3d02"
+    },
+    {
+      "buildResult": "Failed",
+      "nativeExecutionStarted": false,
+      "reason": "Uninitialized gesture gap caused by an unlabeled switch break",
+      "run": "refinement-iphone-build-pilot-r7",
+      "sourceManifest": "refinement-iphone-build-pilot-r7-source-manifest.json",
+      "sourceManifestSHA256": "c79a470d0839c25f92aef69eb481bca5ea51f3d30a27903fbb8650f681b80d2d"
+    },
+    {
+      "buildResult": "Failed",
+      "nativeExecutionStarted": false,
+      "reason": "Uninitialized gesture gap caused by an unlabeled switch break",
+      "run": "refinement-ipad-build-pilot-r7",
+      "sourceManifest": "refinement-ipad-build-pilot-r7-source-manifest.json",
+      "sourceManifestSHA256": "c79a470d0839c25f92aef69eb481bca5ea51f3d30a27903fbb8650f681b80d2d"
+    }
+  ],
+  "interpretation": {
+    "refinement-iphone-pilot-r5": "The native test passed its then-current assertions, but independent screenshot review found zero visible map-content height and address truncation at XXXL landscape. This is a false positive for layout acceptance, corrected by the later compact layout and stronger visible-content/readability checks."
+  },
+  "runs": [
+    {
+      "expectedFailures": 0,
+      "failedTests": 3,
+      "finishTime": 1791461248.478,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 2,
+      "result": "Failed",
+      "run": "refinement-iphone-pilot-r1",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 2
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-iphone-pilot-r1-source-manifest.json",
+      "sourceManifestSHA256": "16e3ad6b5ed9fc61b1a66c1051e26cf2ae2a29d4cc3382bf4e27e50f465e65c7",
+      "startTime": 1791460919.241,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertTrue failed",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 2,
+          "testIdentifierString": "MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto",
+          "testName": "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()"
+        },
+        {
+          "failureText": "XCTAssertTrue failed - Control must be reachable: reset-meal-emoji",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 3,
+          "testIdentifierString": "MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable",
+          "testName": "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()"
+        },
+        {
+          "failureText": "Failed to get matching snapshot: No matches found for Elements matching predicate '\"meal-emoji\" IN identifiers' from input {(\n    TextField, identifier: 'meal-title', placeholderValue: 'Meal title', value: Icon dinner,\n    TextField, identifier: 'custom-emoji', label: 'Custom emoji', value: \ud83c\udf71\n)}",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 4,
+          "testIdentifierString": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists",
+          "testName": "testNativeCategoryAndCustomIconEditingPersists()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 77.21875,
+          "name": "testDemoWalkthrough()",
+          "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 40.27428603172302,
+          "name": "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "nodeIdentifier": "MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 97.37963891029358,
+          "name": "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "nodeIdentifier": "MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 15.607151985168457,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 88.86862695217133,
+          "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 5
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 3,
+      "finishTime": 1791461322.4,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 2,
+      "result": "Failed",
+      "run": "refinement-ipad-pilot-r1",
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 2
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-ipad-pilot-r1-source-manifest.json",
+      "sourceManifestSHA256": "16e3ad6b5ed9fc61b1a66c1051e26cf2ae2a29d4cc3382bf4e27e50f465e65c7",
+      "startTime": 1791460917.43,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertTrue failed",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 2,
+          "testIdentifierString": "MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto",
+          "testName": "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()"
+        },
+        {
+          "failureText": "XCTAssertTrue failed - Control must be reachable: reset-meal-emoji",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 3,
+          "testIdentifierString": "MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable",
+          "testName": "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()"
+        },
+        {
+          "failureText": "Failed to get matching snapshot: No matches found for Elements matching predicate '\"meal-emoji\" IN identifiers' from input {(\n    TextField, identifier: 'meal-title', placeholderValue: 'Meal title', value: Icon dinner,\n    TextField, identifier: 'custom-emoji', label: 'Custom emoji', value: \ud83c\udf71\n)}",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 4,
+          "testIdentifierString": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists",
+          "testName": "testNativeCategoryAndCustomIconEditingPersists()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 85.78428602218628,
+          "name": "testDemoWalkthrough()",
+          "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 41.29729199409485,
+          "name": "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "nodeIdentifier": "MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 135.28864705562592,
+          "name": "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "nodeIdentifier": "MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 18.29212999343872,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 113.66768503189087,
+          "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 5
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1791461868.402,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 6,
+      "result": "Passed",
+      "run": "refinement-iphone-pilot-r2",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 3
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-iphone-pilot-r2-source-manifest.json",
+      "sourceManifestSHA256": "abaef139e75c0a55db57cebe4e0738e4a9792cbb13572bb53a3c4b8de790d64f",
+      "startTime": 1791461578.907,
+      "testFailures": [],
+      "tests": [
+        {
+          "durationInSeconds": 79.60199999809265,
+          "name": "testDemoWalkthrough()",
+          "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 61.09375596046448,
+          "name": "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "nodeIdentifier": "MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 32.976399064064026,
+          "name": "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "nodeIdentifier": "MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 33.889034032821655,
+          "name": "testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+          "nodeIdentifier": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 22.54353904724121,
+          "name": "testNativeAccessibleControlSemanticsAndHitRegions()",
+          "nodeIdentifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 56.209908962249756,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 6
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 1,
+      "finishTime": 1791461855.19,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 5,
+      "result": "Failed",
+      "run": "refinement-ipad-pilot-r2",
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 3
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-ipad-pilot-r2-source-manifest.json",
+      "sourceManifestSHA256": "abaef139e75c0a55db57cebe4e0738e4a9792cbb13572bb53a3c4b8de790d64f",
+      "startTime": 1791461576.678,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertTrue failed - Custom icon Done must clear keyboard focus.",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 6,
+          "testIdentifierString": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists",
+          "testName": "testNativeCategoryAndCustomIconEditingPersists()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 88.25730204582214,
+          "name": "testDemoWalkthrough()",
+          "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 65.48861801624298,
+          "name": "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "nodeIdentifier": "MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 35.930474042892456,
+          "name": "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "nodeIdentifier": "MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 32.07737410068512,
+          "name": "testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+          "nodeIdentifier": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 23.751191020011902,
+          "name": "testNativeAccessibleControlSemanticsAndHitRegions()",
+          "nodeIdentifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 27.430283069610596,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Failed"
+        }
+      ],
+      "totalTestCount": 6
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 2,
+      "finishTime": 1791462292.358,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 1,
+      "result": "Failed",
+      "run": "refinement-iphone-pilot-r3",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-iphone-pilot-r3-source-manifest.json",
+      "sourceManifestSHA256": "6224abb1d629609e096ecc0994af08e15812e180a1d4cb575ca138a4420ac7ec",
+      "startTime": 1791462070.527,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertTrue failed",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 2,
+          "testIdentifierString": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists",
+          "testName": "testNativeCategoryAndCustomIconEditingPersists()"
+        },
+        {
+          "failureText": "XCTAssertLessThan failed: (\"826.0000000000005\") is not less than (\"734.6666666666666\") - List control must remain within the foreground content viewport.",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 3,
+          "testIdentifierString": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape",
+          "testName": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 88.4230170249939,
+          "name": "testLargeTextAndLandscapeNavigation()",
+          "nodeIdentifier": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 16.82975697517395,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 106.91164290904999,
+          "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "result": "Failed"
+        }
+      ],
+      "totalTestCount": 3
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 2,
+      "finishTime": 1791462254.363,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 1,
+      "result": "Failed",
+      "run": "refinement-ipad-pilot-r3",
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-ipad-pilot-r3-source-manifest.json",
+      "sourceManifestSHA256": "6224abb1d629609e096ecc0994af08e15812e180a1d4cb575ca138a4420ac7ec",
+      "startTime": 1791462076.092,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertTrue failed",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 2,
+          "testIdentifierString": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists",
+          "testName": "testNativeCategoryAndCustomIconEditingPersists()"
+        },
+        {
+          "failureText": "Failed to get matching snapshot: Find single matching element. Multiple matching elements found for <XCUIElementQuery: 0x108cf2350>.\nSparse tree of matches:\n\u2192Application, pid: 90845, label: 'Split My Meal'\n  \u21b3Window (Main)\n    \u21b3Other\n    \u22c5 \u21b3Other\n    \u22c5   \u21b3Other\n    \u22c5     \u21b3Other\n    \u22c5       \u21b3Other\n    \u22c5         \u21b3Other\n    \u22c5           \u21b3Other\n    \u22c5             \u21b3Other\n    \u22c5               \u21b3Other\n    \u22c5                 \u21b3Other\n    \u22c5                   \u21b3StaticText, label: 'Fictional dinner for app screenshots'\n    \u21b3Other\n      \u21b3Other\n        \u21b3Other\n          \u21b3Other\n            \u21b3Other\n              \u21b3Other\n                \u21b3Other\n                  \u21b3Other\n                    \u21b3Other\n                      \u21b3Other\n                        \u21b3Other\n                          \u21b3Other\n                            \u21b3Other\n                              \u21b3CollectionView\n                                \u21b3Cell\n                                  \u21b3Other\n                                    \u21b3Other\n                                      \u21b3Other\n                                        \u21b3Button, label: 'Juniper \u00b7 sample restaurant, Fictional dinner for app screenshots'\n                                          \u21b3StaticText, label: 'Fictional dinner for app screenshots'\nPossibly caused by runtime issues:\nAutomation type mismatch: computed Other from legacy attributes vs StaticText from modern attribute. Input attributes and values: {\n    \"XC_kAXXCAttributeAutomationType\" = 48;\n    \"XC_kAXXCAttributeElementBaseType\" = UILabel;\n    \"XC_kAXXCAttributeElementType\" = UILabel;\n    \"XC_kAXXCAttributeTraits\" = 8590000128;\n}\nSee test report attachments for more detail.",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 3,
+          "testIdentifierString": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape",
+          "testName": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 87.7029629945755,
+          "name": "testLargeTextAndLandscapeNavigation()",
+          "nodeIdentifier": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 21.25703203678131,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 59.56801402568817,
+          "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "result": "Failed"
+        }
+      ],
+      "totalTestCount": 3
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 1,
+      "finishTime": 1791462638.456,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 1,
+      "result": "Failed",
+      "run": "refinement-iphone-pilot-r4",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-iphone-pilot-r4-source-manifest.json",
+      "sourceManifestSHA256": "fea21146f0ea611fd34ca970be8d01c69bc374e7bd6ef6173b9ec87e6b4865f4",
+      "startTime": 1791462474.54,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertLessThan failed: (\"826.0000000000005\") is not less than (\"734.6666666666666\") - List control must remain within the foreground content viewport.",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 2,
+          "testIdentifierString": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape",
+          "testName": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 57.6683189868927,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 101.52884197235107,
+          "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "result": "Failed"
+        }
+      ],
+      "totalTestCount": 2
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1791462603.28,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 2,
+      "result": "Passed",
+      "run": "refinement-ipad-pilot-r4",
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "scope": "Focused native refinement pilot; failed cases are retained and do not count as final verification.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-ipad-pilot-r4-source-manifest.json",
+      "sourceManifestSHA256": "fea21146f0ea611fd34ca970be8d01c69bc374e7bd6ef6173b9ec87e6b4865f4",
+      "startTime": 1791462481.435,
+      "testFailures": [],
+      "tests": [
+        {
+          "durationInSeconds": 60.12886297702789,
+          "name": "testNativeCategoryAndCustomIconEditingPersists()",
+          "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 58.84322202205658,
+          "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 2
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1791462839.398,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 1,
+      "result": "Passed",
+      "run": "refinement-iphone-pilot-r5",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [],
+      "scope": "Focused native XXXL portrait/landscape map replay after fine-drag delivery correction; all control and viewport assertions retained.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-iphone-pilot-r5-source-manifest.json",
+      "sourceManifestSHA256": "fbc53eefef20b53d7fbc357b0c8d8216fac17c9a96cc5d38f3698bdfb401c68b",
+      "startTime": 1791462771.467,
+      "testFailures": [],
+      "tests": [
+        {
+          "durationInSeconds": 62.95919704437256,
+          "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 1
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 1,
+      "finishTime": 1791464147.566,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 2,
+      "result": "Failed",
+      "run": "refinement-iphone-pilot-r8",
+      "runtime": [
+        {
+          "modelName": "iPhone 17",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "scope": "Focused native map and permission pilot; real portrait denial-pane crowding failed the strengthened visible-map guard. Normal walkthrough and map checks passed.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-iphone-pilot-r8-source-manifest.json",
+      "sourceManifestSHA256": "85613f2df92b3a021163a7e011d1ec10cc05f15ca82deb906c2aeb546c8b9c31",
+      "startTime": 1791463871.225,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertGreaterThanOrEqual failed: (\"42.33333333333337\") is less than (\"100.0\") - Restaurant details must leave a useful, unoccluded map viewport.",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 1,
+          "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+          "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 92.34901690483093,
+          "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 94.15582990646362,
+          "name": "testDemoWalkthrough()",
+          "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 83.60649800300598,
+          "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 3
+    },
+    {
+      "expectedFailures": 0,
+      "failedTests": 1,
+      "finishTime": 1791464122.713,
+      "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+      "passedTests": 2,
+      "result": "Failed",
+      "run": "refinement-ipad-pilot-r8",
+      "runtime": [
+        {
+          "modelName": "iPad (A16)",
+          "osBuildNumber": "24A434",
+          "osVersion": "27.0",
+          "platform": "iOS Simulator"
+        }
+      ],
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Invalid frame dimension (negative or non-finite).",
+          "occurrences": 1
+        }
+      ],
+      "scope": "Focused native map and permission pilot; the Settings row center failed to open Settings before the hit-area fix. Normal walkthrough and map checks passed.",
+      "skippedTests": 0,
+      "sourceManifest": "refinement-ipad-pilot-r8-source-manifest.json",
+      "sourceManifestSHA256": "85613f2df92b3a021163a7e011d1ec10cc05f15ca82deb906c2aeb546c8b9c31",
+      "startTime": 1791463883.605,
+      "testFailures": [
+        {
+          "failureText": "XCTAssertTrue failed - Denied location recovery must open native Settings.",
+          "targetName": "SplitMyMealUITests",
+          "testIdentifier": 1,
+          "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+          "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+        }
+      ],
+      "tests": [
+        {
+          "durationInSeconds": 40.6265150308609,
+          "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "result": "Failed"
+        },
+        {
+          "durationInSeconds": 108.33151400089264,
+          "name": "testDemoWalkthrough()",
+          "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+          "result": "Passed"
+        },
+        {
+          "durationInSeconds": 83.28777194023132,
+          "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "result": "Passed"
+        }
+      ],
+      "totalTestCount": 3
+    }
+  ],
+  "scope": "Historical completed pilots; later corrected cases and full-suite results are separate. These runs include actual refinement defects and automation failures."
+}

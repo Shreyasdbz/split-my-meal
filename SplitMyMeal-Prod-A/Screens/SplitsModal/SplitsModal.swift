@@ -11,9 +11,16 @@ struct SplitsModal: View {
         NavigationStack {
             List {
                 Section {
-                    AmountRow(title: "Total", amount: amounts.total, emphasized: true)
-                        .font(.title2)
-                        .accessibilityIdentifier("split-total")
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Total").font(.subheadline).foregroundStyle(Color.mealSecondaryText).accessibilityHidden(true)
+                        Text(mealCurrency(amounts.total)).font(.largeTitle.bold()).monospacedDigit()
+                            .mealAmountTransition(amounts.total)
+                            .accessibilityIdentifier("split-total")
+                            .accessibilityLabel("Split total").accessibilityValue(mealCurrency(amounts.total))
+                        if amounts.isFullyAssigned {
+                            MealAssignmentStatus().accessibilityIdentifier("split-assignment-status")
+                        }
+                    }.padding(.vertical, 8)
                 } header: { Text(meal.title) }
                 if amounts.hasInvalidValues {
                     Section {
@@ -68,14 +75,25 @@ struct SplitsModal: View {
                 }
             }
             .mealFocusedContent()
+            .mealBottomBar {
+                ShareLink(item: shareText, subject: Text("\(meal.title) — meal split")) {
+                    Label("Share split", systemImage: "square.and.arrow.up")
+                        .labelStyle(.titleAndIcon)
+                        .font(.headline)
+                        .foregroundStyle(Color.mealPrimaryText)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 8)
+                }
+                .modifier(MealPrimaryButtonStyle())
+                .accessibilityIdentifier("share-split")
+                .disabled(amounts.hasInvalidValues)
+                .frame(maxWidth: 440)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal).padding(.vertical, 8)
+            }
             .navigationTitle("Split summary").navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
-                ToolbarItem(placement: .bottomBar) {
-                    ShareLink(item: shareText, subject: Text("\(meal.title) — meal split")) {
-                        Label("Share split", systemImage: "square.and.arrow.up")
-                    }.accessibilityIdentifier("share-split").disabled(amounts.hasInvalidValues)
-                }
             }
         }
     }

@@ -1,0 +1,15 @@
+{
+  "aCount": 43,
+  "bCount": 13,
+  "catalogue": "scripts/stable-test-partitions.json",
+  "catalogueSHA256": "126b45af88a8109970afbd8a50b40a538dbae52a091db649292425e91881b8c5",
+  "files": {
+    "satisfaction-final-compiled-enumeration.json": "409d2315b6a221977bd9a8d98163c256452eab694dab4486b57672762088143c",
+    "satisfaction-final-native-a-selection.json": "33dbe01f821f5582660b0fa06bd45e469d8becd98f9a78494f3ad266c0b9ab34",
+    "satisfaction-final-native-b-selection.json": "528ce46d03a43d72c29704ddf49e88a591c95509034de12325f0cf759f3c0298"
+  },
+  "scope": "Compiled native enumeration and exact disjoint catalogue reconciliation. Source predates only the final Home selection-tint delta; no test methods or catalogue changed. Enumeration does not execute cases.",
+  "sourceManifest": "satisfaction-iphone-final-demo-source-manifest.json",
+  "sourceManifestSHA256": "de0193ad3914f031a71da6404f6af5b5b4278e26d54059760db13bca79d8472d",
+  "stableCount": 56
+}

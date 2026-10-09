@@ -156,7 +156,7 @@ final class LiveMapKitTests: XCTestCase {
         evidence("denied-location-settings-return-preserves-query")
         let closeSearch = app.buttons["close"].firstMatch
         if closeSearch.exists { closeSearch.tap() }
-        app.navigationBars["Restaurant"].buttons["Cancel"].tap()
+        cancelRestaurantSelection()
         XCTAssertEqual(title.value as? String, "Location recovery draft", "Returning from Settings preserves the unsaved meal draft.")
         app.buttons["Cancel"].tap()
         assertOriginalRestaurant()
@@ -266,7 +266,11 @@ final class LiveMapKitTests: XCTestCase {
         for _ in 0..<6 where !apps.isHittable { settings.swipeUp() }
         XCTAssertTrue(apps.waitForExistence(timeout: 5), "Native Settings must expose its installed Apps list.")
         apps.tap()
-        let appSearch = settings.searchFields.firstMatch
+        // iPad Settings exposes both sidebar Search and the Apps detail search.
+        // Only the latter filters the installed apps list used for revocation.
+        let appSearch = UIDevice.current.userInterfaceIdiom == .pad
+            ? settings.searchFields["Search Apps"]
+            : settings.searchFields.firstMatch
         XCTAssertTrue(appSearch.waitForExistence(timeout: 5))
         appSearch.tap()
         appSearch.typeText("Split My Meal")
@@ -291,13 +295,19 @@ final class LiveMapKitTests: XCTestCase {
         XCTAssertFalse(app.links["restaurant-open-settings"].exists)
         XCTAssertEqual(search.value as? String, "Coffee")
         evidence("idle-ask-next-time-clears-cached-nearby-without-prompt")
-        app.buttons["close"].firstMatch.tap()
+        let closeForReauthorization = app.buttons["close"].firstMatch
+        if closeForReauthorization.exists { closeForReauthorization.tap() }
         app.buttons["nearby-restaurants"].tap()
         XCTAssertTrue(permission.waitForExistence(timeout: 10), "An explicit Nearby retry must request permission again.")
         allow.tap()
         XCTAssertTrue(app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Using your location")).firstMatch.waitForExistence(timeout: 15))
-        search.tap()
-        search.typeText("Coffee")
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            // Inline iPad search retains the query across explicit reauthorization.
+            XCTAssertEqual(search.value as? String, "Coffee", "Requesting permission again preserves the existing restaurant query.")
+        } else {
+            search.tap()
+            search.typeText("Coffee")
+        }
         settings.activate()
         let never = settings.staticTexts["Never"].firstMatch
         XCTAssertTrue(never.waitForExistence(timeout: 5))
@@ -316,8 +326,9 @@ final class LiveMapKitTests: XCTestCase {
         XCTAssertTrue(app.links["restaurant-open-settings"].exists)
         XCTAssertEqual(search.value as? String, "Coffee", "Idle revocation preserves the independently editable restaurant query.")
         evidence("idle-location-revocation-clears-cached-nearby-status")
-        app.buttons["close"].firstMatch.tap()
-        app.navigationBars["Restaurant"].buttons["Cancel"].tap()
+        let closeForCancellation = app.buttons["close"].firstMatch
+        if closeForCancellation.exists { closeForCancellation.tap() }
+        cancelRestaurantSelection()
         app.buttons["Cancel"].tap()
     }
 
@@ -329,8 +340,9 @@ final class LiveMapKitTests: XCTestCase {
         search.typeText("Coffee San Francisco")
         search.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 20))
         search.typeText("Pizza New York")
-        app.buttons["close"].firstMatch.tap()
-        app.navigationBars["Restaurant"].buttons["Cancel"].tap()
+        let closeSearch = app.buttons["close"].firstMatch
+        if closeSearch.exists { closeSearch.tap() }
+        cancelRestaurantSelection()
         app.buttons["Cancel"].tap()
         assertOriginalRestaurant()
         evidence("live-rapid-query-cancelled")
@@ -363,10 +375,34 @@ final class LiveMapKitTests: XCTestCase {
         evidence("restaurant-same-query-retry-live-suggestions")
         let closeSearch = app.buttons["close"].firstMatch
         if closeSearch.exists { closeSearch.tap() }
-        app.navigationBars["Restaurant"].buttons["Cancel"].tap()
+        cancelRestaurantSelection()
         app.buttons["Cancel"].tap()
         assertOriginalRestaurant()
         evidence("restaurant-retry-cancel-preserves-saved-restaurant")
+    }
+
+    /// Cancels the foreground search sheet after retaining its query through native keyboard dismissal.
+    private func cancelRestaurantSelection() {
+        if UIDevice.current.userInterfaceIdiom == .pad, app.keyboards.firstMatch.exists {
+            let search = app.searchFields.firstMatch
+            let originalQuery = search.value as? String
+            let hideKeyboard = app.keyboards.buttons["Hide keyboard"]
+            XCTAssertTrue(hideKeyboard.waitForExistence(timeout: 5))
+            XCTAssertTrue(hideKeyboard.isHittable)
+            hideKeyboard.tap()
+            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+            XCTAssertEqual(search.value as? String, originalQuery, "Keyboard dismissal must preserve the pending restaurant query.")
+        }
+        // A centered iPad sheet moves during keyboard layout. Resolve its native
+        // Cancel only after the keyboard has disappeared, then verify dismissal
+        // before any background editor control can satisfy the next query.
+        let restaurant = app.navigationBars["Restaurant"]
+        let cancel = restaurant.buttons["Cancel"]
+        XCTAssertTrue(cancel.waitForExistence(timeout: 5))
+        XCTAssertTrue(cancel.isHittable)
+        XCTAssertEqual(app.state, .runningForeground)
+        cancel.tap()
+        XCTAssertTrue(restaurant.waitForNonExistence(timeout: 5), "Cancel must dismiss restaurant selection before returning to the meal draft.")
     }
 
     private func assertOriginalRestaurant() {

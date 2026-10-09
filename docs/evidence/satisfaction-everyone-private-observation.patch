@@ -1,0 +1,199 @@
+--- baseline/SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift
++++ private-observation/SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift
+@@ -1,5 +1,8 @@
+ import SwiftUI
+ import SwiftData
++#if DEBUG
++import OSLog
++#endif
+ 
+ /// Stages item fields and consumer assignments until an explicit successful save.
+ struct ItemEditor: View {
+@@ -70,9 +73,21 @@
+                     if !people.isEmpty {
+                         if people.count > 1 {
+                             Button {
++                                #if DEBUG
++                                let diagnosticEnabled = ProcessInfo.processInfo.arguments.contains("--uitesting")
++                                let diagnosticLog = Logger(subsystem: "shreyassane.SplitMyMeal-Prod-A", category: "EveryoneActionDiagnostic")
++                                if diagnosticEnabled {
++                                    diagnosticLog.notice("Everyone action-entry selectedCount=\(consumerIDs.count, privacy: .public) version=\(bulkSelectionVersion, privacy: .public) focused=\(focusedField != nil, privacy: .public)")
++                                }
++                                #endif
+                                 focusedField = nil
+                                 consumerIDs = Set(people.map(\.id))
+                                 bulkSelectionVersion += 1
++                                #if DEBUG
++                                if diagnosticEnabled {
++                                    diagnosticLog.notice("Everyone action-complete selectedCount=\(consumerIDs.count, privacy: .public) version=\(bulkSelectionVersion, privacy: .public)")
++                                }
++                                #endif
+                             } label: {
+                                 Label("Everyone", systemImage: "person.2")
+                                     .frame(maxWidth: .infinity, alignment: .leading)
+@@ -83,6 +98,14 @@
+                             .accessibilityIdentifier("assign-everyone")
+                             .accessibilityHint("Select every person for this item")
+                             .sensoryFeedback(.selection, trigger: bulkSelectionVersion)
++                            #if DEBUG
++                            .onAppear {
++                                if ProcessInfo.processInfo.arguments.contains("--uitesting") {
++                                    Logger(subsystem: "shreyassane.SplitMyMeal-Prod-A", category: "EveryoneActionDiagnostic")
++                                        .notice("Everyone diagnostic-ready")
++                                }
++                            }
++                            #endif
+                         }
+                         ForEach(people) { person in
+                             Toggle(isOn: Binding(get: { consumerIDs.contains(person.id) }, set: { selected in
+--- baseline/SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift
++++ private-observation/SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift
+@@ -1,5 +1,10 @@
+ import SwiftUI
+ import SwiftData
++#if DEBUG
++import UIKit
++import OSLog
++import ObjectiveC.runtime
++#endif
+ 
+ @main
+ struct SplitMyMeal_Prod_AApp: App {
+@@ -64,6 +69,7 @@
+             #if DEBUG
+             let arguments = ProcessInfo.processInfo.arguments
+             let isTesting = arguments.contains("--uitesting")
++            if isTesting { EveryoneEventTrace.install() }
+             if isTesting, arguments.contains("--fail-first-store-open"), !didInjectStoreFailure {
+                 didInjectStoreFailure = true
+                 throw NSError(domain: "SplitMyMealUITesting", code: 1, userInfo: [NSLocalizedDescriptionKey: "A test store-open failure was requested. Your production meals are untouched."])
+@@ -111,3 +117,109 @@
+         }
+     }
+ }
++
++#if DEBUG
++/// Private observation only: forwards each UIKit event once and logs no user text or identifiers.
++/// Only touch boundaries are recorded; synchronous logging can affect event timing.
++@MainActor private enum EveryoneEventTrace {
++    private static var installed = false
++    private static let logger = Logger(subsystem: "shreyassane.SplitMyMeal-Prod-A", category: "EveryoneEventDiagnostic")
++
++    static func install() {
++        guard !installed else { return }
++        guard let original = class_getInstanceMethod(UIApplication.self, #selector(UIApplication.sendEvent(_:))),
++              let observer = class_getInstanceMethod(UIApplication.self, #selector(UIApplication.smm_observedSendEvent(_:))) else {
++            logger.notice("Event observation installation unavailable")
++            return
++        }
++        method_exchangeImplementations(original, observer)
++        installed = true
++        logger.notice("Event observation installed: touch boundaries only; synchronous logging overhead")
++    }
++
++    /// Samples only the observed Everyone center; conversions and hit testing add timing overhead.
++    private static func sampleForegroundHitTests(point: CGPoint, sourceWindow: UIWindow, event: UIEvent) {
++        let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
++            .filter { $0.activationState == .foregroundActive }
++        let sourceScreen = sourceWindow.windowScene?.screen ?? sourceWindow.screen
++        let selfPoint = sourceWindow.convert(point, from: sourceWindow)
++        let screenPoint = sourceWindow.convert(point, to: nil)
++        let sourceLine = "Everyone coordinate source eventTime=\(event.timestamp) appState=\(UIApplication.shared.applicationState.rawValue) foregroundSceneCount=\(scenes.count) scenePresent=\(sourceWindow.windowScene != nil) sceneState=\(sourceWindow.windowScene?.activationState.rawValue ?? -1) screenIdentity=\(ObjectIdentifier(sourceScreen)) selfX=\(selfPoint.x) selfY=\(selfPoint.y) screenX=\(screenPoint.x) screenY=\(screenPoint.y) window=\(windowDescription(sourceWindow))"
++        logger.notice("\(sourceLine, privacy: .public)")
++        // Include every public foreground scene window, even when the source window has no scene.
++        for (sceneIndex, scene) in scenes.enumerated() {
++            for (windowIndex, candidate) in scene.windows.enumerated() {
++                let candidateScreen = candidate.windowScene?.screen ?? candidate.screen
++                let sameScreen = sourceScreen === candidateScreen
++                let direct = candidate.convert(point, from: sourceWindow)
++                let screenConverted: CGPoint? = sameScreen && finite(screenPoint)
++                    ? candidate.convert(screenPoint, from: nil) : nil
++                let chosen: CGPoint? = finite(direct) ? direct : screenConverted.flatMap { finite($0) ? $0 : nil }
++                let conversion = finite(direct) ? "direct" : chosen == nil ? "skipped-nonfinite" : "same-screen-two-stage"
++                // Never issue a hit test with invalid coordinates, and sample at most once per window.
++                let hitView = chosen.flatMap { candidate.hitTest($0, with: event) }
++                var ancestors: [String] = []
++                var view = hitView
++                for _ in 0..<8 {
++                    guard let current = view else { break }
++                    ancestors.append(String(describing: type(of: current)))
++                    view = current.superview
++                }
++                let stage = screenConverted.map { "x=\($0.x),y=\($0.y),finite=\(finite($0))" } ?? "not-sampled"
++                let line = "Everyone coordinate candidate eventTime=\(event.timestamp) sceneIndex=\(sceneIndex) windowIndex=\(windowIndex) scenePresent=\(candidate.windowScene != nil) sceneState=\(candidate.windowScene?.activationState.rawValue ?? -1) screenIdentity=\(ObjectIdentifier(candidateScreen)) sameScreen=\(sameScreen) directX=\(direct.x) directY=\(direct.y) directFinite=\(finite(direct)) twoStage=\(stage) hitTestConversion=\(conversion) window=\(windowDescription(candidate)) hitAncestors=\(ancestors.isEmpty ? "none" : ancestors.joined(separator: ">"))"
++                logger.notice("\(line, privacy: .public)")
++            }
++        }
++    }
++
++    private static func finite(_ point: CGPoint) -> Bool {
++        point.x.isFinite && point.y.isFinite
++    }
++
++    private static func windowDescription(_ window: UIWindow) -> String {
++        let bounds = window.bounds
++        let transform = window.transform
++        return "class=\(String(describing: type(of: window))),bounds=\(bounds.minX),\(bounds.minY),\(bounds.width),\(bounds.height),transform=\(transform.a),\(transform.b),\(transform.c),\(transform.d),\(transform.tx),\(transform.ty),level=\(window.windowLevel.rawValue),key=\(window.isKeyWindow),hidden=\(window.isHidden),interaction=\(window.isUserInteractionEnabled),alpha=\(window.alpha)"
++    }
++
++    static func record(_ event: UIEvent, boundary: String) {
++        guard event.type == .touches else { return }
++        for touch in event.allTouches ?? [] {
++            guard touch.phase == .began || touch.phase == .ended || touch.phase == .cancelled,
++                  let window = touch.window else { continue }
++            let point = touch.location(in: window)
++            if boundary == "before", touch.phase == .began,
++               abs(point.x - 410) <= 1, abs(point.y - 414) <= 1 {
++                sampleForegroundHitTests(point: point, sourceWindow: window, event: event)
++            }
++            var ancestors: [String] = []
++            var view = touch.view
++            // Bound the trace; observe existing recognizers without changing their ownership or state.
++            for _ in 0..<8 {
++                guard let current = view else { break }
++                let recognizers = (current.gestureRecognizers ?? []).prefix(8).map { recognizer in
++                    let receivingClass = recognizer.view.map { String(describing: type(of: $0)) } ?? "none"
++                    return "\(String(describing: type(of: recognizer))):state=\(recognizer.state.rawValue):enabled=\(recognizer.isEnabled):view=\(receivingClass)"
++                }.joined(separator: ",")
++                ancestors.append("\(String(describing: type(of: current)))[\(recognizers)]")
++                view = current.superview
++            }
++            let touchRecognizers = (touch.gestureRecognizers ?? []).prefix(16).map { recognizer in
++                let receivingClass = recognizer.view.map { String(describing: type(of: $0)) } ?? "none"
++                return "\(String(describing: type(of: recognizer))):state=\(recognizer.state.rawValue):enabled=\(recognizer.isEnabled):view=\(receivingClass)"
++            }.joined(separator: ",")
++            let line = "touchRecognizers=\(touchRecognizers) boundary=\(boundary) eventTime=\(event.timestamp) touchTime=\(touch.timestamp) phase=\(touch.phase.rawValue) type=\(touch.type.rawValue) x=\(point.x) y=\(point.y) windowWidth=\(window.bounds.width) windowHeight=\(window.bounds.height) ancestors=\(ancestors.joined(separator: ">"))"
++            logger.notice("\(line, privacy: .public)")
++        }
++    }
++}
++
++private extension UIApplication {
++    @objc func smm_observedSendEvent(_ event: UIEvent) {
++        EveryoneEventTrace.record(event, boundary: "before")
++        // After exchange this selector invokes UIKit's original implementation exactly once.
++        smm_observedSendEvent(event)
++        EveryoneEventTrace.record(event, boundary: "after")
++    }
++}
++#endif
+--- baseline/SplitMyMealUITests/MealJourneyTests.swift
++++ private-observation/SplitMyMealUITests/MealJourneyTests.swift
+@@ -97,11 +97,15 @@
+         let everyone = revealButton("assign-everyone")
+         XCTAssertTrue(everyone.isEnabled)
+         XCTAssertTrue(app.frame.contains(everyone.frame))
+-        let beforeSelection = XCTAttachment(string: "Everyone target: \(everyone.debugDescription)\nFrame: \(everyone.frame)\nApp: \(app.frame)")
++        let targetFrame = everyone.frame
++        let appFrame = app.frame
++        let originalCenter = CGPoint(x: targetFrame.midX, y: targetFrame.midY)
++        let appOffset = CGVector(dx: originalCenter.x - appFrame.minX, dy: originalCenter.y - appFrame.minY)
++        let beforeSelection = XCTAttachment(string: "Everyone target: \(everyone.debugDescription)\nFrame: \(targetFrame)\nApp: \(appFrame)\nOriginal target center: \(originalCenter)\nApplication-origin offset: \(appOffset)")
+         beforeSelection.name = "everyone-native-full-row-target"
+         beforeSelection.lifetime = .keepAlways
+         add(beforeSelection)
+-        everyone.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
++        everyone.tap()
+         XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Bulk assignment must finish price entry without losing the draft.")
+         XCTAssertEqual(app.textFields["item-price"].value as? String, "12.00")
+         XCTAssertFalse(everyone.isEnabled)

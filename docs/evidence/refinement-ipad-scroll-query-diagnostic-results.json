@@ -1,0 +1,71 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791483729.03,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 4,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 3
+    }
+  ],
+  "scope": "Private controlled query-reduction comparison: four complete journeys passed, one stopped at the unchanged person-name Done readiness precondition. This is not a complete stable-suite pass or isolated performance proof; unrelated native jobs were active.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-scroll-query-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "860fd82a266b35f1a4d55550b2b1d5d1200e0742309ec488559bcddf9abd65d7",
+  "startTime": 1791483323.633,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\") - Person-name entry must expose a visible native Done control.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 5,
+      "testIdentifierString": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear",
+      "testName": "testReverseAssignmentFixedChargesConversionCancelAndClear()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 124.88659799098969,
+      "name": "testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+      "nodeIdentifier": "MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 86.58714199066162,
+      "name": "testLargeTextAndLandscapeNavigation()",
+      "nodeIdentifier": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 78.93154692649841,
+      "name": "testNativePhotoAttachmentReplacementCancelAndSave()",
+      "nodeIdentifier": "MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 83.90922498703003,
+      "name": "testReceiptViewZoomShareAndDraftRemoval()",
+      "nodeIdentifier": "MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 24.662518978118896,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 5
+}

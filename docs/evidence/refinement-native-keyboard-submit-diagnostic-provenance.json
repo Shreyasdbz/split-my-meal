@@ -1,0 +1,28 @@
+{
+  "baseSourceManifestSha256": "860fd82a266b35f1a4d55550b2b1d5d1200e0742309ec488559bcddf9abd65d7",
+  "casePostconditionsAdded": [
+    "Exact person name after native submit"
+  ],
+  "changedInputs": [
+    "SplitMyMealUITests/MealJourneyTests.swift"
+  ],
+  "delta": "Person fill selects the native keyboard Done identifier, retains readiness/foreground/tap/disappearance assertions, and verifies exact value after submit. Bounded key geometry and screenshot instrumentation are declared.",
+  "existingAssertionsLimitsQuiescenceRetriesUnchanged": true,
+  "nativeResults": [
+    "refinement-iphone-native-keyboard-submit-diagnostic-results.json",
+    "refinement-ipad-native-keyboard-submit-diagnostic-results.json"
+  ],
+  "observations": [
+    "refinement-iphone-native-keyboard-submit-observations.json",
+    "refinement-ipad-native-keyboard-submit-observations.json"
+  ],
+  "patch": "refinement-native-keyboard-submit-diagnostic.patch",
+  "patchPublication": "Only scratch-path diff headers normalized to repository-relative names; original evidence hunks preserved.",
+  "patchSha256": "74d7cf60bfff11cbe074decd9e37ae5e175bfa50fed62b7c6b270996299d7451",
+  "privateSourceManifestSha256": "99c34de786892a36c0639d3aa8d4e2b22611e02e0300b949300bbe79988f7e88",
+  "productionUnchanged": true,
+  "scope": "Private native keyboard submit selector comparison on both devices; no maintained-source adoption or causal claim.",
+  "scrollingHelperUnchangedFromPrivate860Candidate": true,
+  "soleActiveJobClaim": false,
+  "sourceInputCount": 44
+}

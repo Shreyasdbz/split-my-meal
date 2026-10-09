@@ -1,0 +1,110 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791511185.942,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 13,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 8
+    }
+  ],
+  "scope": "Complete native B partition on the current source with semantic sidebar labels: all 13 selected UI cases passed with exact compiled-native selection reconciliation and no missing, duplicated, skipped or failed cases. A partition predates the single Home label-style change; a final same-head full verification remains required.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-b-current-source-manifest.json",
+  "sourceManifestSHA256": "b6d6cd6661bb549f783610ce87e82fc6fe1eb0771b7a4f8894ac79c972564738",
+  "startTime": 1791510515.447,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 43.000943064689636,
+      "name": "testCollectAllTypeAccessibilityIssueInventory()",
+      "nodeIdentifier": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 44.44960904121399,
+      "name": "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "nodeIdentifier": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 22.196228981018066,
+      "name": "testDismissedDraftLeavesSavedMealUnchanged()",
+      "nodeIdentifier": "MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 34.32533597946167,
+      "name": "testDynamicTypeReallyGrowsAmountsAndInputs()",
+      "nodeIdentifier": "MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 45.38899099826813,
+      "name": "testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+      "nodeIdentifier": "MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 105.53331196308136,
+      "name": "testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+      "nodeIdentifier": "MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 94.59598410129547,
+      "name": "testLargeTextAndLandscapeNavigation()",
+      "nodeIdentifier": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 38.21465492248535,
+      "name": "testLibrarySearchSortAndRestaurantPickerCancellation()",
+      "nodeIdentifier": "MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 20.08675503730774,
+      "name": "testNativeAccessibleControlSemanticsAndHitRegions()",
+      "nodeIdentifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 73.41517198085785,
+      "name": "testNativePhotoAttachmentReplacementCancelAndSave()",
+      "nodeIdentifier": "MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 40.172359108924866,
+      "name": "testRenamingHistoricalPersonPreservesAuthoritativeItemShares()",
+      "nodeIdentifier": "MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 88.82339799404144,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 17.19621193408966,
+      "name": "testTaxAndTipRowsRespondAcrossTheirFullWidth()",
+      "nodeIdentifier": "MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 13
+}

@@ -1,0 +1,246 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 2,
+  "finishTime": 1791472679.148,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 31,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 5
+    }
+  ],
+  "scope": "Fresh isolated-device diagnostic attempt, deliberately interrupted after Demo passed. Native observed33 cases:31 passed, one existing420-second animation-wait allowance failure and one agent-interrupted draft case. Remaining20 were unexecuted. This is not a complete53-case run or final verification.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-fresh-interrupted-source-manifest.json",
+  "sourceManifestSHA256": "8c92ce94991bcded7d52953086d496030d1163ed369e757ef2a57887b3b36bb5",
+  "startTime": 1791471975.331,
+  "testFailures": [
+    {
+      "failureText": "Test exceeded execution time allowance of 7 minutes",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 30,
+      "testIdentifierString": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence",
+      "testName": "testCreateEditSplitShareAndPersistence()"
+    },
+    {
+      "failureText": "Testing was canceled",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 33,
+      "testIdentifierString": "MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged",
+      "testName": "testDismissedDraftLeavesSavedMealUnchanged()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 0.0030280351638793945,
+      "name": "testChargeModeConversionUsesCurrentDraftAndCalculationBase()",
+      "nodeIdentifier": "EditorInputTests/testChargeModeConversionUsesCurrentDraftAndCalculationBase()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0012290477752685547,
+      "name": "testInvalidNumericInputNeverBecomesSuccessfulSaveValue()",
+      "nodeIdentifier": "EditorInputTests/testInvalidNumericInputNeverBecomesSuccessfulSaveValue()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0006059408187866211,
+      "name": "testLocalizedDecimalInputConsumesEntireString()",
+      "nodeIdentifier": "EditorInputTests/testLocalizedDecimalInputConsumesEntireString()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.07903397083282471,
+      "name": "testReceiptDownsamplesAndKeepsReadableImage()",
+      "nodeIdentifier": "EditorInputTests/testReceiptDownsamplesAndKeepsReadableImage()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0017330646514892578,
+      "name": "testReceiptRejectsUnreadableAndOversizedData()",
+      "nodeIdentifier": "EditorInputTests/testReceiptRejectsUnreadableAndOversizedData()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.006904006004333496,
+      "name": "testDecimalRoundingAndFractionalCharges()",
+      "nodeIdentifier": "MealAmountsTests/testDecimalRoundingAndFractionalCharges()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0006279945373535156,
+      "name": "testEmptyMealWithFixedChargesHasFiniteUnassignedAmount()",
+      "nodeIdentifier": "MealAmountsTests/testEmptyMealWithFixedChargesHasFiniteUnassignedAmount()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0006990432739257812,
+      "name": "testFixedChargesTakePrecedenceAndTipIncludesTax()",
+      "nodeIdentifier": "MealAmountsTests/testFixedChargesTakePrecedenceAndTipIncludesTax()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0007969141006469727,
+      "name": "testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow()",
+      "nodeIdentifier": "MealAmountsTests/testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0006999969482421875,
+      "name": "testItemizedPersonComponentsConserveEveryCent()",
+      "nodeIdentifier": "MealAmountsTests/testItemizedPersonComponentsConserveEveryCent()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0004659891128540039,
+      "name": "testLargeFormattedChargesAreNeverReparsedAsZero()",
+      "nodeIdentifier": "MealAmountsTests/testLargeFormattedChargesAreNeverReparsedAsZero()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0005549192428588867,
+      "name": "testLargestAcceptedInputsRemainFiniteAndConserved()",
+      "nodeIdentifier": "MealAmountsTests/testLargestAcceptedInputsRemainFiniteAndConserved()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0013630390167236328,
+      "name": "testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals()",
+      "nodeIdentifier": "MealAmountsTests/testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0007760524749755859,
+      "name": "testSharedItemRemainderIsStableAndConserved()",
+      "nodeIdentifier": "MealAmountsTests/testSharedItemRemainderIsStableAndConserved()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.00067901611328125,
+      "name": "testUnassignedItemsAndChargesReconcileToGrandTotal()",
+      "nodeIdentifier": "MealAmountsTests/testUnassignedItemsAndChargesReconcileToGrandTotal()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0005010366439819336,
+      "name": "testUnknownAndDuplicateConsumersDoNotLoseMoney()",
+      "nodeIdentifier": "MealAmountsTests/testUnknownAndDuplicateConsumersDoNotLoseMoney()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.08531296253204346,
+      "name": "testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt()",
+      "nodeIdentifier": "MealStoreTests/testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.019436001777648926,
+      "name": "testCharmAcceptsOnePresentedEmojiAndRejectsText()",
+      "nodeIdentifier": "MealStoreTests/testCharmAcceptsOnePresentedEmojiAndRejectsText()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.1786940097808838,
+      "name": "testCommitRestoresGraphAfterNativeReadOnlySaveRejection()",
+      "nodeIdentifier": "MealStoreTests/testCommitRestoresGraphAfterNativeReadOnlySaveRejection()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.08252608776092529,
+      "name": "testConfiguredReadOnlyStoreRejectsBeforeMutation()",
+      "nodeIdentifier": "MealStoreTests/testConfiguredReadOnlyStoreRejectsBeforeMutation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.013445019721984863,
+      "name": "testDeletedMealCannotBeResurrectedFromStaleEditor()",
+      "nodeIdentifier": "MealStoreTests/testDeletedMealCannotBeResurrectedFromStaleEditor()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.013067007064819336,
+      "name": "testForeignContextAndCrossMealEditsAreRejected()",
+      "nodeIdentifier": "MealStoreTests/testForeignContextAndCrossMealEditsAreRejected()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.009318947792053223,
+      "name": "testInvalidInputsDoNotMutateSavedState()",
+      "nodeIdentifier": "MealStoreTests/testInvalidInputsDoNotMutateSavedState()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.0036649703979492188,
+      "name": "testLegacyFixtureRetainsOriginal2024EntityHashes()",
+      "nodeIdentifier": "MealStoreTests/testLegacyFixtureRetainsOriginal2024EntityHashes()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.07780206203460693,
+      "name": "testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()",
+      "nodeIdentifier": "MealStoreTests/testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.046813011169433594,
+      "name": "testNamesRequireVisibleContentWithoutChangingUnicodeNames()",
+      "nodeIdentifier": "MealStoreTests/testNamesRequireVisibleContentWithoutChangingUnicodeNames()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 0.02733004093170166,
+      "name": "testSaveAssignmentsAndDeletionAreConsistent()",
+      "nodeIdentifier": "MealStoreTests/testSaveAssignmentsAndDeletionAreConsistent()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 15.277019023895264,
+      "name": "testCancelledMealDoesNotPersist()",
+      "nodeIdentifier": "MealJourneyTests/testCancelledMealDoesNotPersist()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 55.48804497718811,
+      "name": "testCollectAllTypeAccessibilityIssueInventory()",
+      "nodeIdentifier": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 420,
+      "name": "testCreateEditSplitShareAndPersistence()",
+      "nodeIdentifier": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 45.7638920545578,
+      "name": "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "nodeIdentifier": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 93.62919998168945,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    },
+    {
+      "name": "testDismissedDraftLeavesSavedMealUnchanged()",
+      "nodeIdentifier": "MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 33
+}

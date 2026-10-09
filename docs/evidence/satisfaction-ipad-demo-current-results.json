@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791510244.383,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Complete current native iPad walkthrough passed, with semantic selected-row labels, normal/dark layouts, editors, split disclosures, receipt and landscape. This run retained original screenshots; no walkthrough video recording was enabled.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-demo-current-source-manifest.json",
+  "sourceManifestSHA256": "b6d6cd6661bb549f783610ce87e82fc6fe1eb0771b7a4f8894ac79c972564738",
+  "startTime": 1791510141.441,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 99.91027998924255,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

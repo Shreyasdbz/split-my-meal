@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791485104.395,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 2
+    }
+  ],
+  "scope": "Historical private harness comparison: two Phone callers completed; generic Pad Hide keyboard was not adopted.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-native-keyboard-hide-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "85c3779d94952cde7e686ae7d24ee55f7db078e32aaa713835aacc43bce48373",
+  "startTime": 1791484985.614,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 47.42855393886566,
+      "name": "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "nodeIdentifier": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 67.6991639137268,
+      "name": "testEditAndDeleteItemPersonAndMeal()",
+      "nodeIdentifier": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

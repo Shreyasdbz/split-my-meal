@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791511512.222,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Uninstrumented Pad keyboard comparator: initial Everyone, exact shares, native Done, Save and exception Cancel passed. Whole case failed because a native Select All menu did not appear within the original five-second bound; no replacement, invalid input or relaunch assertion was reached. No production adoption or causal claim.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-native-select-all-source-manifest.json",
+  "sourceManifestSHA256": "f85a6d10243bdd47dc7c4297c993bfc80e5e1908e5daf81109a0a3712967e92d",
+  "startTime": 1791511421.998,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\") - Price replacement requires the actual native Select All control.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 84.56476700305939,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

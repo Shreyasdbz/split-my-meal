@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791469334.134,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Dedicated native Demo walkthrough recording on final frozen refinement source.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-demo-source-manifest.json",
+  "sourceManifestSHA256": "6b2e678b003f4f03f1c532d5042420c04ca6ff746cf6fb30a540ba2df4cf8092",
+  "startTime": 1791469242.717,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 88.70128810405731,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

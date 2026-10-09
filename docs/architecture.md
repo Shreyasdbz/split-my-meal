@@ -16,6 +16,8 @@ The iPad meal editor and itemized split use focused full-window presentations fo
 
 ## Money and assignments
 
+The item editor previews draft shares through the same stable-ID cent allocator used by the saved bill. Everyone changes only the draft consumer set and finishes price entry; Save validates and persists it, while Cancel preserves the original record. The iPad price field requests a numeric keyboard with native submit support; iPhone retains its decimal keypad. Both paths keep the same strict decimal parser and two-fractional-digit limit.
+
 The stored schema retains its original `Double` price and tax/tip fields for compatibility. The calculation boundary converts decimal values to cents once. Fixed amounts take precedence over percentages. Tax uses the item subtotal; percentage tips use the subtotal including tax, preserving the previous app’s rule. Charge previews, mode conversions, validation, and saved calculations share the same decimal rounding helper, including half-cent boundaries.
 
 Each item’s valid, deduplicated consumer IDs are authoritative. Both assignment editors derive their initial selections from those IDs, so a stale historical reverse index cannot erase shares during a name-only edit. Item cents are divided evenly; remaining cents go in stable person-ID order. Tax and tip use proportional largest-remainder allocation. Unassigned items retain their share of charges in an explicit unassigned balance. People’s totals plus that balance equal the bill total exactly. Invalid historical values are flagged and excluded, and split sharing is disabled until they are corrected.

@@ -1,0 +1,79 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 2,
+  "finishTime": 1791479932.793,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 3,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Retained current-production iPad live integration attempt: three passed, two native test-navigation failures (Settings sidebar search and absent search close control). Not final live-suite proof.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-live-r1-source-manifest.json",
+  "sourceManifestSHA256": "fc6616bfd0080fc6cfd5a16eadedd7ef12389a8bee43f63889123c8fe59d48d8",
+  "startTime": 1791479658.564,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate",
+      "testName": "testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()"
+    },
+    {
+      "failureText": "Failed to tap \"close\" Button: No matches found for first query match sequence: `Descendants matching type Button` -> `Elements matching predicate '\"close\" IN identifiers'`, given input App element pid: 20559\nPossibly caused by runtime issues:\nAutomation type mismatch: computed Button from legacy attributes vs Key from modern attribute. Input attributes and values: {\n    \"XC_kAXXCAttributeAutomationType\" = 20;\n    \"XC_kAXXCAttributeElementBaseType\" = UIAccessibilityElement;\n    \"XC_kAXXCAttributeElementType\" = UIAccessibilityElementKBKey;\n    \"XC_kAXXCAttributeTraits\" = 8589934641;\n}\nAutomation type mismatch: computed Button from legacy attributes vs Key from modern attribute. Input attributes and values: {\n    \"XC_kAXXCAttributeAutomationType\" = 20;\n    \"XC_kAXXCAttributeElementBaseType\" = UIAccessibilityElement;\n    \"XC_kAXXCAttributeElementType\" = UIAccessibilityElementKBKey;\n    \"XC_kAXXCAttributeTraits\" = 8589934649;\n}\nAutomation type mismatch: computed Button from legacy attributes vs Key from modern attribute. Input attributes and values: {\n    \"XC_kAXXCAttributeAutomationType\" = 20;\n    \"XC_kAXXCAttributeElementBaseType\" = UIAccessibilityElement;\n    \"XC_kAXXCAttributeElementType\" = UIAccessibilityElementKBKey;\n    \"XC_kAXXCAttributeTraits\" = 8589936689;\n}\nSee test report attachments for more detail.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 4,
+      "testIdentifierString": "LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant",
+      "testName": "testRapidQueryCancellationLeavesOriginalRestaurant()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 47.97715210914612,
+      "name": "testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "nodeIdentifier": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 40.362436056137085,
+      "name": "testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 136.03684890270233,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 15.300948977470398,
+      "name": "testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "nodeIdentifier": "LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 26.27024805545807,
+      "name": "testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "nodeIdentifier": "LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 5
+}

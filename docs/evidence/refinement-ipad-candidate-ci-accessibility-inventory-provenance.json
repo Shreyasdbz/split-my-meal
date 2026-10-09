@@ -1,0 +1,38 @@
+{
+  "collectionTest": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+  "excludedReports": 0,
+  "inventoryFile": "refinement-ipad-candidate-ci-all-type-accessibility-inventory.json",
+  "inventorySHA256": "0de3a7a9ab5a18c81e1104fc2f9469db1c70782486b7396522156401b0d5a02d",
+  "issuesReported": 37,
+  "knownDecorativeRasterReports": 0,
+  "nativeAttachment": "all-type-accessibility-issue-inventory_0_C5618F0E-F252-49CE-8373-93E4DAB93F82.json",
+  "reportCountsByAuditType": {
+    "1": 17,
+    "131072": 6,
+    "65536": 14
+  },
+  "scope": "Current refinement all-type diagnostic inventory, not an accessibility pass. Every reported issue is retained; unavailable identities remain unresolved.",
+  "separateNativeControlGate": {
+    "auditTypes": [
+      "hitRegion",
+      "sufficientElementDescription",
+      "trait",
+      "elementDetection"
+    ],
+    "durationInSeconds": 78.45920193195343,
+    "exemptions": 0,
+    "meaning": "This separate strict gate does not classify or clear contrast, font scaling, or clipping reports in the all-type inventory.",
+    "result": "Passed",
+    "surfaces": [
+      "library",
+      "meal detail",
+      "split summary",
+      "meal editor"
+    ],
+    "test": "testNativeAccessibleControlSemanticsAndHitRegions()"
+  },
+  "sourceManifest": "refinement-ipad-candidate-ci-source-manifest.json",
+  "sourceManifestSHA256": "fc6616bfd0080fc6cfd5a16eadedd7ef12389a8bee43f63889123c8fe59d48d8",
+  "sourceResults": "refinement-ipad-candidate-ci-results.json",
+  "unavailableElementIdentityReports": 10
+}

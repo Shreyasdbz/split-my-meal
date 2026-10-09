@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791511735.569,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Both native full accessibility inventory and strict control semantics/hit-region checks passed on primary metadata styling. The complete inventory remains diagnostic and is not an accessibility certification; affected library contrast reports are compared separately.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-library-primary-source-manifest.json",
+  "sourceManifestSHA256": "be544d781fdb36a8b813343d4e79d900c4e20d482330aee9dace0e09a3637ab9",
+  "startTime": 1791511669.07,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 43.64710998535156,
+      "name": "testCollectAllTypeAccessibilityIssueInventory()",
+      "nodeIdentifier": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 20.061409950256348,
+      "name": "testNativeAccessibleControlSemanticsAndHitRegions()",
+      "nodeIdentifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791511484.873,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Fresh maintained native Demo case passes with the semantic secondary sidebar labels and records an actual-speed walkthrough. Source predates the subsequent primary metadata contrast correction; not final-source delivery evidence.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-demo-selection-source-manifest.json",
+  "sourceManifestSHA256": "b6d6cd6661bb549f783610ce87e82fc6fe1eb0771b7a4f8894ac79c972564738",
+  "startTime": 1791511390.419,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 89.39018309116364,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

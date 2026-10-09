@@ -1,0 +1,67 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 2,
+  "finishTime": 1791479347.76,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 3
+    }
+  ],
+  "scope": "Rejected private generic keyboard-readiness comparison: audit passed; creation timed out in readiness and assigned-person deletion failed native hittability activation. Not adopted; not passing suite evidence.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-keyboard-readiness-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "dee714623200e899a9f774f033499c5eb1174579836feecd13721ecc1e34af1f",
+  "startTime": 1791479182.636,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\") - Native keyboard and Done must be visible within the foreground application before dismissal.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence",
+      "testName": "testCreateEditSplitShareAndPersistence()"
+    },
+    {
+      "failureText": "Failed to determine hittability of \"Done\" Button: Activation point invalid and no suggested hit points based on element frame",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 3,
+      "testIdentifierString": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance",
+      "testName": "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 57.27598702907562,
+      "name": "testCollectAllTypeAccessibilityIssueInventory()",
+      "nodeIdentifier": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 49.06205701828003,
+      "name": "testCreateEditSplitShareAndPersistence()",
+      "nodeIdentifier": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 33.912811040878296,
+      "name": "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "nodeIdentifier": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 3
+}

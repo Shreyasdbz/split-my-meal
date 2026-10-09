@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791512745.306,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Final frozen-source native Demo walkthrough passed and finalized an actual-speed simulator recording with original normal light/dark screenshots. Scope is this executed native case; full hosted suite and external behavior remain separate.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-final-demo-source-manifest.json",
+  "sourceManifestSHA256": "de0193ad3914f031a71da6404f6af5b5b4278e26d54059760db13bca79d8472d",
+  "startTime": 1791512654.572,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 87.31979298591614,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

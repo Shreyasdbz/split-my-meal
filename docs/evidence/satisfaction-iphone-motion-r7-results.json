@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791491850.762,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Largest-text landscape total visibility check failed after unchanged screen-edge drags. The failure screenshot was captured after native Settings restoration and portrait rotation; it does not establish the screen state during the failed gestures.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-motion-r7-source-manifest.json",
+  "sourceManifestSHA256": "be220956888414c6028e31d373a3ba131feb54ccc485f1daee2cc3f98e74c099",
+  "startTime": 1791491681.932,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertLessThan failed: (\"322.66666666666663\") is not less than (\"275.66666666666663\") - List control must remain within the foreground content viewport.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit",
+      "testName": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 162.67121291160583,
+      "name": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "nodeIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

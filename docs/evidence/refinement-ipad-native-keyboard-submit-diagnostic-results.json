@@ -1,0 +1,59 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791484496.437,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 3
+    }
+  ],
+  "scope": "Private complete-flow comparison of native person-name keyboard submission; unchanged generic price-keyboard dismissal failed.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-native-keyboard-submit-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "99c34de786892a36c0639d3aa8d4e2b22611e02e0300b949300bbe79988f7e88",
+  "startTime": 1791484241.128,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - The keyboard must dismiss before another control can be tapped.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal",
+      "testName": "testEditAndDeleteItemPersonAndMeal()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 97.45095002651215,
+      "name": "testCreateEditSplitShareAndPersistence()",
+      "nodeIdentifier": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 45.28823494911194,
+      "name": "testEditAndDeleteItemPersonAndMeal()",
+      "nodeIdentifier": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 107.49405300617218,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 3
+}

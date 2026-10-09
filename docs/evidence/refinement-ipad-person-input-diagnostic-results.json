@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791472928.039,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "One controlled private-copy test-only diagnostic. App production inputs, quiescence, assertions and240-second allowance are unchanged. Person input uses complete text, exact value check and visible native Done. One focused journey passed; this does not establish cause or eliminate every native wait.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-person-input-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "ed0888b39de312373616f73c6befe27a5557029b86472cb22176cc536f609241",
+  "startTime": 1791472846.254,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 79.26945006847382,
+      "name": "testEditAndDeleteItemPersonAndMeal()",
+      "nodeIdentifier": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

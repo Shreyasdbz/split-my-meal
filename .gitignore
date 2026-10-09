@@ -5,3 +5,4 @@ build/
 *.xcuserstate
 xcuserdata/
 artifacts/
+__pycache__/

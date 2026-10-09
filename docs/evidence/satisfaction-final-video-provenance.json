@@ -1,0 +1,86 @@
+{
+  "devices": {
+    "ipad": {
+      "encodedMetadata": {
+        "bytes": 39404927,
+        "durationSeconds": 87.175,
+        "encodedHeight": 1280,
+        "encodedWidth": 892,
+        "source": "demo-walkthrough.mp4",
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "verifiedFrameTimesSeconds": [
+          0.9683333333333334,
+          19.923333333333332,
+          43.55166666666667,
+          60.67333333333333,
+          81.97
+        ]
+      },
+      "encoding": "AVFoundation H.264 1280x720 preset; source orientation retained; no speed changes or frame overlays.",
+      "file": "satisfaction-final-ipad-walkthrough.mp4",
+      "independentSampleReview": {
+        "finding": "Encoded sample at 81.97 seconds is a blank native app launch surface during the retained internal appearance relaunch. It is not a settled screen or endpoint. Other sampled states and both original endpoints show readable product content.",
+        "limit": "Sampled pixels do not establish continuous playback fluidity or every transition.",
+        "originalEndpointsViewed": 2,
+        "samplesViewed": 5
+      },
+      "nativeResult": "satisfaction-final-ipad-demo-results.json",
+      "originalBytes": 108249897,
+      "originalDurationSeconds": 103.38166666666666,
+      "originalSHA256": "84d9073721f15669b4ef89e4a179c549ccb45b90a93bf7a94eff35dcb46fde0d",
+      "sha256": "b3dd450121e28820e484fa2605776d03a99f7f12ef3fe074649baf14648da6bc",
+      "sourceManifest": "satisfaction-final-ipad-demo-source-manifest.json",
+      "trimEndSeconds": 101,
+      "trimStartSeconds": 13.825
+    },
+    "iphone": {
+      "encodedMetadata": {
+        "bytes": 41070657,
+        "durationSeconds": 76.46833333333333,
+        "encodedHeight": 1280,
+        "encodedWidth": 588,
+        "source": "demo-walkthrough.mp4",
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "verifiedFrameTimesSeconds": [
+          1.56,
+          19.115,
+          38.23166666666667,
+          55.41166666666667,
+          72.63
+        ]
+      },
+      "encoding": "AVFoundation H.264 1280x720 preset; source orientation retained; no speed changes or frame overlays.",
+      "file": "satisfaction-final-iphone-walkthrough.mp4",
+      "independentSampleReview": {
+        "finding": "Encoded sample at 72.63 seconds is a blank native app launch surface during the retained internal appearance relaunch. It is not a settled screen or endpoint. Other sampled states and both original endpoints show readable product content.",
+        "limit": "Sampled pixels do not establish continuous playback fluidity or every transition.",
+        "originalEndpointsViewed": 2,
+        "samplesViewed": 5
+      },
+      "nativeResult": "satisfaction-final-iphone-demo-results.json",
+      "originalBytes": 95098467,
+      "originalDurationSeconds": 92.41666666666667,
+      "originalSHA256": "b71d9dd96be36148fb444faa9de0435a53823d6df636d0bad575056ffb446bd8",
+      "sha256": "d981c1e15e4e918f4334b60fb6df1fc8b8ebd2a27a1e7df3efcffa80177d5608",
+      "sourceManifest": "satisfaction-final-iphone-demo-source-manifest.json",
+      "trimEndSeconds": 90,
+      "trimStartSeconds": 13.531666666666666
+    }
+  },
+  "scope": "Actual-speed final native recordings. Only simulator/test setup and teardown were trimmed; normal navigation, scrolling, editor interactions and appearance relaunches remain. Five decoded samples and original first/last states per device were inspected; sampling is not full frame-by-frame review.",
+  "sourceManifestSHA256": "5c4da2492c794ab1ad128dcb6c9d0a0dbe337abc0537e0d5e7d4193d71eba44f"
+}

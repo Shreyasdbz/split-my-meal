@@ -1,0 +1,37 @@
+{
+  "analyzer": "passed",
+  "binarySHA256": "75e1e58762a7822ff805a4c0efe1d4ac6204cd6d10cf1c624254d813cb3556c2",
+  "build": "2",
+  "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+  "codeSigning": "disabled for local verification",
+  "compilerWarnings": [
+    "Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Unsigned device build and analysis; no physical-device signing, CloudKit account or App Store operation",
+  "sourceManifest": "satisfaction-release-current-source-manifest.json",
+  "sourceManifestSHA256": "d749f54d9d74750ada9dcbc18cb6193f319897ce71fc0b5eaf428dd1207846c8",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "validation": "Current unsigned device Release build and analyzer passed. Production and project hashes match the current native manifest; all twelve DEBUG fixture strings are absent. No signed-device or CloudKit-account verification follows.",
+  "verifiedAt": "2026-10-09T01:29:49.025575+00:00",
+  "version": "2.0.0"
+}

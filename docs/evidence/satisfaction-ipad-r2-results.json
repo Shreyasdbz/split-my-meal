@@ -1,0 +1,61 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 2,
+  "finishTime": 1791488288.423,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Second new-slice pilot: recorded full-row Everyone geometry and center tap, but assignments and keyboard state did not change; Settings parent navigation failed before preference access.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-r2-source-manifest.json",
+  "sourceManifestSHA256": "cc25bf3c154014beb8f8d0e5d4ebb3d645ad467d4e77884098844611e187d3db",
+  "startTime": 1791488193.737,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - Bulk assignment must finish price entry without losing the draft.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    },
+    {
+      "failureText": "XCTAssertTrue failed - Native Settings must expose its parent navigation before opening Accessibility.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit",
+      "testName": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 63.90609002113342,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 20.0308700799942,
+      "name": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "nodeIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 2
+}

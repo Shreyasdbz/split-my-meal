@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791510398.377,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Private native XCUIElement tap on the explicit full-width borderless button reproduced keyboard-dismissal failure. No action entry occurred and no full assignment journey completed; keyboard/screen routing cause remains unproved.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-native-button-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "16cfe2c27faa15e419202113a069f47a6be816f9f4db77d9071af7643edc9263",
+  "startTime": 1791510342.351,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - Bulk assignment must finish price entry without losing the draft.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 51.09236693382263,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

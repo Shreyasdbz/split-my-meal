@@ -1,0 +1,59 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791464958.565,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Focused historical pilot; Settings handoff failed during native search-sheet movement. Preserved query and final screen are diagnostic evidence only.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-pilot-r9-source-manifest.json",
+  "sourceManifestSHA256": "8f25d0cb7b289daf447507280cecc560020960389188e6c6f120ea1b6a5b7f73",
+  "startTime": 1791464731.814,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - Denied location recovery must open native Settings.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 37.61525905132294,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 95.45570600032806,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 88.62669801712036,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 3
+}

@@ -1,0 +1,50 @@
+{
+  "cases": {
+    "creationDurationSeconds": 101.951,
+    "inventoryDurationSeconds": 69.279
+  },
+  "conclusion": "The initial keyboard-existence marker is an unreliable readiness guard in this observed sequence. Require the known focused field\u2019s visible native Done action before its next control; broader assertions and remaining tests still need final verification.",
+  "existingControlWaitSeconds": 5,
+  "nativeAnimationWaitWarnings": 0,
+  "nativeDoneActions": [
+    {
+      "doneFramePoints": {
+        "height": 36,
+        "width": 64.5,
+        "x": 731.5,
+        "y": 803
+      },
+      "foregroundApplicationState": 4,
+      "hittable": true,
+      "keyboardAbsentConfirmedAtCaseSeconds": 20.33,
+      "keyboardMarkerAfterDoneReadiness": true,
+      "keyboardMarkerImmediatelyAfterTyping": false,
+      "nativeTapAtCaseSeconds": 18.51,
+      "person": "Alice"
+    },
+    {
+      "doneFramePoints": {
+        "height": 36,
+        "width": 64.5,
+        "x": 731.5,
+        "y": 803
+      },
+      "foregroundApplicationState": 4,
+      "hittable": true,
+      "keyboardAbsentConfirmedAtCaseSeconds": 35.35,
+      "keyboardMarkerAfterDoneReadiness": true,
+      "keyboardMarkerImmediatelyAfterTyping": false,
+      "nativeTapAtCaseSeconds": 33.56,
+      "person": "Bob"
+    }
+  ],
+  "nativeResults": "refinement-ipad-native-done-diagnostic-results.json",
+  "prefix": "Unchanged all-type inventory executes immediately before creation in the same native session. Unit tests are not part of this focused selection.",
+  "productionInputsMatchingRelease": 33,
+  "scope": "Controlled private-copy audit-then-creation session, distinct from final maintained-helper full-suite validation. No app/framework cause attribution.",
+  "soleDelta": "refinement-native-done-diagnostic.patch",
+  "soleDeltaSHA256": "d33eabd456b463067f32752731d97e72e30140226196c2b69b6784fa0a54d317",
+  "sourceManifest": "refinement-ipad-native-done-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "9187806380ba06103799912aebe2f03eed8fe4407419f4096db5d42ec19fc8da",
+  "unchangedCreateAllowanceSeconds": 420
+}

@@ -1,0 +1,33 @@
+{
+  "compiledSourceManifest": "refinement-iphone-live-source-manifest.json",
+  "compiledSourceManifestSHA256": "e3e001fbbc14c5d7e5a6fc72b69dd65211542221bf97373c043a289d3e351b5d",
+  "nativeEnumeration": {
+    "a": {
+      "enabledCases": 40,
+      "exactCatalogueMatch": true,
+      "file": "refinement-compiled-a-test-enumeration.json",
+      "sha256": "714a9830a7ff59cf988876f02072f53ba7a21dba62fe3dd1f30ef16fb5b85d46"
+    },
+    "all": {
+      "enabledCases": 53,
+      "exactCatalogueMatch": true,
+      "file": "refinement-compiled-all-test-enumeration.json",
+      "sha256": "242f270d75af170b8b07597807d7104b1e9dccf905d43a687136c46cdd71ad62"
+    },
+    "b": {
+      "enabledCases": 13,
+      "exactCatalogueMatch": true,
+      "file": "refinement-compiled-b-test-enumeration.json",
+      "sha256": "21987dcdea6225f4e62f9cd712c3157e1ab20f34db7507cbe14b1bb5182d78e1"
+    }
+  },
+  "scope": "Native compiled enumeration and exact response-file selection; no partition test execution or hosted pass is claimed. The compiled app/test source revision is retained separately; selection infrastructure is validated by its own hashes and unit checks.",
+  "selectionInputsSHA256": {
+    ".github/workflows/ios.yml": "10d57098a1ed171ab37dbf3cab7c908b2ea0c715aaf73ba78f8de7f1ea3df466",
+    "scripts/native-test-selection.py": "70db0d9b2cd0dce6c59aa91a60fe5d2f01826545e4e86889d51bc8c3c7d491c1",
+    "scripts/stable-test-partitions.json": "67477bd3118e5d07698c768c81d7a1ef043cf1f7b8846c91b3c063f589ee9ac5",
+    "scripts/tests/test_native_test_selection.py": "e62441840c926fe4547f82e416d3fecc7d55a4300134fc98cafeea6e2841ae61",
+    "scripts/verify-ios.sh": "60666bc6cd4a711d53e49675b7bae9b812d216182a565a5b98ca0b997149c756"
+  },
+  "unitChecksPassed": 12
+}

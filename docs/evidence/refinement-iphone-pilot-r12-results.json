@@ -1,0 +1,61 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 2,
+  "finishTime": 1791466692.131,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Focused native pilot; iPad completes normal and denied largest-text map and Settings recovery. Phone full-action visibility failures remain preserved and require a later replay.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-pilot-r12-source-manifest.json",
+  "sourceManifestSHA256": "5f5eab1a73efd95e8985eb9bba97eb1a854e388eb929a39925fb5a10a16d944c",
+  "startTime": 1791466477.071,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - The whole native action must remain within the foreground details viewport.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    },
+    {
+      "failureText": "XCTAssertTrue failed - The whole native action must remain within the foreground details viewport.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape",
+      "testName": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 122.97800397872925,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 83.82350599765778,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 2
+}

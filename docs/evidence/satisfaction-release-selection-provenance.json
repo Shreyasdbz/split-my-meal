@@ -1,0 +1,37 @@
+{
+  "analyzer": "passed",
+  "binarySHA256": "6cd29cc9e79b3cf182cec32ea18f4bf640d1aac4afede9bf6575045b63c486c8",
+  "build": "2",
+  "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+  "codeSigning": "disabled for local verification",
+  "compilerWarnings": [
+    "Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Unsigned device build and analysis; no physical-device signing, CloudKit account or App Store operation",
+  "sourceManifest": "satisfaction-release-selection-source-manifest.json",
+  "sourceManifestSHA256": "b6d6cd6661bb549f783610ce87e82fc6fe1eb0771b7a4f8894ac79c972564738",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "validation": "Unsigned device Release build and analyzer passed after semantic secondary sidebar-label correction. All 33 production/project hashes matched the bound manifest at build time; all 12 DEBUG fixture strings were absent. This build predates the later primary metadata contrast correction. Signed-device/CloudKit-account behavior remains separate.",
+  "verifiedAt": "2026-10-09T01:49:35.296225+00:00",
+  "version": "2.0.0"
+}

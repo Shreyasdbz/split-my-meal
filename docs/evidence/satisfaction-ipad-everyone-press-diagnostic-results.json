@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791491485.248,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Failed private center-duration comparison: original ItemEditor keyboard toolbar restored; 0.1-second center press instead of maintained tap, identical body assertions. No action-entry observed; no duration fix or production change established.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-press-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "4ede23d5e07770119d557e6c86aa504e3fa81a2878f62650db2524b80da2e9f7",
+  "startTime": 1791491426.9,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - Bulk assignment must finish price entry without losing the draft.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 53.026816964149475,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

@@ -1,0 +1,35 @@
+{
+  "allowanceFailures": 0,
+  "caseDurationSeconds": 79.269,
+  "doneControl": {
+    "actualNativeTapAtCaseSeconds": 16.03,
+    "foregroundApplicationState": 4,
+    "framePoints": {
+      "height": 36,
+      "width": 64.5,
+      "x": 731.5,
+      "y": 1064
+    },
+    "hittable": true,
+    "keyboardNonexistenceConfirmedAtCaseSeconds": 18.01,
+    "keyboardNonexistenceWaitAtCaseSeconds": 16.95
+  },
+  "nativeAnimationWaitWarnings": 0,
+  "nativeRecording": "Original native diagnostic recording retained in private verification output; no simulated or edited app interaction is claimed.",
+  "nativeResults": "refinement-ipad-person-input-diagnostic-results.json",
+  "productionInputsMatchingRelease": 33,
+  "scope": "Single private-copy controlled native input diagnostic, not a complete-suite pass or platform-cause attribution. Maintained helper adoption is smaller and requires its own full-suite replay.",
+  "soleDelta": "refinement-person-input-diagnostic.patch",
+  "soleDeltaSHA256": "e5a7aa0826b6fee516ef00f2031fd0d1fedc9303ec7180995082e956488f25b2",
+  "sourceManifest": "refinement-ipad-person-input-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "ed0888b39de312373616f73c6befe27a5557029b86472cb22176cc536f609241",
+  "unchangedBoundaries": [
+    "App production code",
+    "Exact input values",
+    "Save and persistence assertions",
+    "Rename and item/person/meal deletion assertions",
+    "Process relaunch assertions",
+    "XCTest quiescence",
+    "240-second case allowance"
+  ]
+}

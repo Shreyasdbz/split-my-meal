@@ -1,0 +1,38 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791491473.998,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Complete maintained current-source phone Everyone draft, individual exception, cancellation, invalid preview clearing, saved completion and relaunch journey. Original center gesture, keyboard-disappearance assertion and case limits retained.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-everyone-current-source-manifest.json",
+  "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+  "startTime": 1791491401.961,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 67.2932059764862,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

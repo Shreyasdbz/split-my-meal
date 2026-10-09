@@ -1,0 +1,53 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791488310.972,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Second new-slice pilot: Everyone full-row draft/Cancel/relaunch passed. Settings reached Motion and captured original Reduce Motion off; the labeled parent switch tap did not turn it on. Native restoration verified original off.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-r2-source-manifest.json",
+  "sourceManifestSHA256": "cc25bf3c154014beb8f8d0e5d4ebb3d645ad467d4e77884098844611e187d3db",
+  "startTime": 1791488193.743,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\")",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit",
+      "testName": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 81.34079396724701,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 30.20924699306488,
+      "name": "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "nodeIdentifier": "MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 2
+}

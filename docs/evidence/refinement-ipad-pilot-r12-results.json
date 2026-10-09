@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791466719.859,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Focused native pilot; iPad completes normal and denied largest-text map and Settings recovery. Phone full-action visibility failures remain preserved and require a later replay.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-pilot-r12-source-manifest.json",
+  "sourceManifestSHA256": "5f5eab1a73efd95e8985eb9bba97eb1a854e388eb929a39925fb5a10a16d944c",
+  "startTime": 1791466488.478,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 141.09362995624542,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 86.98758006095886,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

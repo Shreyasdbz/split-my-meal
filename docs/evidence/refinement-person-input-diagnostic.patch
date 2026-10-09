@@ -1,0 +1,25 @@
+--- baseline/MealJourneyTests.swift
++++ private-diagnostic/MealJourneyTests.swift
+@@ -1200,10 +1200,19 @@
+         let field = app.textFields[identifier]
+         XCTAssertTrue(field.waitForExistence(timeout: 5), "Missing field: \(identifier)")
+         field.tap()
+-        // Submit person names in the same native key sequence so the existing
+-        // onSubmit clears focus before XCTest waits for the next UI event.
+-        field.typeText(identifier == "person-name" ? text + "\n" : text)
++        field.typeText(text)
+         XCTAssertEqual(field.value as? String, text, "Entering a field must preserve the complete intended value.")
++        if identifier == "person-name" {
++            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).allElementsBoundByIndex.first { $0.isHittable }
++            XCTAssertNotNil(done, "The focused person editor must expose its visible native Done action.")
++            if let done {
++                let selection = XCTAttachment(string: "Person value: \(field.value as? String ?? "")\nChosen native Done frame: \(done.frame)\nHittable: \(done.isHittable)\nForeground app state: \(app.state.rawValue)\nAccessibility tree: \(app.debugDescription)")
++                selection.name = "private-person-fill-native-done-selection"
++                selection.lifetime = .keepAlways
++                add(selection)
++            }
++            dismissKeyboard()
++        }
+     }
+ 
+     private func replace(_ identifier: String, with text: String) {

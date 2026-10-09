@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791490684.906,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "Fresh native current-source iPhone whole-app walkthrough with unchanged assertions, normal/light/dark appearances, itemized split, receipt, map and original-speed simulator recording. Passing case does not certify physical-device animation or haptics.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-demo-current-source-manifest.json",
+  "sourceManifestSHA256": "e6e2f72204eadd1af6397f709d41e498dc623df652a5c3e215b5056e2556052b",
+  "startTime": 1791490597.008,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 83.12520897388458,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791491236.403,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Private iPad-only toolbar omission: actual compact sheet size class and isPad=true logged, custom Done absent and native Hide keyboard retained. Original center tap at updated row geometry still failed keyboard disappearance without action-entry. No omission fix or production change established.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-pad-toolbar-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "b479aa052ea58a5518a01822f62ab36d0a0cbd8d88958e181badc9470b4b4737",
+  "startTime": 1791491179.113,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed - Bulk assignment must finish price entry without losing the draft.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 51.13163709640503,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

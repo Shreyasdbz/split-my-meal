@@ -1,0 +1,348 @@
+{
+  "failures": [
+    {
+      "activitiesFile": "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto-native-activities.json",
+      "failure": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\") - The native Photos picker must load a selectable fictional receipt fixture.",
+      "finalNativeActivityTitles": [
+        {
+          "failureAssociated": false,
+          "title": "Requesting snapshot of accessibility hierarchy for app with pid 31342"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Requesting snapshot of accessibility hierarchy for app with pid 31342"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Added attachment named 'failure-accessibility-tree'"
+        },
+        {
+          "failureAssociated": false,
+          "title": "failure-accessibility-tree"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Setting device orientation to Portrait"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Wait for shreyassane.SplitMyMeal-Prod-A to idle"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Wait for com.apple.springboard to idle"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Terminate shreyassane.SplitMyMeal-Prod-A:31342"
+        }
+      ],
+      "lastNativeOperationsBeforeFailureLogBoundary": [
+        "t =    45.44s     Checking existence of `\"PXGGridLayout-Info\" Image`",
+        "t =    45.67s     Capturing element debug description",
+        "t =    46.39s Checking `Expect predicate `exists == 1 AND isHittable == 1` for object \"PXGGridLayout-Info\" Image`",
+        "t =    46.39s     Checking existence of `\"PXGGridLayout-Info\" Image`",
+        "t =    46.63s     Capturing element debug description",
+        "t =    47.44s Checking `Expect predicate `exists == 1 AND isHittable == 1` for object \"PXGGridLayout-Info\" Image`",
+        "t =    47.45s     Checking existence of `\"PXGGridLayout-Info\" Image`",
+        "t =    47.68s     Capturing element debug description",
+        "t =    48.41s Checking `Expect predicate `exists == 1 AND isHittable == 1` for object \"PXGGridLayout-Info\" Image`",
+        "t =    48.41s     Checking existence of `\"PXGGridLayout-Info\" Image`",
+        "t =    53.78s     Capturing element debug description",
+        "t =    54.41s Checking `Expect predicate `exists == 1 AND isHittable == 1` for object \"PXGGridLayout-Info\" Image`",
+        "t =    54.41s     Checking existence of `\"PXGGridLayout-Info\" Image`",
+        "t =    55.84s     Find the \"PXGGridLayout-Info\" Image",
+        "t =    56.67s     Capturing element debug description"
+      ],
+      "test": "MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+      "timingCaveat": "XCTest may continue issuing operations after the allowance boundary; final recorded activities do not imply successful case completion."
+    },
+    {
+      "activitiesFile": "testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares-native-activities.json",
+      "failure": "Test exceeded execution time allowance of 7 minutes",
+      "finalNativeActivityTitles": [
+        {
+          "failureAssociated": false,
+          "title": "Find the \"item-consumer-Sam\" Switch"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"item-consumer-Sam\" Switch`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Get all elements bound by index for: Descendants matching type NavigationBar"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Cancel\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Done\" Button`"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Checking existence of `\"Close\" Button`"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Test exceeded execution time allowance of 7 minutes"
+        },
+        {
+          "failureAssociated": false,
+          "title": "2026-10-08 17:18:15 +0000-Spindump.txt"
+        }
+      ],
+      "lastNativeOperationsBeforeFailureLogBoundary": [
+        "t =   327.13s Get all elements bound by index for: Descendants matching type CollectionView",
+        "t =   327.37s Find the NavigationBar (Element at index 0)",
+        "t =   329.37s Find the CollectionView (Element at index 0)",
+        "t =   331.02s Find the CollectionView (Element at index 1)",
+        "t =   337.78s Find the CollectionView (Element at index 2)",
+        "t =   357.75s Find the CollectionView at {{120.0, 260.0}, {580.0, 660.0}}",
+        "t =   367.93s Find the CollectionView at {{120.0, 260.0}, {580.0, 660.0}}",
+        "t =   371.32s Checking existence of `\"item-consumer-Sam\" Switch`",
+        "t =   379.49s Find the \"item-consumer-Sam\" Switch",
+        "t =   387.63s Find the \"item-consumer-Sam\" Switch",
+        "t =   401.42s Checking existence of `\"item-consumer-Sam\" Switch`",
+        "t =   413.88s Get all elements bound by index for: Descendants matching type NavigationBar",
+        "t =   420.32s Checking existence of `\"Cancel\" Button`",
+        "t =   426.47s Checking existence of `\"Done\" Button`",
+        "t =   438.16s Checking existence of `\"Close\" Button`"
+      ],
+      "test": "MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+      "timingCaveat": "XCTest may continue issuing operations after the allowance boundary; final recorded activities do not imply successful case completion."
+    },
+    {
+      "activitiesFile": "testLargeTextAndLandscapeNavigation-native-activities.json",
+      "failure": "Test exceeded execution time allowance of 4 minutes",
+      "finalNativeActivityTitles": [
+        {
+          "failureAssociated": false,
+          "title": "Get all elements bound by index for: Descendants matching type NavigationBar"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Cancel\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Done\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Close\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Cancel\" Button`"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Checking existence of `\"Done\" Button`"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Test exceeded execution time allowance of 4 minutes"
+        },
+        {
+          "failureAssociated": false,
+          "title": "2026-10-08 17:26:58 +0000-Spindump.txt"
+        }
+      ],
+      "lastNativeOperationsBeforeFailureLogBoundary": [
+        "t =   236.81s     Synthesize event",
+        "t =   236.88s         Find the CollectionView at {{0.0, 0.0}, {820.0, 1180.0}}",
+        "t =   237.05s         Find the CollectionView at {{0.0, 0.0}, {820.0, 1180.0}}",
+        "t =   237.21s         Find the CollectionView at {{0.0, 0.0}, {820.0, 1180.0}}",
+        "t =   237.39s         Find the CollectionView at {{0.0, 0.0}, {820.0, 1180.0}}",
+        "t =   237.56s         Find the CollectionView at {{0.0, 0.0}, {820.0, 1180.0}}",
+        "t =   238.49s     Wait for shreyassane.SplitMyMeal-Prod-A to idle",
+        "t =   238.52s Checking existence of `\"edit-tax\" Button`",
+        "t =   238.73s Find the \"edit-tax\" Button",
+        "t =   238.90s Get all elements bound by index for: Descendants matching type NavigationBar",
+        "t =   239.04s Checking existence of `\"Cancel\" Button`",
+        "t =   239.21s Checking existence of `\"Done\" Button`",
+        "t =   239.43s Checking existence of `\"Close\" Button`",
+        "t =   239.72s Checking existence of `\"Cancel\" Button`",
+        "t =   239.94s Checking existence of `\"Done\" Button`"
+      ],
+      "test": "MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+      "timingCaveat": "XCTest may continue issuing operations after the allowance boundary; final recorded activities do not imply successful case completion."
+    },
+    {
+      "activitiesFile": "testNativePhotoAttachmentReplacementCancelAndSave-native-activities.json",
+      "failure": "Test exceeded execution time allowance of 4 minutes",
+      "finalNativeActivityTitles": [
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Close\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Get all elements bound by index for: Descendants matching type CollectionView"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Find the NavigationBar (Element at index 0)"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Find the NavigationBar (Element at index 1)"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Find the \"Meals\" NavigationBar"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Find the \"\ud83c\udf71 Photo dinner\" NavigationBar"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Test exceeded execution time allowance of 4 minutes"
+        },
+        {
+          "failureAssociated": false,
+          "title": "2026-10-08 17:39:17 +0000-Spindump.txt"
+        }
+      ],
+      "lastNativeOperationsBeforeFailureLogBoundary": [
+        "t =   236.93s Find the \"View receipt\" Button",
+        "t =   237.12s Find the \"View receipt\" Button",
+        "t =   237.32s Checking existence of `\"View receipt\" Button`",
+        "t =   237.49s Get all elements bound by index for: Descendants matching type NavigationBar",
+        "t =   237.67s Checking existence of `\"Cancel\" Button`",
+        "t =   237.95s Checking existence of `\"Done\" Button`",
+        "t =   238.20s Checking existence of `\"Close\" Button`",
+        "t =   238.47s Checking existence of `\"Cancel\" Button`",
+        "t =   238.64s Checking existence of `\"Done\" Button`",
+        "t =   238.83s Checking existence of `\"Close\" Button`",
+        "t =   239.03s Get all elements bound by index for: Descendants matching type CollectionView",
+        "t =   239.21s Find the NavigationBar (Element at index 0)",
+        "t =   239.47s Find the NavigationBar (Element at index 1)",
+        "t =   239.73s Find the \"Meals\" NavigationBar",
+        "t =   239.92s Find the \"\ud83c\udf71 Photo dinner\" NavigationBar"
+      ],
+      "test": "MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+      "timingCaveat": "XCTest may continue issuing operations after the allowance boundary; final recorded activities do not imply successful case completion."
+    },
+    {
+      "activitiesFile": "testReceiptViewZoomShareAndDraftRemoval-native-activities.json",
+      "failure": "Test exceeded execution time allowance of 4 minutes",
+      "finalNativeActivityTitles": [
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Attach receipt\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Tear Down"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Setting device orientation to Portrait"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Wait for shreyassane.SplitMyMeal-Prod-A to idle"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Wait for com.apple.springboard to idle"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Terminate shreyassane.SplitMyMeal-Prod-A:19114"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Test exceeded execution time allowance of 4 minutes"
+        },
+        {
+          "failureAssociated": false,
+          "title": "2026-10-08 17:44:26 +0000-Spindump.txt"
+        }
+      ],
+      "lastNativeOperationsBeforeFailureLogBoundary": [
+        "t =   234.69s Find the \"\ud83c\udf5c Dinner at Juniper\" NavigationBar",
+        "t =   234.87s Find the \"view-split\" Button",
+        "t =   235.20s Find the \"view-split\" Button",
+        "t =   235.51s Find the CollectionView (Element at index 1)",
+        "t =   235.70s Find the \"view-split\" Button",
+        "t =   235.93s Find the \"view-split\" Button",
+        "t =   236.18s Find the CollectionView at {{0.0, 0.0}, {820.0, 1180.0}}",
+        "t =   236.36s Find the \"Attach receipt\" Button",
+        "t =   236.59s Find the \"Attach receipt\" Button",
+        "t =   236.87s Checking existence of `\"Attach receipt\" Button`",
+        "t =   237.24s Tear Down",
+        "t =   237.25s     Setting device orientation to Portrait",
+        "t =   237.27s         Wait for shreyassane.SplitMyMeal-Prod-A to idle",
+        "t =   237.27s         Wait for com.apple.springboard to idle",
+        "t =   237.28s     Terminate shreyassane.SplitMyMeal-Prod-A:19114"
+      ],
+      "test": "MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval()",
+      "timingCaveat": "XCTest may continue issuing operations after the allowance boundary; final recorded activities do not imply successful case completion."
+    },
+    {
+      "activitiesFile": "testReverseAssignmentFixedChargesConversionCancelAndClear-native-activities.json",
+      "failure": "Test exceeded execution time allowance of 4 minutes",
+      "finalNativeActivityTitles": [
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Done\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Checking existence of `\"Close\" Button`"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Get all elements bound by index for: Descendants matching type CollectionView"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Find the NavigationBar (Element at index 0)"
+        },
+        {
+          "failureAssociated": false,
+          "title": "Find the NavigationBar (Element at index 1)"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Find the \"Meals\" NavigationBar"
+        },
+        {
+          "failureAssociated": true,
+          "title": "Test exceeded execution time allowance of 4 minutes"
+        },
+        {
+          "failureAssociated": false,
+          "title": "2026-10-08 17:55:31 +0000-Spindump.txt"
+        }
+      ],
+      "lastNativeOperationsBeforeFailureLogBoundary": [
+        "t =   236.57s         Wait for com.apple.springboard to idle",
+        "t =   236.65s     Synthesize event",
+        "t =   237.01s     Wait for shreyassane.SplitMyMeal-Prod-A to idle",
+        "t =   237.52s Find the \"meal-total\" StaticText",
+        "t =   237.89s Get all elements bound by index for: Descendants matching type NavigationBar",
+        "t =   238.07s Checking existence of `\"Cancel\" Button`",
+        "t =   238.29s Checking existence of `\"Done\" Button`",
+        "t =   238.55s Checking existence of `\"Close\" Button`",
+        "t =   238.71s Checking existence of `\"Cancel\" Button`",
+        "t =   238.95s Checking existence of `\"Done\" Button`",
+        "t =   239.12s Checking existence of `\"Close\" Button`",
+        "t =   239.29s Get all elements bound by index for: Descendants matching type CollectionView",
+        "t =   239.42s Find the NavigationBar (Element at index 0)",
+        "t =   239.64s Find the NavigationBar (Element at index 1)",
+        "t =   239.92s Find the \"Meals\" NavigationBar"
+      ],
+      "test": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "timingCaveat": "XCTest may continue issuing operations after the allowance boundary; final recorded activities do not imply successful case completion."
+    }
+  ],
+  "noAppSpecificStackEstablished": true,
+  "scope": "Exact candidate hosted native failures; observation only, no product or framework cause attributed."
+}

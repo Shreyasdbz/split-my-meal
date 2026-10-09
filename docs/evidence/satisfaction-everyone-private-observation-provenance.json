@@ -1,0 +1,33 @@
+{
+  "baseResultSource": "satisfaction-ipad-r3-source-manifest.json",
+  "changedFiles": [
+    {
+      "afterSHA256": "4e1909fd59f41e90a548329ad53fa94fe1fb1455e2c2b1077ba5a7caa095b532",
+      "beforeSHA256": "be5b634d45ad33ea07c42f23caa04a25a44b17b9b9c00bae74559ae12b12779a",
+      "file": "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift"
+    },
+    {
+      "afterSHA256": "6282fbe50c5abf213f3069e26b1f04f0e1ac6ce28353600697caf184501bdb22",
+      "beforeSHA256": "a44d7c2a068c0db6b31089734abf69debdabd14305ec482acd47a66bc7627051",
+      "file": "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift"
+    },
+    {
+      "afterSHA256": "70554a66954ef2478e5938dca0aa5da6abd3c8f3d9638da75f36a454f061311c",
+      "beforeSHA256": "9477038b3734847e5bd7b1519e1afd8a93dac8510f9c836ff51052ec78d839c7",
+      "file": "SplitMyMealUITests/MealJourneyTests.swift"
+    }
+  ],
+  "finalObservedSource": "satisfaction-ipad-everyone-native-button-diagnostic-source-manifest.json",
+  "limits": [
+    "Method exchange and synchronous logging may affect timing.",
+    "Observed class names are data; no private class API is invoked.",
+    "Screen object identity and nonfinite conversion do not establish a platform or app root cause.",
+    "Intermediate private comparator results bind their own source manifests; this patch reproduces only the final observer/native-button comparator."
+  ],
+  "originalControlAssertionsBudgetsUnchanged": true,
+  "originalEventCallsPerDispatch": 1,
+  "patch": "satisfaction-everyone-private-observation.patch",
+  "patchSHA256": "c23ddfbf9f17d1977c313242b8d34f6a8b2fbed08c02b218518480dfc475425e",
+  "scope": "Historical private DEBUG input observation only; not maintained app/test implementation, not a production workaround.",
+  "windowGestureDelegateChanges": false
+}

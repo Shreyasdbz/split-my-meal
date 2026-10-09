@@ -32,10 +32,14 @@ struct MealScreen: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Meal total").font(.subheadline).foregroundStyle(Color.mealSecondaryText).accessibilityHidden(true)
                     Text(mealCurrency(amounts.total)).font(.largeTitle.bold()).monospacedDigit()
+                        .mealAmountTransition(amounts.total)
                         .accessibilityIdentifier("meal-total")
                         .accessibilityLabel("Meal total").accessibilityValue(mealCurrency(amounts.total))
                     Text("\(people.count) \(people.count == 1 ? "person" : "people") · \(items.count) \(items.count == 1 ? "item" : "items")")
                         .font(.subheadline).foregroundStyle(Color.mealSecondaryText)
+                    if amounts.isFullyAssigned {
+                        MealAssignmentStatus().accessibilityIdentifier("meal-assignment-status")
+                    }
                 }.padding(.vertical, 8)
                 AmountRow(title: "Subtotal", amount: amounts.subtotal)
                 Button { charge = .tax } label: {

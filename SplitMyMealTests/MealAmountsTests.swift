@@ -44,6 +44,48 @@ final class MealAmountsTests: XCTestCase {
         XCTAssertEqual(MealAmounts(meal: meal).cents(for: meal.people!.first { $0.id == "a" }!), 334)
     }
 
+    func testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds() {
+        let consumers: Set<String> = ["c", "a", "b"]
+        let expected: [String: Int64] = ["a": 334, "b": 334, "c": 333]
+        XCTAssertEqual(Money.itemShares(cents: 1001, consumerIDs: consumers), expected)
+        XCTAssertNil(Money.itemShares(cents: -1, consumerIDs: consumers))
+        XCTAssertNil(Money.itemShares(cents: Money.maximumCents + 1, consumerIDs: consumers))
+        XCTAssertNil(Money.itemShares(cents: -1, consumerIDs: []))
+        XCTAssertEqual(Money.itemShares(cents: 1001, consumerIDs: []), [:])
+        XCTAssertEqual(Money.itemShares(cents: 0, consumerIDs: consumers), ["a": 0, "b": 0, "c": 0])
+        let maximumShares = Money.itemShares(cents: Money.maximumCents, consumerIDs: consumers)
+        XCTAssertEqual(maximumShares?.values.reduce(0, +), Money.maximumCents)
+
+        let meal = meal(price: 10.01, consumerIDs: ["c", "a", "deleted", "b", "a"], peopleIDs: ["c", "b", "a"])
+        let item = meal.items![0]
+        for reverseOrder in [false, true] {
+            if reverseOrder {
+                meal.people!.reverse()
+                item.consumerIds.reverse()
+            }
+            let amounts = MealAmounts(meal: meal)
+            XCTAssertEqual(amounts.totalCents, 1001)
+            XCTAssertTrue(amounts.isFullyAssigned)
+            for person in meal.people! {
+                XCTAssertEqual(amounts.cents(for: item, person: person), expected[person.id])
+                XCTAssertEqual(amounts.subtotalCents(for: person), expected[person.id])
+            }
+            XCTAssertEqual(meal.people!.map { amounts.cents(for: $0) }.reduce(0, +), 1001)
+        }
+
+        let empty = Meal()
+        XCTAssertFalse(MealAmounts(meal: empty).isFullyAssigned)
+        empty.taxAmount = 1
+        XCTAssertFalse(MealAmounts(meal: empty).isFullyAssigned)
+        let zeroPrice = self.meal(price: 0, consumerIDs: [], peopleIDs: ["a"])
+        let unassigned = MealAmounts(meal: zeroPrice)
+        XCTAssertEqual(unassigned.unassignedCents, 0)
+        XCTAssertEqual(unassigned.unassignedItemCount, 1)
+        XCTAssertFalse(unassigned.isFullyAssigned)
+        let invalid = self.meal(price: -1, consumerIDs: ["a"], peopleIDs: ["a"])
+        XCTAssertFalse(MealAmounts(meal: invalid).isFullyAssigned)
+    }
+
     func testFixedChargesTakePrecedenceAndTipIncludesTax() {
         let meal = meal(price: 100, consumerIDs: ["a"], peopleIDs: ["a"])
         meal.taxPercentage = 50

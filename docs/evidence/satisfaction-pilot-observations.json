@@ -1,0 +1,32 @@
+{
+  "observations": {
+    "ipad": {
+      "everyone": {
+        "causeEstablished": false,
+        "failureScreenshotSHA256": "3fa6f3d0ae5ad4acce552909ee20d7c12623d9245060eaf5bfcbb4313850ba00",
+        "keyboardVisible": true,
+        "nativeComputedHitPoint": [
+          -1,
+          -1
+        ],
+        "observedSelectedSwitches": 0,
+        "priceDraft": "12.00"
+      },
+      "nativeScreenshotSHA256": "050018b919267d1df5dfb249b8a76bdfd5ccf9e14aeb741d00302f538ed08d4f",
+      "nativeTreeSHA256": "7213c9fc7c517d8011042b8b580f8214eaf9ab971c2b9a457f37d3d8ea67e149",
+      "observedResult": "No Results for \u201cReduce Motion\u201d",
+      "preferenceChanged": false,
+      "settingsSearch": "Reduce Motion",
+      "switchReached": false
+    },
+    "iphone": {
+      "nativeScreenshotSHA256": "7858ee5edd0a4ad951d83381948bd2eca8b06c4e86fd30358b4b23ca5596f1c7",
+      "nativeTreeSHA256": "4bf071906d83654898a2d3534ebd49efcaa70a69dffa4b186433fd2d6df66d38",
+      "observedResult": "No Results for \u201cReduce Motion\u201d",
+      "preferenceChanged": false,
+      "settingsSearch": "Reduce Motion",
+      "switchReached": false
+    }
+  },
+  "scope": "First completed new-slice pilots; native failed boundaries retained. Later source corrections and results are separate."
+}

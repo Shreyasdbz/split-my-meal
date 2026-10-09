@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import UIKit
 
 /// Stages item fields and consumer assignments until an explicit successful save.
 struct ItemEditor: View {
@@ -11,10 +12,23 @@ struct ItemEditor: View {
     @State private var price: String
     @State private var category: MealItemCategory
     @State private var consumerIDs: Set<String>
+    @State private var bulkSelectionVersion = 0
     @State private var errorMessage: String?
     @State private var confirmDelete = false
     @FocusState private var focusedField: Field?
     private enum Field { case name, price }
+
+    private var people: [MealPerson] {
+        (meal.people ?? []).sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+    }
+
+    /// Uses the saved bill's exact remainder rule; this preview excludes tax and tip.
+    /// Invalid price drafts show no monetary preview and never mutate the meal.
+    private var draftShares: [String: Int64]? {
+        guard let parsed = try? DecimalInput.parse(price, allowZero: false),
+              let cents = Money.cents(parsed) else { return nil }
+        return Money.itemShares(cents: cents, consumerIDs: consumerIDs.intersection(Set(people.map(\.id))))
+    }
 
     init(meal: Meal, item: MealItem? = nil, initialCategory: MealItemCategory = .Snack) {
         self.meal = meal
@@ -28,6 +42,7 @@ struct ItemEditor: View {
     }
 
     var body: some View {
+        let shares = draftShares
         NavigationStack {
             Form {
                 Section("Item") {
@@ -40,8 +55,11 @@ struct ItemEditor: View {
                     LabeledContent("Price (USD)") {
                         TextField("0.00", text: $price)
                             .multilineTextAlignment(.trailing)
-                            .keyboardType(.decimalPad)
+                            // iPad sheets can be compact; device idiom keeps native submit support.
+                            .keyboardType(UIDevice.current.userInterfaceIdiom == .pad ? .numbersAndPunctuation : .decimalPad)
                             .focused($focusedField, equals: .price)
+                            .submitLabel(.done)
+                            .onSubmit { focusedField = nil }
                             .accessibilityLabel("Item price in US dollars")
                             .accessibilityIdentifier("item-price")
                     }
@@ -53,19 +71,45 @@ struct ItemEditor: View {
                     .accessibilityIdentifier("item-category")
                 }
                 Section {
-                    if let people = meal.people, !people.isEmpty {
-                        ForEach(people.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }) { person in
-                            Toggle(person.name, isOn: Binding(get: { consumerIDs.contains(person.id) }, set: { selected in
+                    if !people.isEmpty {
+                        if people.count > 1 {
+                            Button {
+                                focusedField = nil
+                                consumerIDs = Set(people.map(\.id))
+                                bulkSelectionVersion += 1
+                            } label: {
+                                Label("Everyone", systemImage: "person.2")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.borderless)
+                            .disabled(consumerIDs == Set(people.map(\.id)))
+                            .accessibilityIdentifier("assign-everyone")
+                            .accessibilityHint("Select every person for this item")
+                            .sensoryFeedback(.selection, trigger: bulkSelectionVersion)
+                        }
+                        ForEach(people) { person in
+                            Toggle(isOn: Binding(get: { consumerIDs.contains(person.id) }, set: { selected in
                                 if selected { consumerIDs.insert(person.id) } else { consumerIDs.remove(person.id) }
-                            }))
+                            })) {
+                                if let cents = shares?[person.id] {
+                                    AmountRow(title: person.name, amount: Double(cents) / 100)
+                                        .accessibilityIdentifier("draft-item-share-\(person.name)")
+                                } else {
+                                    Text(person.name)
+                                }
+                            }
                             .accessibilityIdentifier("item-consumer-\(person.name)")
+                            .accessibilityHint(shares?[person.id] == nil ? "Choose who shares this item" : "Item share excludes tax and tip")
                         }
                     } else {
-                        Text("Add people to the meal to assign this item.").foregroundStyle(Color.mealSecondaryText)
+                        Text("Add people to assign this item.").foregroundStyle(Color.mealSecondaryText)
                     }
                 } header: { Text("Shared by") } footer: {
-                    Text(consumerIDs.isEmpty ? "Unassigned until someone is selected." : "Shared equally by selected people.")
-                        .foregroundStyle(Color.mealSecondaryText)
+                    if !people.isEmpty {
+                        Text(consumerIDs.isEmpty ? "Unassigned until someone is selected." : "Item shares exclude tax and tip.")
+                            .foregroundStyle(Color.mealSecondaryText)
+                    }
                 }
                 if existingItem != nil {
                     Section {

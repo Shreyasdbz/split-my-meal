@@ -1,0 +1,9 @@
+{
+  "nativeAttachmentName": "gated-accessibility-library",
+  "publishedFile": "satisfaction-iphone-library-primary.png",
+  "scope": "Original screenshot from a passing strict native control gate with native primary metadata styling. No image edits. Root inspected readable people/date; actual all-type audit no longer reports the two prior library metadata contrast findings. Other inventory reports remain unresolved.",
+  "sha256": "490b4e2f6040807ca293943d3b116c6ba0b93d0accb747a917b9a1f0048c0e4d",
+  "sourceManifest": "satisfaction-iphone-library-primary-source-manifest.json",
+  "sourceManifestSHA256": "be544d781fdb36a8b813343d4e79d900c4e20d482330aee9dace0e09a3637ab9",
+  "sourceResults": "satisfaction-iphone-library-primary-results.json"
+}

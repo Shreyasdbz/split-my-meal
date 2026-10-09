@@ -1,0 +1,100 @@
+{
+  "captures": [
+    {
+      "file": "satisfaction-ipad-meal-dark.png",
+      "nativeAttachment": "A7343FD8-1D59-4C63-9BCE-67D6BF2860B3.png",
+      "sha256": "a20459c1ec761ef8e081a504c98a23b0ad39ac78f97f513571e77671297c8f80"
+    },
+    {
+      "file": "satisfaction-ipad-library-dark.png",
+      "nativeAttachment": "BF957425-DAE2-415E-913D-680173B6D828.png",
+      "sha256": "05c08c97c23659eb193d4cf7c03dcc7860ac84510ea09ae729a83417997036fb"
+    },
+    {
+      "file": "satisfaction-ipad-meal-landscape-light.png",
+      "nativeAttachment": "051A2BAE-38A0-4A29-93B4-8D977ED1DE4E.png",
+      "sha256": "3a74bd8f27cdea46145ecd6912d9bdab92459c10514657472cb6fcc7ac1e6064"
+    },
+    {
+      "file": "satisfaction-ipad-meal-editor-light.png",
+      "nativeAttachment": "FD4F404A-D28C-4874-B9D4-5FD86B6FC0BB.png",
+      "sha256": "bd0244ac12031edc4bd4710e91fc46da04b2902a970d13564accb7f551fc33c8"
+    },
+    {
+      "file": "satisfaction-ipad-receipt-light.png",
+      "nativeAttachment": "59E90625-6D41-4BF9-8280-CC8439FEB6B5.png",
+      "sha256": "775b8a84f7f05c33c170b3d22afc037426074b1b6959cfb8531c8d02e1f269cc"
+    },
+    {
+      "file": "satisfaction-ipad-meal-footer-light.png",
+      "nativeAttachment": "F7E5C9AC-34B0-41B3-B9DE-EDD551C1DAB4.png",
+      "sha256": "ed9ae148d5dcf4dc10f04cbae21e71a5b8b5b70df9af3b9a343848439fcfd3ce"
+    },
+    {
+      "file": "satisfaction-ipad-restaurant-map-landscape-light.png",
+      "nativeAttachment": "489ACAB4-D06B-487E-9DE0-7FB65A03C9F5.png",
+      "sha256": "7b913ba0d5c1feaa4ecd76c5411d68d520812dc9ebad9a80f09f46c9ffced70b"
+    },
+    {
+      "file": "satisfaction-ipad-restaurant-map-light.png",
+      "nativeAttachment": "6015679E-3434-4BD9-AF00-B560D317E867.png",
+      "sha256": "692416615bf23da8725650b6dfc4c0baafcf1ca4de9b0b3ce5628977d10f73a7"
+    },
+    {
+      "file": "satisfaction-ipad-bill-details-expanded-light.png",
+      "nativeAttachment": "58741920-5C2E-4B7B-8651-E425E8CF04B9.png",
+      "sha256": "91f90823e864a25a15ad32d80aacbb9709d81544d62f9b8f4efbdb1752a79b21"
+    },
+    {
+      "file": "satisfaction-ipad-bill-details-collapsed-light.png",
+      "nativeAttachment": "64467875-2CD7-42CC-87B3-36EF53F98BAF.png",
+      "sha256": "e1305216c849cf5dafded8f641943f5364e87d8be81c41df72f42a92959d1f14"
+    },
+    {
+      "file": "satisfaction-ipad-itemized-split-light.png",
+      "nativeAttachment": "6629CF3E-0C03-4FA9-A6DF-181475D3FD28.png",
+      "sha256": "0518465987c308eb69779ace87a3580b385acf41d162dc846f98a3bebfdce9a1"
+    },
+    {
+      "file": "satisfaction-ipad-split-light.png",
+      "nativeAttachment": "62574E05-7F7E-4BAF-B3AE-3E520F9B4AD5.png",
+      "sha256": "e1305216c849cf5dafded8f641943f5364e87d8be81c41df72f42a92959d1f14"
+    },
+    {
+      "file": "satisfaction-ipad-tip-editor-light.png",
+      "nativeAttachment": "7B8B1016-E920-4880-9105-669CFD74FC54.png",
+      "sha256": "1d1296ce952eb533b5ab08c7bfe807006cd875439481849658c329a77bb574f0"
+    },
+    {
+      "file": "satisfaction-ipad-tax-editor-light.png",
+      "nativeAttachment": "B1FCC5DD-147A-4088-BECF-0CD08008BF14.png",
+      "sha256": "e62826b674d5c7f571dd6cda848256e6bda1efb7cdc6faa46f2ac95cad345262"
+    },
+    {
+      "file": "satisfaction-ipad-item-editor-light.png",
+      "nativeAttachment": "10D0FF5E-0829-466C-8F12-FE487311F971.png",
+      "sha256": "2393add8bb8bb0f184525535385916d2570791928681d5310ef6b7b8f9b05460"
+    },
+    {
+      "file": "satisfaction-ipad-person-editor-light.png",
+      "nativeAttachment": "0ACBB697-4101-49B4-ACF6-8CF4C096BA1B.png",
+      "sha256": "4d2ac4bcf0aadcac9bf85fe0d32acdd244fa1696791424aa6b5abe78dd71bed9"
+    },
+    {
+      "file": "satisfaction-ipad-meal-light.png",
+      "nativeAttachment": "AACEE9C2-3C03-4DBE-9C5A-620803CB142C.png",
+      "sha256": "f287142e34d219f00321fe6a79f090cb865c9cba9292e44dc4bcd2a572e6bd18"
+    },
+    {
+      "file": "satisfaction-ipad-library-light.png",
+      "nativeAttachment": "407DD7DC-B867-4B10-8CCC-E4F6F3DB6788.png",
+      "sha256": "6ac292fe2fc3729f795973d624a9bfc30f570a5f2a6fcd8b3eeaad9299542fd8"
+    }
+  ],
+  "imageEdits": false,
+  "independentPixelReview": "iOS visual-design agent inspected all 18 current original PNGs, with no actionable visible defect in forms, splits, map details, receipt, normal/dark layouts. Selected gray backgrounds are readable. The vivid green pointer-focused selection state is absent and remains unverified; portrait map tiles are unloaded, landscape tiles loaded.",
+  "nativeResult": "satisfaction-ipad-demo-current-results.json",
+  "scope": "Original current iPad walkthrough screenshots. Independent pixel review is separate from native execution.",
+  "sourceManifest": "satisfaction-ipad-demo-current-source-manifest.json",
+  "sourceManifestSHA256": "b6d6cd6661bb549f783610ce87e82fc6fe1eb0771b7a4f8894ac79c972564738"
+}

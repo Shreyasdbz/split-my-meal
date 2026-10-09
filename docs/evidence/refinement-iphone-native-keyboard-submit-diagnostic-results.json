@@ -1,0 +1,50 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791484494.904,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 3,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 3
+    }
+  ],
+  "scope": "Private complete-flow comparison of native person-name keyboard submission; separate iPad price-keyboard failure is retained.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-native-keyboard-submit-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "99c34de786892a36c0639d3aa8d4e2b22611e02e0300b949300bbe79988f7e88",
+  "startTime": 1791484254.901,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 84.3633519411087,
+      "name": "testCreateEditSplitShareAndPersistence()",
+      "nodeIdentifier": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 65.15757501125336,
+      "name": "testEditAndDeleteItemPersonAndMeal()",
+      "nodeIdentifier": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 86.77138900756836,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 3
+}

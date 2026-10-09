@@ -1,0 +1,71 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791469631.495,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 4,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Historical full live refinement run: four passing provider cases; denied-map case failed because its partially visible meal row tap opened Split summary. Not final verification.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-live-r1-source-manifest.json",
+  "sourceManifestSHA256": "6b2e678b003f4f03f1c532d5042420c04ca6ff746cf6fb30a540ba2df4cf8092",
+  "startTime": 1791469385.026,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 3,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 41.90975999832153,
+      "name": "testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "nodeIdentifier": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 54.96842706203461,
+      "name": "testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 89.8204870223999,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 22.244912028312683,
+      "name": "testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "nodeIdentifier": "LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 31.965534925460815,
+      "name": "testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "nodeIdentifier": "LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 5
+}

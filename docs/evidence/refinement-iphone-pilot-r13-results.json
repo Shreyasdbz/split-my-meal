@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791467473.555,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Completed normal and denied largest-text map, scrolling foreground visibility, full address/action geometry and native Settings recovery after the bounded gesture correction.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-pilot-r13-source-manifest.json",
+  "sourceManifestSHA256": "6b2e678b003f4f03f1c532d5042420c04ca6ff746cf6fb30a540ba2df4cf8092",
+  "startTime": 1791467257.751,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 138.0121659040451,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 74.84068608283997,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

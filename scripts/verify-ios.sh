@@ -2,6 +2,17 @@
 # Run the shared scheme's unit and UI tests and retain reproducible evidence.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+partition="${VERIFICATION_PARTITION:-}"
+if [[ -n "${VERIFICATION_PARTITION+x}" ]]; then
+  if [[ "$partition" != a && "$partition" != b ]]; then
+    echo "VERIFICATION_PARTITION must be a or b; unset it for local full or focused verification." >&2
+    exit 1
+  fi
+  if [[ "$#" -ne 0 ]]; then
+    echo "Partition verification owns its native selection. Do not supply caller arguments; unset VERIFICATION_PARTITION for focused checks." >&2
+    exit 1
+  fi
+fi
 if [[ -z "${SIMULATOR_UDID:-}" && "${CI:-false}" != true ]]; then
   echo "Local verification requires SIMULATOR_UDID for a dedicated clean app simulator. Synthetic receipt fixtures are imported into its Photos library; CI uses an ephemeral runner." >&2
   exit 1
@@ -19,7 +30,7 @@ roots = ["SplitMyMeal-Prod-A", "SplitMyMealTests", "SplitMyMealUITests", "SplitM
 files = {}
 for root in roots:
     for path in sorted(pathlib.Path(root).rglob("*")):
-        if path.is_file() and "xcuserdata" not in path.parts and path.name != ".DS_Store":
+        if path.is_file() and "xcuserdata" not in path.parts and "__pycache__" not in path.parts and path.name != ".DS_Store":
             files[str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
 manifest = {"gitHead": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(), "sha256": files}
 pathlib.Path(sys.argv[1]).write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
@@ -75,6 +86,16 @@ print(f"Native results: {summary.get('passedTests', 0)} passed, {summary.get('sk
 PYSUMMARY
       then status=1; fi
     fi
+    if ! xcrun xcresulttool get test-results tests --path "$output/Tests.xcresult" > "$output/native-tests.json"; then
+      echo "Could not read the native test identities; the result bundle is retained." >&2
+      if [[ "$status" -eq 0 ]]; then status=1; fi
+    elif [[ -f "$output/test-selection.json" ]]; then
+      if ! python3 scripts/native-test-selection.py verify \
+          --selection "$output/test-selection.json" --native-tests "$output/native-tests.json" \
+          --summary "$output/test-summary.json" --report "$output/test-selection-results.json"; then
+        if [[ "$status" -eq 0 ]]; then status=1; fi
+      fi
+    fi
     if ! xcrun xcresulttool export attachments --path "$output/Tests.xcresult" --output-path "$output/attachments"; then
       echo "Could not export screenshot attachments; the original result bundle is retained." >&2
       if [[ "$status" -eq 0 ]]; then status=1; fi
@@ -121,6 +142,18 @@ common=(
   CODE_SIGNING_ALLOWED=NO
 )
 xcodebuild build-for-testing "${common[@]}" "$@" 2>&1 | tee "$output/build.log"
+if [[ -n "$partition" ]]; then
+  # Enumerate the complete compiled stable suite before applying any partition.
+  # Catalogue drift fails before Photos setup or native test execution.
+  xcodebuild test-without-building "${common[@]}" \
+    -skip-testing:SplitMyMealUITests/LiveMapKitTests -enumerate-tests \
+    -test-enumeration-style flat -test-enumeration-format json \
+    -test-enumeration-output-path "$output/test-enumeration.json" 2>&1 | tee "$output/test-enumeration.log"
+  python3 scripts/native-test-selection.py select \
+    --catalogue scripts/stable-test-partitions.json --enumeration "$output/test-enumeration.json" \
+    --partition "$partition" --selection "$output/test-selection.json" \
+    --response-file "$output/selected-tests.txt"
+fi
 # The unit host starts before test methods and must use the local test store.
 # UI classes independently assert and record arguments before every app launch.
 python3 - "$derived/Build/Products" "$output/test-launch-arguments.json" <<'PYARGUMENTS'
@@ -231,5 +264,6 @@ fi
 # command instead, appending the optional stable-suite filter conditionally.
 test_command=(xcodebuild test-without-building "${common[@]}" -resultBundlePath "$output/Tests.xcresult")
 if [[ "$live_requested" != true ]]; then test_command+=(-skip-testing:SplitMyMealUITests/LiveMapKitTests); fi
+if [[ -n "$partition" ]]; then test_command+=(-only-testing "@$output/selected-tests.txt"); fi
 test_command+=("$@")
 "${test_command[@]}" 2>&1 | tee "$output/test.log"

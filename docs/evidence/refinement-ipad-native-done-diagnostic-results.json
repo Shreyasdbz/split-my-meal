@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791474116.915,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 2
+    }
+  ],
+  "scope": "One controlled private-copy session: unchanged all-type inventory followed by the creation/share/persistence journey. Sole delta requires visible native Done independently of the initial keyboard marker. Both cases passed; actual Done taps and keyboard disappearance retained. No app, budget, assertion or quiescence changes; this does not establish platform cause.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-native-done-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "9187806380ba06103799912aebe2f03eed8fe4407419f4096db5d42ec19fc8da",
+  "startTime": 1791473942.066,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 69.27861702442169,
+      "name": "testCollectAllTypeAccessibilityIssueInventory()",
+      "nodeIdentifier": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 101.95055508613586,
+      "name": "testCreateEditSplitShareAndPersistence()",
+      "nodeIdentifier": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

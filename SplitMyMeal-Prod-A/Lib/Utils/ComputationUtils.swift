@@ -10,6 +10,7 @@ struct MealAmounts {
     let unassignedCents: Int64
     let unassignedItemCount: Int
     let hasInvalidValues: Bool
+    private let itemCount: Int
     private let personAmounts: [String: Int64]
     private let personSubtotals: [String: Int64]
     private let personTaxes: [String: Int64]
@@ -22,8 +23,15 @@ struct MealAmounts {
     var total: Double { dollars(totalCents) }
     var unassigned: Double { dollars(unassignedCents) }
 
+    /// A nonempty valid bill with no unassigned items or cents; does not certify payment or sharing.
+    var isFullyAssigned: Bool {
+        itemCount > 0 && !hasInvalidValues && unassignedItemCount == 0 && unassignedCents == 0
+    }
+
     /// Reads the legacy model without mutating or persisting it. Invalid saved money is excluded and explicitly flagged.
     init(meal: Meal) {
+        let items = meal.items ?? []
+        itemCount = items.count
         let people = Set((meal.people ?? []).map(\.id))
         var bases = Dictionary(uniqueKeysWithValues: people.map { ($0, Int64(0)) })
         let unassignedKey = "\u{0}unassigned"
@@ -33,25 +41,21 @@ struct MealAmounts {
         var subtotal: Int64 = 0
         var sharesByItem: [ObjectIdentifier: [String: Int64]] = [:]
 
-        for item in meal.items ?? [] {
+        for item in items {
+            let consumers = Set(item.consumerIds).intersection(people)
             guard let cents = Money.cents(item.price), cents >= 0,
-                  subtotal <= Money.maximumCents - cents else {
+                  subtotal <= Money.maximumCents - cents,
+                  let shares = Money.itemShares(cents: cents, consumerIDs: consumers) else {
                 invalid = true
                 continue
             }
             subtotal += cents
-            let consumers = Set(item.consumerIds).intersection(people).sorted()
             if consumers.isEmpty {
                 bases[unassignedKey, default: 0] += cents
                 unassignedCount += 1
             } else {
-                let quotient = cents / Int64(consumers.count)
-                let remainder = cents % Int64(consumers.count)
-                var shares: [String: Int64] = [:]
-                for (index, id) in consumers.enumerated() {
-                    let share = quotient + (Int64(index) < remainder ? 1 : 0)
+                for (id, share) in shares {
                     bases[id, default: 0] += share
-                    shares[id] = share
                 }
                 sharesByItem[ObjectIdentifier(item)] = shares
             }
@@ -156,6 +160,18 @@ enum Money {
         var rounded = Decimal()
         NSDecimalRound(&rounded, &value, 0, .plain)
         return NSDecimalNumber(decimal: rounded).int64Value
+    }
+    /// Splits valid item cents equally; sorted consumer IDs receive remainder cents first.
+    /// Empty selection returns no shares; invalid cents return nil. No charges or model mutations are applied.
+    static func itemShares(cents: Int64, consumerIDs: Set<String>) -> [String: Int64]? {
+        guard cents >= 0, cents <= maximumCents else { return nil }
+        guard !consumerIDs.isEmpty else { return [:] }
+        let consumers = consumerIDs.sorted()
+        let quotient = cents / Int64(consumers.count)
+        let remainder = cents % Int64(consumers.count)
+        return Dictionary(uniqueKeysWithValues: consumers.enumerated().map { index, id in
+            (id, quotient + (Int64(index) < remainder ? 1 : 0))
+        })
     }
     /// Computes a percentage charge from its integer-cent base, rounding half cents up once for editing and saved totals.
     /// Returns nil for invalid input or a charge beyond the app's safe calculation bound.

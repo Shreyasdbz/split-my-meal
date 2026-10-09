@@ -19,29 +19,33 @@ jobs:
     # Official image inventory checked 2026-10-07:
     # https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md
     runs-on: xcode-27
-    # The complete iPad suite outgrew 50 minutes on a slower hosted run.
-    # Individual XCTest limits remain 240 seconds (420 for three long journeys).
+    # Each partition runs on a fresh hosted simulator; their exact native IDs
+    # must cover the complete suite. Individual XCTest limits remain unchanged.
     timeout-minutes: 75
     strategy:
       fail-fast: false
       matrix:
         device: [iPhone, iPad]
+        partition: [a, b]
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
       SIMULATOR_OS: "27.0"
       SIMULATOR_FAMILY: ${{ matrix.device }}
+      VERIFICATION_PARTITION: ${{ matrix.partition }}
       ARTIFACTS_DIR: ${{ github.workspace }}/artifacts
     steps:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - name: Unit tests and complete UI journeys
+      - name: Validate native coverage checker
+        run: python3 -m unittest discover -s scripts/tests
+      - name: Selected native test partition
         run: scripts/verify-ios.sh
       - name: Preserve test results, screenshots and logs
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: ios27-${{ matrix.device }}-${{ github.sha }}
+          name: ios27-${{ matrix.device }}-${{ matrix.partition }}-${{ github.sha }}
           path: |
             artifacts/Tests.xcresult
             artifacts/attachments

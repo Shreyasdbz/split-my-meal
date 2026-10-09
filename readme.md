@@ -1,20 +1,22 @@
 # Split My Meal
 
+[![iOS 27 verification](https://github.com/Shreyasdbz/split-my-meal/actions/workflows/ios.yml/badge.svg?branch=main)](https://github.com/Shreyasdbz/split-my-meal/actions/workflows/ios.yml)
+
 A native iPhone and iPad app for splitting meal expenses, including proportional tax and tip.
 
-Create a meal, add everyone at the table, and enter the receipt’s items. Assign each item to the people who shared it. Add tax and tip as percentages or fixed amounts, then view or share an itemized split. Any unassigned amount stays visible, and rounded shares add up to the bill total.
+Create a meal, add everyone at the table, and enter the receipt’s items. Assign each item to the people who shared it. Add tax and tip as percentages or fixed amounts, then view or share an itemized split. Assigned shares and any unassigned balance add up to the bill total.
 
 The modernized app uses Swift 6, SwiftUI, SwiftData, native Liquid Glass controls on current systems, and an adaptive iPad layout. It supports restaurant search, optional nearby search, receipt photos with zoom and sharing, searchable meal history, sorting, and confirmed deletion. Existing saved data is migrated without changing stored prices or receipt formats.
 
+The item editor’s Everyone action selects the current people; individual switches remain editable until Save. Exact draft shares show each selected person’s portion before tax and tip. Native amount transitions respect Reduce Motion. A completed allocation says All items assigned, and the split keeps Share split visible. These [research-informed changes](docs/interaction-research.md) are design hypotheses, with validation recorded below.
+
 ## Screens and walkthrough
 
-| Meal | Split | Dark appearance |
-| --- | --- | --- |
-| <img src="docs/evidence/iphone-meal-light.png" width="240" alt="Meal total, charges, and each person’s share"> | <img src="docs/evidence/iphone-split-light.png" width="240" alt="Split summary with exact total and per-person amounts"> | <img src="docs/evidence/iphone-meal-dark.png" width="240" alt="Meal detail in dark appearance"> |
+<img src="docs/evidence/satisfaction-final-iphone-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">
 
-Watch the native [iPhone](docs/evidence/iphone-walkthrough.mp4) and [iPad](docs/evidence/ipad-walkthrough.mp4) walkthroughs. Captures use fictional meal data. [Media provenance](docs/evidence/media-provenance.json) records their native attachments and tested source; [iPhone](docs/evidence/video-provenance.json) and [iPad video provenance](docs/evidence/ipad-video-provenance.json) record the original recording hashes, trimmed setup/teardown, and encoding.
+The final native [iPhone](docs/evidence/satisfaction-final-iphone-walkthrough.mp4) and [iPad](docs/evidence/satisfaction-final-ipad-walkthrough.mp4) walkthroughs preserve actual interaction speed. [Video provenance](docs/evidence/satisfaction-final-video-provenance.json) and the [36-state gallery](docs/ui-gallery.md) bind the final screenshots and recordings to passing native Demo cases and matching source hashes. Captures use fictional meal data; [verification](docs/verification.md) records the complete validation scope.
 
-<img src="docs/evidence/ipad-meal-landscape.png" width="760" alt="iPad landscape meal detail beside the searchable meal library">
+<img src="docs/evidence/satisfaction-final-ipad-meal-landscape-light.png" width="760" alt="iPad landscape meal detail beside the searchable meal library">
 
 ## Build and test
 
@@ -29,4 +31,4 @@ SIMULATOR_OS=27.0 SIMULATOR_FAMILY=iPad scripts/verify-ios.sh
 
 Local verification requires an explicit dedicated `SIMULATOR_UDID`; GitHub Actions selects a device on its fresh runner. `ARTIFACTS_DIR` and `DERIVED_DATA_DIR` choose output locations. The script keeps toolchain and runtime metadata, fixture hashes, logs, result bundles, and screenshot attachments. Tests use a separate local store with CloudKit disabled. The script checks the unit host’s native launch metadata; UI tests require and record the isolation argument before each explicit app launch. The script imports two fictional photos into the selected simulator once; reuse preserves the fixture marker, and changed photos or an interrupted import require a fresh dedicated simulator.
 
-The GitHub workflow runs the same suite on iPhone and iPad with Xcode 27 and retains verification artifacts. See [verification](docs/verification.md), [UI review](docs/ui-audit.md), [architecture](docs/architecture.md), [privacy](misc/PrivacyPolicy.md), and [support](misc/Support.md).
+The GitHub workflow runs the same suite on iPhone and iPad with Xcode 27 and retains verification artifacts. See [verification](docs/verification.md), [surface review](docs/ui-refinement.md), [architecture](docs/architecture.md), [privacy](misc/PrivacyPolicy.md), and [support](misc/Support.md).

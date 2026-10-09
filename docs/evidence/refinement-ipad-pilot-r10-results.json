@@ -1,0 +1,59 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791465591.179,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Historical focused pilot; Settings handoff and retained query passed, then the phone-only search close selector failed on iPad. Whole recovery case remains failed.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-pilot-r10-source-manifest.json",
+  "sourceManifestSHA256": "198de061d1dd165f8aec50dbadceb69070d655028dd2c7c0faa59c1a323094c4",
+  "startTime": 1791465360.353,
+  "testFailures": [
+    {
+      "failureText": "Failed to tap \"close\" Button: No matches found for first query match sequence: `Descendants matching type Button` -> `Elements matching predicate '\"close\" IN identifiers'`, given input App element pid: 20927",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 37.328611969947815,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 103.30310201644897,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 83.97347903251648,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 3
+}

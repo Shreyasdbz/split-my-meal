@@ -1,0 +1,45 @@
+--- a/SplitMyMealUITests/MealJourneyTests.swift
++++ diagnostic/SplitMyMealUITests/MealJourneyTests.swift
+@@ -1139,10 +1139,39 @@
+ 
+     private func dismissKeyboard() {
+         if app.keyboards.firstMatch.exists {
+-            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).allElementsBoundByIndex.first { $0.isHittable }
+-            XCTAssertNotNil(done, "The focused editor must expose its keyboard Done action.")
+-            done?.tap()
++            var values: [String: String] = [:]
++            for identifier in ["item-price", "charge-value"] {
++                let field = app.textFields[identifier]
++                if field.exists && field.isEnabled {
++                    let value = field.value as? String
++                    XCTAssertNotNil(value, "The editable money field must expose its complete draft value.")
++                    values[identifier] = value
++                }
++            }
++            let control: XCUIElement
++            if UIDevice.current.userInterfaceIdiom == .pad {
++                control = app.keyboards.buttons["Hide keyboard"]
++            } else {
++                let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).allElementsBoundByIndex.first { $0.isHittable }
++                XCTAssertNotNil(done, "The focused editor must expose its keyboard Done action.")
++                guard let done else { return }
++                control = done
++            }
++            let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND isHittable == true"), object: control)
++            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed, "The native keyboard dismissal control must be ready.")
++            XCTAssertTrue(control.exists)
++            XCTAssertTrue(control.isHittable)
++            XCTAssertEqual(app.state, .runningForeground)
++            let geometry = XCTAttachment(string: "Native dismissal identifier: \(control.identifier)\nLabel: \(control.label)\nFrame: \(control.frame)\nKeyboard frame: \(app.keyboards.firstMatch.frame)\nDraft values: \(values)")
++            geometry.name = "native-keyboard-dismiss-ready"
++            geometry.lifetime = .keepAlways
++            add(geometry)
++            screenshot("native-keyboard-dismiss-ready")
++            control.tap()
+             XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "The keyboard must dismiss before another control can be tapped.")
++            for (identifier, value) in values {
++                XCTAssertEqual(app.textFields[identifier].value as? String, value, "Keyboard dismissal must preserve the complete money draft.")
++            }
+         }
+     }
+ 

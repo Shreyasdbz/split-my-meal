@@ -1,0 +1,24 @@
+--- a/SplitMyMealUITests/MealJourneyTests.swift
++++ diagnostic/SplitMyMealUITests/MealJourneyTests.swift
+@@ -1219,14 +1219,20 @@
+         XCTAssertEqual(field.value as? String, text, "Entering a field must preserve the complete intended value.")
+         // The keyboard marker can arrive after the typed value; this focused field requires native Done.
+         if identifier == "person-name" {
+-            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch
++            let done = app.keyboards.buttons["Done"]
+             let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND isHittable == true"), object: done)
+             XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed, "Person-name entry must expose a visible native Done control.")
+             XCTAssertTrue(done.exists)
+             XCTAssertTrue(done.isHittable)
+             XCTAssertEqual(app.state, .runningForeground)
++            let keyGeometry = XCTAttachment(string: "Native keyboard key identifier: \(done.identifier)\nLabel: \(done.label)\nFrame: \(done.frame)\nKeyboard frame: \(app.keyboards.firstMatch.frame)")
++            keyGeometry.name = "native-keyboard-submit-ready-" + text
++            keyGeometry.lifetime = .keepAlways
++            add(keyGeometry)
++            screenshot("native-keyboard-submit-ready-" + text)
+             done.tap()
+             XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Native Done must dismiss the keyboard before saving.")
++            XCTAssertEqual(field.value as? String, text, "Native submit must preserve the complete intended person name.")
+         }
+     }
+ 

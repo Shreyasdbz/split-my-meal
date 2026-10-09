@@ -1,0 +1,47 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791511813.821,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 0,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Uninstrumented native focused double-tap clears the visible old price: after-delete pixels show gray0.00 placeholder and native descriptor has no value attribute. Whole case failed because the new empty assertion expected emptyString while public value returned the placeholder0.00. Literal replacement and final flow were not reached; this is not a complete pass or production adoption.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-ipad-everyone-native-double-tap-source-manifest.json",
+  "sourceManifestSHA256": "d1fce2de5887ba87005df3b99eea8c8b15558eb6d92c8fc5b24e2712e0efb5ef",
+  "startTime": 1791511730.367,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"Optional(\"0.00\")\") is not equal to (\"Optional(\"\")\") - Selected native price text must be completely cleared before replacement.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion",
+      "testName": "testEveryoneDraftSharesCancellationAndSavedCompletion()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 77.5785219669342,
+      "name": "testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "nodeIdentifier": "MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 1
+}

@@ -1,0 +1,38 @@
+{
+  "additionalObservations": "Native dismissal control readiness/identity/frame and screenshot; exact existing editable money draft values before and after dismissal.",
+  "baseSourceManifestSha256": "99c34de786892a36c0639d3aa8d4e2b22611e02e0300b949300bbe79988f7e88",
+  "changedInputs": [
+    "SplitMyMealUITests/MealJourneyTests.swift"
+  ],
+  "delta": "Pad generic dismissKeyboard targets system Hide keyboard by idiom; Phone accessory Done selection retained. Same5s readiness and unconditional disappearance.",
+  "existingFlowAssertionsLimitsQuiescenceRetriesPreserved": true,
+  "maintainedAdoption": false,
+  "outcomes": {
+    "ipad": {
+      "animationNotificationWaitWarnings": 8,
+      "failed": 2,
+      "passed": 0,
+      "proposedHideControlExecuted": false,
+      "runs": [
+        "refinement-ipad-native-keyboard-hide-diagnostic-results.json"
+      ]
+    },
+    "iphone": {
+      "failed": 0,
+      "passed": 5,
+      "runs": [
+        "refinement-iphone-native-keyboard-hide-diagnostic-results.json",
+        "refinement-iphone-native-keyboard-hide-callers-diagnostic-results.json"
+      ]
+    }
+  },
+  "patch": "refinement-native-keyboard-hide-diagnostic.patch",
+  "patchPublication": "Only scratch-path diff headers normalized to repository-relative names; original evidence hunks preserved.",
+  "patchSHA256": "4b290caca7c1d591cf5453085ad363aa8bca2636552a5379f1122492f6615b4b",
+  "privateSourceManifestSha256": "85c3779d94952cde7e686ae7d24ee55f7db078e32aaa713835aacc43bce48373",
+  "productionUnchanged": true,
+  "scope": "Private generic keyboard dismissal comparison; no maintained adoption, causal or isolated performance claim.",
+  "scrollingAndPersonSubmitUnchanged": true,
+  "soleActiveJobClaim": false,
+  "sourceInputCount": 44
+}

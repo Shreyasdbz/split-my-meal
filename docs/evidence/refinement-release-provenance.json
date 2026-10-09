@@ -1,0 +1,36 @@
+{
+  "analyzer": "passed",
+  "binarySHA256": "db691aac77ad66df592b02595c968ae730db61f9585ef4caceded026c0527fa5",
+  "build": "2",
+  "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+  "codeSigning": "disabled for local verification",
+  "compilerWarnings": [
+    "Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "releaseBuild": "passed",
+  "scope": "Unsigned device build and analysis; no physical-device signing, CloudKit account or App Store operation",
+  "sourceManifest": "refinement-release-source-manifest.json",
+  "sourceManifestSHA256": "e9f7ded454b3fe7fd112fe95b35a088f4d830e9a4e14aafb44c0c11b945924d7",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "validation": "Unsigned device Release build and Xcode analyzer succeeded with bounded adaptive map detail viewports and native denied-only Settings recovery. DEBUG fixture strings are absent from the compiled binary.",
+  "verifiedAt": "2026-10-08T13:21:46.547171+00:00",
+  "version": "2.0.0"
+}

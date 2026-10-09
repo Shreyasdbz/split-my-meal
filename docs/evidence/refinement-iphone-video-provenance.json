@@ -1,0 +1,44 @@
+{
+  "bytes": 43575922,
+  "durationSeconds": 78.09833333333333,
+  "encodedHeight": 1280,
+  "encodedWidth": 588,
+  "file": "refined-iphone-walkthrough.mp4",
+  "nativeResult": "testDemoWalkthrough passed; zero failures or skips",
+  "processing": "Native avconvert Preset1280x720 with its default metadata privacy filter. Only inspected setup and teardown trimmed; interaction speed, in-app relaunch, rotation and appearance transitions retained.",
+  "sha256": "c8141f8cd2b7a8e82d66400de251d586ce82699f5be7ea6269d77d218ebe05ed",
+  "source": "demo-walkthrough.mp4",
+  "sourceDurationSeconds": 92.17666666666666,
+  "sourceManifest": "refinement-iphone-demo-source-manifest.json",
+  "sourceManifestSHA256": "6b2e678b003f4f03f1c532d5042420c04ca6ff746cf6fb30a540ba2df4cf8092",
+  "sourceRangeSeconds": [
+    12.4,
+    90.5
+  ],
+  "sourceRun": "refinement-iphone-demo",
+  "sourceVideoSHA256": "3e80673c00ff2a25b17da99e42f260b143e72fdf41fd8b863ffa11ef1f426582",
+  "transform": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "verifiedEndpointFrameTimesSeconds": [
+    0,
+    0.02,
+    76.75333333333333
+  ],
+  "verifiedFrameTimesSeconds": [
+    1.085,
+    9.555,
+    19.155,
+    29.61,
+    42.833333333333336,
+    54.89833333333333,
+    65.1,
+    76.275
+  ],
+  "visualReview": "Primary agent inspected all eight decoded native samples plus trimmed beginning/end: readable library, meal, editors, split, native map transition, receipt route and dark ending. A sampling review does not establish every-frame video inspection or complete accessibility."
+}

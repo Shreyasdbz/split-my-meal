@@ -1,0 +1,49 @@
+{
+  "scope": "Observed native test-navigation failures; original private captures retained. Production code unchanged. No permission/revocation pass is inferred from these failures.",
+  "resultFile": "refinement-ipad-live-r1-results.json",
+  "sourceManifestSHA256": "fc6616bfd0080fc6cfd5a16eadedd7ef12389a8bee43f63889123c8fe59d48d8",
+  "settings": {
+    "queriedSurface": "sidebar Search",
+    "query": "Split My Meal",
+    "queriedFrame": [
+      16,
+      86,
+      288,
+      44
+    ],
+    "expectedSurface": "Search Apps in Apps detail",
+    "expectedFrame": [
+      570,
+      32,
+      240,
+      44
+    ],
+    "expectedValue": "empty"
+  },
+  "rapidCancellation": {
+    "nativeCancelFrame": [
+      134,
+      105.5,
+      76.5,
+      36
+    ],
+    "nativeCancelPresent": true,
+    "nativeCancelHittabilityQueriedBeforeFailure": false,
+    "closeControlPresent": false,
+    "query": "Pizza New York",
+    "providerResultsPresent": true
+  },
+  "nativeCaptureHashes": [
+    {
+      "nativeAttachment": "F1DBE368-1DEE-490F-875E-6DF2FFB252E7.png",
+      "sha256": "9728ef8fe0c8ededd4ee635b9a844bd7b42ad9601b3ca77bac013a9d8c736c5a",
+      "observation": "Settings Apps page: query is in sidebar Search; Search Apps is empty."
+    },
+    {
+      "nativeAttachment": "053ADEE6-2C52-4378-886C-A21EE818D228.png",
+      "sha256": "ec755970eae60cc855ca6216e55d3664b066f0b31bdd37bb05217f55ac74c067",
+      "observation": "Restaurant search: native Cancel remains present; close control is absent."
+    }
+  ],
+  "maintainedCorrection": "Select Search Apps on iPad and make optional native close conditional, as existing Retry and Denied checks already do. Keep native Cancel, permission, retained-query and stored-restaurant assertions."
+}

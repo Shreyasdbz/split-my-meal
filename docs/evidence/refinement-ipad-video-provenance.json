@@ -1,0 +1,56 @@
+{
+  "bytes": 41075510,
+  "durationSeconds": 80.84833333333333,
+  "encodedHeight": 1280,
+  "encodedWidth": 892,
+  "file": "refined-ipad-walkthrough.mp4",
+  "nativeResult": "testDemoWalkthrough passed; zero failures or skips",
+  "processing": "Native avconvert Preset1280x720 with default metadata privacy filter. Only inspected setup and teardown trimmed; original interaction speed, in-app relaunch, rotations and appearance transitions retained.",
+  "sha256": "be8ce43f5046b10c14d9783145e85fdd484ed078ac2af5205087559ce785fca6",
+  "source": "demo-walkthrough.mp4",
+  "sourceDurationSeconds": 96.73166666666667,
+  "sourceManifest": "refinement-ipad-demo-source-manifest.json",
+  "sourceManifestSHA256": "fc6616bfd0080fc6cfd5a16eadedd7ef12389a8bee43f63889123c8fe59d48d8",
+  "sourceRangeSeconds": [
+    14.05,
+    94.9
+  ],
+  "sourceRun": "refinement-ipad-demo",
+  "sourceVideoSHA256": "ff51a3b77a577757f272c27ad6430dd60ccb2bb0bf9bb6fddd45f4329961758f",
+  "testRevisionBoundary": "Recorded from the immutable93e52 build before later LiveMapKitTests-only Settings/search selector corrections; all33 production inputs remain identical. This walkthrough is separate from complete-suite and live integration proof.",
+  "transform": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "verifiedEndpointFrameTimesSeconds": [
+    0,
+    0,
+    79.21833333333333,
+    79.21833333333333
+  ],
+  "verifiedFrameTimesSeconds": [
+    0,
+    10.351666666666667,
+    20.213333333333335,
+    32.86833333333333,
+    46.27,
+    55.19,
+    68.49666666666667,
+    79.21833333333333
+  ],
+  "verifiedSourceFrameTimesSeconds": [
+    3.1983333333333333,
+    11.365,
+    24.455,
+    40.071666666666665,
+    54.678333333333335,
+    67.82333333333334,
+    82.13666666666667,
+    95.23333333333333
+  ],
+  "visualReview": "Primary agent inspected eight decoded native source samples, source boundary frames and all eight encoded samples. The encoded beginning/end match inspected readable library/dark-meal samples byte-for-byte. Includes native sheet/disclosure/rotation transitions. Sampling does not establish every-frame inspection or complete accessibility."
+}

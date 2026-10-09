@@ -1,0 +1,67 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 2,
+  "finishTime": 1791465597.201,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Historical focused pilot; strict foreground assertions caught unintended native Maps activation during both map detail pans. No map acceptance is inferred from background captures.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-pilot-r10-source-manifest.json",
+  "sourceManifestSHA256": "198de061d1dd165f8aec50dbadceb69070d655028dd2c7c0faa59c1a323094c4",
+  "startTime": 1791465347.796,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCUIApplicationState(rawValue: 3)\") is not equal to (\"XCUIApplicationState(rawValue: 4)\") - Scrolling map details must preserve the app's foreground presentation.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    },
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCUIApplicationState(rawValue: 3)\") is not equal to (\"XCUIApplicationState(rawValue: 4)\") - Scrolling map details must preserve the app's foreground presentation.",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 3,
+      "testIdentifierString": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape",
+      "testName": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 89.93125998973846,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 91.09172701835632,
+      "name": "testDemoWalkthrough()",
+      "nodeIdentifier": "MealJourneyTests/testDemoWalkthrough()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 60.070716977119446,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Failed"
+    }
+  ],
+  "totalTestCount": 3
+}

@@ -1,0 +1,53 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791465940.531,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Failed",
+  "runtime": [
+    {
+      "modelName": "iPad (A16)",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Historical focused pilot on clipped map viewports; unmet foreground control visibility and pane navigation assertions are retained. Subsequent corrected native gestures require separate verification.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-ipad-pilot-r11-source-manifest.json",
+  "sourceManifestSHA256": "c96c699adc365168a21359e1fc97f087f7ae31accce85c5c8c02bad2ccab1985",
+  "startTime": 1791465778.857,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed",
+      "targetName": "SplitMyMealUITests",
+      "testIdentifier": 1,
+      "testIdentifierString": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "testIdentifierURL": "test://com.apple.xcode/SplitMyMeal-Prod-A/SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation",
+      "testName": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()"
+    }
+  ],
+  "tests": [
+    {
+      "durationInSeconds": 74.30338501930237,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Failed"
+    },
+    {
+      "durationInSeconds": 81.36573791503906,
+      "name": "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "nodeIdentifier": "MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

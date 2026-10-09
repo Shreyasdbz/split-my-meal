@@ -1,0 +1,38 @@
+{
+  "collectionTest": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+  "excludedReports": 0,
+  "inventoryFile": "refinement-iphone-r2-all-type-accessibility-inventory.json",
+  "inventorySHA256": "cd54a2054f772c37d2b8cf3f7b186affaeaf86bcf86c762fad3ca75d104820f5",
+  "issuesReported": 31,
+  "knownDecorativeRasterReports": 1,
+  "nativeAttachment": "all-type-accessibility-issue-inventory_0_6849D606-9B91-4F88-895C-8EDC17EC304B.json",
+  "reportCountsByAuditType": {
+    "1": 14,
+    "131072": 3,
+    "65536": 14
+  },
+  "scope": "Current refinement all-type diagnostic inventory, not an accessibility pass. Every reported issue is retained; unavailable identities remain unresolved.",
+  "separateNativeControlGate": {
+    "auditTypes": [
+      "hitRegion",
+      "sufficientElementDescription",
+      "trait",
+      "elementDetection"
+    ],
+    "durationInSeconds": 23.165717005729675,
+    "exemptions": 0,
+    "meaning": "This separate strict gate does not classify or clear contrast, font scaling, or clipping reports in the all-type inventory.",
+    "result": "Passed",
+    "surfaces": [
+      "library",
+      "meal detail",
+      "split summary",
+      "meal editor"
+    ],
+    "test": "testNativeAccessibleControlSemanticsAndHitRegions()"
+  },
+  "sourceManifest": "refinement-iphone-complete-r2-source-manifest.json",
+  "sourceManifestSHA256": "6b2e678b003f4f03f1c532d5042420c04ca6ff746cf6fb30a540ba2df4cf8092",
+  "sourceResults": "refinement-iphone-complete-r2-results.json",
+  "unavailableElementIdentityReports": 1
+}

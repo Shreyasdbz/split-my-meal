@@ -1,0 +1,24 @@
+{
+  "appSourcesUnchanged": true,
+  "baseHead": "93e52bec241467ab0f7356850f527f96a5a854e3",
+  "baseSourceManifestSha256": "fc6616bfd0080fc6cfd5a16eadedd7ef12389a8bee43f63889123c8fe59d48d8",
+  "captureWrapperDelta": "Only working directory points to the private source copy.",
+  "caseAssertionsLimitsQuiescenceUnchanged": true,
+  "changedInputs": [
+    "SplitMyMealUITests/MealJourneyTests.swift"
+  ],
+  "concurrencyCauseClaim": false,
+  "nativeResults": "refinement-ipad-scroll-query-diagnostic-results.json",
+  "observations": "refinement-scroll-query-diagnostic-observations.json",
+  "otherActiveNativeJobCountObserved": 2,
+  "otherJobsUntouched": true,
+  "patch": "refinement-scroll-query-diagnostic.patch",
+  "patchSha256": "33f4cc381d6eefc97b0ba48adb9b2705d9d644e20c6bc73ea8463efe532e4e5a",
+  "privateSourceManifestSha256": "860fd82a266b35f1a4d55550b2b1d5d1200e0742309ec488559bcddf9abd65d7",
+  "processObservationTiming": "after private build and native test launch; the initial sandbox process lookup was denied",
+  "queryLifetime": "Within one pre-gesture attempt only; diagnostic target and final viewport are refreshed independently.",
+  "scope": "Private controlled per-scroll-attempt query comparison; no maintained-source edit or cause claim.",
+  "soleActiveLocalNativeJob": false,
+  "sourceInputCount": 44,
+  "sourceManifest": "refinement-ipad-scroll-query-diagnostic-source-manifest.json"
+}

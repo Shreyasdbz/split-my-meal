@@ -1,0 +1,246 @@
+{
+  "devices": {
+    "ipad": {
+      "captures": [
+        {
+          "file": "satisfaction-final-ipad-meal-dark.png",
+          "nativeAttachment": "demo-meal-dark_0_72CB03C4-0E98-4507-A817-EE95FEB0589C.png",
+          "sha256": "201e0da242c4ca79212b04fa9667930ee87a86a6e48e046e1cbd4f118d11850d",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-library-dark.png",
+          "nativeAttachment": "demo-library-dark_0_7B775051-6EB9-48E8-B54C-378F02A9FB08.png",
+          "sha256": "a03f36ef90ac73a5284725add356e4e66a515ce9a611e7024bcb686b0e5fd354",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-meal-landscape-light.png",
+          "nativeAttachment": "demo-meal-landscape-light_0_9D680F83-D110-471C-A356-71680CFED2C0.png",
+          "sha256": "8649c4720f9a2040888585fdf6b1dd3e08a1dbfb8efefc671c3833a7622ddec8",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-meal-editor-light.png",
+          "nativeAttachment": "demo-meal-editor-light_0_98780412-A49E-4AC8-A5FF-9FE34AAF844D.png",
+          "sha256": "bd0244ac12031edc4bd4710e91fc46da04b2902a970d13564accb7f551fc33c8",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-receipt-light.png",
+          "nativeAttachment": "demo-receipt-light_0_2E8236BC-57A2-4814-8EE8-F2B6A255E788.png",
+          "sha256": "775b8a84f7f05c33c170b3d22afc037426074b1b6959cfb8531c8d02e1f269cc",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-meal-footer-light.png",
+          "nativeAttachment": "demo-meal-footer-light_0_DB255249-8BB7-4667-90A3-53EBE44E24E4.png",
+          "sha256": "49b5494daea97a01c8704f09ff7693e5690a95984fe0d08d6c3faae5cdb0d76e",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-restaurant-map-landscape-light.png",
+          "nativeAttachment": "demo-restaurant-map-landscape-light_0_4673DD09-23E8-44D0-9452-B7B519287806.png",
+          "sha256": "085f310aa12ebf036b49c9712959843cbcf1e6a041adc9e1d6ee13774be894af",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-restaurant-map-light.png",
+          "nativeAttachment": "demo-restaurant-map-light_0_5DC9BA50-4A3B-4716-9570-34AB194489DF.png",
+          "sha256": "484dfe12b9cfa59752741bae83d2f451c2a908a73a4a23b313e9c2845b834ba5",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-bill-details-expanded-light.png",
+          "nativeAttachment": "demo-bill-details-expanded-light_0_74BE5FA9-AED9-469A-87CA-BC363099C4E7.png",
+          "sha256": "91f90823e864a25a15ad32d80aacbb9709d81544d62f9b8f4efbdb1752a79b21",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-bill-details-collapsed-light.png",
+          "nativeAttachment": "demo-bill-details-collapsed-light_0_FC0B097E-0FB6-4D4B-BA76-A09EB8444B80.png",
+          "sha256": "e1305216c849cf5dafded8f641943f5364e87d8be81c41df72f42a92959d1f14",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-itemized-split-light.png",
+          "nativeAttachment": "demo-itemized-split-light_0_69F8ED0C-E1F0-41C6-BA64-18D9568A705F.png",
+          "sha256": "0518465987c308eb69779ace87a3580b385acf41d162dc846f98a3bebfdce9a1",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-split-light.png",
+          "nativeAttachment": "demo-split-light_0_B1F98062-1F86-4B18-BEC4-962E93661D21.png",
+          "sha256": "e1305216c849cf5dafded8f641943f5364e87d8be81c41df72f42a92959d1f14",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-tip-editor-light.png",
+          "nativeAttachment": "demo-tip-editor-light_0_7C8E49C5-0B36-4725-A677-91D830FB0829.png",
+          "sha256": "732f2ecc65f879a9a010d7a05f1e24e5257c48aedc9d52ad30342991944baac6",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-tax-editor-light.png",
+          "nativeAttachment": "demo-tax-editor-light_0_053C3E75-7E21-44AB-9C76-064204C5C631.png",
+          "sha256": "12a87e5594225d142ddd846ef76907b38dfea58fdfffbfbf2969751c76be13f3",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-item-editor-light.png",
+          "nativeAttachment": "demo-item-editor-light_0_9E385302-859B-4C79-BE8B-65A16B5D7907.png",
+          "sha256": "98640c090a8eef7f15e9a536323de027dae99e9812b52189ae8b4ef8132925c3",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-person-editor-light.png",
+          "nativeAttachment": "demo-person-editor-light_0_17D5FD0B-FB35-4576-9635-9A520DF2F01F.png",
+          "sha256": "83441f7b8186d5aeefed74136577f36c557d51d711211c3effa35edfafd3b5f3",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-meal-light.png",
+          "nativeAttachment": "demo-meal-light_0_98A3322D-E1FB-4AD2-9549-3A054C3FAEAC.png",
+          "sha256": "8f83003e8a4a41f6e49b6235b801fee6c24bbb5d049eb4b04f387f31997da71f",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-ipad-library-light.png",
+          "nativeAttachment": "demo-library-light_0_C6F5C14E-3CA0-4CB2-8AE2-12A85C82A41A.png",
+          "sha256": "99ca18e21bef8e052e73b75eebccc48f460a7e00b15028ab25143357c61f6716",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        }
+      ],
+      "independentReview": {
+        "findings": "No actionable visible-state findings. iPad selected dark row is deep teal with white labels; primary action remains mint with black labels.",
+        "limits": "Normal text size only; light/dark library and meal, light editors/split/receipt, landscape meal/map. No dark editor, largest text, error/empty state or spoken accessibility review in this set.",
+        "role": "iOS visual designer",
+        "viewedOriginalPNGs": 18
+      },
+      "result": "satisfaction-final-ipad-demo-results.json",
+      "sourceManifest": "satisfaction-final-ipad-demo-source-manifest.json"
+    },
+    "iphone": {
+      "captures": [
+        {
+          "file": "satisfaction-final-iphone-meal-dark.png",
+          "nativeAttachment": "demo-meal-dark_0_C8F2C758-A588-47D6-9AE7-9EEE465394AF.png",
+          "sha256": "96f7d562d5bb1ddb895c6b824d789a6f851714a44a986523f40d5eccd230a273",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-library-dark.png",
+          "nativeAttachment": "demo-library-dark_0_903D394D-6408-4A2B-B0FC-B31B7ADE6314.png",
+          "sha256": "5a3b91023e89c20238914c4b6c2aaf21abe0e1fb3e8f6f9084f56295f90fa869",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-meal-landscape-light.png",
+          "nativeAttachment": "demo-meal-landscape-light_0_96474BDA-B549-4D8B-BE37-F779A9FF0252.png",
+          "sha256": "48cb4cea438e8576d8508266f67592b0c16bdb0f8c3205eec6094ada38ff6f60",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-meal-editor-light.png",
+          "nativeAttachment": "demo-meal-editor-light_0_8A24C5DD-71A4-4937-93A6-29DE2CCFBE6B.png",
+          "sha256": "85c42e3f29100b0d561c607871012aa08edcf08be212a604cea7f1879051e592",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-receipt-light.png",
+          "nativeAttachment": "demo-receipt-light_0_70AF3CB7-C03C-4BCE-B30A-B41C48EB65FA.png",
+          "sha256": "1bc6313e1ddd03675955bcf9257f60215e87ebc5c77206503536473510bd11ea",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-meal-footer-light.png",
+          "nativeAttachment": "demo-meal-footer-light_0_E47B0E89-91D8-4F66-ABC7-77FF04621539.png",
+          "sha256": "17c2a7701419fc489c801293317651215cc437dd75e79ab0344d1153d093ef2d",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-restaurant-map-landscape-light.png",
+          "nativeAttachment": "demo-restaurant-map-landscape-light_0_E0BFB3E8-D5E7-4841-A185-FB1FD11C7027.png",
+          "sha256": "72133250d37d5025069f82e0160dfd7857628a5cece89cc9904bf1d8b25249f0",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-restaurant-map-light.png",
+          "nativeAttachment": "demo-restaurant-map-light_0_A6F56068-CC6F-4CD2-A85E-3411ECDDBB34.png",
+          "sha256": "1530d9a714110a91804d9da76db8ad08e37876bca5d6b24033dc6c6af59de47b",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-bill-details-expanded-light.png",
+          "nativeAttachment": "demo-bill-details-expanded-light_0_49A92F04-B3EC-4366-892A-40AD045584C6.png",
+          "sha256": "e62b595ccb05e342e42a8619155ec67a7fea07aa3dc73eb7e2d8f5adaa7ac909",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-bill-details-collapsed-light.png",
+          "nativeAttachment": "demo-bill-details-collapsed-light_0_D5F829A5-32A1-4C6E-921B-E1AA64CD7BE5.png",
+          "sha256": "dd7b03f26c6a514cf16887bdb145c9ea774845fd79cf4d7847a934eefe3298f7",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-itemized-split-light.png",
+          "nativeAttachment": "demo-itemized-split-light_0_E205F028-CE2A-4A34-B0EB-73B7C6DCF259.png",
+          "sha256": "2e109cb9cba00ed77693170fd0c899dd999922de892f80c90c266047db14d9c8",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-split-light.png",
+          "nativeAttachment": "demo-split-light_0_8F77260E-CE93-4C82-B624-28B1398BFA70.png",
+          "sha256": "b9c11269a564e2a71d589760ee0e83f8fc10f0ddb1ce3b0cbaca3907633cd7f8",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-tip-editor-light.png",
+          "nativeAttachment": "demo-tip-editor-light_0_DF78CE83-5F04-40E5-BD76-A75B4DE9723C.png",
+          "sha256": "e7171493b2f6a2f57eb0a5e1d635c44971a601191c7f75c46d008beebd170a16",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-tax-editor-light.png",
+          "nativeAttachment": "demo-tax-editor-light_0_62DBB8E9-9844-446C-B2BE-BD161898DCBE.png",
+          "sha256": "a7e3047efe598317c87d048f02a4693672f998a50333d49235571e45405afcd6",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-item-editor-light.png",
+          "nativeAttachment": "demo-item-editor-light_0_E4C4D286-7256-4C04-A896-24350A65AE62.png",
+          "sha256": "d002eee9a0781e0e737f5c0597ffb1218f73dccd5d7095a39c2cce08022000a8",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-person-editor-light.png",
+          "nativeAttachment": "demo-person-editor-light_0_39B8DD4C-4664-4E67-9054-7F8B1918DDF7.png",
+          "sha256": "ce99bfe988d8489e37c1d11dd982cfb1f536ccf2a77fc383c8a91025f7a886cd",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-meal-light.png",
+          "nativeAttachment": "demo-meal-light_0_E1E95409-9D2E-49AD-8DAC-46F8CB2CDD7F.png",
+          "sha256": "c9ba40fb04a93c4a204b9af96d519767a4b27f40cba3df4204449cad4b8fc102",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        },
+        {
+          "file": "satisfaction-final-iphone-library-light.png",
+          "nativeAttachment": "demo-library-light_0_8FA07BD6-8EFD-4AAC-AB60-F49096ABBE2A.png",
+          "sha256": "490b4e2f6040807ca293943d3b116c6ba0b93d0accb747a917b9a1f0048c0e4d",
+          "testIdentifier": "MealJourneyTests/testDemoWalkthrough()"
+        }
+      ],
+      "independentReview": {
+        "findings": "No actionable visible-state or copy findings. Portrait map tiles are unloaded; landscape tiles appear. This provider capture state does not establish an app defect.",
+        "limits": "Normal text size only; light/dark library and meal, light editors/split/receipt, landscape meal/map. No dark editor, largest text, error/empty state or spoken accessibility review in this set.",
+        "role": "iPhone UX and copy reviewer",
+        "viewedOriginalPNGs": 18
+      },
+      "result": "satisfaction-final-iphone-demo-results.json",
+      "sourceManifest": "satisfaction-final-iphone-demo-source-manifest.json"
+    }
+  },
+  "scope": "36 unaltered native Demo screenshots from the final selection-tint source. Each dedicated native journey passed; screenshot review does not certify interactions outside those cases, measured contrast, manual accessibility or subjective satisfaction.",
+  "sourceManifestSHA256": "5c4da2492c794ab1ad128dcb6c9d0a0dbe337abc0537e0d5e7d4193d71eba44f"
+}

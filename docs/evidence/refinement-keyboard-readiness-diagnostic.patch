@@ -1,0 +1,41 @@
+--- maintained/MealJourneyTests.swift
++++ private-keyboard-ready/MealJourneyTests.swift
+@@ -1124,9 +1124,35 @@
+ 
+     private func dismissKeyboard() {
+         if app.keyboards.firstMatch.exists {
+-            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).allElementsBoundByIndex.first { $0.isHittable }
+-            XCTAssertNotNil(done, "The focused editor must expose its keyboard Done action.")
+-            done?.tap()
++            let done = app.buttons.matching(NSPredicate(format: "label == %@", "Done")).firstMatch
++            let ready = XCTNSPredicateExpectation(predicate: NSPredicate { object, _ in
++                guard let candidate = object as? XCUIElement else { return false }
++                let application = XCUIApplication()
++                let keyboard = application.keyboards.firstMatch
++                guard keyboard.exists, candidate.exists, candidate.isHittable else { return false }
++                let appFrame = application.frame
++                let keyboardFrame = keyboard.frame
++                let doneFrame = candidate.frame
++                return keyboardFrame.height >= 100 && appFrame.contains(keyboardFrame)
++                    && doneFrame.width > 0 && doneFrame.height > 0 && appFrame.contains(doneFrame)
++                    && doneFrame.maxY <= keyboardFrame.minY + 4
++            }, object: done)
++            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed, "Native keyboard and Done must be visible within the foreground application before dismissal.")
++            let keyboard = app.keyboards.firstMatch
++            XCTAssertTrue(keyboard.exists)
++            XCTAssertGreaterThanOrEqual(keyboard.frame.height, 100)
++            XCTAssertTrue(app.frame.contains(keyboard.frame))
++            XCTAssertTrue(done.exists)
++            XCTAssertTrue(done.isHittable)
++            XCTAssertTrue(app.frame.contains(done.frame))
++            XCTAssertLessThanOrEqual(done.frame.maxY, keyboard.frame.minY + 4)
++            XCTAssertEqual(app.state, .runningForeground)
++            let geometry = XCTAttachment(string: "Chosen native Done frame: \(done.frame)\nKeyboard frame: \(keyboard.frame)\nApplication frame: \(app.frame)\nForeground app state: \(app.state.rawValue)\nHittable: \(done.isHittable)\nAccessibility tree: \(app.debugDescription)")
++            geometry.name = "private-keyboard-done-ready-geometry"
++            geometry.lifetime = .keepAlways
++            add(geometry)
++            screenshot("private-keyboard-done-ready")
++            done.tap()
+             XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "The keyboard must dismiss before another control can be tapped.")
+         }
+     }

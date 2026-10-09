@@ -1,0 +1,70 @@
+{
+  "scope": "One private controlled three-case comparison; maintained sources unchanged",
+  "nativeResult": {
+    "total": 3,
+    "passed": 1,
+    "failed": 2,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "testCollectAllTypeAccessibilityIssueInventory",
+      "result": "Passed",
+      "durationSeconds": 57.276
+    },
+    {
+      "name": "testCreateEditSplitShareAndPersistence",
+      "result": "Failed",
+      "durationSeconds": 49.062,
+      "failure": "Five-second generic keyboard/Done readiness expectation timed out"
+    },
+    {
+      "name": "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance",
+      "result": "Failed",
+      "durationSeconds": 33.913,
+      "failure": "Native candidate.isHittable failed: Activation point invalid and no suggested hit points based on element frame"
+    }
+  ],
+  "sourceManifestSha256": "dee714623200e899a9f774f033499c5eb1174579836feecd13721ecc1e34af1f",
+  "productionReleaseInputsCompared": 33,
+  "productionReleaseInputMismatches": [],
+  "maintainedInputDifferences": [
+    "SplitMyMealUITests/MealJourneyTests.swift"
+  ],
+  "timingInstrumentationDeclared": true,
+  "genericReadyDoneTapsExecuted": 0,
+  "preTapGeometryAttachmentsReached": false,
+  "finalCreateFailureGeometry": {
+    "doneFrame": [
+      731.5,
+      803,
+      64.5,
+      36
+    ],
+    "keyboardFrame": [
+      0,
+      898,
+      820,
+      279
+    ],
+    "itemPrice": "24.00",
+    "keyboardFocused": true
+  },
+  "animationNotificationWarnings": 0,
+  "executionAllowanceFailures": 0,
+  "statusRestoredExactly": false,
+  "interpretation": "The candidate existence/hittability guard prevented reaching the proposed geometry checks or the generic Done tap. A later matching geometry frame does not make the earlier readiness condition valid. This comparison supplies negative evidence and must not be adopted or described as a fix.",
+  "soleDelta": "refinement-keyboard-readiness-diagnostic.patch",
+  "soleDeltaSHA256": "029f4c2d58c17aa55279e3bb83ea40a6ec0609b0950f0732e56b60be764a3642",
+  "nativeResultFile": "refinement-ipad-keyboard-readiness-diagnostic-results.json",
+  "subsequentStatusRecovery": {
+    "scope": "Authorized status recovery on the same owned fresh iPad only",
+    "originalFinalizerRestorationVerified": false,
+    "originalFailure": "Native status_bar clear/list reported Shutdown",
+    "recovery": "Booted the same owned device without erasing stores or Photos, then cleared overrides to the prior recorded empty baseline",
+    "recoveryBaselineEqual": true,
+    "beforeSha256": "1311a88c28d9df5c1899117761907d8e70b3a0d7eb7a2d8c5460b4ba645b61fe",
+    "restoredSha256": "1311a88c28d9df5c1899117761907d8e70b3a0d7eb7a2d8c5460b4ba645b61fe",
+    "appStoresOrPhotosErased": false
+  }
+}

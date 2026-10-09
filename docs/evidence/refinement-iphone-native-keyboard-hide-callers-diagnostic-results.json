@@ -1,0 +1,50 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791485424.224,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 3,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 3
+    }
+  ],
+  "scope": "Historical private harness comparison: three further Phone callers completed; does not validate Pad hiding behavior.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-native-keyboard-hide-callers-diagnostic-source-manifest.json",
+  "sourceManifestSHA256": "85c3779d94952cde7e686ae7d24ee55f7db078e32aaa713835aacc43bce48373",
+  "startTime": 1791485252.229,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 26.26651704311371,
+      "name": "testDismissedDraftLeavesSavedMealUnchanged()",
+      "nodeIdentifier": "MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 56.732251048088074,
+      "name": "testNativeCategoryAndCustomIconEditingPersists()",
+      "nodeIdentifier": "MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 85.33307898044586,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 3
+}

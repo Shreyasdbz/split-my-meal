@@ -1,5 +1,7 @@
 # UI review · 8 October 2026
 
+This is the initial modernization audit. The subsequent [UI refinement review](ui-refinement.md) records the cleaner primary action, split hierarchy, forms and copy, with new source-bound captures and interaction evidence. Images and results below retain their original historical provenance.
+
 The review covers every current screen and original flow from UX, native Apple component, and accessibility perspectives. Source review includes the working tree; pixel review includes exported iOS 27 screenshots and an independent simulator framebuffer. The matrix distinguishes source review, inspected pixels and passing interaction journeys; later-source replays and external checks remain explicit. Screenshots and automated checks do not establish Apple HIG certification.
 
 ## Apple guidance

@@ -1,0 +1,62 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791471742.132,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 5,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 1
+    }
+  ],
+  "scope": "Retained passing phone live run before later LiveMapKitTests-only native navigation corrections; current production matches.",
+  "skippedTests": 0,
+  "sourceManifest": "refinement-iphone-live-before-navigation-source-manifest.json",
+  "sourceManifestSHA256": "8c92ce94991bcded7d52953086d496030d1163ed369e757ef2a57887b3b36bb5",
+  "startTime": 1791471434.269,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 43.35421895980835,
+      "name": "testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "nodeIdentifier": "LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 54.82304406166077,
+      "name": "testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 151.7488569021225,
+      "name": "testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "nodeIdentifier": "LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 21.869355082511902,
+      "name": "testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "nodeIdentifier": "LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 33.18427002429962,
+      "name": "testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "nodeIdentifier": "LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 5
+}

@@ -1,0 +1,38 @@
+{
+  "analyzer": "passed",
+  "binarySHA256": "0c3e297b1752f4cbb4dab54464d203796abae4d8d3ff7e66d942949690e75834",
+  "build": "2",
+  "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+  "codeSigning": "disabled for local verification",
+  "compilerWarnings": [
+    "Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionAndProjectSourceCount": 33,
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Final-source unsigned iOS 27 device build and analysis. Signing, physical-device execution, CloudKit account and App Store operations remain separate.",
+  "sourceManifest": "satisfaction-release-final-source-manifest.json",
+  "sourceManifestSHA256": "5c4da2492c794ab1ad128dcb6c9d0a0dbe337abc0537e0d5e7d4193d71eba44f",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "validation": "Unsigned device Release build and analyzer passed on the frozen iPad keyboard and library selection contrast source. All 33 production/project hashes match the bound manifest; all 12 DEBUG fixture strings are absent.",
+  "verifiedAt": "2026-10-09T02:40:14.627791+00:00",
+  "version": "2.0.0"
+}

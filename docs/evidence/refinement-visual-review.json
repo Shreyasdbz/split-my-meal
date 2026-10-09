@@ -1,0 +1,161 @@
+{
+  "completeR2PixelReview": {
+    "allImageHashesVerified": true,
+    "evidenceQualityFinding": "Resolved by replacing the mid-presentation iPad person-editor image with the independently reviewed settled R3 native capture.",
+    "ipad": 32,
+    "iphone": 32,
+    "limitations": [
+      "Complete R2 iPad run did not pass",
+      "No manual VoiceOver, keyboard traversal or reduced-motion proof",
+      "Every form was not captured in dark appearance"
+    ],
+    "newActionableProductionFindings": []
+  },
+  "currentPhoneInventoryReconciliation": {
+    "addedReports": 0,
+    "comparedInventory": "refinement-iphone-r3-all-type-accessibility-inventory.json",
+    "comparedInventorySHA256": "edfacbe708572f3b578c77d9419380abcafc6fbb8ce0fcbd649c89ab99ccf004",
+    "completeReportsIncludingFramesMatchPriorAsMultiset": true,
+    "excludedReports": 0,
+    "inventory": "refinement-iphone-all-type-accessibility-inventory.json",
+    "inventorySHA256": "4c1d23f3ec957e59a79959b623afc697e8a7b504dff930a06415cc3aed70fdbf",
+    "limitations": "Report ordering may differ. Exact matching reports do not clear the retained unresolved diagnostics or establish complete accessibility.",
+    "removedReports": 0,
+    "reportsRetained": 31,
+    "reviewKind": "Root exact-data reconciliation; no new independent pixel-review claim.",
+    "sourceManifest": "refinement-iphone-complete-source-manifest.json",
+    "sourceManifestSHA256": "59477046ac0c74164c7d749ecd47bfe53e46d23e242cc62b74268918f1cb9063"
+  },
+  "freshPhoneDiagnosticReview": {
+    "comparedInventory": "refinement-iphone-r2-all-type-accessibility-inventory.json",
+    "exclusions": 0,
+    "inventory": "refinement-iphone-r3-all-type-accessibility-inventory.json",
+    "nativeCapturesReviewed": [
+      {
+        "attachmentName": "accessibility-meal-editor_0_596355BF-2580-42E5-973D-3CD278A57004.png",
+        "file": "12C1CDC1-28B9-4691-959A-E93181882EDD.png",
+        "sha256": "7ace2094fc8da9d0e6812124e617a246c85eab52766ea87d5318b180a8fadb9d",
+        "test": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+      },
+      {
+        "attachmentName": "accessibility-split_0_18C686C7-8A98-4DC4-B573-6DE574C58C21.png",
+        "file": "CD37769F-38F6-4927-BAC8-661F77CC21D1.png",
+        "sha256": "935559a58a1bcb8e0b09ecefaf1f5581c856843718d88d1b2a9dd55397f2f577",
+        "test": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+      },
+      {
+        "attachmentName": "accessibility-meal_0_507DEFE9-F0E2-47F5-9474-7EF4CDDE34E9.png",
+        "file": "B587EDF6-BF77-48EE-AECE-AE0AEF6D61A5.png",
+        "sha256": "b5c73e540d2096de693317ad8437d1ccc655e827dd667122e238991a3242019d",
+        "test": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+      },
+      {
+        "attachmentName": "meal-editor-largest-title-edited-full-value_0_F2908F3A-D5D4-4F63-A86F-B74253DEEAAC.png",
+        "file": "89C290E1-075A-495C-8AB1-595C6B1927FF.png",
+        "sha256": "2d2c30a08eddfbc0603905e61243555a061425293099a8dfff36094e0f03e409",
+        "test": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()"
+      },
+      {
+        "attachmentName": "meal-editor-direct-accessibility-text-receipt_0_6A04A353-EF52-4BDA-B904-8AF52202D9F1.png",
+        "file": "DAE9546D-E1C4-449A-AA45-4B1D6F41A263.png",
+        "sha256": "186572e9b4000c727f2397ca7052fe77e5e0c648f852bdc0fce26c15a93bd155",
+        "test": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()"
+      }
+    ],
+    "observations": [
+      "Fresh R3 View split pixels measure 6.30:1; Cancel and Done black text on native light surfaces measure approximately 18.8-19.7:1. These observations contradict their specific current pixel contrast reports.",
+      "Default native Remove restaurant again measures 3.57:1; this remains distinct from the historical Increase Contrast variant.",
+      "Fresh R3 date, library amount, subtotal, Bill details, title and receipt controls repeat the measured normal-to-largest growth. Replace photo wraps fully; title editing scrolls horizontally to the cursor without vertical glyph clipping.",
+      "Add person reported text is behind the bottom action; Items is below the usable viewport. Those samples do not establish visible-text contrast defects.",
+      "Unidentified library clipping and unclassified header, total and toolbar scaling reports remain unresolved."
+    ],
+    "reportsMatchPriorAsMultiset": true,
+    "reportsRetained": 31,
+    "sourceManifest": "refinement-iphone-complete-r3-source-manifest.json",
+    "sourceManifestSHA256": "8c92ce94991bcded7d52953086d496030d1163ed369e757ef2a57887b3b36bb5"
+  },
+  "independentPerspectives": [
+    "iOS visual design",
+    "native interaction and accessibility",
+    "product and copy"
+  ],
+  "ipadR3DiagnosticReview": {
+    "exclusions": 0,
+    "inventory": "refinement-ipad-complete-r3-all-type-accessibility-inventory.json",
+    "limitations": "This is a diagnostic/pixel review of the current production sources; complete R3 passed 52 and failed one native animation-wait allowance. Strict control gate passed does not clear these reports.",
+    "nativeCapturesReviewed": [
+      {
+        "attachmentName": "accessibility-split-window-geometry_0_3F252FE0-FAB6-4339-9549-44E394084F93.txt",
+        "file": "93A727DF-0A22-4D4D-B662-7070AB16336D.txt",
+        "sha256": "54a4f6a047f88ecd6333d1d35b2b0b1f267d60c005564a5c299f773aa6f52067",
+        "test": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+      },
+      {
+        "attachmentName": "accessibility-split_0_8FC8A704-6751-466B-A70B-5D6282813943.png",
+        "file": "75D2BA77-DADD-4189-8FA8-14A5898229BD.png",
+        "sha256": "803c1678223a1c2cebd986bddd1ad3273db0f921b056bc40800d7b92fd9aaa03",
+        "test": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+      },
+      {
+        "attachmentName": "accessibility-meal_0_F7D6BD8C-14AE-4112-BD2E-FD8A722F0874.png",
+        "file": "227601BD-5BCC-4DF5-BDB5-CC557E818A8E.png",
+        "sha256": "a92345001d6302a5dd394eeef7f165deb2622bac4f194a6a0017f75a3907fb6d",
+        "test": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+      },
+      {
+        "attachmentName": "library-direct-accessibility-text-window-geometry_0_F9AB8B23-180F-45C8-99CC-3E5848287202.txt",
+        "file": "2A6AF6D7-3B69-4623-ACD5-176020B3D07E.txt",
+        "sha256": "8f67fb066153d6569ff1623fd1bc41d8a3d2df155449f57c55fbc07100983657",
+        "test": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()"
+      },
+      {
+        "attachmentName": "library-direct-accessibility-text_0_E046144C-E078-4CF1-94DD-8540D2B63373.png",
+        "file": "11DFB756-6905-4516-AAF2-6A9FBA9AF9CD.png",
+        "sha256": "caf53ce947683add474790d9a0a7a09ac8918dfc09a530ef8fe5fda78b76839f",
+        "test": "MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()"
+      },
+      {
+        "attachmentName": "split-accessibility-text-window-geometry_0_1C58E76F-5C13-45CC-982F-DA4114CB89AC.txt",
+        "file": "AA8EC11E-81A4-4E00-B122-52C1C5E983E6.txt",
+        "sha256": "d2965d88ae407ffa7cd3920eaa6e2caa186020c9ac281c0f5a47f9413adfd785",
+        "test": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+      },
+      {
+        "attachmentName": "split-accessibility-text_0_0901FF88-AE77-4506-AAB5-2A2F82F9D4CB.png",
+        "file": "47FD65D6-F1E1-4B1E-9F43-5B4489940409.png",
+        "sha256": "e41f0ed366e3116dd2e600f57de105e05586035974f27a472b7d487a4d24a2f7",
+        "test": "MealJourneyTests/testLargeTextAndLandscapeNavigation()"
+      }
+    ],
+    "newActionableProductionFindings": [],
+    "observations": [
+      "Largest-text library participant summary has actual intentional two-line truncation. The row and child accessible labels retain every name; full people remain available in meal detail.",
+      "Search meals renders completely at largest text. Split Total grows from 26.5 to 67 points and stacks without glyph clipping in its matched native captures.",
+      "Spicy ramen and its price intersect the fixed View split action in the sampled hierarchy; Matcha and its price lie below the usable content area.",
+      "View split again measures 6.30:1. Remove restaurant, Remove receipt and Delete meal show native default destructive red on white at 3.57:1. This does not clear other appearances or variants.",
+      "Two unavailable clipping identities, Items header scaling, Remove receipt and Delete meal scaling, and partial native toolbar scaling remain unresolved."
+    ],
+    "reportsRetained": 36,
+    "sourceManifest": "refinement-ipad-complete-r3-source-manifest.json",
+    "sourceManifestSHA256": "8c92ce94991bcded7d52953086d496030d1163ed369e757ef2a57887b3b36bb5"
+  },
+  "largestMapPixelReview": {
+    "ipadRun": "refinement-ipad-pilot-r12",
+    "iphoneRun": "refinement-iphone-pilot-r13",
+    "scope": "Normal and denied largest-text portrait/landscape address/actions, visible map and clipped navigation boundary. Each focused run passed two native cases; source/test revisions are explicit in their manifests."
+  },
+  "personEditorCaptureReplacement": {
+    "file": "refined-ipad-person-editor-light.png",
+    "nativeAttachment": "demo-person-editor-light_0_09D9642D-B32A-4438-99B3-2835E42CAEF9.png",
+    "nativeTest": "MealJourneyTests/testDemoWalkthrough()",
+    "replacedRun": "refinement-ipad-complete-r2",
+    "review": "Independent original-pixel and geometry review confirms centered fully bounded native 580x660 sheet within the 820x1180 app. Visible actions, name and item controls are clear; lower rows continue within the scroll viewport. No new actionable visual defect. Clearance is limited to this capture, not full R3.",
+    "sha256": "753cec7e03c5dfc3a73550c7295dee3ae35e259282d97fd01d8433aa41820b55",
+    "sourceManifest": "refinement-ipad-complete-r3-source-manifest.json",
+    "sourceManifestSHA256": "8c92ce94991bcded7d52953086d496030d1163ed369e757ef2a57887b3b36bb5"
+  },
+  "productionScope": "All 13 changed production files plus existing boundaries; production hashes are unchanged after the Live-only test reveal correction.",
+  "reviewedSourceManifest": "refinement-iphone-complete-r2-source-manifest.json",
+  "scope": "Independent inspection of original native PNGs, distinct from interaction results and complete accessibility. The R2 iPad run remains 51 passed and 2 native animation timeouts; all selected gallery captures belong to individually passing native cases.",
+  "sourceManifestSHA256": "6b2e678b003f4f03f1c532d5042420c04ca6ff746cf6fb30a540ba2df4cf8092"
+}

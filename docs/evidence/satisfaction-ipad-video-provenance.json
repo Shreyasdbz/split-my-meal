@@ -1,0 +1,32 @@
+{
+  "encoding": "Native AVFoundation 1280x720 preset; upright portrait video 892 by 1280",
+  "independentDecodedSampleReview": "Independent iOS visual designer inspected all five encoded samples: four rendered meal states showed no actionable defect. Sample 95 shows a blank relaunch state, not settled app evidence. The reviewer also inspected original96.208-second and encoded82.868-second endpoints: settled dark meal and complete View split were readable. This does not certify full-video fluidity.",
+  "limits": [
+    "Sampled stills do not establish full-video fluidity, physical haptic quality, accessibility, CloudKit synchronization or every app interaction."
+  ],
+  "metadata": {
+    "bytes": 39140391,
+    "durationSeconds": 83.66,
+    "encodedHeight": 1280,
+    "encodedWidth": 892,
+    "verifiedFrameTimesSeconds": [
+      0.7766666666666666,
+      20.915,
+      41.76166666666666,
+      58.028333333333336,
+      79.27333333333333
+    ]
+  },
+  "nativeResult": "satisfaction-ipad-demo-video-results.json",
+  "originalDurationSeconds": 99.83666666666667,
+  "originalRecordingSHA256": "bc8ab15b8381de60208acb7486e92c0854edcd98ad2ea3f764ec1948ccee3ed2",
+  "playbackSpeed": 1,
+  "publishedFile": "satisfaction-ipad-walkthrough.mp4",
+  "scope": "One passing maintained native Demo journey. Initial setup and final teardown are trimmed; actual navigation speed and both appearance relaunches, including transient blank launch frames, are retained.",
+  "sha256": "e905a688a4c04ea8a93eebc4bb08488f5deff8dc5758f9dba9b68298205ed775",
+  "sourceManifest": "satisfaction-ipad-demo-video-source-manifest.json",
+  "sourceManifestSHA256": "b6d6cd6661bb549f783610ce87e82fc6fe1eb0771b7a4f8894ac79c972564738",
+  "trimEndSeconds": 97,
+  "trimStartSeconds": 13.34,
+  "visualReview": "Root inspected samples 3, 50, 95 and the final encoded frame at 82.868 seconds. Final frame shows the settled dark meal and library. Original frame at 98.998 seconds shows teardown Springboard and is excluded."
+}
