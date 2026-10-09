@@ -1,0 +1,291 @@
+{
+  "sourceManifestSHA256": "0edb9f24fb57f6924599eea1a5e60ddefcdb42d267d9a446b1b4d25aa4e73419",
+  "verifiedInputCount": 48,
+  "sourceDifferencesBeforeAndAfter": [],
+  "releaseBuildOuterExit": 0,
+  "releaseAnalyzeSucceeded": true,
+  "simulatorBuildOuterExit": 0,
+  "simulatorInstallOuterExit": 0,
+  "appLaunched": false,
+  "testsRun": false,
+  "configurations": {
+    "release": {
+      "primaryIconMetadata": {
+        "CFBundleIcons": {
+          "CFBundlePrimaryIcon": {
+            "CFBundleIconFiles": [
+              "AppIcon60x60"
+            ],
+            "CFBundleIconName": "AppIcon"
+          }
+        },
+        "CFBundleIcons~ipad": {
+          "CFBundlePrimaryIcon": {
+            "CFBundleIconFiles": [
+              "AppIcon60x60",
+              "AppIcon76x76"
+            ],
+            "CFBundleIconName": "AppIcon"
+          }
+        }
+      },
+      "files": {
+        "AppIcon60x60@2x.png": {
+          "sha256": "5ca30d2eedfbcaf9653865f5ee729e4463f253bc3eb30e753699b0ef3307e00c",
+          "bytes": 10838
+        },
+        "SplitMyMeal-Prod-A": {
+          "sha256": "62745e3a499578937da549132036f80c0cced0cccd095cc7d5ca767957e513d0",
+          "bytes": 5090968
+        },
+        "Assets.car": {
+          "sha256": "0771b7b31fd904155b5c5407d6d980175d71412f0e804f941a5300d0ad422610",
+          "bytes": 5265384
+        },
+        "AppIcon76x76@2x~ipad.png": {
+          "sha256": "7d35d2a708b75ef6d593ea4aeaedd823fc8b07023da79b3804024942be518531",
+          "bytes": 15160
+        },
+        "Info.plist": {
+          "sha256": "fefa929a703d82f112e15057c7d77a144efd641b69e37895fde029a591eaacc3",
+          "bytes": 1749
+        }
+      },
+      "compiledIconRecords": [
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Idiom": "phone",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_UIAppearanceAny_7417E3C5-BCB2-404E-8AF1-54DF8B5CE9D7-51412-0000032E02158ED0.png"
+        },
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Idiom": "pad",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_UIAppearanceAny_7417E3C5-BCB2-404E-8AF1-54DF8B5CE9D7-51412-0000032E02158ED0.png"
+        },
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Appearance": "UIAppearanceDark",
+          "Idiom": "phone",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_UIAppearanceDark_0A3E2A89-98F4-4ED2-9AFC-176E96CFE866-51412-0000032E02463EFD.png"
+        },
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Appearance": "UIAppearanceDark",
+          "Idiom": "pad",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_UIAppearanceDark_0A3E2A89-98F4-4ED2-9AFC-176E96CFE866-51412-0000032E02463EFD.png"
+        },
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Appearance": "ISAppearanceTintable",
+          "Idiom": "phone",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_ISAppearanceTintable_01F4F526-32EE-4F88-991E-E0EB41D4FB8D-51412-0000032E026B0029.png"
+        },
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Appearance": "ISAppearanceTintable",
+          "Idiom": "pad",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_ISAppearanceTintable_01F4F526-32EE-4F88-991E-E0EB41D4FB8D-51412-0000032E026B0029.png"
+        },
+        {
+          "AssetType": "IconImageStack",
+          "Name": "AppIcon",
+          "Appearance": "UIAppearanceDark",
+          "Idiom": "universal",
+          "CanvasWidth": 1024,
+          "CanvasHeight": 1024,
+          "LayerCount": 2,
+          "RenditionName": "AppIcon.iconstack"
+        },
+        {
+          "AssetType": "IconImageStack",
+          "Name": "AppIcon",
+          "Appearance": "UIAppearanceLight",
+          "Idiom": "universal",
+          "CanvasWidth": 1024,
+          "CanvasHeight": 1024,
+          "LayerCount": 2,
+          "RenditionName": "AppIcon.iconstack"
+        },
+        {
+          "AssetType": "IconImageStack",
+          "Name": "AppIcon",
+          "Appearance": "ISAppearanceTintable",
+          "Idiom": "universal",
+          "CanvasWidth": 1024,
+          "CanvasHeight": 1024,
+          "LayerCount": 2,
+          "RenditionName": "AppIcon.iconstack"
+        },
+        {
+          "AssetType": "MultiSized Image",
+          "Name": "AppIcon",
+          "Idiom": "phone"
+        },
+        {
+          "AssetType": "MultiSized Image",
+          "Name": "AppIcon",
+          "Idiom": "pad"
+        }
+      ],
+      "vectorLayerNames": [
+        "AppIcon_Assets/Fork",
+        "AppIcon_Assets/Spoon"
+      ],
+      "allAssetTypes": [
+        "Color",
+        "Icon Image",
+        "IconGroup",
+        "IconImageStack",
+        "MultiSized Image",
+        "Named Gradient",
+        "Vector",
+        "header"
+      ],
+      "buildLogSHA256": "fd5b56b38f8962114e4c1128468ae35b2e82e3611700f68b76b4311b97303127",
+      "warnings": [],
+      "assetInspectionSHA256": "4ea5d3d1cc7605be409c2ab2da1c0ae722be2b8b59281dec8f871db1b3e8d77b"
+    },
+    "simulator": {
+      "primaryIconMetadata": {
+        "CFBundleIcons": {
+          "CFBundlePrimaryIcon": {
+            "CFBundleIconFiles": [
+              "AppIcon60x60"
+            ],
+            "CFBundleIconName": "AppIcon"
+          }
+        },
+        "CFBundleIcons~ipad": {
+          "CFBundlePrimaryIcon": {
+            "CFBundleIconFiles": [
+              "AppIcon60x60",
+              "AppIcon76x76"
+            ],
+            "CFBundleIconName": "AppIcon"
+          }
+        }
+      },
+      "files": {
+        "AppIcon60x60@2x.png": {
+          "sha256": "4cd4562c3cb33e368bde93867555ee777fbcac65597cce868f06a3ee910341da",
+          "bytes": 10261
+        },
+        "SplitMyMeal-Prod-A": {
+          "sha256": "a5c34867eedf1f569bece49fa97099a5847d876380830ca4c1c6c6a3e4ee13b9",
+          "bytes": 40224
+        },
+        "Assets.car": {
+          "sha256": "b3c688d4f8cd20b66566372f6c6f8a52c0793a35cc4648377ba5c3a90bcb386c",
+          "bytes": 2645992
+        },
+        "AppIcon76x76@2x~ipad.png": {
+          "sha256": "140d31438a7d9368470e127dff9d7e30616df699f9a6e46a8af3abd14b27b197",
+          "bytes": 14691
+        },
+        "Info.plist": {
+          "sha256": "278a75f030c4e71fae80763ff7fc4ce965a5902dc7760011b38ee84f5f069fd2",
+          "bytes": 1729
+        }
+      },
+      "compiledIconRecords": [
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Idiom": "phone",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_UIAppearanceAny_F3B680BF-A251-4B8E-B7FF-7BCA13F2EBBB-51446-0000032E03B2CBC9.png"
+        },
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Appearance": "UIAppearanceDark",
+          "Idiom": "phone",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_UIAppearanceDark_9092FB7F-9F2D-4617-9693-AD904FDE2684-51446-0000032E03DFFE5F.png"
+        },
+        {
+          "AssetType": "Icon Image",
+          "Name": "AppIcon",
+          "Appearance": "ISAppearanceTintable",
+          "Idiom": "phone",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "RenditionName": "AppIcon1024x1024_ISAppearanceTintable_2EB350B4-AA60-4244-B2F7-4C650570CFD2-51446-0000032E0409C9DA.png"
+        },
+        {
+          "AssetType": "IconImageStack",
+          "Name": "AppIcon",
+          "Appearance": "UIAppearanceDark",
+          "Idiom": "universal",
+          "CanvasWidth": 1024,
+          "CanvasHeight": 1024,
+          "LayerCount": 2,
+          "RenditionName": "AppIcon.iconstack"
+        },
+        {
+          "AssetType": "IconImageStack",
+          "Name": "AppIcon",
+          "Appearance": "UIAppearanceLight",
+          "Idiom": "universal",
+          "CanvasWidth": 1024,
+          "CanvasHeight": 1024,
+          "LayerCount": 2,
+          "RenditionName": "AppIcon.iconstack"
+        },
+        {
+          "AssetType": "IconImageStack",
+          "Name": "AppIcon",
+          "Appearance": "ISAppearanceTintable",
+          "Idiom": "universal",
+          "CanvasWidth": 1024,
+          "CanvasHeight": 1024,
+          "LayerCount": 2,
+          "RenditionName": "AppIcon.iconstack"
+        },
+        {
+          "AssetType": "MultiSized Image",
+          "Name": "AppIcon",
+          "Idiom": "phone"
+        }
+      ],
+      "vectorLayerNames": [
+        "AppIcon_Assets/Fork",
+        "AppIcon_Assets/Spoon"
+      ],
+      "allAssetTypes": [
+        "Color",
+        "Icon Image",
+        "IconGroup",
+        "IconImageStack",
+        "MultiSized Image",
+        "Named Gradient",
+        "Vector",
+        "header"
+      ],
+      "buildLogSHA256": "341916d5a38ece86fe5c36889b3548606a8dada48d48e8edfa7dae6467fd4b36",
+      "warnings": [],
+      "assetInspectionSHA256": "b8d95ce3c5c745dcbab3f854b65a80b030fc28863ce7cad89c2e7fe26233a6c7"
+    }
+  },
+  "scope": "Native build integration and generated fallback inspection. Home Screen appearance/runtime icon customization remains separate."
+}

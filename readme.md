@@ -10,6 +10,8 @@ The modernized app uses Swift 6, SwiftUI, SwiftData, native Liquid Glass control
 
 The item editor’s Everyone action selects the current people; individual switches remain editable until Save. Exact draft shares show each selected person’s portion before tax and tip. Native amount transitions respect Reduce Motion. A completed allocation says All items assigned, and the split keeps Share split visible. These [research-informed changes](docs/interaction-research.md) are design hypotheses, with validation recorded below.
 
+The layered [app icon](docs/app-icon.md) includes native light, dark, clear and tinted previews, with editable Icon Composer sources.
+
 ## Screens and walkthrough
 
 <img src="docs/evidence/satisfaction-fullscreen-iphone-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">

@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-09",
+  "sourceSHA256": {
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Fork.svg": "391c1321996375193539f3156e1a2b1c8703f408e5fdc6c49db882bed23390b8",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Spoon.svg": "262d3987894d9c03caa8a3131e3abd6673c95a3a7e7396df4ac2df14e18fd610",
+    "SplitMyMeal-Prod-A/AppIcon.icon/icon.json": "bccb2141a51764145e194a8cf2c5ca69fd6a4d1942c696f8f5db892b74daa1e6"
+  },
+  "renderer": "Apple Icon Composer bundled ictool",
+  "designGeneration": 27,
+  "platform": "iOS",
+  "sizesPixels": [
+    1024,
+    60,
+    40
+  ],
+  "renditions": [
+    "Default",
+    "Dark",
+    "ClearLight",
+    "ClearDark",
+    "TintedLight",
+    "TintedDark"
+  ],
+  "scale": 1,
+  "tintedExample": {
+    "color": 0.42,
+    "strength": 0.65
+  },
+  "imageSHA256": {
+    "ClearDark-1024.png": "784443063c9cc4a5ebc95e852a72bccedab4eb2e01e7a8dccc156b40fceaf068",
+    "ClearDark-40.png": "6e74d34614c62e7b9830a625b76cba1dbd3bd1cd5978afa59f81e932f19e82aa",
+    "ClearDark-60.png": "e089c31ca67f019d3994d6fc2f5ddf47e16e7455ec8b490135c765c451b3bffc",
+    "ClearLight-1024.png": "63221ab4815c5b64119fc967ee96f9778d164e7c2dbf25fb024a952c103b7ba4",
+    "ClearLight-40.png": "64962c3c9597ef8e8101ea512be50de85f3abb6dbd2010ebdf5e9e624d050a87",
+    "ClearLight-60.png": "719b510dd94c7d226987240533dab573a9c25a2b1ccaf85ad0623ca5bdadff32",
+    "Dark-1024.png": "c5f966e2c4f4fbe914a496e57cc4464779f1e09020631f1fe6d7aee1cf657ad6",
+    "Dark-40.png": "2572367d7a5978a000aa3f2d9aeeaa4d41a6ddaf2ea35df6a6c2e6ce54520ec0",
+    "Dark-60.png": "658f9afe48fa8da12925bf7a5756e92e08e630b6a04d1b44116dc85e4375abf6",
+    "Default-1024.png": "2b6e8bfe45888243d129aaf91c8c34074f74686592f4985ca0b50d725548ce76",
+    "Default-40.png": "2946a4142492a36f9bec245c67b57f4bd4088af46f7fcfb4b50f0f8c42088349",
+    "Default-60.png": "1b675eda206116d44c9ec23586d0c725932563c353b0daba6344c842ea42e1d0",
+    "TintedDark-1024.png": "f24ecb33214586d0c200086c2af5ce34f87ad8dc850233c7983ca45e1f712a6c",
+    "TintedDark-40.png": "f5c07ea935a03ee8c28224658d59f80443a39360aceee12e14286de44b7124fd",
+    "TintedDark-60.png": "e8b3b098d7ccc990645c5f8d1e6014b45b50a900f3f23621f2534e245dd98807",
+    "TintedLight-1024.png": "8388e7fd4f3dd6a3493f0fb1aaa9460bdd4e9be1de539e9b5842c4b32bc46326",
+    "TintedLight-40.png": "4240cbe6ad755c0163b650d1f51020642abb95be6dff979c222ac7bc8bbd6755",
+    "TintedLight-60.png": "76ea115a24db2befda43d3336c3bed1f076f644bd462651dc06b31d0a3fc2149"
+  },
+  "limits": [
+    "Clear exports use the renderer backdrop; actual Home Screen wallpaper behavior is not established.",
+    "Tinted examples show one user tint, not every color."
+  ]
+}

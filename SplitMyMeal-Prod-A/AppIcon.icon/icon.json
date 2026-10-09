@@ -1,0 +1,42 @@
+{
+  "fill-specializations": [
+    {
+      "value": {
+        "solid": "extended-srgb:0.00000,0.36078,0.29804,1.00000"
+      }
+    },
+    {
+      "appearance": "dark",
+      "value": "system-dark"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Shared meal",
+      "layers": [
+        {
+          "name": "Fork",
+          "image-name": "Fork.svg"
+        },
+        {
+          "name": "Spoon",
+          "image-name": "Spoon.svg"
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.2
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.12
+      }
+    }
+  ],
+  "supported-platforms": {
+    "circles": [
+      "watchOS"
+    ],
+    "squares": "shared"
+  }
+}
