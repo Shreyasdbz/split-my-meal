@@ -20,6 +20,9 @@ fi
 output="${ARTIFACTS_DIR:-$PWD/artifacts/$(date -u +%Y%m%dT%H%M%SZ)}"
 mkdir -p "$output"
 output="$(cd "$output" && pwd)"
+# Reject malformed focused requests before any build or native execution.
+python3 scripts/native-test-selection.py capture-focused \
+  --request "$output/requested-test-selectors.json" -- "$@"
 xcodebuild -version | tee "$output/toolchain.txt"
 xcrun --sdk iphonesimulator --show-sdk-version | tee "$output/sdk.txt"
 # Bind evidence to the exact checked-out sources, including authorized uncommitted
@@ -93,6 +96,13 @@ PYSUMMARY
       if ! python3 scripts/native-test-selection.py verify \
           --selection "$output/test-selection.json" --native-tests "$output/native-tests.json" \
           --summary "$output/test-summary.json" --report "$output/test-selection-results.json"; then
+        if [[ "$status" -eq 0 ]]; then status=1; fi
+      fi
+    fi
+    if [[ -f "$output/requested-test-selectors.json" ]]; then
+      if ! python3 scripts/native-test-selection.py verify-focused \
+          --request "$output/requested-test-selectors.json" --native-tests "$output/native-tests.json" \
+          --summary "$output/test-summary.json" --report "$output/focused-selection-results.json"; then
         if [[ "$status" -eq 0 ]]; then status=1; fi
       fi
     fi

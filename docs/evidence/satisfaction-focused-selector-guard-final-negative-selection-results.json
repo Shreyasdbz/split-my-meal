@@ -1,0 +1,32 @@
+{
+  "actualCaseCount": 1,
+  "cases": [
+    {
+      "identifier": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "status": "Passed"
+    }
+  ],
+  "matches": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+          "status": "Passed"
+        }
+      ],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()"
+    },
+    {
+      "cases": [],
+      "selector": "SplitMyMealUITests/MealJourneyTests/testNonexistentGuardProof()"
+    }
+  ],
+  "passedCaseCount": 1,
+  "reasons": [
+    "Requested selector matched no actual native case: SplitMyMealUITests/MealJourneyTests/testNonexistentGuardProof()"
+  ],
+  "requestedSelectorCount": 2,
+  "result": "Rejected",
+  "scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+  "skippedCaseCount": 0
+}

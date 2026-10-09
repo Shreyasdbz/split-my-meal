@@ -1,0 +1,21 @@
+{
+  "checkerSHA256": "8fc1bdf417c3c56819505c2d07ae63c4dbe70284eb0015db6e8933e72aab1096",
+  "earlierNegativeReportsPreserved": true,
+  "exitCode": 1,
+  "finalGuardSourceManifest": "satisfaction-focused-selector-guard-final-source-manifest.json",
+  "finalGuardSourceManifestSHA256": "be71fd175974a1c177329b9da830cd7365d9e368e2e1313d7e6dfce756bf13ea",
+  "inputEvidenceWasReexecuted": false,
+  "inputNativeSourceManifest": "satisfaction-iphone-current-increase-contrast-source-manifest.json",
+  "inputNativeSourceManifestSHA256": "8796a7c50a4f42df037f55b7a1c440891ffb4c3cabf675f1e3b9cddf4db18ccf",
+  "inputNativeSummarySHA256": "4930e79f337b21479c96cb38062d2ed1299c66b69ed41391d4901cf612f14920",
+  "inputNativeTreeSHA256": "31d0b5d6821039dd8527edc297c2334f2da1c0bdf8e2bc25145ccd9ad719d71f",
+  "rejectionReport": "satisfaction-focused-selector-guard-final-negative-selection-results.json",
+  "request": {
+    "selectors": [
+      "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "SplitMyMealUITests/MealJourneyTests/testNonexistentGuardProof()"
+    ]
+  },
+  "scope": "Final checker analysis after positive native outer completion using original retained inventory result; no native replay",
+  "verifiedAt": "2026-10-09T03:38:23.153245+00:00"
+}

@@ -108,6 +108,70 @@ def verify_results(selection, tree, summary):
     return {"partition": selection["partition"], "result": "Passed", "verifiedCaseCount": len(cases), "cases": cases}
 
 
+def focused_selectors(arguments):
+    """Accept colon-form target/class/method scopes; optional method parentheses normalize to native IDs."""
+    selectors = []
+    for argument in arguments:
+        if argument == "-only-testing":
+            raise ValueError("Use colon-form -only-testing:Target[/Class[/testMethod]]; separate-form selectors are unsupported.")
+        if not argument.startswith("-only-testing:"):
+            continue
+        value = argument[len("-only-testing:"):]
+        parts = value.split("/")
+        if not 1 <= len(parts) <= 3 or any(
+            not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*(?:\(\))?" if index == 2
+                             else r"[A-Za-z_][A-Za-z0-9_]*", part)
+            for index, part in enumerate(parts)
+        ):
+            raise ValueError("Focused selectors require one to three exact path segments; empty segments, wildcards and response files are unsupported.")
+        if len(parts) == 3 and not parts[2].endswith("()"):
+            parts[2] += "()"
+        selectors.append("/".join(parts))
+    if len(set(selectors)) != len(selectors):
+        raise ValueError("Focused selectors contain duplicate requests.")
+    return selectors
+
+
+def verify_focused_results(request, tree, summary):
+    """Require each requested scope to match native identities; target/class scopes certify at least one case only."""
+    selectors = focused_selectors(["-only-testing:" + value for value in request["selectors"]])
+    if not selectors:
+        raise ValueError("Focused verification requires at least one requested selector.")
+    cases = native_cases(tree)
+    errors = []
+    actual = [case["identifier"] for case in cases]
+    if len(set(actual)) != len(actual):
+        errors.append("Executed native tests contain duplicate case identifiers.")
+    matches = []
+    covered = set()
+    for selector in selectors:
+        parts = selector.split("/")
+        matched = [case for case in cases if case["identifier"].split("/")[:len(parts)] == parts]
+        matches.append({"selector": selector, "cases": matched})
+        covered.update(case["identifier"] for case in matched)
+        if not matched:
+            errors.append(f"Requested selector matched no actual native case: {selector}")
+    unexpected = sorted(set(actual) - covered)
+    if unexpected:
+        errors.append(f"Native cases outside the requested scopes: {unexpected}")
+    if any(case["status"] not in {"Passed", "Skipped"} for case in cases):
+        errors.append("Focused native cases include failed or incomplete outcomes.")
+    passed = sum(case["status"] == "Passed" for case in cases)
+    skipped = sum(case["status"] == "Skipped" for case in cases)
+    if (summary.get("result") not in {"Passed", "Skipped"} or summary.get("totalTestCount") != len(cases)
+            or summary.get("passedTests") != passed or summary.get("skippedTests") != skipped
+            or summary.get("failedTests") != 0 or summary.get("expectedFailures", 0) != 0):
+        errors.append("Native summary does not match the actual completed focused identities and statuses.")
+    report = {"scope": "Each target/class selector matches at least one actual native case; full class coverage is not certified.",
+              "result": "Rejected" if errors else "Passed" if passed else "Skipped",
+              "requestedSelectorCount": len(selectors), "actualCaseCount": len(cases),
+              "passedCaseCount": passed, "skippedCaseCount": skipped,
+              "matches": matches, "cases": cases}
+    if errors:
+        report["reasons"] = errors
+    return report
+
+
 def main():
     """Write reproducible selection or result evidence; validation failures exit nonzero."""
     parser = argparse.ArgumentParser(description=__doc__)
@@ -118,6 +182,12 @@ def main():
     verify = commands.add_parser("verify")
     for name in ("selection", "native-tests", "summary", "report"):
         verify.add_argument("--" + name, required=True)
+    capture = commands.add_parser("capture-focused")
+    capture.add_argument("--request", required=True)
+    capture.add_argument("arguments", nargs=argparse.REMAINDER)
+    focused = commands.add_parser("verify-focused")
+    for name in ("request", "native-tests", "summary", "report"):
+        focused.add_argument("--" + name, required=True)
     args = parser.parse_args()
     try:
         if args.command == "select":
@@ -126,13 +196,29 @@ def main():
                 result[name + "Sha256"] = hashlib.sha256(pathlib.Path(getattr(args, name)).read_bytes()).hexdigest()
             pathlib.Path(args.selection).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
             pathlib.Path(args.response_file).write_text("\n".join(result["testIdentifiers"]) + "\n")
-        else:
+        elif args.command == "verify":
             result = verify_results(read_json(args.selection), read_json(args.native_tests), read_json(args.summary))
             pathlib.Path(args.report).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+        elif args.command == "capture-focused":
+            selectors = focused_selectors(args.arguments)
+            if selectors:
+                pathlib.Path(args.request).write_text(json.dumps({"selectors": selectors}, indent=2) + "\n")
+            else:
+                pathlib.Path(args.request).unlink(missing_ok=True)
+            print(f"Focused native selectors captured: {len(selectors)}.")
+            return
+        else:
+            result = verify_focused_results(read_json(args.request), read_json(args.native_tests), read_json(args.summary))
+            pathlib.Path(args.report).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+            if result["result"] == "Rejected":
+                parser.exit(1, "Focused native selection rejected: " + "; ".join(result["reasons"]) + "\n")
+            print(f"Focused native results: {result['passedCaseCount']} passed, {result['skippedCaseCount']} skipped.")
+            return
         print(f"Native partition {result['partition']}: {result.get('selectedTestCount', result.get('verifiedCaseCount'))} exact cases.")
     except (ValueError, KeyError, TypeError, OSError) as error:
-        if args.command == "verify":
-            pathlib.Path(args.report).write_text(json.dumps({"result": "Rejected", "reason": str(error)}, indent=2) + "\n")
+        if args.command in {"verify", "verify-focused", "capture-focused"}:
+            path = args.request if args.command == "capture-focused" else args.report
+            pathlib.Path(path).write_text(json.dumps({"result": "Rejected", "reason": str(error)}, indent=2) + "\n")
         parser.exit(1, f"Native selection rejected: {error}\n")
 
 

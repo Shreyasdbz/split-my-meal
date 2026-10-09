@@ -1502,22 +1502,44 @@ final class MealJourneyTests: XCTestCase {
         field.tap()
         field.typeText(text)
         XCTAssertEqual(field.value as? String, text, "Entering a field must preserve the complete intended value.")
-        // The keyboard marker can arrive after the typed value; this focused field requires native Done.
+        // Software and hardware keyboards expose different native submit controls.
         if identifier == "person-name" {
-            let done = app.keyboards.buttons["Done"]
-            let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND isHittable == true"), object: done)
-            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed, "Person-name entry must expose a visible native Done control.")
-            XCTAssertTrue(done.exists)
-            XCTAssertTrue(done.isHittable)
+            func visibleSubmit(_ element: XCUIElement, in viewport: CGRect) -> Bool {
+                guard element.exists else { return false }
+                let frame = element.frame
+                guard [frame.minX, frame.minY, frame.width, frame.height].allSatisfy(\.isFinite),
+                      frame.width > 0, frame.height > 0, viewport.contains(frame) else { return false }
+                return element.isHittable
+            }
+            let ready = XCTNSPredicateExpectation(predicate: NSPredicate { object, _ in
+                guard let application = object as? XCUIApplication,
+                      application.state == .runningForeground else { return false }
+                let viewport = application.frame
+                return visibleSubmit(application.keyboards.buttons["Done"].firstMatch, in: viewport)
+                    || visibleSubmit(application.buttons["dismiss-person-keyboard"].firstMatch, in: viewport)
+            }, object: app)
+            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed,
+                           "Person-name entry must expose a visible native submit control.")
+            let viewport = app.frame
+            let softwareDone = app.keyboards.buttons["Done"].firstMatch
+            let toolbarDone = app.buttons["dismiss-person-keyboard"].firstMatch
+            let useSoftwareDone = visibleSubmit(softwareDone, in: viewport)
+            let done = useSoftwareDone ? softwareDone : toolbarDone
             XCTAssertEqual(app.state, .runningForeground)
-            let keyGeometry = XCTAttachment(string: "Native keyboard key identifier: \(done.identifier)\nLabel: \(done.label)\nFrame: \(done.frame)\nKeyboard frame: \(app.keyboards.firstMatch.frame)")
+            XCTAssertTrue(visibleSubmit(done, in: viewport))
+            XCTAssertEqual(field.value as? String, text)
+            let keyGeometry = XCTAttachment(string: "Selected path: \(useSoftwareDone ? "software-keyboard" : "person-toolbar")\nSelected identifier: \(done.identifier)\nSelected label: \(done.label)\nSelected frame: \(done.frame)\nApp viewport: \(viewport)\nSelected hierarchy: \(done.debugDescription)\nKeyboard hierarchy: \(app.keyboards.debugDescription)")
             keyGeometry.name = "native-keyboard-submit-ready-" + text
             keyGeometry.lifetime = .keepAlways
             add(keyGeometry)
             screenshot("native-keyboard-submit-ready-" + text)
             done.tap()
-            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5), "Native Done must dismiss the keyboard before saving.")
-            XCTAssertEqual(field.value as? String, text, "Native submit must preserve the complete intended person name.")
+            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5),
+                          "Native submit must dismiss the keyboard before saving.")
+            XCTAssertTrue(toolbarDone.waitForNonExistence(timeout: 5),
+                          "The person keyboard accessory must disappear after native submit.")
+            XCTAssertEqual(field.value as? String, text,
+                           "Native submit must preserve the complete intended person name.")
         }
     }
 

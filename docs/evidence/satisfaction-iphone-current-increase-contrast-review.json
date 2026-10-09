@@ -1,0 +1,78 @@
+{
+  "finding": "Inspected header and destructive-action samples meet 4.5:1 with the native Increase Contrast preference. No custom color repair is justified for these tested states. Share split diagnostic was not reproduced by settled ink/backing sample.",
+  "inventory": "satisfaction-iphone-current-increase-contrast-all-type-inventory.json",
+  "method": "Dominant solid glyph and adjacent backing pixels; WCAG sRGB relative-luminance contrast formula. Values describe inspected ink/backing samples, not all pixels or appearances.",
+  "nativeCaptures": [
+    {
+      "file": "satisfaction-iphone-current-increase-contrast-editor.png",
+      "nativeAttachment": "DC4EA047-A3CB-43EA-85DD-BFA4721C9108.png",
+      "sha256": "9849eaa65dbcb80d18e633cfdd083671b8cdc4dd2301de46705e4100f41a8f02"
+    },
+    {
+      "file": "satisfaction-iphone-current-increase-contrast-meal.png",
+      "nativeAttachment": "EDC5168D-08B4-44F5-8FB4-6048F73095E4.png",
+      "sha256": "46d22f11655652760e6e183dff2f55afb370105acf36f2bb49981cf13ea76bc6"
+    },
+    {
+      "file": "satisfaction-iphone-current-increase-contrast-split.png",
+      "nativeAttachment": "309F0A82-728C-40E2-98FB-C4FA1B4B195B.png",
+      "sha256": "0774dfc1f0f07f75d7d50e308f902fc6af471da0c22671bbf0ce2bdd4e081b56"
+    }
+  ],
+  "primarySource": "https://developer.apple.com/help/app-store-connect/manage-app-accessibility/sufficient-contrast-evaluation-criteria",
+  "remainingReports": {
+    "clipping": 3,
+    "contrast": 7,
+    "fontScaling": 11,
+    "meaning": "Remaining records are retained; Sam assignment and Add person footer sampling and unavailable clipping identity remain unresolved. No collective clearance.",
+    "total": 21
+  },
+  "samples": [
+    {
+      "backingRGB": [
+        255,
+        255,
+        255
+      ],
+      "element": "Remove restaurant",
+      "foregroundRGB": [
+        233,
+        21,
+        45
+      ],
+      "ratio": 4.555
+    },
+    {
+      "backingRGB": [
+        235,
+        235,
+        240
+      ],
+      "element": "Six native section headers",
+      "foregroundRGB": [
+        95,
+        95,
+        102
+      ],
+      "ratio": 5.331
+    },
+    {
+      "backingRGB": [
+        0,
+        87,
+        71
+      ],
+      "element": "Share split",
+      "foregroundRGB": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 8.557
+    }
+  ],
+  "scope": "Independent sampled native-pixel review of current Increase Contrast, light portrait, standard text-size states. Not dark-mode, strict-control or complete accessibility certification.",
+  "sourceManifest": "satisfaction-iphone-current-increase-contrast-source-manifest.json",
+  "sourceManifestSHA256": "8796a7c50a4f42df037f55b7a1c440891ffb4c3cabf675f1e3b9cddf4db18ccf",
+  "sourceResults": "satisfaction-iphone-current-increase-contrast-results.json"
+}

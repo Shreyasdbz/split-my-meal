@@ -1,0 +1,26 @@
+{
+  "collectionTest": "MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+  "excludedReports": 0,
+  "inventoryFile": "satisfaction-iphone-current-increase-contrast-all-type-inventory.json",
+  "inventorySHA256": "d49efc765e6a30716e144507e5ad6e5b0bdb1fd250ebffdf8b33c326681cc2cb",
+  "issuesReported": 21,
+  "nativeEditorCapture": {
+    "attachment": "accessibility-meal-editor_0_F3A35097-502D-40B0-AD00-3D3EE0FD11D2.png",
+    "file": "satisfaction-iphone-current-increase-contrast-editor.png",
+    "sha256": "9849eaa65dbcb80d18e633cfdd083671b8cdc4dd2301de46705e4100f41a8f02"
+  },
+  "originalContrastPreference": "disabled",
+  "reportCountsByAuditType": {
+    "1": 7,
+    "131072": 3,
+    "65536": 11
+  },
+  "restoreVerification": "Runner trap completed and separate native simctl preference read returned disabled.",
+  "restoredContrastPreference": "disabled",
+  "scope": "One actual native all-type inventory with Increase Contrast enabled; all21 reports retained, not an accessibility pass or a strict control-gate result.",
+  "sourceManifest": "satisfaction-iphone-current-increase-contrast-source-manifest.json",
+  "sourceManifestSHA256": "8796a7c50a4f42df037f55b7a1c440891ffb4c3cabf675f1e3b9cddf4db18ccf",
+  "sourceResults": "satisfaction-iphone-current-increase-contrast-results.json",
+  "unavailableElementIdentityReports": 1,
+  "verifiedContrastPreference": "enabled"
+}

@@ -1,0 +1,44 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791516520.367,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 2,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "occurrences": 2
+    }
+  ],
+  "scope": "Two complete maintained iPhone journeys on final geometry-first native target selection. Both actually use software keyboard Done; exact names, native tap, unconditional keyboard/accessory dismissal, saves and relaunch assertions remain intact. This source matches the paired final iPad input proof.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-iphone-native-person-submit-final-source-manifest.json",
+  "sourceManifestSHA256": "e2f96f645e06ddc27aa68f7f63b77830ee06a06f7e626afd992c20719e336f5b",
+  "startTime": 1791516384.277,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 45.38558006286621,
+      "name": "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "nodeIdentifier": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "result": "Passed"
+    },
+    {
+      "durationInSeconds": 87.66834795475006,
+      "name": "testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "nodeIdentifier": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 2
+}

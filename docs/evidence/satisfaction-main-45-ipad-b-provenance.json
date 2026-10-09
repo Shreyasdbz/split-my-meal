@@ -1,0 +1,14 @@
+{
+  "all47InputsMatchCommit": true,
+  "disabledLiveCases": 5,
+  "exactCasesPassed": 13,
+  "head": "45c1bfc67de8711b54f00879d71c117adbbc15e8",
+  "jobURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37877376983/job/113649610643",
+  "nativeCompiledStableCases": 56,
+  "partition": "b",
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/37877376983",
+  "scope": "One completed hosted iPad B13 partition on parent45; other partitions are separate, and subsequent source changes require their own acceptance.",
+  "selectedResult": "satisfaction-main-45-ipad-b-selection-results.json",
+  "sourceManifest": "satisfaction-main-45-ipad-b-source-manifest.json",
+  "sourceResults": "satisfaction-main-45-ipad-b-results.json"
+}

@@ -1,0 +1,69 @@
+{
+  "allCompiledInputsMatchCurrentCheckout": true,
+  "automaticRetry": false,
+  "cases": [
+    {
+      "durationSeconds": 51.98135209083557,
+      "id": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "result": "Passed"
+    },
+    {
+      "durationSeconds": 109.38043892383575,
+      "id": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "result": "Passed"
+    }
+  ],
+  "exactNamesBeforeAndAfterRetained": true,
+  "failed": 0,
+  "fullLogDiagnostics": {
+    "animationWaitWarnings": 0,
+    "caseAllowanceExceeded": 0,
+    "invalidFrameWarnings": 2,
+    "remoteHierarchyWarnings": 156,
+    "sqliteUnlinkOrIntegrityDiagnostics": 0
+  },
+  "keyboardSettingsChanged": false,
+  "nativeKeyboardAndAccessoryDisappearanceAssertionsRetained": true,
+  "nativeReadyCapture": {
+    "file": "satisfaction-ipad-person-submit-native-done.png",
+    "nativeAttachment": "native-keyboard-submit-ready-Taylor_0_CD130BC7-9557-43CF-81EC-B68DFCD5AA2C.png",
+    "sha256": "6ed8f0806bdbf969c1a950d68c52cf60b63f948effeb6e6e7242da4afaeaab06",
+    "test": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()"
+  },
+  "nativeRuntimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "outerWrapperExit": 0,
+  "passed": 2,
+  "scope": "Two complete maintained person-submit journeys, no global cause/elimination claim",
+  "selectedPaths": [
+    {
+      "caseID": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+      "hierarchy": "83545B14-333D-4632-87FE-340C237F64F5.txt",
+      "selectedFrame": "(731.5, 1120.0, 64.5, 36.0)",
+      "selectedIdentifier": "dismiss-person-keyboard",
+      "selectedPath": "person-toolbar"
+    },
+    {
+      "caseID": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+      "hierarchy": "AD52359A-2610-4FA9-91F9-F83A53570B50.txt",
+      "selectedFrame": "(731.5, 1120.0, 64.5, 36.0)",
+      "selectedIdentifier": "dismiss-person-keyboard",
+      "selectedPath": "person-toolbar"
+    }
+  ],
+  "sharedReadinessSeconds": 5,
+  "skipped": 0,
+  "sourceInputCount": 47,
+  "sourceManifest": "satisfaction-ipad-native-person-submit-final-source-manifest.json",
+  "sourceManifestSHA256": "e2f96f645e06ddc27aa68f7f63b77830ee06a06f7e626afd992c20719e336f5b",
+  "sourceResults": "satisfaction-ipad-native-person-submit-final-results.json",
+  "statusOverrideApplied": false
+}

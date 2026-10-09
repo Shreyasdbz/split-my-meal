@@ -2,7 +2,9 @@
 
 The final gallery contains 36 unaltered native screenshots from the same 47-input source manifest. The dedicated iPhone and iPad Demo journeys pass, and independent iOS design and copy reviewers inspected all 18 originals per device with no actionable visible-state findings. [Capture provenance](evidence/satisfaction-final-media-provenance.json) binds each image to its exact native case and bytes; [verification](verification.md) records the separate interaction and accessibility boundaries.
 
-Watch the actual-speed [iPhone](evidence/satisfaction-final-iphone-walkthrough.mp4) and [iPad](evidence/satisfaction-final-ipad-walkthrough.mp4) walkthroughs. Only setup and teardown are trimmed; appearance relaunches and their brief blank native launch surfaces remain visible. [Video provenance](evidence/satisfaction-final-video-provenance.json) records original/output hashes, trim ranges and inspected samples.
+The later person-keyboard correction adds only a stable identifier to an existing Done button; the gallery predates that identifier and retains its original source binding. Layout, copy and focus behavior are unchanged by that delta.
+
+Watch the actual-speed, light-mode [iPhone](evidence/satisfaction-final-iphone-walkthrough.mp4) and [iPad](evidence/satisfaction-final-ipad-walkthrough.mp4) walkthroughs. Each preserves one continuous interval from the populated library through the meal footer, ending before XCTest deliberately relaunches the app to change appearance. Dark states appear in the gallery. [Video provenance](evidence/satisfaction-final-video-provenance.json) records original/output hashes, trim ranges, sampled review and the superseded exports.
 
 | Final state | iPhone | iPad |
 | --- | --- | --- |

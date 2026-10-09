@@ -1,0 +1,38 @@
+{
+  "analyzer": "passed",
+  "binarySHA256": "107fa60577b703a5a22339c4f77bb82a94371d681e57bb642a35efedba617d65",
+  "build": "2",
+  "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+  "codeSigning": "disabled for local verification",
+  "compilerWarnings": [
+    "Metadata extraction skipped, no AppIntents.framework dependency found"
+  ],
+  "debugFixtureStringsChecked": [
+    "--uitesting",
+    "--seed-demo",
+    "--seed-invalid-demo",
+    "--reset-test-data",
+    "--fail-first-store-open",
+    "--appearance-dark",
+    "--appearance-light",
+    "--invalid-restaurant-location",
+    "--unknown-item-consumer",
+    "Fictional data for app testing",
+    "Dinner at Juniper",
+    "--fail-first-restaurant-search"
+  ],
+  "debugFixtureStringsPresent": [],
+  "deviceSDKBuild": "24A430",
+  "deviceSDKVersion": "27.0",
+  "minimumOS": "17.4",
+  "productionAndProjectSourceCount": 33,
+  "productionSourceCount": 29,
+  "releaseBuild": "passed",
+  "scope": "Final-source unsigned iOS 27 device build and analysis. Signing, physical-device execution, CloudKit account and App Store operations remain separate.",
+  "sourceManifest": "satisfaction-release-person-submit-source-manifest.json",
+  "sourceManifestSHA256": "e2f96f645e06ddc27aa68f7f63b77830ee06a06f7e626afd992c20719e336f5b",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "validation": "Unsigned device Release build and analyzer passed on the frozen person-submit identifier and test-target correction. All 33 production/project hashes match the bound manifest; all 12 DEBUG fixture strings are absent. The only production delta from the previous final media source is the stable Done accessibility identifier.",
+  "verifiedAt": "2026-10-09T03:23:13.861351+00:00",
+  "version": "2.0.0"
+}

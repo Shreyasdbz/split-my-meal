@@ -1,0 +1,8 @@
+{
+  "file": "satisfaction-ipad-person-keyboard-failed.png",
+  "nativeAttachment": "DD7A1EB1-BD9F-4645-86B8-B79865875DEA.png",
+  "scope": "Original assertion-time native screenshot from the failed full local B13 run. Shows a visible native keyboard accessory; it does not prove why software keys are offscreen.",
+  "sha256": "2837f15cfef77deb8ce111ce9b04945a70ecdc55a8a72e8e004c10a3938fcc2e",
+  "sourceResults": "satisfaction-ipad-boot-order-b-failed-results.json",
+  "test": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()"
+}

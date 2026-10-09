@@ -1,0 +1,32 @@
+{
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1791517043.245,
+  "nativeExport": "Sanitized xcresulttool summary and exact native test-case results; identical warnings retain actual occurrence counts.",
+  "passedTests": 1,
+  "result": "Passed",
+  "runtime": [
+    {
+      "modelName": "iPhone 17",
+      "osBuildNumber": "24A434",
+      "osVersion": "27.0",
+      "platform": "iOS Simulator"
+    }
+  ],
+  "runtimeWarnings": [],
+  "scope": "One actual native strict-control case on the final focused-selector wrapper. Every requested selector reconciles with actual native identity and outcome. Separate negative analysis uses retained actual inventory evidence and rejects an additional nonexistent request; it is not a native replay.",
+  "skippedTests": 0,
+  "sourceManifest": "satisfaction-focused-selector-guard-final-source-manifest.json",
+  "sourceManifestSHA256": "be71fd175974a1c177329b9da830cd7365d9e368e2e1313d7e6dfce756bf13ea",
+  "startTime": 1791517018.829,
+  "testFailures": [],
+  "tests": [
+    {
+      "durationInSeconds": 21.1324280500412,
+      "name": "testNativeAccessibleControlSemanticsAndHitRegions()",
+      "nodeIdentifier": "MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+      "result": "Passed"
+    }
+  ],
+  "totalTestCount": 1
+}

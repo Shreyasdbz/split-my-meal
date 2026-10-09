@@ -75,6 +75,7 @@ struct PersonEditor: View {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
                     Button("Done") { nameFocused = false }
+                        .accessibilityIdentifier("dismiss-person-keyboard")
                 }
             }
             .confirmationDialog("Delete this person? Their item shares become unassigned unless others share them.", isPresented: $confirmDelete, titleVisibility: .visible) {

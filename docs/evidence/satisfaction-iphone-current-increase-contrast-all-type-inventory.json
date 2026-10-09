@@ -1,0 +1,196 @@
+{
+  "issuesReported" : 21,
+  "knownDecorativeRasterReports" : 1,
+  "reports" : [
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(316.33333333333337, 243.16666666666666, 31.666666666666686, 14.333333333333343)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Oct 6",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(98.0, 241.33333333333334, 62.66666666666666, 17.99999999999997)",
+      "elementIdentifier" : "",
+      "elementLabel" : "$113.66",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 131072,
+      "compactDescription" : "Text clipped",
+      "detailedDescription" : "Text of this element may be clipped at larger Dynamic Type sizes.",
+      "elementFrame" : "unavailable",
+      "elementIdentifier" : "unavailable",
+      "elementLabel" : "unavailable",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(32.0, 191.0, 52.0, 52.0)",
+      "elementIdentifier" : "decorative-meal-charm",
+      "elementLabel" : "🍜",
+      "surface" : "library"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(32.0, 331.5, 64.0, 20.333333333333314)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Subtotal",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(314.0, 331.5, 56.0, 20.333333333333314)",
+      "elementIdentifier" : "",
+      "elementLabel" : "$87.00",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 489.3333333333333, 370.0, 40.333333333333314)",
+      "elementIdentifier" : "",
+      "elementLabel" : "People",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(32.0, 759.6666666666666, 283.3333333333333, 38.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Edamame, Mushroom ramen, Matcha ice cream, Iced tea",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(34.66666793823242, 830.3333129882812, 124.99998474121094, 24.66668701171875)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Add person",
+      "surface" : "meal"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(316.3333333333333, 82.0, 65.66666666666669, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Done",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(316.3333333333333, 82.0, 65.66666666666669, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Done",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 778.6666666666666, 370.0, 53.33333333333337)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Share split",
+      "surface" : "split"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 524.3333333333333, 370.0, 40.33333333333337)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Receipt",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(319.66666666666663, 82.0, 62.333333333333314, 36.0)",
+      "elementIdentifier" : "save-meal",
+      "elementLabel" : "Save",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(31.33333396911621, 580.5, 150.3333282470703, 20.33331298828125)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Replace photo",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(16.0, 455.0, 370.0, 52.0)",
+      "elementIdentifier" : "remove-restaurant",
+      "elementLabel" : "Remove restaurant",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 65536,
+      "compactDescription" : "Dynamic Type font sizes are partially unsupported",
+      "detailedDescription" : "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+      "elementFrame" : "(20.0, 82.0, 76.66666666666667, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Cancel",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 131072,
+      "compactDescription" : "Text clipped",
+      "detailedDescription" : "Text of this SwiftUI.AccessibilityNode may be clipped at larger Dynamic Type sizes.",
+      "elementFrame" : "(31.33333396911621, 580.5, 150.3333282470703, 20.33331298828125)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Replace photo",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 131072,
+      "compactDescription" : "Text clipped",
+      "detailedDescription" : "Text of this SwiftUI.UIKitTextField may be clipped at larger Dynamic Type sizes.",
+      "elementFrame" : "(32.0, 187.33333333333334, 338.0, 22.0)",
+      "elementIdentifier" : "meal-title",
+      "elementLabel" : "",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(20.0, 82.0, 76.66666666666667, 36.0)",
+      "elementIdentifier" : "",
+      "elementLabel" : "Cancel",
+      "surface" : "meal-editor"
+    },
+    {
+      "auditType" : 1,
+      "compactDescription" : "Contrast failed",
+      "detailedDescription" : "Contrast failed for SwiftUI.AccessibilityNode",
+      "elementFrame" : "(319.66666666666663, 82.0, 62.333333333333314, 36.0)",
+      "elementIdentifier" : "save-meal",
+      "elementLabel" : "Save",
+      "surface" : "meal-editor"
+    }
+  ],
+  "requiresReview" : 20
+}
