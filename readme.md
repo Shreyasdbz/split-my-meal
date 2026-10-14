@@ -18,7 +18,7 @@ The [App Store preparation record](docs/app-store-submission.md) includes versio
 
 <img src="docs/evidence/satisfaction-fullscreen-iphone-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">
 
-The current native [iPhone](docs/evidence/satisfaction-fullscreen-iphone-walkthrough.mp4) and [iPad](docs/evidence/satisfaction-fullscreen-ipad-walkthrough.mp4) walkthroughs preserve actual interaction speed. [Video provenance](docs/evidence/satisfaction-fullscreen-video-provenance.json) and the [36-state gallery](docs/ui-gallery.md) bind the current screenshots and recordings to passing native Demo cases and matching production source hashes. Captures use fictional meal data; [verification](docs/verification.md) records the complete validation scope.
+The recorded native [iPhone](docs/evidence/satisfaction-fullscreen-iphone-walkthrough.mp4) and [iPad](docs/evidence/satisfaction-fullscreen-ipad-walkthrough.mp4) walkthroughs preserve actual interaction speed. [Video provenance](docs/evidence/satisfaction-fullscreen-video-provenance.json) and the [36-state gallery](docs/ui-gallery.md) bind these earlier UI refinement captures to passing native Demo cases and their recorded production source hashes. The new Help menu and storefront fixtures appear in the [App Store galleries](docs/app-store-assets/README.md). Captures use fictional meal data; [verification](docs/verification.md) records the validation scope.
 
 <img src="docs/evidence/satisfaction-fullscreen-ipad-meal-landscape-light.png" width="760" alt="iPad landscape meal detail beside the searchable meal library">
 
