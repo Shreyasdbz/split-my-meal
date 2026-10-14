@@ -12,6 +12,8 @@ The item editor’s Everyone action selects the current people; individual switc
 
 The layered [app icon](docs/app-icon.md) includes native light, dark, clear and tinted previews, with editable Icon Composer sources.
 
+The [App Store preparation record](docs/app-store-submission.md) includes version 2.0 metadata, signed-build evidence, and the [iPhone and iPad store galleries](docs/app-store-assets/README.md).
+
 ## Screens and walkthrough
 
 <img src="docs/evidence/satisfaction-fullscreen-iphone-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">

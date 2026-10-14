@@ -52,6 +52,57 @@ import UIKit
         return meal
     }
 
+    /// Separate fictional storefront data; the established test fixtures remain unchanged.
+    @discardableResult static func seedStore(in context: ModelContext) throws -> Meal {
+        let meal = try seed(in: context)
+        meal.restaurantDetails?.title = "Juniper"
+        meal.restaurantDetails?.address = "New York, NY"
+        meal.receiptPhoto = storeReceipt()
+        let history: [(String, String, [String], [(String, Double, MealItemCategory)])] = [
+            ("Lunch at Grove", "🥗", ["Alex", "Sam"], [("Garden salad", 14, .Entree), ("Grilled sandwich", 16, .Entree)]),
+            ("Weekend brunch", "🥞", ["Jordan", "Riley", "Cam"], [("Pancakes", 18, .Entree), ("Avocado toast", 15, .Entree), ("Coffee", 12, .Drink)])
+        ]
+        for (index, entry) in history.enumerated() {
+            let previous = Meal()
+            previous.id = "store-history-\(index)"
+            previous.title = entry.0
+            previous.charm = entry.1
+            previous.createdAt = meal.createdAt.addingTimeInterval(-Double(index + 1) * 86_400)
+            previous.modifiedAt = previous.createdAt
+            context.insert(previous)
+            let people = entry.2.enumerated().map { personIndex, name in
+                let person = MealPerson(relatedMeal: previous)
+                person.id = "store-history-\(index)-person-\(personIndex)"
+                person.name = name
+                context.insert(person)
+                return person
+            }
+            previous.people = people
+            for (itemIndex, itemEntry) in entry.3.enumerated() {
+                let item = MealItem(relatedMeal: previous, category: itemEntry.2)
+                item.id = "store-history-\(index)-item-\(itemIndex)"
+                item.name = itemEntry.0
+                item.price = itemEntry.1
+                item.consumerIds = people.map(\.id)
+                context.insert(item)
+                for person in people { person.itemIds.append(item.id) }
+            }
+            previous.taxPercentage = 8.875
+            previous.tipPercentage = 20
+        }
+        try context.save()
+        return meal
+    }
+
+    private static func storeReceipt() -> Data {
+        UIGraphicsImageRenderer(size: CGSize(width: 650, height: 960)).jpegData(withCompressionQuality: 0.9) { output in
+            UIColor.white.setFill()
+            output.fill(CGRect(x: 0, y: 0, width: 650, height: 960))
+            let text = "JUNIPER\n\nDinner for three\n\nEdamame                    $9.00\nMiso ramen                $19.00\nSpicy ramen               $21.00\nMushroom ramen            $18.00\nMatcha ice cream           $8.00\nIced tea                  $12.00\n\nSubtotal                  $87.00\nTax                        $7.72\nTip                       $18.94\nTOTAL                    $113.66\n\nThank you for dining with us"
+            (text as NSString).draw(in: CGRect(x: 45, y: 55, width: 560, height: 850), withAttributes: [.font: UIFont.monospacedSystemFont(ofSize: 25, weight: .regular), .foregroundColor: UIColor.black])
+        }
+    }
+
     private static func demoReceipt(replacement: Bool = false) -> Data {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 650, height: 960))
         return renderer.jpegData(withCompressionQuality: 0.9) { output in

@@ -84,8 +84,8 @@ private struct MealStartupView: View {
                 if arguments.contains("--reset-test-data") {
                     for meal in try context.fetch(FetchDescriptor<Meal>()) { try MealStore.deleteMeal(meal, in: context) }
                 }
-                if arguments.contains("--seed-demo") || arguments.contains("--seed-invalid-demo"), try context.fetchCount(FetchDescriptor<Meal>()) == 0 {
-                    let meal = try MealDemo.seed(in: context)
+                if arguments.contains("--seed-demo") || arguments.contains("--seed-invalid-demo") || arguments.contains("--seed-store-demo"), try context.fetchCount(FetchDescriptor<Meal>()) == 0 {
+                    let meal = try arguments.contains("--seed-store-demo") ? MealDemo.seedStore(in: context) : MealDemo.seed(in: context)
                     if arguments.contains("--invalid-restaurant-location") {
                         meal.restaurantDetails?.lattitude = 100
                         try context.save()

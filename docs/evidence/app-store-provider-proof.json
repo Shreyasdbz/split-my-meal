@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-10-13",
+  "appID": "6575395076",
+  "version": "2.0.0",
+  "build": "2",
+  "providerBuildID": "9619430e-918c-401b-af67-60f2bced1b50",
+  "buildProcessingState": "Ready to Submit",
+  "versionState": "Ready for Review",
+  "submissionState": "Draft: Item Ready to Submit",
+  "submittedForReview": false,
+  "releaseType": "MANUAL",
+  "evidenceMethod": "Visible App Store Connect state through Chrome computer use; final submission action untouched.",
+  "locale": "en-US",
+  "galleryManifestSHA256": "6b7a115fc092dfbf33888d97bfedd94948efbb686874c446e05a644ea252a54a",
+  "screenshots": {
+    "iphoneDynamicIslandMedium": {
+      "count": 5,
+      "dimensions": [
+        1206,
+        2622
+      ]
+    },
+    "ipad13": {
+      "count": 5,
+      "dimensions": [
+        2752,
+        2064
+      ]
+    },
+    "order": [
+      "01-share.png",
+      "02-assign.png",
+      "03-tax-tip.png",
+      "04-receipt.png",
+      "05-library.png"
+    ],
+    "optionalPlacements": "All observed optional iPhone and iPad categories inherit the current five assets, except optional iPhone Duo with no custom assets.",
+    "removedLegacyOverrides": [
+      "iPhone Dynamic Island large",
+      "iPhone Home Button large",
+      "iPad Pro 2nd Gen 12.9"
+    ],
+    "publishedVersionAndAssetLibraryPreserved": true
+  },
+  "privacy": "Existing published Data Not Collected disclosure preserved",
+  "ageRating": {
+    "currentOS": "13+",
+    "olderOS": "12+",
+    "reason": "Infrequent alcohol references: selectable champagne charm"
+  },
+  "cloudKit": {
+    "schemaDeploymentConfirmed": true,
+    "productionTypes": [
+      "CD_Meal",
+      "CD_MealItem",
+      "CD_MealPerson",
+      "CD_RestaurantDetails"
+    ],
+    "indexes": 78,
+    "recordsQueriedOrImportedOrDeleted": false,
+    "privateSyncVerified": false
+  },
+  "proofScreenshots": [
+    {
+      "path": "docs/evidence/app-store-ready-draft.png",
+      "sha256": "184aa4d2ec279e0c382bce79a65169c5cd113daf3f2128c2e0d8809f41317db9"
+    },
+    {
+      "path": "docs/evidence/app-store-ready-iphone-gallery.png",
+      "sha256": "aadc5e7ae8641663bb9b1d988ed90d25a1949ba2f0cc96e97e9e6fa3da7b5a0b"
+    },
+    {
+      "path": "docs/evidence/app-store-ready-ipad-gallery.png",
+      "sha256": "0706b3d4e97188396ad32ca52f98cd5802d3d925c8b9b77ffe87895bcd20cac9"
+    }
+  ]
+}

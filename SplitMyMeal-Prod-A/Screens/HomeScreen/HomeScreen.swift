@@ -79,6 +79,15 @@ struct HomeScreen: View {
                     Button("New meal", systemImage: "plus") { showNewMeal = true }
                         .accessibilityIdentifier("new-meal")
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu("Help", systemImage: "questionmark.circle") {
+                        Link("Privacy policy", destination: URL(string: "https://github.com/Shreyasdbz/split-my-meal/blob/main/misc/PrivacyPolicy.md")!)
+                            .accessibilityIdentifier("privacy-policy")
+                        Link("Support", destination: URL(string: "https://github.com/Shreyasdbz/split-my-meal/blob/main/misc/Support.md")!)
+                            .accessibilityIdentifier("help-support")
+                    }
+                    .accessibilityIdentifier("help-menu")
+                }
             }
         } detail: {
             if let meal = meals.first(where: { $0.persistentModelID == selectedMealID }) {

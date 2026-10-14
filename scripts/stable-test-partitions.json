@@ -30,6 +30,7 @@
       "SplitMyMealTests/MealStoreTests/testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()",
       "SplitMyMealTests/MealStoreTests/testNamesRequireVisibleContentWithoutChangingUnicodeNames()",
       "SplitMyMealTests/MealStoreTests/testSaveAssignmentsAndDeletionAreConsistent()",
+      "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
       "SplitMyMealUITests/MealJourneyTests/testCancelledMealDoesNotPersist()",
       "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()",
       "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",

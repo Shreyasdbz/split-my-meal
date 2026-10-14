@@ -723,6 +723,103 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertTrue(revealButton(restaurant, name: "saved-restaurant-after-cancel").exists)
     }
 
+    /// Captures five storefront surfaces using separate fictional data and real draft cancellation.
+    func testAppStoreScreenshots() throws {
+        app.terminate()
+        app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-store-demo"]
+        launchForMealTesting()
+        if UIDevice.current.userInterfaceIdiom == .pad { settleOrientation(.landscapeLeft) }
+        for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
+            XCTAssertTrue(app.buttons["meal-\(title)"].waitForExistence(timeout: 5))
+        }
+        openDemo()
+        XCTAssertEqual(app.staticTexts["meal-total"].value as? String, "$113.66")
+        app.buttons["view-split"].tap()
+        for name in ["Alex", "Jordan", "Sam"] {
+            XCTAssertTrue(app.descendants(matching: .any)["split-\(name)"].firstMatch.waitForExistence(timeout: 5))
+        }
+        XCTAssertTrue(app.buttons["share-split"].isHittable)
+        screenshot("app-store-split")
+        app.navigationBars["Split summary"].buttons["Done"].tap()
+        screenshot("app-store-meal")
+
+        tapScrollable("add-item")
+        fill("item-name", "Edamame")
+        fill("item-price", "9.00")
+        let everyone = revealButton("assign-everyone")
+        everyone.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+        for name in ["Alex", "Jordan", "Sam"] {
+            let person = revealButton(app.switches["item-consumer-\(name)"], name: "item-consumer-\(name)")
+            XCTAssertEqual(person.value as? String, "1")
+            XCTAssertTrue(person.label.contains(name) && person.label.contains("3.00"))
+        }
+        XCTAssertFalse(app.buttons["delete-item"].exists, "A new shared-item draft must not expose deletion of a saved item.")
+        screenshot("app-store-shared-item")
+        app.buttons["Cancel"].tap()
+        XCTAssertEqual(revealButton(app.staticTexts["meal-total"], name: "meal-total").value as? String, "$113.66", "Cancelling the new shared draft must preserve the saved bill.")
+        tapScrollable("View receipt")
+        XCTAssertTrue(app.navigationBars["Receipt"].waitForExistence(timeout: 5))
+        screenshot("app-store-receipt")
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let zoom = app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Zoom ")).firstMatch
+            XCTAssertEqual(zoom.label, "Zoom 100 percent")
+            app.buttons["Zoom in"].tap()
+            let magnified = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@", "Zoom 200 percent"), object: zoom)
+            XCTAssertEqual(XCTWaiter.wait(for: [magnified], timeout: 5), .completed)
+            for identifier in ["Close", "share-receipt", "Zoom in", "Zoom out"] {
+                let control = app.buttons[identifier]
+                XCTAssertTrue(control.isHittable)
+                XCTAssertTrue(app.frame.contains(control.frame), "Receipt controls must remain wholly in the native viewport.")
+            }
+            let photoFrame = app.images["receipt-photo"].frame
+            let geometry = XCTAttachment(string: "Native zoom: \(zoom.label)\nReceipt image: \(photoFrame)\nWindow: \(app.frame)\nScroll view: \(app.scrollViews.debugDescription)")
+            geometry.name = "app-store-receipt-zoomed-native-geometry"
+            geometry.lifetime = .keepAlways
+            add(geometry)
+            screenshot("app-store-receipt-zoomed")
+            // Return to the header at the readable native zoom without changing the receipt image.
+            let receiptScroll = app.scrollViews.firstMatch
+            receiptScroll.swipeDown(velocity: .slow)
+            let scrollFrame = receiptScroll.frame
+            let start = receiptScroll.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+            let end = start.withOffset(CGVector(dx: 0, dy: -60))
+            XCTAssertTrue(app.frame.contains(scrollFrame))
+            XCTAssertGreaterThan(scrollFrame.height, 120)
+            start.press(forDuration: 0.1, thenDragTo: end, withVelocity: 100, thenHoldForDuration: 0.2)
+            XCTAssertEqual(zoom.label, "Zoom 200 percent")
+            for identifier in ["Close", "share-receipt", "Zoom in", "Zoom out"] {
+                let control = app.buttons[identifier]
+                XCTAssertTrue(control.isHittable)
+                XCTAssertTrue(app.frame.contains(control.frame))
+            }
+            screenshot("app-store-receipt-readable")
+        }
+        app.buttons["Close"].tap()
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            revealButton(app.staticTexts["meal-total"], name: "meal-total")
+            screenshot("app-store-library")
+        } else {
+            app.terminate()
+            app.launchArguments = ["--uitesting"]
+            launchForMealTesting()
+            for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
+                XCTAssertTrue(app.buttons["meal-\(title)"].waitForExistence(timeout: 5), "The storefront library must retain all three saved meals after relaunch.")
+            }
+            screenshot("app-store-library")
+        }
+        let help = app.buttons["help-menu"]
+        XCTAssertTrue(help.waitForExistence(timeout: 5))
+        help.tap()
+        for identifier in ["privacy-policy", "help-support"] {
+            let link = app.descendants(matching: .any)[identifier].firstMatch
+            XCTAssertTrue(link.waitForExistence(timeout: 5))
+            XCTAssertTrue(link.isHittable, "Help must expose a usable native link: \(identifier)")
+        }
+        if UIDevice.current.userInterfaceIdiom == .pad { settleOrientation(.portrait) }
+    }
+
     /// Produces principal screen evidence and a repeatable source for simulator video capture.
     func testDemoWalkthrough() throws {
         // Hosted screen capture reached its final checks after the four-minute default.
@@ -1608,7 +1705,7 @@ final class MealJourneyTests: XCTestCase {
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)
-        if name.contains("landscape") || name.contains("accessibility") || name.hasPrefix("demo-") {
+        if name.contains("landscape") || name.contains("accessibility") || name.hasPrefix("demo-") || name.hasPrefix("app-store-") {
             let geometry = XCTAttachment(string: "Application frame: \(app.frame)\nWindows: \(app.windows.debugDescription)\nFull accessibility tree: \(app.debugDescription)")
             geometry.name = name + "-window-geometry"
             geometry.lifetime = .keepAlways

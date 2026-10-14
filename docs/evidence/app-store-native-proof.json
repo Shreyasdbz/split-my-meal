@@ -1,0 +1,197 @@
+{
+  "archive": {
+    "analyzeLogSHA256": "e36831d09a29fc516f8923a4bf7fa07a42c8001590092bd36309f0089ba75234",
+    "appBinarySHA256": "575d40165351efcf64b5dfd19f50230a4d68698aefa20b7375df9855f32261ce",
+    "archiveLogSHA256": "7e54872feb1b402f26ccadf64e6974eae8181e84ec1ceed6211489610d4d0944",
+    "archiveSucceeded": true,
+    "build": "2",
+    "buildWarnings": "Each retained archive/analyzer log records one AppIntents metadata-extraction warning because the app has no AppIntents dependency.",
+    "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+    "debugLaunchFlagPresence": {
+      "--appearance-dark": false,
+      "--appearance-light": false,
+      "--fail-first-restaurant-search": false,
+      "--fail-first-store-open": false,
+      "--invalid-restaurant-location": false,
+      "--reset-test-data": false,
+      "--seed-demo": false,
+      "--seed-invalid-demo": false,
+      "--seed-store-demo": false,
+      "--uitesting": false,
+      "--unknown-item-consumer": false
+    },
+    "minimumOSVersion": "17.4",
+    "nonExemptEncryption": false,
+    "privacyManifestEmbedded": true,
+    "releaseAnalyzeSucceeded": true,
+    "signatureVerified": true,
+    "signingType": "Apple Development archive; subsequently re-signed for App Store distribution.",
+    "version": "2.0.0"
+  },
+  "compiledCatalogue": {
+    "catalogueSHA256": "b9454e3d3f0ee674c33a77308f1071f52d960a61f2f0879c5d512bc0f6a54404",
+    "disabledProviderCases": 5,
+    "enumerationMatchedExplicitCatalogue": true,
+    "enumerationSHA256": "b3f77df17d3477ca0712033bf4152f62cd85b88d72a826b7dde3e734c473a235",
+    "partitionA": 44,
+    "partitionB": 13,
+    "stableCases": 57,
+    "wholeNewSuiteExecuted": false
+  },
+  "limitations": [
+    "At local proof capture time, the current 57-case full hosted acceptance was pending.",
+    "Signed physical-device behavior and private-iCloud synchronization were not established by these local native capture/archive checks.",
+    "No complete accessibility, App Review approval or user-satisfaction certification is claimed by this local proof."
+  ],
+  "localDistributionExport": {
+    "build": "2",
+    "bundleIdentifier": "shreyassane.SplitMyMeal-Prod-A",
+    "cloudKitContainerIdentifiers": [
+      "iCloud.com.shreyassane.splitmymeal"
+    ],
+    "cloudKitEnvironment": "Production",
+    "debuggingAllowed": false,
+    "destination": "export",
+    "exportLogSHA256": "b876be631a033046a9b390a17df0e5e770328a8a2b45e45ca6fa2624bf7f31bb",
+    "exportSucceeded": true,
+    "ipaBytes": 6142558,
+    "ipaSHA256": "60df79d8a6529b5da6366a565a5fc4685d7ab3bf7a4045e679737e400c46f36c",
+    "method": "app-store-connect",
+    "noProvisionedDeviceList": true,
+    "nonExemptEncryption": false,
+    "privacyManifest": {
+      "NSPrivacyAccessedAPITypes": [],
+      "NSPrivacyCollectedDataTypes": [],
+      "NSPrivacyTracking": false,
+      "NSPrivacyTrackingDomains": []
+    },
+    "pushEnvironment": "production",
+    "scope": "Hash identifies the locally exported IPA only; it is not a downloaded or independently verified server-delivered artifact.",
+    "signatureVerified": true,
+    "version": "2.0.0"
+  },
+  "nativeCaptureRuns": [
+    {
+      "additionalWrapperInputsScope": "Separately owned Xcode Cloud configuration and screenshot compositor are not part of the 48 native runtime inputs; wrapper manifests preserve their presence.",
+      "captureIndexSHA256": "fb94ffc6a02573d9fa6580b0115d16953ac688a79065d4f9fda4e0de86133fb3",
+      "completeNativeLogSHA256": "93bb6dfc352982c9647a67d1e4f939484ac0cb8302d26cd08312f14764d3230e",
+      "currentRuntimeDifferencesAtProofPublication": [
+        "SplitMyMealUITests/MealJourneyTests.swift"
+      ],
+      "deviceFamily": "iPhone",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 1,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "differenceScope": "The final iPad receipt-only test branch was added after the initial phone/iPad capture builds; production inputs are identical.",
+      "durationSeconds": 70.427,
+      "failed": 0,
+      "focusedSelectionSHA256": "585d63151e6a9d6f5a79a04b52be1f1f82c5b3e32cde4cc4876b7a4ef67f2337",
+      "label": "initial-storefront-phone",
+      "nativeCase": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+      "nativeTestsSHA256": "1ba4d39dc0e4a51e33cfd68151d5942c39e8a5bed2d6ac4f2651e7a54d616482",
+      "passed": 1,
+      "runtimeInputCount": 48,
+      "skipped": 0,
+      "sourceManifestSHA256": "77b1587078aeb52d0c44d07a7a658f7c1dce53ab88b656fe911e06456dc47eef",
+      "testSummarySHA256": "23db69b0e7fb5638616910884aea086811c9a9c8e7faef18ffad64f6d12555ec"
+    },
+    {
+      "additionalWrapperInputsScope": "Separately owned Xcode Cloud configuration and screenshot compositor are not part of the 48 native runtime inputs; wrapper manifests preserve their presence.",
+      "captureIndexSHA256": "1a614ad30957f1f57de882a2ace6f22c92a88948323a1568edaad2470928061e",
+      "completeNativeLogSHA256": "96b46bf56c63c90bff346f93ea4b52f4c465b2838a6e156ac9280cd3fde27654",
+      "currentRuntimeDifferencesAtProofPublication": [
+        "SplitMyMealUITests/MealJourneyTests.swift"
+      ],
+      "deviceFamily": "iPad",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 1,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "differenceScope": "The final iPad receipt-only test branch was added after the initial phone/iPad capture builds; production inputs are identical.",
+      "durationSeconds": 102.505,
+      "failed": 0,
+      "focusedSelectionSHA256": "585d63151e6a9d6f5a79a04b52be1f1f82c5b3e32cde4cc4876b7a4ef67f2337",
+      "label": "initial-storefront-ipad",
+      "nativeCase": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+      "nativeTestsSHA256": "0baf2e35f315133eecfed487781c224e74c6ea78628cf4d569f730d024b1ceb1",
+      "passed": 1,
+      "runtimeInputCount": 48,
+      "skipped": 0,
+      "sourceManifestSHA256": "77b1587078aeb52d0c44d07a7a658f7c1dce53ab88b656fe911e06456dc47eef",
+      "testSummarySHA256": "2cccef69f565982d1ba7baa53d81fbf628aef02fa250f1a630f92b27b12bb433"
+    },
+    {
+      "additionalWrapperInputsScope": "Separately owned Xcode Cloud configuration and screenshot compositor are not part of the 48 native runtime inputs; wrapper manifests preserve their presence.",
+      "captureIndexSHA256": "e15f1ccb728d98328a6185f5103835c838f19765b5afd9896f32b27e2b3badae",
+      "completeNativeLogSHA256": "6deafb8123f12cc9bcc27917445c612e0a9dc0ad98cbe87c92c2a4fe0e8c92de",
+      "currentRuntimeDifferencesAtProofPublication": [],
+      "deviceFamily": "iPad",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 1,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "differenceScope": "The final iPad receipt-only test branch was added after the initial phone/iPad capture builds; production inputs are identical.",
+      "durationSeconds": 107.536,
+      "failed": 0,
+      "focusedSelectionSHA256": "585d63151e6a9d6f5a79a04b52be1f1f82c5b3e32cde4cc4876b7a4ef67f2337",
+      "label": "final-readable-ipad-receipt",
+      "nativeCase": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+      "nativeTestsSHA256": "218fdb3f9817efffbaded31f70a5fb15fb166c0984c43be98c1317ca787a548f",
+      "passed": 1,
+      "runtimeInputCount": 48,
+      "skipped": 0,
+      "sourceManifestSHA256": "7866015c19fcd075e43ff3dc08b595f1d20bc8f68a3c24d8b450fa5f98abeb37",
+      "testSummarySHA256": "09bb00a25997b0a05780f312870561ffca31557ae43d8cc6a99148ed00c90e20"
+    }
+  ],
+  "publicationDate": "2026-10-13",
+  "publicationTimeZone": "America/New_York",
+  "schemaVersion": 1,
+  "scope": "At local proof capture time: native storefront capture, signed archive, distribution export and upload execution evidence. This records 57-case enumeration, not execution of all 57 cases. Fresh hosted acceptance requires 114 actual passing cases across both device partitions.",
+  "selectedReceiptCapture": {
+    "failed": 0,
+    "nativeAttachment": "04DE3787-B12D-4292-B002-982B24BDD815.png",
+    "nativeCase": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+    "normalization": "Native EXIF8 orientation applied and opaque RGB encoding; no stretching, cropping or overlay.",
+    "normalizedSHA256": "5a219307fb423a6eee1f99215041f4950398e3d4e351214a1449ff9166297810",
+    "ocrConfirmedHeaderAndTotal": true,
+    "ocrSHA256": "add964f51adf74a02b3b143d64762ba5e407d946a731ad10cca6cffe57b2a0b5",
+    "originalSHA256": "37d4ea8d7cf667066ca70f6a4a4467240b3a6555e14cccad3634b693778320ff",
+    "passed": 1,
+    "pixelHeight": 2064,
+    "pixelWidth": 2752,
+    "readabilityProofSHA256": "514c96e2bf97600ef2e1b176c176d01e9d8f14939faf89dde4b402330ca82c8a",
+    "skipped": 0,
+    "viewedHeaderAllItemsAndTotal": true
+  },
+  "sourceLineage": {
+    "differencesBetweenArchiveAndFinalRuntimeInputs": [
+      "SplitMyMealUITests/MealJourneyTests.swift"
+    ],
+    "final48InputManifestSHA256": "695bb07061bec4f987229e3e7c09d4df0d0b78c7bb357dba18d89bcb109f9146",
+    "scope": "Only the iPad receipt-capture test changed after archive creation. All application/project/asset inputs remain identical; no rebuild/upload was required for this test-only change.",
+    "signedArchiveSourceManifestSHA256": "c7682f1f68dd6431519c166eb3c095990d5a2368446b6fb61247653924f4876d"
+  },
+  "sourceState": "Authorized uncommitted App Store preparation changes at capture/archive time.",
+  "uploadExecution": {
+    "completionEvidence": [
+      "Upload succeeded.",
+      "Uploaded package is processing.",
+      "EXPORT SUCCEEDED"
+    ],
+    "destination": "upload",
+    "logSHA256": "787647044c1eb2176c3485795135a9e1b4e52e65fe292eb742eecfa1c44cd78d",
+    "method": "app-store-connect",
+    "scope": "Separate upload operation from the local export. These native log lines do not by themselves establish completed processing, version attachment, App Review submission or approval.",
+    "uploadSucceededObservedInNativeLog": true,
+    "uploadedPackageProcessingObserved": true
+  },
+  "worktreeBaseCommit": "76737f579336e772a5e13f7c3063a1c143b086e1"
+}
