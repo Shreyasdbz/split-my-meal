@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-14",
+  "encoder": {
+    "audio": "Silent native source; no audio added",
+    "playbackSpeedPreserved": true,
+    "profile": "H264 High 4.0",
+    "requestedAverageBitRate": 10000000,
+    "sourceToolSHA256": "b07ab44b427e36ea7a5213068967fb6e5880fe094d3020a86fc2e83ffc2476a5",
+    "tool": "Apple AVFoundation and CoreImage"
+  },
+  "previews": [
+    {
+      "audioTracks": 0,
+      "bytes": 4792378,
+      "decodedFrameCount": 510,
+      "deviceFamily": "iphone",
+      "durationSeconds": 17,
+      "editing": {
+        "completeNativeViewport": true,
+        "constantFrameRateResampling": true,
+        "continuousTrim": true,
+        "horizontalPaddingPixels": 2,
+        "nativeCuts": 0,
+        "overlays": 0,
+        "retainedSourceFrameCountClaim": false,
+        "speedChanges": 0,
+        "uniformScale": 1,
+        "verticalPaddingPixels": 0
+      },
+      "file": "iphone-preview.mp4",
+      "firstPresentationSeconds": 0,
+      "frameRate": 30,
+      "h264LevelIDC": 40,
+      "h264ProfileIDC": 100,
+      "height": 1920,
+      "lastPresentationSeconds": 16.966666666666665,
+      "maximumPresentationIntervalSeconds": 0.03333333333333499,
+      "minimumPresentationIntervalSeconds": 0.03333333333333144,
+      "poster": {
+        "file": "iphone-poster.png",
+        "previewSeconds": 0,
+        "sha256": "f25b8ba3ec7f5d21ef147f653aa350cdc71036f3b67de136ffed605a486b01d4"
+      },
+      "sha256": "cdfe75525f5b2eb17362b8b0238fad470e86d11034d653b905ce1593ddc77ee0",
+      "sourceFile": "docs/evidence/store-production3-iphone-walkthrough.mp4",
+      "sourceFileSHA256": "dc9f1929eb255ba4aa311ae37b04dfb08e46fed3b7e09fad48fe39e8df80f71b",
+      "sourceRangeSeconds": {
+        "end": 57,
+        "start": 40
+      },
+      "width": 886
+    },
+    {
+      "audioTracks": 0,
+      "bytes": 865610,
+      "decodedFrameCount": 510,
+      "deviceFamily": "ipad",
+      "durationSeconds": 17,
+      "editing": {
+        "completeNativeViewport": true,
+        "constantFrameRateResampling": true,
+        "continuousTrim": true,
+        "horizontalPaddingPixels": 0,
+        "nativeCuts": 0,
+        "overlays": 0,
+        "retainedSourceFrameCountClaim": false,
+        "speedChanges": 0,
+        "uniformScale": 0.8333333333333334,
+        "verticalPaddingPixels": 0
+      },
+      "file": "ipad-preview.mp4",
+      "firstPresentationSeconds": 0,
+      "frameRate": 30,
+      "h264LevelIDC": 40,
+      "h264ProfileIDC": 100,
+      "height": 1600,
+      "lastPresentationSeconds": 16.966666666666665,
+      "maximumPresentationIntervalSeconds": 0.03333333333333499,
+      "minimumPresentationIntervalSeconds": 0.03333333333333144,
+      "poster": {
+        "file": "ipad-poster.png",
+        "previewSeconds": 0,
+        "sha256": "9141ea3761fbccf128625e3887379850e6e3b26d0eb2b0b9e909bc7441d6bba6"
+      },
+      "sha256": "29d33ba0ec2c449d345dc920293dc708e8ceff1833ff196b2915f5aeaf43df32",
+      "sourceFile": "docs/evidence/store-production3-ipad-walkthrough.mp4",
+      "sourceFileSHA256": "b75eab4a3572b7ea7eb884e865670b26bd495c32471ebcf12ea3da6a85a09f9c",
+      "sourceRangeSeconds": {
+        "end": 64,
+        "start": 47
+      },
+      "width": 1200
+    }
+  ],
+  "primaryReferences": [
+    "https://developer.apple.com/help/app-store-connect/reference/app-information/app-preview-specifications",
+    "https://developer.apple.com/app-store/app-previews/"
+  ],
+  "result": "Local media preflight passed; upload and Apple processing pending",
+  "review": {
+    "blockingFindings": 0,
+    "independentReviewers": 2,
+    "limitations": [
+      "Full playback and precise transition dwell were not inspected.",
+      "The iPhone shows a brief item-list reveal; per-person tax is partly obscured and tip is offscreen.",
+      "The iPad has substantial native empty space and small secondary text; portrait footage differs from the landscape poster gallery and may appear in A Closer Look.",
+      "No physical-device fluidity, assistive-technology or Apple-ingestion certification."
+    ],
+    "posterSeconds": 0,
+    "scope": "Nine two-second samples per device and additional one/three-second iPhone samples; composition and editorial story review only.",
+    "uploaded": false
+  },
+  "schemaVersion": 1,
+  "sourceProof": {
+    "checkedProductionHashes": {
+      "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "150322a11254db287f51cf13001148ff5b63f2f4833e92c59acd7db4dcec35fe",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+      "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+      "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Fork.svg": "391c1321996375193539f3156e1a2b1c8703f408e5fdc6c49db882bed23390b8",
+      "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Spoon.svg": "262d3987894d9c03caa8a3131e3abd6673c95a3a7e7396df4ac2df14e18fd610",
+      "SplitMyMeal-Prod-A/AppIcon.icon/icon.json": "bccb2141a51764145e194a8cf2c5ca69fd6a4d1942c696f8f5db892b74daa1e6",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+      "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+      "SplitMyMeal-Prod-A/Assets.xcassets/DestructiveText.colorset/Contents.json": "81d01704abf3ef7351e1191ca8d5155e87634f81b80908090af5841e82dfe0db",
+      "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+      "SplitMyMeal-Prod-A/Design/MealDemo.swift": "97f2d4e827c0c383a17791d6f7d4c38b3f798fe1e9895b6df6aec369fc9608a6",
+      "SplitMyMeal-Prod-A/Design/MealUI.swift": "db6297661d1c20da30fbc9b160e335a8dcd4ad15f16ab5d4e4d6a78c3f7e417a",
+      "SplitMyMeal-Prod-A/Info.plist": "e86a1afd22403c408246b01a644df11f538e4e79735c0a0e89dbf648e9f7d984",
+      "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+      "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+      "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+      "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+      "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+      "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+      "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+      "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+      "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+      "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+      "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "d51eeae2a2c5848ce6fe5739d77e12a4df5e3098e19fedfdeed95dae75f80fa4",
+      "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "97c145abfd7a44dd3b63084d15a1a1803202daf74f5531a15bd5cbb1f893c5ea",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "a6b2352a4b6c6ea956be068720b973c6bd14a2ca4c835d2f232ddc073a40fa0b",
+      "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "3005dc9a234487ce08813510c034bd12e475eb3d1fe367f963a743e9a5ce0e19",
+      "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "b6153f5fbde6e50d9c4b6bf6d7646ba4a2b21e233aa9be79770e743a3196131b",
+      "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "c9e9e3669fcf3905f2f46c450141b9499089dd761818ace616cd4ea20225055c",
+      "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+      "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "6aacee1789bd8c21feb8eb4ae7dc742235541e8ef9045deb2f64f4b6042e39b9",
+      "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+      "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "5ad9734ab123fec548fc0610ec5133a92665340e20fb3e9463fa7b82bb38211b"
+    },
+    "file": "docs/evidence/app-store-production3-video-proof.json",
+    "nativeSourceInputCount": 50,
+    "productionInputCount": 35,
+    "productionInputsUnchangedAtMediaFinalization": true,
+    "sha256": "75dfbe8762eba3b1b3976b4c0ea0dab46f3eca2d35ddc6cbff7c9cb5926d45c6",
+    "sourceRevision": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020"
+  }
+}

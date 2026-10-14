@@ -4,6 +4,14 @@
   "appID": "6575395076",
   "version": "2.0.0",
   "observedState": "Prepare for Submission",
+  "stateFreshness": "Last authenticated draft readback; the Chrome session has since expired",
+  "access": {
+    "recordedAtUTC": "2026-10-14T10:39:37Z",
+    "browserState": "Apple sign-in page, empty Password field and disabled Sign In button",
+    "ordinarySignInContinuationAttempted": true,
+    "requiredHumanAction": "Unlock the Mac and sign back into App Store Connect",
+    "credentialsRecorded": false
+  },
   "selectedBuild": "2",
   "intendedReplacementBuild": "3",
   "submitForReviewClicked": false,
@@ -16,7 +24,7 @@
   "releaseNotesSaved": "Clearer totals, shared-item previews and searchable meal history. Better readability, receipt viewing and a new app icon.",
   "evidence": {
     "privateCaptureSHA256": "c7b63b5b978a5767fb4614a44e0c6f3a994ef501b06356d213bae715a1b71242",
-    "scope": "Current version draft read back through Chrome. The page capture remains outside source control; automatic approval review rejected repository persistence of both full and clipped provider captures."
+    "scope": "Last authenticated version draft read back through Chrome. The page capture remains outside source control; automatic approval review rejected repository persistence of both full and clipped provider captures. The later sign-in barrier was observed through the browser DOM without recording account identifiers or credentials."
   },
   "scope": "Draft state only. Previous iPhone placements were removed from this unsubmitted version for replacement and remain in the Asset Library. The refreshed iPhone upload is blocked at the native file picker because the Mac is locked. Previous iPad placements remain. Build3 distribution export and updated galleries remain incomplete. No review submission or release has occurred."
 }
