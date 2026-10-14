@@ -725,6 +725,9 @@ final class MealJourneyTests: XCTestCase {
 
     /// Captures five storefront surfaces using separate fictional data and real draft cancellation.
     func testAppStoreScreenshots() throws {
+        // Hosted capture reached receipt geometry at 299 seconds, beyond the
+        // four-minute default; retain a bounded allowance for all five surfaces.
+        executionTimeAllowance = 420
         app.terminate()
         app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-store-demo"]
         launchForMealTesting()
@@ -746,7 +749,13 @@ final class MealJourneyTests: XCTestCase {
         tapScrollable("add-item")
         fill("item-name", "Edamame")
         fill("item-price", "9.00")
+        // Finish native price entry before framing assignments. A landscape
+        // iPad keyboard can cover part of this row even when its AX frame exists.
+        dismissKeyboard()
+        XCTAssertEqual(app.textFields["item-price"].value as? String, "9.00")
         let everyone = revealButton("assign-everyone")
+        XCTAssertTrue(everyone.isEnabled)
+        XCTAssertTrue(app.frame.contains(everyone.frame))
         everyone.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
         XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
         for name in ["Alex", "Jordan", "Sam"] {
@@ -907,6 +916,9 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testCollectAllTypeAccessibilityIssueInventory() throws {
+        // Hosted audit finished its inventory at 254 seconds; keep every report
+        // while allowing this observational four-surface journey five minutes.
+        executionTimeAllowance = 300
         var failures: [String] = []
         var exceptions: [String] = []
         var reports: [[String: Any]] = []
