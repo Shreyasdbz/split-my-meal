@@ -16,11 +16,13 @@ The [App Store preparation record](docs/app-store-submission.md) includes versio
 
 ## Screens and walkthrough
 
-<img src="docs/evidence/satisfaction-fullscreen-iphone-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">
+<img src="docs/evidence/app-store-final-readability/iphone-accessibility-contrast-meal-light.png" width="240" alt="Meal total, charges, all-items-assigned status and each person’s share">
 
-The recorded native [iPhone](docs/evidence/satisfaction-fullscreen-iphone-walkthrough.mp4) and [iPad](docs/evidence/satisfaction-fullscreen-ipad-walkthrough.mp4) walkthroughs preserve actual interaction speed. [Video provenance](docs/evidence/satisfaction-fullscreen-video-provenance.json) and the [36-state gallery](docs/ui-gallery.md) bind these earlier UI refinement captures to passing native Demo cases and their recorded production source hashes. The new Help menu and storefront fixtures appear in the [App Store galleries](docs/app-store-assets/README.md). Captures use fictional meal data; [verification](docs/verification.md) records the validation scope.
+The current native [iPhone](docs/evidence/store-production3-iphone-walkthrough.mp4) and [iPad](docs/evidence/store-production3-ipad-walkthrough.mp4) recordings retain the complete run at its original speed, including launch and teardown. [Video proof](docs/evidence/app-store-production3-video-proof.json) binds passing Demo cases, all decoded frame timestamps and the same 50-input source as the [Store galleries](docs/app-store-assets/README.md). These are native verification recordings, not App Store previews. Captures use fictional meal data; [verification](docs/verification.md) records the broader validation scope.
 
-<img src="docs/evidence/satisfaction-fullscreen-ipad-meal-landscape-light.png" width="760" alt="iPad landscape meal detail beside the searchable meal library">
+The [earlier 36-state gallery](docs/ui-gallery.md) records preceding UI refinements.
+
+<img src="docs/app-store-assets/captures/ipad/03-tax-tip.png" width="760" alt="iPad landscape meal detail beside the searchable meal library">
 
 ## Build and test
 

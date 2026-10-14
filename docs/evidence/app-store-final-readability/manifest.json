@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "sourceManifestSHA256": "4da41b9c6998e421bc245b3daae259257067d7c45982c6da679027780c921548",
+  "sourceRevision": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020",
+  "captures": [
+    {
+      "device": "iphone",
+      "file": "iphone-accessibility-contrast-meal-light.png",
+      "nativeBasename": "4AC01D67-9EF3-4501-88E5-D1F67300B18C.png",
+      "nativeAttachmentName": "accessibility-contrast-meal-light_0_087707C8-8397-4989-A8B6-EC4962218FC5.png",
+      "sha256": "df5e44a1093bce71d4d77d8df2f8401dd40f7c0a4bc537a8413fcce256374606",
+      "policy": "Unaltered original native XCTest attachment."
+    },
+    {
+      "device": "iphone",
+      "file": "iphone-accessibility-contrast-meal-dark.png",
+      "nativeBasename": "B5BBDAD6-D797-42E8-A0FF-32A99C3ADAFF.png",
+      "nativeAttachmentName": "accessibility-contrast-meal-dark_0_A59F61B3-9B51-47A8-8CFB-D75FEDB14718.png",
+      "sha256": "89b3d2bfc275797d9b380d9bbe4782248b6f5cd2d838a0d97a881f38364c3084",
+      "policy": "Unaltered original native XCTest attachment."
+    },
+    {
+      "device": "iphone",
+      "file": "iphone-accessibility-contrast-destructive-light.png",
+      "nativeBasename": "0660C675-297C-47AC-A979-737CE971952C.png",
+      "nativeAttachmentName": "accessibility-contrast-destructive-light_0_63BBD5DA-AB26-43FB-A70A-3DBE551A5445.png",
+      "sha256": "a7dc20d63c023f4b0da56dc886c5fdb68952adb11b7376e02888fec24b244061",
+      "policy": "Unaltered original native XCTest attachment."
+    },
+    {
+      "device": "iphone",
+      "file": "iphone-accessibility-contrast-destructive-dark.png",
+      "nativeBasename": "32646444-187F-4902-977D-24EC020A168E.png",
+      "nativeAttachmentName": "accessibility-contrast-destructive-dark_0_F6CE9381-B8D9-44D0-99F1-506802ACDD42.png",
+      "sha256": "0d0f51a51ff7a6d50d68e42b76a59c0c672839f6665a16c795780290ff84b2c3",
+      "policy": "Unaltered original native XCTest attachment."
+    },
+    {
+      "device": "ipad-a16",
+      "file": "ipad-a16-accessibility-growth-library-UICTContentSizeCategoryAccessibilityXXXL.png",
+      "nativeBasename": "0E0882DB-5860-42D5-95C3-05C46728C575.png",
+      "nativeAttachmentName": "accessibility-growth-library-UICTContentSizeCategoryAccessibilityXXXL_0_3B1F1604-C167-4C4A-9045-7BF51FF4E7F3.png",
+      "sha256": "11c19b929bba07371706d187a50cb09e4abd0dd0495e4e496782365b3e84afeb",
+      "policy": "Unaltered original native XCTest attachment."
+    }
+  ]
+}

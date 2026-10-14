@@ -1,5 +1,7 @@
 # iOS 27 verification
 
+The current build 3 release checks, Store assets, exact hosted outcomes and incomplete signing/upload state are recorded in the [14 October App Store preparation record](app-store-submission.md). The historical evidence below retains its original source and limitations.
+
 Evidence recorded on 7–9 October 2026 with Xcode 27.0 (27A266a), Swift 6, SDK 27.0 (24A430), and simulator runtime 27.0 (24A434). Version 2.0.0, build 2; minimum OS 17.4. See the [surface audit](ui-refinement.md), [paired gallery](ui-gallery.md), [validation history](refinement-validation-history.md), and [initial modernization record](verification-modernization.md).
 
 ## Fullscreen map, build and media · 9 October 2026
@@ -71,13 +73,13 @@ The completed [parent main45 hosted run](https://github.com/Shreyasdbz/split-my-
 
 ## Hosted coverage contract
 
-The [GitHub workflow](https://github.com/Shreyasdbz/split-my-meal/actions/workflows/ios.yml) runs two fresh native partitions for each device family. Partition A contains 28 units and 15 UI journeys; B contains the remaining 13 UI journeys. Their disjoint union covers all 56 stable cases per device. This is full coverage across two native partitions. Partitioning keeps each journey’s setup, interactions and existing assertions intact.
+The [GitHub workflow](https://github.com/Shreyasdbz/split-my-meal/actions/workflows/ios.yml) runs two fresh native partitions for each device family. Partition A contains 28 units and 17 UI journeys; B contains the remaining 13 UI journeys. Their disjoint union covers all 58 stable cases per device. The five live MapKit cases are selected separately and are excluded from this stable hosted catalogue. This is full coverage across two native partitions. Partitioning keeps each journey’s setup, interactions and existing assertions intact.
 
 The [explicit catalogue](../scripts/stable-test-partitions.json) is checked against Xcode’s compiled [native enumeration](https://developer.apple.com/documentation/xcode-release-notes/xcode-15-release-notes). Missing, unexpected or duplicate cases fail selection. Each native result must exactly match its selected identities with every case passed; missing cases, skips, failures and incomplete results fail verification even when a total count happens to match. Artifacts include enumeration, selection, native cases, source/fixture hashes, result bundles and logs for 14 days. Artifact names include the device, partition and checked-out commit. Check all four jobs for the exact pushed commit; a local pass or successful artifact upload does not establish hosted success.
 
 Focused requests use `-only-testing:Target[/Class[/testMethod]]`, with optional method parentheses. Every requested scope must match actual native identities; unknown scopes, duplicate requests/results, failed or incomplete outcomes, and missing identity evidence reject verification. Exact matches and statuses remain in `focused-selection-results.json`. A target/class match establishes at least one executed case, not complete class coverage; skipped Live identities establish selection rather than passing provider execution. Full-suite claims use the separate exact catalogue gate.
 
-Case limits stay four minutes, with seven minutes for six measured long journeys and five minutes for the charge-conversion journey whose native teardown crossed four minutes; individual control waits and native quiescence remain unchanged. Each hosted job retains its 75-minute limit. Partitioning leaves room for native execution and evidence export without retrying failed cases. The separate system-wide diagnostics collector remains disabled after an earlier stall; native result bundles and app evidence remain retained.
+The four-minute default has bounded seven-minute allowances for seven measured long journeys and five-minute allowances for charge conversion, native photo replacement, the observational accessibility inventory and appearance readability. The current person-submit and switch-state readiness waits are fifteen seconds; they retain native visibility/state and post-action assertions. Native quiescence remains enabled. Each hosted job retains its 75-minute limit. Partitioning leaves room for native execution and evidence export without retrying failed cases. The separate system-wide diagnostics collector remains disabled after an earlier stall; native result bundles and app evidence remain retained.
 
 ## Data and interaction coverage
 

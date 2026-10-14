@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "appID": "6575395076",
+  "version": "2.0.0",
+  "observedState": "Prepare for Submission",
+  "selectedBuild": "2",
+  "intendedReplacementBuild": "3",
+  "submitForReviewClicked": false,
+  "releaseType": "MANUAL",
+  "freshStorefrontAssetsUploaded": false,
+  "existingPlacements": {
+    "iphone": 0,
+    "ipad13inch": 5
+  },
+  "releaseNotesSaved": "Clearer totals, shared-item previews and searchable meal history. Better readability, receipt viewing and a new app icon.",
+  "evidence": {
+    "privateCaptureSHA256": "c7b63b5b978a5767fb4614a44e0c6f3a994ef501b06356d213bae715a1b71242",
+    "scope": "Current version draft read back through Chrome. The page capture remains outside source control; automatic approval review rejected repository persistence of both full and clipped provider captures."
+  },
+  "scope": "Draft state only. Previous iPhone placements were removed from this unsubmitted version for replacement and remain in the Asset Library. The refreshed iPhone upload is blocked at the native file picker because the Mac is locked. Previous iPad placements remain. Build3 distribution export and updated galleries remain incomplete. No review submission or release has occurred."
+}

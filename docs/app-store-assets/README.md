@@ -14,18 +14,17 @@ Five ordered posters for each device: iPhone with Dynamic Island, medium display
 
 Upload the five posters from each device folder in numeric order. The contact sheet and captures are review evidence, not upload assets. All posters are opaque RGB PNGs with an sRGB profile.
 
-Screenshot dimensions were checked against [Apple’s specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications) on 13 October 2026. Select the matching device category in App Store Connect’s Media Manager.
+Screenshot dimensions were checked against [Apple’s specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications) on 14 October 2026. Select the matching device category in App Store Connect’s Media Manager.
 
 ## Source and reproduction
 
-[The manifest](manifest.json) binds each poster to its exact capture bytes, headline, dimensions, renderer, and native capture source. Nine captures use the [initial frozen source](source-manifest.json); iPad poster 4 uses the [receipt recapture source](receipt-source-manifest.json), whose only changed input is the UI test’s native zoom-and-pan sequence. All production source hashes match between the two captures. The iPad inputs retain the full landscape interface after orientation normalization. Native capture results and original orientation evidence are recorded separately from composition hashes.
+[The manifest](manifest.json) binds each poster to its exact capture bytes, headline, dimensions, renderer, and native capture source. All ten screens were recaptured on 14 October 2026 from the same [50-input frozen source](source-manifest.json), including the production contrast and text-wrapping repairs. The iPad inputs retain the full landscape interface after orientation normalization. Native capture results and original orientation evidence are recorded separately from composition hashes.
 
 ```sh
 swift scripts/prepare-app-store-screenshots.swift \
   --iphone docs/app-store-assets/captures/iphone \
   --ipad docs/app-store-assets/captures/ipad \
   --manifest docs/app-store-assets/source-manifest.json \
-  --receipt-manifest docs/app-store-assets/receipt-source-manifest.json \
   --output /tmp/split-my-meal-store-posters
 ```
 

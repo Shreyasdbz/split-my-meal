@@ -624,6 +624,9 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testNativePhotoAttachmentReplacementCancelAndSave() throws {
+        // Four native picker selections and a process relaunch reached the final
+        // image check at 259 seconds in CI; preserve the whole journey's assertions.
+        executionTimeAllowance = 300
         createMeal("Photo dinner")
         app.buttons["edit-meal"].tap()
         choosePhoto(at: 0)

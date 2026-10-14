@@ -1,0 +1,591 @@
+{
+  "initialLocalAttempt": "Before the exact roster-leaf query repair, the Phone run passed three cases and failed Dynamic Type on an ambiguous AX query; the original Pad run passed five cases. Original result bundles remain retained.",
+  "outcomes": [
+    {
+      "all50InputsMatchCommitAndAtRunFinalization": true,
+      "capturedGitHead": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020",
+      "caseDurationsSeconds": {
+        "testAppStoreScreenshots": 70.121,
+        "testDynamicTypeReallyGrowsAmountsAndInputs": 35.022,
+        "testNativeAccessibleControlSemanticsAndHitRegions": 17.639,
+        "testReadableLabelsAndDestructiveActionsAcrossAppearances": 30.146
+      },
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReadableLabelsAndDestructiveActionsAcrossAppearances()",
+          "status": "Passed"
+        }
+      ],
+      "deviceFamily": "iphone",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 1,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "nativeCounts": {
+        "failed": 0,
+        "passed": 4,
+        "skipped": 0
+      },
+      "outerExit": 0,
+      "proofHashes": {
+        "attachments/manifest.json": "47c3da990765aff28f886b25197ee3d04d3efb1e69e756657b1d1c17781a48c0",
+        "focused-selection-results.json": "8a73081b251e6746d13a562d295166e7d1c2e91119e25881d144c9a2509d3895",
+        "native-tests.json": "2f14cc592246131302c9d787ddeaebcde4cacb812a1f2337491c0959f3ede092",
+        "source-manifest.json": "2f27010d9cb3a6be7235b58c09ed15b83f4a2fa73d5875eeb2e0deccb90e3239",
+        "test-summary.json": "cae37d44ebffd138dfce4a60816a1353fa85b6c49ce600c8ae5d894b3b89b7f6",
+        "test.log": "88df1133b476262f7a81648e64293adf47160029e93e15369b9d2a783313fac5"
+      },
+      "storefrontInputIndex": [
+        {
+          "filename": "01-share.png",
+          "nativeBasename": "FF6027F3-F61B-4F34-A23F-2DCD87EE499F.png",
+          "nativeName": "app-store-split_0_7F7956EE-CAEF-4389-A4E2-CBC5C6EBCFBF.png",
+          "nativeSHA256": "7f9e58ce9166f9b2947b05ee0d04a5a8af153db6cbe68a36b1d7f6ee7347b804",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2622,
+            "exportPixelWidth": 1206,
+            "nativeEXIFOrientation": 1,
+            "rawPixelHeight": 2622,
+            "rawPixelWidth": 1206,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "114330d1fa4e5a2c9227f902d82f47569a8442e21d2ef8d4241a5f0e10c64085"
+        },
+        {
+          "filename": "02-assign.png",
+          "nativeBasename": "1FEF1A53-B63B-4A18-B6DE-AAA8A7A2F00E.png",
+          "nativeName": "app-store-shared-item_0_849B0690-3DCE-4385-9A72-6D6A4B3B3117.png",
+          "nativeSHA256": "0259f7af242429e44ebd6b22785e895e56e9d8c0c4fdcc6a5ab8128f0b78afda",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2622,
+            "exportPixelWidth": 1206,
+            "nativeEXIFOrientation": 1,
+            "rawPixelHeight": 2622,
+            "rawPixelWidth": 1206,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "0845df99f4d08b41f0d35fa7f45de75d85bc2c04255bc06494c8142846f84e99"
+        },
+        {
+          "filename": "03-tax-tip.png",
+          "nativeBasename": "15DD08C7-4E1C-4B65-AEFC-46FD1298C27F.png",
+          "nativeName": "app-store-meal_0_7FEF8AD8-C915-475E-B21D-2425C4E41EFE.png",
+          "nativeSHA256": "14152cbb37266de59adb4511cf1947086448aac2292199905b270258ad09891c",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2622,
+            "exportPixelWidth": 1206,
+            "nativeEXIFOrientation": 1,
+            "rawPixelHeight": 2622,
+            "rawPixelWidth": 1206,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "5c15c11d0421723c37e4c2b247066c5714afc71481db79d29ef87ecdbdb04789"
+        },
+        {
+          "filename": "04-receipt.png",
+          "nativeBasename": "24E6C475-118F-4CF1-976D-36382E94A4C8.png",
+          "nativeName": "app-store-receipt_0_A9527247-F538-42C5-825F-6A59F714876F.png",
+          "nativeSHA256": "567866329a5b2d9df5076338720544d64d2c0cbe0e3b5eaa11373d63ab7d46eb",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2622,
+            "exportPixelWidth": 1206,
+            "nativeEXIFOrientation": 1,
+            "rawPixelHeight": 2622,
+            "rawPixelWidth": 1206,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "9bcac115a450367288a74e7d1a85c0383e0305aff4413112a604e55e9346f38b"
+        },
+        {
+          "filename": "05-library.png",
+          "nativeBasename": "7CF0B6CF-E436-4CCA-AAA4-0A8123A18408.png",
+          "nativeName": "app-store-library_0_430B0E86-ADAB-47FC-9B78-A25EEE06989A.png",
+          "nativeSHA256": "6c119591397295b3b86e4fef88573e42da51854b6564ab3d49501cb0b028ba0f",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2622,
+            "exportPixelWidth": 1206,
+            "nativeEXIFOrientation": 1,
+            "rawPixelHeight": 2622,
+            "rawPixelWidth": 1206,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "59c291ac9b18beb5b955d4facc88252bf0f1d5bd94fcb37efb1ee4f534b580d3"
+        }
+      ]
+    },
+    {
+      "all50InputsMatchCommitAndAtRunFinalization": true,
+      "capturedGitHead": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020",
+      "caseDurationsSeconds": {
+        "testAppStoreScreenshots": 111.158,
+        "testCollectAllTypeAccessibilityIssueInventory": 38.665,
+        "testDynamicTypeReallyGrowsAmountsAndInputs": 38.743,
+        "testNativeAccessibleControlSemanticsAndHitRegions": 21.492,
+        "testReadableLabelsAndDestructiveActionsAcrossAppearances": 33.591
+      },
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReadableLabelsAndDestructiveActionsAcrossAppearances()",
+          "status": "Passed"
+        }
+      ],
+      "deviceFamily": "ipad",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 2,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "nativeCounts": {
+        "failed": 0,
+        "passed": 5,
+        "skipped": 0
+      },
+      "observationalAccessibilityInventory": {
+        "allReportsRetained": true,
+        "issuesReported": 23,
+        "knownDecorativeRasterReports": 0,
+        "nativeBasename": "39C97942-0734-46AF-9990-5F08DF883A09.json",
+        "reports": [
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "library"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(256.5, 211.25, 31.5, 14.5)",
+            "elementIdentifier": "",
+            "elementLabel": "Oct 6",
+            "surface": "library"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(98.0, 209.5, 62.5, 18.0)",
+            "elementIdentifier": "",
+            "elementLabel": "$113.66",
+            "surface": "library"
+          },
+          {
+            "auditType": 131072,
+            "compactDescription": "Text clipped",
+            "detailedDescription": "Text of this element may be clipped at larger Dynamic Type sizes.",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "library"
+          },
+          {
+            "auditType": 131072,
+            "compactDescription": "Text clipped",
+            "detailedDescription": "Text of this UILabel may be clipped at larger Dynamic Type sizes.",
+            "elementFrame": "(66.0, 43.5, 47.0, 21.0)",
+            "elementIdentifier": "",
+            "elementLabel": "Meals",
+            "surface": "library"
+          },
+          {
+            "auditType": 131072,
+            "compactDescription": "Text clipped",
+            "detailedDescription": "Text of this UISearchBarTextField may be clipped at larger Dynamic Type sizes.",
+            "elementFrame": "(16.0, 86.0, 288.0, 44.0)",
+            "elementIdentifier": "",
+            "elementLabel": "Search meals",
+            "surface": "library"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(360.0, 301.75, 64.0, 20.5)",
+            "elementIdentifier": "",
+            "elementLabel": "Subtotal",
+            "surface": "meal"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(936.0, 301.75, 56.0, 20.5)",
+            "elementIdentifier": "",
+            "elementLabel": "$87.00",
+            "surface": "meal"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(256.5, 211.25, 31.5, 14.5)",
+            "elementIdentifier": "",
+            "elementLabel": "Oct 6",
+            "surface": "meal"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(98.0, 209.5, 62.5, 18.0)",
+            "elementIdentifier": "",
+            "elementLabel": "$113.66",
+            "surface": "meal"
+          },
+          {
+            "auditType": 131072,
+            "compactDescription": "Text clipped",
+            "detailedDescription": "Text of this element may be clipped at larger Dynamic Type sizes.",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "meal"
+          },
+          {
+            "auditType": 131072,
+            "compactDescription": "Text clipped",
+            "detailedDescription": "Text of this UILabel may be clipped at larger Dynamic Type sizes.",
+            "elementFrame": "(66.0, 43.5, 47.0, 21.0)",
+            "elementIdentifier": "",
+            "elementLabel": "Meals",
+            "surface": "meal"
+          },
+          {
+            "auditType": 131072,
+            "compactDescription": "Text clipped",
+            "detailedDescription": "Text of this UISearchBarTextField may be clipped at larger Dynamic Type sizes.",
+            "elementFrame": "(16.0, 86.0, 288.0, 44.0)",
+            "elementIdentifier": "",
+            "elementLabel": "Search meals",
+            "surface": "meal"
+          },
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "(456.0, 1297.5, 440.0, 50.5)",
+            "elementIdentifier": "",
+            "elementLabel": "View split",
+            "surface": "meal"
+          },
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "meal"
+          },
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "meal"
+          },
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "meal"
+          },
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "meal"
+          },
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "unavailable",
+            "elementIdentifier": "unavailable",
+            "elementLabel": "unavailable",
+            "surface": "meal"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(952.0, 36.0, 66.0, 36.0)",
+            "elementIdentifier": "",
+            "elementLabel": "Done",
+            "surface": "split"
+          },
+          {
+            "auditType": 1,
+            "compactDescription": "Contrast failed",
+            "detailedDescription": "Contrast failed for SwiftUI.AccessibilityNode",
+            "elementFrame": "(14.0, 36.0, 76.5, 36.0)",
+            "elementIdentifier": "",
+            "elementLabel": "Cancel",
+            "surface": "meal-editor"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(955.5, 36.0, 62.5, 36.0)",
+            "elementIdentifier": "save-meal",
+            "elementLabel": "Save",
+            "surface": "meal-editor"
+          },
+          {
+            "auditType": 65536,
+            "compactDescription": "Dynamic Type font sizes are partially unsupported",
+            "detailedDescription": "User will not be able to change the font size of this SwiftUI.AccessibilityNode",
+            "elementFrame": "(14.0, 36.0, 76.5, 36.0)",
+            "elementIdentifier": "",
+            "elementLabel": "Cancel",
+            "surface": "meal-editor"
+          }
+        ],
+        "scope": "Diagnostic inventory execution passed; nonzero findings remain and this is not an accessibility certification.",
+        "sha256": "16403f6b7db8246923db86af8b53cf5d7eb17c239b4ec252e00c07660a28fa1a",
+        "unavailableIdentityCount": 8
+      },
+      "outerExit": 0,
+      "proofHashes": {
+        "attachments/manifest.json": "07718449ada693ca378bee2715d424972a0316db38b422b9345df7d98686b4ac",
+        "focused-selection-results.json": "f5277b48507bd75480f861cf82c14aa3b87665b85edca17182d017e47ec15f6c",
+        "native-tests.json": "d45919a88b1eb586835bc8f6e438b6faeebd1b9374003959ea73ec609d6766e3",
+        "source-manifest.json": "2f27010d9cb3a6be7235b58c09ed15b83f4a2fa73d5875eeb2e0deccb90e3239",
+        "test-summary.json": "ba1b33559244512cfeab3260761bfd2209dbe2aa652f3392dddc3576e672c17c",
+        "test.log": "8b92a66af7ffed19bca5b800a1a9854bc936a4242ce54b39a2c0efe6afc7c7d4"
+      },
+      "storefrontInputIndex": [
+        {
+          "filename": "01-share.png",
+          "nativeBasename": "2243FB5C-AAEA-4C89-9EE6-2F8D86761D97.png",
+          "nativeName": "app-store-split_0_C6AB3782-20B1-4C10-B284-64FD38548E56.png",
+          "nativeSHA256": "6ae4dcc9d61e3f262900f77e94863afc35fcdbd647169493e883fc11f5d1dee5",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2064,
+            "exportPixelWidth": 2752,
+            "nativeEXIFOrientation": 8,
+            "rawPixelHeight": 2752,
+            "rawPixelWidth": 2064,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "7f8354f4e075ab7bcb71fb2e38a79ead2347c923e30321760a0583e3ace6cae7"
+        },
+        {
+          "filename": "02-assign.png",
+          "nativeBasename": "FE0AA0EB-11DB-40E2-BC31-6D5FF7445E57.png",
+          "nativeName": "app-store-shared-item_0_AF0482E9-B3FF-4816-813C-47A011D2D525.png",
+          "nativeSHA256": "8a32c6547389103a97f9a4a09ec06f2d8ef9473af88bd88a74bd701cb669bd3e",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2064,
+            "exportPixelWidth": 2752,
+            "nativeEXIFOrientation": 8,
+            "rawPixelHeight": 2752,
+            "rawPixelWidth": 2064,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "3a3702fd13c36b502e58b3ac3c30d93aeacf5129047db5a35b9bd3cd6456bc26"
+        },
+        {
+          "filename": "03-tax-tip.png",
+          "nativeBasename": "98E70E55-5664-427E-863E-C69FBA193B8B.png",
+          "nativeName": "app-store-meal_0_9059C076-3436-4FD3-84EE-F2FB0D722330.png",
+          "nativeSHA256": "8cfc04ac9adfa44b3c5f13185ddec247f8e445ed4c958cce3b893ac9d8b7ffa9",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2064,
+            "exportPixelWidth": 2752,
+            "nativeEXIFOrientation": 8,
+            "rawPixelHeight": 2752,
+            "rawPixelWidth": 2064,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "93f61d7c3a553d0c94170924f233057c83e6ade5ba3bafae877e713bb5ef8f45"
+        },
+        {
+          "filename": "04-receipt.png",
+          "nativeBasename": "16850BD5-2C82-4195-9C21-B4ED7B73A78E.png",
+          "nativeName": "app-store-receipt-readable_0_AC1D7A16-0D93-4AF9-8AE8-04F327F3041F.png",
+          "nativeSHA256": "4b9bafbf70d00e4860e41c43ad4e9f03e3603887fa4513cd610d878ccc2d54c8",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2064,
+            "exportPixelWidth": 2752,
+            "nativeEXIFOrientation": 8,
+            "rawPixelHeight": 2752,
+            "rawPixelWidth": 2064,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "4bfe42a4250338a8c095ce7d2837671349f054d5e989c73da72e5e111a79f63b"
+        },
+        {
+          "filename": "05-library.png",
+          "nativeBasename": "B8676A3C-6385-4835-9C63-F9124BFBACC1.png",
+          "nativeName": "app-store-library_0_2AA321C0-EC96-43FB-85DA-A9AB732DF2BE.png",
+          "nativeSHA256": "6272648c0fadcd746d8838d92b4321656458ffb345b115347580087aaa6c95f9",
+          "normalization": {
+            "exportHasAlpha": false,
+            "exportPixelHeight": 2064,
+            "exportPixelWidth": 2752,
+            "nativeEXIFOrientation": 8,
+            "rawPixelHeight": 2752,
+            "rawPixelWidth": 2064,
+            "transform": "Apply native EXIF orientation, then opaque RGB encoding; no resize, stretch, crop or overlay"
+          },
+          "normalizedSHA256": "058640636700325b9ea1e716d1b2858af24dbd4afa584584c67b5af05decbccb"
+        }
+      ]
+    },
+    {
+      "all50InputsMatchCommitAndAtRunFinalization": true,
+      "capturedGitHead": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020",
+      "caseDurationsSeconds": {
+        "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance": 50.498,
+        "testDynamicTypeReallyGrowsAmountsAndInputs": 37.772,
+        "testReadableLabelsAndDestructiveActionsAcrossAppearances": 30.79
+      },
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReadableLabelsAndDestructiveActionsAcrossAppearances()",
+          "status": "Passed"
+        }
+      ],
+      "deviceFamily": "a16",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 1,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "nativeCounts": {
+        "failed": 0,
+        "passed": 3,
+        "skipped": 0
+      },
+      "outerExit": 0,
+      "proofHashes": {
+        "attachments/manifest.json": "c28b5ca7d3faf578bcaa1580b90796b994a3a70ec8c8ce4ef538d84e439b1e0c",
+        "focused-selection-results.json": "8d50e062810a09df158bc1b11f13a085a1a00757458eee285a2c820184ad833e",
+        "native-tests.json": "723a77a464617188d40125156e4e194e3d1f9cad26967166d0b768c84bcd0207",
+        "source-manifest.json": "2f27010d9cb3a6be7235b58c09ed15b83f4a2fa73d5875eeb2e0deccb90e3239",
+        "test-summary.json": "277f2dce31a116f6093827e8ef0e940fa39dd9aa205c3b8272ecfc8c52426d78",
+        "test.log": "55a0c108362b1333abcd078fd89face155e602338589e6fe2ad6e9b5a2b4c84e"
+      }
+    }
+  ],
+  "productionBuild": "2.0.0 (3)",
+  "publicationDate": "2026-10-14",
+  "scope": "Twelve local native case executions across dedicated iPhone 17, iPad Pro 13 (M5), and iPad A16 simulators. Complete hosted 116-case acceptance remains pending.",
+  "sourceBindings": {
+    "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "150322a11254db287f51cf13001148ff5b63f2f4833e92c59acd7db4dcec35fe",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+    "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Fork.svg": "391c1321996375193539f3156e1a2b1c8703f408e5fdc6c49db882bed23390b8",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Spoon.svg": "262d3987894d9c03caa8a3131e3abd6673c95a3a7e7396df4ac2df14e18fd610",
+    "SplitMyMeal-Prod-A/AppIcon.icon/icon.json": "bccb2141a51764145e194a8cf2c5ca69fd6a4d1942c696f8f5db892b74daa1e6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+    "SplitMyMeal-Prod-A/Assets.xcassets/DestructiveText.colorset/Contents.json": "81d01704abf3ef7351e1191ca8d5155e87634f81b80908090af5841e82dfe0db",
+    "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+    "SplitMyMeal-Prod-A/Design/MealDemo.swift": "97f2d4e827c0c383a17791d6f7d4c38b3f798fe1e9895b6df6aec369fc9608a6",
+    "SplitMyMeal-Prod-A/Design/MealUI.swift": "db6297661d1c20da30fbc9b160e335a8dcd4ad15f16ab5d4e4d6a78c3f7e417a",
+    "SplitMyMeal-Prod-A/Info.plist": "e86a1afd22403c408246b01a644df11f538e4e79735c0a0e89dbf648e9f7d984",
+    "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+    "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+    "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+    "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+    "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+    "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+    "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+    "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+    "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+    "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+    "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "d51eeae2a2c5848ce6fe5739d77e12a4df5e3098e19fedfdeed95dae75f80fa4",
+    "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "97c145abfd7a44dd3b63084d15a1a1803202daf74f5531a15bd5cbb1f893c5ea",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "a6b2352a4b6c6ea956be068720b973c6bd14a2ca4c835d2f232ddc073a40fa0b",
+    "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "3005dc9a234487ce08813510c034bd12e475eb3d1fe367f963a743e9a5ce0e19",
+    "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "b6153f5fbde6e50d9c4b6bf6d7646ba4a2b21e233aa9be79770e743a3196131b",
+    "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "c9e9e3669fcf3905f2f46c450141b9499089dd761818ace616cd4ea20225055c",
+    "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+    "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "6aacee1789bd8c21feb8eb4ae7dc742235541e8ef9045deb2f64f4b6042e39b9",
+    "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+    "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "5ad9734ab123fec548fc0610ec5133a92665340e20fb3e9463fa7b82bb38211b",
+    "SplitMyMealTests/EditorInputTests.swift": "1a8705881b01d0b650e76a5956136d916f0b8bce2fe1db2a8f56834e5550c8af",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/ExternalStorage/_EXTERNAL_DATA/430C4EE3-78AC-4A21-866C-D3AEFB3801FE": "572f811f6c0fdca5458041c1797766c32aa7eedd8249dc2139e7236b8bf314eb",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/PROVENANCE.md": "688fcffca76ced4d7a215c6f2c27d247defe364def29b1e0e52a8fd31a5e084d",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/hashes.json": "6b7b3686e48f5b28e4c8841d15bd7cb6b402951f5bd4ed92ecd6a7e991ac52c8",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/legacy.store": "9c75e1ea2553f878c8ab06c072ef616ab6025410581ca94337652647b56fa54e",
+    "SplitMyMealTests/MealAmountsTests.swift": "e87d118b50141ba596d4cd3189962daa002b136dcb0faf8fa7347066b70d7283",
+    "SplitMyMealTests/MealStoreTests.swift": "8e065495b1d1c18afa5094a318882f80e4beab7289aa903bdc25f7f4d9bd5e08",
+    "SplitMyMealUITests/LiveMapKitTests.swift": "75854bddc28719858557b671ab6f75c00fddbfd61635dfa222275e18e06736f8",
+    "SplitMyMealUITests/MealJourneyTests.swift": "c7bd4c7e1df37be7851b1534733571ad40578107dd8ed3ee1f9eab31581b0307",
+    "scripts/native-test-selection.py": "8fc1bdf417c3c56819505c2d07ae63c4dbe70284eb0015db6e8933e72aab1096",
+    "scripts/prepare-app-store-screenshots.swift": "862a683db3e385c91ee03cba7aca8ddd2e23abe570607a8acc27ada32c153ce7",
+    "scripts/select-simulator.py": "35b60702c49e3e8e516aaf1a111eed21e84c5b3f1c5588d15ba96173c0e9ecc3",
+    "scripts/stable-test-partitions.json": "414faabccc575de7acca13b0ab23ba398949808b7d6cdb2cd0aef531692fc30f",
+    "scripts/tests/test_native_test_selection.py": "2df61a9a206684defd1f8eeea3c921c19dee3f3d9dca00b4c1dee1d5abe95c85",
+    "scripts/verify-ios.sh": "0adbf93dbac09f537ad4851fcdb344d24e175cb7101d284413433a479998dfcd"
+  },
+  "sourceInputCount": 50,
+  "sourceRevisionWithMatchingInputs": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020"
+}
