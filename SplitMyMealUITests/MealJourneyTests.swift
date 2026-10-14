@@ -1364,6 +1364,9 @@ final class MealJourneyTests: XCTestCase {
     }
 
     func testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape() throws {
+        // The hosted two-orientation Maps journey completed teardown at 261
+        // seconds; retain every native handoff and readability assertion.
+        executionTimeAllowance = 300
         app.terminate()
         app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-demo", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
         launchForMealTesting()
