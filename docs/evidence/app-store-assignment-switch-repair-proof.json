@@ -1,0 +1,353 @@
+{
+  "actualExecutionCounts": {
+    "failed": 0,
+    "passed": 8,
+    "skipped": 0
+  },
+  "productionInputsUnchanged": true,
+  "publicationDate": "2026-10-14",
+  "runs": [
+    {
+      "actualCases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "status": "Passed"
+        }
+      ],
+      "allTracked50SourceHashesMatch": true,
+      "caseDurationSeconds": {
+        "testCreateEditSplitShareAndPersistence": 117.454,
+        "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance": 55.189,
+        "testEditAndDeleteItemPersonAndMeal": 96.651,
+        "testReverseAssignmentFixedChargesConversionCancelAndClear": 109.681
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 4,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "completeLogSHA256": "34acadbdb12062a1b41814cc750f4082f2c51022593410a4c03780e8695207fd",
+      "counts": {
+        "failed": 0,
+        "passed": 4,
+        "skipped": 0
+      },
+      "deviceFamily": "iphone",
+      "focusedSelectionGateSHA256": "9f9819938b47a3cb7835621f340c4ae049b2a27d8b2f02b2eec1d5bd06b2c291",
+      "nativeSwitchTransitions": [
+        {
+          "after": {
+            "filename": "83506E55-17B2-4BDB-A773-87C17B7AB141.txt",
+            "frame": "(16.0, 490.3333333333333, 370.0, 51.99999999999994)",
+            "sha256": "1d4927ffbf4ee75dca4187872899fafb3ab7c4c3fdef17dd6385ac12e345071b",
+            "timestamp": 1791958171.9,
+            "value": "1"
+          },
+          "before": {
+            "filename": "15DD1B92-7F12-47AD-A290-9E388A209B44.txt",
+            "frame": "(16.0, 490.3333333333333, 370.0, 51.99999999999994)",
+            "sha256": "244ee3328f1b99c6faba35c669d1d2fe2722c9dd222a09f9f73de5b61da0f768",
+            "timestamp": 1791958168.512,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "control": "item-consumer-Bob"
+        },
+        {
+          "after": {
+            "filename": "0D8C8B2F-3676-4DB4-8099-878FBDDC2574.txt",
+            "frame": "(16.0, 438.3333333333333, 370.0, 52.0)",
+            "sha256": "dbcc545bbc20d472bb953e52f43cb9c962c3be25c7a96e148ee43cfa513e569d",
+            "timestamp": 1791958166.591,
+            "value": "1"
+          },
+          "before": {
+            "filename": "17BDAF98-23E6-448E-8B6D-1ADAB6B0142E.txt",
+            "frame": "(16.0, 438.3333333333333, 370.0, 52.0)",
+            "sha256": "df9f11e013c9c839ccf4dfcd9f64d5453808dd7e8c17664f574dd93475d74f72",
+            "timestamp": 1791958160.58,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "control": "item-consumer-Alice"
+        },
+        {
+          "after": {
+            "filename": "9D247F3E-6812-4DDD-AE27-618F5D868AA5.txt",
+            "frame": "(16.0, 386.3333333333333, 370.0, 52.0)",
+            "sha256": "062cab903601878d0f5fb183ab038afac3decfd21cce69f1708e6c7f764993b3",
+            "timestamp": 1791958262.436,
+            "value": "1"
+          },
+          "before": {
+            "filename": "41496155-80AC-40DC-8AB4-67493EE0D8A1.txt",
+            "frame": "(16.0, 386.3333333333333, 370.0, 52.0)",
+            "sha256": "55365474c3efb7a2f1bf38a3f7aa5e99a3fe6fabb4f0347e131aee0c2c0122b6",
+            "timestamp": 1791958259.124,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+          "control": "item-consumer-Taylor"
+        },
+        {
+          "after": {
+            "filename": "00CC269B-36A2-429B-923F-DCC509B04EB4.txt",
+            "frame": "(16.0, 386.3333333333333, 370.0, 52.0)",
+            "sha256": "dd831522f378e4614b3fc2bba375a483d73fe1115e23c8b9dcac813c7f364878",
+            "timestamp": 1791958330.559,
+            "value": "1"
+          },
+          "before": {
+            "filename": "0EFD8208-946A-4892-BA08-8049295E3990.txt",
+            "frame": "(16.0, 386.3333333333333, 370.0, 52.0)",
+            "sha256": "c780101ab6b946746fc56729c5aeb7cf4704a6bbc4bebb98b4d4810cd5c9286a",
+            "timestamp": 1791958327.205,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+          "control": "item-consumer-Casey"
+        },
+        {
+          "after": {
+            "filename": "6563307C-9EE9-4087-8FDE-EB8120FBF3C3.txt",
+            "frame": "(16.0, 282.33333333333337, 370.0, 66.66666666666669)",
+            "sha256": "0d99cd9a62d0f49adf7093d74ff7e39429fe1e0f79efbbc16cb056b4fed40704",
+            "timestamp": 1791958419.004,
+            "value": "1"
+          },
+          "before": {
+            "filename": "EA033C32-562D-4EF0-97D4-B83CDE46576F.txt",
+            "frame": "(16.0, 282.33333333333337, 370.0, 66.66666666666669)",
+            "sha256": "ff0db565eb86e345e95606ae074748a5be08887de4a7337eda2d259ef0328b6a",
+            "timestamp": 1791958411.785,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "control": "person-item-Noodles"
+        }
+      ],
+      "nativeTestsSHA256": "282b0522e45180e0b2c6f7e8ffa84cbbf07e6952e33403766c6ad009057613e9",
+      "outerExitCode": 0,
+      "rawManifestExtraInputsExcluded": [
+        "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcodecloud/manifest.json"
+      ],
+      "sourceComparisonScope": "Tracked native verification inputs at run finalization; unrelated XcodeCloud metadata excluded.",
+      "sourceInputCount": 50,
+      "sourceManifestSHA256": "f687ce384adb469a18d4a0e96d950334e7fef3b26e56589ee9b7830163aae3c9",
+      "summarySHA256": "9d46856c65653ba2225c660bcc0fcc6973e3bc45a66e7e4ea3c168051590dba5"
+    },
+    {
+      "actualCases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "status": "Passed"
+        }
+      ],
+      "allTracked50SourceHashesMatch": true,
+      "caseDurationSeconds": {
+        "testCreateEditSplitShareAndPersistence": 139.113,
+        "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance": 73.048,
+        "testEditAndDeleteItemPersonAndMeal": 107.595,
+        "testReverseAssignmentFixedChargesConversionCancelAndClear": 146.138
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 4,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "completeLogSHA256": "f8151bd2e5610d9532938547bda149de3b1fbbe8b649e9dcb7069bc07e40227f",
+      "counts": {
+        "failed": 0,
+        "passed": 4,
+        "skipped": 0
+      },
+      "deviceFamily": "ipad",
+      "focusedSelectionGateSHA256": "9f9819938b47a3cb7835621f340c4ae049b2a27d8b2f02b2eec1d5bd06b2c291",
+      "nativeSwitchTransitions": [
+        {
+          "after": {
+            "filename": "1B8027FA-78DF-4964-AE10-C0159CB70E69.txt",
+            "frame": "(242.0, 780.5, 548.0, 52.0)",
+            "sha256": "805e81fea5e32d6dd190f04a15163d5e1bd96e564293c62d1cdeb3019fc9c26c",
+            "timestamp": 1791958190.692,
+            "value": "1"
+          },
+          "before": {
+            "filename": "9BD23ED5-B8A5-49C8-B5FB-A36F6CCE400E.txt",
+            "frame": "(242.0, 780.5, 548.0, 52.0)",
+            "sha256": "3c250494831c85ad708a8d032a3bb7de405536668db3444d38a959deaab431ff",
+            "timestamp": 1791958186.909,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "control": "item-consumer-Bob"
+        },
+        {
+          "after": {
+            "filename": "A1670812-6852-4A3C-8906-9157D0BAC27C.txt",
+            "frame": "(242.0, 728.5, 548.0, 52.0)",
+            "sha256": "f3af940410c608d679b3f05dae282d55187cd2d134a2c45f05fe601994376969",
+            "timestamp": 1791958177.652,
+            "value": "1"
+          },
+          "before": {
+            "filename": "2F9D96E7-4FD0-48AD-802B-29F3B5D4F310.txt",
+            "frame": "(242.0, 728.5, 548.0, 52.0)",
+            "sha256": "f446c8f34c136779c21ccdcb57763b83f24c5d882c3e1a08d02fb76ee4ac1cbb",
+            "timestamp": 1791958173.855,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "control": "item-consumer-Alice"
+        },
+        {
+          "after": {
+            "filename": "2A2B0215-3815-4B72-9A0F-281DB9312878.txt",
+            "frame": "(242.0, 676.5, 548.0, 52.0)",
+            "sha256": "ec85df1c1993af13444457637c85374dc935dbc0f686d89047c31f6e6ea06e1b",
+            "timestamp": 1791958302.725,
+            "value": "1"
+          },
+          "before": {
+            "filename": "D1FB5EAF-A31D-497F-B86D-9254BFBD06A7.txt",
+            "frame": "(242.0, 676.5, 548.0, 52.0)",
+            "sha256": "71223a7de9f861eff2f9f286a5ac58c9b401d3603c9718f10f32d690f8e60cfa",
+            "timestamp": 1791958293.045,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+          "control": "item-consumer-Taylor"
+        },
+        {
+          "after": {
+            "filename": "3318B8B9-5781-46C0-BD33-93659CFAAA32.txt",
+            "frame": "(242.0, 676.5, 548.0, 52.0)",
+            "sha256": "a7b7c9464a45fcf55a086f25641c69d6f1b928dd8bd9a6379e4f6ea775f1bddf",
+            "timestamp": 1791958381.633,
+            "value": "1"
+          },
+          "before": {
+            "filename": "6AD7E9B0-843A-4D45-BF19-412FC532D891.txt",
+            "frame": "(242.0, 676.5, 548.0, 52.0)",
+            "sha256": "e0a6e21d3eafa0fc95b71738bce8f5de375ae4dd423ef2fbae99d898c3a20481",
+            "timestamp": 1791958377.868,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+          "control": "item-consumer-Casey"
+        },
+        {
+          "after": {
+            "filename": "C0B288BA-1F87-4750-A498-CCDB9553534E.txt",
+            "frame": "(242.0, 572.5, 548.0, 67.0)",
+            "sha256": "ca9f725aab1b91c2d505d74591afe4b2a542568588079fc723c47a3a46f2ab99",
+            "timestamp": 1791958484.433,
+            "value": "1"
+          },
+          "before": {
+            "filename": "065A3117-ADE3-4578-8839-2F75FD7F6A27.txt",
+            "frame": "(242.0, 572.5, 548.0, 67.0)",
+            "sha256": "9fd15f8d5765174a20a30a0068ee9e374f7f52f7b7c7d67957ae940063e2847d",
+            "timestamp": 1791958477.439,
+            "value": "0"
+          },
+          "case": "MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "control": "person-item-Noodles"
+        }
+      ],
+      "nativeTestsSHA256": "9420313cdafbbfc9ef16dddbd193437bf48ee6193526e41e61ff0c1f0af1d2f3",
+      "outerExitCode": 0,
+      "rawManifestExtraInputsExcluded": [
+        "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcodecloud/manifest.json"
+      ],
+      "sourceComparisonScope": "Tracked native verification inputs at run finalization; unrelated XcodeCloud metadata excluded.",
+      "sourceInputCount": 50,
+      "sourceManifestSHA256": "f687ce384adb469a18d4a0e96d950334e7fef3b26e56589ee9b7830163aae3c9",
+      "summarySHA256": "e596973daccc09c70cb9cab4113a5bc79d5d382a75d22f95200284f6de5b5d3b"
+    }
+  ],
+  "scope": "Four complete native helper-caller journeys per device; this does not replace a complete hosted 116-case acceptance run.",
+  "sourceDeltaFromTestedD5": [
+    "SplitMyMealUITests/MealJourneyTests.swift"
+  ],
+  "sourceDictionary": {
+    "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "150322a11254db287f51cf13001148ff5b63f2f4833e92c59acd7db4dcec35fe",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+    "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Fork.svg": "391c1321996375193539f3156e1a2b1c8703f408e5fdc6c49db882bed23390b8",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Spoon.svg": "262d3987894d9c03caa8a3131e3abd6673c95a3a7e7396df4ac2df14e18fd610",
+    "SplitMyMeal-Prod-A/AppIcon.icon/icon.json": "bccb2141a51764145e194a8cf2c5ca69fd6a4d1942c696f8f5db892b74daa1e6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+    "SplitMyMeal-Prod-A/Assets.xcassets/DestructiveText.colorset/Contents.json": "81d01704abf3ef7351e1191ca8d5155e87634f81b80908090af5841e82dfe0db",
+    "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+    "SplitMyMeal-Prod-A/Design/MealDemo.swift": "97f2d4e827c0c383a17791d6f7d4c38b3f798fe1e9895b6df6aec369fc9608a6",
+    "SplitMyMeal-Prod-A/Design/MealUI.swift": "db6297661d1c20da30fbc9b160e335a8dcd4ad15f16ab5d4e4d6a78c3f7e417a",
+    "SplitMyMeal-Prod-A/Info.plist": "e86a1afd22403c408246b01a644df11f538e4e79735c0a0e89dbf648e9f7d984",
+    "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+    "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+    "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+    "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+    "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+    "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+    "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+    "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+    "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+    "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+    "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "d51eeae2a2c5848ce6fe5739d77e12a4df5e3098e19fedfdeed95dae75f80fa4",
+    "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "97c145abfd7a44dd3b63084d15a1a1803202daf74f5531a15bd5cbb1f893c5ea",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "a6b2352a4b6c6ea956be068720b973c6bd14a2ca4c835d2f232ddc073a40fa0b",
+    "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "3005dc9a234487ce08813510c034bd12e475eb3d1fe367f963a743e9a5ce0e19",
+    "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "b6153f5fbde6e50d9c4b6bf6d7646ba4a2b21e233aa9be79770e743a3196131b",
+    "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "c9e9e3669fcf3905f2f46c450141b9499089dd761818ace616cd4ea20225055c",
+    "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+    "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "6aacee1789bd8c21feb8eb4ae7dc742235541e8ef9045deb2f64f4b6042e39b9",
+    "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+    "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "5ad9734ab123fec548fc0610ec5133a92665340e20fb3e9463fa7b82bb38211b",
+    "SplitMyMealTests/EditorInputTests.swift": "1a8705881b01d0b650e76a5956136d916f0b8bce2fe1db2a8f56834e5550c8af",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/ExternalStorage/_EXTERNAL_DATA/430C4EE3-78AC-4A21-866C-D3AEFB3801FE": "572f811f6c0fdca5458041c1797766c32aa7eedd8249dc2139e7236b8bf314eb",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/PROVENANCE.md": "688fcffca76ced4d7a215c6f2c27d247defe364def29b1e0e52a8fd31a5e084d",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/hashes.json": "6b7b3686e48f5b28e4c8841d15bd7cb6b402951f5bd4ed92ecd6a7e991ac52c8",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/legacy.store": "9c75e1ea2553f878c8ab06c072ef616ab6025410581ca94337652647b56fa54e",
+    "SplitMyMealTests/MealAmountsTests.swift": "e87d118b50141ba596d4cd3189962daa002b136dcb0faf8fa7347066b70d7283",
+    "SplitMyMealTests/MealStoreTests.swift": "8e065495b1d1c18afa5094a318882f80e4beab7289aa903bdc25f7f4d9bd5e08",
+    "SplitMyMealUITests/LiveMapKitTests.swift": "75854bddc28719858557b671ab6f75c00fddbfd61635dfa222275e18e06736f8",
+    "SplitMyMealUITests/MealJourneyTests.swift": "b1d7c2a5638c40e2115f2ea192f20e0e5320862bef51f58bb677f173578d1a71",
+    "scripts/native-test-selection.py": "8fc1bdf417c3c56819505c2d07ae63c4dbe70284eb0015db6e8933e72aab1096",
+    "scripts/prepare-app-store-screenshots.swift": "862a683db3e385c91ee03cba7aca8ddd2e23abe570607a8acc27ada32c153ce7",
+    "scripts/select-simulator.py": "35b60702c49e3e8e516aaf1a111eed21e84c5b3f1c5588d15ba96173c0e9ecc3",
+    "scripts/stable-test-partitions.json": "414faabccc575de7acca13b0ab23ba398949808b7d6cdb2cd0aef531692fc30f",
+    "scripts/tests/test_native_test_selection.py": "2df61a9a206684defd1f8eeea3c921c19dee3f3d9dca00b4c1dee1d5abe95c85",
+    "scripts/verify-ios.sh": "0adbf93dbac09f537ad4851fcdb344d24e175cb7101d284413433a479998dfcd"
+  },
+  "sourceInputCount": 50,
+  "testSourceBeforeManifestSHA256": "8a39346fe5b0628c60620b298fdfec0dd24c8ee2f14204d64c61f9b29d8a8cc0"
+}

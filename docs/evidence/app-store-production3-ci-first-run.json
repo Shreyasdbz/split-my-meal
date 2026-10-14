@@ -1,0 +1,239 @@
+{
+  "actualNativeCounts": {
+    "executed": 116,
+    "failed": 1,
+    "passed": 115,
+    "skipped": 0
+  },
+  "allSourceInputsMatchTestedHead": true,
+  "failedCase": {
+    "assertion": "Assignment toggle must actually change state.",
+    "durationSeconds": 122.134,
+    "event": {
+      "coordinates": [
+        {
+          "eventType": 1,
+          "offsetSeconds": 0.0,
+          "x": 360.1,
+          "y": 464.3333333333333
+        },
+        {
+          "eventType": 3,
+          "offsetSeconds": 0.05,
+          "x": 360.1,
+          "y": 464.3333333333333
+        }
+      ],
+      "orientation": 1,
+      "targetFrameInArchivedEvent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "identifier": "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+    "kind": "State-change assertion; no execution allowance exceeded",
+    "laterFrame": {
+      "bothValues": "1",
+      "labeledSwitch": [
+        16,
+        438.3,
+        370,
+        52
+      ],
+      "nestedKnob": [
+        309,
+        450.3,
+        63,
+        28
+      ]
+    },
+    "limitations": "The later ON state and event coordinate do not establish the precise pre-tap accessibility frame or root cause. The query debug attachment contains only its query chain.",
+    "sequence": [
+      {
+        "logSeconds": 100.35,
+        "operation": "Native keyboard Done tap"
+      },
+      {
+        "logSeconds": 102.72,
+        "operation": "Keyboard absence confirmed"
+      },
+      {
+        "logSeconds": 107.78,
+        "operation": "Single Alice switch knob coordinate tap"
+      },
+      {
+        "logSeconds": 111.82,
+        "operation": "Value == String 1 expectation queried"
+      },
+      {
+        "logSeconds": 116.01,
+        "operation": "Expectation timeout and debug capture"
+      },
+      {
+        "logSeconds": 117.48,
+        "operation": "Failure screenshot shows Alice ON, item share $24.00, Bob OFF; no keyboard"
+      },
+      {
+        "logSeconds": 119.72,
+        "operation": "Failure hierarchy records labeled Alice switch and nested knob both value1"
+      }
+    ],
+    "sourceLine": 1609
+  },
+  "nativeAttachments": [
+    {
+      "filename": "3044D955-DE66-4ED6-9E16-3133B5E3B7D6.png",
+      "sha256": "5c75aaff91be24694af32a0f86caa76a3098507ca63197dc259f32cd2823addf"
+    },
+    {
+      "filename": "6B15891E-DC8D-43B1-A249-FE4EC3EA861F.txt",
+      "sha256": "88a300dda456732119c8bdcd538d4f4870dd9825bf32ce0c7785c30b6fa1ff32"
+    },
+    {
+      "filename": "E7F010E3-4DBB-4BC9-AD61-9375BB70DF41.txt",
+      "sha256": "ec799457e78b4588756f359d632a3287edb86d7939bd0e5b497be9c5daeec37f"
+    },
+    {
+      "filename": "1308218F-E713-4582-BF7A-1874CDA47DD5",
+      "sha256": "945c69037b2e4efbe55c544aa311e0f5b3da0a40a9a6a3de52b6686d3116f1e2"
+    },
+    {
+      "filename": "EAC3AF11-E718-479F-9AD7-A83C40291092.mp4",
+      "sha256": "6954a6ba886649c5a2ac092b4ce912d30b62b090a5dea331cb9d21ba9d36335c"
+    }
+  ],
+  "partitions": [
+    {
+      "actualNativeSummary": {
+        "failedTests": 1,
+        "passedTests": 44,
+        "result": "Failed",
+        "skippedTests": 0,
+        "totalTestCount": 45
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 12,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "iphone",
+      "logSHA256": "e666307d35096b085b2ceae03ef5e540ea08c11197bd112bb3cb6902cda5b33b",
+      "partition": "a"
+    },
+    {
+      "actualNativeSummary": {
+        "failedTests": 0,
+        "passedTests": 13,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 13
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 8,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "iphone",
+      "logSHA256": "5b3a2cdf1841a570b66d1af9bc99ed0e09b75d485d82c453de0360c6ba72514a",
+      "partition": "b"
+    },
+    {
+      "actualNativeSummary": {
+        "failedTests": 0,
+        "passedTests": 45,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 45
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 12,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "ipad",
+      "logSHA256": "99bae26e27a832a7680a5e0460e6f34dbd749921b252c4148d9c21f41be07a90",
+      "partition": "a"
+    },
+    {
+      "actualNativeSummary": {
+        "failedTests": 0,
+        "passedTests": 13,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 13
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 8,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "ipad",
+      "logSHA256": "560032af1baf6cd988820fe7f2cd94f671e7aa4cd610fadb0413140dc81a3b96",
+      "partition": "b"
+    }
+  ],
+  "publicationDate": "2026-10-14",
+  "result": "Failed",
+  "runID": 38515303275,
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/38515303275",
+  "sourceInputCount": 50,
+  "sourceManifestSHA256": "4da41b9c6998e421bc245b3daae259257067d7c45982c6da679027780c921548",
+  "testedHead": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020",
+  "videoObservation": {
+    "clockScope": "Decoded recording timestamps; no assumption of exact equality with XCTest log elapsed times.",
+    "observedOffRecordingSeconds": 101.825,
+    "observedOnRecordingSeconds": 110.19666666666667,
+    "sampleMetadata": {
+      "displayHeight": 2622,
+      "displayWidth": 1206,
+      "durationSeconds": 121.72333333333333,
+      "minimumFrameDurationSeconds": 0.0016666666666666668,
+      "naturalHeight": 2622,
+      "naturalWidth": 1206,
+      "nominalFrameRate": 9.325531959533691,
+      "samples": [
+        {
+          "actualDecodedSeconds": 101.825,
+          "filename": "00.png",
+          "height": 2622,
+          "requestedSeconds": 107.7,
+          "width": 1206
+        },
+        {
+          "actualDecodedSeconds": 101.825,
+          "filename": "01.png",
+          "height": 2622,
+          "requestedSeconds": 109,
+          "width": 1206
+        },
+        {
+          "actualDecodedSeconds": 110.19666666666667,
+          "filename": "02.png",
+          "height": 2622,
+          "requestedSeconds": 111.8,
+          "width": 1206
+        },
+        {
+          "actualDecodedSeconds": 110.19666666666667,
+          "filename": "03.png",
+          "height": 2622,
+          "requestedSeconds": 116,
+          "width": 1206
+        },
+        {
+          "actualDecodedSeconds": 110.19666666666667,
+          "filename": "04.png",
+          "height": 2622,
+          "requestedSeconds": 117.5,
+          "width": 1206
+        }
+      ]
+    }
+  }
+}

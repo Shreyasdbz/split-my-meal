@@ -1602,11 +1602,32 @@ final class MealJourneyTests: XCTestCase {
         dismissKeyboard()
         let control = app.switches[identifier]
         revealButton(control, name: identifier)
+        XCTAssertEqual(app.state, .runningForeground)
+        XCTAssertTrue(control.isEnabled && control.isHittable)
+        XCTAssertTrue(app.frame.contains(control.frame))
+        XCTAssertEqual(control.value as? String, "0", "The assignment must begin unselected.")
+        let before = XCTAttachment(string: "Value: \(String(describing: control.value))\nFrame: \(control.frame)\nWindow: \(app.frame)\nControl: \(control.debugDescription)")
+        before.name = "assignment-switch-before-" + identifier
+        before.lifetime = .keepAlways
+        add(before)
         // SwiftUI exposes the whole labeled row as the switch; the native knob
         // is at its trailing edge, while tapping the row label only clears focus.
         control.coordinate(withNormalizedOffset: CGVector(dx: 0.93, dy: 0.5)).tap()
-        let enabled = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == %@", "1"), object: control)
-        XCTAssertEqual(XCTWaiter.wait(for: [enabled], timeout: 5), .completed, "Assignment toggle must actually change state.")
+        // A hosted native snapshot took four seconds within the old five-second
+        // wait. Resolve the changed value afresh within a bounded state wait.
+        let enabled = XCTNSPredicateExpectation(predicate: NSPredicate { object, _ in
+            guard let application = object as? XCUIApplication,
+                  application.state == .runningForeground else { return false }
+            let refreshed = application.switches[identifier]
+            return refreshed.exists && refreshed.value as? String == "1"
+        }, object: app)
+        XCTAssertEqual(XCTWaiter.wait(for: [enabled], timeout: 15), .completed, "Assignment toggle must actually change state.")
+        let refreshed = app.switches[identifier]
+        XCTAssertEqual(refreshed.value as? String, "1")
+        let after = XCTAttachment(string: "Value: \(String(describing: refreshed.value))\nFrame: \(refreshed.frame)\nControl: \(refreshed.debugDescription)")
+        after.name = "assignment-switch-after-" + identifier
+        after.lifetime = .keepAlways
+        add(after)
     }
 
     private func closeShareSheet() {
