@@ -72,12 +72,14 @@ struct ChargeEditor: View {
                     }
                 }
                 Section {
-                    Button("Clear \(kind.rawValue)", role: .destructive) {
+                    Button(role: .destructive) {
                         valueFocused = false
                         value = "0"
                         clearRequested = true
+                    } label: {
+                        Text("Clear \(kind.rawValue)").foregroundStyle(Color.mealDestructiveText)
                     }
-                        .accessibilityIdentifier("clear-charge")
+                    .accessibilityIdentifier("clear-charge")
                 }
             }
             .navigationTitle(kind.title)

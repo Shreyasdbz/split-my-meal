@@ -46,7 +46,7 @@ struct MealEditor: View {
         let receiptPickerTitle = receipt == nil ? "Add photo" : "Replace photo"
         return NavigationStack {
             Form {
-                Section("Meal") {
+                Section {
                     TextField("Meal title", text: $title)
                         .textInputAutocapitalization(.words)
                         .focused($focusedField, equals: .title)
@@ -80,8 +80,8 @@ struct MealEditor: View {
                     } label: {
                         Text("Custom emoji").accessibilityIdentifier("custom-emoji")
                     }
-                }
-                Section("Restaurant") {
+                } header: { Text("Meal").foregroundStyle(Color.mealSecondaryText) }
+                Section {
                     Button {
                         focusedField = nil
                         showLocationSearch = true
@@ -99,11 +99,13 @@ struct MealEditor: View {
                     }
                     .accessibilityIdentifier("choose-restaurant")
                     if restaurant != nil {
-                        Button("Remove restaurant", role: .destructive) { restaurant = nil }
-                            .accessibilityIdentifier("remove-restaurant")
+                        Button(role: .destructive) { restaurant = nil } label: {
+                            Text("Remove restaurant").foregroundStyle(Color.mealDestructiveText)
+                        }
+                        .accessibilityIdentifier("remove-restaurant")
                     }
-                }
-                Section("Receipt") {
+                } header: { Text("Restaurant").foregroundStyle(Color.mealSecondaryText) }
+                Section {
                     PhotosPicker(selection: $selectedPhoto, matching: .images) {
                         Label(receiptPickerTitle, systemImage: "photo")
                     }
@@ -132,18 +134,22 @@ struct MealEditor: View {
                             Text("Photo unavailable. Replace or remove it.")
                                 .foregroundStyle(Color.mealSecondaryText)
                         }
-                        Button("Remove receipt", role: .destructive) {
+                        Button(role: .destructive) {
                             cancelPhotoLoad()
                             selectedPhoto = nil
                             self.receipt = nil
                             receiptPreview = nil
+                        } label: {
+                            Text("Remove receipt").foregroundStyle(Color.mealDestructiveText)
                         }
                     }
-                }
+                } header: { Text("Receipt").foregroundStyle(Color.mealSecondaryText) }
                 if existingMeal != nil {
                     Section {
-                        Button("Delete meal", role: .destructive) { showDeleteConfirmation = true }
-                            .accessibilityIdentifier("delete-meal")
+                        Button(role: .destructive) { showDeleteConfirmation = true } label: {
+                            Text("Delete meal").foregroundStyle(Color.mealDestructiveText)
+                        }
+                        .accessibilityIdentifier("delete-meal")
                     }
                 }
             }

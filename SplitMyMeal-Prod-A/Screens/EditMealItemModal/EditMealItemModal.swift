@@ -45,7 +45,7 @@ struct ItemEditor: View {
         let shares = draftShares
         NavigationStack {
             Form {
-                Section("Item") {
+                Section {
                     TextField("Item name", text: $name)
                         .textInputAutocapitalization(.words)
                         .focused($focusedField, equals: .name)
@@ -69,7 +69,7 @@ struct ItemEditor: View {
                         }
                     }
                     .accessibilityIdentifier("item-category")
-                }
+                } header: { Text("Item").foregroundStyle(Color.mealSecondaryText) }
                 Section {
                     if !people.isEmpty {
                         if people.count > 1 {
@@ -105,7 +105,7 @@ struct ItemEditor: View {
                     } else {
                         Text("Add people to assign this item.").foregroundStyle(Color.mealSecondaryText)
                     }
-                } header: { Text("Shared by") } footer: {
+                } header: { Text("Shared by").foregroundStyle(Color.mealSecondaryText) } footer: {
                     if !people.isEmpty {
                         Text(consumerIDs.isEmpty ? "Unassigned until someone is selected." : "Item shares exclude tax and tip.")
                             .foregroundStyle(Color.mealSecondaryText)
@@ -113,8 +113,10 @@ struct ItemEditor: View {
                 }
                 if existingItem != nil {
                     Section {
-                        Button("Delete item", role: .destructive) { confirmDelete = true }
-                            .accessibilityIdentifier("delete-item")
+                        Button(role: .destructive) { confirmDelete = true } label: {
+                            Text("Delete item").foregroundStyle(Color.mealDestructiveText)
+                        }
+                        .accessibilityIdentifier("delete-item")
                     }
                 }
             }

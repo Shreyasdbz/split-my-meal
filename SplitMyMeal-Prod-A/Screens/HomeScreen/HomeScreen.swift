@@ -141,7 +141,11 @@ private struct MealLibraryRow: View {
                 // Native primary styling keeps small metadata legible and follows
                 // the selected sidebar background; type size supplies the hierarchy.
                 Text((meal.people ?? []).isEmpty ? "No people added" : (meal.people ?? []).map(\.name).sorted().joined(separator: ", "))
-                    .font(.subheadline).foregroundStyle(.primary).lineLimit(2)
+                    .font(.subheadline).foregroundStyle(.primary)
+                    // Every participant must remain visible at accessibility sizes.
+                    .lineLimit(textSize.isAccessibilitySize ? nil : 2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("library-people")
                 ViewThatFits(in: .horizontal) {
                     HStack { total; Spacer(); date }
                     VStack(alignment: .leading, spacing: 4) { total; date }

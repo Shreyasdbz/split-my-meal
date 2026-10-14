@@ -729,7 +729,7 @@ final class MealJourneyTests: XCTestCase {
         // four-minute default; retain a bounded allowance for all five surfaces.
         executionTimeAllowance = 420
         app.terminate()
-        app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-store-demo"]
+        app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-store-demo", "--appearance-light"]
         launchForMealTesting()
         if UIDevice.current.userInterfaceIdiom == .pad { settleOrientation(.landscapeLeft) }
         for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
@@ -811,7 +811,7 @@ final class MealJourneyTests: XCTestCase {
             screenshot("app-store-library")
         } else {
             app.terminate()
-            app.launchArguments = ["--uitesting"]
+            app.launchArguments = ["--uitesting", "--appearance-light"]
             launchForMealTesting()
             for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
                 XCTAssertTrue(app.buttons["meal-\(title)"].waitForExistence(timeout: 5), "The storefront library must retain all three saved meals after relaunch.")
@@ -1023,6 +1023,14 @@ final class MealJourneyTests: XCTestCase {
             let libraryTotal = app.buttons["meal-Dinner at Juniper"].staticTexts["$113.66"]
             XCTAssertTrue(libraryTotal.waitForExistence(timeout: 5))
             var measurements = ["libraryAmountHeight": libraryTotal.frame.height]
+            // Combined accessibility rows may repeat a descendant identifier on their wrapper.
+            // Match the participant leaf by both its identifier and exact semantic label.
+            let libraryPeople = app.buttons["meal-Dinner at Juniper"].staticTexts.matching(
+                NSPredicate(format: "identifier == %@ AND label == %@", "library-people", "Alex, Jordan, Sam")
+            ).element
+            XCTAssertTrue(libraryPeople.waitForExistence(timeout: 5))
+            XCTAssertEqual(libraryPeople.label, "Alex, Jordan, Sam")
+            measurements["libraryPeopleHeight"] = libraryPeople.frame.height
             screenshot("accessibility-growth-library-" + category)
             openDemo()
             measurements["mealAmountHeight"] = app.staticTexts["meal-total"].frame.height
@@ -1045,6 +1053,30 @@ final class MealJourneyTests: XCTestCase {
         add(record)
         for name in frames[0].keys {
             XCTAssertGreaterThan(frames[1][name]!, frames[0][name]!, "Actual semantic text must grow: \(name)")
+        }
+    }
+
+    /// Retains real light/dark label pixels and checks that styling preserves native editing and cancellation.
+    func testReadableLabelsAndDestructiveActionsAcrossAppearances() throws {
+        executionTimeAllowance = 300
+        for appearance in ["light", "dark"] {
+            app.terminate()
+            app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-demo", "--appearance-\(appearance)"]
+            launchForMealTesting()
+            openDemo()
+            XCTAssertEqual(app.staticTexts["meal-total"].value as? String, "$113.66")
+            screenshot("accessibility-contrast-meal-" + appearance)
+            app.buttons["edit-meal"].tap()
+            let delete = revealButton("delete-meal")
+            XCTAssertTrue(delete.isHittable)
+            XCTAssertTrue(app.frame.contains(delete.frame))
+            let geometry = XCTAttachment(string: "Delete label: \(delete.debugDescription)\nFrame: \(delete.frame)\nWindow: \(app.frame)")
+            geometry.name = "destructive-label-native-geometry-" + appearance
+            geometry.lifetime = .keepAlways
+            add(geometry)
+            screenshot("accessibility-contrast-destructive-" + appearance)
+            app.buttons["Cancel"].tap()
+            XCTAssertEqual(app.staticTexts["meal-total"].value as? String, "$113.66", "Color changes must preserve ordinary draft cancellation.")
         }
     }
 
@@ -1653,7 +1685,9 @@ final class MealJourneyTests: XCTestCase {
                 return visibleSubmit(application.keyboards.buttons["Done"].firstMatch, in: viewport)
                     || visibleSubmit(application.buttons["dismiss-person-keyboard"].firstMatch, in: viewport)
             }, object: app)
-            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed,
+            // Native cross-process geometry checks can outlast keyboard presentation.
+            // Keep a bounded readiness wait and recheck the selected control before tapping.
+            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 15), .completed,
                            "Person-name entry must expose a visible native submit control.")
             let viewport = app.frame
             let softwareDone = app.keyboards.buttons["Done"].firstMatch

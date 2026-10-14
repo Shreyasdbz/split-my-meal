@@ -4,7 +4,7 @@
   "subtitle": "Split bills, tax and tip",
   "description": "Split a meal by what each person ordered. Choose who shared each item, add tax and tip, then see and share everyone’s total.\n\n• Divide shared items equally between selected people.\n• Add tax and tip as percentages or fixed amounts.\n• Check itemized shares and any unassigned balance.\n• Keep a receipt photo and restaurant details with the meal.\n• Find past meals with search and sorting.\n\nTax and tip follow item shares. Percentage tips use the subtotal plus tax.\n\nFor iPhone and iPad. Prices are in US dollars. No account required. No ads or tracking.",
   "keywords": "bill,check,restaurant,dinner,receipt,shared,expenses,calculator,group,food",
-  "whatsNew": "Clearer totals, shared-item previews and searchable meal history. Improved receipt viewing and a new app icon.",
+  "whatsNew": "Clearer totals, shared-item previews and searchable meal history. Better readability, receipt viewing and a new app icon.",
   "reviewNotes": "No sign-in required. To review, create a meal, add people and priced items, select who shared each item, then tap View split. Shared items are divided equally between selected people; tax and tip follow item shares. Percentage tips include tax. Receipt photos are attached manually; the app does not scan receipts or process payments. Restaurant search and current-location lookup are optional. Privacy policy and Support are available from Help in the meal library. Meals are stored locally and may sync through the user’s private iCloud account.",
   "supportURL": "https://github.com/Shreyasdbz/split-my-meal/blob/main/misc/Support.md",
   "privacyPolicyURL": "https://github.com/Shreyasdbz/split-my-meal/blob/main/misc/PrivacyPolicy.md",

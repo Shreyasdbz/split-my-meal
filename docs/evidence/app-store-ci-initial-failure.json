@@ -1,0 +1,243 @@
+{
+  "acceptance": "Rejected",
+  "coverage": {
+    "allFourSourceBindingsMatch": true,
+    "casesPerDevice": 57,
+    "completeDisjointCatalogueUnionPerDevice": true,
+    "inputCount": 49
+  },
+  "failureBoundaries": [
+    {
+      "assertion": "Keyboard must disappear after Everyone center tap.",
+      "attachments": [
+        {
+          "nativeBasename": "9F904B32-4AE8-4FBC-B814-720AAEF26BA5.png",
+          "sha256": "914a312dd8d0dcd396c7927b48e77333eba419883a8e30e38c8bef37ef20f797"
+        },
+        {
+          "nativeBasename": "E9678553-CB95-4F1F-9579-B783E7D5E45E.txt",
+          "sha256": "808fe2aa7fb3cc5005d0510d875e6973a5102a907f70992455972af566ef29e2"
+        },
+        {
+          "nativeBasename": "56D1802D-DCD7-4550-B365-A750479A95BD",
+          "sha256": "d57fc5b624466e68738be40e3aa0b0371d2dba08f94ade8c59e396398ca2faa9"
+        }
+      ],
+      "case": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+      "causeEstablished": false,
+      "deviceFamily": "iPad",
+      "elapsedSeconds": 233.653,
+      "observedState": "New item price 9.00 remains focused, software keyboard present, and all three assignments remain off.",
+      "sourceLine": 751
+    },
+    {
+      "case": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+      "deviceFamily": "iPhone",
+      "failure": "Four-minute native allowance exceeded at meal-total reveal after shared-item draft cancellation.",
+      "laterActivity": "Native receipt capture 295.74 seconds and geometry 298.52 seconds; termination 301.80 seconds. Library/Help segment did not complete."
+    },
+    {
+      "case": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+      "deviceFamily": "iPad",
+      "failure": "Four-minute native allowance exceeded while collecting meal-editor audit findings.",
+      "laterActivity": "Complete inventory attachment was logged 253.96 seconds, but is unavailable in exported attachment manifest."
+    }
+  ],
+  "limitations": [
+    "The late iPad B complete inventory was logged after its allowance expired but is absent from exported attachments.",
+    "The iPad A post-tap frame establishes incomplete assignment and persistent keyboard, without proving event-delivery or production-action cause.",
+    "No passing full-suite or App Review approval claim."
+  ],
+  "nativeCounts": {
+    "executed": 114,
+    "failed": 3,
+    "passed": 111,
+    "skipped": 0
+  },
+  "officialConclusion": "failure",
+  "parts": [
+    {
+      "artifactBytes": 102952878,
+      "artifactID": 11870160946,
+      "diagnostics": {
+        "allowanceExceeded": 1,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 12,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "failedCases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+          "status": "Failed"
+        }
+      ],
+      "family": "iphone",
+      "partition": "a",
+      "sha256": {
+        "native-tests.json": "7a9f28efe42c07528d50a3ae1f80e300380b80ab27b104774b0bb7196ae75de0",
+        "source-manifest.json": "d39ae9e968d88e25009ceaed2fd824d00d4795c8242fa97d345f555e44df7a99",
+        "test-enumeration.json": "b3f77df17d3477ca0712033bf4152f62cd85b88d72a826b7dde3e734c473a235",
+        "test-selection.json": "9b514d05b599a5c9b6586c5293cebc56527836572b6c2b6931237322319864a8",
+        "test-summary.json": "00b1b0c2f2b4af89758c401ae2b98b94b7c6552f5c4d0b54a631faa1b9721779",
+        "test.log": "6b8884927056a0659e41bba886cb259164d375e89a305c36402ce5b04db603f0"
+      },
+      "summary": {
+        "failedTests": 1,
+        "passedTests": 43,
+        "result": "Failed",
+        "skippedTests": 0,
+        "totalTestCount": 44
+      }
+    },
+    {
+      "artifactBytes": 50344877,
+      "artifactID": 11869856554,
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 8,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "failedCases": [],
+      "family": "iphone",
+      "partition": "b",
+      "sha256": {
+        "native-tests.json": "cee5c7860dd7776d8a5354eb5e7bb9f5e6100dfd3bc66422772ce6e39c69de79",
+        "source-manifest.json": "d39ae9e968d88e25009ceaed2fd824d00d4795c8242fa97d345f555e44df7a99",
+        "test-enumeration.json": "b3f77df17d3477ca0712033bf4152f62cd85b88d72a826b7dde3e734c473a235",
+        "test-selection.json": "17a606224f91140df8765fba3df9136f0b13e6e8e556f51b62cbe4cb0c4e8709",
+        "test-summary.json": "c82c0bf168f08b898a08317e97526416e04870bf21c227ce76591629698a0323",
+        "test.log": "61cc9247c79fb061c6c3f373e70dff7faf4de8049426f441d09e3a59f0349cda"
+      },
+      "summary": {
+        "failedTests": 0,
+        "passedTests": 13,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 13
+      }
+    },
+    {
+      "artifactBytes": 131749746,
+      "artifactID": 11870170611,
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 12,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "failedCases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+          "status": "Failed"
+        }
+      ],
+      "family": "ipad",
+      "partition": "a",
+      "sha256": {
+        "native-tests.json": "df3e347aa657af52bcd373c6de0a2a3ecd794bcb0f31b3bb59e7bf2180104fe4",
+        "source-manifest.json": "d39ae9e968d88e25009ceaed2fd824d00d4795c8242fa97d345f555e44df7a99",
+        "test-enumeration.json": "b3f77df17d3477ca0712033bf4152f62cd85b88d72a826b7dde3e734c473a235",
+        "test-selection.json": "9b514d05b599a5c9b6586c5293cebc56527836572b6c2b6931237322319864a8",
+        "test-summary.json": "854d54ec398847c3dd4cf2aefce2c6f720d1ccc1e53c8be21729e0fe868d9008",
+        "test.log": "f782345acd0db6902ef68ab7e1c2c0f45ddb112b64dd3af633767383add0e941"
+      },
+      "summary": {
+        "failedTests": 1,
+        "passedTests": 43,
+        "result": "Failed",
+        "skippedTests": 0,
+        "totalTestCount": 44
+      }
+    },
+    {
+      "artifactBytes": 46995344,
+      "artifactID": 11870170711,
+      "diagnostics": {
+        "allowanceExceeded": 1,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 8,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "failedCases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+          "status": "Failed"
+        }
+      ],
+      "family": "ipad",
+      "partition": "b",
+      "sha256": {
+        "native-tests.json": "b1061931fbbef66d1644fc0add2545e12ce4e5a37f665577f4f8fada62833768",
+        "source-manifest.json": "d39ae9e968d88e25009ceaed2fd824d00d4795c8242fa97d345f555e44df7a99",
+        "test-enumeration.json": "b3f77df17d3477ca0712033bf4152f62cd85b88d72a826b7dde3e734c473a235",
+        "test-selection.json": "17a606224f91140df8765fba3df9136f0b13e6e8e556f51b62cbe4cb0c4e8709",
+        "test-summary.json": "10ec0b22ae09221c26ba1684985bab5855ac447310d34cd092eda162bf665348",
+        "test.log": "5e5378b5072ea857711619349f128a4226307fffe66703b547a200e1d662b422"
+      },
+      "summary": {
+        "failedTests": 1,
+        "passedTests": 12,
+        "result": "Failed",
+        "skippedTests": 0,
+        "totalTestCount": 13
+      }
+    }
+  ],
+  "publicationDate": "2026-10-14",
+  "repairScopePlanned": "Test-only store capture keyboard dismissal before Everyone, store capture 420-second allowance, and observational inventory 300-second allowance. App sources and uploaded build 2 remain unchanged.",
+  "runID": 38507212392,
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/38507212392",
+  "sourceBindings": {
+    "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "85d030acdd33a8eb3690f1c691823a8a46b7832dd4ec9ad220bbc0a2af5cb873",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+    "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Fork.svg": "391c1321996375193539f3156e1a2b1c8703f408e5fdc6c49db882bed23390b8",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Spoon.svg": "262d3987894d9c03caa8a3131e3abd6673c95a3a7e7396df4ac2df14e18fd610",
+    "SplitMyMeal-Prod-A/AppIcon.icon/icon.json": "bccb2141a51764145e194a8cf2c5ca69fd6a4d1942c696f8f5db892b74daa1e6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+    "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+    "SplitMyMeal-Prod-A/Design/MealDemo.swift": "97f2d4e827c0c383a17791d6f7d4c38b3f798fe1e9895b6df6aec369fc9608a6",
+    "SplitMyMeal-Prod-A/Design/MealUI.swift": "133391ba64ffb2fe955c1e7c9ec0676f593bc74f29e98ded3d7b06b02a9975ae",
+    "SplitMyMeal-Prod-A/Info.plist": "e86a1afd22403c408246b01a644df11f538e4e79735c0a0e89dbf648e9f7d984",
+    "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+    "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+    "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+    "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+    "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+    "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+    "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+    "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+    "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+    "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+    "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "380f10c29f27277d1a4e271ad169ee2f19bec340a4df9e3f7d74ba00c0935a91",
+    "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "ff88f280b693a4856517cda638f1c71f5d7fbfd8a55b91c5a962b89952a0d593",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "22e7c75a4db107b6a52dbea28a8f5e689f7dd6b538436cffdf4dec1c84eea9bc",
+    "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "83f5a419d25067832a06546cc49aefd68ff0a60e4bc0fc6b0805e28b935f555f",
+    "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "9efe84894ed926c1f73419419df6672958a8d01078e02ea1b974654bc8749a34",
+    "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "344727fa6b217656d47f1c8247c7126161dec173a038285f7c1cf5948b50e77a",
+    "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+    "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "7526ead54eac7d898c8b1c902cd0b1d7ab3c07322b27f92c86cb3cfb9d255951",
+    "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+    "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "5ad9734ab123fec548fc0610ec5133a92665340e20fb3e9463fa7b82bb38211b",
+    "SplitMyMealTests/EditorInputTests.swift": "1a8705881b01d0b650e76a5956136d916f0b8bce2fe1db2a8f56834e5550c8af",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/ExternalStorage/_EXTERNAL_DATA/430C4EE3-78AC-4A21-866C-D3AEFB3801FE": "572f811f6c0fdca5458041c1797766c32aa7eedd8249dc2139e7236b8bf314eb",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/PROVENANCE.md": "688fcffca76ced4d7a215c6f2c27d247defe364def29b1e0e52a8fd31a5e084d",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/hashes.json": "6b7b3686e48f5b28e4c8841d15bd7cb6b402951f5bd4ed92ecd6a7e991ac52c8",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/legacy.store": "9c75e1ea2553f878c8ab06c072ef616ab6025410581ca94337652647b56fa54e",
+    "SplitMyMealTests/MealAmountsTests.swift": "e87d118b50141ba596d4cd3189962daa002b136dcb0faf8fa7347066b70d7283",
+    "SplitMyMealTests/MealStoreTests.swift": "8e065495b1d1c18afa5094a318882f80e4beab7289aa903bdc25f7f4d9bd5e08",
+    "SplitMyMealUITests/LiveMapKitTests.swift": "75854bddc28719858557b671ab6f75c00fddbfd61635dfa222275e18e06736f8",
+    "SplitMyMealUITests/MealJourneyTests.swift": "af1190231a8a42feb9edbbaa7a5eed0de7fb6c398a85a7499268f3812f060025",
+    "scripts/native-test-selection.py": "8fc1bdf417c3c56819505c2d07ae63c4dbe70284eb0015db6e8933e72aab1096",
+    "scripts/prepare-app-store-screenshots.swift": "862a683db3e385c91ee03cba7aca8ddd2e23abe570607a8acc27ada32c153ce7",
+    "scripts/select-simulator.py": "35b60702c49e3e8e516aaf1a111eed21e84c5b3f1c5588d15ba96173c0e9ecc3",
+    "scripts/stable-test-partitions.json": "b9454e3d3f0ee674c33a77308f1071f52d960a61f2f0879c5d512bc0f6a54404",
+    "scripts/tests/test_native_test_selection.py": "2df61a9a206684defd1f8eeea3c921c19dee3f3d9dca00b4c1dee1d5abe95c85",
+    "scripts/verify-ios.sh": "6f2adc693d9fe26f9730b077ed1202b5222b3bf23efb066c0773374fbdae87b5"
+  },
+  "testedHead": "3d852efb3431b6c99539a1e428da74eddb05e393"
+}

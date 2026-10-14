@@ -102,6 +102,9 @@ extension Color {
 
     /// Keeps small explanatory text readable in both appearances, including accent-tinted controls.
     static var mealSecondaryText: Color { Color.primary.opacity(0.72) }
+
+    /// Readable red for app-owned destructive labels on native form cards.
+    static var mealDestructiveText: Color { Color("DestructiveText") }
 }
 
 /// A labeled amount row that stacks rather than truncates at accessibility sizes.

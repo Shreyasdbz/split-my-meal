@@ -21,7 +21,7 @@ struct SplitsModal: View {
                             MealAssignmentStatus().accessibilityIdentifier("split-assignment-status")
                         }
                     }.padding(.vertical, 8)
-                } header: { Text(meal.title) }
+                } header: { Text(meal.title).foregroundStyle(Color.mealSecondaryText) }
                 if amounts.hasInvalidValues {
                     Section {
                         Label {
@@ -40,7 +40,7 @@ struct SplitsModal: View {
                             .foregroundStyle(Color.mealSecondaryText)
                     }
                 }
-                Section("Per person") {
+                Section {
                     if people.isEmpty {
                         Text("Add people and assign items to see their shares.").foregroundStyle(Color.mealSecondaryText)
                     }
@@ -62,7 +62,7 @@ struct SplitsModal: View {
                         } label: { AmountRow(title: person.name, amount: amounts.amount(for: person), emphasized: true) }
                         .accessibilityIdentifier("split-\(person.name)")
                     }
-                }
+                } header: { Text("Per person").foregroundStyle(Color.mealSecondaryText) }
                 Section {
                     DisclosureGroup("Bill details") {
                         AmountRow(title: "Subtotal", amount: amounts.subtotal)

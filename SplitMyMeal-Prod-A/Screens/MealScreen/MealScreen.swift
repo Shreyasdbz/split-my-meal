@@ -99,7 +99,7 @@ struct MealScreen: View {
                 }
                 Button("Add person", systemImage: "person.badge.plus") { showNewPerson = true }
                     .accessibilityIdentifier("add-person")
-            } header: { Text("People") }
+            } header: { Text("People").foregroundStyle(Color.mealSecondaryText) }
 
             Section {
                 ForEach(items) { item in
@@ -124,9 +124,9 @@ struct MealScreen: View {
                 }
                 Button("Add item", systemImage: "plus.circle") { showNewItem = true }
                     .accessibilityIdentifier("add-item")
-            } header: { Text("Items") }
+            } header: { Text("Items").foregroundStyle(Color.mealSecondaryText) }
 
-            Section("Restaurant & receipt") {
+            Section {
                 if let restaurant = meal.restaurantDetails {
                     Button { showMap = true } label: {
                         HStack(spacing: 12) {
@@ -153,7 +153,7 @@ struct MealScreen: View {
                 } else {
                     Button("Attach receipt", systemImage: "doc.badge.plus") { showEditor = true }
                 }
-            }
+            } header: { Text("Restaurant & receipt").foregroundStyle(Color.mealSecondaryText) }
         }
         .navigationTitle("\(mealDisplayCharm(meal.charm)) \(meal.title)")
         .navigationBarTitleDisplayMode(.inline)

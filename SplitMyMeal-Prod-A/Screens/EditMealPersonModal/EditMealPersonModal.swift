@@ -26,19 +26,19 @@ struct PersonEditor: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Person") {
+                Section {
                     TextField("Person name", text: $name)
                         .textInputAutocapitalization(.words)
                         .focused($nameFocused)
                         .submitLabel(.done)
                         .onSubmit { nameFocused = false }
                         .accessibilityIdentifier("person-name")
-                }
+                } header: { Text("Person").foregroundStyle(Color.mealSecondaryText) }
                 if let items = meal.items, !items.isEmpty {
                     ForEach(MealItemCategory.allCases, id: \.self) { category in
                         let categoryItems = items.filter { $0.category == category }.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
                         if !categoryItems.isEmpty {
-                            Section(category.displayName) {
+                            Section {
                                 ForEach(categoryItems) { item in
                                     Toggle(isOn: Binding(get: { itemIDs.contains(item.id) }, set: { selected in
                                         if selected { itemIDs.insert(item.id) } else { itemIDs.remove(item.id) }
@@ -50,18 +50,20 @@ struct PersonEditor: View {
                                     }
                                     .accessibilityIdentifier("person-item-\(item.name)")
                                 }
-                            }
+                            } header: { Text(category.displayName).foregroundStyle(Color.mealSecondaryText) }
                         }
                     }
                 } else {
-                    Section("Items") {
+                    Section {
                         Text("Add items to the meal, then select them here.").foregroundStyle(Color.mealSecondaryText)
-                    }
+                    } header: { Text("Items").foregroundStyle(Color.mealSecondaryText) }
                 }
                 if existingPerson != nil {
                     Section {
-                        Button("Delete person", role: .destructive) { confirmDelete = true }
-                            .accessibilityIdentifier("delete-person")
+                        Button(role: .destructive) { confirmDelete = true } label: {
+                            Text("Delete person").foregroundStyle(Color.mealDestructiveText)
+                        }
+                        .accessibilityIdentifier("delete-person")
                     }
                 }
             }
