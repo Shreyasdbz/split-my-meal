@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "generator": "Built-in image_gen",
+  "assets": [
+    {
+      "file": "docs/app-store-editorial/header.png",
+      "bytes": 4766597,
+      "sha256": "1a9473112459a636673bb851698bf045e3274f0296efffa93c7f1b555e5dda47",
+      "width": 3840,
+      "height": 1646,
+      "bitsPerSample": 8,
+      "pngColorType": 2,
+      "placement": "header",
+      "headline": "See everyone\u2019s share.",
+      "generatedMaster": {
+        "file": "docs/app-store-editorial/sources/header-final.png",
+        "bytes": 1781395,
+        "sha256": "d0e96fb0d706479f5d3c2627b5ae1f5784937d1556b9540819942072b8250348",
+        "width": 1916,
+        "height": 821,
+        "bitsPerSample": 8,
+        "pngColorType": 2
+      },
+      "formatExport": "macOS sips resampling and sRGB profile conversion; no added detail or native-pixel identity claimed",
+      "hasAlpha": false,
+      "colorSpace": "sRGB IEC61966-2.1"
+    },
+    {
+      "file": "docs/app-store-editorial/search.png",
+      "bytes": 2679759,
+      "sha256": "6d2e1303c757a8f2746d5a7c8a83872a1d8942e0e102fc8addbe1e38348d1c80",
+      "width": 1920,
+      "height": 1280,
+      "bitsPerSample": 8,
+      "pngColorType": 2,
+      "placement": "searchResults",
+      "headline": "Split your meal.",
+      "generatedMaster": {
+        "file": "docs/app-store-editorial/sources/search-final.png",
+        "bytes": 1857418,
+        "sha256": "9da6762c3de7cd1b2b1eefba387967e9a2de2b400a4e90a98388112849774700",
+        "width": 1536,
+        "height": 1024,
+        "bitsPerSample": 8,
+        "pngColorType": 2
+      },
+      "formatExport": "macOS sips resampling and sRGB profile conversion; no added detail or native-pixel identity claimed",
+      "hasAlpha": false,
+      "colorSpace": "sRGB IEC61966-2.1"
+    }
+  ],
+  "nativeScreenReference": {
+    "file": "docs/app-store-assets/captures/iphone/01-share.png",
+    "bytes": 185815,
+    "sha256": "114330d1fa4e5a2c9227f902d82f47569a8442e21d2ef8d4241a5f0e10c64085",
+    "width": 1206,
+    "height": 2622,
+    "bitsPerSample": 8,
+    "pngColorType": 2
+  },
+  "screenContentReview": {
+    "totalUSD": "113.66",
+    "people": [
+      {
+        "name": "Alex",
+        "shareUSD": "39.19"
+      },
+      {
+        "name": "Jordan",
+        "shareUSD": "36.59"
+      },
+      {
+        "name": "Sam",
+        "shareUSD": "37.88"
+      }
+    ],
+    "copy": "All items assigned; Bill details; Share split",
+    "scope": "Generated editorial depictions based on a real native capture. Names, amounts and visible controls checked; perspective typesetting is not pixel-identical to the native screen."
+  },
+  "deviceTreatment": "Generic graphite frame with smooth rim; no physical buttons, sensor housing or brand marks. Moderate 3D orientation retained.",
+  "review": {
+    "independentVisualReviewer": true,
+    "independentCopyReviewer": true,
+    "finalPlacementPreviewPending": true,
+    "approvalClaim": false,
+    "headerCropRepair": {
+      "earlierExportSHA256": "b122d6874fcf935d42cd067bccc207b00d135fc48d93f7cea7ab1f06f9a5350d",
+      "finding": "iPad landscape product-page preview cut the device top and part of Share split, and navigation overlapped upper UI.",
+      "correction": "Smaller generic device moved into the central vertical area; header copy and app content retained.",
+      "privateInitialCropCaptureSHA256": "084462ab81f19202b45744d1927e6d7e4a7cb8b85f93e7a7bdb38c9dcf3b1493",
+      "finalPlacementRecheckPending": true,
+      "earlierAssetLibraryItemPreserved": true
+    },
+    "placementObservations": [
+      {
+        "placement": "header",
+        "device": "iPhone",
+        "candidate": "earlier larger-device header",
+        "result": "Headline and complete device visible; superseded by tablet crop repair."
+      },
+      {
+        "placement": "searchResults",
+        "device": "iPhone",
+        "result": "Saved current artwork rendered after page reload; headline and complete device visible at card size."
+      },
+      {
+        "placement": "searchResults",
+        "device": "iPad landscape",
+        "appearance": [
+          "light",
+          "dark"
+        ],
+        "result": "Current artwork rendered; headline clear, complete device and action visible."
+      }
+    ],
+    "privatePlacementCaptureHashes": [
+      {
+        "placement": "searchResults",
+        "device": "iPhone",
+        "appearance": "light",
+        "sha256": "c887c006081384ce1e130855985e2dc3333c61592009fbc0dc926ab7ba6533dd"
+      },
+      {
+        "placement": "searchResults",
+        "device": "iPad landscape",
+        "appearance": "light",
+        "sha256": "e250f76b6addae5d52f5dfe0607186d805b1ac60310a6226b885fe9b4f7adb5b"
+      },
+      {
+        "placement": "searchResults",
+        "device": "iPad landscape",
+        "appearance": "dark",
+        "sha256": "652b5f69e3e1d38b55b516bffc2e2b3569d0cf570f692ec99abfacebe5218aa8"
+      }
+    ],
+    "providerPixelsPersistedInRepository": false,
+    "separateProviderPreviewObservation": "The iPad reference preview displayed some existing landscape screenshot-gallery thumbnails rotated. This observation does not establish a native app, PNG export or published App Store defect; the editorial asset review does not certify that separate gallery behavior."
+  },
+  "provider": {
+    "uploaded": false,
+    "saved": false,
+    "headerReplacementPending": true,
+    "searchResultsUploadedAndSaved": true,
+    "currentVersionState": "Prepare for Submission",
+    "submitForReviewClicked": false,
+    "scope": "Earlier header placement removed reversibly for tablet crop repair; its Asset Library item remains. Corrected header upload requires the currently locked Mac to be unlocked."
+  },
+  "primaryReferences": [
+    "https://developer.apple.com/app-store/asset-best-practices/",
+    "https://developer.apple.com/help/app-store-connect/reference/app-information/creative-assets-specifications",
+    "https://developer.apple.com/app-store/marketing/guidelines/"
+  ],
+  "nativeCaptureSource": {
+    "revision": "d5bb9648f9ece5db520e5b21d2ae35d6d17d7020",
+    "manifest": "docs/app-store-assets/source-manifest.json",
+    "manifestSHA256": "4da41b9c6998e421bc245b3daae259257067d7c45982c6da679027780c921548",
+    "scope": "The reference capture uses the frozen build 3 production inputs. Later test-only changes are recorded separately."
+  },
+  "currentNativeTestedRevision": "100634091b098c91655fe6db6d8c9d6966b211d8"
+}

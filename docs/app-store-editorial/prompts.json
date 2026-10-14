@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "tool": "Built-in image_gen",
+  "scope": "Consolidated final prompt set recording art direction and targeted edits, not a verbatim transcript of every iteration. Generated perspective UI is not certified as unchanged native pixels. Selected masters are retained for export reproduction; image generation is not byte-reproducible.",
+  "nativeReference": "docs/app-store-assets/captures/iphone/01-share.png",
+  "prompts": [
+    {
+      "stage": "Header art direction",
+      "prompt": "Use case: compositing / ads-marketing. Create a finished premium App Store product-page header for Split My Meal. Landscape 21:9. Use the real split-summary screenshot as the screen reference in one complete generic graphite device at a modest three-quarter 3D angle. Warm cream and deep emerald, refined editorial product photography, tactile linen, a small fork-and-spoon pairing, subtle ceramic and plant accents, a restrained curved emerald path. Exact headline: See everyone\u2019s share. Three balanced lines in elegant emerald serif type, generous spacing, complete text within the canvas. Keep all real labels, three names, four amounts and the Share split control. No promotional prices, awards, watermarks, confetti, extra devices or segmented plate."
+    },
+    {
+      "stage": "Search art direction",
+      "prompt": "Use case: compositing / ads-marketing. Make coordinated search-results artwork for Split My Meal, landscape 3:2. Match the header\u2019s cream and emerald editorial photography, lighting and dining materials. One complete generic graphite device, center-right, modest three-quarter 3D angle with readable front and believable depth. Exact headline: Split your meal. At center-left in the same elegant emerald serif, wholly inside the canvas, never overlapping the device. Sparse linen, fork and spoon, ceramic rim and plant details. Preserve Split summary, Done, Dinner at Juniper, Total $113.66, All items assigned, Per person, Alex $39.19, Jordan $36.59, Sam $37.88, Bill details and green Share split. Full three rows and action remain visible. No new function, app-price claim, extra device, badge, logo or watermark."
+    },
+    {
+      "stage": "Both device frames",
+      "prompt": "Precise-object-edit. Change only the hardware frame: a clearly generic unbranded 3D display device with a smooth continuous graphite rim. Remove all physical side buttons, switches, volume controls, antenna seams, sensor housing, notches, brand marks and manufacturer-specific details. Preserve the three-quarter angle, depth, materials, complete readable screen, headline, palette, layout, shadows and dining props. Keep exact headline and UI values 113.66 / 39.19 / 36.59 / 37.88. No new elements. This is a generic device illustration, not a recreation of an Apple product."
+    },
+    {
+      "stage": "Header tablet-crop correction",
+      "prompt": "Edit the header layout only to fix the verified iPad App Store vertical crop. Keep the 21:9 panorama, headline and editorial table photography. Shrink the whole generic 3D device to only 50 percent of image height, maintaining its aspect ratio and readable front angle. Center it at 65 percent canvas width and 55 percent canvas height, leaving substantial cream space above and below. Apple\u2019s observed preview crops the top and bottom and overlays navigation near the upper center, so retain the complete top edge and green Share split button inside the central vertical area. Keep See everyone\u2019s share. in its balanced three-line emerald serif layout, existing left placement and approximate type size. Preserve all exact app words, names and figures, the smooth button-free generic rim and quiet peripheral dining props. No new copy, object, device, logo or watermark."
+    }
+  ],
+  "verbatimPromptHistory": false
+}

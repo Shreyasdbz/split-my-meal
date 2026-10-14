@@ -3,17 +3,19 @@
   "date": "2026-10-14",
   "appID": "6575395076",
   "version": "2.0.0",
-  "observedState": "Ready for Review",
+  "observedState": "Prepare for Submission",
   "selectedBuild": "3",
   "selectedAppleBuildID": "ce69258c-6270-4271-a9b8-0b773d4865c9",
   "selectedBuildSaved": true,
   "submitForReviewClicked": false,
   "releaseType": "MANUAL",
   "access": {
-    "nativeControlsAccessible": true,
+    "nativeControlsAccessible": false,
     "appleBrowserSessionAuthenticated": true,
     "signingApprovalReceived": "User go response to the presented signing gate",
-    "existingCloudManagedSigningUsed": true
+    "existingCloudManagedSigningUsed": true,
+    "nativeControlsPreviouslyAccessible": true,
+    "nativeBlocker": "Mac locked during corrected Header upload; owner unlock required."
   },
   "build": {
     "xcodeUploadComplete": true,
@@ -236,7 +238,7 @@
     "providerPixelsPersistedInRepository": false,
     "previousBlockedReadback": "docs/evidence/app-store-production3-provider-initial-blocked-proof.json"
   },
-  "scope": "Build 3 uploaded, processed, selected and saved; ten refreshed screenshots and two corrected AAC previews placed. Final completeness check passed after poster selections were saved; version is Ready for Review with item 2.0.0 (3) ready to submit. Apple poster generation remains pending. No review submission, release, hardware certification or processed-upload byte identity is claimed.",
+  "scope": "Build 3 remains uploaded, processed, selected and saved; ten screenshots and two previews are retained. Earlier completeness checks passed. During the authorized editorial update the version returned to editing: Search artwork is saved, while corrected Header upload and final readiness recheck require the Mac to be unlocked. No review submission, release, hardware certification or processed-upload byte identity is claimed.",
   "readinessChecks": [
     {
       "build": "3",
@@ -251,7 +253,34 @@
       "observedAtUTC": "2026-10-14T13:55:33.737435+00:00",
       "submitForReviewClicked": false,
       "privateCaptureSHA256": "9be90fd3edfe27356856af55608f07649fa1044c5b681413b10ac1d04c65ed35",
-      "scope": "Final completeness check after both opening poster selections were saved. Apple poster generation remains pending."
+      "scope": "Final completeness check after both opening poster selections were saved. Apple poster generation remains pending.",
+      "subsequentAction": "Removed only the version from its unsubmitted bundle for the user-requested editorial Header and Search artwork. Build, screenshots and previews preserved."
     }
-  ]
+  ],
+  "editorialUpdateObservedAtUTC": "2026-10-14T16:19:28.811009+00:00",
+  "creativeAssets": {
+    "manifest": "docs/app-store-editorial/manifest.json",
+    "header": {
+      "placedCount": 0,
+      "file": "docs/app-store-editorial/header.png",
+      "localSHA256": "1a9473112459a636673bb851698bf045e3274f0296efffa93c7f1b555e5dda47",
+      "replacementUploadPending": true
+    },
+    "searchResults": {
+      "placedCount": 1,
+      "file": "docs/app-store-editorial/search.png",
+      "localSHA256": "6d2e1303c757a8f2746d5a7c8a83872a1d8942e0e102fc8addbe1e38348d1c80",
+      "savedAfterReload": true,
+      "appleThumbnailLoaded": true,
+      "previewObserved": [
+        "iPhone light",
+        "iPad landscape light",
+        "iPad landscape dark"
+      ]
+    },
+    "blocker": "The Mac locked before the native file picker could send the corrected tablet-safe header. Owner unlock is required; no permissions or authentication protection were changed.",
+    "earlierHeaderAssetLibraryItemPreserved": true,
+    "finalCompletenessRecheckPending": true,
+    "reviewSubmitted": false
+  }
 }
