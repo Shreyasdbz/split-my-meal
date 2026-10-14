@@ -58,20 +58,39 @@ final class LiveMapKitTests: XCTestCase {
         restaurant.tap()
         XCTAssertTrue(app.buttons["Open in Maps"].waitForExistence(timeout: 10))
         evidence("live-selected-restaurant-map")
-        app.buttons["Open in Maps"].tap()
         let maps = XCUIApplication(bundleIdentifier: "com.apple.Maps")
+        // Preserve a real first-permission handoff on the anonymous simulator.
+        maps.terminate()
+        maps.resetAuthorizationStatus(for: .location)
+        app.buttons["Open in Maps"].tap()
         XCTAssertTrue(maps.wait(for: .runningForeground, timeout: 15), "The selected restaurant must open the native Maps app.")
-        if maps.staticTexts["Get Notified When Friends Share Their ETAs"].waitForExistence(timeout: 3) {
+        // On a fresh simulator, Maps' location prompt covers its onboarding.
+        // Resolve that observed prompt before querying the underlying screens.
+        guard declineMapsLocationRequestIfPresent(maps, evidencePrefix: "live-selected-restaurant") else { return }
+        let notifications = maps.staticTexts["Get Notified When Friends Share Their ETAs"]
+        if notifications.waitForExistence(timeout: 5) {
             // The dedicated simulator's first Maps launch offers optional
             // notifications. Decline that onboarding without granting access.
-            maps.buttons["Not Now"].tap()
+            let dismiss = maps.buttons["Not Now"]
+            XCTAssertTrue(dismiss.waitForExistence(timeout: 5))
+            XCTAssertEqual(maps.state, .runningForeground)
+            XCTAssertTrue(dismiss.isEnabled && dismiss.isHittable)
+            XCTAssertTrue(maps.frame.contains(dismiss.frame))
+            dismiss.tap()
+            XCTAssertTrue(notifications.waitForNonExistence(timeout: 5))
         }
-        if maps.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Maps may show local ads")).firstMatch.waitForExistence(timeout: 3) {
+        let ads = maps.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Maps may show local ads")).firstMatch
+        if ads.waitForExistence(timeout: 5) {
             // Acknowledge the observed anonymous simulator's Maps information
             // screen; this does not grant a protected-resource permission.
-            maps.buttons["Continue"].tap()
+            let dismiss = maps.buttons["Continue"]
+            XCTAssertTrue(dismiss.waitForExistence(timeout: 5))
+            XCTAssertEqual(maps.state, .runningForeground)
+            XCTAssertTrue(dismiss.isEnabled && dismiss.isHittable)
+            XCTAssertTrue(maps.frame.contains(dismiss.frame))
+            dismiss.tap()
+            XCTAssertTrue(ads.waitForNonExistence(timeout: 5))
         }
-        guard declineMapsLocationRequestIfPresent(maps, evidencePrefix: "live-selected-restaurant") else { return }
         let destination = maps.staticTexts.matching(NSPredicate(format: "label == %@", selectedTitle)).firstMatch
         let destinationLoaded = destination.waitForExistence(timeout: 20)
         let mapsPixels = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
@@ -131,16 +150,27 @@ final class LiveMapKitTests: XCTestCase {
         if UIDevice.current.userInterfaceIdiom == .pad {
             // The centered native search sheet moves as its keyboard settles.
             // Dismiss that keyboard before resolving the Settings link's hit point.
-            let hideKeyboard = app.keyboards.buttons["Hide keyboard"]
-            XCTAssertTrue(hideKeyboard.waitForExistence(timeout: 5))
-            XCTAssertTrue(hideKeyboard.isHittable)
-            hideKeyboard.tap()
-            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
+            dismissVisibleSearchKeyboard()
             XCTAssertEqual(search.value as? String, "Coffee", "Dismissing the native keyboard must preserve the restaurant query.")
         }
-        app.links["restaurant-open-settings"].tap()
         let settings = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
-        XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 15), "Denied location recovery must open native Settings.")
+        let searchSettingsLink = app.links["restaurant-open-settings"]
+        XCTAssertTrue(searchSettingsLink.waitForExistence(timeout: 5))
+        XCTAssertEqual(app.state, .runningForeground)
+        evidence("denied-location-before-settings-handoff")
+        let geometry = XCTAttachment(string: "app=\(app.state); settings=\(settings.state); window=\(app.frame); link=\(searchSettingsLink.frame); enabled=\(searchSettingsLink.isEnabled); hittable=\(searchSettingsLink.isHittable); linkTree=\(searchSettingsLink.debugDescription)")
+        geometry.name = "denied-location-settings-link-geometry"
+        geometry.lifetime = .keepAlways
+        add(geometry)
+        XCTAssertTrue(searchSettingsLink.isEnabled && searchSettingsLink.isHittable)
+        XCTAssertTrue(app.frame.contains(searchSettingsLink.frame))
+        searchSettingsLink.tap()
+        let settingsReached = settings.wait(for: .runningForeground, timeout: 15)
+        if !settingsReached {
+            evidence("denied-location-settings-handoff-failure")
+            externalEvidence(settings, name: "denied-location-settings-handoff-failure-system")
+        }
+        XCTAssertTrue(settingsReached, "Denied location recovery must open native Settings.")
         XCTAssertTrue(settings.windows.firstMatch.waitForExistence(timeout: 10), "Native Settings must finish presenting its window.")
         let settingsPixels = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         settingsPixels.name = "denied-location-opened-in-native-settings"
@@ -316,9 +346,23 @@ final class LiveMapKitTests: XCTestCase {
             search.typeText("Coffee")
         }
         settings.activate()
-        let never = settings.staticTexts["Never"].firstMatch
+        XCTAssertTrue(settings.wait(for: .runningForeground, timeout: 15))
+        XCTAssertTrue(settings.navigationBars["Location"].waitForExistence(timeout: 5))
+        // Settings can expose the row's text as either StaticText or Button;
+        // its native permission cell identifier remains the same in both states.
+        let never = settings.cells["LOCATION_SERVICES_AUTH_NEVER"]
         XCTAssertTrue(never.waitForExistence(timeout: 5))
+        XCTAssertEqual(never.label, "Never")
+        XCTAssertTrue(never.isEnabled && never.isHittable)
+        XCTAssertTrue(settings.frame.contains(never.frame))
+        XCTAssertFalse(never.isSelected)
         never.tap()
+        let selected = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            let refreshed = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
+            return refreshed.state == .runningForeground && refreshed.cells["LOCATION_SERVICES_AUTH_NEVER"].isSelected
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [selected], timeout: 5), .completed)
+        XCTAssertTrue(settings.cells["LOCATION_SERVICES_AUTH_NEVER"].isSelected)
         let revoked = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         revoked.name = "native-settings-revokes-cached-nearby-location"
         revoked.lifetime = .keepAlways
@@ -390,15 +434,8 @@ final class LiveMapKitTests: XCTestCase {
 
     /// Cancels the foreground search sheet after retaining its query through native keyboard dismissal.
     private func cancelRestaurantSelection() {
-        if UIDevice.current.userInterfaceIdiom == .pad, app.keyboards.firstMatch.exists {
-            let search = app.searchFields.firstMatch
-            let originalQuery = search.value as? String
-            let hideKeyboard = app.keyboards.buttons["Hide keyboard"]
-            XCTAssertTrue(hideKeyboard.waitForExistence(timeout: 5))
-            XCTAssertTrue(hideKeyboard.isHittable)
-            hideKeyboard.tap()
-            XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
-            XCTAssertEqual(search.value as? String, originalQuery, "Keyboard dismissal must preserve the pending restaurant query.")
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            dismissVisibleSearchKeyboard()
         }
         // A centered iPad sheet moves during keyboard layout. Resolve its native
         // Cancel only after the keyboard has disappeared, then verify dismissal
@@ -410,6 +447,58 @@ final class LiveMapKitTests: XCTestCase {
         XCTAssertEqual(app.state, .runningForeground)
         cancel.tap()
         XCTAssertTrue(restaurant.waitForNonExistence(timeout: 5), "Cancel must dismiss restaurant selection before returning to the meal draft.")
+    }
+
+    /// Dismisses rendered keyboard input without changing the pending restaurant query.
+    private func dismissVisibleSearchKeyboard() {
+        let search = app.searchFields.firstMatch
+        let originalQuery = search.value as? String
+        if hasVisibleKeyboard() {
+            let hideKeyboard = app.keyboards.buttons["Hide keyboard"]
+            XCTAssertTrue(hideKeyboard.waitForExistence(timeout: 5))
+            XCTAssertTrue(hideKeyboard.isEnabled && hideKeyboard.isHittable)
+            XCTAssertTrue(app.frame.contains(hideKeyboard.frame))
+            hideKeyboard.tap()
+            let dismissed = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+                !self.hasVisibleKeyboard()
+            }, object: nil)
+            XCTAssertEqual(XCTWaiter.wait(for: [dismissed], timeout: 5), .completed)
+        }
+        XCTAssertFalse(hasVisibleKeyboard(), "Navigation requires the software keyboard to leave the visible app viewport.")
+        XCTAssertEqual(search.value as? String, originalQuery, "Keyboard dismissal must preserve the pending restaurant query.")
+    }
+
+    /// Hidden keyboard containers can remain in the hierarchy with zero height.
+    private func hasVisibleKeyboard() -> Bool {
+        let window = app.frame
+        guard window.minX.isFinite, window.minY.isFinite, window.width.isFinite, window.height.isFinite,
+              window.width > 0, window.height > 0 else {
+            XCTFail("Keyboard visibility requires a finite, positive app viewport.")
+            return true
+        }
+        return app.keyboards.allElementsBoundByIndex.contains { keyboard in
+            let frame = keyboard.frame
+            guard frame.minX.isFinite, frame.minY.isFinite, frame.width.isFinite, frame.height.isFinite,
+                  frame.width >= 0, frame.height >= 0 else {
+                XCTFail("Keyboard visibility requires finite, nonnegative native geometry: \(frame).")
+                return true
+            }
+            guard frame.width > 0, frame.height > 0 else { return false }
+            let visible = frame.intersection(window)
+            return !visible.isNull && visible.width > 0 && visible.height > 0
+        }
+    }
+
+    /// Retains an external application's state and hierarchy at a failed handoff.
+    private func externalEvidence(_ application: XCUIApplication, name: String) {
+        let pixels = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        pixels.name = name
+        pixels.lifetime = .keepAlways
+        add(pixels)
+        let tree = XCTAttachment(string: "state=\(application.state)\n\(application.debugDescription)")
+        tree.name = name + "-accessibility-tree"
+        tree.lifetime = .keepAlways
+        add(tree)
     }
 
     private func assertOriginalRestaurant() {

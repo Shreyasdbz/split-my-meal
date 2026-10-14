@@ -1,0 +1,198 @@
+{
+  "actualExecuted": 10,
+  "actualFailed": 6,
+  "actualPassed": 4,
+  "actualSkipped": 0,
+  "date": "2026-10-14",
+  "result": "Failed",
+  "runs": [
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "status": "Failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+          "status": "Passed"
+        }
+      ],
+      "deviceFamily": "iphone",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 1,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "excludedEntryContentOrBindingPublished": false,
+      "excludedUnrelatedUntrackedInputCount": 1,
+      "failures": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "message": "XCTAssertTrue failed - Native Maps must show the selected restaurant after the handoff settles."
+        }
+      ],
+      "intendedSourceInputCount": 50,
+      "intendedSourceProjectionMatchesBeforeAndAfter": true,
+      "nativeCaseTreeSHA256": "4ba2425e21634fa32b953502b418d61fdd1068fb43de1c3e0e4ba14b5d5965d5",
+      "nativeLogSHA256": "22d10cf6979a831c4c4f9c7ebca11087625254ee316df178b5ca32ef08f6f836",
+      "nativeSummarySHA256": "a603429b23688f45463561b08e64bfa690ff86c893a499604eadcb343436dfcd",
+      "outerExit": 65,
+      "rawManifestInputCount": 51,
+      "rawSourceManifestSHA256": "2fb1aa4eea4a0d578d2014e7e1c922a578423955d7cbac9d0020e2d4d9c77f6f",
+      "summary": {
+        "failedTests": 1,
+        "passedTests": 4,
+        "result": "Failed",
+        "skippedTests": 0,
+        "totalTestCount": 5
+      },
+      "syntheticLocationCleanup": {
+        "coordinateReadbackClaimed": false,
+        "explicitPostRunClearExit": 0
+      }
+    },
+    {
+      "cases": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "status": "Failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+          "status": "Failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "status": "Failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+          "status": "Failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+          "status": "Failed"
+        }
+      ],
+      "deviceFamily": "ipad",
+      "diagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 1,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "excludedEntryContentOrBindingPublished": false,
+      "excludedUnrelatedUntrackedInputCount": 1,
+      "failures": [
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testLiveRestaurantSearchSelectionMapAndRemoval()",
+          "message": "XCTAssertTrue failed - Native Maps must show the selected restaurant after the handoff settles."
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationAllowedUsesSyntheticSimulatorCoordinate()",
+          "message": "XCTAssertTrue failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testNearbyLocationDeniedStillAllowsTextSearchAndCancellation()",
+          "message": "XCTAssertTrue failed - Denied location recovery must open native Settings."
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testRapidQueryCancellationLeavesOriginalRestaurant()",
+          "message": "XCTAssertTrue failed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/LiveMapKitTests/testSameQueryRetryRecoversAfterStagedFailureUsingLiveMapKit()",
+          "message": "XCTAssertTrue failed"
+        }
+      ],
+      "intendedSourceInputCount": 50,
+      "intendedSourceProjectionMatchesBeforeAndAfter": true,
+      "nativeCaseTreeSHA256": "e17336e74a7e01fb3239adc5246dccd6ecda9a906d686d9c391ccc85bd7ebfd5",
+      "nativeLogSHA256": "a86fa23f43ddaaa1e51be3bd8d53e62c21ddcc34444e29236acf511853681ee8",
+      "nativeSummarySHA256": "d8781036e41a3807b29c91f0e2967445942ab93e27d93a27e23b03c2e7010cc9",
+      "outerExit": 65,
+      "rawManifestInputCount": 51,
+      "rawSourceManifestSHA256": "2fb1aa4eea4a0d578d2014e7e1c922a578423955d7cbac9d0020e2d4d9c77f6f",
+      "summary": {
+        "failedTests": 5,
+        "passedTests": 0,
+        "result": "Failed",
+        "skippedTests": 0,
+        "totalTestCount": 5
+      },
+      "syntheticLocationCleanup": {
+        "coordinateReadbackClaimed": false,
+        "explicitPostRunClearExit": 0
+      }
+    }
+  ],
+  "schemaVersion": 1,
+  "scope": "Complete opt-in native provider checks on isolated simulators, separate from the stable hosted catalogue. First-launch Maps onboarding and native Settings/keyboard failures remain under diagnosis; no product cause or resolved failure is claimed. Synthetic location and a single DEBUG staged search error are explicit. Physical-device and private-account behavior remain unverified.",
+  "sourceBindings": {
+    "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "150322a11254db287f51cf13001148ff5b63f2f4833e92c59acd7db4dcec35fe",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+    "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+    "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Fork.svg": "391c1321996375193539f3156e1a2b1c8703f408e5fdc6c49db882bed23390b8",
+    "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Spoon.svg": "262d3987894d9c03caa8a3131e3abd6673c95a3a7e7396df4ac2df14e18fd610",
+    "SplitMyMeal-Prod-A/AppIcon.icon/icon.json": "bccb2141a51764145e194a8cf2c5ca69fd6a4d1942c696f8f5db892b74daa1e6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+    "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+    "SplitMyMeal-Prod-A/Assets.xcassets/DestructiveText.colorset/Contents.json": "81d01704abf3ef7351e1191ca8d5155e87634f81b80908090af5841e82dfe0db",
+    "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+    "SplitMyMeal-Prod-A/Design/MealDemo.swift": "97f2d4e827c0c383a17791d6f7d4c38b3f798fe1e9895b6df6aec369fc9608a6",
+    "SplitMyMeal-Prod-A/Design/MealUI.swift": "db6297661d1c20da30fbc9b160e335a8dcd4ad15f16ab5d4e4d6a78c3f7e417a",
+    "SplitMyMeal-Prod-A/Info.plist": "e86a1afd22403c408246b01a644df11f538e4e79735c0a0e89dbf648e9f7d984",
+    "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+    "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+    "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+    "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+    "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+    "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+    "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+    "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+    "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+    "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+    "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "d51eeae2a2c5848ce6fe5739d77e12a4df5e3098e19fedfdeed95dae75f80fa4",
+    "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "97c145abfd7a44dd3b63084d15a1a1803202daf74f5531a15bd5cbb1f893c5ea",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+    "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "a6b2352a4b6c6ea956be068720b973c6bd14a2ca4c835d2f232ddc073a40fa0b",
+    "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "3005dc9a234487ce08813510c034bd12e475eb3d1fe367f963a743e9a5ce0e19",
+    "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "b6153f5fbde6e50d9c4b6bf6d7646ba4a2b21e233aa9be79770e743a3196131b",
+    "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "c9e9e3669fcf3905f2f46c450141b9499089dd761818ace616cd4ea20225055c",
+    "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+    "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "6aacee1789bd8c21feb8eb4ae7dc742235541e8ef9045deb2f64f4b6042e39b9",
+    "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+    "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "5ad9734ab123fec548fc0610ec5133a92665340e20fb3e9463fa7b82bb38211b",
+    "SplitMyMealTests/EditorInputTests.swift": "1a8705881b01d0b650e76a5956136d916f0b8bce2fe1db2a8f56834e5550c8af",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/ExternalStorage/_EXTERNAL_DATA/430C4EE3-78AC-4A21-866C-D3AEFB3801FE": "572f811f6c0fdca5458041c1797766c32aa7eedd8249dc2139e7236b8bf314eb",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/PROVENANCE.md": "688fcffca76ced4d7a215c6f2c27d247defe364def29b1e0e52a8fd31a5e084d",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/hashes.json": "6b7b3686e48f5b28e4c8841d15bd7cb6b402951f5bd4ed92ecd6a7e991ac52c8",
+    "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/legacy.store": "9c75e1ea2553f878c8ab06c072ef616ab6025410581ca94337652647b56fa54e",
+    "SplitMyMealTests/MealAmountsTests.swift": "e87d118b50141ba596d4cd3189962daa002b136dcb0faf8fa7347066b70d7283",
+    "SplitMyMealTests/MealStoreTests.swift": "8e065495b1d1c18afa5094a318882f80e4beab7289aa903bdc25f7f4d9bd5e08",
+    "SplitMyMealUITests/LiveMapKitTests.swift": "75854bddc28719858557b671ab6f75c00fddbfd61635dfa222275e18e06736f8",
+    "SplitMyMealUITests/MealJourneyTests.swift": "bb520af210ed053a6203721e3d801134ef3825a64bbc5cd76ea19d1582cdb9df",
+    "scripts/native-test-selection.py": "8fc1bdf417c3c56819505c2d07ae63c4dbe70284eb0015db6e8933e72aab1096",
+    "scripts/prepare-app-store-screenshots.swift": "862a683db3e385c91ee03cba7aca8ddd2e23abe570607a8acc27ada32c153ce7",
+    "scripts/select-simulator.py": "35b60702c49e3e8e516aaf1a111eed21e84c5b3f1c5588d15ba96173c0e9ecc3",
+    "scripts/stable-test-partitions.json": "414faabccc575de7acca13b0ab23ba398949808b7d6cdb2cd0aef531692fc30f",
+    "scripts/tests/test_native_test_selection.py": "2df61a9a206684defd1f8eeea3c921c19dee3f3d9dca00b4c1dee1d5abe95c85",
+    "scripts/verify-ios.sh": "0adbf93dbac09f537ad4851fcdb344d24e175cb7101d284413433a479998dfcd"
+  },
+  "sourceManifestSHA256": "c6aba3042c3a593e807fab1db278f619c0435b5a50a62a467fc88c15eda9d527",
+  "sourceRevision": "49d300f8711759fd95a19437231e58a7da554ade"
+}

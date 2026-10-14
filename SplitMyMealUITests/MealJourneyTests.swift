@@ -726,20 +726,12 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertTrue(revealButton(restaurant, name: "saved-restaurant-after-cancel").exists)
     }
 
-    /// Captures five storefront surfaces using separate fictional data and real draft cancellation.
+    /// Captures split, saved meal and shared-item surfaces with real draft cancellation.
     func testAppStoreScreenshots() throws {
-        // Hosted capture reached receipt geometry at 299 seconds, beyond the
-        // four-minute default; retain a bounded allowance for all five surfaces.
+        // Keep independent capture journeys bounded; the combined hosted case
+        // exceeded its allowance before completing receipt, history and Help.
         executionTimeAllowance = 420
-        app.terminate()
-        app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-store-demo", "--appearance-light"]
-        launchForMealTesting()
-        if UIDevice.current.userInterfaceIdiom == .pad { settleOrientation(.landscapeLeft) }
-        for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
-            XCTAssertTrue(app.buttons["meal-\(title)"].waitForExistence(timeout: 5))
-        }
-        openDemo()
-        XCTAssertEqual(app.staticTexts["meal-total"].value as? String, "$113.66")
+        launchStoreDemo()
         app.buttons["view-split"].tap()
         for name in ["Alex", "Jordan", "Sam"] {
             XCTAssertTrue(app.descendants(matching: .any)["split-\(name)"].firstMatch.waitForExistence(timeout: 5))
@@ -770,6 +762,13 @@ final class MealJourneyTests: XCTestCase {
         screenshot("app-store-shared-item")
         app.buttons["Cancel"].tap()
         XCTAssertEqual(revealButton(app.staticTexts["meal-total"], name: "meal-total").value as? String, "$113.66", "Cancelling the new shared draft must preserve the saved bill.")
+        if UIDevice.current.userInterfaceIdiom == .pad { settleOrientation(.portrait) }
+    }
+
+    /// Captures native receipt viewing and verifies saved history and Help after relaunch.
+    func testAppStoreReceiptAndLibraryScreenshots() throws {
+        executionTimeAllowance = 420
+        launchStoreDemo()
         tapScrollable("View receipt")
         XCTAssertTrue(app.navigationBars["Receipt"].waitForExistence(timeout: 5))
         screenshot("app-store-receipt")
@@ -808,19 +807,18 @@ final class MealJourneyTests: XCTestCase {
             screenshot("app-store-receipt-readable")
         }
         app.buttons["Close"].tap()
+        XCTAssertTrue(app.navigationBars["Receipt"].waitForNonExistence(timeout: 5))
 
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            revealButton(app.staticTexts["meal-total"], name: "meal-total")
-            screenshot("app-store-library")
-        } else {
-            app.terminate()
-            app.launchArguments = ["--uitesting", "--appearance-light"]
-            launchForMealTesting()
-            for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
-                XCTAssertTrue(app.buttons["meal-\(title)"].waitForExistence(timeout: 5), "The storefront library must retain all three saved meals after relaunch.")
-            }
-            screenshot("app-store-library")
+        // Reopen the saved library instead of panning an obscured detail pane;
+        // this also verifies persistence independently of the capture fixture.
+        app.terminate()
+        app.launchArguments = ["--uitesting", "--appearance-light"]
+        launchForMealTesting()
+        for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
+            XCTAssertTrue(app.buttons["meal-\(title)"].waitForExistence(timeout: 5), "The storefront library must retain all three saved meals after relaunch.")
         }
+        if UIDevice.current.userInterfaceIdiom == .pad { openDemo() }
+        screenshot("app-store-library")
         let help = app.buttons["help-menu"]
         XCTAssertTrue(help.waitForExistence(timeout: 5))
         help.tap()
@@ -1466,6 +1464,19 @@ final class MealJourneyTests: XCTestCase {
         XCTAssertTrue(app.buttons["meal-Dinner at Juniper"].waitForExistence(timeout: 5))
     }
 
+    /// Opens the same independently seeded, fictional saved bill for each Store capture journey.
+    private func launchStoreDemo() {
+        app.terminate()
+        app.launchArguments = ["--uitesting", "--reset-test-data", "--seed-store-demo", "--appearance-light"]
+        launchForMealTesting()
+        if UIDevice.current.userInterfaceIdiom == .pad { settleOrientation(.landscapeLeft) }
+        for title in ["Dinner at Juniper", "Lunch at Grove", "Weekend brunch"] {
+            XCTAssertTrue(app.buttons["meal-\(title)"].waitForExistence(timeout: 5))
+        }
+        openDemo()
+        XCTAssertEqual(app.staticTexts["meal-total"].value as? String, "$113.66")
+    }
+
     private func openDemo() {
         app.buttons["meal-Dinner at Juniper"].tap()
         XCTAssertTrue(app.buttons["edit-meal"].waitForExistence(timeout: 5))
@@ -1767,7 +1778,15 @@ final class MealJourneyTests: XCTestCase {
             field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: existing.count))
         }
         field.typeText(text)
-        XCTAssertEqual(field.value as? String, text, "Replacement must update the complete field before saving or converting modes.")
+        // Native input can finish before its accessibility value refreshes.
+        // Query the current field while retaining the single replacement action.
+        let replaced = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            let current = XCUIApplication()
+            return current.state == .runningForeground && current.textFields[identifier].exists
+                && current.textFields[identifier].value as? String == text
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [replaced], timeout: 15), .completed, "Replacement must update the complete field before saving or converting modes.")
+        XCTAssertEqual(app.textFields[identifier].value as? String, text)
     }
 
     private func screenshot(_ name: String) {
@@ -1807,6 +1826,16 @@ extension XCTestCase {
                 return false
             }
             deny.tap()
+            // Record the immediate system-owned state after the single input.
+            // A failed dismissal must retain evidence rather than replaying it.
+            let postInput = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            postInput.name = evidencePrefix + "-maps-location-request-after-input"
+            postInput.lifetime = .keepAlways
+            add(postInput)
+            let postInputState = XCTAttachment(string: "Recorded at: \(Date().timeIntervalSince1970)\nMaps state: \(maps.state.rawValue)\nSystem alert after input: \(alert.debugDescription)")
+            postInputState.name = evidencePrefix + "-maps-location-request-after-input-system-state"
+            postInputState.lifetime = .keepAlways
+            add(postInputState)
             guard alert.waitForNonExistence(timeout: 5) else {
                 XCTFail("Declining Maps location must dismiss its system alert before returning to the meal.")
                 return false

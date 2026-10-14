@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-14",
+  "failedSourceManifestSHA256": "cfda61087be780cffc843f4cfbbc065887bcc5832f2880f841197a5f33524419",
+  "failure": "A diagnostic local variable duplicated the later map-settings variable in the same test function. The earlier variable was renamed before rebuilding.",
+  "nativeExecutions": 0,
+  "result": "Build failed before native execution",
+  "runs": [
+    {
+      "buildLogSHA256": "e178e859ba3cc5501586ee1b7a76d66453fe3367d60f142f6a5293e1556e6ee3",
+      "deviceFamily": "iphone",
+      "outerExit": 65
+    },
+    {
+      "buildLogSHA256": "b4f0efa155c155681e3cfbe2eb1776b77d60e1cf9f2108c97674e102abf2b71b",
+      "deviceFamily": "ipad",
+      "outerExit": 65
+    }
+  ],
+  "schemaVersion": 1,
+  "scope": "Test-target compilation only; this attempt provides no app runtime result."
+}
