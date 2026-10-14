@@ -33,6 +33,12 @@
     {
       "exit": 70,
       "result": "Resumed export of the existing validated archive: No Accounts; no iOS Distribution signing certificate available."
+    },
+    {
+      "exit": 70,
+      "logSHA256": "1e8ca5b2e9da688f55ccfac60477ac154f02cd64881e18a5b4cd7de10c37a575",
+      "recordedAtUTC": "2026-10-14T10:45:05Z",
+      "result": "Existing archive export after native access returned: No Accounts; no iOS Distribution signing certificate available."
     }
   ],
   "logs": {
@@ -45,7 +51,16 @@
   "minimumOSVersion": "17.4",
   "nonExemptEncryption": false,
   "schemaVersion": 1,
-  "scope": "Release archive, analyzer and archive signature succeeded. Distribution export and upload remain incomplete; the computer-use service reports the Mac locked, preventing interactive account diagnosis. No distribution or server-processing success is claimed.",
+  "scope": "Release archive, analyzer and archive signature succeeded. Four command-line distribution exports failed. Native account inspection is now available and shows the existing team, but manual export has no usable Apple Distribution certificate. Approval for automatic distribution signing is pending. No successful distribution export, upload or server processing is claimed.",
+  "signingInspection": {
+    "automaticSigningApprovalPending": true,
+    "certificateCreatedOrRevoked": false,
+    "existingXcodeAccountAndTeamVisible": true,
+    "manualExportCertificateSelection": "Default (No Apple Distribution found)",
+    "nativeControlsAccessible": true,
+    "recordedAtUTC": "2026-10-14T10:52:16Z",
+    "scope": "Read-only account, certificate and existing-archive export inspection. No account identifiers or credential material recorded."
+  },
   "sourceBindings": {
     "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "150322a11254db287f51cf13001148ff5b63f2f4833e92c59acd7db4dcec35fe",
     "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",

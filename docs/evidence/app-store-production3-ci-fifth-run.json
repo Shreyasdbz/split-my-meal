@@ -1,0 +1,873 @@
+{
+  "actualCounts": {
+    "executed": 118,
+    "failed": 0,
+    "passed": 118,
+    "skipped": 0
+  },
+  "catalogue": {
+    "disabledOptInLiveCaseCount": 5,
+    "disjointCompleteNativeUnionPerDevice": true,
+    "liveScope": "The five opt-in provider tests are outside this stable hosted selection; their local evidence is separately recorded.",
+    "partitionA": 46,
+    "partitionB": 13,
+    "stableCasesPerDevice": 59
+  },
+  "deviceCounts": {
+    "ipad": {
+      "actualExecutedCaseCount": 59,
+      "actualFailedCaseCount": 0,
+      "actualPassedCaseCount": 59,
+      "actualSkippedCaseCount": 0,
+      "completeDisjointCatalogueUnion": true
+    },
+    "iphone": {
+      "actualExecutedCaseCount": 59,
+      "actualFailedCaseCount": 0,
+      "actualPassedCaseCount": 59,
+      "actualSkippedCaseCount": 0,
+      "completeDisjointCatalogueUnion": true
+    }
+  },
+  "limitations": [
+    "This proof establishes the exact hosted native simulator cases and source inputs; it does not certify hardware behavior or broad accessibility conformance.",
+    "Retained invalid-frame warnings and observational accessibility reports remain visible; passing tests do not erase them or establish a framework cause.",
+    "Build 3 distribution export/upload, App Review and account state are separate external gates, not certified by this CI result."
+  ],
+  "observationalAccessibilityInventories": [
+    {
+      "allReportsRetained": true,
+      "auditTypeCounts": {
+        "1": 7,
+        "131072": 3,
+        "65536": 11
+      },
+      "deviceFamily": "iphone",
+      "issuesReported": 21,
+      "nativeFilename": "D75EDA70-1DF4-4C09-A37A-B8DE7E427DF4.json",
+      "reportsExcluded": 0,
+      "requiresReview": 21,
+      "scope": "Observational all-type issue collection completed. These retained reports are not a zero-finding accessibility pass or a certification.",
+      "sha256": "bf074656db173877208a5bc494247c637f4a06808040464c34d4d050fb83face",
+      "unavailableIdentityReports": 4
+    },
+    {
+      "allReportsRetained": true,
+      "auditTypeCounts": {
+        "1": 7,
+        "131072": 6,
+        "65536": 12
+      },
+      "deviceFamily": "ipad",
+      "issuesReported": 25,
+      "nativeFilename": "80D79ADB-989D-4110-822C-F9E028B01687.json",
+      "reportsExcluded": 0,
+      "requiresReview": 25,
+      "scope": "Observational all-type issue collection completed. These retained reports are not a zero-finding accessibility pass or a certification.",
+      "sha256": "0d24d5f25394c3df8f95556576b55f22b30f412749a6f79647676a3506a69250",
+      "unavailableIdentityReports": 7
+    }
+  ],
+  "officialWorkflowConclusion": "success",
+  "partitions": [
+    {
+      "actualCases": [
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testChargeModeConversionUsesCurrentDraftAndCalculationBase()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testInvalidNumericInputNeverBecomesSuccessfulSaveValue()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testLocalizedDecimalInputConsumesEntireString()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testReceiptDownsamplesAndKeepsReadableImage()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testReceiptRejectsUnreadableAndOversizedData()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testDecimalRoundingAndFractionalCharges()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testEmptyMealWithFixedChargesHasFiniteUnassignedAmount()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testFixedChargesTakePrecedenceAndTipIncludesTax()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testItemizedPersonComponentsConserveEveryCent()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testLargeFormattedChargesAreNeverReparsedAsZero()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testLargestAcceptedInputsRemainFiniteAndConserved()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testSharedItemRemainderIsStableAndConserved()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testUnassignedItemsAndChargesReconcileToGrandTotal()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testUnknownAndDuplicateConsumersDoNotLoseMoney()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testCharmAcceptsOnePresentedEmojiAndRejectsText()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testCommitRestoresGraphAfterNativeReadOnlySaveRejection()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testConfiguredReadOnlyStoreRejectsBeforeMutation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testDeletedMealCannotBeResurrectedFromStaleEditor()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testForeignContextAndCrossMealEditsAreRejected()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testInvalidInputsDoNotMutateSavedState()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testLegacyFixtureRetainsOriginal2024EntityHashes()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testNamesRequireVisibleContentWithoutChangingUnicodeNames()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testSaveAssignmentsAndDeletionAreConsistent()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreReceiptAndLibraryScreenshots()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCancelledMealDoesNotPersist()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLibrarySortOrderingAndSearchByPeopleAndRestaurant()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReadableLabelsAndDestructiveActionsAcrossAppearances()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testStartupRecoveryRetriesWithoutDiscardingSavedMeals()",
+          "status": "Passed"
+        }
+      ],
+      "all50CompiledInputsMatchTestedGit": true,
+      "artifactBytes": 103944965,
+      "artifactID": 11886522241,
+      "caseDurationSeconds": {
+        "testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt": 0.21,
+        "testAppStoreReceiptAndLibraryScreenshots": 82.416,
+        "testAppStoreScreenshots": 205.943,
+        "testCancelledMealDoesNotPersist": 28.123,
+        "testChargeModeConversionUsesCurrentDraftAndCalculationBase": 0.004,
+        "testCharmAcceptsOnePresentedEmojiAndRejectsText": 0.032,
+        "testCommitRestoresGraphAfterNativeReadOnlySaveRejection": 0.27,
+        "testConfiguredReadOnlyStoreRejectsBeforeMutation": 0.044,
+        "testCreateEditSplitShareAndPersistence": 187.664,
+        "testDecimalRoundingAndFractionalCharges": 0.028,
+        "testDeletedMealCannotBeResurrectedFromStaleEditor": 0.012,
+        "testDemoWalkthrough": 180.293,
+        "testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds": 0.003,
+        "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto": 115.415,
+        "testEditAndDeleteItemPersonAndMeal": 132.369,
+        "testEmptyMealWithFixedChargesHasFiniteUnassignedAmount": 0.002,
+        "testEveryoneDraftSharesCancellationAndSavedCompletion": 123.437,
+        "testFixedChargesTakePrecedenceAndTipIncludesTax": 0.001,
+        "testForeignContextAndCrossMealEditsAreRejected": 0.027,
+        "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable": 54.934,
+        "testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged": 58.528,
+        "testInvalidInputsDoNotMutateSavedState": 0.16,
+        "testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow": 0.003,
+        "testInvalidNumericInputNeverBecomesSuccessfulSaveValue": 0.001,
+        "testItemizedPersonComponentsConserveEveryCent": 0.003,
+        "testLargeFormattedChargesAreNeverReparsedAsZero": 0.004,
+        "testLargestAcceptedInputsRemainFiniteAndConserved": 0.002,
+        "testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable": 52.45,
+        "testLegacyFixtureRetainsOriginal2024EntityHashes": 0.007,
+        "testLibrarySortOrderingAndSearchByPeopleAndRestaurant": 77.804,
+        "testLocalizedDecimalInputConsumesEntireString": 0.012,
+        "testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether": 0.093,
+        "testNamesRequireVisibleContentWithoutChangingUnicodeNames": 0.058,
+        "testNativeCategoryAndCustomIconEditingPersists": 74.77,
+        "testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals": 0.009,
+        "testReadableLabelsAndDestructiveActionsAcrossAppearances": 63.277,
+        "testReceiptDownsamplesAndKeepsReadableImage": 0.185,
+        "testReceiptRejectsUnreadableAndOversizedData": 0.005,
+        "testReceiptViewZoomShareAndDraftRemoval": 137.477,
+        "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit": 253.804,
+        "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape": 172.652,
+        "testSaveAssignmentsAndDeletionAreConsistent": 0.031,
+        "testSharedItemRemainderIsStableAndConserved": 0.001,
+        "testStartupRecoveryRetriesWithoutDiscardingSavedMeals": 38.281,
+        "testUnassignedItemsAndChargesReconcileToGrandTotal": 0.001,
+        "testUnknownAndDuplicateConsumersDoNotLoseMoney": 0.001
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 12,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "iphone",
+      "evidenceSHA256": {
+        "native-tests.json": "0cffb9295a0099a1676be3161812b8236ec6c4ab202637cf0175f2b944f44b90",
+        "source-manifest.json": "d9a3ed81dbfbb6674dd7fcce61e2a8859a6445edf4fc27dbee9d5041c3c0be90",
+        "test-enumeration.json": "dafbf413fe75c6a6b0790558422cf3acaf9ea0a89c0b12c46f2d9b503103b844",
+        "test-selection-results.json": "82fb9093fa581e806ed879585064735a74dc4b6cfc08921bd05634571c35a5ef",
+        "test-selection.json": "d229c5e519e47f50fc0dd4bd485d28c19700a557c7fa0c7cfdcf60b0879b317b",
+        "test-summary.json": "fd68926dea3d479650d3bd92b318e1ad3fa77a4a26175678f4f43d3c64d062fd",
+        "test.log": "479d2b3cf37bda04b7b573b65d0557be48ba22abb135660c31a1d1e9cebe86b8"
+      },
+      "jobConclusion": "success",
+      "jobID": 115792049096,
+      "nativeSummary": {
+        "failedTests": 0,
+        "passedTests": 46,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 46
+      },
+      "partition": "a"
+    },
+    {
+      "actualCases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth()",
+          "status": "Passed"
+        }
+      ],
+      "all50CompiledInputsMatchTestedGit": true,
+      "artifactBytes": 50255409,
+      "artifactID": 11887015452,
+      "caseDurationSeconds": {
+        "testCollectAllTypeAccessibilityIssueInventory": 119.004,
+        "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance": 174.82,
+        "testDismissedDraftLeavesSavedMealUnchanged": 62.43,
+        "testDynamicTypeReallyGrowsAmountsAndInputs": 125.563,
+        "testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps": 175.368,
+        "testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares": 257.803,
+        "testLargeTextAndLandscapeNavigation": 175.864,
+        "testLibrarySearchSortAndRestaurantPickerCancellation": 68.311,
+        "testNativeAccessibleControlSemanticsAndHitRegions": 41.157,
+        "testNativePhotoAttachmentReplacementCancelAndSave": 191.179,
+        "testRenamingHistoricalPersonPreservesAuthoritativeItemShares": 105.353,
+        "testReverseAssignmentFixedChargesConversionCancelAndClear": 192.926,
+        "testTaxAndTipRowsRespondAcrossTheirFullWidth": 36.211
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 8,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "iphone",
+      "evidenceSHA256": {
+        "native-tests.json": "aa8af735c38fe62c3ae43bb2cd8fadee6af01602d548fe150b81017e7a29a9da",
+        "source-manifest.json": "d9a3ed81dbfbb6674dd7fcce61e2a8859a6445edf4fc27dbee9d5041c3c0be90",
+        "test-enumeration.json": "dafbf413fe75c6a6b0790558422cf3acaf9ea0a89c0b12c46f2d9b503103b844",
+        "test-selection-results.json": "9ebeb7c03766b7e47e53aa2fc7a59e6ac9d23eee1597805b712a325469fd0039",
+        "test-selection.json": "10bd627aa6bdda508a6e5563f5c66a5068efacb6c4c0f9a95d7475ae3a84f6c9",
+        "test-summary.json": "3cd83b2c306ef9a8452a9d4ca2b391feabde3e6cc986be7aac3fdd9956f2ba49",
+        "test.log": "e442ccb4654908c23756450dd4c5144db9db232f5d811e1768e11d55b59922da"
+      },
+      "jobConclusion": "success",
+      "jobID": 115792049262,
+      "nativeSummary": {
+        "failedTests": 0,
+        "passedTests": 13,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 13
+      },
+      "partition": "b"
+    },
+    {
+      "actualCases": [
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testChargeModeConversionUsesCurrentDraftAndCalculationBase()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testInvalidNumericInputNeverBecomesSuccessfulSaveValue()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testLocalizedDecimalInputConsumesEntireString()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testReceiptDownsamplesAndKeepsReadableImage()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/EditorInputTests/testReceiptRejectsUnreadableAndOversizedData()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testDecimalRoundingAndFractionalCharges()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testEmptyMealWithFixedChargesHasFiniteUnassignedAmount()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testFixedChargesTakePrecedenceAndTipIncludesTax()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testItemizedPersonComponentsConserveEveryCent()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testLargeFormattedChargesAreNeverReparsedAsZero()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testLargestAcceptedInputsRemainFiniteAndConserved()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testSharedItemRemainderIsStableAndConserved()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testUnassignedItemsAndChargesReconcileToGrandTotal()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealAmountsTests/testUnknownAndDuplicateConsumersDoNotLoseMoney()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testCharmAcceptsOnePresentedEmojiAndRejectsText()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testCommitRestoresGraphAfterNativeReadOnlySaveRejection()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testConfiguredReadOnlyStoreRejectsBeforeMutation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testDeletedMealCannotBeResurrectedFromStaleEditor()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testForeignContextAndCrossMealEditsAreRejected()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testInvalidInputsDoNotMutateSavedState()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testLegacyFixtureRetainsOriginal2024EntityHashes()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testNamesRequireVisibleContentWithoutChangingUnicodeNames()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealTests/MealStoreTests/testSaveAssignmentsAndDeletionAreConsistent()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreReceiptAndLibraryScreenshots()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testAppStoreScreenshots()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCancelledMealDoesNotPersist()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCreateEditSplitShareAndPersistence()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDemoWalkthrough()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testEditAndDeleteItemPersonAndMeal()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testEveryoneDraftSharesCancellationAndSavedCompletion()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLibrarySortOrderingAndSearchByPeopleAndRestaurant()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeCategoryAndCustomIconEditingPersists()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReadableLabelsAndDestructiveActionsAcrossAppearances()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReceiptViewZoomShareAndDraftRemoval()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testStartupRecoveryRetriesWithoutDiscardingSavedMeals()",
+          "status": "Passed"
+        }
+      ],
+      "all50CompiledInputsMatchTestedGit": true,
+      "artifactBytes": 122158670,
+      "artifactID": 11887170888,
+      "caseDurationSeconds": {
+        "testActualIOS26OriginalStoreUpgradesWithoutLosingExternalReceipt": 0.119,
+        "testAppStoreReceiptAndLibraryScreenshots": 122.208,
+        "testAppStoreScreenshots": 210.991,
+        "testCancelledMealDoesNotPersist": 24.06,
+        "testChargeModeConversionUsesCurrentDraftAndCalculationBase": 0.004,
+        "testCharmAcceptsOnePresentedEmojiAndRejectsText": 0.019,
+        "testCommitRestoresGraphAfterNativeReadOnlySaveRejection": 0.119,
+        "testConfiguredReadOnlyStoreRejectsBeforeMutation": 0.039,
+        "testCreateEditSplitShareAndPersistence": 216.522,
+        "testDecimalRoundingAndFractionalCharges": 0.015,
+        "testDeletedMealCannotBeResurrectedFromStaleEditor": 0.008,
+        "testDemoWalkthrough": 232.96,
+        "testDraftItemSharesMatchSavedAllocationAndRejectInvalidBounds": 0.001,
+        "testDraftReceiptPreviewCanZoomAndCancelPreservesSavedPhoto": 116.149,
+        "testEditAndDeleteItemPersonAndMeal": 155.074,
+        "testEmptyMealWithFixedChargesHasFiniteUnassignedAmount": 0.0,
+        "testEveryoneDraftSharesCancellationAndSavedCompletion": 187.239,
+        "testFixedChargesTakePrecedenceAndTipIncludesTax": 0.001,
+        "testForeignContextAndCrossMealEditsAreRejected": 0.015,
+        "testHistoricalInvalidValuesAndUnreadableReceiptRemainRepairable": 66.498,
+        "testInvalidInputsCannotBeSavedAndCancelLeavesMealUnchanged": 68.359,
+        "testInvalidInputsDoNotMutateSavedState": 0.017,
+        "testInvalidLegacyValuesAreFlaggedWithoutNaNOrOverflow": 0.005,
+        "testInvalidNumericInputNeverBecomesSuccessfulSaveValue": 0.002,
+        "testItemizedPersonComponentsConserveEveryCent": 0.001,
+        "testLargeFormattedChargesAreNeverReparsedAsZero": 0.001,
+        "testLargestAcceptedInputsRemainFiniteAndConserved": 0.001,
+        "testLargestTextMealEditorIsReadableAndReceiptControlsRemainReachable": 48.5,
+        "testLegacyFixtureRetainsOriginal2024EntityHashes": 0.004,
+        "testLibrarySortOrderingAndSearchByPeopleAndRestaurant": 81.361,
+        "testLocalizedDecimalInputConsumesEntireString": 0.01,
+        "testMealAndOwnedRowsSurviveDiskReopenAndDeleteTogether": 0.028,
+        "testNamesRequireVisibleContentWithoutChangingUnicodeNames": 0.022,
+        "testNativeCategoryAndCustomIconEditingPersists": 115.314,
+        "testPercentageChargeRoundsHalfCentOnceForPreviewAndSavedTotals": 0.003,
+        "testReadableLabelsAndDestructiveActionsAcrossAppearances": 75.901,
+        "testReceiptDownsamplesAndKeepsReadableImage": 0.124,
+        "testReceiptRejectsUnreadableAndOversizedData": 0.003,
+        "testReceiptViewZoomShareAndDraftRemoval": 157.226,
+        "testReduceMotionPreservesDraftAssignmentsAndReachableLargestTextSplit": 280.617,
+        "testRestaurantMapControlsRemainReachableAtLargestTextAndLandscape": 161.965,
+        "testSaveAssignmentsAndDeletionAreConsistent": 0.023,
+        "testSharedItemRemainderIsStableAndConserved": 0.001,
+        "testStartupRecoveryRetriesWithoutDiscardingSavedMeals": 30.647,
+        "testUnassignedItemsAndChargesReconcileToGrandTotal": 0.001,
+        "testUnknownAndDuplicateConsumersDoNotLoseMoney": 0.001
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 12,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "ipad",
+      "evidenceSHA256": {
+        "native-tests.json": "eb1b3ff5a435e90eebecba2bbabb9564f300b8fd042d4ef7b617ae5fdfbb362b",
+        "source-manifest.json": "d9a3ed81dbfbb6674dd7fcce61e2a8859a6445edf4fc27dbee9d5041c3c0be90",
+        "test-enumeration.json": "dafbf413fe75c6a6b0790558422cf3acaf9ea0a89c0b12c46f2d9b503103b844",
+        "test-selection-results.json": "82fb9093fa581e806ed879585064735a74dc4b6cfc08921bd05634571c35a5ef",
+        "test-selection.json": "d229c5e519e47f50fc0dd4bd485d28c19700a557c7fa0c7cfdcf60b0879b317b",
+        "test-summary.json": "68c74ebee38a013ee345e97c3059b28ff75c5bb9f613208a1ea755b655566afc",
+        "test.log": "7ca9d5e42470f0bad6dc22a4f7c780b54c3c0efe8de9aa73429b1e6aef9264f0"
+      },
+      "jobConclusion": "success",
+      "jobID": 115792048825,
+      "nativeSummary": {
+        "failedTests": 0,
+        "passedTests": 46,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 46
+      },
+      "partition": "a"
+    },
+    {
+      "actualCases": [
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testCollectAllTypeAccessibilityIssueInventory()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDismissedDraftLeavesSavedMealUnchanged()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testDynamicTypeReallyGrowsAmountsAndInputs()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLargeTextAndLandscapeNavigation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testLibrarySearchSortAndRestaurantPickerCancellation()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativeAccessibleControlSemanticsAndHitRegions()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testNativePhotoAttachmentReplacementCancelAndSave()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testRenamingHistoricalPersonPreservesAuthoritativeItemShares()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testReverseAssignmentFixedChargesConversionCancelAndClear()",
+          "status": "Passed"
+        },
+        {
+          "identifier": "SplitMyMealUITests/MealJourneyTests/testTaxAndTipRowsRespondAcrossTheirFullWidth()",
+          "status": "Passed"
+        }
+      ],
+      "all50CompiledInputsMatchTestedGit": true,
+      "artifactBytes": 44073475,
+      "artifactID": 11886021834,
+      "caseDurationSeconds": {
+        "testCollectAllTypeAccessibilityIssueInventory": 100.816,
+        "testDeletingAssignedPersonPreservesItemAndShowsUnassignedBalance": 93.645,
+        "testDismissedDraftLeavesSavedMealUnchanged": 31.456,
+        "testDynamicTypeReallyGrowsAmountsAndInputs": 66.881,
+        "testHistoricalInvalidRestaurantLocationCanBeRemovedWithoutOpeningMaps": 96.653,
+        "testHistoricalUnknownItemConsumerCanBeRepairedWithoutChangingKnownShares": 202.558,
+        "testLargeTextAndLandscapeNavigation": 164.22,
+        "testLibrarySearchSortAndRestaurantPickerCancellation": 50.886,
+        "testNativeAccessibleControlSemanticsAndHitRegions": 31.62,
+        "testNativePhotoAttachmentReplacementCancelAndSave": 138.783,
+        "testRenamingHistoricalPersonPreservesAuthoritativeItemShares": 85.721,
+        "testReverseAssignmentFixedChargesConversionCancelAndClear": 171.071,
+        "testTaxAndTipRowsRespondAcrossTheirFullWidth": 28.755
+      },
+      "completeLogDiagnostics": {
+        "allowanceExceeded": 0,
+        "animationCompletionWarnings": 0,
+        "invalidFrameWarnings": 8,
+        "sqliteUnlinkOrIntegrityDiagnostics": 0
+      },
+      "deviceFamily": "ipad",
+      "evidenceSHA256": {
+        "native-tests.json": "486bfff91c02aa29e14a7d2594f8aef099494049972c3e6563c72b32e1069c7f",
+        "source-manifest.json": "d9a3ed81dbfbb6674dd7fcce61e2a8859a6445edf4fc27dbee9d5041c3c0be90",
+        "test-enumeration.json": "dafbf413fe75c6a6b0790558422cf3acaf9ea0a89c0b12c46f2d9b503103b844",
+        "test-selection-results.json": "9ebeb7c03766b7e47e53aa2fc7a59e6ac9d23eee1597805b712a325469fd0039",
+        "test-selection.json": "10bd627aa6bdda508a6e5563f5c66a5068efacb6c4c0f9a95d7475ae3a84f6c9",
+        "test-summary.json": "45ef0b251817186f8fdaa48e4113fc90bfed5f895d18b3ba81209a8d06240e4b",
+        "test.log": "1b2bd26768f7937561a95f926a09a364ed53872a94e77f3c21d2a94fcb39c2cb"
+      },
+      "jobConclusion": "success",
+      "jobID": 115792049131,
+      "nativeSummary": {
+        "failedTests": 0,
+        "passedTests": 13,
+        "result": "Passed",
+        "skippedTests": 0,
+        "totalTestCount": 13
+      },
+      "partition": "b"
+    }
+  ],
+  "priorAttemptsRetained": [
+    "app-store-ci-initial-failure.json",
+    "app-store-production3-ci-second-run.json",
+    "app-store-production3-ci-third-run.json",
+    "app-store-production3-ci-fourth-run.json"
+  ],
+  "publicationDate": "2026-10-14",
+  "repairScope": "The final repairs are native test readiness, focused store capture separation and measured case allowances. Production inputs remained unchanged during these test-only repairs; earlier failed attempts retain their original outcomes.",
+  "result": "Passed",
+  "runID": 38545988633,
+  "runURL": "https://github.com/Shreyasdbz/split-my-meal/actions/runs/38545988633",
+  "schemaVersion": 1,
+  "sourceInputs": {
+    "comparisonScope": "Every compiled partition input dictionary matches the exact tested Git revision. Later documentation-only commits are separate repository history and do not retest or alter these native inputs.",
+    "count": 50,
+    "sha256": {
+      "SplitMyMeal-Prod-A.xcodeproj/project.pbxproj": "150322a11254db287f51cf13001148ff5b63f2f4833e92c59acd7db4dcec35fe",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f",
+      "SplitMyMeal-Prod-A.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+      "SplitMyMeal-Prod-A.xcodeproj/xcshareddata/xcschemes/SplitMyMeal-Prod-A.xcscheme": "258d8519fa50b47d87be481b378b3f6c3322ef19db39064e7c6fb8e689ade481",
+      "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Fork.svg": "391c1321996375193539f3156e1a2b1c8703f408e5fdc6c49db882bed23390b8",
+      "SplitMyMeal-Prod-A/AppIcon.icon/Assets/Spoon.svg": "262d3987894d9c03caa8a3131e3abd6673c95a3a7e7396df4ac2df14e18fd610",
+      "SplitMyMeal-Prod-A/AppIcon.icon/icon.json": "bccb2141a51764145e194a8cf2c5ca69fd6a4d1942c696f8f5db892b74daa1e6",
+      "SplitMyMeal-Prod-A/Assets.xcassets/AccentColor.colorset/Contents.json": "cae4da6f5d4b00d21a3066d8fb5044eda571204fdd6304523675e1200ace86c6",
+      "SplitMyMeal-Prod-A/Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
+      "SplitMyMeal-Prod-A/Assets.xcassets/DestructiveText.colorset/Contents.json": "81d01704abf3ef7351e1191ca8d5155e87634f81b80908090af5841e82dfe0db",
+      "SplitMyMeal-Prod-A/Assets.xcassets/PrimaryActionText.colorset/Contents.json": "db3f03711204f3d49865b5ef342744a1ee83994cf5a8b5184b37a1d44db794d3",
+      "SplitMyMeal-Prod-A/Design/MealDemo.swift": "97f2d4e827c0c383a17791d6f7d4c38b3f798fe1e9895b6df6aec369fc9608a6",
+      "SplitMyMeal-Prod-A/Design/MealUI.swift": "db6297661d1c20da30fbc9b160e335a8dcd4ad15f16ab5d4e4d6a78c3f7e417a",
+      "SplitMyMeal-Prod-A/Info.plist": "e86a1afd22403c408246b01a644df11f538e4e79735c0a0e89dbf648e9f7d984",
+      "SplitMyMeal-Prod-A/Lib/LocationManager.swift": "2356c60d08e61e88aba4b0be92d6ed34b287db6bc1b3ba71125a4ba7eb3af3fa",
+      "SplitMyMeal-Prod-A/Lib/LocationSearch.swift": "9f51fae1d28904672ebce66228be2fa5049e25888f7790bc4a28173b92f4a458",
+      "SplitMyMeal-Prod-A/Lib/MealStore.swift": "8247c8690ddf30c4707f7e1997f897d3daa6a8b7d1c9ee2e1b153cd25e5abea4",
+      "SplitMyMeal-Prod-A/Lib/Utils/ComputationUtils.swift": "70a8278cb74686f23c2135afea0bc672a467c2ca364bddbd5ce9c19e8dbb32f7",
+      "SplitMyMeal-Prod-A/Models/Meal.swift": "64ace0f5e1d109b7a0c31c828e43cf09dee1d98d8d536109472f02aed127c2d8",
+      "SplitMyMeal-Prod-A/Models/MealItem.swift": "18235e2c7fc2638772d7fa5fd4183cc508a5793166f251b78caf34c32eca12df",
+      "SplitMyMeal-Prod-A/Models/MealMigration.swift": "12e41991b2d794a51bd4ff05dd98e0c2f940fd19838e4569e076d934da119d7b",
+      "SplitMyMeal-Prod-A/Models/MealPerson.swift": "1942b11747d8fcda98de5c10cbaa22265d84ba3981ee39ed84a6b3ec24df8cc0",
+      "SplitMyMeal-Prod-A/Models/RestaurantDetails.swift": "5de6935be11ee2966d7606caa0ee54980ce93ab2b3dbaca2bd66020bccb4ab7c",
+      "SplitMyMeal-Prod-A/PrivacyInfo.xcprivacy": "418018c160ded561d379cee1510cfb6e0806573c7221177a5330d76ea4145990",
+      "SplitMyMeal-Prod-A/Screens/ChargeEditor.swift": "d51eeae2a2c5848ce6fe5739d77e12a4df5e3098e19fedfdeed95dae75f80fa4",
+      "SplitMyMeal-Prod-A/Screens/EditMealItemModal/EditMealItemModal.swift": "97c145abfd7a44dd3b63084d15a1a1803202daf74f5531a15bd5cbb1f893c5ea",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/Components/LocationSearchModal.swift": "538ef53ec3786b006e3c4e123a6120816db85ab4b041a27721af893f3775a297",
+      "SplitMyMeal-Prod-A/Screens/EditMealModal/EditMealModal.swift": "a6b2352a4b6c6ea956be068720b973c6bd14a2ca4c835d2f232ddc073a40fa0b",
+      "SplitMyMeal-Prod-A/Screens/EditMealPersonModal/EditMealPersonModal.swift": "3005dc9a234487ce08813510c034bd12e475eb3d1fe367f963a743e9a5ce0e19",
+      "SplitMyMeal-Prod-A/Screens/HomeScreen/HomeScreen.swift": "b6153f5fbde6e50d9c4b6bf6d7646ba4a2b21e233aa9be79770e743a3196131b",
+      "SplitMyMeal-Prod-A/Screens/MealScreen/MealScreen.swift": "c9e9e3669fcf3905f2f46c450141b9499089dd761818ace616cd4ea20225055c",
+      "SplitMyMeal-Prod-A/Screens/ReceiptViewer.swift": "88b31c7f5bc9293c5d03693b56abf12d7ddb751fca2a138d24194f2d93433b9f",
+      "SplitMyMeal-Prod-A/Screens/SplitsModal/SplitsModal.swift": "6aacee1789bd8c21feb8eb4ae7dc742235541e8ef9045deb2f64f4b6042e39b9",
+      "SplitMyMeal-Prod-A/SplitMyMeal-Prod-A.entitlements": "122e184123544a927152365d531a4bc23d926cdd2424f435d12fe8ab4d520f99",
+      "SplitMyMeal-Prod-A/SplitMyMeal_Prod_AApp.swift": "5ad9734ab123fec548fc0610ec5133a92665340e20fb3e9463fa7b82bb38211b",
+      "SplitMyMealTests/EditorInputTests.swift": "1a8705881b01d0b650e76a5956136d916f0b8bce2fe1db2a8f56834e5550c8af",
+      "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/ExternalStorage/_EXTERNAL_DATA/430C4EE3-78AC-4A21-866C-D3AEFB3801FE": "572f811f6c0fdca5458041c1797766c32aa7eedd8249dc2139e7236b8bf314eb",
+      "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/PROVENANCE.md": "688fcffca76ced4d7a215c6f2c27d247defe364def29b1e0e52a8fd31a5e084d",
+      "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/hashes.json": "6b7b3686e48f5b28e4c8841d15bd7cb6b402951f5bd4ed92ecd6a7e991ac52c8",
+      "SplitMyMealTests/Fixtures/Legacy26Fixture.bundle/legacy.store": "9c75e1ea2553f878c8ab06c072ef616ab6025410581ca94337652647b56fa54e",
+      "SplitMyMealTests/MealAmountsTests.swift": "e87d118b50141ba596d4cd3189962daa002b136dcb0faf8fa7347066b70d7283",
+      "SplitMyMealTests/MealStoreTests.swift": "8e065495b1d1c18afa5094a318882f80e4beab7289aa903bdc25f7f4d9bd5e08",
+      "SplitMyMealUITests/LiveMapKitTests.swift": "63ba6e4dbf0cfbe99f6a8a1463d347534747249b303a9f6c2af619238a0ef9db",
+      "SplitMyMealUITests/MealJourneyTests.swift": "e0fbd3b25a2498c81dc13094d112b3880041fd89606534ea79109ee138bb5211",
+      "scripts/native-test-selection.py": "8fc1bdf417c3c56819505c2d07ae63c4dbe70284eb0015db6e8933e72aab1096",
+      "scripts/prepare-app-store-screenshots.swift": "862a683db3e385c91ee03cba7aca8ddd2e23abe570607a8acc27ada32c153ce7",
+      "scripts/select-simulator.py": "35b60702c49e3e8e516aaf1a111eed21e84c5b3f1c5588d15ba96173c0e9ecc3",
+      "scripts/stable-test-partitions.json": "0c68c0ec32d498e42dcb4e6b2fa8031bd1aa7a63ca20e92473264e1bc145170f",
+      "scripts/tests/test_native_test_selection.py": "2df61a9a206684defd1f8eeea3c921c19dee3f3d9dca00b4c1dee1d5abe95c85",
+      "scripts/verify-ios.sh": "0adbf93dbac09f537ad4851fcdb344d24e175cb7101d284413433a479998dfcd"
+    }
+  },
+  "testedRevision": "100634091b098c91655fe6db6d8c9d6966b211d8"
+}
