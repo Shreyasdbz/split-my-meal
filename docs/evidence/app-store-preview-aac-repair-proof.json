@@ -1,0 +1,160 @@
+{
+  "audioDurationObservation": "Each output movie lasts 17 seconds. Native audio track timeRange lasts 16.956 seconds; decoding yields exactly 816000 silent PCM frames at 48000 Hz. No full-track boundary equivalence claim is made.",
+  "date": "2026-10-14",
+  "initialEncodingUtilityFailure": {
+    "causeEstablished": false,
+    "failedOutputs": [
+      "iphone-initial-failed-empty.mp4",
+      "ipad-initial-failed-empty.mp4"
+    ],
+    "method": "Interleaved AVAssetReader/AVAssetWriter utility",
+    "outcome": "Both bounded 60-second attempts timed out; output files remained empty and are retained with failed names. No published files changed.",
+    "sourceSHA256": "f3ddc22333fc419d8d476e297e5646c7b1672c79b823d83580f95598019b25eb"
+  },
+  "limitations": [
+    "No Apple upload or acceptance check was performed by this task.",
+    "Adding AAC addresses an observed specification gap; it does not establish the cause of the previous generic save error.",
+    "Compressed video sample and format parity establishes preservation without claiming MP4 container byte identity."
+  ],
+  "method": "Apple AVAudioFile silent AAC encoding followed by AVMutableComposition and AVAssetExportPresetPassthrough MP4 remux. No video recoding.",
+  "originalPublishedManifestSHA256": "1911d501512f9ae8ea14415e4a341a67f7eb776893f03c687dc3572b4ee46267",
+  "originalPublishedMediaRevision": "035438a24215e25bf08aeb5c71450f3b04d9e832",
+  "previews": [
+    {
+      "allSampleComparisonsFile": "iphone-diagnostics.json.samples.json",
+      "allSampleComparisonsSHA256": "6d45d0be25b1b5c69cf90855799287cfa0f78d0d14ba7e2f5ffcece1a142e6b6",
+      "deviceFamily": "iphone",
+      "diagnosticFile": "iphone-diagnostics.json",
+      "diagnosticSHA256": "217f92052b0d95241d0bf00f1c50b812da22028d36ebaf23c1b54ff81dd46099",
+      "inspection": {
+        "audio": [
+          {
+            "channels": 2,
+            "codecFourCC": "aac ",
+            "decodedSilence": {
+              "decodedPCMFrames": 816000,
+              "maximumAbsoluteDecodedSample": 0,
+              "silenceVerified": true
+            },
+            "durationSeconds": 16.956,
+            "enabled": true,
+            "estimatedDataRate": 255959.328125,
+            "requestedEncodingBitRate": 256000,
+            "sampleRate": 48000,
+            "startSeconds": 0
+          }
+        ],
+        "candidateBytes": 5341866,
+        "candidateFile": "iphone-preview-aac.mp4",
+        "candidateSHA256": "87fbc00cf8289e79ebb85018ad35092d5c1a8c2ab739ee0195b0a6ef538e2c83",
+        "durationSeconds": 17,
+        "limitations": [
+          "Private local media validation does not establish Apple acceptance or the cause of the prior generic save error.",
+          "Video was remuxed without recoding; compressed sample identity and timing were checked instead of claiming container byte identity."
+        ],
+        "requestedAudioBitRate": 256000,
+        "requestedAudioChannels": 2,
+        "requestedAudioSampleRate": 48000,
+        "sourceFile": "iphone-preview.mp4",
+        "sourceSHA256": "cdfe75525f5b2eb17362b8b0238fad470e86d11034d653b905ce1593ddc77ee0",
+        "video": {
+          "candidateSamples": 510,
+          "enabled": true,
+          "everyCompressedPayloadAndPTSAndDTSAndDurationEqual": true,
+          "firstPresentationSeconds": 0,
+          "formatDescriptionEqual": true,
+          "h264LevelIDC": 40,
+          "h264ProfileIDC": 100,
+          "height": 1920,
+          "lastPresentationSeconds": 16.966666666666665,
+          "mismatchedSampleIndices": [],
+          "nominalFrameRate": 30,
+          "originalSamples": 510,
+          "width": 886
+        }
+      }
+    },
+    {
+      "allSampleComparisonsFile": "ipad-diagnostics.json.samples.json",
+      "allSampleComparisonsSHA256": "40fda31cf03edb10164a585d25dd30d6705ba56066ea6da7da6a88f2fab33546",
+      "deviceFamily": "ipad",
+      "diagnosticFile": "ipad-diagnostics.json",
+      "diagnosticSHA256": "b28ed4631c72026ce36641b5fbdd7d6aaef57e3692b8c3fed8d7c9f33adbaebc",
+      "inspection": {
+        "audio": [
+          {
+            "channels": 2,
+            "codecFourCC": "aac ",
+            "decodedSilence": {
+              "decodedPCMFrames": 816000,
+              "maximumAbsoluteDecodedSample": 0,
+              "silenceVerified": true
+            },
+            "durationSeconds": 16.956,
+            "enabled": true,
+            "estimatedDataRate": 255959.328125,
+            "requestedEncodingBitRate": 256000,
+            "sampleRate": 48000,
+            "startSeconds": 0
+          }
+        ],
+        "candidateBytes": 1415098,
+        "candidateFile": "ipad-preview-aac.mp4",
+        "candidateSHA256": "bb82c9243c759d7dff080dd3509562f61d8395efa5d379bacb7ea2ed644a98a0",
+        "durationSeconds": 17,
+        "limitations": [
+          "Private local media validation does not establish Apple acceptance or the cause of the prior generic save error.",
+          "Video was remuxed without recoding; compressed sample identity and timing were checked instead of claiming container byte identity."
+        ],
+        "requestedAudioBitRate": 256000,
+        "requestedAudioChannels": 2,
+        "requestedAudioSampleRate": 48000,
+        "sourceFile": "ipad-preview.mp4",
+        "sourceSHA256": "29d33ba0ec2c449d345dc920293dc708e8ceff1833ff196b2915f5aeaf43df32",
+        "video": {
+          "candidateSamples": 510,
+          "enabled": true,
+          "everyCompressedPayloadAndPTSAndDTSAndDurationEqual": true,
+          "firstPresentationSeconds": 0,
+          "formatDescriptionEqual": true,
+          "h264LevelIDC": 40,
+          "h264ProfileIDC": 100,
+          "height": 1600,
+          "lastPresentationSeconds": 16.966666666666665,
+          "mismatchedSampleIndices": [],
+          "nominalFrameRate": 30,
+          "originalSamples": 510,
+          "width": 1200
+        }
+      }
+    }
+  ],
+  "primarySpecification": "https://developer.apple.com/help/app-store-connect/reference/app-information/app-preview-specifications",
+  "publishedPreviews": [
+    {
+      "bytes": 5341866,
+      "deviceFamily": "iphone",
+      "file": "docs/app-store-previews/iphone-preview.mp4",
+      "sha256": "87fbc00cf8289e79ebb85018ad35092d5c1a8c2ab739ee0195b0a6ef538e2c83"
+    },
+    {
+      "bytes": 1415098,
+      "deviceFamily": "ipad",
+      "file": "docs/app-store-previews/ipad-preview.mp4",
+      "sha256": "bb82c9243c759d7dff080dd3509562f61d8395efa5d379bacb7ea2ed644a98a0"
+    }
+  ],
+  "result": "Passed local native media verification; corrected Apple upload pending",
+  "schemaVersion": 1,
+  "scope": "Enabled silent stereo AAC added without video recoding. The current published filenames are bound below; original video-only sources refer to revision035438a. No Apple ingestion, review approval or original-versus-remuxed container byte identity is claimed.",
+  "tools": [
+    {
+      "file": "compose-silent-aac.swift",
+      "sha256": "2fb4f5cba479feaa1fde6e2e467c00452e5ff1279f27d9006dd6ca340bf6e0ed"
+    },
+    {
+      "file": "inspect-parity.swift",
+      "sha256": "4f90b11fd60ced91889ea989e6f430b3e41c05238b0d1051f7f1db80414362b0"
+    }
+  ]
+}

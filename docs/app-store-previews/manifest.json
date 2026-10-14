@@ -1,7 +1,37 @@
 {
+  "appleProcessing": {
+    "posterReadbackPending": true,
+    "posterSecondsSelectedAndSaved": 0,
+    "providerProof": "docs/evidence/app-store-production3-provider-proof.json",
+    "reviewSubmissionClicked": false,
+    "videoLoadedFromApple": true,
+    "browserPlaythroughCompletedForBothDevices": true,
+    "finalVersionState": "Ready for Review"
+  },
+  "audioRepair": {
+    "all510CompressedSamplesAndTimestampsPreserved": true,
+    "audioBoundaryEquivalenceClaim": false,
+    "audioTimeRangeSeconds": 16.956,
+    "decodedAudioFrameCount": 816000,
+    "initialUploadFailure": "docs/evidence/app-store-preview-first-upload-failure.json",
+    "proof": "docs/evidence/app-store-preview-aac-repair-proof.json",
+    "proofSHA256": "50393930075e50fdebdd2ca7eff96482961b9382f7630405cadcab155df6302a",
+    "videoRecoded": false
+  },
   "date": "2026-10-14",
   "encoder": {
-    "audio": "Silent native source; no audio added",
+    "audio": "Enabled silent stereo 48 kHz AAC, requested 256000 bps, native estimate 255959.328125 bps",
+    "audioAdditionMethod": "Apple AVAudioFile silent AAC encoding followed by AVMutableComposition and AVAssetExportPresetPassthrough MP4 remux. No video recoding.",
+    "audioAdditionTools": [
+      {
+        "file": "compose-silent-aac.swift",
+        "sha256": "2fb4f5cba479feaa1fde6e2e467c00452e5ff1279f27d9006dd6ca340bf6e0ed"
+      },
+      {
+        "file": "inspect-parity.swift",
+        "sha256": "4f90b11fd60ced91889ea989e6f430b3e41c05238b0d1051f7f1db80414362b0"
+      }
+    ],
     "playbackSpeedPreserved": true,
     "profile": "H264 High 4.0",
     "requestedAverageBitRate": 10000000,
@@ -10,8 +40,23 @@
   },
   "previews": [
     {
-      "audioTracks": 0,
-      "bytes": 4792378,
+      "audio": {
+        "channels": 2,
+        "codecFourCC": "aac ",
+        "decodedSilence": {
+          "decodedPCMFrames": 816000,
+          "maximumAbsoluteDecodedSample": 0,
+          "silenceVerified": true
+        },
+        "durationSeconds": 16.956,
+        "enabled": true,
+        "estimatedDataRate": 255959.328125,
+        "requestedEncodingBitRate": 256000,
+        "sampleRate": 48000,
+        "startSeconds": 0
+      },
+      "audioTracks": 1,
+      "bytes": 5341866,
       "decodedFrameCount": 510,
       "deviceFamily": "iphone",
       "durationSeconds": 17,
@@ -41,7 +86,7 @@
         "previewSeconds": 0,
         "sha256": "f25b8ba3ec7f5d21ef147f653aa350cdc71036f3b67de136ffed605a486b01d4"
       },
-      "sha256": "cdfe75525f5b2eb17362b8b0238fad470e86d11034d653b905ce1593ddc77ee0",
+      "sha256": "87fbc00cf8289e79ebb85018ad35092d5c1a8c2ab739ee0195b0a6ef538e2c83",
       "sourceFile": "docs/evidence/store-production3-iphone-walkthrough.mp4",
       "sourceFileSHA256": "dc9f1929eb255ba4aa311ae37b04dfb08e46fed3b7e09fad48fe39e8df80f71b",
       "sourceRangeSeconds": {
@@ -51,8 +96,23 @@
       "width": 886
     },
     {
-      "audioTracks": 0,
-      "bytes": 865610,
+      "audio": {
+        "channels": 2,
+        "codecFourCC": "aac ",
+        "decodedSilence": {
+          "decodedPCMFrames": 816000,
+          "maximumAbsoluteDecodedSample": 0,
+          "silenceVerified": true
+        },
+        "durationSeconds": 16.956,
+        "enabled": true,
+        "estimatedDataRate": 255959.328125,
+        "requestedEncodingBitRate": 256000,
+        "sampleRate": 48000,
+        "startSeconds": 0
+      },
+      "audioTracks": 1,
+      "bytes": 1415098,
       "decodedFrameCount": 510,
       "deviceFamily": "ipad",
       "durationSeconds": 17,
@@ -82,7 +142,7 @@
         "previewSeconds": 0,
         "sha256": "9141ea3761fbccf128625e3887379850e6e3b26d0eb2b0b9e909bc7441d6bba6"
       },
-      "sha256": "29d33ba0ec2c449d345dc920293dc708e8ceff1833ff196b2915f5aeaf43df32",
+      "sha256": "bb82c9243c759d7dff080dd3509562f61d8395efa5d379bacb7ea2ed644a98a0",
       "sourceFile": "docs/evidence/store-production3-ipad-walkthrough.mp4",
       "sourceFileSHA256": "b75eab4a3572b7ea7eb884e865670b26bd495c32471ebcf12ea3da6a85a09f9c",
       "sourceRangeSeconds": {
@@ -96,19 +156,19 @@
     "https://developer.apple.com/help/app-store-connect/reference/app-information/app-preview-specifications",
     "https://developer.apple.com/app-store/app-previews/"
   ],
-  "result": "Local media preflight passed; upload and Apple processing pending",
+  "result": "Corrected previews uploaded and played to the end from Apple; opening poster selections saved with generation/readback pending",
   "review": {
     "blockingFindings": 0,
     "independentReviewers": 2,
     "limitations": [
-      "Full playback and precise transition dwell were not inspected.",
+      "Independent reviewers inspected sampled frames, not continuous playback or precise transition dwell. Root separately verified browser playback reached the end without media errors.",
       "The iPhone shows a brief item-list reveal; per-person tax is partly obscured and tip is offscreen.",
       "The iPad has substantial native empty space and small secondary text; portrait footage differs from the landscape poster gallery and may appear in A Closer Look.",
       "No physical-device fluidity, assistive-technology or Apple-ingestion certification."
     ],
     "posterSeconds": 0,
     "scope": "Nine two-second samples per device and additional one/three-second iPhone samples; composition and editorial story review only.",
-    "uploaded": false
+    "uploaded": true
   },
   "schemaVersion": 1,
   "sourceProof": {

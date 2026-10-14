@@ -51,11 +51,12 @@
   "minimumOSVersion": "17.4",
   "nonExemptEncryption": false,
   "schemaVersion": 1,
-  "scope": "Release archive, analyzer and archive signature succeeded. Four command-line distribution exports failed. Native account inspection is now available and shows the existing team, but manual export has no usable Apple Distribution certificate. Approval for automatic distribution signing is pending. No successful distribution export, upload or server processing is claimed.",
+  "scope": "Release archive, analyzer and archive signature succeeded. Four earlier command-line exports failed and remain recorded. A later authorized Xcode GUI export succeeded using cloud-managed distribution signing; its independent local package checks and later upload/Apple build selection are recorded in separate linked proofs. No processed-upload byte identity or review approval is claimed.",
   "signingInspection": {
-    "automaticSigningApprovalPending": true,
+    "automaticSigningApprovalPending": false,
     "certificateCreatedOrRevoked": false,
     "existingXcodeAccountAndTeamVisible": true,
+    "laterResolution": "User approved the presented signing setup. Xcode exported with the existing cloud-managed Apple Distribution identity; the earlier manual-selection and command-line failures remain historical.",
     "manualExportCertificateSelection": "Default (No Apple Distribution found)",
     "nativeControlsAccessible": true,
     "recordedAtUTC": "2026-10-14T10:52:16Z",
@@ -115,6 +116,16 @@
   },
   "sourceInputCount": 50,
   "sourceManifestSHA256": "4da41b9c6998e421bc245b3daae259257067d7c45982c6da679027780c921548",
-  "uploadedBuild3": false,
+  "subsequentGUIExport": {
+    "explicitChecksPassed": 23,
+    "localExportSuccessful": true,
+    "proof": "docs/evidence/app-store-production3-gui-export-proof.json",
+    "proofSHA256": "d7f97d373b70509743c40399903a7bc5792393c8e2d9ac60b9be8a3d5cc5d741",
+    "serverByteIdentityClaim": false,
+    "uploadEvidence": "docs/evidence/app-store-production3-provider-proof.json"
+  },
+  "uploadEvidence": "docs/evidence/app-store-production3-provider-proof.json",
+  "uploadedBuild3": true,
+  "uploadedBuild3AtInitialInspection": false,
   "version": "2.0.0"
 }

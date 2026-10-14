@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "recordedAtUTC": "2026-10-14T12:52:26Z",
+  "appID": "6575395076",
+  "version": "2.0.0",
+  "mediaSourceRevision": "035438a24215e25bf08aeb5c71450f3b04d9e832",
+  "result": "Both initial video-only previews failed to produce saved, playable App Store assets",
+  "browserObservation": {
+    "message": "Your file couldn\u2019t be saved. Try again. If the problem persists, contact us.",
+    "devices": [
+      "iphone",
+      "ipad"
+    ],
+    "previewViewer": {
+      "videoSourcePresent": false,
+      "readyState": 0,
+      "finiteDurationPresent": false,
+      "mediaErrorPresent": false
+    },
+    "scope": "Observed through Chrome DOM and the native preview viewer; no underlying server error code or cause was exposed."
+  },
+  "initialFiles": [
+    {
+      "deviceFamily": "iphone",
+      "file": "iphone-preview.mp4",
+      "bytes": 4792378,
+      "sha256": "cdfe75525f5b2eb17362b8b0238fad470e86d11034d653b905ce1593ddc77ee0",
+      "durationSeconds": 17,
+      "audioTracks": 0
+    },
+    {
+      "deviceFamily": "ipad",
+      "file": "ipad-preview.mp4",
+      "bytes": 865610,
+      "sha256": "29d33ba0ec2c449d345dc920293dc708e8ceff1833ff196b2915f5aeaf43df32",
+      "durationSeconds": 17,
+      "audioTracks": 0
+    }
+  ],
+  "formatGap": {
+    "observed": "Both initial exports contain zero audio tracks",
+    "requiredAudio": "Enabled stereo AAC, target 256 kbps, 44.1 or 48 kHz",
+    "primaryReference": "https://developer.apple.com/help/app-store-connect/reference/app-information/app-preview-specifications",
+    "scope": "A documented format gap, not a proven explanation of Apple\u2019s generic save error. The earlier local preflight verified video and timing but omitted the audio requirement."
+  },
+  "recovery": {
+    "failedPlacementsRemoved": true,
+    "originalAssetLibraryItemsPreserved": true,
+    "screenshotPlacementsPreserved": true,
+    "newCandidates": "Same native video with an enabled silent stereo AAC track; acceptance pending"
+  },
+  "evidence": {
+    "privateIPadViewerCaptureSHA256": "44b78802cf0ccc6d27a98f56bcd119fd1f6836bf0ac0101795b685494ae0e6bf",
+    "capturePersistedInRepository": false
+  },
+  "scope": "Media upload failure and planned format correction only; no Apple processing success or review approval claimed."
+}

@@ -3,29 +3,255 @@
   "date": "2026-10-14",
   "appID": "6575395076",
   "version": "2.0.0",
-  "observedState": "Prepare for Submission",
-  "stateFreshness": "Last authenticated draft readback; the Chrome session has since expired",
-  "access": {
-    "recordedAtUTC": "2026-10-14T10:52:16Z",
-    "browserState": "Apple sign-in page, empty Password field and disabled Sign In button",
-    "ordinarySignInContinuationAttempted": true,
-    "requiredHumanAction": "Sign back into App Store Connect and approve Xcode distribution signing setup",
-    "credentialsRecorded": false,
-    "nativeControlsAccessible": true
-  },
-  "selectedBuild": "2",
-  "intendedReplacementBuild": "3",
+  "observedState": "Ready for Review",
+  "selectedBuild": "3",
+  "selectedAppleBuildID": "ce69258c-6270-4271-a9b8-0b773d4865c9",
+  "selectedBuildSaved": true,
   "submitForReviewClicked": false,
   "releaseType": "MANUAL",
-  "freshStorefrontAssetsUploaded": false,
-  "existingPlacements": {
-    "iphone": 0,
-    "ipad13inch": 5
+  "access": {
+    "nativeControlsAccessible": true,
+    "appleBrowserSessionAuthenticated": true,
+    "signingApprovalReceived": "User go response to the presented signing gate",
+    "existingCloudManagedSigningUsed": true
   },
-  "releaseNotesSaved": "Clearer totals, shared-item previews and searchable meal history. Better readability, receipt viewing and a new app icon.",
+  "build": {
+    "xcodeUploadComplete": true,
+    "appleBuildAvailableForSelection": true,
+    "localExportProof": "docs/evidence/app-store-production3-gui-export-proof.json",
+    "serverByteIdentityClaim": false
+  },
+  "screenshotPlacements": {
+    "iphone": {
+      "count": 5,
+      "orderedFiles": [
+        "01-share.png",
+        "02-assign.png",
+        "03-tax-tip.png",
+        "04-receipt.png",
+        "05-library.png"
+      ]
+    },
+    "ipad13inch": {
+      "count": 5,
+      "orderedFiles": [
+        "01-share.png",
+        "02-assign.png",
+        "03-tax-tip.png",
+        "04-receipt.png",
+        "05-library.png"
+      ]
+    },
+    "sourceManifest": "docs/app-store-assets/manifest.json",
+    "sourceManifestSHA256": "58093fa5640d63009b4b61e23cdfc9c86a8dcc3afa07061eb5f316ff24def2ff",
+    "legacyOverrides": {
+      "regions": [
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone with Dynamic Island (large display)",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone with Face ID (large display)",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone Duo",
+          "usesExistingAssets": false,
+          "visibleInheritedScreenshotCount": 0,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone with Face ID (medium display)",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone with Home Button (large display)",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone with Home Button (medium display)",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone with Home Button (4\" display)",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "iphone",
+          "display": "iPhone with Home Button (3.5\" display)",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "ipad",
+          "display": "iPad Pro (2nd Gen) 12.9\" display",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "ipad",
+          "display": "iPad 11\" display",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "ipad",
+          "display": "iPad 10.5\" display",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        },
+        {
+          "deviceFamily": "ipad",
+          "display": "iPad 9.7\" display",
+          "usesExistingAssets": true,
+          "visibleInheritedScreenshotCount": 5,
+          "customScreenshotCount": 0,
+          "customPreviewCount": 0,
+          "customRemovalAvailable": false
+        }
+      ],
+      "legacyRegionsUsingNewAssets": 11,
+      "nativeSDK": "iphoneos27.0",
+      "optionalNewDisplay": "iPhone Duo has no custom assets or inherited preview in the current UI",
+      "assetLibraryOriginalsDeleted": false
+    }
+  },
+  "previews": {
+    "initialAttemptProof": "docs/evidence/app-store-preview-first-upload-failure.json",
+    "initialFailedPlacementsRemoved": true,
+    "correctedUploadPending": false,
+    "correctedUploadsCompleted": true,
+    "processingPending": true,
+    "iphoneObservedProcessingState": "The poster frame for this file is processing.",
+    "aacRepairProof": "docs/evidence/app-store-preview-aac-repair-proof.json",
+    "videoProcessingCompleteObserved": true,
+    "posterProcessingPending": true,
+    "posterSecondsSelectedAndSaved": 0,
+    "posterReadbackPending": true,
+    "assets": [
+      {
+        "deviceFamily": "iphone",
+        "assetID": "c6c00018-7ec9-8104-8125-bfc264adcd51",
+        "sourceFile": "docs/app-store-previews/iphone-preview.mp4",
+        "sha256": "87fbc00cf8289e79ebb85018ad35092d5c1a8c2ab739ee0195b0a6ef538e2c83",
+        "posterSelection": {
+          "currentTimeBeforeSet": 0,
+          "paused": true,
+          "readyState": 4,
+          "saveCompleted": true
+        },
+        "applePlayer": {
+          "sourcePresent": true,
+          "readyState": 4,
+          "durationSeconds": 17.069333,
+          "videoWidth": 326,
+          "videoHeight": 706,
+          "playthrough": {
+            "ended": true,
+            "currentTimeSeconds": 17.069333,
+            "paused": true,
+            "error": null,
+            "readyState": 4,
+            "scope": "Playback reached the end using native browser controls; this is not continuous visual, performance or assistive-technology certification."
+          }
+        }
+      },
+      {
+        "deviceFamily": "ipad",
+        "assetID": "ebc00018-7ec9-8104-8120-040a51afece0",
+        "sourceFile": "docs/app-store-previews/ipad-preview.mp4",
+        "sha256": "bb82c9243c759d7dff080dd3509562f61d8395efa5d379bacb7ea2ed644a98a0",
+        "posterSelection": {
+          "currentTimeBeforeSet": 0,
+          "paused": true,
+          "readyState": 4,
+          "saveCompleted": true
+        },
+        "applePlayer": {
+          "sourcePresent": true,
+          "readyState": 4,
+          "durationSeconds": 17.066666,
+          "videoWidth": 414,
+          "videoHeight": 552,
+          "playthrough": {
+            "ended": true,
+            "currentTimeSeconds": 17.066666,
+            "paused": true,
+            "error": null,
+            "readyState": 4,
+            "scope": "Playback reached the end using native browser controls; this is not continuous visual, performance or assistive-technology certification."
+          }
+        }
+      }
+    ],
+    "scope": "Both saved previews loaded from Apple and played to the end without a media error. Poster time 0 seconds was selected and saved for each; poster generation and stored-frame readback remain pending. Apple player renditions differ from the local 17-second files; no container, resolution, frame or timestamp parity with Apple renditions is claimed."
+  },
   "evidence": {
-    "privateCaptureSHA256": "c7b63b5b978a5767fb4614a44e0c6f3a994ef501b06356d213bae715a1b71242",
-    "scope": "Last authenticated version draft read back through Chrome. The page capture remains outside source control; automatic approval review rejected repository persistence of both full and clipped provider captures. The later sign-in barrier was observed through the browser DOM without recording account identifiers or credentials."
+    "privateXcodeUploadCompleteCaptureSHA256": "123a200c4b24131979fe22b18bc92720efbee3e8fed7f14d15910708295ba8e9",
+    "providerPixelsPersistedInRepository": false,
+    "previousBlockedReadback": "docs/evidence/app-store-production3-provider-initial-blocked-proof.json"
   },
-  "scope": "Last authenticated draft state only. Previous iPhone placements were removed from this unsubmitted version for replacement and remain in the Asset Library; previous iPad placements remain. The initial screenshot picker was blocked while the Mac was locked. Native controls are now accessible, but the Apple browser session has expired and Xcode has no usable distribution signing identity. Build3 export and refreshed galleries remain incomplete. No review submission or release has occurred."
+  "scope": "Build 3 uploaded, processed, selected and saved; ten refreshed screenshots and two corrected AAC previews placed. Final completeness check passed after poster selections were saved; version is Ready for Review with item 2.0.0 (3) ready to submit. Apple poster generation remains pending. No review submission, release, hardware certification or processed-upload byte identity is claimed.",
+  "readinessChecks": [
+    {
+      "build": "3",
+      "result": "Item Ready to Submit; versionReadyforReview",
+      "submitForReviewClicked": false,
+      "privateCaptureSHA256": "7332870239757619eec2ef02f7a07c4e33ca370b108118407f9de99d1b31a13e",
+      "subsequentAction": "Removed the version from its unsubmitted bundle to unlock preview poster editing; uploaded build and placements preserved"
+    },
+    {
+      "build": "3",
+      "result": "Item Ready to Submit; version Ready for Review",
+      "observedAtUTC": "2026-10-14T13:55:33.737435+00:00",
+      "submitForReviewClicked": false,
+      "privateCaptureSHA256": "9be90fd3edfe27356856af55608f07649fa1044c5b681413b10ac1d04c65ed35",
+      "scope": "Final completeness check after both opening poster selections were saved. Apple poster generation remains pending."
+    }
+  ]
 }
