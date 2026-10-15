@@ -3,19 +3,21 @@
   "date": "2026-10-14",
   "appID": "6575395076",
   "version": "2.0.0",
-  "observedState": "Prepare for Submission",
+  "observedState": "Ready for Review",
   "selectedBuild": "3",
   "selectedAppleBuildID": "ce69258c-6270-4271-a9b8-0b773d4865c9",
   "selectedBuildSaved": true,
   "submitForReviewClicked": false,
   "releaseType": "MANUAL",
   "access": {
-    "nativeControlsAccessible": false,
+    "nativeControlsAccessible": true,
     "appleBrowserSessionAuthenticated": true,
     "signingApprovalReceived": "User go response to the presented signing gate",
     "existingCloudManagedSigningUsed": true,
     "nativeControlsPreviouslyAccessible": true,
-    "nativeBlocker": "Mac locked during corrected Header upload; owner unlock required."
+    "previousNativeBlocker": "Mac locked during corrected Header upload; owner unlock required.",
+    "nativeBlocker": null,
+    "nativeUploadResumedSuccessfully": true
   },
   "build": {
     "xcodeUploadComplete": true,
@@ -231,14 +233,19 @@
         }
       }
     ],
-    "scope": "Both saved previews loaded from Apple and played to the end without a media error. Poster time 0 seconds was selected and saved for each; poster generation and stored-frame readback remain pending. Apple player renditions differ from the local 17-second files; no container, resolution, frame or timestamp parity with Apple renditions is claimed."
+    "scope": "Both saved previews loaded from Apple and played to the end without a media error. Poster time 0 seconds was selected and saved for each; poster generation and stored-frame readback remain pending. Apple player renditions differ from the local 17-second files; no container, resolution, frame or timestamp parity with Apple renditions is claimed.",
+    "posterStatusRecheckedAtUTC": "2026-10-15T01:09:46.461668+00:00",
+    "posterStatusReadback": {
+      "iphone": "Poster Frame Processing",
+      "ipad": "Poster Frame Processing"
+    }
   },
   "evidence": {
     "privateXcodeUploadCompleteCaptureSHA256": "123a200c4b24131979fe22b18bc92720efbee3e8fed7f14d15910708295ba8e9",
     "providerPixelsPersistedInRepository": false,
     "previousBlockedReadback": "docs/evidence/app-store-production3-provider-initial-blocked-proof.json"
   },
-  "scope": "Build 3 remains uploaded, processed, selected and saved; ten screenshots and two previews are retained. Earlier completeness checks passed. During the authorized editorial update the version returned to editing: Search artwork is saved, while corrected Header upload and final readiness recheck require the Mac to be unlocked. No review submission, release, hardware certification or processed-upload byte identity is claimed.",
+  "scope": "Build 3 uploaded, processed, selected and saved; ten screenshots, two previews and both editorial creative assets retained. Final completeness check passed after artwork placement: version Ready for Review, item 2.0.0 (3) ready to submit. No final review submission, release, hardware certification or processed-upload byte identity claimed.",
   "readinessChecks": [
     {
       "build": "3",
@@ -255,16 +262,30 @@
       "privateCaptureSHA256": "9be90fd3edfe27356856af55608f07649fa1044c5b681413b10ac1d04c65ed35",
       "scope": "Final completeness check after both opening poster selections were saved. Apple poster generation remains pending.",
       "subsequentAction": "Removed only the version from its unsubmitted bundle for the user-requested editorial Header and Search artwork. Build, screenshots and previews preserved."
+    },
+    {
+      "build": "3",
+      "result": "Item Ready to Submit; version Ready for Review",
+      "observedAtUTC": "2026-10-15T01:08:11.926180+00:00",
+      "submitForReviewClicked": false,
+      "privateCaptureSHA256": "0955264756bf9e27f9ab9f1a4deb6f5d0787f82db51e1329e702ea01f542d3aa",
+      "scope": "Final completeness check after the higher-positioned Header and Search artwork were saved."
     }
   ],
-  "editorialUpdateObservedAtUTC": "2026-10-14T16:19:28.811009+00:00",
+  "editorialUpdateObservedAtUTC": "2026-10-15T01:08:11.926175+00:00",
   "creativeAssets": {
     "manifest": "docs/app-store-editorial/manifest.json",
     "header": {
-      "placedCount": 0,
+      "placedCount": 1,
       "file": "docs/app-store-editorial/header.png",
-      "localSHA256": "1a9473112459a636673bb851698bf045e3274f0296efffa93c7f1b555e5dda47",
-      "replacementUploadPending": true
+      "localSHA256": "f4ca95f54acbcf760824417a8be3f720a8435e22e37df85a582965462199c31a",
+      "replacementUploadPending": false,
+      "savedAfterReload": true,
+      "previewObserved": [
+        "iPhone light",
+        "iPad landscape light",
+        "iPad landscape dark"
+      ]
     },
     "searchResults": {
       "placedCount": 1,
@@ -278,9 +299,11 @@
         "iPad landscape dark"
       ]
     },
-    "blocker": "The Mac locked before the native file picker could send the corrected tablet-safe header. Owner unlock is required; no permissions or authentication protection were changed.",
     "earlierHeaderAssetLibraryItemPreserved": true,
-    "finalCompletenessRecheckPending": true,
-    "reviewSubmitted": false
+    "finalCompletenessRecheckPending": false,
+    "reviewSubmitted": false,
+    "previousBlocker": "The Mac locked before the native file picker could send the corrected tablet-safe header. Owner unlock is required; no permissions or authentication protection were changed.",
+    "blocker": null,
+    "finalCompletenessResult": "Item Ready to Submit: 2.0.0 (3)"
   }
 }

@@ -5,8 +5,8 @@
   "assets": [
     {
       "file": "docs/app-store-editorial/header.png",
-      "bytes": 4766597,
-      "sha256": "1a9473112459a636673bb851698bf045e3274f0296efffa93c7f1b555e5dda47",
+      "bytes": 4820016,
+      "sha256": "f4ca95f54acbcf760824417a8be3f720a8435e22e37df85a582965462199c31a",
       "width": 3840,
       "height": 1646,
       "bitsPerSample": 8,
@@ -15,8 +15,8 @@
       "headline": "See everyone\u2019s share.",
       "generatedMaster": {
         "file": "docs/app-store-editorial/sources/header-final.png",
-        "bytes": 1781395,
-        "sha256": "d0e96fb0d706479f5d3c2627b5ae1f5784937d1556b9540819942072b8250348",
+        "bytes": 1784063,
+        "sha256": "608618798b64c2748c35cf55096498c6c3ceb8be9c591fccf6749730c6e77aea",
         "width": 1916,
         "height": 821,
         "bitsPerSample": 8,
@@ -82,15 +82,19 @@
   "review": {
     "independentVisualReviewer": true,
     "independentCopyReviewer": true,
-    "finalPlacementPreviewPending": true,
+    "finalPlacementPreviewPending": false,
     "approvalClaim": false,
     "headerCropRepair": {
       "earlierExportSHA256": "b122d6874fcf935d42cd067bccc207b00d135fc48d93f7cea7ab1f06f9a5350d",
       "finding": "iPad landscape product-page preview cut the device top and part of Share split, and navigation overlapped upper UI.",
       "correction": "Smaller generic device moved into the central vertical area; header copy and app content retained.",
       "privateInitialCropCaptureSHA256": "084462ab81f19202b45744d1927e6d7e4a7cb8b85f93e7a7bdb38c9dcf3b1493",
-      "finalPlacementRecheckPending": true,
-      "earlierAssetLibraryItemPreserved": true
+      "finalPlacementRecheckPending": false,
+      "earlierAssetLibraryItemPreserved": true,
+      "secondExportSHA256": "1a9473112459a636673bb851698bf045e3274f0296efffa93c7f1b555e5dda47",
+      "secondFinding": "The resumed iPad landscape preview still clipped the bottom rim and lower edge of Share split. Device was moved higher with a modest scale reduction.",
+      "privateSecondCropCaptureSHA256": "1d9ae69272e9f9573e43d91e6e2bd8cdb70d5e1b31ab53fe1d334454017a1609",
+      "result": "Lower rim and complete Share split are visible in the final iPad landscape reference preview. Apple navigation overlaps part of the depicted status bar/top rim above the app content; accepted as a nonblocking overlay tradeoff."
     },
     "placementObservations": [
       {
@@ -112,6 +116,27 @@
           "dark"
         ],
         "result": "Current artwork rendered; headline clear, complete device and action visible."
+      },
+      {
+        "placement": "header",
+        "device": "iPhone",
+        "appearance": "light",
+        "candidate": "final higher-device revision",
+        "result": "Headline and app content remain clear; lower rim and Share split visible. Fine UI text is secondary at placement size."
+      },
+      {
+        "placement": "header",
+        "device": "iPad landscape",
+        "appearance": "light",
+        "candidate": "final higher-device revision",
+        "result": "Headline and app content remain clear; lower rim and Share split visible. Fine UI text is secondary at placement size."
+      },
+      {
+        "placement": "header",
+        "device": "iPad landscape",
+        "appearance": "dark",
+        "candidate": "final higher-device revision",
+        "result": "Headline and app content remain clear; lower rim and Share split visible. Fine UI text is secondary at placement size."
       }
     ],
     "privatePlacementCaptureHashes": [
@@ -132,19 +157,38 @@
         "device": "iPad landscape",
         "appearance": "dark",
         "sha256": "652b5f69e3e1d38b55b516bffc2e2b3569d0cf570f692ec99abfacebe5218aa8"
+      },
+      {
+        "placement": "header",
+        "device": "iPhone",
+        "appearance": "light",
+        "sha256": "a0ba395b80b5931757dc2e213ad96ad208db91980870cc6d523222845a708541"
+      },
+      {
+        "placement": "header",
+        "device": "iPad landscape",
+        "appearance": "light",
+        "sha256": "3868b5cfd8281bf1e172ae5b28957532c0b31ab4dc5b3cdc9e8a856f17927829"
+      },
+      {
+        "placement": "header",
+        "device": "iPad landscape",
+        "appearance": "dark",
+        "sha256": "a596053f3eeeb5c4fa42af6ed2906579e37c9c631c3c747d78753e19bd23d8f0"
       }
     ],
     "providerPixelsPersistedInRepository": false,
     "separateProviderPreviewObservation": "The iPad reference preview displayed some existing landscape screenshot-gallery thumbnails rotated. This observation does not establish a native app, PNG export or published App Store defect; the editorial asset review does not certify that separate gallery behavior."
   },
   "provider": {
-    "uploaded": false,
-    "saved": false,
-    "headerReplacementPending": true,
+    "uploaded": true,
+    "saved": true,
+    "headerReplacementPending": false,
     "searchResultsUploadedAndSaved": true,
-    "currentVersionState": "Prepare for Submission",
+    "currentVersionState": "Ready for Review",
     "submitForReviewClicked": false,
-    "scope": "Earlier header placement removed reversibly for tablet crop repair; its Asset Library item remains. Corrected header upload requires the currently locked Mac to be unlocked."
+    "observedAtUTC": "2026-10-15T01:08:11.923832+00:00",
+    "scope": "Final Header saved after reload, Search retained, and final completeness check passed with item 2.0.0 (3) ready to submit. No final review submission or release."
   },
   "primaryReferences": [
     "https://developer.apple.com/app-store/asset-best-practices/",

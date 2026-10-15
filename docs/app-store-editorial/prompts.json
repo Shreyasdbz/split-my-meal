@@ -19,6 +19,10 @@
     {
       "stage": "Header tablet-crop correction",
       "prompt": "Edit the header layout only to fix the verified iPad App Store vertical crop. Keep the 21:9 panorama, headline and editorial table photography. Shrink the whole generic 3D device to only 50 percent of image height, maintaining its aspect ratio and readable front angle. Center it at 65 percent canvas width and 55 percent canvas height, leaving substantial cream space above and below. Apple\u2019s observed preview crops the top and bottom and overlays navigation near the upper center, so retain the complete top edge and green Share split button inside the central vertical area. Keep See everyone\u2019s share. in its balanced three-line emerald serif layout, existing left placement and approximate type size. Preserve all exact app words, names and figures, the smooth button-free generic rim and quiet peripheral dining props. No new copy, object, device, logo or watermark."
+    },
+    {
+      "stage": "Header final vertical clearance",
+      "prompt": "Move the complete generic device up by 10 percent of canvas height and make it 10 percent smaller, keeping its horizontal center. Fit the complete rim and green Share split action between 22 and 72 percent of canvas height. Preserve the headline, props, lighting, three-quarter angle, smooth generic rim and all exact app labels and values. Keep the 21:9 panorama."
     }
   ],
   "verbatimPromptHistory": false
